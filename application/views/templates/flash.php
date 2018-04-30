@@ -4,7 +4,7 @@
  * @copyright  Copyright (c) 2018 Benjamin BALET
  * @license    http://opensource.org/licenses/AGPL-3.0 AGPL-3.0
  * @link       https://github.com/bbalet/skeleton
- * @since      1.0.0
+ * @since      1.0.0 jsd
  */
 ?>
 <?php if($this->session->flashdata('msg')){ ?>
@@ -20,3 +20,4 @@ $(document).ready(function() {
 });
 </script>
 <?php } ?>
+

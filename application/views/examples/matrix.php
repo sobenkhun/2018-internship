@@ -1,4 +1,4 @@
-<h1>Examples guide</h1>
+  <h1>Examples guide</h1>
 
 <h2>Sending emails with a fake SMTPserver</h2>
 

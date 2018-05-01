@@ -21,6 +21,8 @@ class Welcome_IF extends CI_Controller {
 		$this->load->view('IF/index.php');
 		$this->load->view('IF/template/footer.php');
 	}
+
+	// Company Function 
 	public function company()
 	{
 		$this->load->view('IF/template/header.php');
@@ -28,6 +30,30 @@ class Welcome_IF extends CI_Controller {
 		$this->load->view('IF/pages/company/index.php');
 		$this->load->view('IF/template/footer.php');
 	}
+	public function detailCompany()
+	{
+		$this->load->view('IF/template/header.php');
+		$this->load->view('IF/menu/index.php');
+		$this->load->view('IF/pages/company/detail.php');
+		$this->load->view('IF/template/footer.php');
+	}
+	public function editeCompany()
+	{
+		$this->load->view('IF/template/header.php');
+		$this->load->view('IF/menu/index.php');
+		$this->load->view('IF/pages/company/edite.php');
+		$this->load->view('IF/template/footer.php');
+	}
+	public function createCompany()
+	{
+		$this->load->view('IF/template/header.php');
+		$this->load->view('IF/menu/index.php');
+		$this->load->view('IF/pages/company/add.php');
+		$this->load->view('IF/template/footer.php');
+	}
+	// End of Company function 
+
+	// Tutor Function
 	public function tutor()
 	{
 		$this->load->view('IF/template/header.php');
@@ -35,6 +61,28 @@ class Welcome_IF extends CI_Controller {
 		$this->load->view('IF/pages/tutor/index.php');
 		$this->load->view('IF/template/footer.php');
 	}
+	public function addTutor()
+	{
+		$this->load->view('IF/template/header.php');
+		$this->load->view('IF/menu/index.php');
+		$this->load->view('IF/pages/tutor/addNew.php');
+		$this->load->view('IF/template/footer.php');
+	}
+	public function detailTutor()
+	{
+		$this->load->view('IF/template/header.php');
+		$this->load->view('IF/menu/index.php');
+		$this->load->view('IF/pages/tutor/detailTutor.php');
+		$this->load->view('IF/template/footer.php');
+	}
+	public function editTutor()
+	{
+		$this->load->view('IF/template/header.php');
+		$this->load->view('IF/menu/index.php');
+		$this->load->view('IF/pages/tutor/editTutor.php');
+		$this->load->view('IF/template/footer.php');
+	}
+	// End of tutor function 
 	public function supervisor()
 	{
 		$this->load->view('IF/template/header.php');
@@ -42,6 +90,7 @@ class Welcome_IF extends CI_Controller {
 		$this->load->view('IF/pages/supervisor/index.php');
 		$this->load->view('IF/template/footer.php');
 	}
+
 	public function createSupervisor()
 	{
 		$this->load->view('IF/template/header.php');
@@ -63,6 +112,9 @@ class Welcome_IF extends CI_Controller {
 		$this->load->view('IF/pages/supervisor/edit.php');
 		$this->load->view('IF/template/footer.php');
 	}
+
+	// student
+
 	public function student()
 	{
 		$this->load->view('IF/template/header.php');
@@ -70,6 +122,28 @@ class Welcome_IF extends CI_Controller {
 		$this->load->view('IF/pages/student/index.php');
 		$this->load->view('IF/template/footer.php');
 	}
+	public function viewStudent()
+	{
+		$this->load->view('IF/template/header.php');
+		$this->load->view('IF/menu/index.php');
+		$this->load->view('IF/pages/student/viewstudent.php');
+		$this->load->view('IF/template/footer.php');
+	}
+	public function updateStudent()
+	{
+		$this->load->view('IF/template/header.php');
+		$this->load->view('IF/menu/index.php');
+		$this->load->view('IF/pages/student/editstudent.php');
+		$this->load->view('IF/template/footer.php');
+	}
+	public function addStudent()
+	{
+		$this->load->view('IF/template/header.php');
+		$this->load->view('IF/menu/index.php');
+		$this->load->view('IF/pages/student/addstudent.php');
+		$this->load->view('IF/template/footer.php');
+	}
+// calender
 	public function calendar()
 	{
 		$this->load->view('IF/template/header.php');
@@ -77,4 +151,5 @@ class Welcome_IF extends CI_Controller {
 		$this->load->view('IF/pages/calendar/index.php');
 		$this->load->view('IF/template/footer.php');
 	}
+
 }

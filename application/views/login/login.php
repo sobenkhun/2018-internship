@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <title>login</title>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css">
+  <link rel="shortcut icon" href="<?php echo base_url();?>favicon.ico" type="image/x-icon">
   <style>
   img{
     width: 184px;
@@ -43,7 +44,11 @@
                     <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Password">
                   </div>
                   <div class="form-group">
+<<<<<<< HEAD
                     <label for="formGroupExampleInput2"><a class="text-dark" href="">Forget Password ?</a></label>
+=======
+                    <label for="formGroupExampleInput2"><a class="text-primary" href="">Forget Password?</a></label>
+>>>>>>> 0b89cdec894c8fd219a1ab9bd892ed834e0cece2
                   </div>
                   <br>
                   <button class="btn btn-info float-right"><a class="text-white" href="<?php echo base_url();?>Welcome_IF/home">Login</a></button>

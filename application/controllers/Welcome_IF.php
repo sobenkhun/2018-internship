@@ -143,7 +143,7 @@ class Welcome_IF extends CI_Controller {
 		$this->load->view('IF/pages/student/addstudent.php');
 		$this->load->view('IF/template/footer.php');
 	}
-// calender
+// calenders
 	public function calendar()
 	{
 		$this->load->view('IF/template/header.php');

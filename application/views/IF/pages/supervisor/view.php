@@ -5,7 +5,6 @@
 				<button type="button" class="btn btn-primary"><i class="mdi mdi-chevron-left"></i>Back</button></a></div>
 			<div class="col-md-8">
 					<h3 class="text-center text-primary">Supervisor Profile</h3>
-				
 			</div>
 		</div><br><br>
 	

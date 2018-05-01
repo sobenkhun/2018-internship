@@ -42,6 +42,7 @@ class Welcome_IF extends CI_Controller {
 		$this->load->view('IF/pages/supervisor/index.php');
 		$this->load->view('IF/template/footer.php');
 	}
+// student
 	public function student()
 	{
 		$this->load->view('IF/template/header.php');
@@ -49,6 +50,28 @@ class Welcome_IF extends CI_Controller {
 		$this->load->view('IF/pages/student/index.php');
 		$this->load->view('IF/template/footer.php');
 	}
+	public function viewStudent()
+	{
+		$this->load->view('IF/template/header.php');
+		$this->load->view('IF/menu/index.php');
+		$this->load->view('IF/pages/student/viewstudent.php');
+		$this->load->view('IF/template/footer.php');
+	}
+	public function updateStudent()
+	{
+		$this->load->view('IF/template/header.php');
+		$this->load->view('IF/menu/index.php');
+		$this->load->view('IF/pages/student/editstudent.php');
+		$this->load->view('IF/template/footer.php');
+	}
+	public function addStudent()
+	{
+		$this->load->view('IF/template/header.php');
+		$this->load->view('IF/menu/index.php');
+		$this->load->view('IF/pages/student/addstudent.php');
+		$this->load->view('IF/template/footer.php');
+	}
+// calender
 	public function calendar()
 	{
 		$this->load->view('IF/template/header.php');
@@ -56,4 +79,5 @@ class Welcome_IF extends CI_Controller {
 		$this->load->view('IF/pages/calendar/index.php');
 		$this->load->view('IF/template/footer.php');
 	}
+
 }

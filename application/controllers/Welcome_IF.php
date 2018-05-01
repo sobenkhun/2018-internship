@@ -42,6 +42,27 @@ class Welcome_IF extends CI_Controller {
 		$this->load->view('IF/pages/supervisor/index.php');
 		$this->load->view('IF/template/footer.php');
 	}
+	public function createSupervisor()
+	{
+		$this->load->view('IF/template/header.php');
+		$this->load->view('IF/menu/index.php');
+		$this->load->view('IF/pages/supervisor/createSupervisor.php');
+		$this->load->view('IF/template/footer.php');
+	}
+	public function viewSupervisor()
+	{
+		$this->load->view('IF/template/header.php');
+		$this->load->view('IF/menu/index.php');
+		$this->load->view('IF/pages/supervisor/view.php');
+		$this->load->view('IF/template/footer.php');
+	}
+	public function editSupervisor()
+	{
+		$this->load->view('IF/template/header.php');
+		$this->load->view('IF/menu/index.php');
+		$this->load->view('IF/pages/supervisor/edit.php');
+		$this->load->view('IF/template/footer.php');
+	}
 	public function student()
 	{
 		$this->load->view('IF/template/header.php');

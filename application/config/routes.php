@@ -55,6 +55,7 @@ $route['connection/login'] = 'connection/login';
 $route['connection/logout'] = 'connection/logout';
 
 //User management
+
 $route['users/index'] = 'users/index';
 $route['users/export'] = 'users/export';
 $route['users/reset/(:num)'] = 'users/reset/$1';
@@ -65,7 +66,7 @@ $route['users/check/login'] = 'users/checkLoginByAjax';
 $route['users'] = 'users';
 
 //Examples
-$route['examples/index'] = 'examples/index';
+$route['examples/index'] ='examples/index';
 $route['examples/views/(:any)'] = 'examples/renderView/$1';
 $route['examples/i18n/(:any)'] = 'examples/i18n/$1';
 $route['examples/i18n'] = 'examples/i18n';
@@ -79,6 +80,6 @@ $route['errors/privileges'] = 'errors/privileges';
 $route['errors/notfound'] = 'errors/notfound';
 
 //System
-$route['default_controller'] = 'welcome';
+$route['default_controller'] = 'login';
 $route['404_override'] = 'errors/notfound';
 $route['translate_uri_dashes'] = FALSE;

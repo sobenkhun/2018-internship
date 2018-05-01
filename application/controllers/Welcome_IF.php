@@ -91,6 +91,7 @@ class Welcome_IF extends CI_Controller {
 		$this->load->view('IF/template/footer.php');
 	}
 
+
 	public function createSupervisor()
 	{
 		$this->load->view('IF/template/header.php');
@@ -114,7 +115,6 @@ class Welcome_IF extends CI_Controller {
 	}
 
 	// student
-
 	public function student()
 	{
 		$this->load->view('IF/template/header.php');

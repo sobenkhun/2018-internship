@@ -86,7 +86,7 @@
   <div class="col-md-2">
   </div>
   <div class="col-md-8">
-    <!--We just need a JS file //-->
+    <!-- We just need a JS  -->
     <script src="<?php echo base_url();?>assets/js/Chart-2.7.1.min.js"></script>
 
     <h1>Company Bar Chart</h1>

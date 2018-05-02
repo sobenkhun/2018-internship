@@ -1,3 +1,4 @@
+<!-- Resolve Conflict -->
 <div class="container">
   <div class="row">
     <div class="col-md-12">
@@ -69,6 +70,7 @@
 </tbody>
 
 </table>
+
 </div>
 
 </div>

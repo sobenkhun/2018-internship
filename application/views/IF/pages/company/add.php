@@ -1,1 +1,0 @@
-<h1>Add Company</h1>

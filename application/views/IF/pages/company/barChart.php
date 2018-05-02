@@ -1,13 +1,18 @@
 <br>
 <div class="row row-fluid">
+
   <div class="col-md-2">
   </div>
   <div class="col-md-8">
-    <!--We just need a JS file //-->
+  	<a href="<?php echo base_url();?>Welcome_IF/company">
+  			<button class="btn btn-primary">
+  				<i class="mdi mdi-chevron-left text-white" style="font-size:15px;"></i>Back
+  			</button>
+  		</a>
     <script src="<?php echo base_url();?>assets/js/Chart-2.7.1.min.js"></script>
 
-    <h1>Company Bar Chart</h1>
-    <h2>Bar chart</h2>
+    <h1 class="text-center">Company Bar Chart</h1>
+    <h2 class="text-center">Bar chart</h2>
 
     <canvas id="bar-chart" width="800" height="450"></canvas>
 
@@ -21,7 +26,7 @@
             {
               label: "Population (millions)",
               backgroundColor: ["#3e95cd", "#8e5ea2","#3cba9f","#e8c3b9","#c45850","yellow","#00C853","#FFC107"],
-              data: [10,4,3,5,7,3,9,6]
+              data: [10,4,8,5,7,3,9,6]
             }
           ]
         },

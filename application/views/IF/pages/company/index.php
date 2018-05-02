@@ -1,4 +1,3 @@
-<!-- Resolve Conflict -->
 <div class="container">
   <div class="row">
     <div class="col-md-12">
@@ -70,7 +69,6 @@
 </tbody>
 
 </table>
-
 </div>
 
 </div>
@@ -88,7 +86,7 @@
   <div class="col-md-2">
   </div>
   <div class="col-md-8">
-    <!-- We just need a JS  -->
+    <!--We just need a JS file //-->
     <script src="<?php echo base_url();?>assets/js/Chart-2.7.1.min.js"></script>
 
     <h1>Company Bar Chart</h1>

@@ -13,9 +13,7 @@
       <li class="nav-item active ">
         <a class="nav-link" href="<?php echo base_url();?>Welcome_IF/company"><b class="colorTextMenu">  Company</b></a>
       </li>
-      <li class="nav-item active">
-        <a class="nav-link" href="<?php echo base_url();?>Welcome_IF/tutor"><b class="colorTextMenu">  Tutor</b></a>
-      </li>
+      
       <li class="nav-item active ">
         <a class="nav-link" href="<?php echo base_url();?>Welcome_IF/supervisor"><b class="colorTextMenu">  Supervisor</b></a>
       </li>
@@ -23,9 +21,14 @@
         <a class="nav-link" href="<?php echo base_url();?>Welcome_IF/student"><b class="colorTextMenu">  Student</b></a>
       </li>
       <li class="nav-item active ">
+        <a class="nav-link" href="<?php echo base_url();?>Welcome_IF/calendar"><b class="colorTextMenu">Comment</b></a>
+        <!-- <img src="note.png" style="width: 3%;" alt=""> -->
+      </li>
+      <li class="nav-item active ">
         <a class="nav-link" href="<?php echo base_url();?>Welcome_IF/calendar"><b class="colorTextMenu">Calendar   <i class="mdi mdi-book" style="font-size:12px; margin-top: 50px;"></i></b></a>
         <!-- <img src="note.png" style="width: 3%;" alt=""> -->
       </li>
+      
     </ul>
     <ul class="navbar-nav">
       <li class="nav-item active ">

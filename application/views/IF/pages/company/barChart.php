@@ -1,9 +1,9 @@
 <br>
-<div class="row row-fluid">
-
-  <div class="col-md-2">
+<div class="container">
+ <div class="row">
+  <div class="col-md-1">
   </div>
-  <div class="col-md-8">
+  <div class="col-md-10">
   	<a href="<?php echo base_url();?>Welcome_IF/company">
   			<button class="btn btn-primary">
   				<i class="mdi mdi-chevron-left text-white" style="font-size:15px;"></i>Back
@@ -17,7 +17,7 @@
     <canvas id="bar-chart" width="800" height="450"></canvas>
 
     <script type="text/javascript">
-    // Bar chart
+    // Bar chart Example
     new Chart(document.getElementById("bar-chart"), {
         type: 'bar',
         data: {
@@ -40,7 +40,8 @@
     });
     </script>
   </div>
-  <div class="col-md-2"></div>
+  <div class="col-md-1"></div>
+  </div>
 </div>
 <div class="jumbotron bg-light">
   <div class="row">

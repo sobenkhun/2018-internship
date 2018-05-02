@@ -10,7 +10,7 @@
 				<i class="mdi mdi-chevron-left text-white" style="font-size:15px;"></i>Back
 			</button>
 		</a>
-		<h3 class="text-primary text-center">New Company</h3><br>
+		<h3 class="text-primary text-center">Edite Company</h3><br>
 		<div class="row">
 			<div class="border border border-form rounded">	
 			<br>

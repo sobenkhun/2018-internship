@@ -76,11 +76,14 @@
 <div class="container">
 <div class="row">
   <div class="col-md-12">
-    <a href="<?php echo base_url();?>Welcome_IF/createCompany"><button class="btn btn-primary"><span class="mdi mdi-plus text-warning"></span><i>  </i>  Create New Company</button></a>
+    <a href="<?php echo base_url();?>Welcome_IF/createCompany"><button class="btn btn-primary"><span class="mdi mdi mdi-account-plus "  style="font-size:20px;"></span><i>  </i>  Create New Company</button></a>
   </div>
 </div>
 </div>
 </div>
+<<<<<<< HEAD
+
+=======
 <br>
 <div class="row row-fluid">
   <div class="col-md-2">
@@ -127,3 +130,4 @@
     </div> 
   </div>
 </div> 
+>>>>>>> 819d0e2d7ab21db91120afa065adee89b191f943

@@ -17,7 +17,7 @@
     <canvas id="bar-chart" width="800" height="450"></canvas>
 
     <script type="text/javascript">
-    // Bar chart
+    // Bar chart Example
     new Chart(document.getElementById("bar-chart"), {
         type: 'bar',
         data: {

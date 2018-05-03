@@ -113,7 +113,6 @@
 	</style>
 </head>
 <body>
-<<<<<<< HEAD
 	<div class="container">	
 		<form class="login" action="<?php echo base_url();?>Welcome_IF/login" method="post">
 			<div class="avatar">

@@ -23,3 +23,15 @@ body{
 #footer{
 	color:black;
 }
+/*=============== menu ================*/
+/* addstudent page*/
+form .addStudent{
+	padding: 2em;
+}
+/*============ addstudent page=========*/
+
+/* student menu*/
+.stMenu .logo {
+	width:150px;
+} 
+/*=========== student menu =============*/

@@ -113,6 +113,7 @@
 	</style>
 </head>
 <body>
+<<<<<<< HEAD
 	<div class="container">
 <<<<<<< HEAD
 <!-- <<<<<<< HEAD -->
@@ -149,6 +150,9 @@
 =======
 		<form class="login" action="<?php echo base_url();?>Welcome_IF/home">
 =======
+=======
+	<div class="container">	
+>>>>>>> b62b0454211fb722c340dd3e3bdc172fcf409f0d
 		<form class="login" action="<?php echo base_url();?>Welcome_IF/login" method="post">
 >>>>>>> f04475dd789f574d69f2f462172362055ac9674d
 			<div class="avatar">

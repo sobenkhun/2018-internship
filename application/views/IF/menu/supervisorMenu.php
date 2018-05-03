@@ -9,11 +9,11 @@
   <div class=" collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
       <li class="nav-item active ">
-        <a class="nav-link" href="<?php echo base_url();?>tutorDas/studentDas">
+        <a class="nav-link" href="<?php echo base_url();?>supervisor/index">
         <b class="colorTextMenu">  Student</b></a>
       </li>
       <li class="nav-item active ">
-        <a class="nav-link" href="<?php echo base_url();?>Welcome_IF/calendar">
+        <a class="nav-link" href="<?php echo base_url();?>supervisor/calendar">
         <b class="colorTextMenu">Calendar   <i class="mdi mdi-book" style="font-size:12px; margin-bottom: -9px;"></i></b></a>
       </li>
     </ul>

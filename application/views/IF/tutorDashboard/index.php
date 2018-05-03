@@ -1,15 +1,18 @@
 <div class="container">
   <div class="row">
+    <!-- <div class="col-md-1"></div> -->
     <div class="col-md-12 alert alert-primary text-center" style="background: #7dbcf9; font-family: sans-serif;">
       <h2 class="text-center text-dark">Welcome to PNC Internship Follow up</h2>
     </div>
+    <!-- <div class="col-md-1"></div> -->
+    
   </div>
   <br>
   <div class="row">
     <div class="col-md-12">
       <div class="row">
-        <div class="col-md-1" style="margin-left:70px;"></div>
-        <div class="col-md-3">
+        <!-- <div class="col-md-1" ></div> -->
+        <div class="col-md-4"  >
           <div class="">
             <div class="row">
               <div class="col-md-12 ">
@@ -29,7 +32,7 @@
             </div>
           </div>
         </div>
-        <div class="col-md-3">
+        <div class="col-md-4" >
           <div class="row">
             <div class="col-md-12 "> 
               <div class="card text-center text-white">
@@ -46,7 +49,7 @@
             </div>
           </div>
         </div>
-        <div class="col-md-3">
+        <div class="col-md-4" >
           <div class="row">
             <div class="col-md-12 ">
               <div class="card text-center text-white">
@@ -63,17 +66,12 @@
             </div>
           </div>
         </div>
-        <div class="col-md-1"></div>
+        <!-- <div class="col-md-1"></div> -->
+        
       </div>
     </div>
   </div><br>
 </div>
 <br>
-<div class="alert alert-dark text-center">
-  <div class="row">
-    <div class="col-md-12"><br>
-      <p class="text-center font-weight-bold"><b id="footer">Copy © right by Student Web 2018</b></p>
-    </div> 
-  </div>
-</div> 
+
 

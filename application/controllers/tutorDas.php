@@ -97,6 +97,16 @@ class tutorDas extends CI_Controller {
 		//  
 		
 	}
+	function questionnair()
+	{
+		$this->load->view('IF/template/header.php');
+		$this->load->view('IF/menu/tutor.php');
+		$this->load->view('IF/tutorDashboard/supervisor/questionnair.php');
+		$this->load->view('IF/template/footer.php');
+		
+		//  
+		
+	}
 
 }
 

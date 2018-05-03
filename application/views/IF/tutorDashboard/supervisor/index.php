@@ -26,9 +26,11 @@
                 
                 <td>
                
-                <a href="<?php echo base_url() ?>/Welcome_IF/viewSupervisor"><i class="mdi  mdi-library-books text-success" style="font-size: 24px;" ></i></a>
-                <a href="<?php echo base_url() ?>/Welcome_IF/editSupervisor"><i class="mdi mdi-pencil text-success" style="font-size: 24px;" ></i></a>
-                <a href="" onclick="return confirm('Are you sur want to delete?')"><i class="mdi mdi-delete text-danger" style="font-size: 24px;"></i></a>
+                <a href="#"><i class="mdi  mdi-library-books text-success" style="font-size: 24px;" ></i></a>
+                <a href="<?php echo base_url();?>tutorDas/viewSupervisorDas">
+                    <i class="mdi mdi-eye text-primary" style="font-size: 24px;" ></i>
+                </a>
+                
                 </td>
 
             </tr>
@@ -39,9 +41,11 @@
                 
                 <td>
                
-                <a href="<?php echo base_url() ?>/Welcome_IF/viewSupervisor"><i class="mdi  mdi-library-books text-success" style="font-size: 24px;" ></i></a>
-                <a href="<?php echo base_url() ?>/Welcome_IF/editSupervisor"><i class="mdi mdi-pencil text-success" style="font-size: 24px;" ></i></a>
-                <a href="" onclick="return confirm('Are you sur want to delete?')"><i class="mdi mdi-delete text-danger" style="font-size: 24px;"></i></a>
+                <a href="#"><i class="mdi  mdi-library-books text-success" style="font-size: 24px;" ></i></a>
+                <a href="<?php echo base_url();?>tutorDas/viewSupervisorDas">
+                    <i class="mdi mdi-eye text-primary" style="font-size: 24px;" ></i>
+                </a>
+                
                 </td>
             </tr>
             <tr>
@@ -51,9 +55,11 @@
                
                 <td>
                
-                <a href="<?php echo base_url() ?>/Welcome_IF/viewSupervisor"><i class="mdi  mdi-library-books text-success" style="font-size: 24px;" ></i></a>
-                <a href="<?php echo base_url() ?>/Welcome_IF/editSupervisor"><i class="mdi mdi-pencil text-success" style="font-size: 24px;" ></i></a>
-                <a href="" onclick="return confirm('Are you sur want to delete?')"><i class="mdi mdi-delete text-danger" style="font-size: 24px;"></i></a>
+                <a href="#"><i class="mdi  mdi-library-books text-success" style="font-size: 24px;" ></i></a>
+                <a href="tutorDas/viewSupervisorDas<?php echo base_url();?>tutorDas/viewSupervisorDas">
+                    <i class="mdi mdi-eye text-primary" style="font-size: 24px;" ></i>
+                </a>
+                
                 </td>
             </tr>
             <tr>
@@ -63,9 +69,11 @@
                 
                 <td>
                
-                <a href="<?php echo base_url() ?>/Welcome_IF/viewSupervisor"><i class="mdi  mdi-library-books text-success" style="font-size: 24px;" ></i></a>
-                <a href="<?php echo base_url() ?>/Welcome_IF/editSupervisor"><i class="mdi mdi-pencil text-success" style="font-size: 24px;" ></i></a>
-                <a href="" onclick="return confirm('Are you sur want to delete?')"><i class="mdi mdi-delete text-danger" style="font-size: 24px;"></i></a>
+                <a href="#"><i class="mdi  mdi-library-books text-success" style="font-size: 24px;" ></i></a>
+                <a href="<?php echo base_url();?>tutorDas/viewSupervisorDas">
+                    <i class="mdi mdi-eye text-primary" style="font-size: 24px;" ></i>
+                </a>
+                
                 </td>
             </tr>
             <tr>
@@ -75,9 +83,11 @@
                 
                 <td>
                
-                <a href="<?php echo base_url() ?>/Welcome_IF/viewSupervisor"><i class="mdi  mdi-library-books text-success" style="font-size: 24px;" ></i></a>
-                <a href="<?php echo base_url() ?>/Welcome_IF/editSupervisor"><i class="mdi mdi-pencil text-success" style="font-size: 24px;" ></i></a>
-                <a href="" onclick="return confirm('Are you sur want to delete?')"><i class="mdi mdi-delete text-danger" style="font-size: 24px;"></i></a>
+                <a href="#"><i class="mdi  mdi-library-books text-success" style="font-size: 24px;" ></i></a>
+                <a href="<?php echo base_url();?>tutorDas/viewSupervisorDas">
+                    <i class="mdi mdi-eye text-primary" style="font-size: 24px;" ></i>
+                </a>
+               
                 </td>
             </tr>
             <tr>
@@ -87,9 +97,13 @@
                 
                 <td>
                
-                <a href="<?php echo base_url() ?>/Welcome_IF/viewSupervisor"><i class="mdi  mdi-library-books text-success" style="font-size: 24px;" ></i></a>
-                <a href="<?php echo base_url() ?>/Welcome_IF/editSupervisor"><i class="mdi mdi-pencil text-success" style="font-size: 24px;" ></i></a>
-                <a href="" onclick="return confirm('Are you sur want to delete?')"><i class="mdi mdi-delete text-danger" style="font-size: 24px;"></i></a>
+                <a href="#">
+                    <i class="mdi  mdi-library-books text-success" style="font-size: 24px;" ></i>
+                </a>
+                <a href="<?php echo base_url();?>tutorDas/viewSupervisorDas">
+                    <i class="mdi mdi-eye text-primary" style="font-size: 24px;" ></i>
+                </a>
+                
                 </td>
             </tr>
            
@@ -100,9 +114,13 @@
                
                 <td>
                
-                <a href="<?php echo base_url() ?>/Welcome_IF/viewSupervisor"><i class="mdi mdi-checkbox-marked-outline text-success" style="font-size: 24px;" ></i></a>
-                <a href="<?php echo base_url() ?>/Welcome_IF/editSupervisor"><i class="mdi mdi-pencil text-success" style="font-size: 24px;" ></i></a>
-                <a href="" onclick="return confirm('Are you sur want to delete?')"><i class="mdi mdi-delete text-danger" style="font-size: 24px;"></i></a>
+                    <a href="#">
+                        <i class="mdi mdi-checkbox-marked-outline text-success" style="font-size: 24px;" ></i>
+                    </a>
+                    <a href="<?php echo base_url();?>tutorDas/viewSupervisorDas">
+                        <i class="mdi mdi-eye text-primary" style="font-size: 24px;" ></i>
+                    </a>
+               
                 </td>
             </tr>
            

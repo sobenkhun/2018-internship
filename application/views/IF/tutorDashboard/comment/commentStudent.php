@@ -22,6 +22,7 @@
 					<tr>
 						<th>Date</th>
 						<th>Student</th>
+						<th>Action</th>
 						
 						
 					</tr>

@@ -24,8 +24,11 @@
 						<a href="#">
 							<i class="mdi  mdi-checkbox-marked-outline text-success" style="font-size:24px;"></i>
 						</a>
-						<a href="#">
+						<a href="<?php echo base_url(); ?>tutorDas/listCommStuDas">
 							<i class="mdi  mdi-comment text-primary" style="font-size:24px;"></i>
+						</a>
+						<a href="<?php echo base_url(); ?>tutorDas/listCommStuDas">
+							<i class="mdi   mdi-file-document text-warning" style="font-size:24px;"></i>
 						</a>
 						<a href="<?php echo base_url(); ?>tutorDas/detailStudentDas" )">
 							<i class="mdi mdi-eye text-info" style="font-size:24px;"></i>
@@ -42,8 +45,11 @@
 						<a href="#" onclick = "return confirm('Do you want to View detail information this Student?')">
 							<i class="mdi   mdi-checkbox-blank-outline text-success" style="font-size:24px;"></i>
 						</a>
-						<a href="#" onclick = "return confirm('Do you want to edit information in this Student?')">
+						<a href="<?php echo base_url(); ?>tutorDas/listCommStuDas" onclick = "return confirm('Do you want to edit information in this Student?')">
 							<i class="mdi  mdi-comment text-primary" style="font-size:24px;"></i>
+						</a>
+						<a href="#">
+							<i class="mdi   mdi-file-document text-warning" style="font-size:24px;"></i>
 						</a>
 						<a href="<?php echo base_url(); ?>tutorDas/detailStudentDas" )">
 							<i class="mdi mdi-eye text-info" style="font-size:24px;"></i>
@@ -60,12 +66,17 @@
 						<a href="#" onclick = "return confirm('Do you want to View detail information this Student?')">
 							<i class="mdi mdi-pencil-box-outline text-success" style="font-size:24px;"></i>
 						</a>
-						<a href="#" onclick = "return confirm('Do you want to edit information in this Student?')">
+						<a href="<?php echo base_url(); ?>tutorDas/listCommStuDas" onclick = "return confirm('Do you want to edit information in this Student?')">
 							<i class="mdi  mdi-comment text-primary" style="font-size:24px;"></i>
-							<a href="<?php echo base_url(); ?>tutorDas/detailStudentDas" )">
-								<i class="mdi mdi-eye text-info" style="font-size:24px;"></i>
-							</a>
 						</a>
+						<a href="<?php echo base_url(); ?>tutorDas/CommStuDas">
+							<i class="mdi   mdi-file-document text-warning" style="font-size:24px;"></i>
+						</a>
+
+						<a href="<?php echo base_url(); ?>tutorDas/detailStudentDas" )">
+							<i class="mdi mdi-eye text-info" style="font-size:24px;"></i>
+						</a>
+						
 					</td>
 				</tr>
 				<tr>
@@ -78,8 +89,11 @@
 						<a href="#" onclick = "return confirm('Do you want to View detail information this Student?')">
 							<i class="mdi  mdi-pencil-box-outline text-success" style="font-size:24px;"></i>
 						</a>
-						<a href="#" onclick = "return confirm('Do you want to edit information in this Student?')">
+						<a href="<?php echo base_url(); ?>tutorDas/listCommStuDas" onclick = "return confirm('Do you want to edit information in this Student?')">
 							<i class="mdi mdi-comment text-primary" style="font-size:24px;"></i>
+						</a>
+						<a href="<?php echo base_url(); ?>tutorDas/listCommStuDas">
+							<i class="mdi   mdi-file-document text-warning" style="font-size:24px;"></i>
 						</a>
 						<a href="<?php echo base_url(); ?>tutorDas/detailStudentDas" )">
 							<i class="mdi mdi-eye text-info" style="font-size:24px;"></i>
@@ -96,8 +110,11 @@
 						<a href="#" onclick = "return confirm('Do you want to View detail information this Student?')">
 							<i class="mdi  mdi-pencil-box-outline text-success" style="font-size:24px;"></i>
 						</a>
-						<a href="#" onclick = "return confirm('Do you want to edit information in this Student?')">
+						<a href="<?php echo base_url(); ?>tutorDas/listCommStuDas" onclick = "return confirm('Do you want to edit information in this Student?')">
 							<i class="mdi  mdi-comment text-primary" style="font-size:24px;"></i>
+						</a>
+						<a href="<?php echo base_url(); ?>tutorDas/listCommStuDas">
+							<i class="mdi   mdi-file-document text-warning" style="font-size:24px;"></i>
 						</a>
 						<a href="<?php echo base_url(); ?>tutorDas/detailStudentDas" )">
 							<i class="mdi mdi-eye text-info" style="font-size:24px;"></i>

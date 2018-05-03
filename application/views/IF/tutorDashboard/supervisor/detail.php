@@ -3,7 +3,7 @@
 <div class="container">
 	 	 <div class="row">
 			<!-- <div class="col-md-2"></div> -->
-			<div class="col-md-2"><a href="<?php echo base_url(); ?>Welcome_IF/supervisor">
+			<div class="col-md-2"><a href="<?php echo base_url();?>tutorDas/supervisorDas">
 				<button type="button" class="btn btn-primary"><i class="mdi mdi-chevron-left"></i>Back</button></a></div>
 			<div class="col-md-8">
 					<h3 class="text-center text-primary">Supervisor Profile</h3>

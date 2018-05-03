@@ -2,7 +2,6 @@
 
 
 <!--Note that FullCalendar needs MomentJS to work //-->
-<!--Note that FullCalendar needs MomentJS to work //-->
 <link rel="stylesheet" href="<?php echo base_url();?>assets/fullcalendar-3.8.2/fullcalendar.min.css">
 <script src="<?php echo base_url();?>assets/js/moment-with-locales-2.19.3.min.js"></script>
 <script src="<?php echo base_url();?>assets/fullcalendar-3.8.2/fullcalendar.min.js"></script>

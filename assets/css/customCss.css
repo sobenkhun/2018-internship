@@ -31,7 +31,7 @@ form .addStudent{
 /*============ addstudent page=========*/
 
 /* student menu*/
-img .stMenu {
+.stMenu .logo {
 	width:150px;
 } 
 /*=========== student menu =============*/

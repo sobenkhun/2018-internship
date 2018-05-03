@@ -10,15 +10,20 @@
     <ul class="navbar-nav mr-auto">
       <li class="nav-item active ">
         <a class="nav-link" href="<?php echo base_url();?>cStudent/index">
-        <b class="colorTextMenu">  Work-log</b></a>
+          <b class="colorTextMenu">  Work-log</b>
+        </a>
       </li>
       <li class="nav-item active">
         <a class="nav-link" href="<?php echo base_url();?>cStudent/comment">
-        <b class="colorTextMenu">  Comment</b></a>
+          <b class="colorTextMenu">  Comment</b>
+        </a>
       </li>
       <li class="nav-item active ">
         <a class="nav-link" href="<?php echo base_url();?>cStudent/calendar">
-        <b class="colorTextMenu">Calendar   <i class="mdi mdi-book" style="font-size:12px; margin-bottom: -9px;"></i></b></a>
+          <b class="colorTextMenu">Calendar   
+            <i class="mdi mdi-book" style="font-size:12px; margin-bottom: -9px;"></i>
+          </b>
+        </a>
       </li>
     </ul>
     <ul class="navbar-nav">
@@ -27,13 +32,15 @@
           <i  style="font-size: 20px; margin-right: 20px;" class="mdi mdi-email"> </i>          
         </a>
       </li>
-      <li class="nav-item ">
-        <a class="nav-link" href="#">       
+      <li class="nav-item">
+        <a class="nav-link" href="#" data-toggle="modal" data-target="#myModal">       
           <b class="colorTextMenu">  
-            <span> Username </span><i style="font-size: 20px;" class="mdi mdi-account-circle"></i> 
+            <span> Username </span>
+            <i style="font-size: 20px;" class="mdi mdi-account-circle"></i> 
           </b>
         </a>
       </li>
+
       <li class="nav-item">
         <a class="nav-link" href="<?php echo base_url();?>Welcome_IF/index">
           <b class="colorTextMenu"> 
@@ -43,4 +50,29 @@
       </li>
     </ul>
   </div>
+  <!-- The Modal -->
+  <div class="modal fade" id="myModal">
+    <div class="modal-dialog">
+      <div class="modal-content">
+      
+        <!-- Modal Header -->
+        <div class="modal-header">
+          <h4 class="modal-title">Modal Heading</h4>
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+        </div>
+        
+        <!-- Modal body -->
+        <div class="modal-body">
+          Modal body..
+        </div>
+        
+        <!-- Modal footer -->
+        <div class="modal-footer">
+          <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+        </div>
+        
+      </div>
+    </div>
+  </div>
+  <!-- ========= -->
 </nav><br><br><br><br><br>

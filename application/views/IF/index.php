@@ -11,7 +11,7 @@
         <div class="col-md-3">
           <div class="">
             <div class="row">
-              <div class="col-md-12 ">
+              <div class="col-md-12">
                 <div class="card text-center text-white">
                   <div class="card-header" style="background-color: #ffb53e ;">
                     <i class="mdi mdi-domain mdi-light" style="font-size:70px;"></i><br><br>
@@ -34,7 +34,7 @@
               <div class="card text-center text-white">
                 <div class="card-header" style="background-color: #4e95cb ;">
                   <i class="mdi mdi-account mdi-light" style="font-size:70px;"></i><br><br>
-                  <h4 style="font-family:  sans-serif">Number of Supervisors</h4>
+                  <h4 style="font-family:  sans-serif;">Number of Supervisors</h4>
                   <h5 class="card-title">299</h5>
                 </div>
                 <div class="card-body">
@@ -51,7 +51,7 @@
               <div class="card text-center text-white">
                 <div class="card-header" style="background-color: #ed233d ;">
                   <i class="mdi mdi-account-multiple mdi-light" style="font-size:70px;"></i><br><br>
-                  <h4 style="font-family:  sans-serif">  Number of <br>Tutors</h4>
+                  <h4 style="font-family:  sans-serif;">  Number of <br>Tutors</h4>
                   <h5 class="card-title">149</h5>
                 </div>
                 <div class="card-body">
@@ -68,7 +68,7 @@
               <div class="card text-center text-white">
                 <div class="card-header" style="background-color: #1db5a6 ;">
                   <i class="mdi mdi-school mdi-light" style="font-size:70px;"></i><br><br>
-                  <h4 style="font-family:  sans-serif">Number of Students</h4>
+                  <h4 style="font-family:  sans-serif;">Number of Students</h4>
                   <h5 class="card-title">232</h5>
                 </div>
                 <div class="card-body">

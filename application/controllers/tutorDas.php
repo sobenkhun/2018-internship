@@ -18,6 +18,30 @@ class tutorDas extends CI_Controller {
 		
 		$this->load->view('IF/template/footer.php');
 	}
+	function companyDas()
+	{
+		$this->load->view('IF/template/header.php');
+		$this->load->view('IF/menu/tutor.php');
+		$this->load->view('IF/tutorDashboard/company/index.php');
+		
+		$this->load->view('IF/template/footer.php');
+	}
+	function barChartDas()
+	{
+		$this->load->view('IF/template/header.php');
+		$this->load->view('IF/menu/tutor.php');
+		$this->load->view('IF/tutorDashboard/company/barChart.php');
+		
+		$this->load->view('IF/template/footer.php');
+	}
+	function cDetailDas()
+	{
+		$this->load->view('IF/template/header.php');
+		$this->load->view('IF/menu/tutor.php');
+		$this->load->view('IF/tutorDashboard/company/detail.php');
+		
+		$this->load->view('IF/template/footer.php');
+	}
 
 	function detailStudentDas()
 	{
@@ -68,8 +92,9 @@ class tutorDas extends CI_Controller {
 		$this->load->view('IF/template/header.php');
 		$this->load->view('IF/menu/tutor.php');
 		$this->load->view('IF/tutorDashboard/calendar/index.php');
-		
 		// $this->load->view('IF/template/footer.php');
+		
+		//  
 		
 	}
 

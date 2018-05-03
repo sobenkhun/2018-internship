@@ -1,6 +1,18 @@
 
+ <div class="container">
+ 	<div class="row">
+ 		<!-- <div class="col-md-2"></div> -->
+ 		<div class="col-md-2">
+ 			<a href="<?php echo base_url();?>tutorDas/listCommStuDas">
+ 			    <button type="button" class="btn btn-primary">
+ 				    <i class="mdi mdi-chevron-left"></i>Back
+ 			    </button>
+ 			</a>
+ 		</div>
+ </div>	 
 
 <div class="container con-body">
+	
 	<h3 class="text-primary text-center"><strong>Comment of student</strong></h3>
 	<div class="row">
 		<div class="col-md-3"></div>

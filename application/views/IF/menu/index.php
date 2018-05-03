@@ -1,4 +1,10 @@
-
+<style>
+  img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+  }
+</style>
 
 <nav class=" navbar navbar-expand-lg navbar-light  color">
   <a class="navbar-brand" href="<?php echo base_url();?>Welcome_IF/home">
@@ -29,10 +35,44 @@
     </ul>
     <ul class="navbar-nav">
          <li class="nav-item">
-           <a href="#" class="nav-link active">
+          <div class="dropdown">
+           <a href="#" class="nav-link active"  data-toggle="dropdown" aria-expanded="false">
              <i  style="font-size: 20px; margin-right: 20px;" class="mdi mdi-email"> </i>          
            </a>
+            <div class="dropdown-menu ">
+                <div class="dropdown-body">
+                 <a class="dropdown-item text-dark" href="#"><img class="logo" src="<?php echo base_url();?>assets/images/logo.png"><strong>Davit.Chea</strong> <br>Create Event on <strong>Calendar</strong></b></a>
+                  
+                </div>
+                <div class="dropdown-body">
+                 <a class="dropdown-item text-dark" href="#"><img class="logo" src="<?php echo base_url();?>assets/images/logo.png">  <strong>Rith.Nhil</strong> <br>conmment on <strong>Toch.Ban</strong></b></a>
+                  
+                </div>
+                <div class="dropdown-divider"></div>
+                 <a class="dropdown-item" href="#">View All</a>
+              </div>
+           </div>
          </li>
+         <li class="nav-item">
+          <div class="dropdown">
+           <a href="#" class="nav-link active"  data-toggle="dropdown" aria-expanded="false">
+             <i  style="font-size: 20px; margin-right: 20px;" class="mdi mdi-bell"> </i>          
+           </a>
+            <div class="dropdown-menu ">
+                <div class="dropdown-body">
+                 <a class="dropdown-item text-dark" href="#"><img class="logo" src="<?php echo base_url();?>assets/images/logo.png"><strong>Rith.Nhil</strong> <br>conmment on <strong>Toch.Ban</strong></b></a>
+                  
+                </div>
+                <div class="dropdown-body">
+                 <a class="dropdown-item text-dark" href="#"><img class="logo" src="<?php echo base_url();?>assets/images/logo.png">  <strong>Rith.Nhil</strong> <br>conmment on <strong>Toch.Ban</strong></b></a>
+                  
+                </div>
+                <div class="dropdown-divider"></div>
+                 <a class="dropdown-item" href="#">View All</a>
+              </div>
+           </div>
+         </li>
+      
          <li class="nav-item ">
            <a class="nav-link" href="#">       
              <b class="colorTextMenu">  

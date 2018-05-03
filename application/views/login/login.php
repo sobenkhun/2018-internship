@@ -114,16 +114,16 @@
 	</style>
 </head>
 <body>
-	<div class="container">
-		<form class="login" action="<?php echo base_url();?>Welcome_IF/login">
+	<div class="container">	
+		<form class="login" action="<?php echo base_url();?>Welcome_IF/login" method="post">
 			<div class="avatar">
 				<img src="<?php echo base_url();?>assets/images/logo.png" alt="Avatar"/>
 
 			</div>
-			<input type="email" name="name form-control" placeholder="Email" required>
+			<input type="email" name="email" placeholder="Email" required>
 			<i class="fa fa-user fa-2x"></i> <br/> <br/>
 			<input type="password" name="password" placeholder="Password" required> <i class="fa fa-lock fa-2x"></i> <br> <br> 
-			<a href="<?php echo base_url();?>Welcome_IF/home"><input type="submit" name="submit" value="Login" ></a>
+			<input type="submit" name="submit" value="Login" >
 			 <br/> <br/>
 			<input type="checkbox" name="checkbox" >Remember me
 			<a href="#" class="forgetpass">Forget Password?</a>

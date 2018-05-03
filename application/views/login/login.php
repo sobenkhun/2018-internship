@@ -9,9 +9,8 @@
 	<!-- font awesome -->
 	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
 	<style>
-
 		body {
-			background-image: url('https://images.unsplash.com/photo-1460602594182-8568137446ce?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=c6a89cf0d31c8ed23b35aaf9a119a9f5&auto=format&fit=crop&w=755&q=80');
+			background-image: url('<?php echo base_url(); ?>/assets/images/backgroundLogin.jpg');
 		}
 		div.container {
 			position: absolute;
@@ -115,15 +114,14 @@
 </head>
 <body>
 	<div class="container">
-		<form class="login" action="<?php echo base_url();?>Welcome_IF/login">
+		<form class="login" action="<?php echo base_url();?>Welcome_IF/login" method="post">
 			<div class="avatar">
 				<img src="<?php echo base_url();?>assets/images/logo.png" alt="Avatar"/>
-
 			</div>
-			<input type="email" name="name form-control" placeholder="Email" required>
+			<input type="email" name="email" placeholder="Email" required>
 			<i class="fa fa-user fa-2x"></i> <br/> <br/>
 			<input type="password" name="password" placeholder="Password" required> <i class="fa fa-lock fa-2x"></i> <br> <br> 
-			<a href="<?php echo base_url();?>Welcome_IF/home"><input type="submit" name="submit" value="Login" ></a>
+			<input type="submit" name="submit" value="Login" >
 			 <br/> <br/>
 			<input type="checkbox" name="checkbox" >Remember me
 			<a href="#" class="forgetpass">Forget Password?</a>

@@ -1,4 +1,4 @@
-<nav class=" navbar navbar-expand-lg navbar-light  color fixed-top">
+<nav class=" navbar navbar-expand-lg navbar-light color fixed-top">
   <a class="navbar-brand" href="<?php echo base_url();?>Welcome_IF/home">
       <img class="logo stMenu" src="<?php echo base_url();?>assets/images/logoL.png" alt="Logo" style="width:150px;">
     </a>
@@ -17,7 +17,7 @@
         <b class="colorTextMenu">  Comment</b></a>
       </li>
       <li class="nav-item active ">
-        <a class="nav-link" href="<?php echo base_url();?>Welcome_IF/calendar">
+        <a class="nav-link" href="<?php echo base_url();?>cStudent/calendar">
         <b class="colorTextMenu">Calendar   <i class="mdi mdi-book" style="font-size:12px; margin-bottom: -9px;"></i></b></a>
       </li>
     </ul>
@@ -35,7 +35,7 @@
         </a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">
+        <a class="nav-link" href="<?php echo base_url();?>Welcome_IF/index">
           <b class="colorTextMenu"> 
             <span> Logout </span> <i style="font-size: 20px;" class="mdi mdi-login"></i> 
           </b>

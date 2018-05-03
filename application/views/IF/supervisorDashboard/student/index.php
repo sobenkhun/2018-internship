@@ -4,7 +4,7 @@
 	<div class="row">
 		<div class="col-md-4"></div>
 		<div class="col-md-4">
-			<h2 class="text-center text-primary">List of supervisors</h2>
+			<h2 class="text-center text-primary">Student List</h2>
 		</div>
 		<table id="studentList" class="table table-bordered" style="width:100%">
         <thead>
@@ -22,8 +22,8 @@
                 
                 <td>
                
-                <a href="<?php echo base_url() ?>/Welcome_IF/viewSupervisor"><i class="mdi mdi-message-plus" style="font-size: 24px;" ></i></a>
-                <a href="<?php echo base_url() ?>/Welcome_IF/editSupervisor"><i class="mdi mdi-pencil text-success" style="font-size: 24px;" ></i></a>
+                <a href="<?php echo base_url() ?>supervisor/viewSupervisor"><i class="mdi mdi-message-plus" style="font-size: 24px;" ></i></a>
+                <a href="<?php echo base_url() ?>/supervisor/questionnair"><i class="mdi mdi-checkbox-marked-outline text-success" style="font-size: 24px;" ></i></a>
                 </td>
 
             </tr>
@@ -33,8 +33,8 @@
                 
                 <td>
                
-                <a href="<?php echo base_url() ?>/Welcome_IF/viewSupervisor"><i class="mdi mdi-message-plus" style="font-size: 24px;" ></i></a>
-                <a href="<?php echo base_url() ?>/Welcome_IF/editSupervisor"><i class="mdi mdi-pencil text-success" style="font-size: 24px;" ></i></a>
+                <a href="<?php echo base_url() ?>supervisor/viewSupervisor"><i class="mdi mdi-message-plus" style="font-size: 24px;" ></i></a>
+                <a href="<?php echo base_url() ?>/supervisor/questionnair"><i class="mdi mdi-checkbox-blank-outline text-success" style="font-size: 24px;" ></i></a>
                 </td>
             </tr>
             <tr>
@@ -43,73 +43,14 @@
                
                 <td>
                
-                <a href="<?php echo base_url() ?>/Welcome_IF/viewSupervisor"><i class="mdi mdi-message-plus" style="font-size: 24px;" ></i></a>
-                <a href="<?php echo base_url() ?>/Welcome_IF/editSupervisor"><i class="mdi mdi-pencil text-success" style="font-size: 24px;" ></i></a>
-                </td>
-            </tr>
-            <tr>
-                <td>4</td>
-                <td>Kea LOHN</td>
-                <td>
-               
-                <a href="<?php echo base_url() ?>/Welcome_IF/viewSupervisor"><i class="mdi mdi-message-plus" style="font-size: 24px;" ></i></a>
-                <a href="<?php echo base_url() ?>/Welcome_IF/editSupervisor"><i class="mdi mdi-pencil text-success" style="font-size: 24px;" ></i></a>
-                </td>
-            </tr>
-            <tr>
-                <td>5</td>
-                <td>Sopheak</td>
-                
-                <td>
-               
-                <a href="<?php echo base_url() ?>/Welcome_IF/viewSupervisor"><i class="mdi mdi-message-plus" style="font-size: 24px;" ></i></a>
-                <a href="<?php echo base_url() ?>/Welcome_IF/editSupervisor"><i class="mdi mdi-pencil text-success" style="font-size: 24px;" ></i></a>
-                </td>
-            </tr>
-            <tr>
-                <td>6</td>
-                <td>Pisey</td>
-                
-                <td>
-               
-                <a href="<?php echo base_url() ?>/Welcome_IF/viewSupervisor"><i class="mdi mdi-message-plus" style="font-size: 24px;" ></i></a>
-                <a href="<?php echo base_url() ?>/Welcome_IF/editSupervisor"><i class="mdi mdi-pencil text-success" style="font-size: 24px;" ></i></a>
-                </td>
-            </tr>
-            <tr>
-                <td>7</td>
-                <td>Rith NHEL</td>
-                
-                <td>
-               
-                <a href="<?php echo base_url() ?>/Welcome_IF/viewSupervisor"><i class="mdi mdi-message-plus" style="font-size: 24px;" ></i></a>
-                <a href="<?php echo base_url() ?>/Welcome_IF/editSupervisor"><i class="mdi mdi-checkbox-marked-outline text-success" style="font-size: 24px;" ></i></a>
-                </td>
-            </tr>
-            <tr>
-                <td>8</td>
-                 <td>Chanak CHON</td>
-               
-                <td>
-               
-                <a href="<?php echo base_url() ?>/Welcome_IF/viewSupervisor"><i class="mdi mdi-message-plus" style="font-size: 24px;" ></i></a>
-                <a href="<?php echo base_url() ?>/Welcome_IF/editSupervisor"><i class="mdi mdi-pencil text-success" style="font-size: 24px;" ></i></a>
-                </td>
-            </tr>
-            <tr>
-                <td>9</td>
-                <td>Rady Y</td>
-                
-                <td>
-               
-                <a href="<?php echo base_url() ?>/Welcome_IF/viewSupervisor"><i class="mdi mdi-message-plus" style="font-size: 24px;" ></i></a>
-                <a href="<?php echo base_url() ?>/Welcome_IF/editSupervisor"><i class="mdi mdi-pencil text-success" style="font-size: 24px;" ></i></a>
+                <a href="<?php echo base_url() ?>supervisor/viewSupervisor"><i class="mdi mdi-message-plus" style="font-size: 24px;" ></i></a>
+                <a href="<?php echo base_url() ?>/supervisor/questionnair"><i class="mdi mdi-pencil-box-outline text-success" style="font-size: 24px;" ></i></a>
                 </td>
             </tr>
         </tbody>
     </table>
 	</div>
-    <a href="<?php echo base_url(); ?>Welcome_IF/createSupervisor">
+    <a href="<?php echo base_url(); ?>supervisor/createSupervisor">
 		<button class="btn btn-primary"><i class="mdi mdi-account-plus" style="font-size: 20px;"></i>New Supervisor</button>
 	</a>
 

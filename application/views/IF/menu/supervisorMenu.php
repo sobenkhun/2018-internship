@@ -9,21 +9,8 @@
   <div class=" collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
       <li class="nav-item active ">
-        <a class="nav-link" href="<?php echo base_url();?>Welcome_IF/company">
-        <b class="colorTextMenu">  Company</b></a>
-      </li>
-      
-      <li class="nav-item active ">
-        <a class="nav-link" href="<?php echo base_url();?>tutorDas/supervisorDas">
-        <b class="colorTextMenu">  Supervisor</b></a>
-      </li>
-      <li class="nav-item active ">
         <a class="nav-link" href="<?php echo base_url();?>tutorDas/studentDas">
         <b class="colorTextMenu">  Student</b></a>
-      </li>
-      <li class="nav-item active ">
-        <a class="nav-link" href="<?php echo base_url();?>tutorDas/listCommStuDas">
-        <b class="colorTextMenu"> Comment</b></a>
       </li>
       <li class="nav-item active ">
         <a class="nav-link" href="<?php echo base_url();?>Welcome_IF/calendar">

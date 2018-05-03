@@ -129,6 +129,5 @@
 		<hr>
 		<p class="create">Don't have account ? <a href="#" class="register">REGISTER HERE</a> </p>
 	</div>
-
 </body>
 </html>

@@ -1,7 +1,6 @@
-
 <!-- body -->
 <div class="container con-body">
-	<h3 class="text-primary text-center"><strong>Student List</strong></h3>
+	<h3 class="text-primary text-center"><strong>Comment student </strong></h3>
 	<div class="row"><br><br>
 		<div class="col-md-2"></div>
 		<div class="col-md-8">
@@ -9,72 +8,52 @@
 				<thead class="text-center">
 					<tr>
 						<th>ID</th>
-						<th>Student Name</th>
-						<th>Comment</th>
+						<th>Student </th>
+						<th>Action </th>
 						
 					</tr>
 				</thead>
 				<tbody>
 					<tr>
 						<td class="text-center">1</td>
-						<td>Devit Chea</td>
-						
-						<td class="text-center">
-							
-							<a href="<?php echo base_url();?>tutorDas/CommStuDas">
+						<td>Devit Chea</td>	
+						<td>
+							<a href="<?php echo base_url(); ?>tutorDas/CommStuDas">
 								<i class="mdi  mdi-comment text-primary" style="font-size:24px;"></i>
 							</a>
-							
 						</td>
 					</tr>
 					<tr>
-						<td class="text-center">2</td>
-						<td>Ashton Cox</td>
-						
-						<td class="text-center">
-							
-							<a href="<?php echo base_url();?>tutorDas/CommStuDas" onclick = "return confirm('Do you want to edit information in this Student?')">
+						<td class="text-center">1</td>
+						<td>Devit Chea</td>	
+						<td>
+							<a href="<?php echo base_url(); ?>tutorDas/CommStuDas">
 								<i class="mdi  mdi-comment text-primary" style="font-size:24px;"></i>
 							</a>
-							
 						</td>
 					</tr>
 					<tr>
-						<td class="text-center">3</td>
-						<td>Ashton Cox</td>
-						
-						<td class="text-center">
-							
-							<a href="<?php echo base_url();?>tutorDas/CommStuDas" onclick = "return confirm('Do you want to edit information in this Student?')">
+						<td class="text-center">1</td>
+						<td>Devit Chea</td>	
+						<td>
+							<a href="<?php echo base_url(); ?>tutorDas/CommStuDas">
 								<i class="mdi  mdi-comment text-primary" style="font-size:24px;"></i>
 							</a>
-							
 						</td>
 					</tr>
 					<tr>
-						<td class="text-center">4</td>
-						<td>Devit Chea</td>
-						
-						<td class="text-center">
-							
-							<a href="<?php echo base_url();?>tutorDas/CommStuDas" onclick = "return confirm('Do you want to edit information in this Student?')">
-								<i class="mdi mdi-comment text-primary" style="font-size:24px;"></i>
-							</a>
-							
-						</td>
-					</tr>
-					<tr>
-						<td class="text-center">5</td>
-						<td>Devit Chea</td>
-						
-						<td class="text-center">
-							
-							<a href="<?php echo base_url();?>tutorDas/CommStuDas" onclick = "return confirm('Do you want to edit information in this Student?')">
+						<td class="text-center">1</td>
+						<td>Devit Chea</td>	
+						<td>
+							<a href="<?php echo base_url(); ?>tutorDas/CommStuDas">
 								<i class="mdi  mdi-comment text-primary" style="font-size:24px;"></i>
 							</a>
-							
 						</td>
 					</tr>
+					
+					
+					
+					
 				</tbody>
 			</table>
 		</div>

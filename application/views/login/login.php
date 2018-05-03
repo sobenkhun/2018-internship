@@ -115,42 +115,10 @@
 </head>
 <body>
 	<div class="container">
-<<<<<<< HEAD
-		<div class="row">
-			<div class="col-sm-12">
-				<div class="row">
-					<div class="col-md-4"></div>
-					<div class="col-md-4">
-
-						<div class="card bg-light">
-							<div class="card-body">
-								<div class="row">
-									<div class="col-md-2"></div>
-									<div class="col-md-8"><img src="<?php echo base_url() ?>/assets/images/logo.png" class="text-center bg-white" alt="logo.png"></div>
-									<div class="col-md-2"></div>
-								</div>
-								<br>
-								<form action="<?php echo base_url(); ?>/Welcome_IF/login" method="post"	 >
-									<div class="form-group">
-										<!-- <label for="formGroupExampleInput">Example label</label> -->
-										<input type="text" class="form-control" id="formGroupExampleInput" placeholder="Email" name="email">
-									</div>
-									<div class="form-group">
-										<input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Password">
-									</div>
-									<br>
-									<button class="btn btn-info float-right">Login</button>
-								</form>
-							</div>
-						</div>
-					</div>
-					<div class="col-md-4"></div>
-				</div>
-=======
-		<form class="login" action="<?php echo base_url();?>Welcome_IF/home">
+		<form class="login" action="<?php echo base_url();?>Welcome_IF/login">
 			<div class="avatar">
 				<img src="<?php echo base_url();?>assets/images/logo.png" alt="Avatar"/>
->>>>>>> 10d9a5b8928ceba66f506cc2c63133c191c694bd
+
 			</div>
 			<input type="email" name="name form-control" placeholder="Email" required>
 			<i class="fa fa-user fa-2x"></i> <br/> <br/>

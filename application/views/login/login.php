@@ -115,9 +115,6 @@
 <body>
 <<<<<<< HEAD
 	<div class="container">	
-=======
-	<div class="container">
->>>>>>> f04475dd789f574d69f2f462172362055ac9674d
 		<form class="login" action="<?php echo base_url();?>Welcome_IF/login" method="post">
 			<div class="avatar">
 				<img src="<?php echo base_url();?>assets/images/logo.png" alt="Avatar"/>

@@ -14,6 +14,37 @@ class Welcome_IF extends CI_Controller {
 	{
 		$this->load->view('login/login');
 	}
+	public function login()
+	{
+		$email = $this->input->post('email');
+		if ($email== "supervisor@gmail.com") {
+			// echo "supervisor"; git testing
+			$this->load->view('IF/template/header.php');
+			$this->load->view('IF/menu/supervisorMenu.php');
+			$this->load->view('IF/supervisorDashboard/student/index.php');
+			$this->load->view('IF/template/footer.php');
+		}else if ( $email == "tutor@gmail.com"){
+			$this->load->view('IF/template/header.php');
+			$this->load->view('IF/menu/tutor.php');
+			$this->load->view('IF/tutorDashboard/index.php');
+			
+			$this->load->view('IF/template/footer.php');
+		}else if ( $email == "student@gmail.com"){
+			$this->load->view('IF/template/header.php');
+			$this->load->view('IF/menu/studentMenu.php');
+			// $this->load->view('IF/index.php');
+			$this->load->view('IF/student/worklog');
+			$this->load->view('IF/template/footer.php');
+		}else if ( $email == "ero@gmail.com"){
+			$this->load->view('IF/template/header.php');
+			$this->load->view('IF/menu/index.php');
+			$this->load->view('IF/index.php');
+			$this->load->view('IF/template/footer.php');
+		}else {
+		$this->load->view('login/login');
+		}
+
+	}
 	public function home()
 	{
 		$this->load->view('IF/template/header.php');

@@ -26,7 +26,7 @@
      <a href="<?php echo base_url();?>Welcome_IF/barChart"><span class="mdi mdi-chart-donut mdi-24px text-success"></span></a>
      <a href="<?php echo base_url();?>Welcome_IF/detailCompany"><span class="mdi mdi-eye mdi-24px text-success"></span></a>
             <a href="<?php echo base_url();?>Welcome_IF/editeCompany"><span class="mdi mdi-pencil mdi-24px fa-lg text-success"></span></a>
-     <a href="<?php echo base_url();?>Welcome_IF/" onclick="return confirm('Are you sure to delete this Company?');">
+     <a href="#" onclick="return confirm('Are you sure to delete this Company?');">
       <i class="text-danger mdi mdi-delete mdi-24px " data-toggle ="tooltip" title="Delete this class"></i>
     </a>
         </td>
@@ -80,7 +80,7 @@
 <div class="container">
 <div class="row">
   <div class="col-md-12">
-    <a href="<?php echo base_url();?>Welcome_IF/createCompany"><button class="btn btn-primary"><span class="mdi mdi mdi-account-plus "  style="font-size:20px;"></span><i>  </i>  Create New Company</button></a>
+    <a href="<?php echo base_url();?>Welcome_IF/createCompany"><button class="btn btn-primary"><span class="mdi mdi mdi-account-plus "  style="font-size:20px;"></span><i>  </i>New Company</button></a>
   </div>
 </div>
 </div>

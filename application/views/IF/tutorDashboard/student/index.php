@@ -22,13 +22,13 @@
 					<td>Channak</td>
 					<td class="text-center">
 						<a href="<?php echo base_url();?>Welcome_IF/viewStudent">
-							<i class="mdi mdi-eye text-success" style="font-size:24px;"></i>
+							<i class="mdi  mdi-checkbox-marked-outline text-success" style="font-size:24px;"></i>
 						</a>
 						<a href="<?php echo base_url();?>Welcome_IF/updateStudent">
-							<i class="mdi  mdi-border-color text-primary" style="font-size:24px;"></i>
+							<i class="mdi  mdi-comment text-primary" style="font-size:24px;"></i>
 						</a>
 						<a href="" onclick = "return confirm('Are you sure that you want to delete this student?')">
-							<i class="mdi mdi-delete text-danger" style="font-size:24px;"></i>
+							<i class="mdi mdi-eye text-info" style="font-size:24px;"></i>
 						</a>
 					</td>
 				</tr>
@@ -40,13 +40,13 @@
 					<td>Channak Choun</td>
 					<td class="text-center">
 						<a href="view_student.html" onclick = "return confirm('Do you want to View detail information this Student?')">
-							<i class="mdi mdi-eye text-success" style="font-size:24px;"></i>
+							<i class="mdi   mdi-checkbox-blank-outline text-success" style="font-size:24px;"></i>
 						</a>
 						<a href="update_student.html" onclick = "return confirm('Do you want to edit information in this Student?')">
-							<i class="mdi  mdi-border-color text-primary" style="font-size:24px;"></i>
+							<i class="mdi  mdi-comment text-primary" style="font-size:24px;"></i>
 						</a>
 						<a href="" onclick = "return confirm('Are you sure that you want to delete this student?')">
-							<i class="mdi mdi-delete text-danger" style="font-size:24px;"></i>
+							<i class="mdi mdi-eye text-info" style="font-size:24px;"></i>
 						</a>
 					</td>
 				</tr>
@@ -58,13 +58,13 @@
 					<td>Rith Nhel</td>
 					<td class="text-center">
 						<a href="view_student.html" onclick = "return confirm('Do you want to View detail information this Student?')">
-							<i class="mdi mdi-eye text-success" style="font-size:24px;"></i>
+							<i class="mdi mdi-pencil-box-outline text-success" style="font-size:24px;"></i>
 						</a>
 						<a href="update_student.html" onclick = "return confirm('Do you want to edit information in this Student?')">
-							<i class="mdi  mdi-border-color text-primary" style="font-size:24px;"></i>
+							<i class="mdi  mdi-comment text-primary" style="font-size:24px;"></i>
 						</a>
 						<a href="" onclick = "return confirm('Are you sure that you want to delete this student?')">
-							<i class="mdi mdi-delete text-danger" style="font-size:24px;"></i>
+							<i class="mdi mdi-eye text-info" style="font-size:24px;"></i>
 						</a>
 					</td>
 				</tr>
@@ -76,13 +76,13 @@
 					<td>Channak</td>
 					<td class="text-center">
 						<a href="view_student.html" onclick = "return confirm('Do you want to View detail information this Student?')">
-							<i class="mdi mdi-eye text-success" style="font-size:24px;"></i>
+							<i class="mdi  mdi-pencil-box-outline text-success" style="font-size:24px;"></i>
 						</a>
 						<a href="update_student.html" onclick = "return confirm('Do you want to edit information in this Student?')">
-							<i class="mdi  mdi-border-color text-primary" style="font-size:24px;"></i>
+							<i class="mdi mdi-comment text-primary" style="font-size:24px;"></i>
 						</a>
 						<a href="" onclick = "return confirm('Are you sure that you want to delete this student?')">
-							<i class="mdi mdi-delete text-danger" style="font-size:24px;"></i>
+							<i class="mdi mdi-eye text-info" style="font-size:24px;"></i>
 						</a>
 					</td>
 				</tr>
@@ -94,26 +94,30 @@
 					<td>Channak</td>
 					<td class="text-center">
 						<a href="view_student.html" onclick = "return confirm('Do you want to View detail information this Student?')">
-							<i class="mdi mdi-eye text-success" style="font-size:24px;"></i>
+							<i class="mdi  mdi-pencil-box-outline text-success" style="font-size:24px;"></i>
 						</a>
 						<a href="update_student.html" onclick = "return confirm('Do you want to edit information in this Student?')">
-							<i class="mdi  mdi-border-color text-primary" style="font-size:24px;"></i>
+							<i class="mdi  mdi-comment text-primary" style="font-size:24px;"></i>
 						</a>
 						<a href="" onclick = "return confirm('Are you sure that you want to delete this student?')">
-							<i class="mdi mdi-delete text-danger" style="font-size:24px;"></i>
+							<i class="mdi mdi-eye text-info" style="font-size:24px;"></i>
 						</a>
 					</td>
 				</tr>
 			</tbody>
 		</table>
 	</div>
-	<div class="row">
-		<div class="col-md-12">
-			<a href="<?php echo base_url();?>Welcome_IF/addStudent">
-				<button class="btn btn-primary">
-					<i class="mdi mdi-account-plus text-white" style="font-size:20px;"></i>New Student
-				</button>
-			</a>
-		</div>
-	</div>
+	
 </div>
+
+<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+<script src="https://cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js"></script>
+<script src="https://cdn.datatables.net/1.10.16/js/dataTables.bootstrap4.min.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/css/bootstrap.css">
+<link rel="stylesheet" href="https://cdn.datatables.net/1.10.16/css/dataTables.bootstrap4.min.css">
+
+<script>
+	$(document).ready(function() {
+		$('#example').DataTable();
+	} );
+</script>

@@ -33,10 +33,10 @@
 									<div class="col-md-2"></div>
 								</div>
 								<br>
-								<form>
+								<form action="<?php echo base_url(); ?>/Welcome_IF/login" method="post"	 >
 									<div class="form-group">
 										<!-- <label for="formGroupExampleInput">Example label</label> -->
-										<input type="text" class="form-control" id="formGroupExampleInput" placeholder="Email">
+										<input type="text" class="form-control" id="formGroupExampleInput" placeholder="Email" name="email">
 									</div>
 									<div class="form-group">
 										<!-- 						        <label for="formGroupExampleInput2">Another label</label> -->
@@ -46,7 +46,7 @@
 										<label for="formGroupExampleInput2"><a class="text-dark" href="">Forget Password ?</a></label>
 									</div>
 									<br>
-									<button class="btn btn-info float-right"><a class="text-white" href="<?php echo base_url();?>Welcome_IF/home">Login</a></button>
+									<button class="btn btn-info float-right">Login</button>
 								</form>
 							</div>
 						</div>

@@ -21,13 +21,13 @@
 					<td>Dara</td>
 					<td>Channak</td>
 					<td class="text-center">
-						<a href="<?php echo base_url();?>Welcome_IF/viewStudent">
+						<a href="#">
 							<i class="mdi  mdi-checkbox-marked-outline text-success" style="font-size:24px;"></i>
 						</a>
-						<a href="<?php echo base_url();?>Welcome_IF/updateStudent">
+						<a href="#">
 							<i class="mdi  mdi-comment text-primary" style="font-size:24px;"></i>
 						</a>
-						<a href="" onclick = "return confirm('Are you sure that you want to delete this student?')">
+						<a href="<?php echo base_url(); ?>tutorDas/detailStudentDas" )">
 							<i class="mdi mdi-eye text-info" style="font-size:24px;"></i>
 						</a>
 					</td>
@@ -39,13 +39,13 @@
 					<td>Dara Chan</td>
 					<td>Channak Choun</td>
 					<td class="text-center">
-						<a href="view_student.html" onclick = "return confirm('Do you want to View detail information this Student?')">
+						<a href="#" onclick = "return confirm('Do you want to View detail information this Student?')">
 							<i class="mdi   mdi-checkbox-blank-outline text-success" style="font-size:24px;"></i>
 						</a>
-						<a href="update_student.html" onclick = "return confirm('Do you want to edit information in this Student?')">
+						<a href="#" onclick = "return confirm('Do you want to edit information in this Student?')">
 							<i class="mdi  mdi-comment text-primary" style="font-size:24px;"></i>
 						</a>
-						<a href="" onclick = "return confirm('Are you sure that you want to delete this student?')">
+						<a href="<?php echo base_url(); ?>tutorDas/detailStudentDas" )">
 							<i class="mdi mdi-eye text-info" style="font-size:24px;"></i>
 						</a>
 					</td>
@@ -57,14 +57,14 @@
 					<td>Dara Chan</td>
 					<td>Rith Nhel</td>
 					<td class="text-center">
-						<a href="view_student.html" onclick = "return confirm('Do you want to View detail information this Student?')">
+						<a href="#" onclick = "return confirm('Do you want to View detail information this Student?')">
 							<i class="mdi mdi-pencil-box-outline text-success" style="font-size:24px;"></i>
 						</a>
-						<a href="update_student.html" onclick = "return confirm('Do you want to edit information in this Student?')">
+						<a href="#" onclick = "return confirm('Do you want to edit information in this Student?')">
 							<i class="mdi  mdi-comment text-primary" style="font-size:24px;"></i>
-						</a>
-						<a href="" onclick = "return confirm('Are you sure that you want to delete this student?')">
-							<i class="mdi mdi-eye text-info" style="font-size:24px;"></i>
+							<a href="<?php echo base_url(); ?>tutorDas/detailStudentDas" )">
+								<i class="mdi mdi-eye text-info" style="font-size:24px;"></i>
+							</a>
 						</a>
 					</td>
 				</tr>
@@ -75,13 +75,13 @@
 					<td>Dara</td>
 					<td>Channak</td>
 					<td class="text-center">
-						<a href="view_student.html" onclick = "return confirm('Do you want to View detail information this Student?')">
+						<a href="#" onclick = "return confirm('Do you want to View detail information this Student?')">
 							<i class="mdi  mdi-pencil-box-outline text-success" style="font-size:24px;"></i>
 						</a>
-						<a href="update_student.html" onclick = "return confirm('Do you want to edit information in this Student?')">
+						<a href="#" onclick = "return confirm('Do you want to edit information in this Student?')">
 							<i class="mdi mdi-comment text-primary" style="font-size:24px;"></i>
 						</a>
-						<a href="" onclick = "return confirm('Are you sure that you want to delete this student?')">
+						<a href="<?php echo base_url(); ?>tutorDas/detailStudentDas" )">
 							<i class="mdi mdi-eye text-info" style="font-size:24px;"></i>
 						</a>
 					</td>
@@ -93,13 +93,13 @@
 					<td>Dara</td>
 					<td>Channak</td>
 					<td class="text-center">
-						<a href="view_student.html" onclick = "return confirm('Do you want to View detail information this Student?')">
+						<a href="#" onclick = "return confirm('Do you want to View detail information this Student?')">
 							<i class="mdi  mdi-pencil-box-outline text-success" style="font-size:24px;"></i>
 						</a>
-						<a href="update_student.html" onclick = "return confirm('Do you want to edit information in this Student?')">
+						<a href="#" onclick = "return confirm('Do you want to edit information in this Student?')">
 							<i class="mdi  mdi-comment text-primary" style="font-size:24px;"></i>
 						</a>
-						<a href="" onclick = "return confirm('Are you sure that you want to delete this student?')">
+						<a href="<?php echo base_url(); ?>tutorDas/detailStudentDas" )">
 							<i class="mdi mdi-eye text-info" style="font-size:24px;"></i>
 						</a>
 					</td>

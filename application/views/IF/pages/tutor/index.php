@@ -5,7 +5,7 @@
 
 <div class="row">
 	<div class="col-md-12">
-		<h3 class="text-info text-center">Tutors list</h3>
+		<h3 class="text-primary text-center">Tutors list</h3>
 	</div>
 </div>
 <div class="row">

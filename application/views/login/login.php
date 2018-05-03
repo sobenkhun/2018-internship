@@ -9,9 +9,8 @@
 	<!-- font awesome -->
 	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
 	<style>
-
 		body {
-			background-image: url('https://images.unsplash.com/photo-1460602594182-8568137446ce?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=c6a89cf0d31c8ed23b35aaf9a119a9f5&auto=format&fit=crop&w=755&q=80');
+			background-image: url('<?php echo base_url(); ?>/assets/images/backgroundLogin.jpg');
 		}
 		div.container {
 			position: absolute;
@@ -114,11 +113,14 @@
 	</style>
 </head>
 <body>
+<<<<<<< HEAD
 	<div class="container">	
+=======
+	<div class="container">
+>>>>>>> f04475dd789f574d69f2f462172362055ac9674d
 		<form class="login" action="<?php echo base_url();?>Welcome_IF/login" method="post">
 			<div class="avatar">
 				<img src="<?php echo base_url();?>assets/images/logo.png" alt="Avatar"/>
-
 			</div>
 			<input type="email" name="email" placeholder="Email" required>
 			<i class="fa fa-user fa-2x"></i> <br/> <br/>

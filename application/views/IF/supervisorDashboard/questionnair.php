@@ -12,7 +12,7 @@
          <link rel="stylesheet" href="<?php echo base_url(); ?>/assets/CognitorFormFiles/style3.css">
          <div class="container">
          	<div class="row">
-         		<!-- <div class="col-md-4"></div> -->
+         		<!-- <div class="col-md-4">Show comment</div> -->
          		<div class="col-md-4">
          			<!-- <h3 class="text-center text-primary c-forms-form-title">Companies Form PNC</h3> -->
          			<a href="<?php echo base_url(); ?>supervisor/index">

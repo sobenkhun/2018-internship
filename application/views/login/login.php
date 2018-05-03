@@ -115,7 +115,7 @@
 </head>
 <body>
 	<div class="container">
-<<<<<<< HEAD
+<!-- <<<<<<< HEAD -->
 		<div class="row">
 			<div class="col-sm-12">
 				<div class="row">

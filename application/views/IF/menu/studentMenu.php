@@ -50,14 +50,16 @@
       </li>
     </ul>
   </div>
-  <!-- The Modal -->
+  
+</nav><br><br><br><br><br>
+<!-- The Modal -->
   <div class="modal fade" id="myModal">
     <div class="modal-dialog">
       <div class="modal-content">
       
         <!-- Modal Header -->
         <div class="modal-header">
-          <h4 class="modal-title">Modal Heading</h4>
+          <h4 class="modal-title">Your </h4>
           <button type="button" class="close" data-dismiss="modal">&times;</button>
         </div>
         
@@ -75,4 +77,3 @@
     </div>
   </div>
   <!-- ========= -->
-</nav><br><br><br><br><br>

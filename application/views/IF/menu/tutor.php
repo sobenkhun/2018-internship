@@ -8,7 +8,7 @@
 </style>
 <nav class=" navbar navbar-expand-lg navbar-light  color">
   <a class="navbar-brand" href="<?php echo base_url();?>tutorDas/index">
-      <img class="logo" src="<?php echo base_url();?>assets/images/logoL.png" alt="Logo" style="width:150px;">
+      <img src="<?php echo base_url();?>assets/images/logoL.png" alt="Logo" style="width:150px;">
     </a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>

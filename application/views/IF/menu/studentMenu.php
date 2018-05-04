@@ -4,7 +4,7 @@
     height: 50px;
     border-radius: 50%;
   }
-</style> -->
+</style>
 <nav class=" navbar navbar-expand-lg navbar-light color fixed-top">
 
   <a class="navbar-brand" href="<?php echo base_url();?>cStudent/index">
@@ -35,60 +35,78 @@
       </li>
     </ul>
     <ul class="navbar-nav">
-             <li class="nav-item">
-              <div class="dropdown">
-               <a href="#" class="nav-link active"  data-toggle="dropdown" aria-expanded="false">
-                 <i  style="font-size: 20px; margin-right: 20px;" class="mdi mdi-email"> </i>          
-               </a>
-                <div class="dropdown-menu ">
-                    <div class="dropdown-body">
-                     <a class="dropdown-item text-dark" href="#"><img class="logo" src="<?php echo base_url();?>assets/images/logo.png"><strong>Davit.Chea</strong> <br>Create Event on <strong>Calendar</strong></b></a>
-                      
-                    </div>
-                    <div class="dropdown-body">
-                     <a class="dropdown-item text-dark" href="#"><img class="logo" src="<?php echo base_url();?>assets/images/logo.png">  <strong>Rith.Nhil</strong> <br>conmment on <strong>Toch.Ban</strong></b></a>
-                      
-                    </div>
-                    <div class="dropdown-divider"></div>
-                     <a class="dropdown-item" href="#">View All</a>
-                  </div>
-               </div>
-             </li>
-             <li class="nav-item">
-              <div class="dropdown">
-               <a href="#" class="nav-link active"  data-toggle="dropdown" aria-expanded="false">
-                 <i  style="font-size: 20px; margin-right: 20px;" class="mdi mdi-bell"> </i>          
-               </a>
-                <div class="dropdown-menu ">
-                    <div class="dropdown-body">
-                     <a class="dropdown-item text-dark" href="#"><img class="logo" src="<?php echo base_url();?>assets/images/logo.png"><strong>Rith.Nhil</strong> <br>conmment on <strong>Toch.Ban</strong></b></a>
-                      
-                    </div>
-                    <div class="dropdown-body">
-                     <a class="dropdown-item text-dark" href="#"><img class="logo" src="<?php echo base_url();?>assets/images/logo.png">  <strong>Rith.Nhil</strong> <br>conmment on <strong>Toch.Ban</strong></b></a>
-                      
-                    </div>
-                    <div class="dropdown-divider"></div>
-                     <a class="dropdown-item" href="#">View All</a>
-                  </div>
-               </div>
-             </li>
+      <li class="nav-item">
+        <div class="dropdown">
+          <a href="#" class="nav-link active"  data-toggle="dropdown" aria-expanded="false">
+            <i  style="font-size: 20px; margin-right: 20px;" class="mdi mdi-email"> </i>  
+          </a>
+          <div class="dropdown-menu ">
+            <div class="dropdown-body">
+              <a class="dropdown-item text-dark" href="#">
+                <img class="logo" src="<?php echo base_url();?>assets/images/logo.png">
+                <strong>Davit.Chea</strong> 
+                <br>Create Event on 
+                <strong>Calendar</strong>
+              </a>
+            </div>
+            <div class="dropdown-body">
+              <a class="dropdown-item text-dark" href="#">
+                <img class="logo" src="<?php echo base_url();?>assets/images/logo.png">
+                <strong>Rith.Nhil</strong> 
+                <br>conmment on 
+                <strong>Toch.Ban</strong>
+              </a>
+            </div>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="#">View All</a>
+          </div>
+        </div>
+      </li>
+      <li class="nav-item">
+        <div class="dropdown">
+          <a href="#" class="nav-link active"  data-toggle="dropdown" aria-expanded="false">
+            <i  style="font-size: 20px; margin-right: 20px;" class="mdi mdi-bell"> </i>   
+          </a>
+          <div class="dropdown-menu ">
+            <div class="dropdown-body">
+              <a class="dropdown-item text-dark" href="#">
+                <img class="logo" src="<?php echo base_url();?>assets/images/logo.png">
+                <strong>Rith.Nhil</strong> 
+                <br>conmment on 
+                <strong>Toch.Ban</strong>
+              </a>
+            </div>
+            <div class="dropdown-body">
+              <a class="dropdown-item text-dark" href="#">
+                <img class="logo" src="<?php echo base_url();?>assets/images/logo.png">  
+                <strong>Rith.Nhil</strong> 
+                <br>conmment on 
+                <strong>Toch.Ban</strong>
+              </a>
+            </div>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="#">View All</a>
+          </div>
+        </div>
+      </li>
           
-             <li class="nav-item ">
-               <a class="nav-link" href="#" data-toggle="modal" data-target="#myProfile">       
-                 <b class="colorTextMenu">  
-                   <span> Username </span><i style="font-size: 20px;" class="mdi mdi-account-circle"></i> 
-                 </b>
-               </a>
-             </li>
-             <li class="nav-item">
-               <a class="nav-link" href="<?php echo base_url();?>Welcome_IF">
-                 <b class="colorTextMenu"> 
-                   <span> Logout </span> <i style="font-size: 20px;" class="mdi mdi-login"></i> 
-                 </b>
-               </a>
-             </li>
-           </ul>
+      <li class="nav-item ">
+        <a class="nav-link" href="#" data-toggle="modal" data-target="#myProfile">       
+          <b class="colorTextMenu">  
+            <span> Username </span>
+            <i style="font-size: 20px;" class="mdi mdi-account-circle"></i> 
+          </b>
+       </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="<?php echo base_url();?>Welcome_IF">
+          <b class="colorTextMenu"> 
+            <span> Logout </span> 
+            <i style="font-size: 20px;" class="mdi mdi-login"></i> 
+          </b>
+        </a>
+      </li>
+    </ul>
   </div>
   
 </nav><br><br><br><br><br>

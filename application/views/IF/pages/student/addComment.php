@@ -40,10 +40,14 @@
 		<div class="col-md-2"></div>
 	</div><br>
 	<div class="row">
-		<div class="col-md-8"></div>
-		<div class="col-md-2 text-right">
+		<div class="col-md-2"></div>
+		<!-- <div class="col-md-2"></div> -->
+		<div class="col-md-8 text-right">
 			<a href="<?php echo base_url();?>Welcome_IF/student">
-				<button class="btn btn-primary">Save</button>
+				<button class="btn btn-danger">Cancel</button>
+			</a>
+			<a href="<?php echo base_url();?>Welcome_IF/student">
+				<button class="btn btn-primary">Add</button>
 			</a>
 		</div>
 		<div class="col-md-2"></div>

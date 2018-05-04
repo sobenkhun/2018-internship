@@ -21,6 +21,9 @@
 					<td>Dara</td>
 					<td>Channak</td>
 					<td class="text-center">
+						<a href="<?php echo base_url();?>Welcome_IF/comment">
+							<i class="mdi  mdi-comment text-primary" style="font-size:24px;"></i>
+						</a>
 						<a href="<?php echo base_url();?>Welcome_IF/viewStudent">
 							<i class="mdi mdi-eye text-success" style="font-size:24px;"></i>
 						</a>
@@ -39,6 +42,9 @@
 					<td>Dara Chan</td>
 					<td>Channak Choun</td>
 					<td class="text-center">
+						<a href="<?php echo base_url();?>Welcome_IF/comment">
+							<i class="mdi  mdi-comment text-primary" style="font-size:24px;"></i>
+						</a>
 						<a href="<?php echo base_url();?>Welcome_IF/viewStudent" >
 							<i class="mdi mdi-eye text-success" style="font-size:24px;"></i>
 						</a>
@@ -57,6 +63,9 @@
 					<td>Dara Chan</td>
 					<td>Rith Nhel</td>
 					<td class="text-center">
+						<a href="<?php echo base_url();?>Welcome_IF/comment">
+							<i class="mdi  mdi-comment text-primary" style="font-size:24px;"></i>
+						</a>
 						<a href="<?php echo base_url();?>Welcome_IF/viewStudent" >
 							<i class="mdi mdi-eye text-success" style="font-size:24px;"></i>
 						</a>
@@ -75,6 +84,9 @@
 					<td>Dara</td>
 					<td>Channak</td>
 					<td class="text-center">
+						<a href="<?php echo base_url();?>Welcome_IF/comment">
+							<i class="mdi  mdi-comment text-primary" style="font-size:24px;"></i>
+						</a>
 						<a href="<?php echo base_url();?>Welcome_IF/viewStudent" >
 							<i class="mdi mdi-eye text-success" style="font-size:24px;"></i>
 						</a>
@@ -93,6 +105,9 @@
 					<td>Dara</td>
 					<td>Channak</td>
 					<td class="text-center">
+						<a href="<?php echo base_url();?>Welcome_IF/comment">
+							<i class="mdi  mdi-comment text-primary" style="font-size:24px;"></i>
+						</a>
 						<a href="<?php echo base_url();?>Welcome_IF/viewStudent" >
 							<i class="mdi mdi-eye text-success" style="font-size:24px;"></i>
 						</a>

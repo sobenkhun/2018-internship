@@ -50,7 +50,7 @@
 		<!-- <div class="col-md-"></div> -->
 		<div class="col-xs-2 col-sm-2 col-md-2 col-lg-2"></div>
 		<div class="col-xs-2 col-sm-2 col-md-2 col-lg-2 text-right">
-			<a href="<?php echo base_url();?>Welcome_IF/addStudent">
+			<a href="<?php echo base_url();?>Welcome_IF/addComment">
 				<button class="btn btn-primary">
 					<i class="mdi mdi-account-plus text-white" style="font-size:20px;"></i>New Comment
 				</button>

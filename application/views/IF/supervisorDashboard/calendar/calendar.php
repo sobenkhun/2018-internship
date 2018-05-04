@@ -19,6 +19,17 @@
   <script src="<?php echo base_url();?>assets/bootstrap-datepicker-1.7.1/js/bootstrap-datepicker.min.js"></script>
   <style type="text/css">
 </style>
+<div class="container">
+  <div class="row">
+    <div class="col-md-4">
+      <a href="<?php echo base_url(); ?>supervisor/index">
+        <button class="btn btn-primary"><i class="mdi mdi-chevron-left"></i>Back</button>
+      </a>
+    </div>
+    <div class="col-md-4"></div>
+    
+  </div>
+</div>
 
   <div class="container">
     <div class="row">

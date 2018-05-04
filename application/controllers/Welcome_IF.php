@@ -21,7 +21,7 @@ class Welcome_IF extends CI_Controller {
 			// echo "supervisor"; git testing
 			$this->load->view('IF/template/header.php');
 			$this->load->view('IF/menu/supervisorMenu.php');
-			$this->load->view('IF/supervisorDashboard/student/index.php');
+			$this->load->view('IF/supervisorDashboard/index.php');
 			$this->load->view('IF/template/footer.php');
 		}else if ( $email == "tutor@gmail.com"){
 			$this->load->view('IF/template/header.php');

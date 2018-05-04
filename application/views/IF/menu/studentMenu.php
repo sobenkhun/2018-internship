@@ -1,12 +1,13 @@
-<style>
+<!-- <style>
   .logo {
     width: 50px;
     height: 50px;
     border-radius: 50%;
   }
-</style>
+</style> -->
 <nav class=" navbar navbar-expand-lg navbar-light color fixed-top">
-  <a class="navbar-brand" href="<?php echo base_url();?>Welcome_IF/home">
+
+  <a class="navbar-brand" href="<?php echo base_url();?>cStudent/index">
       <img stMenu" src="<?php echo base_url();?>assets/images/logoL.png" alt="Logo" style="width:150px;">
     </a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -16,7 +17,7 @@
   <div class=" collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
       <li class="nav-item active ">
-        <a class="nav-link" href="<?php echo base_url();?>cStudent/index">
+        <a class="nav-link" href="<?php echo base_url();?>cStudent/worklog">
           <b class="colorTextMenu">  Work-log</b>
         </a>
       </li>
@@ -74,7 +75,7 @@
              </li>
           
              <li class="nav-item ">
-               <a class="nav-link" href="#">       
+               <a class="nav-link" href="#" data-toggle="modal" data-target="#myProfile">       
                  <b class="colorTextMenu">  
                    <span> Username </span><i style="font-size: 20px;" class="mdi mdi-account-circle"></i> 
                  </b>
@@ -92,27 +93,35 @@
   
 </nav><br><br><br><br><br>
 <!-- The Modal -->
-  <div class="modal fade" id="myModal">
+  <div class="modal fade" id="myProfile">
     <div class="modal-dialog">
       <div class="modal-content">
-      
-        <!-- Modal Header -->
-        <div class="modal-header">
-          <h4 class="modal-title">Your </h4>
-          <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <div class="container">
+          <!-- Modal Header -->
+          <!-- <div class="modal-header"> -->
+          .profile
+            <img src="<?php echo base_url();?>assets/images/studentimage/studentpiture.jpg" alt="" style="width: 100px;">
+            <h4 class="modal-title">Uername</h4>
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <!-- </div> -->
+          
+          <!-- Modal body -->
+          <div class="modal-body">
+            <label for="">Company Name: </label>
+            <label for="">Supervisor: </label>
+            <label for="">Tutor: </label>
+            <label for="">Batch: </label>
+            <label for="">Phone: </label>
+            <label for="">Personal Email: </label>
+            <label for="">School Email: </label>
+          </div>
+          
+          <!-- Modal footer -->
+          <div class="modal-footer">
+            <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+          </div>
         </div>
-        
-        <!-- Modal body -->
-        <div class="modal-body">
-          Modal body..
-        </div>
-        
-        <!-- Modal footer -->
-        <div class="modal-footer">
-          <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
-        </div>
-        
       </div>
     </div>
   </div>
-  <!-- ========= -->
+  <!-- ======================= -->

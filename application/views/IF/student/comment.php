@@ -1,32 +1,22 @@
 
- <div class="container">
- 	<div class="row">
- 		<!-- <div class="col-md-2"></div> -->
- 		<div class="col-md-2">
- 			<a href="<?php echo base_url();?>tutorDas/listCommStuDas">
- 			    <button type="button" class="btn btn-primary">
- 				    <i class="mdi mdi-chevron-left"></i>Back
- 			    </button>
- 			</a>
- 		</div>
- </div>	 
-
 <div class="container con-body">
-	
-	<h3 class="text-primary text-center"><strong>Comment of student</strong></h3>
-	<br>
-	<br>
 	<div class="row">
-		<div class="col-md-3"></div>
-		<div class="col-md-6">
-			<table id="example" class="table table-striped table-bordered" style="width:100%">
+		<a href="<?php echo base_url();?>cStudent/index">
+			<button type="button" class="btn btn-primary">
+				<i class="mdi mdi-chevron-left"></i>Back
+			</button>
+		</a>
+	</div>	 
+	<h3 class="text-primary text-center"><strong>Comment of student</strong></h3>
+	<div class="row"><br><br>
+		<div class="col-xs-2 col-sm-2 col-md-2 col-lg-2"></div>
+		<div class="col-xs-8 col-sm-8 col-md-8 col-lg-8">
+			<table id="studentList" class="table table-striped table-bordered bg-white" style="width:100%">
 				<thead class="text-center">
 					<tr>
 						<th>Date</th>
 						<th>Student</th>
 						<th>Comment</th>
-						
-						
 					</tr>
 				</thead>
 				<tbody>
@@ -50,34 +40,22 @@
 						<td>1 may 2018</td>
 						<td class="text-center"> Devit is geting better and...</td>
 					</tr>
-					
+
 				</tbody>
 			</table>
 		</div>
-		<div class="col-md-3"></div>
+		<div class="col-xs-2 col-sm-2 col-md-2 col-lg-2"></div>
 	</div>
 	<div class="row">
-		<div class="col-md-3">
-			
+		<!-- <div class="col-md-"></div> -->
+		<div class="col-xs-2 col-sm-2 col-md-2 col-lg-2"></div>
+		<div class="col-xs-2 col-sm-2 col-md-2 col-lg-2 text-right">
+			<a href="<?php echo base_url();?>Welcome_IF/addStudent">
+				<button class="btn btn-primary">
+					<i class="mdi mdi-account-plus text-white" style="font-size:20px;"></i>New Student
+				</button>
+			</a>
 		</div>
-		<div class="col-md-6">
-			<button class="btn btn-primary"><i class="mdi mdi-plus-box " style="font-size: 20px;"></i>Add comment</button>
-		</div>
-		<div class="col-md-3"></div>
+		<div class="col-xs-8 col-sm-8 col-md-8 col-lg-8"></div>
 	</div>
-
 </div>
-
-
-
-<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
-<script src="https://cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js"></script>
-<script src="https://cdn.datatables.net/1.10.16/js/dataTables.bootstrap4.min.js"></script>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/css/bootstrap.css">
-<link rel="stylesheet" href="https://cdn.datatables.net/1.10.16/css/dataTables.bootstrap4.min.css">
-
-<script>
-	$(document).ready(function() {
-		$('#example').DataTable();
-	} );
-</script>

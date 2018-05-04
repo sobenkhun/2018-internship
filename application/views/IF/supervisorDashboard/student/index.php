@@ -1,5 +1,15 @@
 <link rel="stylesheet" href="https://cdn.datatables.net/1.10.16/css/dataTables.bootstrap4.min.css">
-
+<div class="container">
+  <div class="row">
+    <div class="col-md-4">
+      <a href="<?php echo base_url(); ?>supervisor/index">
+        <button class="btn btn-primary"><i class="mdi mdi-chevron-left"></i>Back</button>
+      </a>
+    </div>
+    <div class="col-md-4"></div>
+    
+  </div>
+</div>
 <div class="container">
     <div class="row">
         <div class="col-md-4"></div>

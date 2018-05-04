@@ -23,7 +23,7 @@
 					
 					<div class="col-md-3">
 						<br>
-						<img src="<?php echo base_url();?>assets/images/detailTutor.jpg" alt="" class="img-thumbnail" width="200px" height="200px" style="margin-top: 10px;">
+						<img src="<?php echo base_url();?>assets/images/studentpiture.jpg" alt="" class="img-thumbnail" width="200px" height="200px" style="margin-top: 10px;">
 					</div>
 					<div class="col-sm-6"><br>
 						

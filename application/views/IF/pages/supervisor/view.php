@@ -7,21 +7,12 @@
 					<h3 class="text-center text-primary">Supervisor Profile</h3>
 			</div>
 		</div><br><br>
-	
-	<!-- <div class="row"> -->
-		<!-- <div class="col-md-2"></div> -->
-		<!-- <div class="col-md-2"></div> -->
-		<!-- <div class="col-md-8"> -->
-			<!-- <div class="card"> -->
-				<!-- <div class="card-header bg-primary"> -->
-				<!-- </div> -->
-				<!-- <div class="body"> -->
 
 					<div class="row bg-white">
 						<div class="col-md-1"></div>
 						<div class="col-md-4 text-center "><br>
-							<img class="user" src="<?php echo base_url(); ?>assets/images/user.png" alt=""><br><br>
-							<a class="link" href="#" >Bunthean</a>
+							<img class="user" src="<?php echo base_url(); ?>assets/images/studentpiture.jpg" alt=""><br>
+							<a class="link" href="#" >Meng Hak</a>
 						</div>
 						<div class="col-md-6">
 							<form action="/action_page.php">

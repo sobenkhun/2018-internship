@@ -8,7 +8,7 @@
 	<div class="row bg-white st-edit">
 		<div class="col-md-4">
 			<br>
-			<img src="<?php echo base_url();?>assets/images/usericon.png" alt="" class="img-thumbnail" width="300px" height="300px">
+			<img src="<?php echo base_url();?>assets/images/studentpiture.jpg" alt="" class="img-thumbnail" width="50%" style="margin-left: 90px;">
 			<div class="form-check text-center">
 				<label class="form-check-label">
 					<input class="form-check-input" type="checkbox"> Hired after internship 

@@ -14,8 +14,8 @@
 					<div class="row">
 						<div class="col-md-1"></div>
 						<div class="col-md-4"><br><br><br><br><br>
-							<img class="user" src="<?php echo base_url(); ?>assets/images/user.png" alt=""><br>
-							<a class="link" href="#"><span style="margin-left: 22px;">Change Profile Picture</span></a>
+							<img class="user"  src="<?php echo base_url(); ?>assets/images/studentpiture.jpg" style="width: 180px;" alt="user"><br>
+							<a class="link" href="#"><span style="margin-left: 9px;">Change Profile Picture</span></a>
 						</div>
 						<div class="col-md-6">
 							<form action="/action_page.php">

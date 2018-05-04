@@ -16,7 +16,7 @@
 	<div class="row"><br><br>
 		<div class="col-md-2"></div>
 		<div class="col-md-8">
-			<table id="example" class="table table-striped table-bordered" style="width:100%">
+			<table id="example" class="table table-striped table-bordered tTable">
 				<thead class="text-center">
 					<tr>
 						<th>ID</th>
@@ -31,7 +31,7 @@
 						<td>Devit Chea</td>	
 						<td>
 							<a href="<?php echo base_url(); ?>tutorDas/CommStuDas">
-								<i class="mdi  mdi-comment text-primary" style="font-size:24px;"></i>
+								<i class="mdi  mdi-comment text-primary TCMDI"></i>
 							</a>
 						</td>
 					</tr>
@@ -40,7 +40,7 @@
 						<td>Devit Chea</td>	
 						<td>
 							<a href="<?php echo base_url(); ?>tutorDas/CommStuDas">
-								<i class="mdi  mdi-comment text-primary" style="font-size:24px;"></i>
+								<i class="mdi  mdi-comment text-primary TCMDI"></i>
 							</a>
 						</td>
 					</tr>
@@ -49,7 +49,7 @@
 						<td>Devit Chea</td>	
 						<td>
 							<a href="<?php echo base_url(); ?>tutorDas/CommStuDas">
-								<i class="mdi  mdi-comment text-primary" style="font-size:24px;"></i>
+								<i class="mdi  mdi-comment text-primary TCMDI"></i>
 							</a>
 						</td>
 					</tr>
@@ -58,7 +58,7 @@
 						<td>Devit Chea</td>	
 						<td>
 							<a href="<?php echo base_url(); ?>tutorDas/CommStuDas">
-								<i class="mdi  mdi-comment text-primary" style="font-size:24px;"></i>
+								<i class="mdi  mdi-comment text-primary TCMDI"></i>
 							</a>
 						</td>
 					</tr>

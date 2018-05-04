@@ -18,7 +18,6 @@
   <!--Datepicker widget needs its CSS and JS files to work //-->
   <script src="<?php echo base_url();?>assets/bootstrap-datepicker-1.7.1/js/bootstrap-datepicker.min.js"></script>
   <style type="text/css">
-
 </style>
 
   <div class="container">

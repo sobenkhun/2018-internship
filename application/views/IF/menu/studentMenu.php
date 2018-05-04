@@ -1,4 +1,4 @@
-<!-- <style>
+<style>
   .logo {
     width: 50px;
     height: 50px;
@@ -93,35 +93,67 @@
   
 </nav><br><br><br><br><br>
 <!-- The Modal -->
-  <div class="modal fade" id="myProfile">
-    <div class="modal-dialog">
-      <div class="modal-content">
-        <div class="container">
-          <!-- Modal Header -->
-          <!-- <div class="modal-header"> -->
-          .profile
-            <img src="<?php echo base_url();?>assets/images/studentimage/studentpiture.jpg" alt="" style="width: 100px;">
-            <h4 class="modal-title">Uername</h4>
-            <button type="button" class="close" data-dismiss="modal">&times;</button>
-          <!-- </div> -->
-          
-          <!-- Modal body -->
-          <div class="modal-body">
-            <label for="">Company Name: </label>
-            <label for="">Supervisor: </label>
-            <label for="">Tutor: </label>
-            <label for="">Batch: </label>
-            <label for="">Phone: </label>
-            <label for="">Personal Email: </label>
-            <label for="">School Email: </label>
-          </div>
-          
-          <!-- Modal footer -->
-          <div class="modal-footer">
-            <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
-          </div>
+<div class="modal fade" id="myProfile">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <!-- Modal Header -->
+      <div class="modal-header">
+        <div class="col-md-4"></div>
+        <div class="col-md-4 text-center">
+          <img src="<?php echo base_url();?>assets/images/studentimage/studentpiture.jpg" alt="" style="width: 100px;"><br>
+          <h5 class="modal-title">Penh SOK</h5>
         </div>
+        <div class="col-md-4 text-right">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+        </div>
+      </div>
+
+      <!-- Modal body -->
+      <div class="modal-body">
+        <table>
+          <tr>
+            <td><label for="">Company </label></td>
+            <td><b class="text-dark">:   Bikay</b> <br></td>
+          </tr> 
+          <tr>
+            <td><label for="">Supervisor</label></td>
+            <td><b class="text-dark">:   kamaroudin Sos</b> </td>
+          </tr> 
+          <tr>
+            <td><label for="">Tutor</label></td>
+            <td><b class="text-dark">:   Rith Nehl</b></td>
+          </tr>
+          <tr>
+            <td> <label for="">Batch</label></td>
+            <td><b class="text-dark">:   Web 2018</b></td>
+          </tr>
+          <tr>
+            <td> <label for="">Phone</label></td>
+            <td>
+              <b class="text-dark">:   081477282 </b>
+            </td>
+          </tr>
+          <tr>
+            <td></td>
+            <td><b class="text-dark">:   0713581071</b></td>
+          </tr>
+          <tr>
+            <td><label for="">Personal Email</label></td>
+            <td><b class="text-dark">:   first.last@gmail.com</b></td>
+          </tr>
+          <tr>
+            <td><label for="">School Email</label></td>
+            <td><b class="text-dark">:   first.last@student.passerellesnumeriques.org</b></td>
+          </tr>
+        </table>
+      </div>
+      <!-- Modal footer -->
+      <div class="modal-footer">
+        <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
       </div>
     </div>
   </div>
-  <!-- ======================= -->
+</div>
+  <!-- ======================= --> 
+
+

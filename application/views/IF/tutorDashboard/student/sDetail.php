@@ -3,14 +3,15 @@
 <div class="container con-body">
 	<a href="<?php echo base_url();?>tutorDas/studentDas">
 		<button class="btn btn-primary">
-			<i class="mdi mdi-chevron-left text-white" style="font-size:15px;"></i>Back
+			<i class="mdi mdi-chevron-left text-white TSDicon" ></i>Back
 		</button>
 	</a>
 	<h3 class="card-title text-center text-primary"><strong>Student Profile</strong></h3><br>
 	<div class="row bg-white st-edit">
 		<div class="col-md-4">
 			<br>
-			<img src="<?php echo base_url();?>assets/images/usericon.png" alt="" class="img-thumbnail" width="300px" height="300px">
+			<img src="<?php echo base_url();?>assets/images/usericon.png" alt="" class="img-thumbnail" >
+			<!-- width="300px" height="300px" -->
 			<div class="form-check text-center">
 				<label class="form-check-label">
 					<input class="form-check-input" type="checkbox"> Hired after internship 

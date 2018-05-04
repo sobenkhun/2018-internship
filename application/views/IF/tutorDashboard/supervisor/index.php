@@ -8,7 +8,7 @@
 		<div class="col-md-4">
 			<h2 class="text-center text-primary"> Supervisors list</h2>
 		</div>
-		<table id="example" class="table table-bordered" style="width:100%">
+		<table id="example" class="table table-bordered tTable">
         <thead>
             <tr>
                 <th>ID</th>
@@ -26,9 +26,9 @@
                 
                 <td>
                
-                <a href="<?php echo base_url();?>tutorDas/questionnair"><i class="mdi  mdi-library-books text-success" style="font-size: 24px;" ></i></a>
+                <a href="<?php echo base_url();?>tutorDas/questionnair"><i class="mdi  mdi-library-books text-success TCMDI" ></i></a>
                 <a href="<?php echo base_url();?>tutorDas/viewSupervisorDas">
-                    <i class="mdi mdi-eye text-primary" style="font-size: 24px;" ></i>
+                    <i class="mdi mdi-eye text-primary TCMDI" ></i>
                 </a>
                 
                 </td>
@@ -41,9 +41,9 @@
                 
                 <td>
                
-                <a href="<?php echo base_url();?>tutorDas/questionnair"><i class="mdi  mdi-library-books text-success" style="font-size: 24px;" ></i></a>
+                <a href="<?php echo base_url();?>tutorDas/questionnair"><i class="mdi  mdi-library-books text-success TCMDI" ></i></a>
                 <a href="<?php echo base_url();?>tutorDas/viewSupervisorDas">
-                    <i class="mdi mdi-eye text-primary" style="font-size: 24px;" ></i>
+                    <i class="mdi mdi-eye text-primary TCMDI" ></i>
                 </a>
                 
                 </td>
@@ -55,9 +55,9 @@
                
                 <td>
                
-                <a href="<?php echo base_url();?>tutorDas/questionnair"><i class="mdi  mdi-library-books text-success" style="font-size: 24px;" ></i></a>
+                <a href="<?php echo base_url();?>tutorDas/questionnair"><i class="mdi  mdi-library-books text-success TCMDI" ></i></a>
                 <a href="tutorDas/viewSupervisorDas<?php echo base_url();?>tutorDas/viewSupervisorDas">
-                    <i class="mdi mdi-eye text-primary" style="font-size: 24px;" ></i>
+                    <i class="mdi mdi-eye text-primary TCMDI" ></i>
                 </a>
                 
                 </td>
@@ -69,9 +69,9 @@
                 
                 <td>
                
-                <a href="<?php echo base_url();?>tutorDas/questionnair"><i class="mdi  mdi-library-books text-success" style="font-size: 24px;" ></i></a>
+                <a href="<?php echo base_url();?>tutorDas/questionnair"><i class="mdi  mdi-library-books text-success TCMDI" ></i></a>
                 <a href="<?php echo base_url();?>tutorDas/viewSupervisorDas">
-                    <i class="mdi mdi-eye text-primary" style="font-size: 24px;" ></i>
+                    <i class="mdi mdi-eye text-primary TCMDI" ></i>
                 </a>
                 
                 </td>
@@ -83,9 +83,9 @@
                 
                 <td>
                
-                <a href="<?php echo base_url();?>tutorDas/questionnair"><i class="mdi  mdi-library-books text-success" style="font-size: 24px;" ></i></a>
+                <a href="<?php echo base_url();?>tutorDas/questionnair"><i class="mdi  mdi-library-books text-success TCMDI" ></i></a>
                 <a href="<?php echo base_url();?>tutorDas/viewSupervisorDas">
-                    <i class="mdi mdi-eye text-primary" style="font-size: 24px;" ></i>
+                    <i class="mdi mdi-eye text-primary TCMDI" ></i>
                 </a>
                
                 </td>
@@ -98,10 +98,10 @@
                 <td>
                
                 <a href="<?php echo base_url();?>tutorDas/questionnair">
-                    <i class="mdi  mdi-library-books text-success" style="font-size: 24px;" ></i>
+                    <i class="mdi  mdi-library-books text-success TCMDI" ></i>
                 </a>
                 <a href="<?php echo base_url();?>tutorDas/viewSupervisorDas">
-                    <i class="mdi mdi-eye text-primary" style="font-size: 24px;" ></i>
+                    <i class="mdi mdi-eye text-primary TCMDI" ></i>
                 </a>
                 
                 </td>
@@ -115,10 +115,10 @@
                 <td>
                
                     <a href="<?php echo base_url();?>tutorDas/questionnair">
-                        <i class="mdi mdi-checkbox-marked-outline text-success" style="font-size: 24px;" ></i>
+                        <i class="mdi mdi-checkbox-marked-outline text-success TCMDI"  ></i>
                     </a>
                     <a href="<?php echo base_url();?>tutorDas/viewSupervisorDas">
-                        <i class="mdi mdi-eye text-primary" style="font-size: 24px;" ></i>
+                        <i class="mdi mdi-eye text-primary TCMDI" ></i>
                     </a>
                
                 </td>

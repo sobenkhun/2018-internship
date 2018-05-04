@@ -9,7 +9,7 @@
 
 		<div class="col-md-12">
 			<br><br>
-			<table id="example" class="table table-striped table-bordered" style="width:100%">
+			<table id="example" class="table table-striped table-bordered tTable">
 				<thead>
 					<tr>
 						<th>CID</th>

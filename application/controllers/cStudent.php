@@ -5,7 +5,15 @@
 			$this->load->view('IF/template/header.php');
 			$this->load->view('IF/menu/studentMenu.php');
 			// $this->load->view('IF/index.php');
-			$this->load->view('IF/student/worklog');
+			$this->load->view('IF/student/index.php');
+			$this->load->view('IF/template/footer.php');
+		}
+		public function worklog() 
+		{
+			$this->load->view('IF/template/header.php');
+			$this->load->view('IF/menu/studentMenu.php');
+			// $this->load->view('IF/index.php');
+			$this->load->view('IF/student/worklog.php');
 			$this->load->view('IF/template/footer.php');
 		}
 

@@ -2,7 +2,11 @@
 
 <div class="row">
 	<div class="col-md-2"></div>
-	<div class="col-md-2"><a href="<?php echo base_url();?>Welcome_IF/tutor"><button type="button" class="btn btn-info">Back</button></a></div>
+	<div class="col-md-2">
+		<a href="<?php echo base_url(); ?>Welcome_IF/tutor">
+			<button type="button" class="btn btn-primary"><i class="mdi mdi-chevron-left"></i>Back</button>
+		</a>
+	</div>
 	<div class="col-md-2"></div>
 </div>
 

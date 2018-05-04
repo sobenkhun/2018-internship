@@ -1,0 +1,37 @@
+
+/*menu*/
+
+b{
+	color: #fff;
+}
+img{
+	color: #fff;
+}
+
+.logo{
+	/*background-color: #fff;*/
+}
+.color {
+	background-color:#cee6fd;
+}
+.colorTextMenu {
+	color: #130e0ee0;
+}
+body{
+	background-color: #f2edf7;
+}
+#footer{
+	color:black;
+}
+/*=============== menu ================*/
+/* addstudent page*/
+form .addStudent{
+	padding: 2em;
+}
+/*============ addstudent page=========*/
+
+/* student menu*/
+.stMenu .logo {
+	width:150px;
+} 
+/*=========== student menu =============*/

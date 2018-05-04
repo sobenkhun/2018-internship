@@ -6,7 +6,7 @@
   }
 </style>
 
-<nav class=" navbar navbar-expand-lg navbar-light  color fixed-top">
+<nav class=" navbar navbar-expand-lg navbar-light  color">
   <a class="navbar-brand" href="<?php echo base_url();?>Welcome_IF/home">
       <img  src="<?php echo base_url();?>assets/images/logoL.png" alt="Logo" style="width:150px;">
     </a>

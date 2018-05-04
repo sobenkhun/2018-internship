@@ -1,4 +1,4 @@
-<br><br><br>
+
 <div class="container">
   <div class="row">
     <div class="col-md-12 alert alert-primary text-center" style="background: #7dbcf9; font-family: sans-serif;">
@@ -82,14 +82,7 @@
         </div>
       </div>
     </div>
-  </div><br>
-</div>
-<br>
-<div class="alert alert-dark text-center">
-  <div class="row">
-    <div class="col-md-12"><br>
-      <p class="text-center font-weight-bold"><b id="footer">Copy © right by Student Web 2018</b></p>
-    </div> 
   </div>
-</div> 
+</div>
+
 

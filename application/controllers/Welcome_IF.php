@@ -33,7 +33,7 @@ class Welcome_IF extends CI_Controller {
 			$this->load->view('IF/template/header.php');
 			$this->load->view('IF/menu/studentMenu.php');
 			// $this->load->view('IF/index.php');
-			$this->load->view('IF/student/worklog');
+			$this->load->view('IF/student/index.php');
 			$this->load->view('IF/template/footer.php');
 		}else if ( $email == "ero@gmail.com"){
 			$this->load->view('IF/template/header.php');

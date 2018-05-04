@@ -9,7 +9,9 @@ img{
 }
 
 .logo{
-	/*background-color: #fff;*/
+	width: 50px;
+    height: 50px;
+	border-radius: 50%;
 }
 .color {
 	background-color:#cee6fd;
@@ -35,3 +37,91 @@ form .addStudent{
 	width:150px;
 } 
 /*=========== student menu =============*/
+
+/*dashboard tutor*/
+
+.tTable{
+	width: 100%;
+}
+.tBtn{
+	font-size: 20px;
+}
+.TCMDI{
+	font-size:24px;
+}
+.TCBartChart{
+	font-size:15px;
+}
+.TCBCanVas{
+	 width: 800px;
+
+	  height: 450px;
+}
+.TCBicon{
+	font-size:15px;
+}
+.TCBDcanvas{
+	width :800px
+	 height:450px;
+}
+.TSDicon{
+	font-size:15px;
+}
+.TStd{
+	padding: 0px 10px  0 10px;
+}
+.TITitle{
+background: #7dbcf9;
+ font-family: sans-serif;
+}
+.TICol{
+	padding-left: 0 !important;
+}
+.TICheader{
+	background-color: #ffb53e ;
+}
+.TICheader1{
+	background-color: #4e95cb ;
+}
+.TICheader2{
+	background-color: #1db5a6 ;
+}
+.TICicon{
+	font-size:70px;
+}
+
+.TICbody{
+	background-color: #31b5eb ;
+	font-family: verdana
+}
+.TICbody1{
+	background-color: #31b5eb ; 
+	font-family: verdana;
+}
+.TICbody2{
+	background-color: #31b5eb ; 
+	font-family: verdana;
+}
+.TICol1{
+	padding-right: 0 !important;
+}
+
+
+.Tlogo{
+	width: width:150px;
+}
+.iconEmail{
+	font-size: 20px; 
+	margin-right: 20px;
+}
+.iconBell{
+
+	font-size: 20px;
+	 margin-right: 20px;
+
+}
+.iconAccount{
+	font-size: 20px;
+}
+
+/*=========dashboard tutor*=======/

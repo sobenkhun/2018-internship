@@ -17,7 +17,7 @@
 	<div class="row">
 		<div class="col-md-3"></div>
 		<div class="col-md-6">
-			<table id="example" class="table table-striped table-bordered" style="width:100%">
+			<table id="example" class="table table-striped table-bordered tTabla">
 				<thead class="text-center">
 					<tr>
 						<th>Date</th>
@@ -59,7 +59,7 @@
 			
 		</div>
 		<div class="col-md-6">
-			<button class="btn btn-primary"><i class="mdi mdi-plus-box " style="font-size: 20px;"></i>Add comment</button>
+			<button class="btn btn-primary tBtn"><i class="mdi mdi-plus-box "></i>Add comment</button>
 		</div>
 		<div class="col-md-3"></div>
 	</div>

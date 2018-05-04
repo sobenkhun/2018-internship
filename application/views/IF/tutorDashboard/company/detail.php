@@ -3,7 +3,7 @@
 
 		<a href="<?php echo base_url();?>tutorDas/companyDas">
 				<button class="btn btn-primary">
-					<i class="mdi mdi-chevron-left text-white" style="font-size:15px;"></i>Back
+					<i class="mdi mdi-chevron-left text-white TCBicon" ></i>Back
 				</button>
 			</a>
 		<br>
@@ -64,7 +64,7 @@
     <h1 class="text-center">Company Bar Chart</h1>
     <h2 class="text-center">Bar chart</h2>
 
-    <canvas id="bar-chart" width="800" height="450"></canvas>
+    <canvas id="bar-chart"  class="TCBDcanvas"></canvas>
 
     <script type="text/javascript">
     // Bar chart Example

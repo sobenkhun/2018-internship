@@ -6,7 +6,7 @@
   }
 </style>
 <nav class=" navbar navbar-expand-lg navbar-light color fixed-top">
-  <a class="navbar-brand" href="<?php echo base_url();?>Welcome_IF/home">
+  <a class="navbar-brand" href="<?php echo base_url();?>cStudent/index">
       <img stMenu" src="<?php echo base_url();?>assets/images/logoL.png" alt="Logo" style="width:150px;">
     </a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -16,7 +16,7 @@
   <div class=" collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
       <li class="nav-item active ">
-        <a class="nav-link" href="<?php echo base_url();?>cStudent/index">
+        <a class="nav-link" href="<?php echo base_url();?>cStudent/worklog">
           <b class="colorTextMenu">  Work-log</b>
         </a>
       </li>

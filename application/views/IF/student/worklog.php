@@ -69,7 +69,7 @@
 			</tbody>
 		</table>
 		<!-- <table class="table table-dark"> -->
-			<ul class="nav nav-tabs fixed-bottom bg-dark">
+			<ul class="nav nav-tabs mr-auto fixed-bottom bg-dark">
 				<li class="nav-item">
 					<a href="#" class="nav-link text-white">Week1</a>
 				</li>
@@ -78,6 +78,10 @@
 				</li>
 				<li class="nav-item" style="font-size: 25px; margin-top: 0.1em;" data-toggle="modal" data-target="#addWeek">
 					<a href="#" class="text-white"><i class="mdi mdi-plus-box"></i></a>
+				</li>
+				<li class="nav-item text-right">
+					<input type="button" class="btn btn-outline-white" name="btn-submit" value="Save">
+					<!-- <button class="btn btn-outline-success" type="submit" name="btn-submit">Save</button> -->
 				</li>
 			</ul>
 		<!-- </table> -->

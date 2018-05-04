@@ -8,7 +8,7 @@
 		<br>
 		<br>
 	<div class="row">
-		<div class="col-md-7">
+		<div class="col-md-7" style="font-family: sans-serif;">
 			<h3 class="text-center">Company Name  xxxx</h3>
 			<div class="card-body">
 				<form class="form" role="form" autocomplete="off">

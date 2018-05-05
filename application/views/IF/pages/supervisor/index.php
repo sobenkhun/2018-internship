@@ -1,12 +1,11 @@
-<link rel="stylesheet" href="https://cdn.datatables.net/1.10.16/css/dataTables.bootstrap4.min.css">
-
+<br><br><br>
 <div class="container">
 	<div class="row">
 		<div class="col-md-4"></div>
 		<div class="col-md-4">
 			<h2 class="text-center text-primary">Supervisors List</h2>
 		</div>
-		<table id="example" class="table table-bordered" style="width:100%">
+		<table id="example" class="table table-striped table-bordered bg-white">
         <thead>
             <tr>
                 <th>ID</th>

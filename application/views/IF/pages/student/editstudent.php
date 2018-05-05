@@ -1,4 +1,4 @@
-<link rel="stylesheet" type="text/css" href="../css/style.css">
+<br><br><br>
 <div class="container con-body">
 	<a href="<?php echo base_url();?>Welcome_IF/student">
 		<button class="btn btn-primary">
@@ -7,8 +7,8 @@
 	</a>
 	<h3 class="text-primary text-center">Update Student profile</h3><br>
 	<div class="row">
-		<div class="border border border-form rounded">		
-			<form action="" method="">
+		<div class="border border-form rounded bg-white">		
+			<form action="" method="" class="stuFormEro" style="margin: 2em 0em 1em 1em;">
 				<div class="form-row">
 					<div class="form-group row col-md-6 group-col-stu">
 						<label class="col-sm-4 col-form-label" for="">First Name</label>
@@ -88,13 +88,14 @@
 							<button class="btn btn-primary pull-left" type="submit" name="btn-submit">Choose file</button>
 						</div>
 					</div><br><br><br>
-					<div class="form-group col-md-3"></div>
-					<div class="form-group col-md-4">
-						<button class="btn btn-outline-success col-sm-3" type="submit" name="btn-submit">Submit</button>
+					<div class="form-group col-md-4"></div>
+					<div class="form-group col-md-2">
+						<button class="btn btn-outline-success col-sm-5" type="submit" name="btn-submit">Submit</button>
 					</div>
-					<div class="form-group col-md-5">
-						<button class="btn btn-outline-danger col-sm-3" type="reset" name="btn-cancel">Cancel</button>
+					<div class="form-group col-md-2">
+						<button class="btn btn-outline-danger col-sm-5" type="reset" name="btn-cancel">Cancel</button>
 					</div>
+					<div class="form-group col-md-4"></div>
 				</div>
 			</form>
 		</div> 

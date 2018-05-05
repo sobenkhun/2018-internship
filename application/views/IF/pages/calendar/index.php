@@ -61,17 +61,26 @@ $langCode= (isset($langCode)) ? $langCode :  "en";
 
         </li>
       </ul>
-      <ul class="navbar-nav">
+    </div>
+  </nav><br><br>
+  <!-- Menu   -->
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12 col-sm-12">
+        <br>
+        <br>
+        <h4 class="text-center">Event</h4>
+        <br>
+        <br>
+        <div id='calendar' class="col-centered"></div>
+        <div id='datepicker' class="col-centered"></div>
+      </div>
        <li class="nav-item">
         <div class="dropdown">
          <a href="#" class="nav-link active"  data-toggle="dropdown" aria-expanded="false">
            <i  style="font-size: 20px; margin-right: 20px;" class="mdi mdi-bell"> </i>          
          </a>
          <div class="dropdown-menu ">
-          <div class="dropdown-body">
-           <a class="dropdown-item text-dark" href="#"><img class="logo" src="<?php echo base_url();?>assets/images/logo.png"><strong>Rith.Nhil</strong> <br>conmment on <strong>Toch.Ban</strong></b></a>
-
-         </div>
          <div class="dropdown-body">
            <a class="dropdown-item text-dark" href="#"><img class="logo" src="<?php echo base_url();?>assets/images/logo.png">  <strong>Rith.Nhil</strong> <br>conmment on <strong>Toch.Ban</strong></b></a>
 
@@ -152,22 +161,6 @@ $langCode= (isset($langCode)) ? $langCode :  "en";
         <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
       </div>
     </div>
-  </div>
-</div>
-
-<!-- Menu   -->
-<div class="container">
-  <div class="row">
-    <div class="col-md-2 col-sm-12"></div>
-    <div class="col-md-8 col-sm-12">
-      <br>
-      <br>
-      <h4 class="text-center">Calendar</h4>
-      <br>
-      <br>
-      <div id='calendar' class="col-centered"></div>
-      <div id='datepicker' class="col-centered"></div>
-    </div>
     <div class="col-md-2 col-sm-12"></div>
   </div>
 </div>
@@ -182,18 +175,6 @@ $langCode= (isset($langCode)) ? $langCode :  "en";
         </button>
       </div>
       <div class="modal-body">
-        <div class="form-group row">
-         <label for="example-datetime-local-input" class="col-2 col-form-label">Student</label>
-         <div class="col-10">
-           <select class="form-control" id="exampleSelect1">
-             <option>Student a</option>
-             <option>Student b</option>
-             <option>Student c</option>
-             <option>Student d</option>
-             <option>Student e</option>
-           </select>
-         </div>
-       </div>
        <div class="form-group row">
         <label for="example-datetime-local-input" class="col-2 col-form-label">Date</label>
         <div class="col-10">

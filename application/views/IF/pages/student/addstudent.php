@@ -1,13 +1,14 @@
+
 <div class="container con-body">
 	<a href="<?php echo base_url();?>Welcome_IF/student">
 		<button class="btn btn-primary">
-			<i class="mdi mdi-chevron-left text-white" style="font-size:15px;"></i>Back
+			<i class="mdi mdi-chevron-left mdi-15px text-white"></i>Back
 		</button>
 	</a>
 	<h3 class="text-primary text-center">Add Student</h3><br>
 	<div class="row">
 		<div class="border border border-form rounded">		
-			<form action="" method="" class="addStudent" style="margin: 2em 0em 2em 2em;">
+			<form action="" method="" class="addStudent">
 				<div class="form-row">
 					<div class="form-group row col-md-6 group-col-stu">
 						<label class="col-sm-4 col-form-label" for="">First Name</label>
@@ -72,7 +73,6 @@
 						<label class="col-sm-4 col-form-label" for="">Hired</label>
 						<div class="col-sm-2">
 							<input type="checkbox" class="custom-control-input">
-							<!-- <input type="checkbox" name="" id="" class="form-control form-check-input pull-left large" placeholder="Enter first name..."> -->
 						</div>
 					</div>
 					<div class="form-group row col-md-6 group-col-stu">

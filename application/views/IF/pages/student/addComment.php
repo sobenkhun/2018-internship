@@ -8,7 +8,7 @@
 		<div class="col-md-4">
 			<a href="<?php echo base_url();?>Welcome_IF/comment">
 				<button class="btn btn-primary">
-					<i class="mdi mdi-chevron-left text-white" style="font-size:15px;"></i>Back
+					<i class="mdi mdi-chevron-left mdi-15px text-white"></i>Back
 				</button>
 			</a>
 		</div>

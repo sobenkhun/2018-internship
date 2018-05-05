@@ -3,14 +3,20 @@
 <head>
 	<title>Login Form</title>
 	<!-- icon image -->
-	<link rel="icon"  href="img/icon.png">
+	<link rel="shortcut icon" href="<?php echo base_url();?>assets/images/logo.png" type="image/x-icon">
 	<!-- style css -->
 	<link rel="stylesheet" type="text/css" href="css/style.css">
 	<!-- font awesome -->
 	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
 	<style>
 	body {
-		background-image: url('<?php echo base_url(); ?>/assets/images/backgroundLogin.jpg');
+		background-image: url('<?php echo base_url(); ?>/assets/images/background.jpg');
+		/*background-image: url('https://www.wallpaperflare.com/static/459/951/654/laptop-apple-mac-computer-wallpaper.jpg');*/
+		/*background-position: center;*/
+		background-repeat: no-repeat;
+		background-size: cover;
+
+
 	}
 	div.container {
 		position: absolute;
@@ -19,6 +25,7 @@
 		transform: translate(-50%, -50%);
 	}
 	form.login {
+		box-shadow: 0px 10px 55px -1px rgba(0,0,0,0.7);
 		width: 280px;
 		height: auto;
 		background: rgba(255,255,255,0.6);
@@ -36,8 +43,10 @@
 		background: #ffffff;
 		margin-left: 50%;
 		transform: translate(-50%);
+		box-shadow: 0px 2px 5px -1px rgba(0,0,0,1);
 	}
 	div.avatar img {
+
 		width: 100%;
 		height: 100%;
 	}
@@ -84,21 +93,22 @@
 		width: 16px;
 		height: 16px;
 		float: left;
+		color: #000;
 	}
 	form.login .forgetpass {
 		float: right;
-		color: #fff;
+		color: #000;
 		text-decoration: none;
 		transition: .3s;
 	}
 	form.login .forgetpass:hover {
 		text-decoration: underline;
-		text-decoration-color: #ff0;
+		text-decoration-color: #2980B9;
 		transition: .3s;
 		color: rgba(0,0,0,0.7);
 	}
 	div.container .create {
-		color: #fff;
+		color: #000;
 		text-align: center;
 	}
 	div.container .create .register {
@@ -107,9 +117,13 @@
 		transition: .3s;
 	}
 	div.container .create .register:hover {
-		color: #8e44ad;
+		color: #2980B9;
 		transition: .3s;
 	}
+	.form-check-label {
+		color: black;
+	}
+
 </style>
 </head>
 <body>
@@ -118,13 +132,22 @@
 			<div class="avatar">
 				<img src="<?php echo base_url();?>assets/images/logo.png" alt="Avatar"/>
 			</div>
+			
 			<input type="email" name="email" placeholder="Email" required>
 			<i class="fa fa-user fa-2x"></i> <br/> <br/>
-			<input type="password" name="password" placeholder="Password" required> <i class="fa fa-lock fa-2x"></i> <br> <br> 
+
+			<input type="password" name="password" placeholder="Password" required> 
+			<i class="fa fa-lock fa-2x"></i> <br> <br>
+
 			<input type="submit" name="submit" value="Login" >
 			<br/> <br/>
-			<input type="checkbox" name="checkbox" >Remember me
-			<a href="#" class="forgetpass">Forget Password?</a>
+			
+			<div class="form-check">
+			   <input type="checkbox" class="form-check-input" id="check">
+			   <label class="form-check-label" for="check">Remember me</label>
+			   <a href="#" class="forgetpass">Forget Password?</a>
+			</div>
+			 
 		</form>	
 		<hr>
 		<p class="create">Don't have account ? <a href="#" class="register">REGISTER HERE</a> </p>

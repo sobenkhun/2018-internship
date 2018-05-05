@@ -124,9 +124,35 @@ background: #7dbcf9;
 	font-size: 20px;
 }
 
-/*=========dashboard tutor*=======/
-=======
-.model img {
-	width: 100px;
+/*Menu*/
+
+/* Detail company*/
+#col-md-6 {
+	font-family: sans-serif; 
 }
-/*=========== student menu =============*/
+/*Edit Company*/
+.rounded
+	{
+		padding-left: 50px;
+	}
+table {
+	width: 100%;
+}
+/*add Student*/
+.addStudent{
+	margin: 2em 0em 2em 2em;
+}
+
+/*viewStudent*/
+
+#viewStudent {
+	margin-left: 90px;
+	width:50%;
+}
+
+/*file name view for view supervisor*/
+.userSupervisor{
+	width: 200px; 
+	height: 200px;
+}
+

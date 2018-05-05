@@ -81,10 +81,6 @@ $langCode= (isset($langCode)) ? $langCode :  "en";
            <i  style="font-size: 20px; margin-right: 20px;" class="mdi mdi-bell"> </i>          
          </a>
          <div class="dropdown-menu ">
-          <div class="dropdown-body">
-           <a class="dropdown-item text-dark" href="#"><img class="logo" src="<?php echo base_url();?>assets/images/logo.png"><strong>Rith.Nhil</strong> <br>conmment on <strong>Toch.Ban</strong></b></a>
-
-         </div>
          <div class="dropdown-body">
            <a class="dropdown-item text-dark" href="#"><img class="logo" src="<?php echo base_url();?>assets/images/logo.png">  <strong>Rith.Nhil</strong> <br>conmment on <strong>Toch.Ban</strong></b></a>
 
@@ -164,22 +160,6 @@ $langCode= (isset($langCode)) ? $langCode :  "en";
       <div class="modal-footer">
         <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
       </div>
-    </div>
-  </div>
-</div>
-
-<!-- Menu   -->
-<div class="container">
-  <div class="row">
-    <div class="col-md-2 col-sm-12"></div>
-    <div class="col-md-8 col-sm-12">
-      <br>
-      <br>
-      <h4 class="text-center">Calendar</h4>
-      <br>
-      <br>
-      <div id='calendar' class="col-centered"></div>
-      <div id='datepicker' class="col-centered"></div>
     </div>
     <div class="col-md-2 col-sm-12"></div>
   </div>

@@ -11,7 +11,7 @@
 					<div class="row bg-white">
 						<div class="col-md-1"></div>
 						<div class="col-md-4 text-center "><br>
-							<img class="user" src="<?php echo base_url(); ?>assets/images/studentpiture.jpg" alt=""><br>
+							<img class="user userSupervisor" src="<?php echo base_url(); ?>assets/images/studentpiture.jpg" alt=""><br>
 							<a class="link" href="#" >Meng Hak</a>
 						</div>
 						<div class="col-md-6">
@@ -23,7 +23,7 @@
 											<label for="email">First Name</label>
 										</div> 
 										</td>
-										<td style="padding: 0px 10px  0 10px;"> </td>
+										<td> </td>
 										<td>
 										<div class="form-group">
 											<b class="text-dark">Bunthean</b>
@@ -36,7 +36,7 @@
 											<label class="text-dark">Last Name</label>
 										</div> 
 										</td>
-										<td style="padding: 0px 10px  0 10px;"> </td>
+										<td> </td>
 										<td>
 										<div class="form-group">
 											<b class="text-dark">MOV</b>
@@ -49,7 +49,7 @@
 												<label for="email">Company Website</label>
 											</div> 
 										</td>
-										<td style="padding: 0px 10px  0 10px;"> </td>
+										<td> </td>
 										<td>
 										<div class="form-group">
 											<a href="https://www.codingate.com/">Coding Get Website</a>
@@ -62,7 +62,7 @@
 											<label for="email">Position</label>
 										</div> 
 										</td>
-										<td style="padding: 0px 10px  0 10px;"> </td>
+										<td> </td>
 										<td>
 										<div class="form-group">
 											<b class="text-dark">Team Leader</b>
@@ -75,7 +75,7 @@
 											<label for="email">Email</label>
 										</div> 
 										</td>
-										<td style="padding: 0px 10px  0 10px;"> </td>
+										<td> </td>
 										<td>
 										<div class="form-group">
 											<b class="text-dark">bunthean.mov@gmail.com</b>
@@ -88,7 +88,7 @@
 											<label for="email">Phone</label>
 										</div> 
 										</td>
-										<td style="padding: 0px 10px  0 10px;"> </td>
+										<td> </td>
 										<td>
 										<div class="form-group">
 											<b class="text-dark">0964242103</b>

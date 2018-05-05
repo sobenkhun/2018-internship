@@ -4,7 +4,7 @@
     height: 50px;
     border-radius: 50%;
   }
-</style> 
+</style>
 <nav class=" navbar navbar-expand-lg navbar-light color fixed-top">
 
   <a class="navbar-brand" href="<?php echo base_url();?>cStudent/index">

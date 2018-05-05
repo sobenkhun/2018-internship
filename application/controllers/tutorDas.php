@@ -26,6 +26,13 @@ class tutorDas extends CI_Controller {
 		
 		$this->load->view('IF/template/footer.php');
 	}
+	function tutorList()
+	{
+		$this->load->view('IF/template/header.php');
+		$this->load->view('IF/menu/tutor.php');
+		$this->load->view('IF/tutorDashboard/tutor/index.php');
+		$this->load->view('IF/template/footer.php');
+	}
 	function barChartDas()
 	{
 		$this->load->view('IF/template/header.php');

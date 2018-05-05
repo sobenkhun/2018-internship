@@ -6,7 +6,7 @@
 	<div class="row">
 		<div class="col-md-4"></div>
 		<div class="col-md-4">
-			<h2 class="text-center text-primary"> Supervisors list</h2>
+			<h2 class="text-center text-primary"> Supervisors lists</h2>
 		</div>
 		<table id="example" class="table table-bordered tTable">
         <thead>

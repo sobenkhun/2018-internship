@@ -1,4 +1,4 @@
-
+<br><br><br>
 <div class="container erohome">
   <!-- title welcom -->
   <div class="row">
@@ -73,7 +73,7 @@
     <div class="col-xs-10 col-sm-10 col-md-10 col-lg-10">
       <script src="<?php echo base_url();?>assets/js/Chart-2.7.1.min.js"></script>
       <h1 class="text-center">Company Bar Chart</h1>
-      <h2 class="text-center">Bar chart</h2>
+      <!-- <h2 class="text-center">Bar chart</h2> -->
       <canvas id="bar-chart" width="800" height="400"></canvas>
       <script type="text/javascript">
       // Bar chart Example

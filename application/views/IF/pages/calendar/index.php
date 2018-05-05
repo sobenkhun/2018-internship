@@ -175,18 +175,6 @@ $langCode= (isset($langCode)) ? $langCode :  "en";
         </button>
       </div>
       <div class="modal-body">
-        <div class="form-group row">
-         <label for="example-datetime-local-input" class="col-2 col-form-label">Student</label>
-         <div class="col-10">
-           <select class="form-control" id="exampleSelect1">
-             <option>Student a</option>
-             <option>Student b</option>
-             <option>Student c</option>
-             <option>Student d</option>
-             <option>Student e</option>
-           </select>
-         </div>
-       </div>
        <div class="form-group row">
         <label for="example-datetime-local-input" class="col-2 col-form-label">Date</label>
         <div class="col-10">

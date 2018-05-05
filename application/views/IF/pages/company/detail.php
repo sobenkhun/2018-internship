@@ -1,13 +1,12 @@
-<link rel="stylesheet" type="text/css" href="../css/style.css">
+<br><br><br>
 <div class="container">
-
-		<a href="<?php echo base_url();?>Welcome_IF/company">
-				<button class="btn btn-primary">
-					<i class="mdi mdi-chevron-left mdi-15px text-white"></i>Back
-				</button>
-			</a>
-		<br>
-		<br>
+	<a href="<?php echo base_url();?>Welcome_IF/company">
+		<button class="btn btn-primary">
+			<i class="mdi mdi-chevron-left mdi-15px text-white"></i>Back
+		</button>
+	</a>
+	<br>
+	<br>
 	<div class="row bg-white">
 		<div class="col-md-6" id="col-md-6">
 			<br>
@@ -55,10 +54,3 @@
 		</div>
 	</div>
 </div>
-<div class="jumbotron bg-light">
-  <div class="row">
-    <div class="col-md-12 "><br>
-      <p class="text-center">Copyright by Prem Mann</p>
-    </div> 
-  </div>
-</div> 

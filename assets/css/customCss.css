@@ -1,6 +1,9 @@
 
 /*menu*/
-
+body{
+	font-family:  sans-serif;
+	background-color: #f2edf7;
+}
 b{
 	color: #fff;
 }
@@ -19,13 +22,38 @@ img{
 .colorTextMenu {
 	color: #130e0ee0;
 }
-body{
-	background-color: #f2edf7;
-}
+
 #footer{
 	color:black;
 }
+.navHover:hover, .navLogo:hover{
+	box-shadow: -3px -1px 4px 1px rgb(129, 209, 245);
+	background-color: #b9e2f9;
+}
+
 /*=============== menu ================*/
+
+/* home page of ero*/
+.erohome .card1{ background-color: #ffb53e ; }
+.erohome .card2 { background-color: #4e95cb ; }
+.erohome .card3 { background-color: #ed233d ; }
+.erohome .card4 { background-color: #1db5a6 ; }
+
+.erohome .card:hover{ box-shadow: 7px 9px 25px 5px rgb(156, 152, 160); }
+
+
+.erohome .title{ background: #7dbcf9; }
+.erohome i{ font-size:70px; }
+.erohome .card-body a{ 	background-color: #31b5eb ; }
+
+.erohome .card-body a:hover{ box-shadow: -4px -2px 8px 2px rgb(18, 101, 165) }
+/*=========== home page of ero ==========*/
+
+/* student page of ero */
+form .stuFormEro{
+	margin: 1em;
+}
+/*========== student page of ero =========*/
 /* addstudent page*/
 form .addStudent{
 	padding: 2em;
@@ -36,8 +64,20 @@ form .addStudent{
 .stMenu .logo {
 	width:150px;
 } 
+.navStudent:hover {
+	box-shadow: -3px -1px 4px 1px rgb(129, 209, 245);
+	background-color: #b9e2f9;
+} 
 /*=========== student menu =============*/
-
+/* home page of studnet*/
+.homeStu{	background: #7dbcf9; }
+.cardStu .card1 {	background-color: #4e95cb;}
+.cardStu .card2 {	background-color: #ffb53e ;}
+.cardStu i {	font-size:70px;}
+.cardStu .card-body {	background-color: #fff ;}
+.cardStu .card:hover{ box-shadow: 7px 9px 25px 5px rgb(156, 152, 160); }
+.cardStu .card-body a:hover { box-shadow: -4px -2px 8px 2px rgb(18, 101, 165) }
+/* ============== home page of studnet ========*/
 /*dashboard tutor*/
 
 .tTable{

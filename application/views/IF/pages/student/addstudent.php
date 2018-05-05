@@ -1,4 +1,4 @@
-
+<br><br><br>
 <div class="container con-body">
 	<a href="<?php echo base_url();?>Welcome_IF/student">
 		<button class="btn btn-primary">
@@ -7,7 +7,7 @@
 	</a>
 	<h3 class="text-primary text-center">Add Student</h3><br>
 	<div class="row">
-		<div class="border border border-form rounded">		
+		<div class="border border-form rounded bg-white">		
 			<form action="" method="" class="addStudent">
 				<div class="form-row">
 					<div class="form-group row col-md-6 group-col-stu">
@@ -100,4 +100,3 @@
 		</div> 
 	</div>
 </div>
-<br><br>

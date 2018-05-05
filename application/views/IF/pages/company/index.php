@@ -1,4 +1,4 @@
-<link rel="stylesheet" type="text/css" href="../css/style.css">
+<br><br><br>
 <div class="container">
   <div class="row">
     <div class="col-md-12">
@@ -6,10 +6,8 @@
     </div>
   </div>
   <div class="row">
-
     <div class="col-md-12">
-      <br><br>
-      <table id="example" class="table table-striped table-bordered">
+      <table id="example" class="table table-striped table-bordered bg-white">
        <thead>
          <tr>
            <th>CID</th>
@@ -75,6 +73,7 @@
 </div>
 
 </div>
+</div>
 <br>
 <div class="container">
   <div class="row">
@@ -84,5 +83,4 @@
   </div>
 </div>
 
-</div>
 

@@ -4,13 +4,13 @@
 		<h3 class="text-primary text-center"><strong>Weekly work-log report</strong></h3>
 		<br>
 		<table class="table table-bordered table-hover table-responsive table-fixed">
-			<thead class="bg-info text-white">
+			<thead class="bg-info text-white text-center">
 				<tr>
 					<th>Date & Time</th>
 					<!-- <th>Time</th> -->
 					<th>Work Activities</th>
 					<th>What did you learn?</th>
-					<th>Difficulties/Issues</th>
+					<th>Difficulties/ Issues</th>
 					<th>Solutions</th>
 					<th>To Do (Plan)</th>
 					<th>Comment</th>
@@ -21,7 +21,7 @@
 				<tr>
 					<td>
 						<input class="form-control" type="date" value="DD/MM/YYY"><br>
-						<input class="form-control" type="time" value="h:m">
+						<input class="form-control" type="text" placeholder="Time to Time">
 					</td>
 					<td>
 						<textarea class="form-group" name="" id="" cols="25" rows="4" placeholder="..."></textarea>
@@ -45,7 +45,7 @@
 				<tr>
 					<td>
 						<input class="form-control" type="date" value="DD/MM/YYY"><br>
-						<input class="form-control" type="time" value="h:m">
+						<input class="form-control" type="text" placeholder="Time to Time">
 					</td>
 					<td>
 						<textarea class="form-group" name="" id="" cols="25" rows="4" placeholder="..."></textarea>
@@ -68,49 +68,36 @@
 				</tr>
 			</tbody>
 		</table>
-		<!-- <table class="table table-dark"> -->
-			<ul class="nav nav-tabs mr-auto fixed-bottom bg-dark">
-				<li class="nav-item">
-					<a href="#" class="nav-link text-white">Week1</a>
-				</li>
-				<li class="nav-item">
-					<a href="#" class="nav-link text-white">Week2</a>
-				</li>
-				<li class="nav-item" style="font-size: 25px; margin-top: 0.1em;" data-toggle="modal" data-target="#addWeek">
-					<a href="#" class="text-white"><i class="mdi mdi-plus-box"></i></a>
-				</li>
-				<li class="nav-item text-right" style="margin: 0.1em 0em 0em 68em;">
-					<input type="button" class="btn btn-warning" name="btn-submit" value="Save">
-					<!-- <button class="btn btn-outline-success" type="submit" name="btn-submit">Save</button> -->
-				</li>
-			</ul>
-		<!-- </table> -->
+		<ul class="nav nav-tabs mr-auto fixed-bottom bg-dark">
+			<li class="nav-item">
+				<a href="#" class="nav-link text-white">Week1</a>
+			</li>
+			<li class="nav-item">
+				<a href="#" class="nav-link text-white">Week2</a>
+			</li>
+			<li class="nav-item" style="font-size: 25px; margin-top: 0.1em;" data-toggle="modal" data-target="#addWeek">
+				<a href="#" class="text-white"><i class="mdi mdi-plus-box"></i></a>
+			</li>
+			<li class="nav-item text-right" style="margin: 0.1em 0em 0em 68em;">
+				<input type="button" class="btn btn-warning" name="btn-submit" value="Save">
+			</li>
+		</ul>
 		<!-- The Modal -->
-		<div class="modal fade" id="addWeek">
+		<div class="modal smalle" id="addWeek">
 			<div class="modal-dialog">
 				<div class="modal-content">
 
 					<!-- Modal Header -->
-					<div class="modal-header">
-						<h4 class="modal-title">Add week</h4>
+					<div class="modal-footer">
 						<button type="button" class="close" data-dismiss="modal">&times;</button>
 					</div>
 
 					<!-- Modal body -->
 					<div class="modal-body">
-						<div class="comment">
-							<label for="">Comment</label>
-							<input type="text">
-						</div>
-						<div class="text-right">
-							<button type="button" class="btn btn-primary btn-submit" data-dismiss="modal">Add</button>
-						</div>
+						<label class="modal-title">Add week :</label>
+						<input type="text">
+						<button type="button" class="btn btn-primary btn-submit" data-dismiss="modal">Add</button>
 					</div>
-
-					<!-- Modal footer -->
-					<div class="modal-footer">
-					</div>
-
 				</div>
 			</div>
 		</div>

@@ -1,9 +1,9 @@
-
+<br><br><br>
 <!-- body -->
 <div class="container con-body">
 	<h3 class="text-primary text-center"><strong>Student List</strong></h3>
 	<div class="row"><br><br>
-		<table id="example" class="table table-striped table-bordered">
+		<table id="example" class="table table-striped table-bordered bg-white">
 			<thead class="text-center">
 				<tr>
 					<th>ID</th>

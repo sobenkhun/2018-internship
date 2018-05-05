@@ -1,7 +1,8 @@
+<link rel="stylesheet" type="text/css" href="../css/style.css">
 <div class="container con-body">
 	<a href="<?php echo base_url();?>Welcome_IF/student">
 		<button class="btn btn-primary">
-			<i class="mdi mdi-chevron-left text-white" style="font-size:15px;"></i>Back
+			<i class="mdi mdi-chevron-left text-white mdi-15px"></i>Back
 		</button>
 	</a>
 	<h3 class="text-primary text-center">Update Student profile</h3><br>

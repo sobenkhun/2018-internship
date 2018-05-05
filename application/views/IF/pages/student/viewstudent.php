@@ -1,14 +1,15 @@
+
 <div class="container con-body">
 	<a href="<?php echo base_url();?>Welcome_IF/student">
 		<button class="btn btn-primary">
-			<i class="mdi mdi-chevron-left text-white" style="font-size:15px;"></i>Back
+			<i class="mdi mdi-chevron-left text-white"></i>Back
 		</button>
 	</a>
 	<h3 class="card-title text-center text-primary"><strong>Student Profile</strong></h3><br>
 	<div class="row bg-white st-edit">
 		<div class="col-md-4">
 			<br>
-			<img src="<?php echo base_url();?>assets/images/studentpiture.jpg" alt="" class="img-thumbnail" width="50%" style="margin-left: 90px;">
+			<img src="<?php echo base_url();?>assets/images/studentpiture.jpg" alt="" class="img-thumbnail" id="viewStudent">
 			<div class="form-check text-center">
 				<label class="form-check-label">
 					<input class="form-check-input" type="checkbox"> Hired after internship 

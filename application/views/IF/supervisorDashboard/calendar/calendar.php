@@ -33,8 +33,8 @@
 
   <div class="container">
     <div class="row">
-      <div class="col-md-2 col-sm-12"></div>
-      <div class="col-md-8 col-sm-12">
+      <!-- <div class="col-md-2 col-sm-12"></div> -->
+      <div class="col-md-12 col-sm-12">
         <br>
         <br>
         <h4 class="text-center">Event</h4>
@@ -43,7 +43,7 @@
         <div id='calendar' class="col-centered"></div>
         <div id='datepicker' class="col-centered"></div>
       </div>
-      <div class="col-md-2 col-sm-12"></div>
+      <!-- <div class="col-md-2 col-sm-12"></div> -->
     </div>
   </div>
     <!-- create modal of order item -->
@@ -58,14 +58,14 @@
                 </div>
                 <div class="modal-body">
                   <div class="form-group row">
-                   <label for="example-datetime-local-input" class="col-2 col-form-label">Tutor</label>
+                   <label for="example-datetime-local-input" class="col-2 col-form-label">Student</label>
                    <div class="col-10">
                        <select class="form-control" id="exampleSelect1">
-                         <option>Tutor 1</option>
-                         <option>Tutor 2</option>
-                         <option>Tutor 3</option>
-                         <option>Tutor 4</option>
-                         <option>Tutor 5</option>
+                         <option>Student 1</option>
+                         <option>Student 2</option>
+                         <option>Student 3</option>
+                         <option>Student 4</option>
+                         <option>Student 5</option>
                        </select>
                     </div>
                   </div>
@@ -97,6 +97,12 @@
                     <label for="example-color-input" class="col-2 col-form-label">Color</label>
                     <div class="col-10">
                       <input class="form-control" type="color" value="#563d7c" id="example-color-input">
+                    </div>
+                  </div>
+                  <div class="form-group row">
+                    <label for="example-color-input" class="col-2 col-form-label">Invite</label>
+                    <div class="col-10">
+                      <input class="form-control" type="text">
                     </div>
                   </div>
 

@@ -121,8 +121,8 @@ $langCode= (isset($langCode)) ? $langCode :  "en";
   <!-- Menu   -->
   <div class="container">
     <div class="row">
-      <div class="col-md-2 col-sm-12"></div>
-      <div class="col-md-8 col-sm-12">
+      <!-- <div class="col-md-2 col-sm-12"></div> -->
+      <div class="col-md-12 col-sm-12">
         <br>
         <br>
         <h4 class="text-center">Event</h4>
@@ -131,7 +131,7 @@ $langCode= (isset($langCode)) ? $langCode :  "en";
         <div id='calendar' class="col-centered"></div>
         <div id='datepicker' class="col-centered"></div>
       </div>
-      <div class="col-md-2 col-sm-12"></div>
+      <!-- <div class="col-md-2 col-sm-12"></div> -->
     </div>
   </div>
     <!-- create modal of order item -->

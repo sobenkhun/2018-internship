@@ -5,7 +5,7 @@
 
 <div class="row">
 	<div class="col-md-12">
-		<h3 class="text-primary text-center">Tutors list</h3>
+		<h2 class="text-primary text-center">Tutors list</h2>
 	</div>
 </div>
 <div class="row">
@@ -28,8 +28,8 @@
 					<td>Ashton Cox</td>
 					<td>English Training</td>
 					<td>
-						<a href="<?php echo base_url();?>Welcome_IF/detailTutor"><span class="mdi mdi-eye text-success" style="font-size:24px;"></a>
-						<a href="<?php echo base_url();?>Welcome_IF/editTutor"><span class="mdi  mdi-pencil  text-primary" style="font-size:24px;"></span></a>
+						<a href="<?php echo base_url();?>Welcome_IF/detailTutor"><span class="mdi mdi-eye text-info" style="font-size:24px;"></a>
+						<a href="<?php echo base_url();?>Welcome_IF/editTutor"><span class="mdi  mdi-pencil  text-success" style="font-size:24px;"></span></a>
 
 
 						<a href="#" onclick="return confirm('Are your sur want to delete this tutor?')"><i class="text-danger mdi  mdi-delete  data-toggle ="tooltip" title="Delete this Company" style="font-size:24px;"></i></a>
@@ -41,8 +41,8 @@
 						<td>Ashton Cox</td>
 						<td>Web Training</td>
 						<td>
-							<a href="<?php echo base_url();?>Welcome_IF/detailTutor"><span class="mdi mdi-eye text-success" style="font-size:24px;"></a>
-							<a href="<?php echo base_url();?>Welcome_IF/editTutor"><span class="mdi  mdi-pencil  text-primary" style="font-size:24px;"></span></a>
+							<a href="<?php echo base_url();?>Welcome_IF/detailTutor"><span class="mdi mdi-eye text-info" style="font-size:24px;"></a>
+							<a href="<?php echo base_url();?>Welcome_IF/editTutor"><span class="mdi  mdi-pencil  text-success" style="font-size:24px;"></span></a>
 
 
 							<a href="#" onclick="return confirm('Are your sur want to delete this tutor?')"><i class="text-danger mdi  mdi-delete  data-toggle ="tooltip" title="Delete this Company" style="font-size:24px;"></i></a>
@@ -54,8 +54,8 @@
 							<td>Ashton Cox</td>
 							<td>Web Training</td>
 							<td>
-								<a href="<?php echo base_url();?>Welcome_IF/detailTutor"><span class="mdi mdi-eye text-success" style="font-size:24px;"></a>
-								<a href="<?php echo base_url();?>Welcome_IF/editTutor"><span class="mdi  mdi-pencil  text-primary" style="font-size:24px;"></span></a>
+								<a href="<?php echo base_url();?>Welcome_IF/detailTutor"><span class="mdi mdi-eye text-info" style="font-size:24px;"></a>
+								<a href="<?php echo base_url();?>Welcome_IF/editTutor"><span class="mdi  mdi-pencil  text-success" style="font-size:24px;"></span></a>
 
 
 								<a href="#" onclick="return confirm('Are your sur want to delete this tutor?')"><i class="text-danger mdi  mdi-delete  data-toggle ="tooltip" title="Delete this Company" style="font-size:24px;"></i></a>
@@ -73,7 +73,7 @@
 				<div class="row">
 					<div class="col-md-12">
 						<a href="<?php echo base_url();?>Welcome_IF/addTutor">
-							<button class="btn btn-primary"><span class="mdi mdi-account-plus" style="font-size:20px;"></span><i>  </i>  Create New Tutor</button>
+							<button class="btn btn-info"><span class="mdi mdi-account-plus" style="font-size:20px;"></span><i>  </i>New Tutor</button>
 						</a>
 					</div>
 				</div>

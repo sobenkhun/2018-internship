@@ -8,7 +8,7 @@
 	</div>
 	<div class="col-md-2"></div>
 </div>
-<h3 class="card-title text-center">Profile Tutor</h3><br>
+<h3 class="card-title text-center">Tutor Profile</h3><br>
 <div class="row">
 	<div class="col-md-3"></div>
 	<div class="col-md-6">

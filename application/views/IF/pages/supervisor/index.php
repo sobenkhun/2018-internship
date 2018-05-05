@@ -4,7 +4,7 @@
 	<div class="row">
 		<div class="col-md-4"></div>
 		<div class="col-md-4">
-			<h2 class="text-center text-primary">List of supervisors</h2>
+			<h2 class="text-center text-primary">Supervisors List</h2>
 		</div>
 		<table id="example" class="table table-bordered" style="width:100%">
         <thead>
@@ -24,9 +24,9 @@
                 
                 <td>
                
-                <a href="<?php echo base_url() ?>/Welcome_IF/viewSupervisor"><i class="mdi mdi-eye text-success" style="font-size: 24px;" ></i></a>
-                <a href="<?php echo base_url() ?>/Welcome_IF/editSupervisor"><i class="mdi mdi-pencil text-success" style="font-size: 24px;" ></i></a>
-                <a href="" onclick="return confirm('Are you sur want to delete?')"><i class="mdi mdi-delete text-danger" style="font-size: 24px;"></i></a>
+                <a href="<?php echo base_url() ?>/Welcome_IF/viewSupervisor"><i class="mdi mdi-eye mdi-24px text-info" ></i></a>
+                <a href="<?php echo base_url() ?>/Welcome_IF/editSupervisor"><i class="mdi mdi-pencil mdi-24px text-success" ></i></a>
+                <a href="" onclick="return confirm('Are you sur want to delete?')"><i class="mdi mdi-delete mdi-24px text-danger"></i></a>
                 </td>
 
             </tr>
@@ -37,9 +37,9 @@
                 
                 <td>
                
-                <a href="<?php echo base_url() ?>/Welcome_IF/viewSupervisor"><i class="mdi mdi-eye text-success" style="font-size: 24px;" ></i></a>
-                <a href="<?php echo base_url() ?>/Welcome_IF/editSupervisor"><i class="mdi mdi-pencil text-success" style="font-size: 24px;" ></i></a>
-                <a href="" onclick="return confirm('Are you sur want to delete?')"><i class="mdi mdi-delete text-danger" style="font-size: 24px;"></i></a>
+                <a href="<?php echo base_url() ?>/Welcome_IF/viewSupervisor"><i class="mdi mdi-eye mdi-24px text-info"></i></a>
+                <a href="<?php echo base_url() ?>/Welcome_IF/editSupervisor"><i class="mdi mdi-pencil mdi-24px text-success"></i></a>
+                <a href="" onclick="return confirm('Are you sur want to delete?')"><i class="mdi mdi-delete mdi-24px text-danger"></i></a>
                 </td>
             </tr>
             <tr>
@@ -49,9 +49,9 @@
                
                 <td>
                
-                <a href="<?php echo base_url() ?>/Welcome_IF/viewSupervisor"><i class="mdi mdi-eye text-success" style="font-size: 24px;" ></i></a>
-                <a href="<?php echo base_url() ?>/Welcome_IF/editSupervisor"><i class="mdi mdi-pencil text-success" style="font-size: 24px;" ></i></a>
-                <a href="" onclick="return confirm('Are you sur want to delete?')"><i class="mdi mdi-delete text-danger" style="font-size: 24px;"></i></a>
+                <a href="<?php echo base_url() ?>/Welcome_IF/viewSupervisor"><i class="mdi mdi-eye mdi-24px text-info"></i></a>
+                <a href="<?php echo base_url() ?>/Welcome_IF/editSupervisor"><i class="mdi mdi-pencil mdi-24px text-success"></i></a>
+                <a href="" onclick="return confirm('Are you sur want to delete?')"><i class="mdi mdi-delete mdi-24px text-danger"></i></a>
                 </td>
             </tr>
             <tr>
@@ -61,9 +61,9 @@
                 
                 <td>
                
-                <a href="<?php echo base_url() ?>/Welcome_IF/viewSupervisor"><i class="mdi mdi-eye text-success" style="font-size: 24px;" ></i></a>
-                <a href="<?php echo base_url() ?>/Welcome_IF/editSupervisor"><i class="mdi mdi-pencil text-success" style="font-size: 24px;" ></i></a>
-                <a href="" onclick="return confirm('Are you sur want to delete?')"><i class="mdi mdi-delete text-danger" style="font-size: 24px;"></i></a>
+                <a href="<?php echo base_url() ?>/Welcome_IF/viewSupervisor"><i class="mdi mdi-eye mdi-24px text-info"></i></a>
+                <a href="<?php echo base_url() ?>/Welcome_IF/editSupervisor"><i class="mdi mdi-pencil mdi-24px text-success"></i></a>
+                <a href="" onclick="return confirm('Are you sur want to delete?')"><i class="mdi mdi-delete mdi-24px text-danger"></i></a>
                 </td>
             </tr>
             <tr>
@@ -73,9 +73,9 @@
                 
                 <td>
                
-                <a href="<?php echo base_url() ?>/Welcome_IF/viewSupervisor"><i class="mdi mdi-eye text-success" style="font-size: 24px;" ></i></a>
-                <a href="<?php echo base_url() ?>/Welcome_IF/editSupervisor"><i class="mdi mdi-pencil text-success" style="font-size: 24px;" ></i></a>
-                <a href="" onclick="return confirm('Are you sur want to delete?')"><i class="mdi mdi-delete text-danger" style="font-size: 24px;"></i></a>
+                <a href="<?php echo base_url() ?>/Welcome_IF/viewSupervisor"><i class="mdi mdi-eye mdi-24px text-info"></i></a>
+                <a href="<?php echo base_url() ?>/Welcome_IF/editSupervisor"><i class="mdi mdi-pencil mdi-24px text-success"></i></a>
+                <a href="" onclick="return confirm('Are you sur want to delete?')"><i class="mdi mdi-delete mdi-24px text-danger"></i></a>
                 </td>
             </tr>
             <tr>
@@ -85,9 +85,9 @@
                 
                 <td>
                
-                <a href="<?php echo base_url() ?>/Welcome_IF/viewSupervisor"><i class="mdi mdi-eye text-success" style="font-size: 24px;" ></i></a>
-                <a href="<?php echo base_url() ?>/Welcome_IF/editSupervisor"><i class="mdi mdi-pencil text-success" style="font-size: 24px;" ></i></a>
-                <a href="" onclick="return confirm('Are you sur want to delete?')"><i class="mdi mdi-delete text-danger" style="font-size: 24px;"></i></a>
+                <a href="<?php echo base_url() ?>/Welcome_IF/viewSupervisor"><i class="mdi mdi-eye mdi-24px text-info"></i></a>
+                <a href="<?php echo base_url() ?>/Welcome_IF/editSupervisor"><i class="mdi mdi-pencil mdi-24px text-success"></i></a>
+                <a href="" onclick="return confirm('Are you sur want to delete?')"><i class="mdi mdi-delete mdi-24px text-danger"></i></a>
                 </td>
             </tr>
             <tr>
@@ -97,9 +97,9 @@
                 
                 <td>
                
-                <a href="<?php echo base_url() ?>/Welcome_IF/viewSupervisor"><i class="mdi mdi-eye text-success" style="font-size: 24px;" ></i></a>
-                <a href="<?php echo base_url() ?>/Welcome_IF/editSupervisor"><i class="mdi mdi-pencil text-success" style="font-size: 24px;" ></i></a>
-                <a href="" onclick="return confirm('Are you sur want to delete?')"><i class="mdi mdi-delete text-danger" style="font-size: 24px;"></i></a>
+                <a href="<?php echo base_url() ?>/Welcome_IF/viewSupervisor"><i class="mdi mdi-eye mdi-24px text-info"></i></a>
+                <a href="<?php echo base_url() ?>/Welcome_IF/editSupervisor"><i class="mdi mdi-pencil mdi-24px text-success"></i></a>
+                <a href="" onclick="return confirm('Are you sur want to delete?')"><i class="mdi mdi-delete mdi-24px text-danger"></i></a>
                 </td>
             </tr>
             <tr>
@@ -109,9 +109,9 @@
                
                 <td>
                
-                <a href="<?php echo base_url() ?>/Welcome_IF/viewSupervisor"><i class="mdi mdi-eye text-success" style="font-size: 24px;" ></i></a>
-                <a href="<?php echo base_url() ?>/Welcome_IF/editSupervisor"><i class="mdi mdi-pencil text-success" style="font-size: 24px;" ></i></a>
-                <a href="" onclick="return confirm('Are you sur want to delete?')"><i class="mdi mdi-delete text-danger" style="font-size: 24px;"></i></a>
+                <a href="<?php echo base_url() ?>/Welcome_IF/viewSupervisor"><i class="mdi mdi-eye mdi-24px text-info"></i></a>
+                <a href="<?php echo base_url() ?>/Welcome_IF/editSupervisor"><i class="mdi mdi-pencil mdi-24px text-success"></i></a>
+                <a href="" onclick="return confirm('Are you sur want to delete?')"><i class="mdi mdi-delete mdi-24px text-danger"></i></a>
                 </td>
             </tr>
             <tr>
@@ -121,16 +121,16 @@
                 
                 <td>
                
-                <a href="<?php echo base_url() ?>/Welcome_IF/viewSupervisor"><i class="mdi mdi-eye text-success" style="font-size: 24px;" ></i></a>
-                <a href="<?php echo base_url() ?>/Welcome_IF/editSupervisor"><i class="mdi mdi-pencil text-success" style="font-size: 24px;" ></i></a>
-                <a href="" onclick="return confirm('Are you sur want to delete?')"><i class="mdi mdi-delete text-danger" style="font-size: 24px;"></i></a>
+                <a href="<?php echo base_url() ?>/Welcome_IF/viewSupervisor"><i class="mdi mdi-eye mdi-24px text-info"></i></a>
+                <a href="<?php echo base_url() ?>/Welcome_IF/editSupervisor"><i class="mdi mdi-pencil mdi-24px text-success"></i></a>
+                <a href="" onclick="return confirm('Are you sur want to delete?')"><i class="mdi mdi-delete mdi-24px text-danger"></i></a>
                 </td>
             </tr>
         </tbody>
     </table>
 	</div>
     <a href="<?php echo base_url(); ?>Welcome_IF/createSupervisor">
-		<button class="btn btn-primary"><i class="mdi mdi-account-plus" style="font-size: 20px;"></i>New Supervisor</button>
+		<button class="btn btn-primary"><i class="mdi mdi-account-plus mdi-24px"></i>New Supervisor</button>
 	</a>
 
 </div>

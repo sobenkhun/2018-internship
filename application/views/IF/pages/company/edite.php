@@ -1,13 +1,8 @@
-<style>
-	.rounded
-	{
-		padding-left: 50px;
-	}
-</style>
+<link rel="stylesheet" type="text/css" href="../css/style.css">
 <div class="container con-body">
 		<a href="<?php echo base_url();?>Welcome_IF/company">
 			<button class="btn btn-primary">
-				<i class="mdi mdi-chevron-left text-white" style="font-size:15px;"></i>Back
+				<i class="mdi mdi-chevron-left mdi-15px text-white"></i>Back
 			</button>
 		</a>
 		<h3 class="text-primary text-center">Edite Company</h3><br>

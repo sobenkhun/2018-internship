@@ -1,4 +1,3 @@
-
 <link rel="stylesheet" type="text/css" href="../css/style.css">
 <nav class=" navbar navbar-expand-lg navbar-light  color">
   <a class="navbar-brand" href="<?php echo base_url();?>Welcome_IF/home">

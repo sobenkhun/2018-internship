@@ -3,7 +3,7 @@
     width: 50px;
     height: 50px;
     border-radius: 50%;
-  }
+  } 
 </style>
 <nav class=" navbar navbar-expand-lg navbar-light  color">
   <a class="navbar-brand" href="<?php echo base_url();?>supervisor/index">

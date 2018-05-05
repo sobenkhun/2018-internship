@@ -1,5 +1,5 @@
 
-
+ 
 <nav class=" navbar navbar-expand-lg navbar-light  color">
   <a class="navbar-brand" href="<?php echo base_url();?>tutorDas/index">
       <img src="<?php echo base_url();?>assets/images/logoL.png" alt="Logo"  class="Tlogo" style="width:150px;">

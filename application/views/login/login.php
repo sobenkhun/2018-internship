@@ -103,9 +103,9 @@
 	}
 	form.login .forgetpass:hover {
 		text-decoration: underline;
-		text-decoration-color: #2980B9;
+		text-decoration-color: blue;
 		transition: .3s;
-		color: rgba(0,0,0,0.7);
+		color: blue;
 	}
 	div.container .create {
 		color: #000;

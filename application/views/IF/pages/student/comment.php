@@ -1,4 +1,3 @@
-<br><br><br>
 <div class="container con-body">
 	<div class="row">
 		<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
@@ -7,7 +6,7 @@
 					<i class="mdi mdi-chevron-left"></i>Back
 				</button>
 			</a>
-			<h3 class="text-primary text-center"><strong>Comment of student : Student Name</strong></h3>
+			<h3 class="text-primary text-center"><strong>Student Comments</strong></h3>
 		</div>
 	</div>	 
 	<br>

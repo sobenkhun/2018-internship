@@ -1,7 +1,4 @@
 
-<br>
-
-<br>
 <div class="contatainer">
 	<div class="row">
 		<div class="col-md-2"></div>
@@ -44,10 +41,10 @@
 		<!-- <div class="col-md-2"></div> -->
 		<div class="col-md-8 text-right">
 			<a href="<?php echo base_url();?>Welcome_IF/student">
-				<button class="btn btn-danger">Cancel</button>
+				<button class="btn btn-outline-danger">Cancel</button>
 			</a>
 			<a href="<?php echo base_url();?>Welcome_IF/student">
-				<button class="btn btn-primary">Add</button>
+				<button class="btn btn-outline-primary float-left">Sent Message</button>
 			</a>
 		</div>
 		<div class="col-md-2"></div>

@@ -1,4 +1,4 @@
-<br><br><br>
+
 <div class="container">
 	<a href="<?php echo base_url();?>Welcome_IF/company">
 		<button class="btn btn-primary">

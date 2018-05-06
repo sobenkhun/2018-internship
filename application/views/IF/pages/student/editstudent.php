@@ -1,11 +1,11 @@
-<br><br><br>
+
 <div class="container con-body">
 	<a href="<?php echo base_url();?>Welcome_IF/student">
 		<button class="btn btn-primary">
 			<i class="mdi mdi-chevron-left text-white mdi-15px"></i>Back
 		</button>
 	</a>
-	<h3 class="text-primary text-center">Update Student profile</h3><br>
+	<h3 class="text-primary text-center" style="font-weight: bold;">Update Student profile</h3><br>
 	<div class="row">
 		<div class="border border-form rounded bg-white">		
 			<form action="" method="" class="stuFormEro" style="margin: 2em 0em 1em 1em;">

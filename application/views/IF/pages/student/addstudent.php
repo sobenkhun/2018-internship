@@ -1,4 +1,4 @@
-<br><br><br>
+
 <div class="container con-body">
 	<a href="<?php echo base_url();?>Welcome_IF/student">
 		<button class="btn btn-primary">

@@ -1,4 +1,4 @@
-<br><br><br>
+
 <div class="container">
 	<div class="row">
 		<div class="col-md-2"></div>
@@ -23,37 +23,37 @@
 							<br>
 							<form>
 								<div class="form-group row">
-									<label for="inputEmail3" class="col-md-3 col-form-label">First Name :</label>
+									<label for="inputEmail3" class="col-md-3 col-form-label">First Name:</label>
 									<div class="col-md-7">
 										<input type="text" class="form-control" id="inputEmail3" placeholder="First Name">
 									</div>
 								</div>
 								<div class="form-group row">
-									<label for="inputEmail3" class="col-md-3 col-form-label">Last Name :</label>
+									<label for="inputEmail3" class="col-md-3 col-form-label">Last Name:</label>
 									<div class="col-md-7">
 										<input type="text" class="form-control" id="inputEmail3" placeholder="Last Name">
 									</div>
 								</div>
 								<div class="form-group row">
-									<label for="inputEmail3" class="col-md-3 col-form-label">Position :</label>
+									<label for="inputEmail3" class="col-md-3 col-form-label">Position:</label>
 									<div class="col-md-7">
 										<input type="text" class="form-control" id="inputEmail3" placeholder="Job position">
 									</div>
 								</div>
 								<div class="form-group row">
-									<label for="inputEmail3" class="col-md-3 col-form-label">School Email :</label>
+									<label for="inputEmail3" class="col-md-3 col-form-label">School Email:</label>
 									<div class="col-md-7">
 										<input type="email" class="form-control" id="inputEmail3" placeholder="School Email">
 									</div>
 								</div>
 								<div class="form-group row">
-									<label for="inputEmail3" class="col-md-3 col-form-label">Phone :</label>
+									<label for="inputEmail3" class="col-md-3 col-form-label">Phone:</label>
 									<div class="col-md-6">
 										<input type="text" class="form-control" id="inputEmail3" placeholder="Phone Number">
 									</div>
 								</div>
 								<div class="form-group row">
-									<label for="inputEmail3" class="col-md-3 col-form-label">Image Tutor :</label>
+									<label for="inputEmail3" class="col-md-3 col-form-label">Image Tutor:</label>
 									<div class="col-md-7">
 										<input type="file" id="inputEmail3">
 									</div>

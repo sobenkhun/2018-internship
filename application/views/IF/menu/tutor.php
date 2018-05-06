@@ -38,7 +38,7 @@
          <li class="nav-item">
           <div class="dropdown">
            <a href="#" class="nav-link active"  data-toggle="dropdown" aria-expanded="false">
-             <i  style="font-size: 20px; margin-right: 20px;" class="mdi mdi-bell"> </i>          
+             <i  style="font-size: 20px; margin-right: 20px;" class="mdi mdi-bell" data-toggle="tooltip" title="Notification"> </i>          
            </a>
             <div class="dropdown-menu ">
                 <div class="dropdown-body">
@@ -58,14 +58,14 @@
          <li class="nav-item ">
            <a class="nav-link" href="#">       
              <b class="colorTextMenu">  
-               <span> Username </span><i style="font-size: 20px;" class="mdi mdi-account-circle"></i> 
+               <span> Username </span><i style="font-size: 20px;" class="mdi mdi-account-circle" data-toggle="tooltip" title="Username"></i> 
              </b>
            </a>
          </li>
          <li class="nav-item">
            <a class="nav-link" href="<?php echo base_url();?>Welcome_IF">
              <b class="colorTextMenu"> 
-               <span> Logout </span> <i style="font-size: 20px;" class="mdi mdi-login"></i> 
+               <span> Logout </span> <i style="font-size: 20px;" class="mdi mdi-login" data-toggle="tooltip" title="Logout"></i> 
              </b>
            </a>
          </li>

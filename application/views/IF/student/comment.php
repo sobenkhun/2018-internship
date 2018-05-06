@@ -1,7 +1,7 @@
 
 <div class="container con-body">
 	<div class="row">
-		<a href="<?php echo base_url();?>cStudent/index">
+		<a href="<?php echo base_url();?>Welcome_IF/student">
 			<button type="button" class="btn btn-primary">
 				<i class="mdi mdi-chevron-left"></i>Back
 			</button>

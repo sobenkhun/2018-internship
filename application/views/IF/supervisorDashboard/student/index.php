@@ -47,7 +47,7 @@
                 <td>Bunthean</td>
                 
                 <td>
-                <a href="<?php echo base_url() ?>/supervisor/questionnair" data-toggle="tooltip" title="Questionnair" data-toggle="tooltip" title="Questionnair"><i class="mdi mdi-checkbox-marked-outline text-success" style="font-size: 24px; " ></i></a>
+                <a href="<?php echo base_url() ?>/supervisor/questionnair" data-toggle="tooltip" title="Questionnair" ><i class="mdi mdi-checkbox-marked-outline text-success" style="font-size: 24px; " ></i></a>
                 </td>
 
             </tr>

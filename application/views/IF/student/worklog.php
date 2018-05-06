@@ -76,7 +76,9 @@
 				<a href="#" class="nav-link text-white">Week2</a>
 			</li>
 			<li class="nav-item" style="font-size: 25px; margin-top: 0.1em;" data-toggle="modal" data-target="#addWeek">
-				<a href="#" class="text-white"><i class="mdi mdi-plus-box"></i></a>
+				<a href="#" class="text-white" >
+					<i class="mdi mdi-plus-box" data-toggle="tooltip" title="Add New Sheet"></i>
+				</a>
 			</li>
 			<li class="nav-item text-right" style="margin: 0.1em 0em 0em 68em;">
 				<input type="button" class="btn btn-warning" name="btn-submit" value="Save">

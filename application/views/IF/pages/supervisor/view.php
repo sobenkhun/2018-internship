@@ -1,4 +1,4 @@
-<br><br><br>
+
 <div class="container">
 	<div class="row">
 		<div class="col-md-2">
@@ -16,7 +16,7 @@
 	<div class="row bg-white">
 		<div class="col-md-1"></div>
 		<div class="col-md-4 text-center "><br>
-			<img class="user userSupervisor" src="<?php echo base_url(); ?>assets/images/studentpiture.jpg" alt=""><br>
+			<img class="user userSupervisor"  src="<?php echo base_url(); ?>assets/images/studentpiture.jpg" alt="" style="height: 260px; margin-top: 17px; padding: 10px;"><br>
 			<a class="link" href="#" >Meng Hak</a>
 		</div>
 		<div class="col-md-6">

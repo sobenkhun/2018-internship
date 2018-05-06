@@ -101,101 +101,16 @@ $langCode= (isset($langCode)) ? $langCode :  "en";
     </div>
   </nav><br><br>
   <!-- Menu   -->
-  <div class="container">
+  <div class="container"><br>
     <div class="row">
       <div class="col-md-12 col-sm-12">
         <div id='calendar' class="col-centered"></div>
         <div id='datepicker' class="col-centered"></div>
       </div>
-       <li class="nav-item">
-        <div class="dropdown">
-         <a href="#" class="nav-link active"  data-toggle="dropdown" aria-expanded="false">
-           <i  style="font-size: 20px; margin-right: 20px;" class="mdi mdi-bell"> </i>          
-         </a>
-         <div class="dropdown-menu ">
-         <div class="dropdown-body">
-           <a class="dropdown-item text-dark" href="#"><img class="logo" src="<?php echo base_url();?>assets/images/logo.png">  <strong>Rith.Nhil</strong> <br>conmment on <strong>Toch.Ban</strong></b></a>
 
-         </div>
-         <div class="dropdown-divider"></div>
-         <a class="dropdown-item" href="#">View All</a>
-       </div>
-     </div>
-   </li>
-
-   <li class="nav-item ">
-    <a class="nav-link" href="#" data-toggle="modal" data-target="#myProfile">       
-      <b class="colorTextMenu">  
-        <span> Username </span>
-        <i style="font-size: 20px;" class="mdi mdi-account-circle"></i> 
-      </b>
-    </a>
-  </li>
-  <li class="nav-item">
-   <a class="nav-link" href="<?php echo base_url();?>Welcome_IF">
-     <b class="colorTextMenu"> 
-       <span> Logout </span> <i style="font-size: 20px;" class="mdi mdi-login"></i> 
-     </b>
-   </a>
- </li>
-</ul>
+  </ul>
 </div>
-</nav><br>
-<!-- Start Profile -->
-<div class="modal fade" id="myProfile">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <!-- Modal Header -->
-      <div class="modal-header">
-        <div class="col-md-4"></div>
-        <div class="col-md-4 text-center">
-          <img src="<?php echo base_url();?>assets/images/studentimage/studentpiture.jpg" alt="" style="width: 100px;"><br>
-          <h5 class="modal-title">Penh SOK</h5>
-        </div>
-        <div class="col-md-4 text-right">
-          <button type="button" class="close" data-dismiss="modal">&times;</button>
-        </div>
-      </div>
-
-      <!-- Modal body -->
-      <div class="modal-body">
-        <table> 
-          <tr>
-            <td><label for="">Sex</label></td>
-            <td><b class="text-dark">: Female</b></td>
-          </tr>
-          <tr>
-            <td> <label for="">DepartMent</label></td>
-            <td><b class="text-dark">:  ERO Team</b></td>
-          </tr>
-          <tr>
-            <td> <label for="">Phone</label></td>
-            <td>
-              <b class="text-dark">:   081477282 </b>
-            </td>
-          </tr>
-          <tr>
-            <td></td>
-            <td><b class="text-dark">:   0713581071</b></td>
-          </tr>
-          <tr>
-            <td><label for="">Personal Email</label></td>
-            <td><b class="text-dark">:   first.last@gmail.com</b></td>
-          </tr>
-          <tr>
-            <td><label for="">School Email</label></td>
-            <td><b class="text-dark">:   first.last@student.passerellesnumeriques.org</b></td>
-          </tr>
-        </table>
-      </div>
-      <!-- Modal footer -->
-      <div class="modal-footer">
-        <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
-      </div>
-    </div>
-    <div class="col-md-2 col-sm-12"></div>
-  </div>
-</div>
+</nav>
 <!-- create modal of order item -->
 <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog" role="document">

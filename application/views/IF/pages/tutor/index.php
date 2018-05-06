@@ -1,4 +1,4 @@
-<br><br><br>
+
 <div class="container">
 	<div class="row">
 		<div class="col-md-12">
@@ -6,8 +6,8 @@
 		</div>
 	</div>
 	<div class="row">
-		<div class="col-md-1"></div>
-		<div class="col-md-10">
+		<!-- <div class="col-md-1"></div> -->
+		<div class="col-md-12">
 			<table id="example" class="table table-striped table-bordered bg-white" style="width:100%">
 				<thead>
 					<tr>
@@ -70,7 +70,7 @@
 
 			</table>
 		</div>
-		<div class="col-md-1"></div>
+		<!-- <div class="col-md-1"></div> -->
 	</div><br>
 	<div class="container">
 		<div class="row">

@@ -15,8 +15,8 @@
 	
 	<h3 class="text-primary text-center"><strong>Comment of student</strong></h3>
 	<div class="row">
-		<div class="col-md-3"></div>
-		<div class="col-md-6">
+		<!-- <div class="col-md-3"></div> -->
+		<div class="col-md-12">
 			<table id="example" class="table table-striped table-bordered tTabla">
 				<thead class="text-center">
 					<tr>
@@ -52,16 +52,12 @@
 				</tbody>
 			</table>
 		</div>
-		<div class="col-md-3"></div>
+		<!-- <div class="col-md-3"></div> -->
 	</div>
 	<div class="row">
-		<div class="col-md-3">
-			
-		</div>
-		<div class="col-md-6">
+		<div class="col-md-12">
 			<button class="btn btn-primary tBtn"><i class="mdi mdi-plus-box "></i>Add comment</button>
 		</div>
-		<div class="col-md-3"></div>
 	</div>
 
 </div>

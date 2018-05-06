@@ -22,7 +22,7 @@
 							<div class="row bg-white">
 								<div class="col-md-1"></div>
 								<div class="col-md-4 text-center "><br>
-									<img class="user" src="<?php echo base_url(); ?>assets/images/user.png" alt=""><br><br>
+									<img class="user" src="<?php echo base_url(); ?>assets/images/studentpiture.jpg" alt=""><br><br>
 									<a class="link" href="#" >Bunthean</a>
 								</div>
 								<div class="col-md-6">

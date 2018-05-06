@@ -22,7 +22,7 @@
     new Chart(document.getElementById("bar-chart"), {
         type: 'bar',
         data: {
-          labels: ["PNC", "PNV","PNP", "Coding", "Webrige", "EZecom","Toyota","Mustang"],
+          labels: ["Coding Get", "Clode Net","Menulife", "Khalibri", "Camsolution", "prudential","EZECOM","Plan Bee"],
           datasets: [
             {
               label: "Population (millions)",

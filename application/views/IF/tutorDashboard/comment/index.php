@@ -14,8 +14,8 @@
 
 	<h3 class="text-primary text-center"><strong>Comment student </strong></h3>
 	<div class="row"><br><br>
-		<div class="col-md-2"></div>
-		<div class="col-md-8">
+		<!-- <div class="col-md-2"></div> -->
+		<div class="col-md-12">
 			<table id="example" class="table table-striped table-bordered tTable">
 				<thead class="text-center">
 					<tr>
@@ -31,45 +31,41 @@
 						<td>Devit Chea</td>	
 						<td>
 							<a href="<?php echo base_url(); ?>tutorDas/CommStuDas">
-								<i class="mdi  mdi-comment text-primary TCMDI"></i>
+								<i class="mdi  mdi-comment text-primary TCMDI" data-toggle="tooltip" title="Comment" ></i>
 							</a>
 						</td>
 					</tr>
 					<tr>
 						<td class="text-center">1</td>
-						<td>Devit Chea</td>	
+						<td>Bunthean MOV</td>	
 						<td>
 							<a href="<?php echo base_url(); ?>tutorDas/CommStuDas">
-								<i class="mdi  mdi-comment text-primary TCMDI"></i>
+								<i class="mdi  mdi-comment text-primary TCMDI" data-toggle="tooltip" title="Comment" ></i>
 							</a>
 						</td>
 					</tr>
 					<tr>
 						<td class="text-center">1</td>
-						<td>Devit Chea</td>	
+						<td>Prem MANN</td>	
 						<td>
 							<a href="<?php echo base_url(); ?>tutorDas/CommStuDas">
-								<i class="mdi  mdi-comment text-primary TCMDI"></i>
+								<i class="mdi  mdi-comment text-primary TCMDI" data-toggle="tooltip" title="Comment" ></i>
 							</a>
 						</td>
 					</tr>
 					<tr>
 						<td class="text-center">1</td>
-						<td>Devit Chea</td>	
+						<td>Toch BAN</td>	
 						<td>
 							<a href="<?php echo base_url(); ?>tutorDas/CommStuDas">
-								<i class="mdi  mdi-comment text-primary TCMDI"></i>
+								<i class="mdi  mdi-comment text-primary TCMDI" data-toggle="tooltip" title="Comment" ></i>
 							</a>
 						</td>
 					</tr>
-					
-					
-					
-					
 				</tbody>
 			</table>
 		</div>
-		<div class="col-md-2"></div>
+		<!-- <div class="col-md-2"></div> -->
 		
 	</div>
 	
@@ -85,4 +81,9 @@
 	$(document).ready(function() {
 		$('#example').DataTable();
 	} );
+</script>
+<script>
+	$(document).ready(function() {
+    $('#example').DataTable();
+} );
 </script>

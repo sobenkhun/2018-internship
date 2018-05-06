@@ -123,7 +123,6 @@
 	.form-check-label {
 		color: black;
 	}
-
 </style>
 </head>
 <body>

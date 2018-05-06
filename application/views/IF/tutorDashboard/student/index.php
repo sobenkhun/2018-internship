@@ -22,16 +22,16 @@
 					<td>Channak</td>
 					<td class="text-center">
 						<a href="#">
-							<i class="mdi  mdi-checkbox-marked-outline text-success" style="font-size:24px;"></i>
+							<i class="mdi  mdi-checkbox-marked-outline text-success" style="font-size:24px;" ></i>
 						</a>
 						<a href="<?php echo base_url(); ?>tutorDas/listCommStuDas">
-							<i class="mdi  mdi-comment text-primary" style="font-size:24px;"></i>
+							<i class="mdi  mdi-comment text-primary" style="font-size:24px;" data-toggle="tooltip" title="Comment"  ></i>
 						</a>
-						<a href="<?php echo base_url(); ?>tutorDas/listCommStuDas">
-							<i class="mdi   mdi-file-document text-warning" style="font-size:24px;"></i>
-						</a>
+						<!-- <a href="<?php echo base_url(); ?>tutorDas/listCommStuDas"> -->
+							<!-- <i class="mdi   mdi-file-document text-warning" style="font-size:24px;" data-toggle="tooltip" title="" ></i> -->
+						<!-- </a> -->
 						<a href="<?php echo base_url(); ?>tutorDas/detailStudentDas" )">
-							<i class="mdi mdi-eye text-info" style="font-size:24px;"></i>
+							<i class="mdi mdi-eye text-info" style="font-size:24px;" data-toggle="tooltip" title="View Detail" ></i>
 						</a>
 					</td>
 				</tr>
@@ -46,13 +46,13 @@
 							<i class="mdi   mdi-checkbox-blank-outline text-success" style="font-size:24px;"></i>
 						</a>
 						<a href="<?php echo base_url(); ?>tutorDas/listCommStuDas" onclick = "return confirm('Do you want to edit information in this Student?')">
-							<i class="mdi  mdi-comment text-primary" style="font-size:24px;"></i>
+							<i class="mdi  mdi-comment text-primary" style="font-size:24px;" data-toggle="tooltip" title="Comment" ></i>
 						</a>
-						<a href="#">
-							<i class="mdi   mdi-file-document text-warning" style="font-size:24px;"></i>
-						</a>
+						<!-- <a href="#"> -->
+							<!-- <i class="mdi   mdi-file-document text-warning" style="font-size:24px;" data-toggle="tooltip" title="" ></i> -->
+						<!-- </a> -->
 						<a href="<?php echo base_url(); ?>tutorDas/detailStudentDas" )">
-							<i class="mdi mdi-eye text-info" style="font-size:24px;"></i>
+							<i class="mdi mdi-eye text-info" style="font-size:24px;" data-toggle="tooltip" title="View Detail" ></i>
 						</a>
 					</td>
 				</tr>
@@ -67,14 +67,14 @@
 							<i class="mdi mdi-pencil-box-outline text-success" style="font-size:24px;"></i>
 						</a>
 						<a href="<?php echo base_url(); ?>tutorDas/listCommStuDas" onclick = "return confirm('Do you want to edit information in this Student?')">
-							<i class="mdi  mdi-comment text-primary" style="font-size:24px;"></i>
+							<i class="mdi  mdi-comment text-primary" style="font-size:24px;" data-toggle="tooltip" title="Comment" ></i>
 						</a>
-						<a href="<?php echo base_url(); ?>tutorDas/CommStuDas">
-							<i class="mdi   mdi-file-document text-warning" style="font-size:24px;"></i>
-						</a>
+						<!-- <a href="<?php echo base_url(); ?>tutorDas/CommStuDas"> -->
+							<!-- <i class="mdi   mdi-file-document text-warning" style="font-size:24px;" data-toggle="tooltip" title="" ></i> -->
+						<!-- </a> -->
 
 						<a href="<?php echo base_url(); ?>tutorDas/detailStudentDas" )">
-							<i class="mdi mdi-eye text-info" style="font-size:24px;"></i>
+							<i class="mdi mdi-eye text-info" style="font-size:24px;" data-toggle="tooltip" title="View Detail" ></i>
 						</a>
 						
 					</td>
@@ -90,13 +90,13 @@
 							<i class="mdi  mdi-pencil-box-outline text-success" style="font-size:24px;"></i>
 						</a>
 						<a href="<?php echo base_url(); ?>tutorDas/listCommStuDas" onclick = "return confirm('Do you want to edit information in this Student?')">
-							<i class="mdi mdi-comment text-primary" style="font-size:24px;"></i>
+							<i class="mdi mdi-comment text-primary" style="font-size:24px;" data-toggle="tooltip" title="Comment" ></i>
 						</a>
-						<a href="<?php echo base_url(); ?>tutorDas/listCommStuDas">
-							<i class="mdi   mdi-file-document text-warning" style="font-size:24px;"></i>
-						</a>
+						<!-- <a href="<?php echo base_url(); ?>tutorDas/listCommStuDas"> -->
+							<!-- <i class="mdi   mdi-file-document text-warning" style="font-size:24px;" data-toggle="tooltip" title="" ></i> -->
+						<!-- </a> -->
 						<a href="<?php echo base_url(); ?>tutorDas/detailStudentDas" )">
-							<i class="mdi mdi-eye text-info" style="font-size:24px;"></i>
+							<i class="mdi mdi-eye text-info" style="font-size:24px;" data-toggle="tooltip" title="View Detail" ></i>
 						</a>
 					</td>
 				</tr>
@@ -111,13 +111,13 @@
 							<i class="mdi  mdi-pencil-box-outline text-success" style="font-size:24px;"></i>
 						</a>
 						<a href="<?php echo base_url(); ?>tutorDas/listCommStuDas" onclick = "return confirm('Do you want to edit information in this Student?')">
-							<i class="mdi  mdi-comment text-primary" style="font-size:24px;"></i>
+							<i class="mdi  mdi-comment text-primary" style="font-size:24px;" data-toggle="tooltip" title="Comment" ></i>
 						</a>
-						<a href="<?php echo base_url(); ?>tutorDas/listCommStuDas">
-							<i class="mdi   mdi-file-document text-warning" style="font-size:24px;"></i>
-						</a>
+						<!-- <a href="<?php echo base_url(); ?>tutorDas/listCommStuDas"> -->
+							<!-- <i class="mdi   mdi-file-document text-warning" style="font-size:24px;" data-toggle="tooltip" title="" ></i> -->
+						<!-- </a> -->
 						<a href="<?php echo base_url(); ?>tutorDas/detailStudentDas" )">
-							<i class="mdi mdi-eye text-info" style="font-size:24px;"></i>
+							<i class="mdi mdi-eye text-info" style="font-size:24px;" data-toggle="tooltip" title="View Detail" ></i>
 						</a>
 					</td>
 				</tr>
@@ -137,4 +137,9 @@
 	$(document).ready(function() {
 		$('#example').DataTable();
 	} );
+</script>
+<script>
+	$(document).ready(function() {
+    $('#example').DataTable();
+} );
 </script>

@@ -62,7 +62,7 @@
     <script src="<?php echo base_url();?>assets/js/Chart-2.7.1.min.js"></script>
 
     <h1 class="text-center">Company Bar Chart</h1>
-    <h2 class="text-center">Bar chart</h2>
+    <!-- <h2 class="text-center">Bar chart</h2> -->
 
     <canvas id="bar-chart"  class="TCBDcanvas"></canvas>
 
@@ -71,7 +71,7 @@
     new Chart(document.getElementById("bar-chart"), {
         type: 'bar',
         data: {
-          labels: ["PNC", "PNV","PNP", "Coding", "Webrige", "EZecom","Toyota","Mustang"],
+          labels: ["Coding Get", "Clode Net","Menulife", "Khalibri", "Camsolution", "prudential","EZECOM","Plan Bee"],
           datasets: [
             {
               label: "Population (millions)",

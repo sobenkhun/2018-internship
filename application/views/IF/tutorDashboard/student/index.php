@@ -5,21 +5,21 @@
 		<table id="example" class="table table-striped table-bordered" style="width:100%">
 			<thead class="text-center">
 				<tr>
-					<th>ID</th>
-					<th>Student Name</th>
-					<th>Company</th>
-					<th>Supervisor</th>
-					<th>Tutor</th>
-					<th>Action</th>
+					<th class="text-center">ID</th>
+					<th class="text-center">Student Name</th>
+					<th class="text-center">Company</th>
+					<th class="text-center">Supervisor</th>
+					<th class="text-center">Tutor</th>
+					<th class="text-center">Action</th>
 				</tr>
 			</thead>
 			<tbody>
 				<tr>
 					<td class="text-center">1</td>
-					<td>Devit Chea</td>
-					<td>RCI</td>
-					<td>Dara</td>
-					<td>Channak</td>
+					<td class="text-center">Devit Chea</td>
+					<td class="text-center">RCI</td>
+					<td class="text-center">Dara</td>
+					<td class="text-center">Channak</td>
 					<td class="text-center">
 						<a href="#">
 							<i class="mdi  mdi mdi-book-open-page-variant text-dark TCMDI data-toggle="tooltip" title="View weekly work log "  ></i>
@@ -30,16 +30,16 @@
 						</a>
 						
 						<a href="<?php echo base_url(); ?>tutorDas/detailStudentDas" )">
-							<i class="mdi mdi-eye text-primary TCMDI"  data-toggle="tooltip" title="View profile" ></i>
+							<i class="mdi mdi-eye text-info TCMDI"  data-toggle="tooltip" title="View profile" ></i>
 						</a>
 					</td>
 				</tr>
 				<tr>
 					<td class="text-center">2</td>
-					<td>Ashton Cox</td>
-					<td>PNC solution</td>
-					<td>Dara Chan</td>
-					<td>Channak Choun</td>
+					<td class="text-center">Ashton Cox</td>
+					<td class="text-center">PNC solution</td>
+					<td class="text-center">Dara Chan</td>
+					<td class="text-center">Channak Choun</td>
 					<td class="text-center">
 						<a href="#" >
 							<i class="mdi    mdi mdi-book-open-page-variant text-dark TCMDI data-toggle="tooltip" title="View weekly work log" ></i>
@@ -49,16 +49,16 @@
 						</a>
 						
 						<a href="<?php echo base_url(); ?>tutorDas/detailStudentDas" )">
-							<i class="mdi mdi-eye text-primary TCMDI"  data-toggle="tooltip" title="View profile" ></i>
+							<i class="mdi mdi-eye text-info TCMDI"  data-toggle="tooltip" title="View profile" ></i>
 						</a>
 					</td>
 				</tr>
 				<tr>
 					<td class="text-center">3</td>
-					<td>Ashton Cox</td>
-					<td>PNC solution</td>
-					<td>Dara Chan</td>
-					<td>Rith Nhel</td>
+					<td class="text-center">Ashton Cox</td>
+					<td class="text-center"></td>>PNC solution</td>
+					<td class="text-center">Dara Chan</td>
+					<td class="text-center">Rith Nhel</td>
 					<td class="text-center">
 						<a href="#">
 							<i class="mdi  mdi mdi-book-open-page-variant text-dark data-toggle="tooltip" title="View weekly work log" style="font-size:24px;"></i>
@@ -69,17 +69,17 @@
 						
 
 						<a href="<?php echo base_url(); ?>tutorDas/detailStudentDas" )">
-							<i class="mdi mdi-eye text-primary TCMDI"  data-toggle="tooltip" title="View profile" ></i>
+							<i class="mdi mdi-eye text-info TCMDI"  data-toggle="tooltip" title="View profile" ></i>
 						</a>
 						
 					</td>
 				</tr>
 				<tr>
 					<td class="text-center">4</td>
-					<td>Devit Chea</td>
-					<td>RCI</td>
-					<td>Dara</td>
-					<td>Channak</td>
+					<td class="text-center">Devit Chea</td>
+					<td class="text-center">RCI</td>
+					<td class="text-center">Dara</td>
+					<td class="text-center">Channak</td>
 					<td class="text-center">
 						<a href="#" >
 							<i class="mdi   mdi mdi-book-open-page-variant text-dark TCMDI data-toggle="tooltip" title="View weekly work log" ></i>
@@ -89,16 +89,16 @@
 						</a>
 						
 						<a href="<?php echo base_url(); ?>tutorDas/detailStudentDas" )">
-							<i class="mdi mdi-eye text-primary TCMDI"  data-toggle="tooltip" title="View profile" ></i>
+							<i class="mdi mdi-eye text-info TCMDI"  data-toggle="tooltip" title="View profile" ></i>
 						</a>
 					</td>
 				</tr>
 				<tr>
 					<td class="text-center">5</td>
-					<td>Devit Chea</td>
-					<td>RCI</td>
-					<td>Dara</td>
-					<td>Channak</td>
+					<td class="text-center">Devit Chea</td>
+					<td class="text-center">RCI</td>
+					<td class="text-center">Dara</td>
+					<td class="text-center">Channak</td>
 					<td class="text-center">
 						<a href="#">
 							<i class="mdi   mdi mdi-book-open-page-variant text-dark TCMDI data-toggle="tooltip" title="View weekly work log" ></i>
@@ -108,7 +108,7 @@
 						</a>
 						
 						<a href="<?php echo base_url(); ?>tutorDas/detailStudentDas" )">
-							<i class="mdi mdi-eye text-primary TCMDI"  data-toggle="tooltip" title="View profile" ></i>
+							<i class="mdi mdi-eye text-info TCMDI"  data-toggle="tooltip" title="View profile" ></i>
 						</a>
 					</td>
 				</tr>

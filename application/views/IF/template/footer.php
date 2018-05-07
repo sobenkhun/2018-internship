@@ -1,7 +1,3 @@
-<div class="jumbotron">
-  <h5 class="text-center">Copy © right by Student at Passerelles Numeriques of Combodia</h5>
-</div> 
-
 <!-- jquey -->
 <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
 <script src="<?php echo base_url();?>assets/js/jquery-3.2.1.min.js"></script>

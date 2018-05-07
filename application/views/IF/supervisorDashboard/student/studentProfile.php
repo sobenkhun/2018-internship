@@ -17,7 +17,7 @@
 		<div class="col-md-1"></div>
 		<div class="col-md-4 text-center "><br>
 			<img class="user userSupervisor"  src="<?php echo base_url(); ?>assets/images/studentpiture.jpg" alt="" style="height: 260px; margin-top: 17px; padding: 10px;"><br>
-			<label for="">Prem</label>
+			<label for="">Prem MANN</label>
 		</div>
 		<div class="col-md-6">
 			<form action="/action_page.php">
@@ -64,7 +64,7 @@
 					<tr>
 						<td> 
 							<div class="form-group">
-								<label for="email">Supervisor By</label>
+								<label for="email">Tutor By</label>
 							</div> 
 						</td>
 						<td> </td>

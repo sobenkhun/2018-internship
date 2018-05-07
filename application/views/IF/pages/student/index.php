@@ -22,6 +22,9 @@
 					<td>Dara</td>
 					<td>Channak</td>
 					<td class="text-center">
+						<a href="<?php echo base_url();?>Welcome_IF/worklog" data-toggle ="tooltip" title="View Student's Worklog">
+							<i class="mdi  mdi-book-open-page-variant text-dark mdi-24px"></i>
+						</a>
 						<a href="<?php echo base_url();?>Welcome_IF/comment" data-toggle ="tooltip" title="View Comment">
 							<i class="mdi  mdi-comment text-warning mdi-24px"></i>
 						</a>
@@ -43,6 +46,9 @@
 					<td>Dara Chan</td>
 					<td>Channak Choun</td>
 					<td class="text-center">
+						<a href="<?php echo base_url();?>Welcome_IF/worklog" data-toggle ="tooltip" title="View Student's Worklog">
+							<i class="mdi  mdi-book-open-page-variant text-dark mdi-24px"></i>
+						</a>
 						<a href="<?php echo base_url();?>Welcome_IF/comment" data-toggle ="tooltip" title="View Comment">
 							<i class="mdi  mdi-comment text-warning mdi-24px"></i>
 						</a>
@@ -63,6 +69,9 @@
 					<td>Dara Chan</td>
 					<td>Rith Nhel</td>
 					<td class="text-center">
+						<a href="<?php echo base_url();?>Welcome_IF/worklog" data-toggle ="tooltip" title="View Student's Worklog">
+							<i class="mdi  mdi-book-open-page-variant text-dark mdi-24px"></i>
+						</a>
 						<a href="<?php echo base_url();?>Welcome_IF/comment" data-toggle ="tooltip" title="View Comment">
 							<i class="mdi  mdi-comment text-warning mdi-24px"></i>
 						</a>
@@ -84,6 +93,9 @@
 					<td>Dara</td>
 					<td>Channak</td>
 					<td class="text-center">
+						<a href="<?php echo base_url();?>Welcome_IF/worklog" data-toggle ="tooltip" title="View Student's Worklog">
+							<i class="mdi  mdi-book-open-page-variant text-dark mdi-24px"></i>
+						</a>
 						<a href="<?php echo base_url();?>Welcome_IF/comment" data-toggle ="tooltip" title="View Comment">
 							<i class="mdi  mdi-comment text-warning mdi-24px"></i>
 						</a>
@@ -105,6 +117,9 @@
 					<td>Dara</td>
 					<td>Channak</td>
 					<td class="text-center">
+						<a href="<?php echo base_url();?>Welcome_IF/worklog" data-toggle ="tooltip" title="View Student's Worklog">
+							<i class="mdi  mdi-book-open-page-variant text-dark mdi-24px"></i>
+						</a>
 						<a href="<?php echo base_url();?>Welcome_IF/comment" data-toggle ="tooltip" title="View Comment">
 							<i class="mdi  mdi-comment text-warning mdi-24px"></i>
 						</a>

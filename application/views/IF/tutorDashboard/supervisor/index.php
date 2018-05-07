@@ -25,11 +25,12 @@
                 <td class="text-center">Rith NHEL</td>
                 
                 <td class="text-center">
+                    <a href="<?php echo base_url();?>tutorDas/viewSupervisorDas">
+                        <i class="mdi mdi-eye text-info TCMDI" data-toggle="tooltip" title="View "></i>
+                    </a>
                
-                <a href="<?php echo base_url();?>tutorDas/questionnair"><i class="mdi  mdi-book-minus text-dark TCMDI" data-toggle="tooltip" title="Questionnair"></i></a>
-                <a href="<?php echo base_url();?>tutorDas/viewSupervisorDas">
-                    <i class="mdi mdi-eye text-primary TCMDI" data-toggle="tooltip" title="View Profile"></i>
-                </a>
+                   <a href="<?php echo base_url();?>tutorDas/questionnair"><i class="mdi  mdi-book-minus text-dark TCMDI" data-toggle="tooltip" title="Questionnair"></i></a>
+                
                 
                 </td>
 
@@ -40,27 +41,29 @@
                 <td class="text-center">Rady Y</td>
                 
                 <td class="text-center">
-               
-                <a href="<?php echo base_url();?>tutorDas/questionnair"><i class="mdi  mdi-book-minus text-dark TCMDI" data-toggle="tooltip" title="Questionnair"></i></a>
-                <a href="<?php echo base_url();?>tutorDas/viewSupervisorDas">
-                    <i class="mdi mdi-eye text-primary TCMDI" data-toggle="tooltip" title="View Profile"></i>
-                </a>
-                
-                </td>
+                  <a href="<?php echo base_url();?>tutorDas/viewSupervisorDas">
+                      <i class="mdi mdi-eye text-info TCMDI" data-toggle="tooltip" title="View "></i>
+                  </a>
+                  
+                  <a href="<?php echo base_url();?>tutorDas/questionnair"><i class="mdi  mdi-book-minus text-dark TCMDI" data-toggle="tooltip" title="Questionnair"></i></a>
+                  
+                  
+              </td>
             </tr>
             <tr>
                 <td class="text-center"> 3</td>
                 <td class="text-center">Khalibri</td>
                  <td class="text-center">Rady</td>
                
-                <td class="text-center">
-               
-                <a href="<?php echo base_url();?>tutorDas/questionnair"><i class="mdi  mdi-book-minus text-dark TCMDI" data-toggle="tooltip" title="Questionnair"></i></a>
-                <a href="tutorDas/viewSupervisorDas<?php echo base_url();?>tutorDas/viewSupervisorDas">
-                    <i class="mdi mdi-eye text-primary TCMDI" data-toggle="tooltip" title="View Profile"></i>
-                </a>
-                
-                </td>
+                 <td class="text-center">
+                  <a href="<?php echo base_url();?>tutorDas/viewSupervisorDas">
+                      <i class="mdi mdi-eye text-info TCMDI" data-toggle="tooltip" title="View "></i>
+                  </a>
+                  
+                  <a href="<?php echo base_url();?>tutorDas/questionnair"><i class="mdi  mdi-book-minus text-dark TCMDI" data-toggle="tooltip" title="Questionnair"></i></a>
+                  
+                  
+              </td>
             </tr>
             <tr>
                 <td class="text-center">4</td>
@@ -68,13 +71,14 @@
                 <td class="text-center">Kea LOHN</td>
                 
                 <td class="text-center">
-               
-                <a href="<?php echo base_url();?>tutorDas/questionnair"><i class="mdi  mdi-book-minus text-dark TCMDI" data-toggle="tooltip" title="Questionnair"></i></a>
-                <a href="<?php echo base_url();?>tutorDas/viewSupervisorDas">
-                    <i class="mdi mdi-eye text-primary TCMDI" data-toggle="tooltip" title="View Profile"></i>
-                </a>
-                
-                </td>
+                  <a href="<?php echo base_url();?>tutorDas/viewSupervisorDas">
+                      <i class="mdi mdi-eye text-info TCMDI" data-toggle="tooltip" title="View "></i>
+                  </a>
+                  
+                  <a href="<?php echo base_url();?>tutorDas/questionnair"><i class="mdi  mdi-book-minus text-dark TCMDI" data-toggle="tooltip" title="Questionnair"></i></a>
+                  
+                  
+              </td>
             </tr>
             <tr>
                 <td class="text-center">5</td>
@@ -82,13 +86,14 @@
                 <td class="text-center">Sopheak</td>
                 
                 <td class="text-center">
-               
-                <a href="<?php echo base_url();?>tutorDas/questionnair"><i class="mdi  mdi-book-minus text-dark TCMDI" data-toggle="tooltip" title="Questionnair"></i></a>
-                <a href="<?php echo base_url();?>tutorDas/viewSupervisorDas">
-                    <i class="mdi mdi-eye text-primary TCMDI" data-toggle="tooltip" title="View Profile"></i>
-                </a>
-               
-                </td>
+                 <a href="<?php echo base_url();?>tutorDas/viewSupervisorDas">
+                     <i class="mdi mdi-eye text-info TCMDI" data-toggle="tooltip" title="View "></i>
+                 </a>
+                 
+                 <a href="<?php echo base_url();?>tutorDas/questionnair"><i class="mdi  mdi-book-minus text-dark TCMDI" data-toggle="tooltip" title="Questionnair"></i></a>
+                 
+                 
+             </td>
             </tr>
             <tr>
                 <td class="text-center">6</td>
@@ -96,15 +101,14 @@
                 <td class="text-center">Pisey</td>
                 
                 <td class="text-center">
-               
-                <a href="<?php echo base_url();?>tutorDas/questionnair">
-                    <i class="mdi  mdi-book-minus text-dark TCMDI" data-toggle="tooltip" title="Questionnair" data-toggle="tooltip" title="Questionnair"></i>
-                </a>
-                <a href="<?php echo base_url();?>tutorDas/viewSupervisorDas">
-                    <i class="mdi mdi-eye text-primary TCMDI" data-toggle="tooltip" title="View Profile"></i>
-                </a>
-                
-                </td>
+                 <a href="<?php echo base_url();?>tutorDas/viewSupervisorDas">
+                     <i class="mdi mdi-eye text-info TCMDI" data-toggle="tooltip" title="View "></i>
+                 </a>
+                 
+                 <a href="<?php echo base_url();?>tutorDas/questionnair"><i class="mdi  mdi-book-minus text-dark TCMDI" data-toggle="tooltip" title="Questionnair"></i></a>
+                 
+                 
+             </td>
             </tr>
            
             <tr>
@@ -112,16 +116,15 @@
                 <td class="text-center">Res Up</td>
                  <td class="text-center">Chanak CHON</td>
                
-                <td class="text-center">
-               
-                    <a href="<?php echo base_url();?>tutorDas/questionnair">
-                        <i class="mdi mdi-book-minus text-dark TCMDI"  ></i>
-                    </a>
-                    <a href="<?php echo base_url();?>tutorDas/viewSupervisorDas">
-                        <i class="mdi mdi-eye text-primary TCMDI" data-toggle="tooltip" title="View Profile"></i>
-                    </a>
-               
-                </td>
+                 <td class="text-center">
+                     <a href="<?php echo base_url();?>tutorDas/viewSupervisorDas">
+                         <i class="mdi mdi-eye text-info TCMDI" data-toggle="tooltip" title="View "></i>
+                     </a>
+                     
+                     <a href="<?php echo base_url();?>tutorDas/questionnair"><i class="mdi  mdi-book-minus text-dark TCMDI" data-toggle="tooltip" title="Questionnair"></i></a>
+                     
+                     
+                 </td>
             </tr>
            
         </tbody>

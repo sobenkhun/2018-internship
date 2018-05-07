@@ -116,7 +116,7 @@ $langCode= (isset($langCode)) ? $langCode :  "en";
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Plant a meeting</h5>
+        <h5 class="modal-title" id="exampleModalLabel">Plan a meeting</h5>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
@@ -167,11 +167,11 @@ $langCode= (isset($langCode)) ? $langCode :  "en";
        <label for="example-datetime-local-input" class="col-2 col-form-label">Invite</label>
        <div class="col-10">
          <select class="form-control" id="exampleSelect1">
-           <option>Staff </option>
-           <option>Student a</option>
-           <option>Supervisor</option>
-           <option>ERO Member</option>
-           <option>Tutor</option>
+           <option>devith.chea@student.passerellesnumerques.org </option>
+           <option>prem.man@student.passerellesnumerques.org </option>
+           <option>bunthean.man@student.passerellesnumerques.org</option>
+           <option>soben.man@student.passerellesnumerques.org</option>
+           <option>prem.man@student.passerellesnumerques.org</option>
          </select>
        </div>
      </div>

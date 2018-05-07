@@ -68,14 +68,14 @@
          <li class="nav-item ">
            <a class="nav-link" href="#">       
              <b class="colorTextMenu">  
-               <span> Username </span><i style="font-size: 20px;" class="mdi mdi-account-circle" data-toggle="tooltip" title="Username"></i> 
+               <i style="font-size: 20px;" class="mdi mdi-account-circle" data-toggle="tooltip" title="Username"></i> 
              </b>
            </a>
          </li>
          <li class="nav-item">
            <a class="nav-link" href="<?php echo base_url();?>Welcome_IF">
              <b class="colorTextMenu"> 
-               <span> Logout </span> <i style="font-size: 20px;" class="mdi mdi-login" data-toggle="tooltip" title="Logout"></i> 
+              <i style="font-size: 20px;" class="mdi mdi-login" data-toggle="tooltip" title="Logout"></i> 
              </b>
            </a>
          </li>

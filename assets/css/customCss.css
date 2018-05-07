@@ -150,10 +150,10 @@ background: #7dbcf9;
 	font-size: 20px; 
 	margin-right: 20px;
 }
-.iconBell{
+#iconBell{
 
 	font-size: 20px;
-	 margin-right: 20px;
+	 margin-left: 30px;
 
 }
 .iconAccount{

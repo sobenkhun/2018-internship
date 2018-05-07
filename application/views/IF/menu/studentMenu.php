@@ -79,7 +79,7 @@
       <li class="nav-item ">
         <a class="nav-link" href="#" data-toggle="modal" data-target="#studentProfile">       
           <b class="colorTextMenu">  
-            <span> Username </span>
+            
             <i style="font-size: 20px;" class="mdi mdi-account-circle" data-toggle="tooltip" title="Username"></i> 
           </b>
        </a>
@@ -87,7 +87,7 @@
       <li class="nav-item">
         <a class="nav-link" href="<?php echo base_url();?>Welcome_IF">
           <b class="colorTextMenu"> 
-            <span> Logout </span> 
+           
             <i style="font-size: 20px;" class="mdi mdi-login" data-toggle="tooltip" title="Logout"></i> 
           </b>
         </a>

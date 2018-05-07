@@ -11,6 +11,7 @@
 					<th>Company</th>
 					<th>Supervisor</th>
 					<th>Tutor</th>
+					<th>Comment</th>
 					<th>Action</th>
 				</tr>
 			</thead>
@@ -22,19 +23,22 @@
 					<td>Dara</td>
 					<td>Channak</td>
 					<td class="text-center">
-						<a href="<?php echo base_url();?>Welcome_IF/worklog" data-toggle ="tooltip" title="View Student's Worklog">
+						<a href="<?php echo base_url();?>Welcome_IF/worklog" data-toggle ="tooltip" title="View Worklog">
 							<i class="mdi  mdi-book-open-page-variant text-dark mdi-24px"></i>
 						</a>
 						<a href="<?php echo base_url();?>Welcome_IF/comment" data-toggle ="tooltip" title="View Comment">
 							<i class="mdi  mdi-comment text-warning mdi-24px"></i>
 						</a>
+					</td>
+					<td class="text-center">
+						
 						<a href="<?php echo base_url();?>Welcome_IF/viewStudent">
-							<i class="mdi mdi-eye text-info mdi-24px" data-toggle ="tooltip" title="View Student Information"></i>
+							<i class="mdi mdi-eye text-info mdi-24px" data-toggle ="tooltip" title="View "></i>
 						</a>
-						<a href="<?php echo base_url();?>Welcome_IF/updateStudent" data-toggle ="tooltip" title="Edit Student">
+						<a href="<?php echo base_url();?>Welcome_IF/updateStudent" data-toggle ="tooltip" title="Edit ">
 							<i class="mdi  mdi-border-color text-success mdi-24px" ></i>
 						</a>
-						<a href="" onclick = "return confirm('Are you sure that you want to delete this student?')" data-toggle ="tooltip" title="Delete This Student">
+						<a href="" onclick = "return confirm('Are you sure that you want to delete this student?')" data-toggle ="tooltip" title="Delete ">
 							<i class="mdi mdi-delete text-danger mdi-24px" ></i>
 						</a>
 					</td>
@@ -46,19 +50,22 @@
 					<td>Dara Chan</td>
 					<td>Channak Choun</td>
 					<td class="text-center">
-						<a href="<?php echo base_url();?>Welcome_IF/worklog" data-toggle ="tooltip" title="View Student's Worklog">
+						<a href="<?php echo base_url();?>Welcome_IF/worklog" data-toggle ="tooltip" title="View  Worklog">
 							<i class="mdi  mdi-book-open-page-variant text-dark mdi-24px"></i>
 						</a>
 						<a href="<?php echo base_url();?>Welcome_IF/comment" data-toggle ="tooltip" title="View Comment">
 							<i class="mdi  mdi-comment text-warning mdi-24px"></i>
 						</a>
+					</td>
+					<td class="text-center">
+						
 						<a href="<?php echo base_url();?>Welcome_IF/viewStudent">
-							<i class="mdi mdi-eye text-info mdi-24px" data-toggle ="tooltip" title="View Student Information"></i>
+							<i class="mdi mdi-eye text-info mdi-24px" data-toggle ="tooltip" title="View "></i>
 						</a>
-						<a href="<?php echo base_url();?>Welcome_IF/updateStudent" data-toggle ="tooltip" title="Edit Student">
+						<a href="<?php echo base_url();?>Welcome_IF/updateStudent" data-toggle ="tooltip" title="Edit ">
 							<i class="mdi  mdi-border-color text-success mdi-24px" ></i>
 						</a>
-						<a href="" onclick = "return confirm('Are you sure that you want to delete this student?')" data-toggle ="tooltip" title="Delete This Student">
+						<a href="" onclick = "return confirm('Are you sure that you want to delete this student?')" data-toggle ="tooltip" title="Delete ">
 							<i class="mdi mdi-delete text-danger mdi-24px" ></i>
 						</a>
 				</tr>
@@ -69,19 +76,22 @@
 					<td>Dara Chan</td>
 					<td>Rith Nhel</td>
 					<td class="text-center">
-						<a href="<?php echo base_url();?>Welcome_IF/worklog" data-toggle ="tooltip" title="View Student's Worklog">
+						<a href="<?php echo base_url();?>Welcome_IF/worklog" data-toggle ="tooltip" title="View  Worklog">
 							<i class="mdi  mdi-book-open-page-variant text-dark mdi-24px"></i>
 						</a>
 						<a href="<?php echo base_url();?>Welcome_IF/comment" data-toggle ="tooltip" title="View Comment">
 							<i class="mdi  mdi-comment text-warning mdi-24px"></i>
 						</a>
+					</td>
+					<td class="text-center">
+						
 						<a href="<?php echo base_url();?>Welcome_IF/viewStudent">
-							<i class="mdi mdi-eye text-info mdi-24px" data-toggle ="tooltip" title="View Student Information"></i>
+							<i class="mdi mdi-eye text-info mdi-24px" data-toggle ="tooltip" title="View "></i>
 						</a>
-						<a href="<?php echo base_url();?>Welcome_IF/updateStudent" data-toggle ="tooltip" title="Edit Student">
+						<a href="<?php echo base_url();?>Welcome_IF/updateStudent" data-toggle ="tooltip" title="Edit ">
 							<i class="mdi  mdi-border-color text-success mdi-24px" ></i>
 						</a>
-						<a href="" onclick = "return confirm('Are you sure that you want to delete this student?')" data-toggle ="tooltip" title="Delete This Student">
+						<a href="" onclick = "return confirm('Are you sure that you want to delete this student?')" data-toggle ="tooltip" title="Delete">
 							<i class="mdi mdi-delete text-danger mdi-24px" ></i>
 						</a>
 					</td>
@@ -93,19 +103,22 @@
 					<td>Dara</td>
 					<td>Channak</td>
 					<td class="text-center">
-						<a href="<?php echo base_url();?>Welcome_IF/worklog" data-toggle ="tooltip" title="View Student's Worklog">
+						<a href="<?php echo base_url();?>Welcome_IF/worklog" data-toggle ="tooltip" title="View  Worklog">
 							<i class="mdi  mdi-book-open-page-variant text-dark mdi-24px"></i>
 						</a>
 						<a href="<?php echo base_url();?>Welcome_IF/comment" data-toggle ="tooltip" title="View Comment">
 							<i class="mdi  mdi-comment text-warning mdi-24px"></i>
 						</a>
+					</td>
+					<td class="text-center">
+						
 						<a href="<?php echo base_url();?>Welcome_IF/viewStudent">
-							<i class="mdi mdi-eye text-info mdi-24px" data-toggle ="tooltip" title="View Student Information"></i>
+							<i class="mdi mdi-eye text-info mdi-24px" data-toggle ="tooltip" title="View  "></i>
 						</a>
-						<a href="<?php echo base_url();?>Welcome_IF/updateStudent" data-toggle ="tooltip" title="Edit Student">
+						<a href="<?php echo base_url();?>Welcome_IF/updateStudent" data-toggle ="tooltip" title="Edit ">
 							<i class="mdi  mdi-border-color text-success mdi-24px" ></i>
 						</a>
-						<a href="" onclick = "return confirm('Are you sure that you want to delete this student?')" data-toggle ="tooltip" title="Delete This Student">
+						<a href="" onclick = "return confirm('Are you sure that you want to delete this student?')" data-toggle ="tooltip" title="Delete ">
 							<i class="mdi mdi-delete text-danger mdi-24px" ></i>
 						</a>
 					</td>
@@ -117,19 +130,22 @@
 					<td>Dara</td>
 					<td>Channak</td>
 					<td class="text-center">
-						<a href="<?php echo base_url();?>Welcome_IF/worklog" data-toggle ="tooltip" title="View Student's Worklog">
+						<a href="<?php echo base_url();?>Welcome_IF/worklog" data-toggle ="tooltip" title="View  Worklog">
 							<i class="mdi  mdi-book-open-page-variant text-dark mdi-24px"></i>
 						</a>
 						<a href="<?php echo base_url();?>Welcome_IF/comment" data-toggle ="tooltip" title="View Comment">
 							<i class="mdi  mdi-comment text-warning mdi-24px"></i>
 						</a>
+					</td>
+					<td class="text-center">
+						
 						<a href="<?php echo base_url();?>Welcome_IF/viewStudent">
-							<i class="mdi mdi-eye text-info mdi-24px" data-toggle ="tooltip" title="View Student Information"></i>
+							<i class="mdi mdi-eye text-info mdi-24px" data-toggle ="tooltip" title="View "></i>
 						</a>
-						<a href="<?php echo base_url();?>Welcome_IF/updateStudent" data-toggle ="tooltip" title="Edit Student">
+						<a href="<?php echo base_url();?>Welcome_IF/updateStudent" data-toggle ="tooltip" title="Edit ">
 							<i class="mdi  mdi-border-color text-success mdi-24px" ></i>
 						</a>
-						<a href="" onclick = "return confirm('Are you sure that you want to delete this student?')" data-toggle ="tooltip" title="Delete This Student">
+						<a href="" onclick = "return confirm('Are you sure that you want to delete this student?')" data-toggle ="tooltip" title="Delete ">
 							<i class="mdi mdi-delete text-danger mdi-24px" ></i>
 						</a>
 					</td>

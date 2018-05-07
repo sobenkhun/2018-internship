@@ -12,7 +12,7 @@
                 <th>ID</th>
                 <th>Student Name</th>
                 
-                <th>Action</th>
+                <th class="text-center">Action</th>
             </tr>
         </thead>
         <tbody>
@@ -20,8 +20,8 @@
                 <td>1</td>
                 <td>Bunthean</td>
                 
-                <td>
-                <a href="<?php echo base_url() ?>/supervisor/profile" data-toggle="tooltip" title="View Profile" ><i class="mdi mdi-account text-success" style="font-size: 24px; " ></i></a>
+                <td class="text-center">
+                <a href="<?php echo base_url() ?>/supervisor/profile" data-toggle="tooltip" title="View profile" ><i class="mdi mdi-eye text-info TCMDI"  ></i></a>
 
                 </td>
 
@@ -30,16 +30,16 @@
                 <td>2</td>
                 <td>Prem</td>
                 
-                <td>
-                <a href="<?php echo base_url() ?>/supervisor/profile" data-toggle="tooltip" title="View Profile"><i class="mdi mdi-account text-success" style="font-size: 24px;" ></i></a>
+                <td class="text-center">
+                <a href="<?php echo base_url() ?>/supervisor/profile" data-toggle="tooltip" title="View Profile"><i class="mdi mdi-eye text-info TCMDI"></i></a>
                 </td>
             </tr>
             <tr>
                 <td>3</td>
                  <td>Devit</td>
                
-                <td>
-                <a href="<?php echo base_url() ?>/supervisor/profile" data-toggle="tooltip" title="View Profile"><i class="mdi mdi-account text-success" style="font-size: 24px;" ></i></a>
+                <td class="text-center">
+                <a href="<?php echo base_url() ?>/supervisor/profile" data-toggle="tooltip" title="View Profile"><i class="mdi mdi-eye text-info TCMDI"  ></i></a>
                 </td>
             </tr>
         </tbody>

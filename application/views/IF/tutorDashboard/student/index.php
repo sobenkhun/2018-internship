@@ -15,101 +15,106 @@
 			</thead>
 			<tbody>
 				<tr>
-					<td class="text-center">1</td>
+					<td class="text-center">2018023</td>
 					<td class="text-center">Devit Chea</td>
 					<td class="text-center">RCI</td>
 					<td class="text-center">Dara</td>
 					<td class="text-center">Channak</td>
 					<td class="text-center">
+						<a href="<?php echo base_url(); ?>tutorDas/detailStudentDas" )">
+							<i class="mdi mdi-eye text-info TCMDI"  data-toggle="tooltip" title="View " ></i>
+						</a>
 						<a href="<?php echo base_url(); ?>tutorDas/viewWorkLog">
-							<i class="mdi  mdi mdi-book-open-page-variant text-dark TCMDI data-toggle="tooltip" title="View weekly work log "  ></i>
+							<i class="mdi  mdi mdi-book-open-page-variant text-dark TCMDI data-toggle="tooltip" title=" Work-log "  ></i>
                                                       
 						</a>
 						<a href="<?php echo base_url(); ?>tutorDas/CommStuDas">
 							<i class="mdi  mdi-comment text-warning TCMDI"  data-toggle="tooltip" title="Comment"  ></i>
 						</a>
 						
-						<a href="<?php echo base_url(); ?>tutorDas/detailStudentDas">
-							<i class="mdi mdi-eye text-info TCMDI"  data-toggle="tooltip" title="View profile" ></i>
-						</a>
+						
 					</td>
 				</tr>
 				<tr>
-					<td class="text-center">2</td>
+					<td class="text-center">2018024</td>
 					<td class="text-center">Ashton Cox</td>
 					<td class="text-center">PNC solution</td>
 					<td class="text-center">Dara Chan</td>
 					<td class="text-center">Channak Choun</td>
 					<td class="text-center">
+						<a href="<?php echo base_url(); ?>tutorDas/detailStudentDas" )">
+							<i class="mdi mdi-eye text-info TCMDI"  data-toggle="tooltip" title="View " ></i>
+						</a>
 						<a href="<?php echo base_url(); ?>tutorDas/viewWorkLog" >
-							<i class="mdi    mdi mdi-book-open-page-variant text-dark TCMDI data-toggle="tooltip" title="View weekly work log" ></i>
+							<i class="mdi    mdi mdi-book-open-page-variant text-dark TCMDI data-toggle="tooltip" title=" Work-log" ></i>
 						</a>
 						<a href="<?php echo base_url(); ?>tutorDas/tutorDas/CommStuDas" >
 							<i class="mdi  mdi-comment text-warning TCMDI"  data-toggle="tooltip" title="Comment" ></i>
 						</a>
 						
-						<a href="<?php echo base_url(); ?>tutorDas/detailStudentDas" )">
-							<i class="mdi mdi-eye text-info TCMDI"  data-toggle="tooltip" title="View profile" ></i>
-						</a>
+						
 					</td>
 				</tr>
 				<tr>
-					<td class="text-center">3</td>
+					<td class="text-center">2018025</td>
 					<td class="text-center">Ashton Cox</td>
 					<td class="text-center"></td>>PNC solution</td>
 					<td class="text-center">Dara Chan</td>
 					<td class="text-center">Rith Nhel</td>
 					<td class="text-center">
+						<a href="<?php echo base_url(); ?>tutorDas/detailStudentDas" )">
+							<i class="mdi mdi-eye text-info TCMDI"  data-toggle="tooltip" title="View " ></i>
+						</a>
 						<a href="<?php echo base_url(); ?>tutorDas/viewWorkLog">
-							<i class="mdi  mdi mdi-book-open-page-variant text-dark data-toggle="tooltip" title="View weekly work log" style="font-size:24px;"></i>
+							<i class="mdi  mdi mdi-book-open-page-variant text-dark data-toggle="tooltip" title=" Work-log" style="font-size:24px;"></i>
 						</a>
 						<a href="<?php echo base_url(); ?>tutorDas/CommStuDas">
 							<i class="mdi  mdi-comment text-warning TCMDI"  data-toggle="tooltip" title="Comment" ></i>
 						</a>
 						
 
-						<a href="<?php echo base_url(); ?>tutorDas/detailStudentDas" )">
-							<i class="mdi mdi-eye text-info TCMDI"  data-toggle="tooltip" title="View profile" ></i>
-						</a>
+						
 						
 					</td>
 				</tr>
 				<tr>
-					<td class="text-center">4</td>
+					<td class="text-center">2018027</td>
 					<td class="text-center">Devit Chea</td>
 					<td class="text-center">RCI</td>
 					<td class="text-center">Dara</td>
 					<td class="text-center">Channak</td>
 					<td class="text-center">
+						<a href="<?php echo base_url(); ?>tutorDas/detailStudentDas" )">
+							<i class="mdi mdi-eye text-info TCMDI"  data-toggle="tooltip" title="View " ></i>
+						</a>
 						<a href="<?php echo base_url(); ?>tutorDas/viewWorkLog" >
-							<i class="mdi   mdi mdi-book-open-page-variant text-dark TCMDI data-toggle="tooltip" title="View weekly work log" ></i>
+							<i class="mdi   mdi mdi-book-open-page-variant text-dark TCMDI data-toggle="tooltip" title=" Work-log" ></i>
 						</a>
 						<a href="<?php echo base_url(); ?>tutorDas/CommStuDas" >
 							<i class="mdi mdi-comment text-warning TCMDI"  data-toggle="tooltip" title="Comment" ></i>
 						</a>
 						
-						<a href="<?php echo base_url(); ?>tutorDas/detailStudentDas" )">
-							<i class="mdi mdi-eye text-info TCMDI"  data-toggle="tooltip" title="View profile" ></i>
-						</a>
+						
 					</td>
 				</tr>
 				<tr>
-					<td class="text-center">5</td>
+					<td class="text-center">2018029</td>
 					<td class="text-center">Devit Chea</td>
 					<td class="text-center">RCI</td>
 					<td class="text-center">Dara</td>
 					<td class="text-center">Channak</td>
 					<td class="text-center">
+						<a href="<?php echo base_url(); ?>tutorDas/detailStudentDas" )">
+							<i class="mdi mdi-eye text-info TCMDI"  data-toggle="tooltip" title="View " ></i>
+						</a>
 						<a href="<?php echo base_url(); ?>tutorDas/viewWorkLog">
-							<i class="mdi   mdi mdi-book-open-page-variant text-dark TCMDI data-toggle="tooltip" title="View weekly work log" ></i>
+							<i class="mdi   mdi mdi-book-open-page-variant text-dark TCMDI data-toggle="tooltip" title="  Work-log" ></i>
 						</a>
 						<a href="<?php echo base_url(); ?>tutorDas/CommStuDas" >
 							<i class="mdi  mdi-comment text-warning TCMDI"  data-toggle="tooltip" title="Comment" ></i>
 						</a>
 						
-						<a href="<?php echo base_url(); ?>tutorDas/detailStudentDas" )">
-							<i class="mdi mdi-eye text-info TCMDI"  data-toggle="tooltip" title="View profile" ></i>
-						</a>
+						
 					</td>
 				</tr>
 			</tbody>

@@ -24,7 +24,7 @@
 						<td class="text-center">English Training</td>
 						<td class="text-center">
 							<a href="<?php echo base_url();?>tutorDas/tutorDtail">
-								<i class="mdi mdi-eye text-info data-toggle ="tooltip" title="view profile" " style="font-size:24px;"></i>
+								<i class="mdi mdi-eye text-info data-toggle ="tooltip" title="view  " style="font-size:24px;"></i>
 							</a>
 							
 						</td>
@@ -35,7 +35,7 @@
 						<td class="text-center">Web Training</td>
 						<td class="text-center">
 							<a href="<?php echo base_url();?>tutorDas/tutorDtail">
-								<i class="mdi mdi-eye text-info data-toggle ="tooltip" title="view profile" " style="font-size:24px;"></i>
+								<i class="mdi mdi-eye text-info data-toggle ="tooltip" title="view  " style="font-size:24px;"></i>
 							</a>
 							
 						</td>
@@ -46,7 +46,7 @@
 						<td class="text-center">Web Training</td>
 						<td class="text-center">
 							<a href="<?php echo base_url();?>tutorDas/tutorDtail">
-								<i class="mdi mdi-eye text-info data-toggle ="tooltip" title="view profile" style="font-size:24px;"></i>
+								<i class="mdi mdi-eye text-info data-toggle ="tooltip" title="view " style="font-size:24px;"></i>
 							</a>
 							
 						</td>

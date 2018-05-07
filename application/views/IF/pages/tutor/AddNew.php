@@ -1,75 +1,70 @@
 
-<div class="container">
+
+
+<div class="container con-body">
+	<a href="<?php echo base_url(); ?>Welcome_IF/tutor">
+		<button class="btn btn-primary">
+			<i class="mdi mdi-chevron-left mdi-15px text-white"></i>Back
+		</button>
+	</a>
+	<h3 class="text-primary text-center">New Tutor</h3><br>
 	<div class="row">
-		<div class="col-md-2"></div>
-		<div class="col-md-2">
-			<a href="<?php echo base_url(); ?>Welcome_IF/tutor">
-				<button type="button" class="btn btn-primary"><i class="mdi mdi-chevron-left"></i>Back</button>
-			</a>
-		</div>
-		<div class="col-md-2"></div>
-	</div>
-	<div class="row">
-		<div class="col-sm-12">
-			<div class="row">
-				<div class="col-md-3"></div>
-				<div class="col-md-6">
-					<div class="card ">
-						<h5 class="card-header bg-primary text-center">ADD New Tutor</h5>
-						<div class="card-body">
-							<br>
-							<form>
-								<div class="form-group row">
-									<label for="inputEmail3" class="col-md-3 col-form-label">First Name :</label>
-									<div class="col-md-7">
-										<input type="text" class="form-control" id="inputEmail3" placeholder="First Name">
-									</div>
-								</div>
-								<div class="form-group row">
-									<label for="inputEmail3" class="col-md-3 col-form-label">Last Name :</label>
-									<div class="col-md-7">
-										<input type="text" class="form-control" id="inputEmail3" placeholder="Last Name">
-									</div>
-								</div>
-								<div class="form-group row">
-									<label for="inputEmail3" class="col-md-3 col-form-label">Position :</label>
-									<div class="col-md-7">
-										<input type="text" class="form-control" id="inputEmail3" placeholder="Job position">
-									</div>
-								</div>
-								<div class="form-group row">
-									<label for="inputEmail3" class="col-md-3 col-form-label">School Email :</label>
-									<div class="col-md-7">
-										<input type="email" class="form-control" id="inputEmail3" placeholder="School Email">
-									</div>
-								</div>
-								<div class="form-group row">
-									<label for="inputEmail3" class="col-md-3 col-form-label">Phone :</label>
-									<div class="col-md-6">
-										<input type="text" class="form-control" id="inputEmail3" placeholder="Phone Number">
-									</div>
-								</div>
-								<div class="form-group row">
-									<label for="inputEmail3" class="col-md-3 col-form-label">Image Tutor :</label>
-									<div class="col-md-7">
-										<input type="file" id="inputEmail3">
-									</div>
-								</div>
-								
-								<div class="row">
-									<div class="col-md-3"></div>
-									<div class="col-md-6">
-										<a href="listTotur.html"><button class="btn btn-outline-success">Save</button></a>
-										<a href="listTotur.html"><button class="btn btn-outline-danger float-right">Cancel</button></a>
-									</div>
-									<div class="col-md-3"></div>
-								</div>
-							</form>
-						</div><br><br>
+		<div class="border border-form rounded bg-white">	
+			<br>
+			<br>	
+			<form action="" method="">
+				<div class="form-row">
+					<div class="form-group row col-md-6 group-col-stu">
+						<label class="col-sm-4 col-form-label" for="">First Name</label>
+						<div class="col-sm-8">
+							<input type="text" name="" id="" class="form-control" placeholder="...">
+						</div>
 					</div>
+					<div class="form-group row col-md-6 group-col-stu">
+						<label class="col-sm-4 col-form-label" for="">Last Name</label>
+						<div class="col-sm-8">
+							<input type="text" name="" id="" class="form-control" placeholder="...">
+						</div>
+					</div>
+					<div class="form-group row col-md-6 group-col-stu">
+						<label class="col-sm-4 col-form-label" for="">Position</label>
+						<div class="col-sm-8">
+							<input type="text" name="" id="" class="form-control" placeholder="...">
+						</div>
+					</div>
+					<div class="form-group row col-md-6 group-col-stu">
+						<label class="col-sm-4 col-form-label" for="">School Email</label>
+						<div class="col-sm-8">
+							<input type="text" name="" id="" class="form-control" placeholder="...">
+						</div>
+					</div>
+					<div class="form-group row col-md-6 group-col-stu">
+						<label class="col-sm-4 col-form-label" for="">Phone number</label>
+						<div class="col-sm-8">
+							<input type="text" name="" id="" class="form-control" placeholder="...">
+						</div>
+					</div>
+					<div class="form-group row col-md-6 group-col-stu">
+						<label class="col-sm-4 col-form-label" for="">Image Tutor</label>
+						<div class="col-sm-8">
+							<input type="file" name="" id="" class="form-control" placeholder="...">
+						</div>
+					</div><br><br><br>
+					<div class="col-md-4"></div>
+					<div class="col-md-2 text-center">
+						<button class="btn btn-outline-success" type="submit" name="btn-submit">Submit</button>
+					</div>
+					<div class="col-md-2 text-center">
+						<button class="btn btn-outline-danger pull-right" type="reset" name="btn-cancel">Cancel</button>
+						<br>
+						<br>
+					</div>
+
+					<div class="col-md-4"></div>
+
+
 				</div>
-				<div class="col-md-3"></div>
-			</div>
-		</div>
+			</form>
+		</div> 
 	</div>
 </div>

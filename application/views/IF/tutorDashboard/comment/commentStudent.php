@@ -20,33 +20,46 @@
 			<table id="example" class="table table-striped table-bordered tTabla">
 				<thead class="text-center">
 					<tr>
-						<th>Date</th>
-						<th>Student</th>
-						<th>Action</th>
-						
-						
+						<th>Date</th>	
+						<th>Comment</th>
+						<th>Validate</th>
 					</tr>
 				</thead>
 				<tbody>
 					<tr>
-						<td class="text-center">1</td>
-						<td>1 may 2018</td>
+						<td class="text-center">1 may 2018</td>
 						<td class="text-center"> Devit is always let in meeting...</td>
+						<td class="text-center">
+							<i class="mdi  mdi-close-box mdi-24px text-danger"></i>
+							
+						</td>
 					</tr>
 					<tr>
-						<td class="text-center">1</td>
-						<td>14 may 2018</td>
+						
+						<td class="text-center">14 may 2018</td>
 						<td class="text-center"> Devit should buy a clock for...</td>
+						<td class="text-center">
+							<i class="mdi  mdi-close-box mdi-24px text-danger"></i>
+							
+						</td>
 					</tr>
 					<tr>
-						<td class="text-center">1</td>
-						<td>22 may 2018</td>
+						
+						<td class="text-center">22 may 2018</td>
 						<td class="text-center"> Devit is has always good at...</td>
+						<td class="text-center">
+							<i class="mdi  mdi-close-box mdi-24px text-danger"></i>
+							
+						</td>
 					</tr>
 					<tr>
-						<td class="text-center">1</td>
-						<td>1 may 2018</td>
+						
+						<td class="text-center">1 may 2018</td>
 						<td class="text-center"> Devit is geting better and...</td>
+						<td class="text-center">
+							<i class="mdi  mdi-close-box mdi-24px text-danger"></i>
+							
+						</td>
 					</tr>
 					
 				</tbody>
@@ -56,7 +69,9 @@
 	</div>
 	<div class="row">
 		<div class="col-md-12">
-			<button class="btn btn-primary tBtn"><i class="mdi mdi-plus-box "></i>Add comment</button>
+			<a href="<?php echo base_url();?>tutorDas/addCommStuDas">
+				<button class="btn btn-primary tBtn"><i class="mdi mdi-plus-box "></i>Add comment</button>
+			</a>
 		</div>
 	</div>
 

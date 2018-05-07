@@ -1,6 +1,6 @@
 <!-- body -->
 <div class="container con-body">
-	<h3 class="text-primary text-center"><strong>Student List</strong></h3>
+	<h3 class="text-primary text-center"><strong>Students List</strong></h3>
 	<div class="row"><br><br>
 		<table id="example" class="table table-striped table-bordered" style="width:100%">
 			<thead class="text-center">
@@ -22,16 +22,15 @@
 					<td>Channak</td>
 					<td class="text-center">
 						<a href="#">
-							<i class="mdi  mdi-checkbox-marked-outline text-success" style="font-size:24px;" ></i>
+							<i class="mdi  mdi mdi-book-open-page-variant text-dark TCMDI data-toggle="tooltip" title="View weekly work log "  ></i>
+                                                      
 						</a>
 						<a href="<?php echo base_url(); ?>tutorDas/listCommStuDas">
-							<i class="mdi  mdi-comment text-primary" style="font-size:24px;" data-toggle="tooltip" title="Comment"  ></i>
+							<i class="mdi  mdi-comment text-warning TCMDI"  data-toggle="tooltip" title="Comment"  ></i>
 						</a>
-						<!-- <a href="<?php echo base_url(); ?>tutorDas/listCommStuDas"> -->
-							<!-- <i class="mdi   mdi-file-document text-warning" style="font-size:24px;" data-toggle="tooltip" title="" ></i> -->
-						<!-- </a> -->
+						
 						<a href="<?php echo base_url(); ?>tutorDas/detailStudentDas" )">
-							<i class="mdi mdi-eye text-info" style="font-size:24px;" data-toggle="tooltip" title="View Detail" ></i>
+							<i class="mdi mdi-eye text-primary TCMDI"  data-toggle="tooltip" title="View profile" ></i>
 						</a>
 					</td>
 				</tr>
@@ -42,17 +41,15 @@
 					<td>Dara Chan</td>
 					<td>Channak Choun</td>
 					<td class="text-center">
-						<a href="#" onclick = "return confirm('Do you want to View detail information this Student?')">
-							<i class="mdi   mdi-checkbox-blank-outline text-success" style="font-size:24px;"></i>
+						<a href="#" >
+							<i class="mdi    mdi mdi-book-open-page-variant text-dark TCMDI data-toggle="tooltip" title="View weekly work log" ></i>
 						</a>
-						<a href="<?php echo base_url(); ?>tutorDas/listCommStuDas" onclick = "return confirm('Do you want to edit information in this Student?')">
-							<i class="mdi  mdi-comment text-primary" style="font-size:24px;" data-toggle="tooltip" title="Comment" ></i>
+						<a href="<?php echo base_url(); ?>tutorDas/listCommStuDas" >
+							<i class="mdi  mdi-comment text-warning TCMDI"  data-toggle="tooltip" title="Comment" ></i>
 						</a>
-						<!-- <a href="#"> -->
-							<!-- <i class="mdi   mdi-file-document text-warning" style="font-size:24px;" data-toggle="tooltip" title="" ></i> -->
-						<!-- </a> -->
+						
 						<a href="<?php echo base_url(); ?>tutorDas/detailStudentDas" )">
-							<i class="mdi mdi-eye text-info" style="font-size:24px;" data-toggle="tooltip" title="View Detail" ></i>
+							<i class="mdi mdi-eye text-primary TCMDI"  data-toggle="tooltip" title="View profile" ></i>
 						</a>
 					</td>
 				</tr>
@@ -63,18 +60,16 @@
 					<td>Dara Chan</td>
 					<td>Rith Nhel</td>
 					<td class="text-center">
-						<a href="#" onclick = "return confirm('Do you want to View detail information this Student?')">
-							<i class="mdi mdi-pencil-box-outline text-success" style="font-size:24px;"></i>
+						<a href="#">
+							<i class="mdi  mdi mdi-book-open-page-variant text-dark data-toggle="tooltip" title="View weekly work log" style="font-size:24px;"></i>
 						</a>
-						<a href="<?php echo base_url(); ?>tutorDas/listCommStuDas" onclick = "return confirm('Do you want to edit information in this Student?')">
-							<i class="mdi  mdi-comment text-primary" style="font-size:24px;" data-toggle="tooltip" title="Comment" ></i>
+						<a href="<?php echo base_url(); ?>tutorDas/listCommStuDas">
+							<i class="mdi  mdi-comment text-warning TCMDI"  data-toggle="tooltip" title="Comment" ></i>
 						</a>
-						<!-- <a href="<?php echo base_url(); ?>tutorDas/CommStuDas"> -->
-							<!-- <i class="mdi   mdi-file-document text-warning" style="font-size:24px;" data-toggle="tooltip" title="" ></i> -->
-						<!-- </a> -->
+						
 
 						<a href="<?php echo base_url(); ?>tutorDas/detailStudentDas" )">
-							<i class="mdi mdi-eye text-info" style="font-size:24px;" data-toggle="tooltip" title="View Detail" ></i>
+							<i class="mdi mdi-eye text-primary TCMDI"  data-toggle="tooltip" title="View profile" ></i>
 						</a>
 						
 					</td>
@@ -86,17 +81,15 @@
 					<td>Dara</td>
 					<td>Channak</td>
 					<td class="text-center">
-						<a href="#" onclick = "return confirm('Do you want to View detail information this Student?')">
-							<i class="mdi  mdi-pencil-box-outline text-success" style="font-size:24px;"></i>
+						<a href="#" >
+							<i class="mdi   mdi mdi-book-open-page-variant text-dark TCMDI data-toggle="tooltip" title="View weekly work log" ></i>
 						</a>
-						<a href="<?php echo base_url(); ?>tutorDas/listCommStuDas" onclick = "return confirm('Do you want to edit information in this Student?')">
-							<i class="mdi mdi-comment text-primary" style="font-size:24px;" data-toggle="tooltip" title="Comment" ></i>
+						<a href="<?php echo base_url(); ?>tutorDas/listCommStuDas" >
+							<i class="mdi mdi-comment text-warning TCMDI"  data-toggle="tooltip" title="Comment" ></i>
 						</a>
-						<!-- <a href="<?php echo base_url(); ?>tutorDas/listCommStuDas"> -->
-							<!-- <i class="mdi   mdi-file-document text-warning" style="font-size:24px;" data-toggle="tooltip" title="" ></i> -->
-						<!-- </a> -->
+						
 						<a href="<?php echo base_url(); ?>tutorDas/detailStudentDas" )">
-							<i class="mdi mdi-eye text-info" style="font-size:24px;" data-toggle="tooltip" title="View Detail" ></i>
+							<i class="mdi mdi-eye text-primary TCMDI"  data-toggle="tooltip" title="View profile" ></i>
 						</a>
 					</td>
 				</tr>
@@ -107,17 +100,15 @@
 					<td>Dara</td>
 					<td>Channak</td>
 					<td class="text-center">
-						<a href="#" onclick = "return confirm('Do you want to View detail information this Student?')">
-							<i class="mdi  mdi-pencil-box-outline text-success" style="font-size:24px;"></i>
+						<a href="#">
+							<i class="mdi   mdi mdi-book-open-page-variant text-dark TCMDI data-toggle="tooltip" title="View weekly work log" ></i>
 						</a>
-						<a href="<?php echo base_url(); ?>tutorDas/listCommStuDas" onclick = "return confirm('Do you want to edit information in this Student?')">
-							<i class="mdi  mdi-comment text-primary" style="font-size:24px;" data-toggle="tooltip" title="Comment" ></i>
+						<a href="<?php echo base_url(); ?>tutorDas/listCommStuDas" >
+							<i class="mdi  mdi-comment text-warning TCMDI"  data-toggle="tooltip" title="Comment" ></i>
 						</a>
-						<!-- <a href="<?php echo base_url(); ?>tutorDas/listCommStuDas"> -->
-							<!-- <i class="mdi   mdi-file-document text-warning" style="font-size:24px;" data-toggle="tooltip" title="" ></i> -->
-						<!-- </a> -->
+						
 						<a href="<?php echo base_url(); ?>tutorDas/detailStudentDas" )">
-							<i class="mdi mdi-eye text-info" style="font-size:24px;" data-toggle="tooltip" title="View Detail" ></i>
+							<i class="mdi mdi-eye text-primary TCMDI"  data-toggle="tooltip" title="View profile" ></i>
 						</a>
 					</td>
 				</tr>

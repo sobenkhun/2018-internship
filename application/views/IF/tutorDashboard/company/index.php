@@ -24,7 +24,7 @@
 						<td><a href="https://www.khmerdev.com/en/" target="_blank">KhmerDev</a></td>
 						<td>Phnom Penh</td>
 						<td>
-							<a href="<?php echo base_url();?>tutorDas/barChartDas"><span class="mdi mdi-chart-donut mdi-24px text-success"></span></a>
+							
 							<a href="<?php echo base_url();?>tutorDas/cDetailDas">
 								<span class="mdi mdi-eye mdi-24px text-success"></span>
 							</a>
@@ -36,7 +36,7 @@
 						<td>CodinGate</td>
 						<td>Phnom Penh</td>
 						<td>
-							<a href="<?php echo base_url();?>tutorDas/barChartDas"><span class="mdi mdi-chart-donut mdi-24px text-success"></span></a>
+							
 							<a href="<?php echo base_url();?>tutorDas/cDetailDas"><span class="mdi mdi-eye mdi-24px text-success"></span></a>
 
 						</td>
@@ -46,7 +46,7 @@
 						<td>Web Essentails</td>
 						<td>Phnom Penh</td>
 						<td>
-							<a href="<?php echo base_url();?>tutorDas/barChartDas"><span class="mdi mdi-chart-donut mdi-24px text-success"></span></a>
+							
 							<a href="<?php echo base_url();?>tutorDas/cDetailDas"><span class="mdi mdi-eye mdi-24px text-success"></span></a>
 							
 						</td>
@@ -56,7 +56,7 @@
 						<td>Virtual Company</td>
 						<td>Phnom Penh</td>
 						<td>
-							<a href="<?php echo base_url();?>tutorDas/barChartDas"><span class="mdi mdi-chart-donut mdi-24px text-success"></span></a>
+							
 							<a href="<?php echo base_url();?>tutorDas/cDetailDas"><span class="mdi mdi-eye mdi-24px text-success"></span></a>
 							
 						</td>

@@ -64,10 +64,6 @@ form .addStudent{
 .stMenu .logo {
 	width:150px;
 } 
-.navStudent:hover {
-	box-shadow: -3px -1px 4px 1px rgb(129, 209, 245);
-	background-color: #b9e2f9;
-} 
 /*=========== student menu =============*/
 /* home page of studnet*/
 .homeStu{	background: #7dbcf9; }

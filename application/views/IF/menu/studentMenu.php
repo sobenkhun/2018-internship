@@ -1,5 +1,5 @@
 <nav class=" navbar navbar-expand-lg navbar-light color fixed-top">
-  <a class="navbar-brand navStudent" href="<?php echo base_url();?>cStudent/index">
+  <a class="navbar-brand" href="<?php echo base_url();?>cStudent/index">
     <img stMenu" src="<?php echo base_url();?>assets/images/logoL.png" alt="Logo" style="width:150px;">
   </a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -7,24 +7,24 @@
   </button>
   <div class=" collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
-      <li class="nav-item active  navStudent">
+      <li class="nav-item active ">
         <a class="nav-link" href="<?php echo base_url();?>cStudent/worklog">
           <b class="colorTextMenu">  Work-log</b>
         </a>
       </li>
-      <li class="nav-item active navStudent">
+      <li class="nav-item active">
         <a class="nav-link" href="<?php echo base_url();?>cStudent/comment">
           <b class="colorTextMenu">  Comment</b>
         </a>
       </li>
-      <li class="nav-item active  navStudent">
+      <li class="nav-item active ">
         <a class="nav-link" href="<?php echo base_url();?>cStudent/calendar">
           <b class="colorTextMenu">Calendar</b>
         </a>
       </li>
     </ul>
     <ul class="navbar-nav">
-      <li class="nav-item navStudent">
+      <li class="nav-item">
         <div class="dropdown">
           <div class="dropdown-menu ">
             <div class="dropdown-body">
@@ -48,7 +48,7 @@
           </div>
         </div>
       </li>
-      <li class="nav-item navStudent">
+      <li class="nav-item">
         <div class="dropdown">
           <a href="#" class="nav-link active"  data-toggle="dropdown" aria-expanded="false">
             <i  style="font-size: 20px; margin-right: 20px;" class="mdi mdi-bell" data-toggle="tooltip" title="Notification"> </i>   
@@ -76,15 +76,15 @@
         </div>
       </li>
           
-      <li class="nav-item  navStudent">
-        <a class="nav-link" href="#" data-toggle="modal" data-target="#myProfile">       
+      <li class="nav-item ">
+        <a class="nav-link" href="#" data-toggle="modal" data-target="#studentProfile">       
           <b class="colorTextMenu">  
             <span> Username </span>
             <i style="font-size: 20px;" class="mdi mdi-account-circle" data-toggle="tooltip" title="Username"></i> 
           </b>
        </a>
       </li>
-      <li class="nav-item navStudent">
+      <li class="nav-item">
         <a class="nav-link" href="<?php echo base_url();?>Welcome_IF">
           <b class="colorTextMenu"> 
             <span> Logout </span> 
@@ -97,7 +97,7 @@
   
 </nav><br><br><br><br><br>
 <!-- The Modal -->
-<div class="modal fade" id="myProfile">
+<div class="modal fade" id="studentProfile">
   <div class="modal-dialog">
     <div class="modal-content">
       <!-- Modal Header -->

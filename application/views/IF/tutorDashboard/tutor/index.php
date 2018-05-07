@@ -11,10 +11,10 @@
 			<table id="example" class="table table-striped table-bordered bg-white" style="width:100%">
 				<thead>
 					<tr>
-						<th>ID</th>
-						<th>Tutor Name</th>
-						<th>Position</th>
-						<th>Action</th>
+						<th class="text-center">ID</th>
+						<th class="text-center">Tutor Name</th>
+						<th class="text-center">Position</th>
+						<th class="text-center">Action</th>
 					</tr>
 				</thead>
 				<tbody>

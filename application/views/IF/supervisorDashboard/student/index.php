@@ -1,38 +1,12 @@
 
 <link rel="stylesheet" href="https://cdn.datatables.net/1.10.16/css/dataTables.bootstrap4.min.css">
-<!-- <style>
-    .mdi:hover:after {
-    content: "Questionnair";
-
-    display: inline;
-    font-size: 0.71em !important;
-    color: grey;
-    /*position: absolute;*/
-    transition-delay: 2s;
-    top: -16px;
-    right: -16px;
-    width: 40px;
-    /*background: lightblue;*/
-}
-</style> -->
-<div class="container">
-  <div class="row">
-    <div class="col-md-4">
-      <a href="<?php echo base_url(); ?>supervisor/index" >
-        <button class="btn btn-primary"><i class="mdi mdi-chevron-left"></i>Back</button>
-      </a>
-    </div>
-    <div class="col-md-4"></div>
-    
-  </div>
-</div>
 <div class="container">
     <div class="row">
         <div class="col-md-4"></div>
         <div class="col-md-4">
             <h2 class="text-center text-primary">Students List</h2>
         </div>
-        <table id="studentList" class="table table-bordered" style="width:100%">
+        <table id="studentList" class="table table-bordered bg-white" style="width:100%">
         <thead>
             <tr>
                 <th>ID</th>
@@ -47,7 +21,8 @@
                 <td>Bunthean</td>
                 
                 <td>
-                <a href="<?php echo base_url() ?>/supervisor/viewProfile" data-toggle="tooltip" title="View Profile" ><i class="mdi mdi-account text-success" style="font-size: 24px; " ></i></a>
+                <a href="<?php echo base_url() ?>/supervisor/profile" data-toggle="tooltip" title="View Profile" ><i class="mdi mdi-account text-success" style="font-size: 24px; " ></i></a>
+
                 </td>
 
             </tr>
@@ -56,7 +31,7 @@
                 <td>Prem</td>
                 
                 <td>
-                <a href="<?php echo base_url() ?>/supervisor/viewProfile" data-toggle="tooltip" title="View Profile"><i class="mdi mdi-account text-success" style="font-size: 24px;" ></i></a>
+                <a href="<?php echo base_url() ?>/supervisor/profile" data-toggle="tooltip" title="View Profile"><i class="mdi mdi-account text-success" style="font-size: 24px;" ></i></a>
                 </td>
             </tr>
             <tr>
@@ -64,7 +39,7 @@
                  <td>Devit</td>
                
                 <td>
-                <a href="<?php echo base_url() ?>/supervisor/viewProfile" data-toggle="tooltip" title="View Profile"><i class="mdi mdi-account text-success" style="font-size: 24px;" ></i></a>
+                <a href="<?php echo base_url() ?>/supervisor/profile" data-toggle="tooltip" title="View Profile"><i class="mdi mdi-account text-success" style="font-size: 24px;" ></i></a>
                 </td>
             </tr>
         </tbody>

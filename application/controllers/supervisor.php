@@ -36,6 +36,13 @@ class supervisor extends CI_Controller {
 		$this->load->view('IF/supervisorDashboard/student/questionnairStudentList.php');
 		$this->load->view('IF/template/footer.php');
 	}
+	function profile()
+	{
+		$this->load->view('IF/template/header.php');
+		$this->load->view('IF/menu/supervisorMenu.php');
+		$this->load->view('IF/supervisorDashboard/student/studentProfile.php');
+		$this->load->view('IF/template/footer.php');
+	}
 	function calendar()
 	{
 		$this->load->view('IF/template/header.php');

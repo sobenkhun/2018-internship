@@ -123,6 +123,17 @@ $langCode= (isset($langCode)) ? $langCode :  "en";
       </div>
       <div class="modal-body">
        <div class="form-group row">
+        <label for="example-datetime-local-input" class="col-2 col-form-label">Name</label>
+        <div class="col-10">
+           <select class="form-control" id="exampleSelect1">
+           <option>Chea Devith </option>
+           <option>Ban Touch</option>
+           <option>Mann Prem</option>
+           <option>Mov Bunthean</option>
+           <option>Khun Soben</option>
+         </select>
+        </div>
+      </div><div class="form-group row">
         <label for="example-datetime-local-input" class="col-2 col-form-label">Date</label>
         <div class="col-10">
           <input class="form-control" type="date" value="2011-08-19T13:45:00" id="example-datetime-local-input">
@@ -172,6 +183,60 @@ $langCode= (isset($langCode)) ? $langCode :  "en";
   </div>
 </div>
 </div>
+</div>
+<!-- Start Profile -->
+<div class="modal fade" id="myProfile">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <!-- Modal Header -->
+      <div class="modal-header">
+        <div class="col-md-4"></div>
+        <div class="col-md-4 text-center">
+          <img src="<?php echo base_url();?>assets/images/studentimage/studentpiture.jpg" alt="" style="width: 100px;"><br>
+          <h5 class="modal-title">Penh SOK</h5>
+        </div>
+        <div class="col-md-4 text-right">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+        </div>
+      </div>
+
+      <!-- Modal body -->
+      <div class="modal-body">
+        <table> 
+          <tr>
+            <td><label for="">Sex</label></td>
+            <td><b class="text-dark">: Female</b></td>
+          </tr>
+          <tr>
+            <td> <label for="">DepartMent</label></td>
+            <td><b class="text-dark">:  ERO Team</b></td>
+          </tr>
+          <tr>
+            <td> <label for="">Phone</label></td>
+            <td>
+              <b class="text-dark">:   081477282 </b>
+            </td>
+          </tr>
+          <tr>
+            <td></td>
+            <td><b class="text-dark">:   0713581071</b></td>
+          </tr>
+          <tr>
+            <td><label for="">Personal Email</label></td>
+            <td><b class="text-dark">:   first.last@gmail.com</b></td>
+          </tr>
+          <tr>
+            <td><label for="">School Email</label></td>
+            <td><b class="text-dark">:   first.last@student.passerellesnumeriques.org</b></td>
+          </tr>
+        </table>
+      </div>
+      <!-- Modal footer -->
+      <div class="modal-footer">
+        <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
 </div>
 <!-- End of modal creation -->
 <script type="text/javascript">

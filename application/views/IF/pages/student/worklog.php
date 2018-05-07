@@ -70,7 +70,7 @@
 				<tr>
 					<td colspan="7">
 						<a href="#" class="text-primary" style="font-size: 24px;">
-							<i class="mdi mdi-plus-box" data-toggle="tooltip" title="Add row in table"></i>
+							<i class="mdi mdi-plus-box" data-toggle="tooltip" title="Add New Sheet"></i>
 						</a>
 					</td>
 				</tr>
@@ -91,7 +91,7 @@
 			</li>
 			<li class="nav-item" style="font-size: 25px; margin-top: 0.1em;" data-toggle="modal" data-target="#addWeek">
 				<a href="#" class="text-white" >
-					<i class="mdi mdi-plus-box" data-toggle="tooltip" title="Add week"></i>
+					<i class="mdi mdi-plus-box" data-toggle="tooltip" title="Add New Sheet"></i>
 				</a>
 			</li>
 			<li class="nav-item text-right" style="margin: 0.1em 0em 0em 68em;">

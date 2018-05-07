@@ -3,7 +3,7 @@
  	<div class="row">
  		<!-- <div class="col-md-2"></div> -->
  		<div class="col-md-2">
- 			<a href="<?php echo base_url();?>tutorDas/listCommStuDas">
+ 			<a href="<?php echo base_url();?>tutorDas/studentDas">
  			    <button type="button" class="btn btn-primary">
  				    <i class="mdi mdi-chevron-left"></i>Back
  			    </button>

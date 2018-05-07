@@ -144,6 +144,13 @@ class Welcome_IF extends CI_Controller {
 		$this->load->view('IF/pages/supervisor/edit.php');
 		$this->load->view('IF/template/footer.php');
 	}
+	public function questionniare()
+	{
+		$this->load->view('IF/template/header.php');
+		$this->load->view('IF/menu/index.php');
+		$this->load->view('IF/pages/supervisor/questionnair.php');
+		$this->load->view('IF/template/footer.php');
+	}
 
 	// student
 	public function student()
@@ -172,6 +179,13 @@ class Welcome_IF extends CI_Controller {
 		$this->load->view('IF/template/header.php');
 		$this->load->view('IF/menu/index.php');
 		$this->load->view('IF/pages/student/addstudent.php');
+		$this->load->view('IF/template/footer.php');
+	}
+	public function worklog()
+	{
+		$this->load->view('IF/template/header.php');
+		$this->load->view('IF/menu/index.php');
+		$this->load->view('IF/pages/student/worklog.php');
 		$this->load->view('IF/template/footer.php');
 	}
 // calenders

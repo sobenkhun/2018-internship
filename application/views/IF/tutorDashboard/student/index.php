@@ -21,15 +21,15 @@
 					<td class="text-center">Dara</td>
 					<td class="text-center">Channak</td>
 					<td class="text-center">
-						<a href="#">
+						<a href="<?php echo base_url(); ?>tutorDas/viewWorkLog">
 							<i class="mdi  mdi mdi-book-open-page-variant text-dark TCMDI data-toggle="tooltip" title="View weekly work log "  ></i>
                                                       
 						</a>
-						<a href="<?php echo base_url(); ?>tutorDas/listCommStuDas">
+						<a href="<?php echo base_url(); ?>tutorDas/CommStuDas">
 							<i class="mdi  mdi-comment text-warning TCMDI"  data-toggle="tooltip" title="Comment"  ></i>
 						</a>
 						
-						<a href="<?php echo base_url(); ?>tutorDas/detailStudentDas" )">
+						<a href="<?php echo base_url(); ?>tutorDas/detailStudentDas">
 							<i class="mdi mdi-eye text-info TCMDI"  data-toggle="tooltip" title="View profile" ></i>
 						</a>
 					</td>
@@ -41,10 +41,10 @@
 					<td class="text-center">Dara Chan</td>
 					<td class="text-center">Channak Choun</td>
 					<td class="text-center">
-						<a href="#" >
+						<a href="<?php echo base_url(); ?>tutorDas/viewWorkLog" >
 							<i class="mdi    mdi mdi-book-open-page-variant text-dark TCMDI data-toggle="tooltip" title="View weekly work log" ></i>
 						</a>
-						<a href="<?php echo base_url(); ?>tutorDas/listCommStuDas" >
+						<a href="<?php echo base_url(); ?>tutorDas/tutorDas/CommStuDas" >
 							<i class="mdi  mdi-comment text-warning TCMDI"  data-toggle="tooltip" title="Comment" ></i>
 						</a>
 						
@@ -60,10 +60,10 @@
 					<td class="text-center">Dara Chan</td>
 					<td class="text-center">Rith Nhel</td>
 					<td class="text-center">
-						<a href="#">
+						<a href="<?php echo base_url(); ?>tutorDas/viewWorkLog">
 							<i class="mdi  mdi mdi-book-open-page-variant text-dark data-toggle="tooltip" title="View weekly work log" style="font-size:24px;"></i>
 						</a>
-						<a href="<?php echo base_url(); ?>tutorDas/listCommStuDas">
+						<a href="<?php echo base_url(); ?>tutorDas/CommStuDas">
 							<i class="mdi  mdi-comment text-warning TCMDI"  data-toggle="tooltip" title="Comment" ></i>
 						</a>
 						
@@ -81,10 +81,10 @@
 					<td class="text-center">Dara</td>
 					<td class="text-center">Channak</td>
 					<td class="text-center">
-						<a href="#" >
+						<a href="<?php echo base_url(); ?>tutorDas/viewWorkLog" >
 							<i class="mdi   mdi mdi-book-open-page-variant text-dark TCMDI data-toggle="tooltip" title="View weekly work log" ></i>
 						</a>
-						<a href="<?php echo base_url(); ?>tutorDas/listCommStuDas" >
+						<a href="<?php echo base_url(); ?>tutorDas/CommStuDas" >
 							<i class="mdi mdi-comment text-warning TCMDI"  data-toggle="tooltip" title="Comment" ></i>
 						</a>
 						
@@ -100,10 +100,10 @@
 					<td class="text-center">Dara</td>
 					<td class="text-center">Channak</td>
 					<td class="text-center">
-						<a href="#">
+						<a href="<?php echo base_url(); ?>tutorDas/viewWorkLog">
 							<i class="mdi   mdi mdi-book-open-page-variant text-dark TCMDI data-toggle="tooltip" title="View weekly work log" ></i>
 						</a>
-						<a href="<?php echo base_url(); ?>tutorDas/listCommStuDas" >
+						<a href="<?php echo base_url(); ?>tutorDas/CommStuDas" >
 							<i class="mdi  mdi-comment text-warning TCMDI"  data-toggle="tooltip" title="Comment" ></i>
 						</a>
 						
@@ -128,9 +128,4 @@
 	$(document).ready(function() {
 		$('#example').DataTable();
 	} );
-</script>
-<script>
-	$(document).ready(function() {
-    $('#example').DataTable();
-} );
 </script>

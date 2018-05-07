@@ -23,9 +23,10 @@
                 
                 <td>
                
-                <a href="<?php echo base_url() ?>/Welcome_IF/viewSupervisor"><i class="mdi mdi-eye mdi-24px text-info" ></i></a>
-                <a href="<?php echo base_url() ?>/Welcome_IF/editSupervisor"><i class="mdi mdi-pencil mdi-24px text-success" ></i></a>
-                <a href="" onclick="return confirm('Are you sur want to delete?')"><i class="mdi mdi-delete mdi-24px text-danger"></i></a>
+               <a href="<?php echo base_url() ?>/Welcome_IF/questionniare"><i class="mdi mdi-book-minus mdi-24px text-dark" data-toggle ="tooltip" title="Open Questionniare"></i></a>
+                <a href="<?php echo base_url() ?>/Welcome_IF/viewSupervisor"><i class="mdi mdi-eye mdi-24px text-info" data-toggle ="tooltip" title="View Supervisor Detail"></i></a>
+                <a href="<?php echo base_url() ?>/Welcome_IF/editSupervisor"><i class="mdi mdi-pencil mdi-24px text-success" data-toggle ="tooltip" title="Edit Supervisor info"></i></a>
+                <a href="" onclick="return confirm('Are you sur want to delete?')"><i class="mdi mdi-delete mdi-24px text-danger" data-toggle ="tooltip" title="Delete This Supervisor"></i></a>
                 </td>
 
             </tr>
@@ -35,11 +36,10 @@
                 <td>Rady Y</td>
                 
                 <td>
-                    <a href="<?php echo base_url() ?>/Welcome_IF/viewSupervisor"><i class="mdi mdi-book-open-page-variant mdi-24px text-dark"></i></a>
-               <a href="<?php echo base_url() ?>/Welcome_IF/viewSupervisor"><i class="mdi mdi-book-open-page-variant mdi-24px text-dark"></i></a>
-                <a href="<?php echo base_url() ?>/Welcome_IF/viewSupervisor"><i class="mdi mdi-eye mdi-24px text-info"></i></a>
-                <a href="<?php echo base_url() ?>/Welcome_IF/editSupervisor"><i class="mdi mdi-pencil mdi-24px text-success"></i></a>
-                <a href="" onclick="return confirm('Are you sur want to delete?')"><i class="mdi mdi-delete mdi-24px text-danger"></i></a>
+                   <a href="<?php echo base_url() ?>/Welcome_IF/questionniare"><i class="mdi mdi-book-minus mdi-24px text-dark" data-toggle ="tooltip" title="Open Questionniare"></i></a>
+                <a href="<?php echo base_url() ?>/Welcome_IF/viewSupervisor"><i class="mdi mdi-eye mdi-24px text-info" data-toggle ="tooltip" title="View Supervisor Detail"></i></a>
+                <a href="<?php echo base_url() ?>/Welcome_IF/editSupervisor"><i class="mdi mdi-pencil mdi-24px text-success" data-toggle ="tooltip" title="Edit Supervisor info"></i></a>
+                <a href="" onclick="return confirm('Are you sur want to delete?')"><i class="mdi mdi-delete mdi-24px text-danger" data-toggle ="tooltip" title="Delete This Supervisor"></i></a>
                 </td>
             </tr>
             <tr>
@@ -48,10 +48,10 @@
                  <td>Rady</td>
                
                 <td>
-                <a href="<?php echo base_url() ?>/Welcome_IF/viewSupervisor"><i class="mdi mdi-book-open-page-variant mdi-24px text-dark"></i></a>
-                <a href="<?php echo base_url() ?>/Welcome_IF/viewSupervisor"><i class="mdi mdi-eye mdi-24px text-info"></i></a>
-                <a href="<?php echo base_url() ?>/Welcome_IF/editSupervisor"><i class="mdi mdi-pencil mdi-24px text-success"></i></a>
-                <a href="" onclick="return confirm('Are you sur want to delete?')"><i class="mdi mdi-delete mdi-24px text-danger"></i></a>
+                <a href="<?php echo base_url() ?>/Welcome_IF/questionniare"><i class="mdi mdi-book-minus mdi-24px text-dark" data-toggle ="tooltip" title="Open Questionniare"></i></a>
+                <a href="<?php echo base_url() ?>/Welcome_IF/viewSupervisor"><i class="mdi mdi-eye mdi-24px text-info" data-toggle ="tooltip" title="View Supervisor Detail"></i></a>
+                <a href="<?php echo base_url() ?>/Welcome_IF/editSupervisor"><i class="mdi mdi-pencil mdi-24px text-success" data-toggle ="tooltip" title="Edit Supervisor info"></i></a>
+                <a href="" onclick="return confirm('Are you sur want to delete?')"><i class="mdi mdi-delete mdi-24px text-danger" data-toggle ="tooltip" title="Delete This Supervisor"></i></a>
                 </td>
             </tr>
             <tr>
@@ -60,10 +60,10 @@
                 <td>Kea LOHN</td>
                 
                 <td>
-               <a href="<?php echo base_url() ?>/Welcome_IF/viewSupervisor"><i class="mdi mdi-book-open-page-variant mdi-24px text-dark"></i></a>
-                <a href="<?php echo base_url() ?>/Welcome_IF/viewSupervisor"><i class="mdi mdi-eye mdi-24px text-info"></i></a>
-                <a href="<?php echo base_url() ?>/Welcome_IF/editSupervisor"><i class="mdi mdi-pencil mdi-24px text-success"></i></a>
-                <a href="" onclick="return confirm('Are you sur want to delete?')"><i class="mdi mdi-delete mdi-24px text-danger"></i></a>
+               <a href="<?php echo base_url() ?>/Welcome_IF/questionniare"><i class="mdi mdi-book-minus mdi-24px text-dark" data-toggle ="tooltip" title="Open Questionniare"></i></a>
+                <a href="<?php echo base_url() ?>/Welcome_IF/viewSupervisor"><i class="mdi mdi-eye mdi-24px text-info" data-toggle ="tooltip" title="View Supervisor Detail"></i></a>
+                <a href="<?php echo base_url() ?>/Welcome_IF/editSupervisor"><i class="mdi mdi-pencil mdi-24px text-success" data-toggle ="tooltip" title="Edit Supervisor info"></i></a>
+                <a href="" onclick="return confirm('Are you sur want to delete?')"><i class="mdi mdi-delete mdi-24px text-danger" data-toggle ="tooltip" title="Delete This Supervisor"></i></a>
                 </td>
             </tr>
             <tr>
@@ -72,10 +72,10 @@
                 <td>Sopheak</td>
                 
                 <td>
-                <a href="<?php echo base_url() ?>/Welcome_IF/viewSupervisor"><i class="mdi mdi-book-open-page-variant mdi-24px text-dark"></i></a>
-                <a href="<?php echo base_url() ?>/Welcome_IF/viewSupervisor"><i class="mdi mdi-eye mdi-24px text-info"></i></a>
-                <a href="<?php echo base_url() ?>/Welcome_IF/editSupervisor"><i class="mdi mdi-pencil mdi-24px text-success"></i></a>
-                <a href="" onclick="return confirm('Are you sur want to delete?')"><i class="mdi mdi-delete mdi-24px text-danger"></i></a>
+                <a href="<?php echo base_url() ?>/Welcome_IF/questionniare"><i class="mdi mdi-book-minus mdi-24px text-dark" data-toggle ="tooltip" title="Open Questionniare"></i></a>
+                <a href="<?php echo base_url() ?>/Welcome_IF/viewSupervisor"><i class="mdi mdi-eye mdi-24px text-info" data-toggle ="tooltip" title="View Supervisor Detail"></i></a>
+                <a href="<?php echo base_url() ?>/Welcome_IF/editSupervisor"><i class="mdi mdi-pencil mdi-24px text-success" data-toggle ="tooltip" title="Edit Supervisor info"></i></a>
+                <a href="" onclick="return confirm('Are you sur want to delete?')"><i class="mdi mdi-delete mdi-24px text-danger" data-toggle ="tooltip" title="Delete This Supervisor"></i></a>
                 </td>
             </tr>
             <tr>
@@ -84,10 +84,10 @@
                 <td>Pisey</td>
                 
                 <td>
-               <a href="<?php echo base_url() ?>/Welcome_IF/viewSupervisor"><i class="mdi mdi-book-open-page-variant mdi-24px text-dark"></i></a>
-                <a href="<?php echo base_url() ?>/Welcome_IF/viewSupervisor"><i class="mdi mdi-eye mdi-24px text-info"></i></a>
-                <a href="<?php echo base_url() ?>/Welcome_IF/editSupervisor"><i class="mdi mdi-pencil mdi-24px text-success"></i></a>
-                <a href="" onclick="return confirm('Are you sur want to delete?')"><i class="mdi mdi-delete mdi-24px text-danger"></i></a>
+               <a href="<?php echo base_url() ?>/Welcome_IF/questionniare"><i class="mdi mdi-book-minus mdi-24px text-dark" data-toggle ="tooltip" title="Open Questionniare"></i></a>
+                <a href="<?php echo base_url() ?>/Welcome_IF/viewSupervisor"><i class="mdi mdi-eye mdi-24px text-info" data-toggle ="tooltip" title="View Supervisor Detail"></i></a>
+                <a href="<?php echo base_url() ?>/Welcome_IF/editSupervisor"><i class="mdi mdi-pencil mdi-24px text-success" data-toggle ="tooltip" title="Edit Supervisor info"></i></a>
+                <a href="" onclick="return confirm('Are you sur want to delete?')"><i class="mdi mdi-delete mdi-24px text-danger" data-toggle ="tooltip" title="Delete This Supervisor"></i></a>
                 </td>
             </tr>
             <tr>
@@ -96,10 +96,10 @@
                 <td>Rith NHEL</td>
                 
                 <td>
-               <a href="<?php echo base_url() ?>/Welcome_IF/viewSupervisor"><i class="mdi mdi-book-open-page-variant mdi-24px text-dark"></i></a>
-                <a href="<?php echo base_url() ?>/Welcome_IF/viewSupervisor"><i class="mdi mdi-eye mdi-24px text-info"></i></a>
-                <a href="<?php echo base_url() ?>/Welcome_IF/editSupervisor"><i class="mdi mdi-pencil mdi-24px text-success"></i></a>
-                <a href="" onclick="return confirm('Are you sur want to delete?')"><i class="mdi mdi-delete mdi-24px text-danger"></i></a>
+               <a href="<?php echo base_url() ?>/Welcome_IF/questionniare"><i class="mdi mdi-book-minus mdi-24px text-dark" data-toggle ="tooltip" title="Open Questionniare"></i></a>
+                <a href="<?php echo base_url() ?>/Welcome_IF/viewSupervisor"><i class="mdi mdi-eye mdi-24px text-info" data-toggle ="tooltip" title="View Supervisor Detail"></i></a>
+                <a href="<?php echo base_url() ?>/Welcome_IF/editSupervisor"><i class="mdi mdi-pencil mdi-24px text-success" data-toggle ="tooltip" title="Edit Supervisor info"></i></a>
+                <a href="" onclick="return confirm('Are you sur want to delete?')"><i class="mdi mdi-delete mdi-24px text-danger" data-toggle ="tooltip" title="Delete This Supervisor"></i></a>
                 </td>
             </tr>
             <tr>
@@ -108,10 +108,10 @@
                  <td>Chanak CHON</td>
                
                 <td>
-               <a href="<?php echo base_url() ?>/Welcome_IF/viewSupervisor"><i class="mdi mdi-book-open-page-variant mdi-24px text-dark"></i></a>
-                <a href="<?php echo base_url() ?>/Welcome_IF/viewSupervisor"><i class="mdi mdi-eye mdi-24px text-info"></i></a>
-                <a href="<?php echo base_url() ?>/Welcome_IF/editSupervisor"><i class="mdi mdi-pencil mdi-24px text-success"></i></a>
-                <a href="" onclick="return confirm('Are you sur want to delete?')"><i class="mdi mdi-delete mdi-24px text-danger"></i></a>
+               <a href="<?php echo base_url() ?>/Welcome_IF/questionniare"><i class="mdi mdi-book-minus mdi-24px text-dark" data-toggle ="tooltip" title="Open Questionniare"></i></a>
+                <a href="<?php echo base_url() ?>/Welcome_IF/viewSupervisor"><i class="mdi mdi-eye mdi-24px text-info" data-toggle ="tooltip" title="View Supervisor Detail"></i></a>
+                <a href="<?php echo base_url() ?>/Welcome_IF/editSupervisor"><i class="mdi mdi-pencil mdi-24px text-success" data-toggle ="tooltip" title="Edit Supervisor info"></i></a>
+                <a href="" onclick="return confirm('Are you sur want to delete?')"><i class="mdi mdi-delete mdi-24px text-danger" data-toggle ="tooltip" title="Delete This Supervisor"></i></a>
                 </td>
             </tr>
             <tr>
@@ -120,10 +120,10 @@
                 <td>Rady Y</td>
                 
                 <td>
-               <a href="<?php echo base_url() ?>/Welcome_IF/viewSupervisor"><i class="mdi mdi-book-open-page-variant mdi-24px text-dark"></i></a>
-                <a href="<?php echo base_url() ?>/Welcome_IF/viewSupervisor"><i class="mdi mdi-eye mdi-24px text-info"></i></a>
-                <a href="<?php echo base_url() ?>/Welcome_IF/editSupervisor"><i class="mdi mdi-pencil mdi-24px text-success"></i></a>
-                <a href="" onclick="return confirm('Are you sur want to delete?')"><i class="mdi mdi-delete mdi-24px text-danger"></i></a>
+              <a href="<?php echo base_url() ?>/Welcome_IF/questionniare"><i class="mdi mdi-book-minus mdi-24px text-dark" data-toggle ="tooltip" title="Open Questionniare"></i></a>
+                <a href="<?php echo base_url() ?>/Welcome_IF/viewSupervisor"><i class="mdi mdi-eye mdi-24px text-info" data-toggle ="tooltip" title="View Supervisor Detail"></i></a>
+                <a href="<?php echo base_url() ?>/Welcome_IF/editSupervisor"><i class="mdi mdi-pencil mdi-24px text-success" data-toggle ="tooltip" title="Edit Supervisor info"></i></a>
+                <a href="" onclick="return confirm('Are you sur want to delete?')"><i class="mdi mdi-delete mdi-24px text-danger" data-toggle ="tooltip" title="Delete This Supervisor"></i></a>
                 </td>
             </tr>
         </tbody>

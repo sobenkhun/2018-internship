@@ -55,11 +55,7 @@ class Connection extends CI_Controller {
 	 */
 	public function logout()
 	{
-<<<<<<< HEAD
-		//this is for logout
-		//this is for logout
-=======
->>>>>>> fea66b67e351193461ba3d5680d5b5308d33f2eb
+
 		log_message('debug', 'Logout current user and redirect to the home page');
 		$this->session->sess_destroy();
 		redirect('welcome');

@@ -1,0 +1,135 @@
+id="theme">.cognito form { font-size: 16px; }
+            .cognito .c-forms-form { background-color: rgba(255,255,255,1);}
+            .cognito .c-forms-form .c-dropdown select{padding-right:26px;}
+            .cognito.c-ie .c-forms-form .c-dropdown select{padding-right:6px;}
+            .cognito-background { background-image: ; background-size: cover; background-attachment:fixed; background-repeat: repeat; background-color: rgba(204,204,204,1); }
+            .cognito .c-forms-form .c-forms-heading {background-color:rgba(0, 0, 0, 0);}
+            .cognito .c-forms-form .c-forms-form-title h2 { font-family: 'Open Sans Condensed',Helvetica,sans-serif; font-size: 1.5em; color:#000000; line-height:1.15em; } 
+            .cognito .c-forms-form .c-forms-description{color:#000000;font-family:Arial,Helvetica,sans-serif;font-size:0.8125em;}
+            .cognito .c-forms-form .dropdown-menu > li > a {font-family:Arial,Helvetica,sans-serif;font-size:100%;}
+            .cognito .c-forms-form .c-helptext{font-family:Arial,Helvetica,sans-serif;color:#000000;font-size:calc(0.8125em * .9);}
+            .cognito .c-forms-form h1, .cognito .c-forms-form h2,.cognito .c-forms-form h3, .cognito .c-forms-form h4, .cognito .c-forms-form h5, .cognito .c-forms-form h6{font-family: 'Open Sans Condensed',Helvetica,sans-serif;color:#000000;line-height:1.2em;}
+            .cognito .c-forms-form h1,.cognito .c-forms-form h2,.cognito .c-forms-form h3{font-size: 1.25em;}
+            .cognito .c-forms-form h4{font-size: calc(1.25em * .9);}
+            .cognito .c-forms-form h5{font-size: calc(1.25em * .9 * .9);}
+            .cognito .c-forms-form h6{font-size: calc(1.25em * .9 * .9 * .9);}
+            .cognito .c-forms-form .c-html h1{font-size: calc(1.25em / 0.813);}
+            .cognito .c-forms-form .c-html h2{font-size: calc(1.25em * .9 / 0.813);}
+            .cognito .c-forms-form .c-html h3{font-size: calc(1.25em * .9 * .9 / 0.813);}
+            .cognito .c-forms-form .c-html h4{font-size: calc(1.25em * .9 * .9 * .9 / 0.813);}
+            .cognito .c-forms-form .c-html h5{font-size: calc(1.25em * .9 * .9 * .9 * .9 / 0.813);}
+            .cognito .c-forms-form .c-html h6{font-size: calc(1.25em * .9 * .9 * .9 * .9 * .9 / 0.813);}
+            .cognito .c-forms-form .c-html a,.cognito .c-forms-form .c-forms-confirmation-message a{font-size:calc(0.875em / 0.813);}
+            .cognito .c-forms-form .c-label{ font-family: 'Open Sans Condensed',Helvetica,sans-serif; font-size: 0.875em; color:#000000;line-height:1.3em; }
+            .cognito .c-forms-form .c-editor-date-icon,.cognito .c-forms-form .c-editor-time-icon, .cognito .c-forms-form .c-remove-item, .cognito .c-forms-form .c-save-resume-close{color:#000000;}
+            .cognito .c-forms-form .c-remove-item{ color:#D85427; font-size:0.8125em;}
+            .cognito .c-forms-form .c-signature-present .c-jsignature + .c-signature-glyph:after{ color:#D85427;}
+            .cognito .c-forms-form #c-save-resume-email-link{font-size:100%;}
+            .cognito .c-forms-form .c-email-sent-message{font-family:Arial,Helvetica,sans-serif;font-size:0.8125em;}
+            .cognito .c-forms-form .c-table-section:not(.c-responsive) select, .cognito.c-med .c-forms-form .c-table-section.c-responsive select, .cognito.c-lrg .c-forms-form .c-table-section.c-responsive select
+            {font-size:1em}
+            .cognito .c-forms-form .c-table-section:not(.c-responsive)>*:not(.c-table-header)>*>*,
+            .cognito.c-med .c-forms-form .c-table-section.c-responsive>*:not(.c-table-header)>*>*,
+            .cognito.c-lrg .c-forms-form .c-table-section.c-responsive>*:not(.c-table-header)>*>*
+            {font-size:0.8125em;}
+            .cognito .c-forms-form .c-table-section:not(.c-responsive)>*>*>* .c-editor,
+            .cognito.c-med .c-forms-form .c-table-section.c-responsive>*>*>* .c-editor,
+            .cognito.c-lrg .c-forms-form .c-table-section.c-responsive>*>*>* .c-editor
+            {font-size:1em}
+            .cognito .c-forms-form .c-repeating-section-item { margin-left: calc(2em * 0.813 - 8px); }
+            .cognito.c-sml .c-forms-form .c-table.c-table-section.c-responsive:not(.c-readonly) .c-repeating-section-group > .c-repeating-section-item{padding-left: calc(2em * 0.813 - 8px)}
+            .cognito.c-sml .c-forms-form .c-table.c-table-section.c-responsive:not(.c-readonly) .c-repeating-section-group>.c-repeating-section-item .c-repeating-section-item-title{margin-left: calc(-2em * 0.813 + 8px)}
+            .cognito .c-table-section:not(.c-responsive)+.c-validation, .cognito.c-med .c-table-section.c-responsive+.c-validation, .cognito.c-lrg .c-table-section.c-responsive+.c-validation
+            {margin-left: calc(2em / 0.813)}
+            .cognito .c-forms-form .c-table-section:not(.c-responsive)~.c-repeating-section-add,
+            .cognito.c-med .c-forms-form .c-table-section.c-responsive~.c-repeating-section-add,
+            .cognito.c-lrg .c-forms-form .c-table-section.c-responsive~.c-repeating-section-add{font-size:0.8125em}
+            .cognito :not(.c-responsive).c-table-section ~ .c-repeating-section-add .c-add-item, .cognito.c-med .c-table-section.c-responsive ~ .c-repeating-section-add .c-add-item, .cognito.c-lrg .c-table-section.c-responsive ~ .c-repeating-section-add .c-add-item
+            {font-size:calc(0.875em / 0.813)}
+            .cognito .c-forms-form .c-table-section:not(.c-readonly):not(.c-responsive) .c-repeating-section-group .c-repeating-section-item [class^=c-calculation-],
+            .cognito.c-med .c-forms-form .c-table-section.c-responsive:not(.c-readonly) .c-repeating-section-group .c-repeating-section-item [class^=c-calculation-],
+            .cognito.c-lrg .c-forms-form .c-table-section.c-responsive:not(.c-readonly) .c-repeating-section-group .c-repeating-section-item [class^=c-calculation-] {
+            background-color: rgba(0,0,0,0.04);
+            }
+            .cognito .c-forms-form .c-table-section:not(.c-responsive).c-readonly>.c-repeating-section-group.c-table-body>.c-table-row.c-repeating-section-item:nth-child(odd),
+            .cognito.c-med .c-forms-form .c-table-section.c-responsive.c-readonly>.c-repeating-section-group.c-table-body>.c-table-row.c-repeating-section-item:nth-child(odd),
+            .cognito.c-lrg .c-forms-form .c-table-section.c-responsive.c-readonly>.c-repeating-section-group.c-table-body>.c-table-row.c-repeating-section-item:nth-child(odd)
+            {background-color: rgba(0,0,0,0.04);}
+            .cognito .c-forms-form .c-table-section:not(.c-responsive).c-readonly>.c-repeating-section-group.c-table-body>.c-table-row.c-repeating-section-item:last-child>*:not(:first-child),
+            .cognito.c-med .c-forms-form .c-table-section.c-responsive.c-readonly>.c-repeating-section-group.c-table-body>.c-table-row.c-repeating-section-item:last-child>*:not(:first-child),
+            .cognito.c-lrg .c-forms-form .c-table-section.c-responsive.c-readonly>.c-repeating-section-group.c-table-body>.c-table-row.c-repeating-section-item:last-child>*:not(:first-child)
+            {border-bottom:1px solid rgba(0,0,0,0.1);border-radius:0;}
+            .cognito .c-forms-form{ background-color: rgba(255,255,255,1); }
+            .cognito .c-forms-form .c-rating-scale .c-choice-option .c-label{ font-family:Arial,Helvetica,sans-serif; font-size: 0.8125em; color: #000000; }
+            .cognito .c-forms-form .c-editor, .cognito .c-forms-form .c-rating-scale-questions{ font-family:Arial,Helvetica,sans-serif; font-size: 0.8125em; color: #000000; }
+            .cognito .c-forms-form select, .cognito .c-forms-form input[type=text], .cognito .c-forms-form input[type=password], .cognito .c-forms-form textarea { font-family:Arial,Helvetica,sans-serif;}
+            .cognito .c-forms-form input::-webkit-input-placeholder{color: #cccccc;}
+            .cognito .c-forms-form input:-ms-input-placeholder {color: #cccccc;}
+            .cognito .c-forms-form input::-webkit-input-placeholder {color: #cccccc;}
+            .cognito .c-forms-form input:-moz-placeholder {color: #cccccc;}
+            .cognito .c-forms-form input::-moz-placeholder {color: #cccccc;}
+            .cognito .c-forms-form .c-placeholder-text-styled {color: #cccccc;}
+            .cognito .c-forms-form textarea::-webkit-input-placeholder{color: #cccccc;}
+            .cognito .c-forms-form textarea:-ms-input-placeholder {color: #cccccc;}
+            .cognito .c-forms-form textarea::-webkit-input-placeholder {color: #cccccc;}
+            .cognito .c-forms-form textarea:-moz-placeholder {color: #cccccc;}
+            .cognito .c-forms-form textarea::-moz-placeholder {color: #cccccc;}
+            .cognito .c-forms-form a{ color: #D85427;font-family: 'Open Sans Condensed',Helvetica,sans-serif;font-size: 0.875em; }
+            .cognito .c-forms-form .c-fileupload-download a,.cognito .c-forms-form .c-fileupload-delete i{text-decoration:none;color: #000000;}
+            .cognito .c-forms-form button {padding: .5em 1.25em; }
+            .cognito .c-forms-form .c-add-item{padding:.5em;}
+            .cognito .c-forms-form button,.cognito .c-forms-form .c-add-item, .cognito .c-forms-form input[type=button],.cognito .c-forms-form .c-fileupload-dropzone .c-upload-button { background-color: #D85427; border-color: #C24B23; color: #fff; font-family: 'Open Sans Condensed',Helvetica,sans-serif; font-size: 0.875em;	border-radius:4px; }
+            .cognito .c-forms-form .c-fileupload-dropzone .c-upload-button { font-size: inherit;	}
+            .cognito .c-forms-form button:hover, .cognito .c-forms-form input[type=button]:hover,.cognito .c-forms-form .c-add-item:hover, .cognito .c-forms-form .c-fileupload-dropzone .c-upload-button:hover { background-color: #C24B23;}
+            .cognito .c-forms-form [class^="icon-"]:after, .cognito .c-forms-form [class*=" icon-"]:after {color:.c-forms-form;}
+            .cognito .c-forms-form .c-repeating-section-group > div:nth-child(odd){background:rgba(0,0,0,0.04);}
+            .cognito .c-forms-form .c-repeating-section-group > div:last-child{border-bottom-color:rgba(0,0,0,0.04);}
+            .cognito .c-forms-form .c-rating-scale tbody:nth-child(even){background:rgba(0,0,0,0.04);}
+            .cognito .c-forms-form tbody.c-line-item-container{border-bottom-color: rgba(0,0,0,0.25)!important;}
+            .cognito .c-forms-form hr {background-color:rgba(0,0,0,0.697);}
+            .cognito .c-forms-form .c-background-highlight {background:rgba(0,0,0,0.04);}
+            .cognito .c-forms-form .c-text-light {color:rgba(0,0,0,0.697);}
+            .cognito .c-forms-form .c-progress-bar li:before{background:rgba(0,0,0,0.04);border-color:rgba(255,255,255,1);}
+            .cognito .c-forms-form .c-forms-progress li.c-page-selected:before {background-color: #D85427; color: #fff;border-color: #D85427;}
+            .cognito .c-forms-form .c-progress-bar li.c-page-selected:before {background-color: #D85427;border-color: #D85427;color: #fff;}
+            .cognito .c-forms-form .c-progress-bar li.c-page-selected:after{border-top-color:#D85427;}
+            .cognito .c-forms-form .c-save-resume-button{color:#000000;}
+            .cognito .c-forms-form #c-save-resume-dialog{background-color: rgba(255,255,255,1);}
+            .cognito .c-forms-form #c-modal-overlay{background:rgba(0,0,0,1);}
+            .cognito .c-forms-form .c-email-sent-message span{background-color:#D85427;color: #fff;}
+            .cognito .c-forms-form .c-progress-steps li:before{background-color: rgba(0,0,0,0.1);color:#000000;}
+            .cognito .c-forms-form .c-forms-payment table{padding-top:8px;}
+            .cognito .c-forms-form .c-forms-payment-total-amount{font-family:Arial,Helvetica,sans-serif; font-size: 1.219em; color: #000000;}
+            .cognito .c-forms-form .c-footer-terms a {color:#000000;}
+            .cognito .c-forms-form .c-forms-not-available-message,.cognito .c-forms-form .c-page-numbering, .cognito .c-forms-form .c-forms-confirmation-message, .cognito .c-forms-form #c-save-resume-content,.cognito .c-forms-form .c-progress-section, .cognito .c-forms-form .c-forms-payment-order-summary .detail, .cognito .c-forms-form .c-web-paypal-processing { font-family:Arial,Helvetica,sans-serif; font-size: 0.8125em; color: #000000; }
+            .cognito .c-forms-form .c-validation  { font-family:Arial,Helvetica,sans-serif; font-size: 0.8125em; } 
+            .cognito .c-forms-form .c-table-section *.c-error:after  { font-family:Arial,Helvetica,sans-serif; } 
+            .cognito .c-forms-form .c-table-section:not(.c-responsive)>*>*>* .c-validation,
+            .cognito.c-med .c-forms-form .c-table-section.c-responsive>*>*>* .c-validation,
+            .cognito.c-lrg .c-forms-form .c-table-section.c-responsive>*>*>*  .c-validation { font-size:inherit; } 
+            .cognito .c-forms-form .c-forms-heading { text-align: left }
+            .cognito .c-forms-form button {padding: .5em 1.25em;  min-width: 100px;}
+            .cognito .c-forms-form .c-signature .c-editor{color:#333;}
+            .cognito .c-forms-form .c-table-section:not(.c-readonly):not(.c-responsive) .c-repeating-section-group .c-repeating-section-item [class^=c-calculation-], 
+            .cognito.c-med .c-forms-form .c-table-section.c-responsive:not(.c-readonly) .c-repeating-section-group .c-repeating-section-item [class^=c-calculation-], 
+            .cognito.c-lrg .c-forms-form .c-table-section.c-responsive:not(.c-readonly) .c-repeating-section-group .c-repeating-section-item [class^=c-calculation-]
+            {background-color:#efefef;color:#000;}
+            .cognito .c-table-section:not(.c-readonly):not(.c-responsive) .c-repeating-section-group .c-repeating-section-item>* .c-editor .c-content,
+            .cognito.c-med .c-table-section.c-responsive:not(.c-readonly) .c-repeating-section-group .c-repeating-section-item>* .c-editor .c-content,
+            .cognito.c-lrg .c-table-section.c-responsive:not(.c-readonly) .c-repeating-section-group .c-repeating-section-item>* .c-editor .c-content
+            {color:#000}
+            .cognito .c-forms-form .c-table-section:not(.c-readonly):not(.c-responsive) .c-repeating-section-group .c-repeating-section-item .c-text-multiplelines,
+            .cognito.c-med .c-forms-form .c-table-section.c-responsive:not(.c-readonly) .c-repeating-section-group .c-repeating-section-item .c-text-multiplelines,
+            .cognito.c-lrg .c-forms-form .c-table-section.c-responsive:not(.c-readonly) .c-repeating-section-group .c-repeating-section-item .c-text-multiplelines {
+            background-color: #fff;
+            }
+            .cognito .c-forms-form .c-table-section:not(.c-readonly):not(.c-responsive) textarea,
+            .cognito.c-med .c-forms-form .c-table-section.c-responsive:not(.c-readonly) textarea,
+            .cognito.c-lrg .c-forms-form .c-table-section.c-responsive:not(.c-readonly) textarea {
+            background-color: transparent;
+            }
+            .cognito.c-ie .c-forms-form :not(.c-responsive).c-table-section .c-repeating-section-group .c-repeating-section-item > * .c-validation,
+            .cognito.c-ie.c-med .c-forms-form .c-table-section.c-responsive .c-repeating-section-group .c-repeating-section-item > * .c-validation,
+            .cognito.c-ie.c-lrg .c-forms-form .c-table-section.c-responsive .c-repeating-section-group .c-repeating-section-item > * .c-validation
+            {top:calc(1em + 16px)}
+            .cognito.c-payment .c-payment-field{background-color:#fff;}

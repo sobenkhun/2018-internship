@@ -35,7 +35,8 @@
                 <td>Rady Y</td>
                 
                 <td>
-               
+                    <a href="<?php echo base_url() ?>/Welcome_IF/viewSupervisor"><i class="mdi mdi-book-open-page-variant mdi-24px text-dark"></i></a>
+               <a href="<?php echo base_url() ?>/Welcome_IF/viewSupervisor"><i class="mdi mdi-book-open-page-variant mdi-24px text-dark"></i></a>
                 <a href="<?php echo base_url() ?>/Welcome_IF/viewSupervisor"><i class="mdi mdi-eye mdi-24px text-info"></i></a>
                 <a href="<?php echo base_url() ?>/Welcome_IF/editSupervisor"><i class="mdi mdi-pencil mdi-24px text-success"></i></a>
                 <a href="" onclick="return confirm('Are you sur want to delete?')"><i class="mdi mdi-delete mdi-24px text-danger"></i></a>
@@ -47,7 +48,7 @@
                  <td>Rady</td>
                
                 <td>
-               
+                <a href="<?php echo base_url() ?>/Welcome_IF/viewSupervisor"><i class="mdi mdi-book-open-page-variant mdi-24px text-dark"></i></a>
                 <a href="<?php echo base_url() ?>/Welcome_IF/viewSupervisor"><i class="mdi mdi-eye mdi-24px text-info"></i></a>
                 <a href="<?php echo base_url() ?>/Welcome_IF/editSupervisor"><i class="mdi mdi-pencil mdi-24px text-success"></i></a>
                 <a href="" onclick="return confirm('Are you sur want to delete?')"><i class="mdi mdi-delete mdi-24px text-danger"></i></a>
@@ -59,7 +60,7 @@
                 <td>Kea LOHN</td>
                 
                 <td>
-               
+               <a href="<?php echo base_url() ?>/Welcome_IF/viewSupervisor"><i class="mdi mdi-book-open-page-variant mdi-24px text-dark"></i></a>
                 <a href="<?php echo base_url() ?>/Welcome_IF/viewSupervisor"><i class="mdi mdi-eye mdi-24px text-info"></i></a>
                 <a href="<?php echo base_url() ?>/Welcome_IF/editSupervisor"><i class="mdi mdi-pencil mdi-24px text-success"></i></a>
                 <a href="" onclick="return confirm('Are you sur want to delete?')"><i class="mdi mdi-delete mdi-24px text-danger"></i></a>
@@ -71,7 +72,7 @@
                 <td>Sopheak</td>
                 
                 <td>
-               
+                <a href="<?php echo base_url() ?>/Welcome_IF/viewSupervisor"><i class="mdi mdi-book-open-page-variant mdi-24px text-dark"></i></a>
                 <a href="<?php echo base_url() ?>/Welcome_IF/viewSupervisor"><i class="mdi mdi-eye mdi-24px text-info"></i></a>
                 <a href="<?php echo base_url() ?>/Welcome_IF/editSupervisor"><i class="mdi mdi-pencil mdi-24px text-success"></i></a>
                 <a href="" onclick="return confirm('Are you sur want to delete?')"><i class="mdi mdi-delete mdi-24px text-danger"></i></a>
@@ -83,7 +84,7 @@
                 <td>Pisey</td>
                 
                 <td>
-               
+               <a href="<?php echo base_url() ?>/Welcome_IF/viewSupervisor"><i class="mdi mdi-book-open-page-variant mdi-24px text-dark"></i></a>
                 <a href="<?php echo base_url() ?>/Welcome_IF/viewSupervisor"><i class="mdi mdi-eye mdi-24px text-info"></i></a>
                 <a href="<?php echo base_url() ?>/Welcome_IF/editSupervisor"><i class="mdi mdi-pencil mdi-24px text-success"></i></a>
                 <a href="" onclick="return confirm('Are you sur want to delete?')"><i class="mdi mdi-delete mdi-24px text-danger"></i></a>
@@ -95,7 +96,7 @@
                 <td>Rith NHEL</td>
                 
                 <td>
-               
+               <a href="<?php echo base_url() ?>/Welcome_IF/viewSupervisor"><i class="mdi mdi-book-open-page-variant mdi-24px text-dark"></i></a>
                 <a href="<?php echo base_url() ?>/Welcome_IF/viewSupervisor"><i class="mdi mdi-eye mdi-24px text-info"></i></a>
                 <a href="<?php echo base_url() ?>/Welcome_IF/editSupervisor"><i class="mdi mdi-pencil mdi-24px text-success"></i></a>
                 <a href="" onclick="return confirm('Are you sur want to delete?')"><i class="mdi mdi-delete mdi-24px text-danger"></i></a>
@@ -107,7 +108,7 @@
                  <td>Chanak CHON</td>
                
                 <td>
-               
+               <a href="<?php echo base_url() ?>/Welcome_IF/viewSupervisor"><i class="mdi mdi-book-open-page-variant mdi-24px text-dark"></i></a>
                 <a href="<?php echo base_url() ?>/Welcome_IF/viewSupervisor"><i class="mdi mdi-eye mdi-24px text-info"></i></a>
                 <a href="<?php echo base_url() ?>/Welcome_IF/editSupervisor"><i class="mdi mdi-pencil mdi-24px text-success"></i></a>
                 <a href="" onclick="return confirm('Are you sur want to delete?')"><i class="mdi mdi-delete mdi-24px text-danger"></i></a>
@@ -119,7 +120,7 @@
                 <td>Rady Y</td>
                 
                 <td>
-               
+               <a href="<?php echo base_url() ?>/Welcome_IF/viewSupervisor"><i class="mdi mdi-book-open-page-variant mdi-24px text-dark"></i></a>
                 <a href="<?php echo base_url() ?>/Welcome_IF/viewSupervisor"><i class="mdi mdi-eye mdi-24px text-info"></i></a>
                 <a href="<?php echo base_url() ?>/Welcome_IF/editSupervisor"><i class="mdi mdi-pencil mdi-24px text-success"></i></a>
                 <a href="" onclick="return confirm('Are you sur want to delete?')"><i class="mdi mdi-delete mdi-24px text-danger"></i></a>

@@ -19,7 +19,7 @@
 						</div>
 					</div>
 					<div class="form-group row col-md-6 group-col-stu">
-						<label class="col-sm-4 col-form-label" for="">Company address</label>
+						<label class="col-sm-4 col-form-label" for="">Description</label>
 						<div class="col-sm-8">
 							<input type="text" name="" id="" class="form-control" placeholder="...">
 						</div>

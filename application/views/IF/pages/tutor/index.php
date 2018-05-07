@@ -2,7 +2,7 @@
 <div class="container">
 	<div class="row">
 		<div class="col-md-12">
-			<h2 class="text-primary text-center">Tutors list</h2>
+			<h2 class="text-primary text-center">Tutors List</h2>
 		</div>
 	</div>
 	<div class="row">

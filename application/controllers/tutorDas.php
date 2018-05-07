@@ -8,7 +8,7 @@ class tutorDas extends CI_Controller {
 		$this->load->view('IF/menu/tutor.php');
 		$this->load->view('IF/tutorDashboard/index.php');
 		
-		$this->load->view('IF/template/footer.php');
+		// $this->load->view('IF/template/footer.php');
 	}
 	function studentDas()
 	{
@@ -16,7 +16,7 @@ class tutorDas extends CI_Controller {
 		$this->load->view('IF/menu/tutor.php');
 		$this->load->view('IF/tutorDashboard/student/index.php');
 		
-		$this->load->view('IF/template/footer.php');
+		// $this->load->view('IF/template/footer.php');
 	}
 	function companyDas()
 	{
@@ -24,14 +24,21 @@ class tutorDas extends CI_Controller {
 		$this->load->view('IF/menu/tutor.php');
 		$this->load->view('IF/tutorDashboard/company/index.php');
 		
-		$this->load->view('IF/template/footer.php');
+		// $this->load->view('IF/template/footer.php');
 	}
 	function tutorList()
 	{
 		$this->load->view('IF/template/header.php');
 		$this->load->view('IF/menu/tutor.php');
 		$this->load->view('IF/tutorDashboard/tutor/index.php');
-		$this->load->view('IF/template/footer.php');
+		// $this->load->view('IF/template/footer.php');
+	}
+	function tutorDtail()
+	{
+		$this->load->view('IF/template/header.php');
+		$this->load->view('IF/menu/tutor.php');
+		$this->load->view('IF/tutorDashboard/tutor/detail.php');
+		// $this->load->view('IF/template/footer.php');
 	}
 	function barChartDas()
 	{
@@ -39,7 +46,7 @@ class tutorDas extends CI_Controller {
 		$this->load->view('IF/menu/tutor.php');
 		$this->load->view('IF/tutorDashboard/company/barChart.php');
 		
-		$this->load->view('IF/template/footer.php');
+		// $this->load->view('IF/template/footer.php');
 	}
 	function cDetailDas()
 	{
@@ -47,7 +54,7 @@ class tutorDas extends CI_Controller {
 		$this->load->view('IF/menu/tutor.php');
 		$this->load->view('IF/tutorDashboard/company/detail.php');
 		
-		$this->load->view('IF/template/footer.php');
+		// $this->load->view('IF/template/footer.php');
 	}
 
 	function detailStudentDas()
@@ -56,7 +63,7 @@ class tutorDas extends CI_Controller {
 		$this->load->view('IF/menu/tutor.php');
 		$this->load->view('IF/tutorDashboard/student/sDetail.php');
 		
-		$this->load->view('IF/template/footer.php');
+		// $this->load->view('IF/template/footer.php');
 	}
 
 
@@ -66,7 +73,7 @@ class tutorDas extends CI_Controller {
 		$this->load->view('IF/menu/tutor.php');
 		$this->load->view('IF/tutorDashboard/supervisor/index.php');
 		
-		$this->load->view('IF/template/footer.php');
+		// $this->load->view('IF/template/footer.php');
 	}
 	function viewSupervisorDas()
 	{
@@ -74,7 +81,7 @@ class tutorDas extends CI_Controller {
 		$this->load->view('IF/menu/tutor.php');
 		$this->load->view('IF/tutorDashboard/supervisor/detail.php');
 		
-		$this->load->view('IF/template/footer.php');
+		// $this->load->view('IF/template/footer.php');
 	}
 	function listCommStuDas()
 	{
@@ -82,7 +89,7 @@ class tutorDas extends CI_Controller {
 		$this->load->view('IF/menu/tutor.php');
 		$this->load->view('IF/tutorDashboard/comment/index.php');
 		
-		$this->load->view('IF/template/footer.php');
+		// $this->load->view('IF/template/footer.php');
 	}
 
 	function CommStuDas()
@@ -90,8 +97,14 @@ class tutorDas extends CI_Controller {
 		$this->load->view('IF/template/header.php');
 		$this->load->view('IF/menu/tutor.php');
 		$this->load->view('IF/tutorDashboard/comment/commentStudent.php');
-		
-		$this->load->view('IF/template/footer.php');
+		// $this->load->view('IF/template/footer.php');
+	}
+	function addCommStuDas()
+	{
+		$this->load->view('IF/template/header.php');
+		$this->load->view('IF/menu/tutor.php');
+		$this->load->view('IF/tutorDashboard/comment/addComment.php');
+		// $this->load->view('IF/template/footer.php');
 	}
 
 	function calendar()
@@ -109,7 +122,7 @@ class tutorDas extends CI_Controller {
 		$this->load->view('IF/template/header.php');
 		$this->load->view('IF/menu/tutor.php');
 		$this->load->view('IF/tutorDashboard/supervisor/questionnair.php');
-		$this->load->view('IF/template/footer.php');
+		// $this->load->view('IF/template/footer.php');
 		
 		//  
 		

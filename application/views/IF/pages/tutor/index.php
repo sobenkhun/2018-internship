@@ -8,7 +8,7 @@
 	<div class="row">
 		<!-- <div class="col-md-1"></div> -->
 		<div class="col-md-12">
-			<table id="example" class="table table-striped table-bordered bg-white" style="width:100%">
+			<table id="example" class="table table-striped table-bordered bg-white">
 				<thead>
 					<tr>
 						<th>ID</th>
@@ -24,13 +24,13 @@
 						<td>English Training</td>
 						<td>
 							<a href="<?php echo base_url();?>Welcome_IF/detailTutor">
-								<i class="mdi mdi-eye text-info" style="font-size:24px;"></i>
+								<i class="mdi mdi-eye text-info mdi-24px" data-toggle ="tooltip" title="View Company Detail"></i>
 							</a>
 							<a href="<?php echo base_url();?>Welcome_IF/editTutor">
-								<i class="mdi  mdi-pencil  text-success" style="font-size:24px;"></i>
+								<i class="mdi  mdi-pencil  text-success mdi-24px" data-toggle ="tooltip" title="Edit Company Info"></i>
 							</a>
 							<a href="#" onclick="return confirm('Are your sur want to delete this tutor?')">
-								<i class="mdi  mdi-delete text-danger data-toggle ="tooltip" title="Delete this Company" style="font-size:24px;"></i>
+								<i class="mdi  mdi-delete mdi-24px text-danger" data-toggle ="tooltip" title="Delete this Company"></i>
 							</a>
 						</td>
 					</tr>
@@ -40,13 +40,13 @@
 						<td>Web Training</td>
 						<td>
 							<a href="<?php echo base_url();?>Welcome_IF/detailTutor">
-								<i class="mdi mdi-eye text-info" style="font-size:24px;"></i>
+								<i class="mdi mdi-eye text-info mdi-24px" data-toggle ="tooltip" title="View Company Detail"></i>
 							</a>
 							<a href="<?php echo base_url();?>Welcome_IF/editTutor">
-								<i class="mdi  mdi-pencil  text-success" style="font-size:24px;"></i>
+								<i class="mdi  mdi-pencil  text-success mdi-24px" data-toggle ="tooltip" title="Edit Company Info"></i>
 							</a>
 							<a href="#" onclick="return confirm('Are your sur want to delete this tutor?')">
-								<i class="text-danger mdi  mdi-delete  data-toggle ="tooltip" title="Delete this Company" style="font-size:24px;"></i>
+								<i class="mdi  mdi-delete mdi-24px text-danger" data-toggle ="tooltip" title="Delete this Company"></i>
 							</a>
 						</td>
 					</tr>
@@ -56,13 +56,13 @@
 						<td>Web Training</td>
 						<td>
 							<a href="<?php echo base_url();?>Welcome_IF/detailTutor">
-								<i class="mdi mdi-eye text-info" style="font-size:24px;"></i>
+								<i class="mdi mdi-eye text-info mdi-24px" data-toggle ="tooltip" title="View Company Detail"></i>
 							</a>
 							<a href="<?php echo base_url();?>Welcome_IF/editTutor">
-								<i class="mdi  mdi-pencil  text-success" style="font-size:24px;"></i>
+								<i class="mdi  mdi-pencil  text-success mdi-24px" data-toggle ="tooltip" title="Edit Company Info"></i>
 							</a>
 							<a href="#" onclick="return confirm('Are your sur want to delete this tutor?')">
-								<i class="text-danger mdi  mdi-delete  data-toggle ="tooltip" title="Delete this Company" style="font-size:24px;"></i>
+								<i class="mdi  mdi-delete mdi-24px text-danger" data-toggle ="tooltip" title="Delete this Company"></i>
 							</a>
 						</td>
 					</tr>

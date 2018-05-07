@@ -4,25 +4,22 @@
       <link rel="apple-touch-icon" href="https://www.cognitoforms.com/Content/images/apple-icon.png">
       <link rel="alternate" type="application/json+oembed" href="https://services.cognitoforms.com/admin/oembed?url=https%3a%2f%2fwww.cognitoforms.com%2fPasserellesNum%25C3%25A9riques%2fCompaniesFormPNC" title="Companies Form PNC">
       <link rel="stylesheet" href="<?php echo base_url(); ?>/assets/CognitorFormFiles/style1.css">
-
+       <div class="container">
+         <div class="row">
+            <div class="col-md-4">
+               <a href="<?php echo base_url(); ?>supervisor/viewProfile">
+                  <button class="btn btn-primary"><i class="mdi mdi-chevron-left"></i>Back</button>
+               </a>
+            </div>
+            <div class="col-md-4"></div>
+         </div>
+       </div>  
       <div id="c-forms-container" class="cognito c-safari c-lrg container">
          <script src="<?php echo base_url();?>/assets/CognitorFormFiles/88be12b9-8c99-4872-a5dd-446f35bfd50f"></script>
          <link rel="stylesheet" href="<?php echo base_url(); ?>/assets/CognitorFormFiles/style2.css">
          <link href="<?php echo base_url(); ?>/assets/CognitorFormFiles/css" rel="stylesheet" type="text/css">
          <link rel="stylesheet" href="<?php echo base_url(); ?>/assets/CognitorFormFiles/style3.css">
-         <div class="container">
-         	<div class="row">
-         		<!-- <div class="col-md-4">Show comment</div> -->
-         		<div class="col-md-4">
-         			<!-- <h3 class="text-center text-primary c-forms-form-title">Companies Form PNC</h3> -->
-         			<a href="<?php echo base_url(); ?>supervisor/index">
-         				<button class="btn btn-primary"><i class="mdi mdi-chevron-left"></i>Back</button>
-         			</a>
-         		</div>
-         		<div class="col-md-4"></div>
-         		
-         	</div>
-         </div>
+         
          <form>
             <div class="c-forms-form" tabindex="0">
                <div class="c-editor" style="display:none;"><input type="text" class="c-forms-form-style"></div>
@@ -40,6 +37,21 @@
                               <label for="c-0-205">Name of your company </label></div>
                            <div class="c-editor">
                               <input type="text" id="c-0-205" placeholder="Your Company Name" required=""></div>
+                           <div class="c-validation">Name of your company  is required.</div>
+                        </div>
+                        <div class="c-text-singleline c-field c-col-1 c-sml-col-1 c-span-12 c-sml-span-12  c-required">
+                           <div class="c-label  ">
+                              <label for="c-0-205">Choose a student </label></div>
+                           <div class="c-editor">
+                              <!-- <input type="text" id="c-0-205" placeholder="Your Company Name" required=""> -->
+                              <select>
+                                <option value="Student">Student</option>
+                                <option value="Bunthean MOMV">Bunthean MOMV</option>
+                                <option value="Prem MANN">Prem MANN</option>
+                                <option value="Soben KHUN">Soben KHUN</option>
+                                <option value="Toch BAN">Toch BAN</option>
+                              </select>
+                           </div>
                            <div class="c-validation">Name of your company  is required.</div>
                         </div>
                         <div class="c-name c-field c-col-1 c-sml-col-1 c-span-24 c-sml-span-12  c-required">

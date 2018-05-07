@@ -29,17 +29,12 @@
     <div class="col-md-4"></div>
     
   </div>
-</div>
+</div><br>
 
   <div class="container">
     <div class="row">
       <!-- <div class="col-md-2 col-sm-12"></div> -->
       <div class="col-md-12 col-sm-12">
-        <br>
-        <br>
-        <h4 class="text-center">Event</h4>
-        <br>
-        <br>
         <div id='calendar' class="col-centered"></div>
         <div id='datepicker' class="col-centered"></div>
       </div>
@@ -61,11 +56,11 @@
                    <label for="example-datetime-local-input" class="col-2 col-form-label">Student</label>
                    <div class="col-10">
                        <select class="form-control" id="exampleSelect1">
-                         <option>Student 1</option>
-                         <option>Student 2</option>
-                         <option>Student 3</option>
-                         <option>Student 4</option>
-                         <option>Student 5</option>
+                         <option>Bunthean MOV</option>
+                         <option>Prem MANN</option>
+                         <option>Devit CHEA</option>
+                         <option>Toch BAN</option>
+                         <option>Soben KHUN</option>
                        </select>
                     </div>
                   </div>
@@ -78,7 +73,7 @@
                   <div class="form-group row">
                     <label for="example-password-input" class="col-2 col-form-label">Title</label>
                     <div class="col-10">
-                      <input class="form-control" type="text" id="example-password-input" placeholder="Tile on Meeting">
+                      <input class="form-control" type="text" id="example-password-input" placeholder="Title of Meeting">
                     </div>
                   </div>
                   <div class="form-group row">

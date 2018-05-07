@@ -20,6 +20,10 @@
         <b class="colorTextMenu">  Student</b></a>
       </li>
       <li class="nav-item active ">
+        <a class="nav-link" href="<?php echo base_url();?>supervisor/viewProfile">
+        <b class="colorTextMenu"> Questionnaire</b></a>
+      </li>
+      <li class="nav-item active ">
         <a class="nav-link" href="<?php echo base_url();?>supervisor/calendar">
         <b class="colorTextMenu">Calendar</b></a>
       </li>

@@ -1,5 +1,4 @@
-<<<<<<< HEAD
-=======
+
 <!-- body -->
 <div class="row-fluid">
 	<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
@@ -71,7 +70,7 @@
 				<tr>
 					<td colspan="7">
 						<a href="#" class="text-primary" style="font-size: 24px;">
-							<i class="mdi mdi-plus-box" data-toggle="tooltip" title="Add row in table"></i>
+							<i class="mdi mdi-plus-box" data-toggle="tooltip" title="Add New Sheet"></i>
 						</a>
 					</td>
 				</tr>
@@ -92,7 +91,7 @@
 			</li>
 			<li class="nav-item" style="font-size: 25px; margin-top: 0.1em;" data-toggle="modal" data-target="#addWeek">
 				<a href="#" class="text-white" >
-					<i class="mdi mdi-plus-box" data-toggle="tooltip" title="Add week"></i>
+					<i class="mdi mdi-plus-box" data-toggle="tooltip" title="Add New Sheet"></i>
 				</a>
 			</li>
 			<li class="nav-item text-right" style="margin: 0.1em 0em 0em 68em;">
@@ -121,4 +120,4 @@
 	</div>
 </div><br>
 <!-- //body -->
->>>>>>> c748a37e362a147552019c155099c5826825d1b0
+

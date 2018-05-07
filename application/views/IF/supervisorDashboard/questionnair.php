@@ -39,11 +39,10 @@
                               <input type="text" id="c-0-205" placeholder="Your Company Name" required=""></div>
                            <div class="c-validation">Name of your company  is required.</div>
                         </div>
-                        <div class="c-text-singleline c-field c-col-1 c-sml-col-1 c-span-12 c-sml-span-12  c-required">
+                        <!-- <div class="c-text-singleline c-field c-col-1 c-sml-col-1 c-span-12 c-sml-span-12  c-required">
                            <div class="c-label  ">
                               <label for="c-0-205">Choose a student </label></div>
                            <div class="c-editor">
-                              <!-- <input type="text" id="c-0-205" placeholder="Your Company Name" required=""> -->
                               <select>
                                 <option value="Student">Student</option>
                                 <option value="Bunthean MOMV">Bunthean MOMV</option>
@@ -53,7 +52,7 @@
                               </select>
                            </div>
                            <div class="c-validation">Name of your company  is required.</div>
-                        </div>
+                        </div> -->
                         <div class="c-name c-field c-col-1 c-sml-col-1 c-span-24 c-sml-span-12  c-required">
                            <div class="c-label ">
                               <label>Name of the intern </label>

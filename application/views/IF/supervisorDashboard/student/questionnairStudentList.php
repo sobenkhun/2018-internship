@@ -15,24 +15,15 @@
     /*background: lightblue;*/
 }
 </style> -->
-<div class="container">
-  <div class="row">
-    <div class="col-md-4">
-      <a href="<?php echo base_url(); ?>supervisor/index" >
-        <button class="btn btn-primary"><i class="mdi mdi-chevron-left"></i>Back</button>
-      </a>
-    </div>
-    <div class="col-md-4"></div>
-    
-  </div>
-</div>
+
 <div class="container">
     <div class="row">
-        <div class="col-md-4"></div>
-        <div class="col-md-4">
-            <h2 class="text-center text-primary">Students List</h2>
+        <div class="col-md-12">
+            <h2 class="text-center text-primary text-center">Students list for questionnaire</h2>
         </div>
-        <table id="studentList" class="table table-bordered" style="width:100%">
+    </div>
+    <div class="row">
+        <table id="studentList" class="table table-bordered bg-white" style="width:100%">
         <thead>
             <tr>
                 <th>ID</th>
@@ -47,7 +38,7 @@
                 <td>Bunthean</td>
                 
                 <td>
-                <a href="<?php echo base_url() ?>/supervisor/questionnair" data-toggle="tooltip" title="Questionnair" ><i class="mdi mdi-checkbox-marked-outline text-success" style="font-size: 24px; " ></i></a>
+                <a href="<?php echo base_url() ?>/supervisor/questionnair" data-toggle="tooltip" title="Questionnair" ><i class="mdi mdi-book-minus text-success" style="font-size: 24px; " ></i></a>
                 </td>
 
             </tr>
@@ -56,7 +47,7 @@
                 <td>Prem</td>
                 
                 <td>
-                <a href="<?php echo base_url() ?>/supervisor/questionnair" data-toggle="tooltip" title="Questionnair"><i class="mdi mdi-checkbox-blank-outline text-success" style="font-size: 24px;" ></i></a>
+                <a href="<?php echo base_url() ?>/supervisor/questionnair" data-toggle="tooltip" title="Questionnair"><i class="mdi mdi-book-minus text-success" style="font-size: 24px;" ></i></a>
                 </td>
             </tr>
             <tr>
@@ -64,7 +55,7 @@
                  <td>Devit</td>
                
                 <td>
-                <a href="<?php echo base_url() ?>/supervisor/questionnair" data-toggle="tooltip" title="Questionnair"><i class="mdi mdi-pencil-box-outline text-success" style="font-size: 24px;" ></i></a>
+                <a href="<?php echo base_url() ?>/supervisor/questionnair" data-toggle="tooltip" title="Questionnair"><i class="mdi mdi-book-minus text-success" style="font-size: 24px;" ></i></a>
                 </td>
             </tr>
         </tbody>

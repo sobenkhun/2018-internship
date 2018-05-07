@@ -9,20 +9,20 @@
   </button>
 
   <div class=" collapse navbar-collapse" id="navbarSupportedContent" style="font-family: sans-serif;">
-    <ul class="navbar-nav mr-auto">
-      <li class="nav-item active ">
+    <ul class="navbar-nav mr-auto" id="menu">
+      <li class="nav-item">
         <a class="nav-link" href="<?php echo base_url();?>Welcome_IF/company"><b class="colorTextMenu">  Company</b></a>
       </li>
-      <li class="nav-item active">
+      <li class="nav-item">
         <a class="nav-link" href="<?php echo base_url();?>Welcome_IF/tutor"><b class="colorTextMenu">  Tutor</b></a>
       </li>
-      <li class="nav-item active ">
+      <li class="nav-item">
         <a class="nav-link" href="<?php echo base_url();?>Welcome_IF/supervisor"><b class="colorTextMenu">  Supervisor</b></a>
       </li>
       <li class="nav-item active ">
         <a class="nav-link" href="<?php echo base_url();?>Welcome_IF/student"><b class="colorTextMenu">  Student</b></a>
       </li>
-      <li class="nav-item active ">
+      <li class="nav-item">
         <a class="nav-link" href="<?php echo base_url();?>Welcome_IF/calendar"><b class="colorTextMenu">Calendar</i></b></a>
       </li>
     </ul>
@@ -30,7 +30,7 @@
          <li class="nav-item">
           <div class="dropdown">
            <a href="#" class="nav-link active"  data-toggle="dropdown" aria-expanded="false">
-             <i  style="font-size: 20px; margin-right: 20px;" class="mdi mdi-bell" data-toggle="tooltip" title="Notification"> </i>          
+             <i  style=" margin-right: 20px;" class="mdi mdi-24px mdi-bell" data-toggle="tooltip" title="Notification"> </i>          
            </a>
             <div class="dropdown-menu ">
                 <div class="dropdown-body">
@@ -51,14 +51,14 @@
         <a class="nav-link" href="#" data-toggle="modal" data-target="#myProfile">       
           <b class="colorTextMenu">  
             <span> Username </span>
-            <i style="font-size: 20px;" class="mdi mdi-account-circle" data-toggle="tooltip" title="Username"></i> 
+            <span class="mdi mdi-account-circle mdi-24px" data-toggle="tooltip" title="Username"></span> 
           </b>
        </a>
       </li>
          <li class="nav-item">
            <a class="nav-link" href="<?php echo base_url();?>Welcome_IF">
              <b class="colorTextMenu"> 
-               <span> Logout </span> <i style="font-size: 20px;" class="mdi mdi-login" data-toggle="tooltip" title="Logout"></i> 
+               <span> Logout </span> <span class="mdi mdi-login mdi-24px" data-toggle="tooltip" title="Logout"></span> 
              </b>
            </a>
          </li>
@@ -124,4 +124,15 @@
 $(document).ready(function(){
     $('[data-toggle="tooltip"]').tooltip();   
 });
+
+// Add active class to the current button (highlight it)
+var header = document.getElementById("menu");
+var btns = header.getElementsByClassName("nav-item");
+for (var i = 0; i < btns.length; i++) {
+  btns[i].addEventListener("click", function() {
+    var current = document.getElementsByClassName("active");
+    current[0].className = current[0].className.replace(" active", "");
+    this.className += " active";
+  });
+}
 </script>

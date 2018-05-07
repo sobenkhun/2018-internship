@@ -3,8 +3,8 @@
 	<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
 		<h3 class="text-primary text-center"><strong>Weekly work-log report</strong></h3>
 		<br>
-		<table class="table table-bordered table-hover table-responsive table-fixed">
-			<thead class="bg-info text-white text-center">
+		<table class="table table-bordered table-hover table-responsive">
+			<thead class="bg-info text-white text-center table-fixed">
 				<tr>
 					<th>Date & Time</th>
 					<!-- <th>Time</th> -->
@@ -65,6 +65,19 @@
 					<td>
 						<textarea class="form-group" name="" id="" cols="25" rows="4" placeholder="..."></textarea>
 					</td>					
+				</tr>
+				<tr>
+					<td colspan="7">
+						<a href="#" class="text-primary" style="font-size: 24px;">
+							<i class="mdi mdi-plus-box" data-toggle="tooltip" title="Add New Sheet"></i>
+						</a>
+					</td>
+				</tr>
+				<tr>
+					<td colspan="7">
+						<textarea class="form-group" name="" id="" cols="210" rows="4" placeholder="Reflections for this week:"></textarea>
+
+					</td>
 				</tr>
 			</tbody>
 		</table>

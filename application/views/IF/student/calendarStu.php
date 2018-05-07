@@ -33,21 +33,14 @@ $langCode= (isset($langCode)) ? $langCode :  "en";
 </style>
 </head>
 <body>
-  <div class="container"><br>   <br>
+  <div class="container">
     <div class="row">
-      <!-- <div class="col-md-2 col-sm-12"></div> -->
       <div class="col-md-12 col-sm-12">
-      <!-- 
-        <h4 class="text-center">Event</h4>
-        <br>
-        <br> -->
         <div id='calendar' class="col-centered"></div>
         <div id='datepicker' class="col-centered"></div>
       </div>
-      <!-- <div class="col-md-2 col-sm-12"></div> -->
     </div>
   </div>
-    <!-- create modal of order item -->
         <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
             <div class="modal-dialog" role="document">
               <div class="modal-content">
@@ -129,7 +122,7 @@ $langCode= (isset($langCode)) ? $langCode :  "en";
                      center: 'title',
                      right: 'month,agendaWeek,agendaDay'
                  },
-                 defaultDate: '2016-09-12',
+                 defaultDate: '2018-05-7',
                  navLinks: true, // can click day/week names to navigate views
                  selectable: true,
                  selectHelper: true,

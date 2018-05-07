@@ -47,7 +47,7 @@
                 <td>Bunthean</td>
                 
                 <td>
-                <a href="<?php echo base_url() ?>/supervisor/viewProfile" data-toggle="tooltip" title="View Profile" ><i class="mdi mdi-account text-success" style="font-size: 24px; " ></i></a>
+                <a href="<?php echo base_url() ?>/supervisor/questionnair" data-toggle="tooltip" title="Questionnair" ><i class="mdi mdi-checkbox-marked-outline text-success" style="font-size: 24px; " ></i></a>
                 </td>
 
             </tr>
@@ -56,7 +56,7 @@
                 <td>Prem</td>
                 
                 <td>
-                <a href="<?php echo base_url() ?>/supervisor/viewProfile" data-toggle="tooltip" title="View Profile"><i class="mdi mdi-account text-success" style="font-size: 24px;" ></i></a>
+                <a href="<?php echo base_url() ?>/supervisor/questionnair" data-toggle="tooltip" title="Questionnair"><i class="mdi mdi-checkbox-blank-outline text-success" style="font-size: 24px;" ></i></a>
                 </td>
             </tr>
             <tr>
@@ -64,7 +64,7 @@
                  <td>Devit</td>
                
                 <td>
-                <a href="<?php echo base_url() ?>/supervisor/viewProfile" data-toggle="tooltip" title="View Profile"><i class="mdi mdi-account text-success" style="font-size: 24px;" ></i></a>
+                <a href="<?php echo base_url() ?>/supervisor/questionnair" data-toggle="tooltip" title="Questionnair"><i class="mdi mdi-pencil-box-outline text-success" style="font-size: 24px;" ></i></a>
                 </td>
             </tr>
         </tbody>

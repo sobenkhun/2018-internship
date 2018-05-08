@@ -16,9 +16,7 @@
 			/*background-position: center;*/
 			background-repeat: no-repeat;
 			background-size: cover;
-
-<<<<<<< HEAD
-}
+	}
 		div.container {
 			position: absolute;
 			left: 50%;
@@ -91,9 +89,6 @@
 			transition: .5s;
 		}
 
-=======
-
-		}
 		div.container {
 			position: absolute;
 			left: 50%;
@@ -164,8 +159,6 @@
 			color: #fff;
 			transition: .5s;
 		}
-
->>>>>>> 7417e9b86b3349e5f7eac754b33d5ab5fe809da1
 		form.login input[type=checkbox] {
 			width: 16px;
 			height: 16px;

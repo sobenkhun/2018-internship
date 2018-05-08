@@ -84,11 +84,7 @@
           datasets: [
           {
             label: "Population (millions)",
-// <<<<<<< HEAD
             backgroundColor: ["#3e95cd", "#8e5ea2","#3cba9f","#e8c3b9","#c45850","yellow","#00C853","#FFC107"],
-// =======
-//             backgroundColor: ["#3e95cd", "#8e5ea2","#3cba9f","#e8c3b9","#c45850","yellow","#00C853"],
-// >>>>>>> 7417e9b86b3349e5f7eac754b33d5ab5fe809da1
             data: [10,4,8,5,7,0,9,6]
           }
           ]
@@ -98,12 +94,9 @@
           legend: { display: false },
           title: {
             display: true,
-// <<<<<<< HEAD
-            
-// =======
-//             text: 'Number of student from PNC in company over the past years',
-    
-// >>>>>>> 7417e9b86b3349e5f7eac754b33d5ab5fe809da1
+
+             text: 'Number of student from PNC in company over the past years',
+
           }
 
         }

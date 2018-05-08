@@ -3,6 +3,15 @@
 body{
 	font-family:  sans-serif;
 	background-color: #f2edf7;
+	/*background-color: #fff;*/
+}
+.body1{
+	font-family:  sans-serif;
+	background-color: #f2edf7;
+	/*background-color: #fff;*/
+}
+.box-back{
+	color: rgba(255,153,51,0.8);
 }
 b{
 	color: #fff;

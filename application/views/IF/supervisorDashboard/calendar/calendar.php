@@ -1,11 +1,24 @@
+<?php
+defined('BASEPATH') OR exit('No direct script access allowed');
+$title = (isset($title)) ? $title :  "Skeleton";
+$langCode= (isset($langCode)) ? $langCode :  "en";
 
+<<<<<<< HEAD
 
+=======
+?>
+
+  <meta charset="utf-8">
+  <title><?php echo $title; ?></title>
+>>>>>>> 7417e9b86b3349e5f7eac754b33d5ab5fe809da1
   <link rel="shortcut icon" href="<?php echo base_url();?>favicon.ico" type="image/x-icon">
   <link rel="stylesheet" href="<?php echo base_url();?>assets/bootstrap-4.0.0/css/bootstrap.min.css">
   <link href="<?php echo base_url();?>assets/MDI-2.1.19/css/materialdesignicons.min.css" media="all" rel="stylesheet" type="text/css" />
 
   <!-- Custom style //-->
   <link rel="stylesheet" href="<?php echo base_url();?>assets/css/skeleton-1.0.0.css">
+  <!-- Custom style skeleton -->
+  <link rel="stylesheet" href="<?php echo base_url();?>/assets/css/customCss.css">
 
   <script src="<?php echo base_url();?>assets/js/jquery-3.2.1.min.js"></script>
   <script src="<?php echo base_url();?>assets/tether-1.4.3/js/tether.min.js"></script>
@@ -18,24 +31,17 @@
   <script src="<?php echo base_url();?>assets/fullcalendar-3.8.2/fullcalendar.min.js"></script>
   <!--Datepicker widget needs its CSS and JS files to work //-->
   <script src="<?php echo base_url();?>assets/bootstrap-datepicker-1.7.1/js/bootstrap-datepicker.min.js"></script>
-  <style type="text/css">
-</style>
-<div class="container">
-  <div class="row">
-    <div class="col-md-4">
-      <a href="<?php echo base_url(); ?>supervisor/index">
-        <button class="btn btn-primary"><i class="mdi mdi-chevron-left"></i>Back</button>
-      </a>
-    </div>
-    <div class="col-md-4"></div>
-    
-  </div>
-</div><br>
+  
 
   <div class="container">
     <div class="row">
       <!-- <div class="col-md-2 col-sm-12"></div> -->
       <div class="col-md-12 col-sm-12">
+        <br>
+        <br>
+        <h4 class="text-center">Event</h4>
+        <br>
+        <br>
         <div id='calendar' class="col-centered"></div>
         <div id='datepicker' class="col-centered"></div>
       </div>
@@ -54,14 +60,14 @@
                 </div>
                 <div class="modal-body">
                   <div class="form-group row">
-                   <label for="example-datetime-local-input" class="col-2 col-form-label">Student</label>
+                   <label for="example-datetime-local-input" class="col-2 col-form-label">Tutor</label>
                    <div class="col-10">
                        <select class="form-control" id="exampleSelect1">
-                         <option>Bunthean MOV</option>
-                         <option>Prem MANN</option>
-                         <option>Devit CHEA</option>
-                         <option>Toch BAN</option>
-                         <option>Soben KHUN</option>
+                         <option>Tutor 1</option>
+                         <option>Tutor 2</option>
+                         <option>Tutor 3</option>
+                         <option>Tutor 4</option>
+                         <option>Tutor 5</option>
                        </select>
                     </div>
                   </div>
@@ -74,7 +80,7 @@
                   <div class="form-group row">
                     <label for="example-password-input" class="col-2 col-form-label">Title</label>
                     <div class="col-10">
-                      <input class="form-control" type="text" id="example-password-input" placeholder="Title of Meeting">
+                      <input class="form-control" type="text" value="Meeting about student student name" id="example-password-input">
                     </div>
                   </div>
                   <div class="form-group row">
@@ -93,12 +99,6 @@
                     <label for="example-color-input" class="col-2 col-form-label">Color</label>
                     <div class="col-10">
                       <input class="form-control" type="color" value="#563d7c" id="example-color-input">
-                    </div>
-                  </div>
-                  <div class="form-group row">
-                    <label for="example-color-input" class="col-2 col-form-label">Invite</label>
-                    <div class="col-10">
-                      <input class="form-control" type="text">
                     </div>
                   </div>
 

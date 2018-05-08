@@ -3,10 +3,14 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 $title = (isset($title)) ? $title :  "Skeleton";
 $langCode= (isset($langCode)) ? $langCode :  "en";
 
+<<<<<<< HEAD
+
+=======
 ?>
 
   <meta charset="utf-8">
   <title><?php echo $title; ?></title>
+>>>>>>> 7417e9b86b3349e5f7eac754b33d5ab5fe809da1
   <link rel="shortcut icon" href="<?php echo base_url();?>favicon.ico" type="image/x-icon">
   <link rel="stylesheet" href="<?php echo base_url();?>assets/bootstrap-4.0.0/css/bootstrap.min.css">
   <link href="<?php echo base_url();?>assets/MDI-2.1.19/css/materialdesignicons.min.css" media="all" rel="stylesheet" type="text/css" />

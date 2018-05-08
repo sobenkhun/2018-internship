@@ -41,7 +41,138 @@ $langCode= (isset($langCode)) ? $langCode :  "en";
         <div id='calendar' class="col-centered"></div>
         <div id='datepicker' class="col-centered"></div>
       </div>
+<<<<<<< HEAD
+
+  </ul>
+</div>
+</nav>
+<!-- create modal of order item -->
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Plan a meeting</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+       <div class="form-group row">
+        <label for="example-datetime-local-input" class="col-2 col-form-label">Name</label>
+        <div class="col-10">
+           <select class="form-control" id="exampleSelect1">
+           <option>Chea Devith </option>
+           <option>Ban Touch</option>
+           <option>Mann Prem</option>
+           <option>Mov Bunthean</option>
+           <option>Khun Soben</option>
+         </select>
+        </div>
+      </div><div class="form-group row">
+        <label for="example-datetime-local-input" class="col-2 col-form-label">Date</label>
+        <div class="col-10">
+          <input class="form-control" type="date" value="2011-08-19T13:45:00" id="example-datetime-local-input">
+        </div>
+      </div>
+      <div class="form-group row">
+        <label for="example-password-input" class="col-2 col-form-label">Title</label>
+        <div class="col-10">
+          <input class="form-control" type="text" value="Meeting about student student name" id="example-password-input">
+        </div>
+      </div>
+      <div class="form-group row">
+        <label for="example-time-input" class="col-2 col-form-label">From</label>
+        <div class="col-10">
+          <input class="form-control" type="time" value="13:45:00" id="example-time-input">
+        </div>
+      </div>
+      <div class="form-group row">
+        <label for="example-time-input" class="col-2 col-form-label">To</label>
+        <div class="col-10">
+          <input class="form-control" type="time" value="13:45:00" id="example-time-input">
+        </div>
+      </div>
+      <div class="form-group row">
+        <label for="example-color-input" class="col-2 col-form-label">Color</label>
+        <div class="col-10">
+          <input class="form-control" type="color" value="#563d7c" id="example-color-input">
+        </div>
+      </div>
+      <div class="form-group row">
+       <label for="example-datetime-local-input" class="col-2 col-form-label">Invite</label>
+       <div class="col-10">
+         <select class="form-control" id="exampleSelect1">
+           <option>devith.chea@student.passerellesnumerques.org </option>
+           <option>prem.man@student.passerellesnumerques.org </option>
+           <option>bunthean.man@student.passerellesnumerques.org</option>
+           <option>soben.man@student.passerellesnumerques.org</option>
+           <option>prem.man@student.passerellesnumerques.org</option>
+         </select>
+       </div>
+     </div>
+
+   </div>
+   <div class="modal-footer">
+    <button type="reset" class="btn btn-danger" data-dismiss="modal">Cancel</button>
+    <button type="submit" class="btn btn-primary">Save</button>
+  </div>
+</div>
+</div>
+</div>
+<!-- Start Profile -->
+<div class="modal fade" id="myProfile">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <!-- Modal Header -->
+      <div class="modal-header">
+        <div class="col-md-4"></div>
+        <div class="col-md-4 text-center">
+          <img src="<?php echo base_url();?>assets/images/studentimage/studentpiture.jpg" alt="" style="width: 100px;"><br>
+          <h5 class="modal-title">Penh SOK</h5>
+        </div>
+        <div class="col-md-4 text-right">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+        </div>
+      </div>
+
+      <!-- Modal body -->
+      <div class="modal-body">
+        <table> 
+          <tr>
+            <td><label for="">Sex</label></td>
+            <td><b class="text-dark">: Female</b></td>
+          </tr>
+          <tr>
+            <td> <label for="">DepartMent</label></td>
+            <td><b class="text-dark">:  ERO Team</b></td>
+          </tr>
+          <tr>
+            <td> <label for="">Phone</label></td>
+            <td>
+              <b class="text-dark">:   081477282 </b>
+            </td>
+          </tr>
+          <tr>
+            <td></td>
+            <td><b class="text-dark">:   0713581071</b></td>
+          </tr>
+          <tr>
+            <td><label for="">Personal Email</label></td>
+            <td><b class="text-dark">:   first.last@gmail.com</b></td>
+          </tr>
+          <tr>
+            <td><label for="">School Email</label></td>
+            <td><b class="text-dark">:   first.last@student.passerellesnumeriques.org</b></td>
+          </tr>
+        </table>
+      </div>
+      <!-- Modal footer -->
+      <div class="modal-footer">
+        <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+      </div>
+=======
       <!-- <div class="col-md-2 col-sm-12"></div> -->
+>>>>>>> 7417e9b86b3349e5f7eac754b33d5ab5fe809da1
     </div>
   </div>
     <!-- create modal of order item -->

@@ -65,7 +65,7 @@
 		margin: -40px 0 0 2px;
 		color: rgba(0,0,0,0.8);
 	}
-	form.login input[type=email], 
+	form.login input[type=text], 
 	form.login input[type=password] {
 		width: 90%;
 		height: 40px;
@@ -128,15 +128,15 @@
 </head>
 <body>
 	<div class="container">	
-		<form class="login" action="<?php echo base_url();?>Welcome_IF/login" method="post">
+		<form class="login" action="<?php echo base_url();?>Connection/login" method="post">
 			<div class="avatar">
 				<img src="<?php echo base_url();?>assets/images/logo.png" alt="Avatar"/>
 			</div>
 			
-			<input type="email" name="email" placeholder="Email" required>
+			<input type="text" name="login" placeholder="UserName" required>
 			<i class="fa fa-user fa-2x"></i> <br/> <br/>
 
-			<input type="password" name="password" placeholder="Password" required> 
+			<input type="password" name="password" placeholder="Password" required>++ 
 			<i class="fa fa-lock fa-2x"></i> <br> <br>
 
 			<input type="submit" name="submit" value="Login" >
@@ -150,7 +150,6 @@
 			 
 		</form>	
 		<hr>
-		<p class="create">Don't have account ? <a href="#" class="register">REGISTER HERE</a> </p>
 	</div>
 </body>
 </html>

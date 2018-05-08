@@ -257,7 +257,26 @@ class Users_model extends CI_Model {
             }
         }
     }
-
+     /**
+     * Check the provided credentials and load user's profile if they are correct
+     * @param int $id
+     * @return bool TRUE if the user is succesfully authenticated, FALSE otherwise
+     * @author Benjamin BALET <benjamin.balet@gmail.com>
+     */
+    public function checkUserRole($id) {
+        $this->db->from('users');
+        $this->db->where('id', $id);
+        $this->db->where('active = TRUE');
+        $query = $this->db->get();
+        
+         if ($query->num_rows() == 0) {
+             //No match found
+             return FALSE;
+         } else {
+             $row = $query->row();
+            return $row->role;
+         }
+        }
     /**
      * Set a user as active (TRUE) or inactive (FALSE)
      * @param int $id User identifier
@@ -270,6 +289,7 @@ class Users_model extends CI_Model {
         $this->db->where('id', $id);
         return $this->db->update('users');
     }
+
 
     /**
      * Check if a user is active (TRUE) or inactive (FALSE)

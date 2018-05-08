@@ -34,18 +34,44 @@ class Connection extends CI_Controller {
 			$password = $this->input->post('password');
 			if ($this->users_model->checkCredentials($login, $password)) {
 				log_message('debug', 'Received good credentials for user #' . $this->session->userdata('id'));
-				if ($this->session->userdata('last_page') != '') {
-					log_message('debug', 'last_page set. Redirect to ' . $this->session->userdata('last_page'));
-					redirect($this->session->userdata('last_page'));
-				} else {
-					log_message('debug', 'Not last_page set. Redirect to the home page');
-					redirect('welcome');
+				$id = $this->session->userdata('id');
+				if ($this->users_model->checkUserRole($id)){
+					$role = $this->users_model->checkUserRole($id);
+					//goto Home page
+					if ($role == 1) {
+							log_message('debug', 'Not last_page set. Redirect to the home page');
+							redirect('Welcome_IF/home');
+					}
+					// if ($role == 2) {
+					// 		log_message('debug', 'Not last_page set. Redirect to the home page');
+					// 		redirect('tutorDas/index');
+					// }
+					// goto Tutor page
+					if ($role == 2) {
+						if ($this->session->userdata('last_page') != '') {
+							log_message('debug', 'last_page set. Redirect to ' . $this->session->userdata('last_page'));
+							redirect($this->session->userdata('last_page'));
+						} else {
+							log_message('debug', 'Not last_page set. Redirect to the home page');
+							redirect('tutorDas/index');
+						}
+					}
+					if ($role == 8) {
+						if ($this->session->userdata('last_page') != '') {
+							log_message('debug', 'last_page set. Redirect to ' . $this->session->userdata('last_page'));
+							redirect($this->session->userdata('last_page'));
+						} else {
+							log_message('debug', 'Not last_page set. Redirect to the home page');
+							redirect('supervisor/index');
+						}
+					}
 				}
 			} else {
 				log_message('error', 'Invalid credentials for user ' . $this->input->post('login'));
 				$this->session->set_flashdata('msg', 'Invalid credentials');
-				redirect('connection/login');
+				redirect('Welcome_IF');
 			}
+
 		}
 	}
 

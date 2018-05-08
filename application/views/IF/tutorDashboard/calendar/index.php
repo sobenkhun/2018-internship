@@ -13,6 +13,8 @@ $langCode= (isset($langCode)) ? $langCode :  "en";
 
   <!-- Custom style //-->
   <link rel="stylesheet" href="<?php echo base_url();?>assets/css/skeleton-1.0.0.css">
+  <!-- Custom style skeleton -->
+  <link rel="stylesheet" href="<?php echo base_url();?>/assets/css/customCss.css">
 
   <script src="<?php echo base_url();?>assets/js/jquery-3.2.1.min.js"></script>
   <script src="<?php echo base_url();?>assets/tether-1.4.3/js/tether.min.js"></script>

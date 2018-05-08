@@ -1,5 +1,5 @@
 <!-- body -->
-<div class="container">
+<div class="container erohome">
 	<div class="row">
 		<!-- <div class="col-md-2"></div> -->
 		<div class="col-md-2">

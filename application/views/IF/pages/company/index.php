@@ -1,12 +1,14 @@
 
 <div class="container">
-  <div class="row">
-    <div class="col-md-12">
-      <h2 class="text-center text-primary">Companies List</h2>
+  
+  <div class="container  ">
+    <div class="row">
+      <div class="col-md-12">
+        <h2 class="text-center text-primary">Companies List</h2>
+      </div>
     </div>
-  </div>
   <div class="row">
-    <div class="col-md-12">
+    <div class="col-md-12 ">
       <table id="example" class="table table-striped table-bordered bg-white">
        <thead>
          <tr>
@@ -72,6 +74,7 @@
   </table>
 </div>
 
+</div>
 </div>
 </div>
 <br>

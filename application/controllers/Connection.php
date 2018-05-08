@@ -39,14 +39,14 @@ class Connection extends CI_Controller {
 					$role = $this->users_model->checkUserRole($id);
 					//goto Home page
 					if ($role == 1) {
+						// 	if ($this->session->userdata('last_page') != '') {
+						// 	log_message('debug', 'last_page set. Redirect to ' . $this->session->userdata('last_page'));
+						// 	redirect($this->session->userdata('last_page'));
+						// } else {
 							log_message('debug', 'Not last_page set. Redirect to the home page');
 							redirect('Welcome_IF/home');
+						//}
 					}
-					// if ($role == 2) {
-					// 		log_message('debug', 'Not last_page set. Redirect to the home page');
-					// 		redirect('tutorDas/index');
-					// }
-					// goto Tutor page
 					if ($role == 2) {
 						if ($this->session->userdata('last_page') != '') {
 							log_message('debug', 'last_page set. Redirect to ' . $this->session->userdata('last_page'));
@@ -62,7 +62,7 @@ class Connection extends CI_Controller {
 							redirect($this->session->userdata('last_page'));
 						} else {
 							log_message('debug', 'Not last_page set. Redirect to the home page');
-							redirect('supervisor/index');
+							redirect('cS/index');
 						}
 					}
 				}
@@ -84,6 +84,6 @@ class Connection extends CI_Controller {
 
 		log_message('debug', 'Logout current user and redirect to the home page');
 		$this->session->sess_destroy();
-		redirect('welcome');
+		redirect('Connection/login');
 	}
 }

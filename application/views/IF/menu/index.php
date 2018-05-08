@@ -56,7 +56,7 @@
        </a>
       </li>
          <li class="nav-item">
-           <a class="nav-link" href="<?php echo base_url();?>Welcome_IF">
+           <a class="nav-link" href="<?php echo base_url();?>connection/logout">
              <b class="colorTextMenu"> 
                 <span class="mdi mdi-login mdi-24px" data-toggle="tooltip" title="Logout"></span> 
              </b>

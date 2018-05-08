@@ -1,12 +1,10 @@
-
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 $title = (isset($title)) ? $title :  "Skeleton";
 $langCode= (isset($langCode)) ? $langCode :  "en";
 
-?><!DOCTYPE html>
-<html lang="<?php echo $langCode; ?>">
-<head>
+?>
+
   <meta charset="utf-8">
   <title><?php echo $title; ?></title>
   <link rel="shortcut icon" href="<?php echo base_url();?>favicon.ico" type="image/x-icon">
@@ -15,6 +13,8 @@ $langCode= (isset($langCode)) ? $langCode :  "en";
 
   <!-- Custom style //-->
   <link rel="stylesheet" href="<?php echo base_url();?>assets/css/skeleton-1.0.0.css">
+  <!-- Custom style skeleton -->
+  <link rel="stylesheet" href="<?php echo base_url();?>/assets/css/customCss.css">
 
   <script src="<?php echo base_url();?>assets/js/jquery-3.2.1.min.js"></script>
   <script src="<?php echo base_url();?>assets/tether-1.4.3/js/tether.min.js"></script>
@@ -27,21 +27,24 @@ $langCode= (isset($langCode)) ? $langCode :  "en";
   <script src="<?php echo base_url();?>assets/fullcalendar-3.8.2/fullcalendar.min.js"></script>
   <!--Datepicker widget needs its CSS and JS files to work //-->
   <script src="<?php echo base_url();?>assets/bootstrap-datepicker-1.7.1/js/bootstrap-datepicker.min.js"></script>
-  <style type="text/css">
-  body {
-    padding: 0px;
-  }
-</style>
-</head>
-<body>
+  
+
   <div class="container">
     <div class="row">
+      <!-- <div class="col-md-2 col-sm-12"></div> -->
       <div class="col-md-12 col-sm-12">
+        <br>
+        <br>
+        <h4 class="text-center">Event</h4>
+        <br>
+        <br>
         <div id='calendar' class="col-centered"></div>
         <div id='datepicker' class="col-centered"></div>
       </div>
+      <!-- <div class="col-md-2 col-sm-12"></div> -->
     </div>
   </div>
+    <!-- create modal of order item -->
         <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
             <div class="modal-dialog" role="document">
               <div class="modal-content">
@@ -123,7 +126,7 @@ $langCode= (isset($langCode)) ? $langCode :  "en";
                      center: 'title',
                      right: 'month,agendaWeek,agendaDay'
                  },
-                 defaultDate: '2018-05-7',
+                 defaultDate: '2016-09-12',
                  navLinks: true, // can click day/week names to navigate views
                  selectable: true,
                  selectHelper: true,
@@ -172,5 +175,4 @@ $langCode= (isset($langCode)) ? $langCode :  "en";
              });
          });
     </script>
-</body>
-</html>
+

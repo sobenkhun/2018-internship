@@ -27,7 +27,7 @@
 							<i class="mdi  mdi-book-open-page-variant text-dark mdi-24px"></i>
 						</a>
 						<a href="<?php echo base_url();?>Welcome_IF/comment" data-toggle ="tooltip" title="View Comment">
-							<i class="mdi  mdi-comment text-warning mdi-24px"></i>
+							<i class="mdi  mdi-comment mdi-24px box-back" ></i>
 						</a>
 					</td>
 					<td class="text-center">
@@ -54,7 +54,7 @@
 							<i class="mdi  mdi-book-open-page-variant text-dark mdi-24px"></i>
 						</a>
 						<a href="<?php echo base_url();?>Welcome_IF/comment" data-toggle ="tooltip" title="View Comment">
-							<i class="mdi  mdi-comment text-warning mdi-24px"></i>
+							<i class="mdi  mdi-comment mdi-24px box-back"></i>
 						</a>
 					</td>
 					<td class="text-center">
@@ -80,7 +80,7 @@
 							<i class="mdi  mdi-book-open-page-variant text-dark mdi-24px"></i>
 						</a>
 						<a href="<?php echo base_url();?>Welcome_IF/comment" data-toggle ="tooltip" title="View Comment">
-							<i class="mdi  mdi-comment text-warning mdi-24px"></i>
+							<i class="mdi  mdi-comment  mdi-24px box-back"></i>
 						</a>
 					</td>
 					<td class="text-center">
@@ -107,7 +107,7 @@
 							<i class="mdi  mdi-book-open-page-variant text-dark mdi-24px"></i>
 						</a>
 						<a href="<?php echo base_url();?>Welcome_IF/comment" data-toggle ="tooltip" title="View Comment">
-							<i class="mdi  mdi-comment text-warning mdi-24px"></i>
+							<i class="mdi  mdi-comment  mdi-24px box-back"></i>
 						</a>
 					</td>
 					<td class="text-center">
@@ -134,7 +134,7 @@
 							<i class="mdi  mdi-book-open-page-variant text-dark mdi-24px"></i>
 						</a>
 						<a href="<?php echo base_url();?>Welcome_IF/comment" data-toggle ="tooltip" title="View Comment">
-							<i class="mdi  mdi-comment text-warning mdi-24px"></i>
+							<i class="mdi  mdi-comment  mdi-24px box-back"></i>
 						</a>
 					</td>
 					<td class="text-center">

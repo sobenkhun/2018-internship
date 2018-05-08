@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+=======
+
+>>>>>>> 1179fe74590c5593b310e462546740ebfb0780e3
 
 	<!-- jquey -->
 <script src="https://code.jquery.com/jquery-1.12.4.js"></script>

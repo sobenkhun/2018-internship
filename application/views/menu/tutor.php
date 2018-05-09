@@ -4,7 +4,7 @@ $activeLink = (isset($activeLink)) ? $activeLink :  "";?>
 
 <nav class="nav navbar navbar-expand-md fixed-top">
 
-  <a class="navbar-brand" href="<?php echo base_url();?>welcome">
+  <a class="navbar-brand" href="<?php echo base_url();?>tutorDas">
     <img  src="<?php echo base_url();?>assets/images/logoL.png" alt="Logo" style="width:150px;">
   </a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
@@ -14,19 +14,19 @@ $activeLink = (isset($activeLink)) ? $activeLink :  "";?>
   <div class="collapse navbar-collapse" id="navbarsExampleDefault">
     <ul class="navbar-nav mr-auto">
       <li class="nav-item <?php echo ($activeLink=='company'?'active':'');?>">
-        <a class="nav_link nav-link" href="<?php echo base_url();?>Welcome_IF/company">Company</a>
+        <a class="nav_link nav-link" href="<?php echo base_url();?>tutorDas/companyDas">Company</a>
       </li>
       <li class="nav-item <?php echo ($activeLink=='Tutor'?'active':'');?>">
-        <a class="nav_link nav-link" href="<?php echo base_url();?>Welcome_IF/tutor">Tutor</a>
+        <a class="nav_link nav-link" href="<?php echo base_url();?>tutorDas/tutorList">Tutor</a>
       </li>
       <li class="nav-item <?php echo ($activeLink=='Supervisor'?'active':'');?>">
-        <a class="nav_link nav-link" href="<?php echo base_url();?>Welcome_IF/supervisor"></i>Supervisor</a>
+        <a class="nav_link nav-link" href="<?php echo base_url();?>tutorDas/supervisorDas"></i>Supervisor</a>
       </li>
       <li class="nav-item <?php echo ($activeLink=='Student'?'active':'');?>">
-        <a class="nav_link nav-link" href="<?php echo base_url();?>Welcome_IF/student"></i>Student</a>
+        <a class="nav_link nav-link" href="<?php echo base_url();?>tutorDas/studentDas"></i>Student</a>
       </li>
       <li class="nav-item <?php echo ($activeLink=='Calendar'?'active':'');?>">
-        <a class="nav_link nav-link" href="<?php echo base_url();?>Welcome_IF/calendar"></i>Calendar</a>
+        <a class="nav_link nav-link" href="<?php echo base_url();?>tutorDas/calendar"></i>Calendar</a>
       </li>
     </ul>
   </div>

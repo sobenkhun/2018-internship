@@ -14,201 +14,170 @@ class Welcome_IF extends CI_Controller {
 	{
 		$this->load->view('login/login');
 	}
-	// public function login()
-	// {
-	// 	$email = $this->input->post('email');
-	// 	if ($email== "supervisor@gmail.com") {
-	// 		// echo "supervisor"; git testing
-	// 		$this->load->view('IF/template/header.php');
-	// 		$this->load->view('IF/menu/supervisorMenu.php');
-	// 		$this->load->view('IF/supervisorDashboard/index.php');
-	// 		$this->load->view('IF/template/footer.php');
-	// 	}else if ( $email == "tutor@gmail.com"){
-	// 		$this->load->view('IF/template/header.php');
-	// 		$this->load->view('IF/menu/tutor.php');
-	// 		$this->load->view('IF/tutorDashboard/index.php');
-			
-	// 		$this->load->view('IF/template/footer.php');
-	// 	}else if ( $email == "student@gmail.com"){
-	// 		$this->load->view('IF/template/header.php');
-	// 		$this->load->view('IF/menu/studentMenu.php');
-	// 		// $this->load->view('IF/index.php');
-	// 		$this->load->view('IF/student/index.php');
-	// 		$this->load->view('IF/template/footer.php');
-	// 	}else if ( $email == "ero@gmail.com"){
-	// 		$this->load->view('IF/template/header.php');
-	// 		$this->load->view('IF/menu/index.php');
-	// 		$this->load->view('IF/index.php');
-	// 		$this->load->view('IF/template/footer.php');
-	// 	}else {
-	// 	$this->load->view('login/login');
-	// 	}
-
-	// }
 	public function home()
 	{
-		$this->load->view('IF/template/header.php');
-		$this->load->view('IF/menu/index.php');
-		$this->load->view('IF/index.php');
-		$this->load->view('IF/template/footer.php');
+		$this->load->view('template/header.php');
+		$this->load->view('menu/index.php');
+		$this->load->view('index.php');
+		$this->load->view('template/footer.php');
 	}
 
 	// Company Function 
 	public function company()
 	{
-		$this->load->view('IF/template/header.php');
-		$this->load->view('IF/menu/index.php');
-		$this->load->view('IF/pages/company/index.php');
-		$this->load->view('IF/template/footer.php');
+		$this->load->view('templates/header.php');
+		$this->load->view('menu/index.php');
+		$this->load->view('pages/company/index.php');
+		$this->load->view('templates/footer.php');
 	}
 	public function detailCompany()
 	{
-		$this->load->view('IF/template/header.php');
-		$this->load->view('IF/menu/index.php');
-		$this->load->view('IF/pages/company/detail.php');
-		$this->load->view('IF/template/footer.php');
+		$this->load->view('templates/header.php');
+		$this->load->view('menu/index.php');
+		$this->load->view('pages/company/detail.php');
+		$this->load->view('templates/footer.php');
 	}
 	public function editeCompany()
 	{
-		$this->load->view('IF/template/header.php');
-		$this->load->view('IF/menu/index.php');
-		$this->load->view('IF/pages/company/edite.php');
-		$this->load->view('IF/template/footer.php');
+		$this->load->view('templates/header.php');
+		$this->load->view('menu/index.php');
+		$this->load->view('pages/company/edite.php');
+		$this->load->view('templates/footer.php');
 	}
 	public function createCompany()
 	{
-		$this->load->view('IF/template/header.php');
-		$this->load->view('IF/menu/index.php');
-		$this->load->view('IF/pages/company/add.php');
-		$this->load->view('IF/template/footer.php');
+		$this->load->view('templates/header.php');
+		$this->load->view('menu/index.php');
+		$this->load->view('pages/company/add.php');
+		$this->load->view('templates/footer.php');
 	}
 	// End of Company function 
 
 	// Tutor Function
 	public function tutor()
 	{
-		$this->load->view('IF/template/header.php');
-		$this->load->view('IF/menu/index.php');
-		$this->load->view('IF/pages/tutor/index.php');
-		$this->load->view('IF/template/footer.php');
+		$this->load->view('templates/header.php');
+		$this->load->view('menu/index.php');
+		$this->load->view('pages/tutor/index.php');
+		$this->load->view('templates/footer.php');
 	}
 	public function addTutor()
 	{
-		$this->load->view('IF/template/header.php');
-		$this->load->view('IF/menu/index.php');
-		$this->load->view('IF/pages/tutor/addNew.php');
-		$this->load->view('IF/template/footer.php');
+		$this->load->view('templates/header.php');
+		$this->load->view('menu/index.php');
+		$this->load->view('pages/tutor/addNew.php');
+		$this->load->view('templates/footer.php');
 	}
 	public function detailTutor()
 	{
-		$this->load->view('IF/template/header.php');
-		$this->load->view('IF/menu/index.php');
-		$this->load->view('IF/pages/tutor/detailTutor.php');
-		$this->load->view('IF/template/footer.php');
+		$this->load->view('templates/header.php');
+		$this->load->view('menu/index.php');
+		$this->load->view('pages/tutor/detailTutor.php');
+		$this->load->view('templates/footer.php');
 	}
 	public function editTutor()
 	{
-		$this->load->view('IF/template/header.php');
-		$this->load->view('IF/menu/index.php');
-		$this->load->view('IF/pages/tutor/editTutor.php');
-		$this->load->view('IF/template/footer.php');
+		$this->load->view('templates/header.php');
+		$this->load->view('menu/index.php');
+		$this->load->view('pages/tutor/editTutor.php');
+		$this->load->view('templates/footer.php');
 	}
 	// End of tutor function 
 	public function supervisor()
 	{
-		$this->load->view('IF/template/header.php');
-		$this->load->view('IF/menu/index.php');
-		$this->load->view('IF/pages/supervisor/index.php');
-		$this->load->view('IF/template/footer.php');
+		$this->load->view('templates/header.php');
+		$this->load->view('menu/index.php');
+		$this->load->view('pages/supervisor/index.php');
+		$this->load->view('templates/footer.php');
 	}
 
 
 	public function createSupervisor()
 	{
-		$this->load->view('IF/template/header.php');
-		$this->load->view('IF/menu/index.php');
-		$this->load->view('IF/pages/supervisor/createSupervisor.php');
-		$this->load->view('IF/template/footer.php');
+		$this->load->view('templates/header.php');
+		$this->load->view('menu/index.php');
+		$this->load->view('pages/supervisor/createSupervisor.php');
+		$this->load->view('templates/footer.php');
 	}
 	public function viewSupervisor()
 	{
-		$this->load->view('IF/template/header.php');
-		$this->load->view('IF/menu/index.php');
-		$this->load->view('IF/pages/supervisor/view.php');
-		$this->load->view('IF/template/footer.php');
+		$this->load->view('templates/header.php');
+		$this->load->view('menu/index.php');
+		$this->load->view('pages/supervisor/view.php');
+		$this->load->view('templates/footer.php');
 	}
 	public function editSupervisor()
 	{
-		$this->load->view('IF/template/header.php');
-		$this->load->view('IF/menu/index.php');
-		$this->load->view('IF/pages/supervisor/edit.php');
-		$this->load->view('IF/template/footer.php');
+		$this->load->view('templates/header.php');
+		$this->load->view('menu/index.php');
+		$this->load->view('pages/supervisor/edit.php');
+		$this->load->view('templates/footer.php');
 	}
 	public function questionniare()
 	{
-		$this->load->view('IF/template/header.php');
-		$this->load->view('IF/menu/index.php');
-		$this->load->view('IF/pages/supervisor/questionnair.php');
-		$this->load->view('IF/template/footer.php');
+		$this->load->view('templates/header.php');
+		$this->load->view('menu/index.php');
+		$this->load->view('pages/supervisor/questionnair.php');
+		$this->load->view('templates/footer.php');
 	}
 
 	// student
 	public function student()
 	{
-		$this->load->view('IF/template/header.php');
-		$this->load->view('IF/menu/index.php');
-		$this->load->view('IF/pages/student/index.php');
-		$this->load->view('IF/template/footer.php');
+		$this->load->view('templates/header.php');
+		$this->load->view('menu/index.php');
+		$this->load->view('pages/student/index.php');
+		$this->load->view('templates/footer.php');
 	}
 	public function viewStudent()
 	{
-		$this->load->view('IF/template/header.php');
-		$this->load->view('IF/menu/index.php');
-		$this->load->view('IF/pages/student/viewstudent.php');
-		$this->load->view('IF/template/footer.php');
+		$this->load->view('templates/header.php');
+		$this->load->view('menu/index.php');
+		$this->load->view('pages/student/viewstudent.php');
+		$this->load->view('templates/footer.php');
 	}
 	public function updateStudent()
 	{
-		$this->load->view('IF/template/header.php');
-		$this->load->view('IF/menu/index.php');
-		$this->load->view('IF/pages/student/editstudent.php');
-		$this->load->view('IF/template/footer.php');
+		$this->load->view('templates/header.php');
+		$this->load->view('menu/index.php');
+		$this->load->view('pages/student/editstudent.php');
+		$this->load->view('templates/footer.php');
 	}
 	public function addStudent()
 	{
-		$this->load->view('IF/template/header.php');
-		$this->load->view('IF/menu/index.php');
-		$this->load->view('IF/pages/student/addstudent.php');
-		$this->load->view('IF/template/footer.php');
+		$this->load->view('templates/header.php');
+		$this->load->view('menu/index.php');
+		$this->load->view('pages/student/addstudent.php');
+		$this->load->view('templates/footer.php');
 	}
 	public function worklog()
 	{
-		$this->load->view('IF/template/header.php');
-		$this->load->view('IF/menu/index.php');
-		$this->load->view('IF/pages/student/worklog.php');
-		$this->load->view('IF/template/footer.php');
+		$this->load->view('templates/header.php');
+		$this->load->view('menu/index.php');
+		$this->load->view('pages/student/worklog.php');
+		$this->load->view('templates/footer.php');
 	}
 // calenders
 	public function calendar()
 	{
-		 $this->load->view('IF/template/header.php');
-		 $this->load->view('IF/menu/index.php');
-		$this->load->view('IF/pages/calendar/index.php');
-		// $this->load->view('IF/template/footer.php');
+		 $this->load->view('templates/header.php');
+		 $this->load->view('menu/index.php');
+		$this->load->view('pages/calendar/index.php');
+		// $this->load->view('templates/footer.php');
 	}
 	// comment 
 	public function comment()
 	{
-		$this->load->view('IF/template/header.php');
-		$this->load->view('IF/menu/index.php');
-		$this->load->view('IF/pages/student/comment.php');
-		$this->load->view('IF/template/footer.php');
+		$this->load->view('templates/header.php');
+		$this->load->view('menu/index.php');
+		$this->load->view('pages/student/comment.php');
+		$this->load->view('templates/footer.php');
 	}
 	public function addComment()
 	{
-		$this->load->view('IF/template/header.php');
-		$this->load->view('IF/menu/index.php');
-		$this->load->view('IF/pages/student/addComment.php');
-		$this->load->view('IF/template/footer.php');
+		$this->load->view('templates/header.php');
+		$this->load->view('menu/index.php');
+		$this->load->view('pages/student/addComment.php');
+		$this->load->view('templates/footer.php');
 	}
 }

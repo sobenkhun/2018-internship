@@ -25,51 +25,26 @@ class Connection extends CI_Controller {
 			log_message('debug', 'Let\'s display the login form');
 			$data['title'] = 'Login';
 			$data['flashPartialView'] = $this->load->view('templates/flash', $data, TRUE);
-			$this->load->view('templates/header', $data);
+			// $this->load->view('IF/template/header', $data);
 			$this->load->view('login/login', $data);
-			$this->load->view('templates/footer');
+			// $this->load->view('IF/template/footer');
 		} else {
 			$this->load->model('users_model');
 			$login = $this->input->post('login');
 			$password = $this->input->post('password');
 			if ($this->users_model->checkCredentials($login, $password)) {
 				log_message('debug', 'Received good credentials for user #' . $this->session->userdata('id'));
-				$id = $this->session->userdata('id');
-				if ($this->users_model->checkUserRole($id)){
-					$role = $this->users_model->checkUserRole($id);
-					//goto Home page
-					if ($role == 1) {
-						// 	if ($this->session->userdata('last_page') != '') {
-						// 	log_message('debug', 'last_page set. Redirect to ' . $this->session->userdata('last_page'));
-						// 	redirect($this->session->userdata('last_page'));
-						// } else {
-							log_message('debug', 'Not last_page set. Redirect to the home page');
-							redirect('Welcome_IF/home');
-						//}
-					}
-					if ($role == 2) {
-						if ($this->session->userdata('last_page') != '') {
-							log_message('debug', 'last_page set. Redirect to ' . $this->session->userdata('last_page'));
-							redirect($this->session->userdata('last_page'));
-						} else {
-							log_message('debug', 'Not last_page set. Redirect to the home page');
-							redirect('tutorDas/index');
-						}
-					}
-					if ($role == 8) {
-						if ($this->session->userdata('last_page') != '') {
-							log_message('debug', 'last_page set. Redirect to ' . $this->session->userdata('last_page'));
-							redirect($this->session->userdata('last_page'));
-						} else {
-							log_message('debug', 'Not last_page set. Redirect to the home page');
-							redirect('cS/index');
-						}
-					}
-				}
+				// if ($this->session->userdata('last_page') != '') {
+				// 	log_message('debug', 'last_page set. Redirect to ' . $this->session->userdata('last_page'));
+				// 	redirect($this->session->userdata('last_page'));
+				// } else {
+					log_message('debug', 'Not last_page set. Redirect to the home page');
+					redirect('welcome');
+				// }
 			} else {
 				log_message('error', 'Invalid credentials for user ' . $this->input->post('login'));
 				$this->session->set_flashdata('msg', 'Invalid credentials');
-				redirect('Welcome_IF');
+				redirect('Connection/login');
 			}
 
 		}

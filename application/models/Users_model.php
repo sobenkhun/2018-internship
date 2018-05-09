@@ -218,6 +218,7 @@ class Users_model extends CI_Model {
         $newdata = array(
             'login' => $row->login,
             'id' => $row->id,
+            'role' => $row->role,
             'firstname' => $row->firstname,
             'lastname' => $row->lastname,
             'fullname' => $row->firstname . ' ' . $row->lastname,

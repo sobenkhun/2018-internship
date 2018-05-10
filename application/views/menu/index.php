@@ -54,13 +54,15 @@ $activeLink = (isset($activeLink)) ? $activeLink :  "";?>
                </div>
             </div>
           </li>
-          <li class="nav-item">
-              <a class="nav-link" href="#">
-                 <i class="mdi mdi-account-circle mdi-24px"></i>
-              </a>
+          <li class="nav-item ">
+            <a class="nav-link" href="#" data-toggle="modal" data-target="#myProfile">       
+              <b class="colorTextMenu">  
+                <span class="mdi mdi-account-circle mdi-24px" data-toggle="tooltip" title="Username"></span> 
+              </b>
+           </a>
           </li>
           <li class="nav-item">
-              <a class="nav-link" href="<?php echo base_url();?>connection/logout">
+              <a title="logout" class="nav-link" href="<?php echo base_url();?>connection/logout">
                  &nbsp;&nbsp;&nbsp;<i class="mdi mdi-power mdi-24px"></i>
               </a>
           </li>
@@ -73,3 +75,58 @@ $activeLink = (isset($activeLink)) ? $activeLink :  "";?>
 <br>
 <br>
 <br>
+<div class="modal fade" id="myProfile">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <!-- Modal Header -->
+      <div class="modal-header">
+        <div class="col-md-4"></div>
+        <div class="col-md-4 text-center">
+          <img src="<?php echo base_url();?>assets/images/studentimage/studentpiture.jpg" alt="" style="width: 100px;"><br>
+          <h5 class="modal-title">Penh SOK</h5>
+        </div>
+        <div class="col-md-4 text-right">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+        </div>
+      </div>
+
+      <!-- Modal body -->
+      <div class="modal-body">
+        <table> 
+          <tr>
+            <td><label for="">Sex</label></td>
+            <td><b class="text-dark">: Female</b></td>
+          </tr>
+          <tr>
+            <td> <label for="">DepartMent</label></td>
+            <td><b class="text-dark">:  ERO Team</b></td>
+          </tr>
+          <tr>
+            <td> <label for="">Phone</label></td>
+            <td>
+              <b class="text-dark">:   081477282 </b>
+            </td>
+          </tr>
+          <tr>
+            <td></td>
+            <td><b class="text-dark">:   0713581071</b></td>
+          </tr>
+          <tr>
+            <td><label for="">Personal Email</label></td>
+            <td><b class="text-dark">:   first.last@gmail.com</b></td>
+          </tr>
+          <tr>
+            <td><label for="">School Email</label></td>
+            <td><b class="text-dark">:   first.last@student.passerellesnumeriques.org</b></td>
+          </tr>
+        </table>
+      </div>
+      <!-- Modal footer -->
+      <div class="modal-footer">
+        <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+      </div>
+
+      <!-- <div class="col-md-2 col-sm-12"></div> -->
+    </div>
+  </div>
+</div>

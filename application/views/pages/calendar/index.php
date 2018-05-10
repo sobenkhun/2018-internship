@@ -41,7 +41,6 @@ $langCode= (isset($langCode)) ? $langCode :  "en";
         <div id='calendar' class="col-centered"></div>
         <div id='datepicker' class="col-centered"></div>
       </div>
-<<<<<<< HEAD
 
   </ul>
 </div>
@@ -170,9 +169,8 @@ $langCode= (isset($langCode)) ? $langCode :  "en";
       <div class="modal-footer">
         <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
       </div>
-=======
+
       <!-- <div class="col-md-2 col-sm-12"></div> -->
->>>>>>> 7417e9b86b3349e5f7eac754b33d5ab5fe809da1
     </div>
   </div>
     <!-- create modal of order item -->
@@ -247,63 +245,129 @@ $langCode= (isset($langCode)) ? $langCode :  "en";
         autoclose:true,
       });
     });
-    </script>
-    <script>
-      $(document).ready(function() {
 
-             $('#calendar').fullCalendar({
-                 header: {
-                     left: 'prev,next today',
-                     center: 'title',
-                     right: 'month,agendaWeek,agendaDay'
-                 },
-                 defaultDate: '2016-09-12',
-                 navLinks: true, // can click day/week names to navigate views
-                 selectable: true,
-                 selectHelper: true,
-                 select: function(start, end) {
-                     // Display the modal.
-                     // You could fill in the start and end fields based on the parameters
-                     $('.modal').modal('show');
+    /* calendar */
+    $(document).ready(function() {
 
-                 },
-                 eventClick: function(event, element) {
-                     // Display the modal and set the values to the event values.
-                     $('.modal').modal('show');
-                     $('.modal').find('#title').val(event.title);
-                     $('.modal').find('#starts-at').val(event.start);
-                     $('.modal').find('#ends-at').val(event.end);
+           $('#calendar').fullCalendar({
+              header: {
+                left: 'prev,next today',
+                center: 'title',
+                right: 'month,agendaWeek,agendaDay,listMonth'
+              },
+              navLinks: true, // can click day/week names to navigate views
+              businessHours: true, // display business hours
+              editable: true,
+              selectable: true,
+              selectHelper: true,
+              events: [
+                {
+                  title: 'Business Lunch',
+                  start: '2018-03-03T13:00:00',
+                  constraint: 'businessHours'
+                },
+                {
+                  title: 'Meeting',
+                  start: '2018-03-13T11:00:00',
+                  constraint: 'availableForMeeting', // defined below
+                  color: '#257e4a'
+                },
+                {
+                  title: 'Conference',
+                  start: '2018-03-18',
+                  end: '2018-03-20'
+                },
+                {
+                  title: 'Party',
+                  start: '2018-03-29T20:00:00'
+                },
 
-                 },
+                // areas where "Meeting" must be dropped
+                {
+                  id: 'availableForMeeting',
+                  start: '2018-03-11T10:00:00',
+                  end: '2018-03-11T16:00:00',
+                  rendering: 'background'
+                },
+                {
+                  id: 'availableForMeeting',
+                  start: '2018-03-13T10:00:00',
+                  end: '2018-03-13T16:00:00',
+                  rendering: 'background'
+                },
+
+                // red areas where no events can be dropped
+                {
+                  start: '2018-03-24',
+                  end: '2018-03-28',
+                  overlap: false,
+                  rendering: 'background',
+                  color: '#ff9f89'
+                },
+                {
+                  start: '2018-03-06',
+                  end: '2018-03-08',
+                  overlap: false,
+                  rendering: 'background',
+                  color: '#ff9f89'
+                }
+              ],
                  editable: true,
-                 eventLimit: true // allow "more" link when too many events
+                 eventDrop: function(event, delta, revertFunc) {
+
+                   alert(event.title + " was dropped on " + event.start.format());
+
+                   if (!confirm("Are you sure about this change?")) {
+                     revertFunc();
+                   }
+
+                 },
+               select: function(start, end) {
+                   // Display the modal.
+                   // You could fill in the start and end fields based on the parameters
+                   $('.modal').modal('show');
+
+               },
+               eventClick: function(event, element) {
+                   // Display the modal and set the values to the event values.
+                   $('.modal').modal('show');
+                   $('.modal').find('#title').val(event.title);
+                   $('.modal').find('#starts-at').val(event.start);
+                   $('.modal').find('#ends-at').val(event.end);
+
+               },
+               dayClick: function(date, jsEvent, view) {
+                   date_last_clicked = $(this);
+                   $(this).css('background-color', '#333');
+                   $('#addModal').modal();
+               },
+               editable: true,
+               eventLimit: true // allow "more" link when too many events
 
 
-             });
+           });
 
-             // Bind the dates to datetimepicker.
-             // You should pass the options you need
-             $("#starts-at, #ends-at").datetimepicker();
+           $("#starts-at, #ends-at").datetimepicker();
 
-             // Whenever the user clicks on the "save" button om the dialog
-             $('#save-event').on('click', function() {
-                 var title = $('#title').val();
-                 if (title) {
-                     var eventData = {
-                         title: title,
-                         start: $('#starts-at').val(),
-                         end: $('#ends-at').val()
-                     };
-                     $('#calendar').fullCalendar('renderEvent', eventData, true); // stick? = true
-                 }
-                 $('#calendar').fullCalendar('unselect');
+           // Whenever the user clicks on the "save" button om the dialog
+           $('#save-event').on('click', function() {
+               var title = $('#title').val();
+               if (title) {
+                   var eventData = {
+                       title: title,
+                       start: $('#starts-at').val(),
+                       end: $('#ends-at').val()
+                   };
+                   $('#calendar').fullCalendar('renderEvent', eventData, true); // stick? = true
+               }
+               $('#calendar').fullCalendar('unselect');
 
-                 // Clear modal inputs
-                 $('.modal').find('input').val('');
+               // Clear modal inputs
+               $('.modal').find('input').val('');
 
-                 // hide modal
-                 $('.modal').modal('hide');
-             });
-         });
+               // hide modal
+               $('.modal').modal('hide');
+           });
+       });
     </script>
-
+   

@@ -13,13 +13,13 @@ $activeLink = (isset($activeLink)) ? $activeLink :  "";?>
 
   <div class="collapse navbar-collapse" id="navbarsExampleDefault">
     <ul class="navbar-nav mr-auto">
-      <li class="nav-item <?php echo ($activeLink=='company'?'active':'');?>">
+      <li class="nav-item <?php echo ($activeLink=='student'?'active':'');?>">
         <a class="nav_link nav-link" href="<?php echo base_url();?>supervisor/student">Student</a>
       </li>
-      <li class="nav-item <?php echo ($activeLink=='Tutor'?'active':'');?>">
+      <li class="nav-item <?php echo ($activeLink=='questionnair'?'active':'');?>">
         <a class="nav_link nav-link" href="<?php echo base_url();?>supervisor/viewProfile">Questionniare</a>
       </li>
-      <li class="nav-item <?php echo ($activeLink=='Calendar'?'active':'');?>">
+      <li class="nav-item <?php echo ($activeLink=='calendar'?'active':'');?>">
         <a class="nav_link nav-link" href="<?php echo base_url();?>supervisor/calendar"></i>Calendar</a>
       </li>
     </ul>

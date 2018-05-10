@@ -25,10 +25,13 @@ class Welcome_IF extends CI_Controller {
 	// Company Function 
 	public function company()
 	{
-		$data['activeLink'] = 'Company';
+		$this->load->helper('form');
+		$this->load->Model('users_model');
+        $data['company'] = $this->users_model->getCompanyData();
+        $data['activeLink'] = 'Company';
 		$this->load->view('templates/header.php',$data);
 		$this->load->view('menu/index.php',$data);
-		$this->load->view('pages/company/index.php');
+		$this->load->view('pages/company/index.php',$data);
 		$this->load->view('templates/footer.php');
 	}
 	public function detailCompany()
@@ -60,10 +63,13 @@ class Welcome_IF extends CI_Controller {
 	// Tutor Function
 	public function tutor()
 	{
+		$this->load->helper('form');
+		$this->load->Model('users_model');
+        $data['tutor'] = $this->users_model->getTutorData();
 		$data['activeLink'] = 'Tutor';
 		$this->load->view('templates/header.php',$data);
 		$this->load->view('menu/index.php',$data);
-		$this->load->view('pages/tutor/index.php');
+		$this->load->view('pages/tutor/index.php',$data);
 		$this->load->view('templates/footer.php');
 	}
 	public function addTutor()
@@ -93,6 +99,9 @@ class Welcome_IF extends CI_Controller {
 	// End of tutor function 
 	public function supervisor()
 	{
+		$this->load->helper('form');
+		$this->load->Model('users_model');
+        $data['supervisor'] = $this->users_model->getSupervisorData();
 		$data['activeLink'] = 'supervisor';
 		$this->load->view('templates/header.php',$data);
 		$this->load->view('menu/index.php',$data);

@@ -52,6 +52,26 @@ class Users_model extends CI_Model {
         return $query->result_array();
     }
 
+    public function getCompanyData() {
+        $this->db->select('*');
+        $query = $this->db->get('company');
+        return $query->result_array();
+    }
+    public function getTutorData()
+    {
+      $this->db->select("userid,CONCAT(firstname,' ',lastname) AS tutorName,position");
+      $query = $this->db->get('users', array('userrole_id' => 2));
+        return $query->result_array(); 
+    }
+    public function getSupervisorData()
+    {
+      $this->db->select("users.userid,company.name,CONCAT(firstname,' ',lastname) AS supervisorName,userrole_id");
+      $this->db->from('users');
+      $this->db->join('company','company.id = users.userid');
+      $this->db->where(array('users.userrole_id' =>3));
+      $query = $this->db->get();
+     return $query->result_array(); 
+    }
   /**
    * Get the list of roles or one role
    * 00000001 1  Admin
@@ -207,18 +227,18 @@ class Users_model extends CI_Model {
         = 00001101 25 Can access to HR functions
        */
         $isAdmin = FALSE;
-        if (((int) $row->role & 1)) {
+        if (((int) $row->userrole_id & 1)) {
             $isAdmin = TRUE;
         }
         $isSuperAdmin = FALSE;
-        if (((int) $row->role & 25)) {
+        if (((int) $row->userrole_id & 25)) {
             $isSuperAdmin = TRUE;
         }
 
         $newdata = array(
-            'login' => $row->login,
+            'login' => $row->emailpro,
             'id' => $row->id,
-            'role' => $row->role,
+            'role' => $row->userrole_id,
             'firstname' => $row->firstname,
             'lastname' => $row->lastname,
             'fullname' => $row->firstname . ' ' . $row->lastname,
@@ -238,8 +258,7 @@ class Users_model extends CI_Model {
      */
     public function checkCredentials($login, $password) {
         $this->db->from('users');
-        $this->db->where('login', $login);
-        $this->db->where('active = TRUE');
+        $this->db->where('emailpro', $login);
         $query = $this->db->get();
 
         if ($query->num_rows() == 0) {
@@ -267,7 +286,6 @@ class Users_model extends CI_Model {
     public function checkUserRole($id) {
         $this->db->from('users');
         $this->db->where('id', $id);
-        $this->db->where('active = TRUE');
         $query = $this->db->get();
         
          if ($query->num_rows() == 0) {

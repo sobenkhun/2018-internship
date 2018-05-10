@@ -34,13 +34,13 @@ class Connection extends CI_Controller {
 			$password = $this->input->post('password');
 			if ($this->users_model->checkCredentials($login, $password)) {
 				log_message('debug', 'Received good credentials for user #' . $this->session->userdata('id'));
-				// if ($this->session->userdata('last_page') != '') {
-				// 	log_message('debug', 'last_page set. Redirect to ' . $this->session->userdata('last_page'));
-				// 	redirect($this->session->userdata('last_page'));
-				// } else {
+				if ($this->session->userdata('last_page') != '') {
+					log_message('debug', 'last_page set. Redirect to ' . $this->session->userdata('last_page'));
+					redirect($this->session->userdata('last_page'));
+				} else {
 					log_message('debug', 'Not last_page set. Redirect to the home page');
 					redirect('welcome');
-				// }
+				}
 			} else {
 				log_message('error', 'Invalid credentials for user ' . $this->input->post('login'));
 				$this->session->set_flashdata('msg', 'Invalid credentials');

@@ -18,54 +18,20 @@
 					</tr>
 				</thead>
 				<tbody>
-					<tr>
-						<td>1</td>
-						<td>Ashton Cox</td>
-						<td>English Training</td>
-						<td>
-							<a href="<?php echo base_url();?>Welcome_IF/detailTutor">
-								<i class="mdi mdi-eye text-info mdi-24px" data-toggle ="tooltip" title="View "></i>
-							</a>
-							<a href="<?php echo base_url();?>Welcome_IF/editTutor">
-								<i class="mdi  mdi-pencil  text-success mdi-24px" data-toggle ="tooltip" title="Edit "></i>
-							</a>
-							<a href="#" onclick="return confirm('Are your sur want to delete this tutor?')">
-								<i class="mdi  mdi-delete mdi-24px text-danger" data-toggle ="tooltip" title="Delete "></i>
-							</a>
-						</td>
-					</tr>
-					<tr>
-						<td>2</td>
-						<td>Ashton Cox</td>
-						<td>Web Training</td>
-						<td>
-							<a href="<?php echo base_url();?>Welcome_IF/detailTutor">
-								<i class="mdi mdi-eye text-info mdi-24px" data-toggle ="tooltip" title="View"></i>
-							</a>
-							<a href="<?php echo base_url();?>Welcome_IF/editTutor">
-								<i class="mdi  mdi-pencil  text-success mdi-24px" data-toggle ="tooltip" title="Edit "></i>
-							</a>
-							<a href="#" onclick="return confirm('Are your sur want to delete this tutor?')">
-								<i class="mdi  mdi-delete mdi-24px text-danger" data-toggle ="tooltip" title="Delete"></i>
-							</a>
-						</td>
-					</tr>
-					<tr>
-						<td>3</td>
-						<td>Ashton Cox</td>
-						<td>Web Training</td>
-						<td>
-							<a href="<?php echo base_url();?>Welcome_IF/detailTutor">
-								<i class="mdi mdi-eye text-info mdi-24px" data-toggle ="tooltip" title="View "></i>
-							</a>
-							<a href="<?php echo base_url();?>Welcome_IF/editTutor">
-								<i class="mdi  mdi-pencil  text-success mdi-24px" data-toggle ="tooltip" title="Edit "></i>
-							</a>
-							<a href="#" onclick="return confirm('Are your sur want to delete this tutor?')">
-								<i class="mdi  mdi-delete mdi-24px text-danger" data-toggle ="tooltip" title="Delete "></i>
-							</a>
-						</td>
-					</tr>
+			<?php foreach ($tutor as $tutor):?>
+          <tr>
+              <td><?php echo $tutor['userid']; ?></td>
+              <td><?php echo $tutor['tutorName']; ?></td>
+              <td><?php echo $tutor['position']; ?></td>
+              <td>
+           <a href="<?php echo base_url();?>Welcome_IF/detailTutor?&id=<?php echo $tutor['userid']; ?>"><span class="mdi mdi-eye mdi-24px text-info" data-toggle ="tooltip" title="View "></span></a>
+           <a href="<?php echo base_url();?>Welcome_IF/editTutor?&id=<?php echo $tutor['userid']; ?>"><span class="mdi mdi-pencil mdi-24px fa-lg text-success" data-toggle ="tooltip" title="Edite "></span></a>
+           <a href="<?php echo base_url();?>Welcome_IF/deleteTutor?&id=<?php echo $tutor['userid']; ?>" onclick="return confirm('Are you sure to delete this Company?');">
+            <i class="text-danger mdi mdi-delete mdi-24px " data-toggle ="tooltip" title="Delete "></i>
+          </a>
+        </td>
+          </tr>
+          <?php endforeach ?>
 				</tbody>
 
 			</table>

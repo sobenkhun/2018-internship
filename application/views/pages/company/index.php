@@ -18,56 +18,20 @@
          </tr>
        </thead>
        <tbody>
-        <tr>
-          <td>001</td>
-          <td><a href="https://www.khmerdev.com/en/" target="_blank">KhmerDev</a></td>
-          <td>Phnom Penh</td>
-          <td>
-           <a href="<?php echo base_url();?>Welcome_IF/detailCompany"><span class="mdi mdi-eye mdi-24px text-info" data-toggle ="tooltip" title="View "></span></a>
-           <a href="<?php echo base_url();?>Welcome_IF/editeCompany"><span class="mdi mdi-pencil mdi-24px fa-lg text-success" data-toggle ="tooltip" title="Edite "></span></a>
-           <a href="#" onclick="return confirm('Are you sure to delete this Company?');">
+        <?php foreach ($company as $company):?>
+          <tr>
+              <td><?php echo $company['id']; ?></td>
+              <td><?php echo $company['name']; ?></td>
+              <td><?php echo $company['location']; ?></td>
+              <td>
+           <a href="<?php echo base_url();?>Welcome_IF/detailCompany?&id=<?php echo $company['id']; ?>"><span class="mdi mdi-eye mdi-24px text-info" data-toggle ="tooltip" title="View "></span></a>
+           <a href="<?php echo base_url();?>Welcome_IF/editeCompany?&id=<?php echo $company['id']; ?>"><span class="mdi mdi-pencil mdi-24px fa-lg text-success" data-toggle ="tooltip" title="Edite "></span></a>
+           <a href="<?php echo base_url();?>Welcome_IF/deleteCompany?&id=<?php echo $company['id']; ?>" onclick="return confirm('Are you sure to delete this Company?');">
             <i class="text-danger mdi mdi-delete mdi-24px " data-toggle ="tooltip" title="Delete "></i>
           </a>
         </td>
-      </tr>
-      <tr>
-        <td>002</td>
-        <td>CodinGate</td>
-        <td>Phnom Penh</td>
-        <td>
-
-          <a href="<?php echo base_url();?>Welcome_IF/detailCompany"><span class="mdi mdi-eye mdi-24px text-info" data-toggle ="tooltip" title="View"></span></a>
-          <a href="<?php echo base_url();?>Welcome_IF/editeCompany"><span class="mdi mdi-pencil mdi-24px fa-lg text-success" data-toggle ="tooltip" title="Edite"></span></a>
-          <a href="#" onclick="return confirm('Are you sure to delete this Company?');">
-            <i class="text-danger mdi mdi-delete mdi-24px " data-toggle ="tooltip" title="Delete"></i>
-          </a>
-        </td>
-      </tr>
-      <tr>
-        <td>003</td>
-        <td>Web Essentails</td>
-        <td>Phnom Penh</td>
-        <td>
-
-          <a href="<?php echo base_url();?>Welcome_IF/detailCompany"><span class="mdi mdi-eye mdi-24px text-info" data-toggle ="tooltip" title="View "></span></a>
-          <a href="<?php echo base_url();?>Welcome_IF/editeCompany"><span class="mdi mdi-pencil mdi-24px fa-lg text-success" data-toggle ="tooltip" title="Edite "></span></a>
-          <a href="#" onclick="return confirm('Are you sure to delete this Company?');">
-            <i class="text-danger mdi mdi-delete mdi-24px " data-toggle ="tooltip" title="Delete"></i>
-          </a>
-        </td>
-      </tr>
-      <tr>
-        <td>004</td>
-        <td>Virtual Company</td>
-        <td>Phnom Penh</td>
-        <td>
-          <a href="<?php echo base_url();?>Welcome_IF/detailCompany"><span class="mdi mdi-eye mdi-24px text-info" data-toggle ="tooltip" title="View"></span></a>
-          <a href="<?php echo base_url();?>Welcome_IF/editeCompany"><span class="mdi mdi-pencil mdi-24px fa-lg text-success" data-toggle ="tooltip" title="Edite "></span></a>
-          <a href="#" onclick="return confirm('Are you sure to delete this Company?');">
-            <i class="text-danger mdi mdi-delete mdi-24px " data-toggle ="tooltip" title="Delete"></i>
-          </a>
-        </td>
-      </tr>
+          </tr>
+          <?php endforeach ?>
     </tbody>
 
   </table>

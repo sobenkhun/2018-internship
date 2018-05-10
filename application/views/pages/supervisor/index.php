@@ -18,151 +18,25 @@
             </tr>
         </thead>
         <tbody>
-            <tr>
-                <td>1</td>
-                <td>Cloude Net</td>
-                <td>Rith NHEL</td>
-                <td class="text-center">
-                    <a href="<?php echo base_url() ?>Welcome_IF/questionniare"><i class="mdi mdi-book-minus mdi-24px text-dark" data-toggle ="tooltip" title=" Questionniare"></i></a>
+            <?php foreach ($supervisor as $supervisor):?>
+          <tr>
+              <td><?php echo $supervisor['userid']; ?></td>
+              <td><?php echo $supervisor['name']; ?></td>
+              <td><?php echo $supervisor['supervisorName']; ?></td>
+              <td class="text-center">
+                    <a href="<?php echo base_url() ?>Welcome_IF/questionniare?&id=<?php echo $supervisor['userid']; ?>"><i class="mdi mdi-book-minus mdi-24px text-dark" data-toggle ="tooltip" title=" Questionniare"></i></a>
                     
                 </td>
-                
-                <td>
-               
-               
-                <a href="<?php echo base_url() ?>Welcome_IF/viewSupervisor"><i class="mdi mdi-eye mdi-24px text-info" data-toggle ="tooltip" title="View "></i></a>
-                <a href="<?php echo base_url() ?>Welcome_IF/editSupervisor"><i class="mdi mdi-pencil mdi-24px text-success" data-toggle ="tooltip" title="Edit "></i></a>
-                <a href="" onclick="return confirm('Are you sur want to delete?')"><i class="mdi mdi-delete mdi-24px text-danger" data-toggle ="tooltip" title="Delete "></i></a>
-                </td>
-
-            </tr>
-            <tr>
-                <td>2</td>
-                <td>Coding Get</td>
-                <td>Rady Y</td>
-                <td class="text-center">
-                    <a href="<?php echo base_url() ?>Welcome_IF/questionniare"><i class="mdi mdi-book-minus mdi-24px text-dark" data-toggle ="tooltip" title=" Questionniare"></i></a>
-                    
-                </td>
-                
-                <td>
-                   
-                <a href="<?php echo base_url() ?>/Welcome_IF/viewSupervisor"><i class="mdi mdi-eye mdi-24px text-info" data-toggle ="tooltip" title="View "></i></a>
-                <a href="<?php echo base_url() ?>Welcome_IF/editSupervisor"><i class="mdi mdi-pencil mdi-24px text-success" data-toggle ="tooltip" title="Edit "></i></a>
-                <a href="" onclick="return confirm('Are you sur want to delete?')"><i class="mdi mdi-delete mdi-24px text-danger" data-toggle ="tooltip" title="Delete "></i></a>
-                </td>
-            </tr>
-            <tr>
-                <td>3</td>
-                <td>Khalibri</td>
-                 <td>Rady</td>
-                 <td class="text-center">
-                     <a href="<?php echo base_url() ?>/Welcome_IF/questionniare"><i class="mdi mdi-book-minus mdi-24px text-dark" data-toggle ="tooltip" title=" Questionniare"></i></a>
-                     
-                 </td>
-               
-                <td>
-                
-                <a href="<?php echo base_url() ?>/Welcome_IF/viewSupervisor"><i class="mdi mdi-eye mdi-24px text-info" data-toggle ="tooltip" title="View "></i></a>
-                <a href="<?php echo base_url() ?>/Welcome_IF/editSupervisor"><i class="mdi mdi-pencil mdi-24px text-success" data-toggle ="tooltip" title="Edit "></i></a>
-                <a href="" onclick="return confirm('Are you sur want to delete?')"><i class="mdi mdi-delete mdi-24px text-danger" data-toggle ="tooltip" title="Delete "></i></a>
-                </td>
-            </tr>
-            <tr>
-                <td>4</td>
-                <td>EZECOM</td>
-                <td>Kea LOHN</td>
-                <td class="text-center">
-                    <a href="<?php echo base_url() ?>/Welcome_IF/questionniare"><i class="mdi mdi-book-minus mdi-24px text-dark" data-toggle ="tooltip" title=" Questionniare"></i></a>
-                    
-                </td>
-                
-                <td>
-               
-                <a href="<?php echo base_url() ?>/Welcome_IF/viewSupervisor"><i class="mdi mdi-eye mdi-24px text-info" data-toggle ="tooltip" title="View "></i></a>
-                <a href="<?php echo base_url() ?>/Welcome_IF/editSupervisor"><i class="mdi mdi-pencil mdi-24px text-success" data-toggle ="tooltip" title="Edit "></i></a>
-                <a href="" onclick="return confirm('Are you sur want to delete?')"><i class="mdi mdi-delete mdi-24px text-danger" data-toggle ="tooltip" title="Delete T"></i></a>
-                </td>
-            </tr>
-            <tr>
-                <td>5</td>
-                <td>Online</td>
-                <td>Sopheak</td>
-                <td class="text-center">
-                    <a href="<?php echo base_url() ?>/Welcome_IF/questionniare"><i class="mdi mdi-book-minus mdi-24px text-dark" data-toggle ="tooltip" title=" Questionniare"></i></a>
-                    
-                </td>
-                <td>
-               
-                <a href="<?php echo base_url() ?>/Welcome_IF/viewSupervisor"><i class="mdi mdi-eye mdi-24px text-info" data-toggle ="tooltip" title="View "></i></a>
-                <a href="<?php echo base_url() ?>/Welcome_IF/editSupervisor"><i class="mdi mdi-pencil mdi-24px text-success" data-toggle ="tooltip" title="Edit "></i></a>
-                <a href="" onclick="return confirm('Are you sur want to delete?')"><i class="mdi mdi-delete mdi-24px text-danger" data-toggle ="tooltip" title="Delete "></i></a>
-                </td>
-            </tr>
-            <tr>
-                <td>6</td>
-                <td>Eintelego</td>
-                <td>Pisey</td>
-                <td class="text-center">
-                    <a href="<?php echo base_url() ?>/Welcome_IF/questionniare"><i class="mdi mdi-book-minus mdi-24px text-dark" data-toggle ="tooltip" title=" Questionniare"></i></a>
-                    
-                </td>
-                
-                <td>
-               
-                <a href="<?php echo base_url() ?>/Welcome_IF/viewSupervisor"><i class="mdi mdi-eye mdi-24px text-info" data-toggle ="tooltip" title="View "></i></a>
-                <a href="<?php echo base_url() ?>/Welcome_IF/editSupervisor"><i class="mdi mdi-pencil mdi-24px text-success" data-toggle ="tooltip" title="Edit "></i></a>
-                <a href="" onclick="return confirm('Are you sur want to delete?')"><i class="mdi mdi-delete mdi-24px text-danger" data-toggle ="tooltip" title="Delete "></i></a>
-                </td>
-            </tr>
-            <tr>
-                <td>7</td>
-                <td>RCI</td>
-                <td>Rith NHEL</td>
-                <td class="text-center">
-                    <a href="<?php echo base_url() ?>/Welcome_IF/questionniare"><i class="mdi mdi-book-minus mdi-24px text-dark" data-toggle ="tooltip" title=" Questionniare"></i></a>
-                    
-                </td>
-                
-                <td>
-              
-                <a href="<?php echo base_url() ?>/Welcome_IF/viewSupervisor"><i class="mdi mdi-eye mdi-24px text-info" data-toggle ="tooltip" title="View "></i></a>
-                <a href="<?php echo base_url() ?>/Welcome_IF/editSupervisor"><i class="mdi mdi-pencil mdi-24px text-success" data-toggle ="tooltip" title="Edit "></i></a>
-                <a href="" onclick="return confirm('Are you sur want to delete?')"><i class="mdi mdi-delete mdi-24px text-danger" data-toggle ="tooltip" title="Delete T"></i></a>
-                </td>
-            </tr>
-            <tr>
-                <td>8</td>
-                <td>Res Up</td>
-                 <td>Chanak CHON</td>
-                 <td class="text-center">
-                     <a href="<?php echo base_url() ?>/Welcome_IF/questionniare"><i class="mdi mdi-book-minus mdi-24px text-dark" data-toggle ="tooltip" title=" Questionniare"></i></a>
-                     
-                 </td>
-               
-                <td>
-               
-                <a href="<?php echo base_url() ?>/Welcome_IF/viewSupervisor"><i class="mdi mdi-eye mdi-24px text-info" data-toggle ="tooltip" title="View "></i></a>
-                <a href="<?php echo base_url() ?>/Welcome_IF/editSupervisor"><i class="mdi mdi-pencil mdi-24px text-success" data-toggle ="tooltip" title="Edit "></i></a>
-                <a href="" onclick="return confirm('Are you sur want to delete?')"><i class="mdi mdi-delete mdi-24px text-danger" data-toggle ="tooltip" title="Delete "></i></a>
-                </td>
-            </tr>
-            <tr>
-                <td>9</td>
-                <td>Camsolution</td>
-                <td>Rady Y</td>
-                <td class="text-center">
-                    <a href="<?php echo base_url() ?>/Welcome_IF/questionniare"><i class="mdi mdi-book-minus mdi-24px text-dark" data-toggle ="tooltip" title=" Questionniare"></i></a>
-                    
-                </td>
-                
-                <td>
-              
-                <a href="<?php echo base_url() ?>/Welcome_IF/viewSupervisor"><i class="mdi mdi-eye mdi-24px text-info" data-toggle ="tooltip" title="View "></i></a>
-                <a href="<?php echo base_url() ?>/Welcome_IF/editSupervisor"><i class="mdi mdi-pencil mdi-24px text-success" data-toggle ="tooltip" title="Edit "></i></a>
-                <a href="" onclick="return confirm('Are you sur want to delete?')"><i class="mdi mdi-delete mdi-24px text-danger" data-toggle ="tooltip" title="Delete"></i></a>
-                </td>
-            </tr>
+              <td>
+           <a href="<?php echo base_url();?>Welcome_IF/detailTutor?&id=<?php echo $supervisor['userrole_id']; ?>"><span class="mdi mdi-eye mdi-24px text-info" data-toggle ="tooltip" title="View "></span></a>
+           <a href="<?php echo base_url();?>Welcome_IF/editTutor?&id=<?php echo $supervisor['userrole_id']; ?>"><span class="mdi mdi-pencil mdi-24px fa-lg text-success" data-toggle ="tooltip" title="Edite "></span></a>
+           <a href="<?php echo base_url();?>Welcome_IF/deleteTutor?&id=<?php echo $supervisor['userrole_id']; ?>" onclick="return confirm('Are you sure to delete this Company?');">
+            <i class="text-danger mdi mdi-delete mdi-24px " data-toggle ="tooltip" title="Delete"></i>
+          </a>
+        </td>
+          </tr>
+          <?php endforeach ?>
+            
         </tbody>
     </table>
 	</div>

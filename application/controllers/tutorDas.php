@@ -11,6 +11,7 @@ class tutorDas extends CI_Controller {
 	}
 	function studentDas()
 	{
+		$data['activeLink'] = 'student';
 		$this->load->view('templates/header.php');
 		$this->load->view('menu/tutor.php');
 		$this->load->view('tutorDashboard/student/index.php');
@@ -19,6 +20,7 @@ class tutorDas extends CI_Controller {
 	}
 	function companyDas()
 	{
+		$data['activeLink'] = 'company';
 		$this->load->view('templates/header.php');
 		$this->load->view('menu/tutor.php');
 		$this->load->view('tutorDashboard/company/index.php');
@@ -27,6 +29,7 @@ class tutorDas extends CI_Controller {
 	}
 	function tutorList()
 	{
+		$data['activeLink'] = 'tutor';
 		$this->load->view('templates/header.php');
 		$this->load->view('menu/tutor.php');
 		$this->load->view('tutorDashboard/tutor/index.php');
@@ -34,6 +37,7 @@ class tutorDas extends CI_Controller {
 	}
 	function tutorDtail()
 	{
+		$data['activeLink'] = 'tutor';
 		$this->load->view('templates/header.php');
 		$this->load->view('menu/tutor.php');
 		$this->load->view('tutorDashboard/tutor/detail.php');
@@ -41,6 +45,7 @@ class tutorDas extends CI_Controller {
 	}
 	function barChartDas()
 	{
+		$data['activeLink'] = 'company';
 		$this->load->view('templates/header.php');
 		$this->load->view('menu/tutor.php');
 		$this->load->view('tutorDashboard/company/barChart.php');
@@ -49,6 +54,7 @@ class tutorDas extends CI_Controller {
 	}
 	function cDetailDas()
 	{
+		$data['activeLink'] = 'company';
 		$this->load->view('templates/header.php');
 		$this->load->view('menu/tutor.php');
 		$this->load->view('tutorDashboard/company/detail.php');
@@ -58,6 +64,7 @@ class tutorDas extends CI_Controller {
 
 	function detailStudentDas()
 	{
+		$data['activeLink'] = 'student';
 		$this->load->view('templates/header.php');
 		$this->load->view('menu/tutor.php');
 		$this->load->view('tutorDashboard/student/sDetail.php');
@@ -68,6 +75,7 @@ class tutorDas extends CI_Controller {
 
 	function supervisorDas()
 	{
+		$data['activeLink'] = 'supervisor';
 		$this->load->view('templates/header.php');
 		$this->load->view('menu/tutor.php');
 		$this->load->view('tutorDashboard/supervisor/index.php');
@@ -76,6 +84,7 @@ class tutorDas extends CI_Controller {
 	}
 	function viewSupervisorDas()
 	{
+		$data['activeLink'] = 'supervisor';
 		$this->load->view('templates/header.php');
 		$this->load->view('menu/tutor.php');
 		$this->load->view('tutorDashboard/supervisor/detail.php');
@@ -84,6 +93,7 @@ class tutorDas extends CI_Controller {
 	}
 	function listCommStuDas()
 	{
+		$data['activeLink'] = 'comment';
 		$this->load->view('templates/header.php');
 		$this->load->view('menu/tutor.php');
 		$this->load->view('tutorDashboard/comment/index.php');
@@ -93,6 +103,7 @@ class tutorDas extends CI_Controller {
 
 	function CommStuDas()
 	{
+		$data['activeLink'] = 'comment';
 		$this->load->view('templates/header.php');
 		$this->load->view('menu/tutor.php');
 		$this->load->view('tutorDashboard/comment/commentStudent.php');
@@ -100,6 +111,7 @@ class tutorDas extends CI_Controller {
 	}
 	function addCommStuDas()
 	{
+		$data['activeLink'] = 'comment';
 		$this->load->view('templates/header.php');
 		$this->load->view('menu/tutor.php');
 		$this->load->view('tutorDashboard/comment/addComment.php');
@@ -108,6 +120,7 @@ class tutorDas extends CI_Controller {
 
 	function viewWorkLog()
 	{
+		$data['activeLink'] = 'work-log';
 		$this->load->view('templates/header.php');
 		$this->load->view('menu/tutor.php');
 		$this->load->view('tutorDashboard/student/viewWorkLog.php');
@@ -116,6 +129,7 @@ class tutorDas extends CI_Controller {
 
 	function calendar()
 	{
+		$data['activeLink'] = 'calendar';
 		$this->load->view('templates/header.php');
 		$this->load->view('menu/tutor.php');
 		$this->load->view('tutorDashboard/calendar/index.php');

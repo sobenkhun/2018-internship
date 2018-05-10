@@ -1,87 +1,93 @@
 
 <!-- body -->
-<div class="row-fluid">
-	<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+<div class="container row-fluid">
+	<div class="col-md-12 col-lg-12">
 		<h3 class="text-primary text-center"><strong>Weekly work-log report</strong></h3>
 		<br>
 		<table class="table table-bordered table-hover table-responsive">
-			<thead class="bg-info text-white text-center table-fixed">
-				<tr>
-					<th>Date & Time</th>
-					<!-- <th>Time</th> -->
-					<th>Work Activities</th>
-					<th>What did you learn?</th>
-					<th>Difficulties/ Issues</th>
-					<th>Solutions</th>
-					<th>To Do (Plan)</th>
-					<th>Comment</th>
-				</tr>
-			</thead>
+			<tbody class="bg-white">
+			<tr>
+				<th class="bg-info text-white text-center table-fixed"><br>Date & Time</th>
+				<td>
+					<input class="form-control" type="date" value="DD/MM/YYY"><br>
+					<input class="form-control" type="text" placeholder="Start to end time">
+				</td>
+				<td>
+					<input class="form-control" type="date" value="DD/MM/YYY"><br>
+					<input class="form-control" type="text" placeholder="Start to end time">
+				</td>
+			</tr>
+			<tr>
+				<th class="bg-info text-white text-center table-fixed" style="width: 15em;"><br><br>Work Activities</th>
+				<td>
+					<textarea class="form-group" name="" id="" cols="46" rows="4" placeholder="..."></textarea>
+				</td>
+				<td>
+					<textarea class="form-group" name="" id="" cols="46" rows="4" placeholder="..."></textarea>
+				</td>
+			</tr>
+			<tr>
+				<th class="bg-info text-white text-center table-fixed" style="width: 15em;"><br><br>What did you learn?</th>
+				<td>
+					<textarea class="form-group" name="" id="" cols="46" rows="4" placeholder="..."></textarea>
+				</td>
+				<td>
+					<textarea class="form-group" name="" id="" cols="46" rows="4" placeholder="..."></textarea>
+				</td>
+			</tr>
+			<tr>
+				<th class="bg-info text-white text-center table-fixed" style="width: 15em;"><br><br>Difficulties/ Issues</th>
+				<td>
+					<textarea class="form-group" name="" id="" cols="46" rows="4" placeholder="..."></textarea>
+				</td>
+				<td>
+					<textarea class="form-group" name="" id="" cols="46" rows="4" placeholder="..."></textarea>
+				</td>
+			</tr>
+			<tr>
+				<th class="bg-info text-white text-center table-fixed" style="width:15em;"><br><br>Solutions</th>
+				<td>
+					<textarea class="form-group" name="" id="" cols="46" rows="4" placeholder="..."></textarea>
+				</td>
+				<td>
+					<textarea class="form-group" name="" id="" cols="46" rows="4" placeholder="..."></textarea>
+				</td>
+			</tr>
+			<tr>
+				<th class="bg-info text-white text-center table-fixed" style="width: 15em;"><br><br>To Do (Plan)</th>
+				<td>
+					<textarea class="form-group" name="" id="" cols="46" rows="4" placeholder="..."></textarea>
+				</td>
+				<td>
+					<textarea class="form-group" name="" id="" cols="46" rows="4" placeholder="..."></textarea>
+				</td>
+			</tr>
+			<tr>					
+				<th rowspan="2" class="bg-info text-white text-center table-fixed" style="width: 15em;"><br><br><br>Comment</th>
+				<td>
+					<textarea class="form-group" name="" id="" cols="46" rows="4" placeholder="..."></textarea>
+				</td>
+				<td>
+					<textarea class="form-group" name="" id="" cols="46" rows="4" placeholder="..."></textarea>
+				</td>
+			</tr>
+			<tr>
+				<td colspan="7" class="text-right" style="font-size: 25px; margin-top: 0.1em;">
+					<a href="#" class="btn btn-circle text-white bg-info" style="padding: 0.5em;">
+						<i class="mdi mdi-table-column-plus-after " title="Add day"></i>
+					</a>
+				</td>
+			</tr>
+			<tr>
+				<td colspan="7">
+					<textarea class="form-group" name="" id="" cols="128" rows="4" placeholder="Reflections for this week:"></textarea>
 
-			<tbody>
-				<tr>
-					<td>
-						<input class="form-control" type="date" value="DD/MM/YYY"><br>
-						<input class="form-control" type="text" placeholder="Time to Time">
-					</td>
-					<td>
-						<textarea class="form-group" name="" id="" cols="25" rows="4" placeholder="..."></textarea>
-					</td>	
-					<td>
-						<textarea class="form-group" name="" id="" cols="25" rows="4" placeholder="..."></textarea>
-					</td>		
-					<td>
-						<textarea class="form-group" name="" id="" cols="25" rows="4" placeholder="..."></textarea>
-					</td>			
-					<td>
-						<textarea class="form-group" name="" id="" cols="25" rows="4" placeholder="..."></textarea>
-					</td>				
-					<td>
-						<textarea class="form-group" name="" id="" cols="25" rows="4" placeholder="..."></textarea>
-					</td>
-					<td>
-						<textarea class="form-group" name="" id="" cols="25" rows="4" placeholder="..."></textarea>
-					</td>					
-				</tr>
-				<tr>
-					<td>
-						<input class="form-control" type="date" value="DD/MM/YYY"><br>
-						<input class="form-control" type="text" placeholder="Time to Time">
-					</td>
-					<td>
-						<textarea class="form-group" name="" id="" cols="25" rows="4" placeholder="..."></textarea>
-					</td>	
-					<td>
-						<textarea class="form-group" name="" id="" cols="25" rows="4" placeholder="..."></textarea>
-					</td>		
-					<td>
-						<textarea class="form-group" name="" id="" cols="25" rows="4" placeholder="..."></textarea>
-					</td>			
-					<td>
-						<textarea class="form-group" name="" id="" cols="25" rows="4" placeholder="..."></textarea>
-					</td>				
-					<td>
-						<textarea class="form-group" name="" id="" cols="25" rows="4" placeholder="..."></textarea>
-					</td>
-					<td>
-						<textarea class="form-group" name="" id="" cols="25" rows="4" placeholder="..."></textarea>
-					</td>					
-				</tr>
-				<tr>
-					<td colspan="7">
-						<a href="#" class="text-primary" style="font-size: 24px;">
-							<i class="mdi mdi-plus-box" data-toggle="tooltip" title="Add row in table"></i>
-						</a>
-					</td>
-				</tr>
-				<tr>
-					<td colspan="7">
-						<textarea class="form-group" name="" id="" cols="210" rows="4" placeholder="Reflections for this week:"></textarea>
-
-					</td>
-				</tr>
+				</td>
+			</tr>
 			</tbody>
+			<!-- </thead> -->
 		</table>
+		<br><br>
 		<ul class="nav nav-tabs mr-auto fixed-bottom bg-dark">
 			<li class="nav-item">
 				<a href="#" class="nav-link text-white">Week1</a>
@@ -94,6 +100,7 @@
 					<i class="mdi mdi-plus-box" data-toggle="tooltip" title="Add week"></i>
 				</a>
 			</li>
+			
 			<li class="nav-item text-right" style="margin: 0.1em 0em 0em 68em;">
 				<input type="button" class="btn btn-warning" name="btn-submit" value="Save">
 			</li>

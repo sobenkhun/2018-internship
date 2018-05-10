@@ -16,18 +16,12 @@ class Welcome_IF extends CI_Controller {
 	}
 	public function home()
 	{
-<<<<<<< HEAD
-		$data['activeLink'] = 'Home Page';
-		$this->load->view('template/header.php',$data);
+		$data['activeLink'] = 'home';
+		$this->load->view('templates/header.php',$data);
 		$this->load->view('menu/index.php',$data);
-		$this->load->view('index.php',$data);
-		$this->load->view('template/footer.php');
-=======
-		$this->load->view('templates/header.php');
-		$this->load->view('menu/index.php');
 		$this->load->view('pages/index.php');
 		$this->load->view('templates/footer.php');
->>>>>>> d6026f0a8f8f96386a8140fe4155593f04bd45fc
+
 	}
 
 	// Company Function 

@@ -13,7 +13,7 @@ a{
 	
 }
 .nav_link{
-	font-size: 20x;
+	font-size: 18px;
 }
 .body1{
 	font-family:  sans-serif;
@@ -211,3 +211,8 @@ table {
 	height: 200px;
 }
 
+.active {
+	background: #a0c1e0;
+	border-radius: 5px;
+	
+}

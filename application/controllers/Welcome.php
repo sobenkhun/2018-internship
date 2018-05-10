@@ -12,7 +12,7 @@ class Welcome extends CI_Controller {
 
 	public function index()
 	{
-		$data['activeLink'] = 'home';
+		$data['activeLink'] = 'company';
 		$this->load->view('IF/template/header', $data);
 		$this->load->view('menu/index', $data);
 		$this->load->view('pages/index', $data);

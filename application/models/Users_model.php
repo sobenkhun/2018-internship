@@ -60,17 +60,36 @@ class Users_model extends CI_Model {
     public function getTutorData()
     {
       $this->db->select("userid,CONCAT(firstname,' ',lastname) AS tutorName,position");
-      $query = $this->db->get('users', array('userrole_id' => 2));
+      $query = $this->db->get_where('users', array('userrole_id' => 2));
         return $query->result_array(); 
     }
     public function getSupervisorData()
     {
-      $this->db->select("users.userid,company.name,CONCAT(firstname,' ',lastname) AS supervisorName,userrole_id");
+      $this->db->select("users.userid,name,CONCAT(firstname,' ',lastname) AS supervisorName,userrole_id");
       $this->db->from('users');
       $this->db->join('company','company.id = users.userid');
-      $this->db->where(array('users.userrole_id' =>3));
+      $this->db->where(array('users.userrole_id' => 3));
       $query = $this->db->get();
      return $query->result_array(); 
+    }
+    public function getStudentData()
+    {
+     //  $this->db->select("*");
+     //  $this->db->from('users');
+     //  $this->db->join('users','users.id = users.users_userid');   
+     //  // $this->db->get_where(array('users.userrole_id' => 3));
+     //  $query = $this->db->get();
+     // return $query->result_array(); 
+
+     $this->db->select('*');
+    $this->db->from('users');
+    $this->db->join('users', 'users.userid = users.users_userid', 'left');
+    $this->db->order_by('users.userid', 'asc');
+    $query = $this->db->get();
+      var_dump($query->result_array());die();
+
+
+
     }
   /**
    * Get the list of roles or one role

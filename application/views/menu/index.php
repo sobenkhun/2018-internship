@@ -36,9 +36,23 @@ $activeLink = (isset($activeLink)) ? $activeLink :  "";?>
   <div class="navbar-collapse collapse navbar-right">
       <ul class="navbar-nav ml-auto">
           <li class="nav-item">
-              <a class="nav-link" href="#">
-                 <i class="mdi mdi-bell mdi-24px"></i>
-              </a>
+           <div class="dropdown">
+            <a href="#" class="nav-link"  data-toggle="dropdown" aria-expanded="false">
+              <i  style=" margin-right: 20px;" class="mdi mdi-24px mdi-bell " data-toggle="tooltip" title="Notification" id="iconBell"> </i>          
+            </a>
+             <div class="dropdown-menu ">
+                 <div class="dropdown-body">
+                  <a class="dxropdown-item text-dark" href="#"><img class="logo" src="<?php echo base_url();?>assets/images/logo.png"><strong>Rith.Nhil</strong> <br>conmment on <strong>Toch.Ban</strong></b></a>
+                   
+                 </div>
+                 <div class="dropdown-body">
+                  <a class="dropdown-item text-dark" href="#"><img class="logo" src="<?php echo base_url();?>assets/images/logo.png">  <strong>Rith.Nhil</strong> <br>conmment on <strong>Toch.Ban</strong></b></a>
+                   
+                 </div>
+                 <div class="dropdown-divider"></div>
+                  <a class="dropdown-item" href="#">View All</a>
+               </div>
+            </div>
           </li>
           <li class="nav-item">
               <a class="nav-link" href="#">
@@ -47,7 +61,7 @@ $activeLink = (isset($activeLink)) ? $activeLink :  "";?>
           </li>
           <li class="nav-item">
               <a class="nav-link" href="<?php echo base_url();?>connection/logout">
-                 <i class="mdi mdi-power mdi-24px"></i>
+                 &nbsp;&nbsp;&nbsp;<i class="mdi mdi-power mdi-24px"></i>
               </a>
           </li>
       </ul>

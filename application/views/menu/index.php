@@ -2,7 +2,7 @@
 defined('BASEPATH') OR exit('No direct script access allowed');
 $activeLink = (isset($activeLink)) ? $activeLink :  "";?>
 
-<nav class="nav navbar navbar-expand-md fixed-top">
+<nav class=" nav navbar navbar-expand-md fixed-top">
   
   <a class="navbar-brand" href="<?php echo base_url();?>welcome">
     <img  src="<?php echo base_url();?>assets/images/logoL.png" alt="Logo" style="width:150px;">
@@ -11,7 +11,7 @@ $activeLink = (isset($activeLink)) ? $activeLink :  "";?>
     <span class="navbar-toggler-icon"></span> 
   </button>
 
-  <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+  <div class=" collapse navbar-collapse" id="navbarsExampleDefault">
     <ul class="navbar-nav mr-auto">
       <li class="nav-item <?php echo ($activeLink=='Company'?'active':'');?>">
         <a class="nav_link nav-link" href="<?php echo base_url();?>Welcome_IF/company">Company</a>

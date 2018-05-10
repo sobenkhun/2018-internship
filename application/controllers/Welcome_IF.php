@@ -16,9 +16,10 @@ class Welcome_IF extends CI_Controller {
 	}
 	public function home()
 	{
-		$this->load->view('template/header.php');
-		$this->load->view('menu/index.php');
-		$this->load->view('index.php');
+		$data['activeLink'] = 'Home Page';
+		$this->load->view('template/header.php',$data);
+		$this->load->view('menu/index.php',$data);
+		$this->load->view('index.php',$data);
 		$this->load->view('template/footer.php');
 	}
 

@@ -3,51 +3,58 @@
 class supervisor extends CI_Controller {
 	function index()
 	{
-		$this->load->view('templates/header.php');
-		$this->load->view('menu/supervisorMenu.php');
+		$data['activeLink'] = 'Home Page';
+		$this->load->view('templates/header.php',$data);
+		$this->load->view('menu/supervisorMenu.php',$data);
 		$this->load->view('supervisorDashboard/index.php');
 		$this->load->view('templates/footer.php');
 	}
 	function student()
 	{
-		$this->load->view('templates/header.php');
-		$this->load->view('menu/supervisorMenu.php');
-		$this->load->view('supervisorDashboard/student/index.php');
+		$data['activeLink'] = 'student';
+		$this->load->view('templates/header.php',$data);
+		$this->load->view('menu/supervisorMenu.php',$data);
+		$this->load->view('supervisorDashboard/student/index.php',$data);
 		$this->load->view('templates/footer.php');
 	}
 	function questionnair()
 	{
-		$this->load->view('templates/header.php');
-		$this->load->view('menu/supervisorMenu.php');
-		$this->load->view('supervisorDashboard/questionnair.php');
+		$data['activeLink'] = 'questionnair';
+		$this->load->view('templates/header.php',$data);
+		$this->load->view('menu/supervisorMenu.php',$data);
+		$this->load->view('supervisorDashboard/questionnair.php',$data);
 		$this->load->view('templates/footer.php');
 	}
 	function comment()
 	{
-		$this->load->view('templates/header.php');
-		$this->load->view('menu/supervisorMenu.php');
-		$this->load->view('supervisorDashboard/student/comment.php');
+		$data['activeLink'] = 'student';
+		$this->load->view('templates/header.php',$data);
+		$this->load->view('menu/supervisorMenu.php',$data);
+		$this->load->view('supervisorDashboard/student/comment.php',$data);
 		$this->load->view('templates/footer.php');
 	}
 	function viewProfile()
 	{
-		$this->load->view('templates/header.php');
-		$this->load->view('menu/supervisorMenu.php');
-		$this->load->view('supervisorDashboard/student/questionnairStudentList.php');
+		$data['activeLink'] = 'questionnair';
+		$this->load->view('templates/header.php',$data);
+		$this->load->view('menu/supervisorMenu.php',$data);
+		$this->load->view('supervisorDashboard/student/questionnairStudentList.php',$data);
 		$this->load->view('templates/footer.php');
 	}
 	function profile()
 	{
-		$this->load->view('templates/header.php');
-		$this->load->view('menu/supervisorMenu.php');
-		$this->load->view('supervisorDashboard/student/studentProfile.php');
+		$data['activeLink'] = 'student';
+		$this->load->view('templates/header.php',$data);
+		$this->load->view('menu/supervisorMenu.php',$data);
+		$this->load->view('supervisorDashboard/student/studentProfile.php',$data);
 		$this->load->view('templates/footer.php');
 	}
 	function calendar()
 	{
-		$this->load->view('templates/header.php');
-		$this->load->view('menu/supervisorMenu.php');
-		$this->load->view('supervisorDashboard/calendar/calendar.php');
+		$data['activeLink'] = 'calendar';
+		$this->load->view('templates/header.php',$data);
+		$this->load->view('menu/supervisorMenu.php',$data);
+		$this->load->view('supervisorDashboard/calendar/calendar.php',$data);
 		// $this->load->view('templates/footer.php');
 	}
 }

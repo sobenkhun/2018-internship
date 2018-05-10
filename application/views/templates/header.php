@@ -9,8 +9,7 @@ $langCode= (isset($langCode)) ? $langCode :  "en";
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <title></title>
-  <title>InternShip Follow up</title>
+  <title><?php echo $activeLink; ?></title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <!-- bootstrap 4 -->

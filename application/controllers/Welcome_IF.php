@@ -16,11 +16,18 @@ class Welcome_IF extends CI_Controller {
 	}
 	public function home()
 	{
+<<<<<<< HEAD
 		$data['activeLink'] = 'Home Page';
 		$this->load->view('template/header.php',$data);
 		$this->load->view('menu/index.php',$data);
 		$this->load->view('index.php',$data);
 		$this->load->view('template/footer.php');
+=======
+		$this->load->view('templates/header.php');
+		$this->load->view('menu/index.php');
+		$this->load->view('pages/index.php');
+		$this->load->view('templates/footer.php');
+>>>>>>> d6026f0a8f8f96386a8140fe4155593f04bd45fc
 	}
 
 	// Company Function 
@@ -147,6 +154,9 @@ class Welcome_IF extends CI_Controller {
 	// student
 	public function student()
 	{
+		// $this->load->helper('form');
+		// $this->load->Model('users_model');
+  //       $data['supervisor'] = $this->users_model->getStudentData();
 		$data['activeLink'] = 'student';
 		$this->load->view('templates/header.php',$data);
 		$this->load->view('menu/index.php',$data);

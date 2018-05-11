@@ -10,41 +10,44 @@
 	<div class="row bg-white">
 		<div class="col-md-6" id="col-md-6">
 			<br>
-			<h3 class="text-center">Company Name  xxxx</h3>
+			<?php foreach ($company as $company):?>
+				
+			<h3 class="text-center"><?php echo $company['name']; ?></h3>
 			<div class="card-body">
 				<form class="form" role="form" autocomplete="off">
 					<div class="form-group row">
 						<label class="col-lg-3 col-form-label form-control-label">Company name</label>
 						<div class="col-lg-9">
-							<p> Name </p>
+							<p><?php echo $company['name']; ?></p>
 						</div>
 					</div>
 					<div class="form-group row">
 						<label class="col-lg-3 col-form-label form-control-label">Description</label>
 						<div class="col-lg-9">
-							<p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quibusdam modi nostrum voluptas deserunt facere voluptatum ipsam aliquam ducimus fugit esse inventore velit, aperiam beatae a, amet eius odit, tenetur commodi?</p>
+							<p><?php echo $company['itemdescription']; ?></p>
 						</div>
 					</div>
 					<div class="form-group row">
 						<label class="col-lg-3 col-form-label form-control-label">Postal Address</label>
 						<div class="col-lg-9">
-							<p>	Street #######,#######,Phnom Penh</p>
+							<p><?php echo $company['postaladdress']; ?></p>
 						</div>
 					</div>
 					<div class="form-group row">
 						<label class="col-lg-3 col-form-label form-control-label">Phone</label>
 						<div class="col-lg-9">
-							<p> (+855) (0)23 228 000</p>
+							<p><?php echo $company['phone']; ?></p>
 						</div>
 					</div>
 					<div class="form-group row">
 						<label class="col-lg-3 col-form-label form-control-label">Website</label>
 						<div class="col-lg-9">
-							<p>	www.companyurl.com</p>
+							<p><?php echo $company['url']; ?></p>
 						</div>
 					</div>
 				</form>
 			</div>
+			<?php endforeach ?>
 		</div>
 		<div class="col-md-4">
 			<br>

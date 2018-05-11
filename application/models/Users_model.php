@@ -57,6 +57,23 @@ class Users_model extends CI_Model {
         $query = $this->db->get('company');
         return $query->result_array();
     }
+    public function getCompanyDataDetail($companyId)
+    {
+        $this->db->select('*');
+        $query = $this->db->get_where('company', array('id' => $companyId));
+        return $query->result_array();
+    }
+
+    public function addCompany($name,$address,$phone,$description,$location,$url)
+    {
+        $data = array('name'=>$name,
+                     'itemdescription'=>$description,
+                     'postaladdress'=>$address,
+                     'location'=>$location,
+                     'phone'=>$phone,
+                     'url'=>$url);
+                     $this->db->insert('company',$data);
+    }
     public function getTutorData()
     {
       $this->db->select("id,CONCAT(firstname,' ',lastname) AS tutorName,position");
@@ -79,7 +96,7 @@ class Users_model extends CI_Model {
                             t.firstname as tFName,t.lastname as tLName");
      $this->db->from('supervisor su');
      $this->db->join('student s', 's.supervisor_id = su.id');
-     $this->db->join('company c', 'c.id = su.id');
+     $this->db->join('company c', 'c.id = su.company_id');
      $this->db->join('tutor t', 't.id = su.id');
     $query = $this->db->get();
      return $query->result_array(); 

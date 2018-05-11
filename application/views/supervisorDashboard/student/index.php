@@ -15,25 +15,22 @@
                 <th class="text-center">Action</th>
             </tr>
         </thead>
-        <tbody>
-            <tr>
-                <td>1</td>
-                <td>Bunthean</td>
-                
-                <td class="text-center">
-                <a href="<?php echo base_url() ?>/supervisor/profile" data-toggle="tooltip" title="View profile" ><i class="mdi mdi-eye text-info TCMDI"  ></i></a>
-
-                </td>
-
-            </tr>
-            <tr>
-                <td>2</td>
-                <td>Prem</td>
-                
-                <td class="text-center">
-                <a href="<?php echo base_url() ?>/supervisor/profile" data-toggle="tooltip" title="View Profile"><i class="mdi mdi-eye text-info TCMDI"></i></a>
-                </td>
-            </tr>
+         <tbody>
+        <?php foreach ($student as $student):?>
+          <tr>
+              <td><?php echo $student['userid']; ?></td>
+              <td><?php echo $student['studentName']; ?></td>
+              <td>
+           <a href="<?php echo base_url();?>supervisor/studentDetail?&id=<?php echo $student['id']; ?>"><span class="mdi mdi-eye mdi-24px text-info" data-toggle ="tooltip" title="View "></span></a>
+           <!-- <a href="<?php echo base_url();?>supervisor/editeCompany?&id=<?php echo $company['id']; ?>"><span class="mdi mdi-pencil mdi-24px fa-lg text-success" data-toggle ="tooltip" title="Edite "></span></a>
+           <a href="<?php echo base_url();?>supervisor/deleteCompany?&id=<?php echo $company['id']; ?>" onclick="return confirm('Are you sure to delete this Company?');">
+            <i class="text-danger mdi mdi-delete mdi-24px " data-toggle ="tooltip" title="Delete "></i>
+          </a> -->
+        </td>
+          </tr>
+          <?php endforeach ?>
+    </tbody>
+        <!-- <tbody>
             <tr>
                 <td>3</td>
                  <td>Devit</td>
@@ -42,7 +39,7 @@
                 <a href="<?php echo base_url() ?>/supervisor/profile" data-toggle="tooltip" title="View Profile"><i class="mdi mdi-eye text-info TCMDI"  ></i></a>
                 </td>
             </tr>
-        </tbody>
+        </tbody> -->
     </table>
     </div>
 </div>

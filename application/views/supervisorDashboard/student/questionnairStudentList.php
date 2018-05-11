@@ -32,24 +32,19 @@
                 <th>Action</th>
             </tr>
         </thead>
-        <tbody>
-            <tr>
-                <td>1</td>
-                <td>Bunthean</td>
-                
-                <td>
-                <a href="<?php echo base_url() ?>/supervisor/questionnair" data-toggle="tooltip" title="Questionnair" ><i class="mdi mdi-book-minus text-success" style="font-size: 24px; " ></i></a>
-                </td>
-
-            </tr>
-            <tr>
-                <td>2</td>
-                <td>Prem</td>
-                
-                <td>
-                <a href="<?php echo base_url() ?>/supervisor/questionnair" data-toggle="tooltip" title="Questionnair"><i class="mdi mdi-book-minus text-success" style="font-size: 24px;" ></i></a>
-                </td>
-            </tr>
+             <tbody>
+            <?php foreach ($student as $student):?>
+              <tr>
+                  <td><?php echo $student['userid']; ?></td>
+                  <td><?php echo $student['studentName']; ?></td>
+                  <td>
+               <!-- <a href="<?php echo base_url();?>supervisor/studentDetail?&id=<?php echo $student['id']; ?>"><span class="mdi mdi-eye mdi-24px text-info" data-toggle ="tooltip" title="View "></span></a> -->
+              
+            </td>
+              </tr>
+              <?php endforeach ?>
+        </tbody>
+        <!-- <tbody>
             <tr>
                 <td>3</td>
                  <td>Devit</td>
@@ -58,7 +53,7 @@
                 <a href="<?php echo base_url() ?>/supervisor/questionnair" data-toggle="tooltip" title="Questionnair"><i class="mdi mdi-book-minus text-success" style="font-size: 24px;" ></i></a>
                 </td>
             </tr>
-        </tbody>
+        </tbody> -->
     </table>
     </div>
 </div>

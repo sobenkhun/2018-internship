@@ -16,16 +16,16 @@ $activeLink = (isset($activeLink)) ? $activeLink :  "";?>
       <li class="nav-item <?php echo ($activeLink=='company'?'active':'');?>">
         <a class="nav_link nav-link" href="<?php echo base_url();?>tutorDas/companyDas">Company</a>
       </li>
-      <li class="nav-item <?php echo ($activeLink=='Tutor'?'active':'');?>">
+      <li class="nav-item <?php echo ($activeLink=='tutor'?'active':'');?>">
         <a class="nav_link nav-link" href="<?php echo base_url();?>tutorDas/tutorList">Tutor</a>
       </li>
-      <li class="nav-item <?php echo ($activeLink=='Supervisor'?'active':'');?>">
+      <li class="nav-item <?php echo ($activeLink=='supervisor'?'active':'');?>">
         <a class="nav_link nav-link" href="<?php echo base_url();?>tutorDas/supervisorDas"></i>Supervisor</a>
       </li>
-      <li class="nav-item <?php echo ($activeLink=='Student'?'active':'');?>">
+      <li class="nav-item <?php echo ($activeLink=='student'?'active':'');?>">
         <a class="nav_link nav-link" href="<?php echo base_url();?>tutorDas/studentDas"></i>Student</a>
       </li>
-      <li class="nav-item <?php echo ($activeLink=='Calendar'?'active':'');?>">
+      <li class="nav-item <?php echo ($activeLink=='calendar'?'active':'');?>">
         <a class="nav_link nav-link" href="<?php echo base_url();?>tutorDas/calendar"></i>Calendar</a>
       </li>
     </ul>

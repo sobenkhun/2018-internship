@@ -11,6 +11,41 @@ class supervisor extends CI_Controller {
 	}
 	function student()
 	{
+		$this->load->helper('form');
+		$this->load->Model('Supervisor_model');
+	    $data['student'] = $this->Supervisor_model->getDataStudentList();
+	    $data['activeLink'] = 'Company';
+	    // var_dump($data);
+		$this->load->view('templates/header.php',$data);
+		$this->load->view('menu/supervisorMenu.php',$data);
+		$this->load->view('supervisorDashboard/student/index.php',$data);
+		$this->load->view('templates/footer.php');
+	}
+	function profile()
+	{
+		$this->load->helper('form');
+		$this->load->Model('Supervisor_model');
+	    $data['studentProfile'] = $this->Supervisor_model->getDataSudentDetail();
+	    $data['activeLink'] = 'Company';
+	    var_dump($data);
+		// $this->load->view('templates/header.php',$data);
+		// $this->load->view('menu/supervisorMenu.php',$data);
+		// $this->load->view('supervisorDashboard/student/studentProfile.php',$data);
+		// $this->load->view('templates/footer.php');
+	}
+	// function student()
+	// {
+	// 	$this->load->view('templates/header.php');
+	// 	$this->load->view('menu/supervisorMenu.php');
+	// 	$this->load->view('supervisorDashboard/student/index.php');
+	// 	$this->load->view('templates/footer.php');
+	// }
+	public function detailCompany()
+	{
+		$data['activeLink'] = 'Company';
+		$this->load->view('templates/header.php',$data);
+		$this->load->view('menu/supervisorMenu.php',$data);
+		$this->load->view('supervisorDashboard/student/studentProfile.php');
 		$data['activeLink'] = 'student';
 		$this->load->view('templates/header.php',$data);
 		$this->load->view('menu/supervisorMenu.php',$data);
@@ -35,20 +70,35 @@ class supervisor extends CI_Controller {
 	}
 	function viewProfile()
 	{
-		$data['activeLink'] = 'questionnair';
+		// $this->load->view('templates/header.php');
+		// $this->load->view('menu/supervisorMenu.php');
+		// $this->load->view('supervisorDashboard/student/questionnairStudentList.php');
+		// $this->load->view('templates/footer.php');
+
+			$this->load->helper('form');
+		$this->load->Model('Supervisor_model');
+	    $data['student'] = $this->Supervisor_model->getDataCompleteQuestionnaire();
+	    $data['activeLink'] = 'Student';
+	    // var_dump($data);
 		$this->load->view('templates/header.php',$data);
 		$this->load->view('menu/supervisorMenu.php',$data);
 		$this->load->view('supervisorDashboard/student/questionnairStudentList.php',$data);
-		$this->load->view('templates/footer.php');
 	}
-	function profile()
-	{
-		$data['activeLink'] = 'student';
-		$this->load->view('templates/header.php',$data);
-		$this->load->view('menu/supervisorMenu.php',$data);
-		$this->load->view('supervisorDashboard/student/studentProfile.php',$data);
-		$this->load->view('templates/footer.php');
-	}
+	// function profile()
+	// {
+	// 	$data['activeLink'] = 'student';
+	// 	$this->load->view('templates/header.php',$data);
+	// 	$this->load->view('menu/supervisorMenu.php',$data);
+	// 	$this->load->view('supervisorDashboard/student/studentProfile.php',$data);
+	// 	$this->load->view('templates/footer.php');
+	// }
+	// function profile()
+	// {
+	// 	$this->load->view('templates/header.php');
+	// 	$this->load->view('menu/supervisorMenu.php');
+	// 	$this->load->view('supervisorDashboard/student/studentProfile.php');
+	// 	$this->load->view('templates/footer.php');
+	// }
 	function calendar()
 	{
 		$data['activeLink'] = 'calendar';

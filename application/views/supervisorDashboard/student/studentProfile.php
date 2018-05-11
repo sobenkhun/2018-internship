@@ -20,7 +20,26 @@
 			<label for="">Prem MANN</label>
 		</div>
 		<div class="col-md-6">
-			<form action="/action_page.php">
+			 <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Student Name</th>
+                
+                <th class="text-center">Action</th>
+            </tr>
+        </thead>
+         <tbody>
+        <?php foreach ($studentProfile as $student):?>
+          <tr>
+              <td><?php echo $student['userid']; ?></td>
+              <td><?php echo $student['studentName']; ?></td>
+        </td>
+          </tr>
+          <?php endforeach ?>
+    </tbody>
+    </table>
+			<!-- <form action="/action_page.php">
 				<table><br>
 					<tr>
 						<td> 
@@ -83,7 +102,6 @@
 						<td> </td>
 						<td>
 							<div class="form-group">
-								<!-- <a href="">bunthean.mov@gmail.com</a> -->
 								<select name="" id="">
 									<option value="">WEB</option>
 									<option value="">WEB</option>
@@ -147,7 +165,7 @@
 						</td>
 					</tr>
 				</table><br>
-			</form>
+			</form> -->
 		</div>
 	</div>
 	<!-- </div> -->

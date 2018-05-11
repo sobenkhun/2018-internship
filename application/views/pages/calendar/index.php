@@ -35,7 +35,8 @@ $langCode= (isset($langCode)) ? $langCode :  "en";
       <div class="col-md-12 col-sm-12">
         <br>
         <br>
-        <h4 class="text-center">Event</h4>
+        <h1 class="text-center">Cooming Soon</h1>
+        <h4 class="text-center">Calendar</h4>
         <br>
         <br>
         <div id='calendar' class="col-centered"></div>

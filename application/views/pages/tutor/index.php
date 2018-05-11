@@ -20,13 +20,13 @@
 				<tbody>
 			<?php foreach ($tutor as $tutor):?>
           <tr>
-              <td><?php echo $tutor['userid']; ?></td>
+              <td><?php echo $tutor['id']; ?></td>
               <td><?php echo $tutor['tutorName']; ?></td>
               <td><?php echo $tutor['position']; ?></td>
               <td>
-           <a href="<?php echo base_url();?>Welcome_IF/detailTutor?&id=<?php echo $tutor['userid']; ?>"><span class="mdi mdi-eye mdi-24px text-info" data-toggle ="tooltip" title="View "></span></a>
-           <a href="<?php echo base_url();?>Welcome_IF/editTutor?&id=<?php echo $tutor['userid']; ?>"><span class="mdi mdi-pencil mdi-24px fa-lg text-success" data-toggle ="tooltip" title="Edite "></span></a>
-           <a href="<?php echo base_url();?>Welcome_IF/deleteTutor?&id=<?php echo $tutor['userid']; ?>" onclick="return confirm('Are you sure to delete this Company?');">
+           <a href="<?php echo base_url();?>Welcome_IF/detailTutor?&id=<?php echo $tutor['id']; ?>"><span class="mdi mdi-eye mdi-24px text-info" data-toggle ="tooltip" title="View "></span></a>
+           <a href="<?php echo base_url();?>Welcome_IF/editTutor?&id=<?php echo $tutor['id']; ?>"><span class="mdi mdi-pencil mdi-24px fa-lg text-success" data-toggle ="tooltip" title="Edite "></span></a>
+           <a href="<?php echo base_url();?>Welcome_IF/deleteTutor?&id=<?php echo $tutor['id']; ?>" onclick="return confirm('Are you sure to delete this Company?');">
             <i class="text-danger mdi mdi-delete mdi-24px " data-toggle ="tooltip" title="Delete "></i>
           </a>
         </td>

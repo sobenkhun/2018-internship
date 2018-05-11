@@ -57,30 +57,48 @@ class Users_model extends CI_Model {
         $query = $this->db->get('company');
         return $query->result_array();
     }
+    public function getCompanyDataDetail($companyId)
+    {
+        $this->db->select('*');
+        $query = $this->db->get_where('company', array('id' => $companyId));
+        return $query->result_array();
+    }
+
+    public function addCompany($name,$address,$phone,$description,$location,$url)
+    {
+        $data = array('name'=>$name,
+                     'itemdescription'=>$description,
+                     'postaladdress'=>$address,
+                     'location'=>$location,
+                     'phone'=>$phone,
+                     'url'=>$url);
+                     $this->db->insert('company',$data);
+    }
     public function getTutorData()
     {
-      $this->db->select("userid,CONCAT(firstname,' ',lastname) AS tutorName,position");
-      $query = $this->db->get_where('users', array('userrole_id' => 2));
+      $this->db->select("id,CONCAT(firstname,' ',lastname) AS tutorName,position");
+        $query = $this->db->get('tutor');
         return $query->result_array(); 
     }
     public function getSupervisorData()
     {
-      $this->db->select("users.userid,name,CONCAT(firstname,' ',lastname) AS supervisorName,userrole_id");
-      $this->db->from('users');
-      $this->db->join('company','company.id = users.userid');
-      $this->db->where(array('users.userrole_id' => 3));
+      $this->db->select("supervisor.id,name,CONCAT(firstname,' ',lastname) AS supervisorName");
+      $this->db->from('supervisor');
+      $this->db->join('company','company.id = supervisor.id');
       $query = $this->db->get();
      return $query->result_array(); 
     }
     public function getStudentData()
     { 
-     $this->db->select('*');
-    $this->db->join('company', 'company.ID = users.userid');
-    $this->db->join('users', 'users.users_userid = users.userid');
-    $this->db->from('users');
-
-      $query = $this->db->get();
-      var_dump($query->result_array());die();
+     $this->db->select("s.id,s.firstname as stuFName,s.lastname as stuLName,
+                            su.firstname as suFName,su.lastname as suLName,
+                            c.name,
+                            t.firstname as tFName,t.lastname as tLName");
+     $this->db->from('supervisor su');
+     $this->db->join('student s', 's.supervisor_id = su.id');
+     $this->db->join('company c', 'c.id = su.company_id');
+     $this->db->join('tutor t', 't.id = su.id');
+    $query = $this->db->get();
      return $query->result_array(); 
     }
   /**

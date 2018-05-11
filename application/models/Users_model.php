@@ -269,8 +269,7 @@ class Users_model extends CI_Model {
             'id' => $row->id,
             'role' => $row->userrole_id,
             'isAdmin' => $isAdmin,
-            'isSuperAdmin' => $isSuperAdmin,
-            'loggedIn' => TRUE
+            'isSuperAdmin' => $isSuperAdmin
         );
         $this->session->set_userdata($newdata);
     }
@@ -286,6 +285,7 @@ class Users_model extends CI_Model {
         $this->db->from('admin');
         $this->db->where('email', $login);
         $query = $this->db->get();
+        // var_dump($query->result());die();
 
         if ($query->num_rows() == 0) {
             //No match found
@@ -293,6 +293,7 @@ class Users_model extends CI_Model {
         } else {
             $row = $query->row();
             $hash = crypt($password, $row->password);
+            // var_dump($hash." ".$row->password);die();
             if ($hash == $row->password) {
                 // Password does match stored password.
                 $this->loadProfile($row);

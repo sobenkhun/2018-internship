@@ -78,14 +78,18 @@ class tutorDas extends CI_Controller {
 	}
 	function cDetailDas()
 	{
-		$data['activeLink'] = 'company';
+		
+		$companyId = $_GET['id'];
+		$this->load->Model('tutor_model');
+		$data['company'] = $this->tutor_model->getCompanyDetail($companyId);
+		$data['activeLink'] = 'Company';
 		$this->load->view('templates/header.php',$data);
 		$this->load->view('menu/tutor.php',$data);
-
 		$this->load->view('tutorDashboard/company/detail.php',$data);
-		
 		$this->load->view('templates/footer.php');
+
 	}
+
 
 	function detailStudentDas()
 	{

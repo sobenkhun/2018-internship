@@ -33,19 +33,19 @@
 					<div class="form-group row col-md-6 group-col-stu">
 						<label class="col-sm-4 col-form-label" for="">Location</label>
 						<div class="col-sm-8">
-							<input type="text" name="location" id="" class="form-control" placeholder="Compnay Location">
+							<input type="text" name="location" id="" class="form-control" placeholder="Company Location">
 						</div>
 					</div>
 					<div class="form-group row col-md-6 group-col-stu">
 						<label class="col-sm-4 col-form-label" for="">Phone number</label>
 						<div class="col-sm-8">
-							<input type="text" name="phone" id="" class="form-control" placeholder="Compnay Phone Number">
+							<input type="text" name="phone" id="" class="form-control" placeholder="Company Phone Number">
 						</div>
 					</div>
 					<div class="form-group row col-md-6 group-col-stu">
 						<label class="col-sm-4 col-form-label" for="">Website</label>
 						<div class="col-sm-8">
-							<input type="text" name="url" id="" class="form-control" placeholder="Compnay Website ">
+							<input type="text" name="url" id="" class="form-control" placeholder="Company Website ">
 						</div>
 					</div><br><br><br>
 					<div class="col-md-4"></div>

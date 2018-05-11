@@ -24,8 +24,6 @@ $activeLink = (isset($activeLink)) ? $activeLink :  "";?>
       </li>
     </ul>
   </div>
-
-<?php if($this->session->loggedIn === TRUE) { ?>
   <div class="navbar-collapse collapse navbar-right">
       <ul class="navbar-nav ml-auto">
          <li class="nav-item dropdown">
@@ -59,18 +57,18 @@ $activeLink = (isset($activeLink)) ? $activeLink :  "";?>
                </ul>
            </li>
           <li class="nav-item">
-              <a class="nav-link" href="#" data-toggle="modal" data-target="#myProfiles">
+              <a title="Username" class="nav-link" href="#" data-toggle="modal" data-target="#myProfiles">
                  <i class="mdi mdi-account-circle mdi-24px"></i>
               </a>
           </li>
           <li class="nav-item">
-              <a class="nav-link" href="<?php echo base_url();?>connection/logout">
+              <a  title="logout" class="nav-link" href="<?php echo base_url();?>connection/logout">
                  <i class="mdi mdi-power mdi-24px"></i>
               </a>
           </li>
       </ul>
   </div>
-<?php } ?>
+
 </nav>
 <br>
 <br>

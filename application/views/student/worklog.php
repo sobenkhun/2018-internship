@@ -4,7 +4,7 @@
 	<div class="col-md-12 col-lg-12">
 		<h3 class="text-primary text-center"><strong>Weekly work-log report</strong></h3>
 		<br>
-		<table class="table table-bordered table-hover table-responsive">
+		<table class="table table-bordered table-hover table-responsive" id="tableWorkLog">
 			<tbody class="bg-white">
 			<tr>
 				<th class="bg-info text-white text-center table-fixed"><br>Date & Time</th>
@@ -73,9 +73,9 @@
 			</tr>
 			<tr>
 				<td colspan="7" class="text-right" style="font-size: 25px; margin-top: 0.1em;">
-					<a href="#" class="btn btn-circle text-white bg-info" style="padding: 0.5em;">
-						<i class="mdi mdi-table-column-plus-after " title="Add day"></i>
-					</a>
+					<button class="btn btn-circle text-white bg-info" onclick="addDay" title="Add day">
+						<i class="mdi mdi-table-column-plus-after "></i>
+					</button>
 				</td>
 			</tr>
 			<tr>
@@ -87,6 +87,7 @@
 			</tbody>
 			<!-- </thead> -->
 		</table>
+		
 		<br><br>
 		<ul class="nav nav-tabs mr-auto fixed-bottom bg-dark">
 			<li class="nav-item">
@@ -127,3 +128,4 @@
 	</div>
 </div><br>
 <!-- //body -->
+

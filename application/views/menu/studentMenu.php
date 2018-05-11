@@ -10,13 +10,13 @@ $activeLink = (isset($activeLink)) ? $activeLink :  "";?>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
-
+<!-- menu -->
   <div class="collapse navbar-collapse" id="navbarsExampleDefault">
     <ul class="navbar-nav mr-auto">
-      <li class="nav-item <?php echo ($activeLink=='company'?'active':'');?>">
+      <li class="nav-item <?php echo ($activeLink=='work-log'?'active':'');?>">
         <a class="nav_link nav-link" href="<?php echo base_url();?>cStudent/worklog">Worklog</a>
       </li>
-      <li class="nav-item <?php echo ($activeLink=='Tutor'?'active':'');?>">
+      <li class="nav-item <?php echo ($activeLink=='Comment'?'active':'');?>">
         <a class="nav_link nav-link" href="<?php echo base_url();?>cStudent/comment">Comment</a>
       </li>
       <li class="nav-item <?php echo ($activeLink=='Calendar'?'active':'');?>">

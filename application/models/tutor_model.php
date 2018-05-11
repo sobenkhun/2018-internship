@@ -23,15 +23,21 @@ class tutor_model extends CI_Model {
 
     }
 
-    function selectCompany()
+   public function selectCompany()
     {
     	
     	$this->db->select('*');
     	$query = $this->db->get('company');
     	return $query->result_array();
     }
+    public function getCompanyDetail($companyId)
+    {
+        $this->db->select('*');
+        $query = $this->db->get_where('company', array('id' => $companyId));
+        return $query->result_array();
+    }
 
-    function selectTutor()
+   public function selectTutor()
     {
     	
     	$this->db->select('*');

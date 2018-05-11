@@ -9,17 +9,19 @@ class Welcome_IF extends CI_Controller {
 			parent::__construct();
 			log_message('debug', 'URI=' . $this->uri->uri_string());
 	}
-
+	// view login
 	public function index()
 	{
 		$this->load->view('login/login');
 	}
 	public function home()
 	{
+		$this->load->Model('users_model');
+        $data['company'] = $this->users_model->getCompanyData();
 		$data['activeLink'] = 'home';
 		$this->load->view('templates/header.php',$data);
 		$this->load->view('menu/index.php',$data);
-		$this->load->view('pages/index.php');
+		$this->load->view('pages/index.php',$data);
 		$this->load->view('templates/footer.php');
 
 	}
@@ -38,10 +40,13 @@ class Welcome_IF extends CI_Controller {
 	}
 	public function detailCompany()
 	{
+		$companyId = $_GET['id'];
+		$this->load->Model('users_model');
+		$data['company'] = $this->users_model->getCompanyDataDetail($companyId);
 		$data['activeLink'] = 'Company';
 		$this->load->view('templates/header.php',$data);
 		$this->load->view('menu/index.php',$data);
-		$this->load->view('pages/company/detail.php');
+		$this->load->view('pages/company/detail.php',$data);
 		$this->load->view('templates/footer.php');
 	}
 	public function editeCompany()
@@ -59,6 +64,26 @@ class Welcome_IF extends CI_Controller {
 		$this->load->view('menu/index.php',$data);
 		$this->load->view('pages/company/add.php');
 		$this->load->view('templates/footer.php');
+	}
+	public function addCompany()
+	{
+		$this->load->helper('form');
+		$this->load->Model('users_model');
+		$name = $this->input->post("name");
+		$description = $this->input->post("itemdescription");
+		$location = $this->input->post("location");
+		$phone = $this->input->post("phone");
+		$address = $this->input->post("postaladdress");
+		$url = $this->input->post("url");
+		$this->users_model->addCompany($name,$address,$phone,$description,$location,$url);
+		$data['company'] = $this->users_model->getCompanyData();
+        $data['activeLink'] = 'Company';
+		$this->load->view('templates/header.php',$data);
+		$this->load->view('menu/index.php',$data);
+		$this->load->view('pages/company/index.php',$data);
+		$this->load->view('templates/footer.php');
+
+
 	}
 	// End of Company function 
 
@@ -148,13 +173,13 @@ class Welcome_IF extends CI_Controller {
 	// student
 	public function student()
 	{
-			$this->load->helper('form');
-			$this->load->Model('users_model');
-	        $data['supervisor'] = $this->users_model->getStudentData();
+		$this->load->helper('form');
+		$this->load->Model('users_model');
+	    $data['student'] = $this->users_model->getStudentData();
 		$data['activeLink'] = 'student';
 		$this->load->view('templates/header.php',$data);
 		$this->load->view('menu/index.php',$data);
-		$this->load->view('pages/student/index.php');
+		$this->load->view('pages/student/index.php',$data);
 		$this->load->view('templates/footer.php');
 	}
 	public function viewStudent()

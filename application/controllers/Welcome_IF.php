@@ -9,7 +9,7 @@ class Welcome_IF extends CI_Controller {
 			parent::__construct();
 			log_message('debug', 'URI=' . $this->uri->uri_string());
 	}
-
+	// view login
 	public function index()
 	{
 		$this->load->view('login/login');

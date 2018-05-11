@@ -10,42 +10,43 @@
 		<div class="border border-form rounded bg-white">	
 			<br>
 			<br>	
-			<form action="" method="">
+			<?php foreach ($company as $company):?>
+			<form action="<?php echo base_url();?>Welcome_IF/seEediteCompany?&id=<?php echo $company['id'] ?>" method="post">
 				<div class="form-row">
 					<div class="form-group row col-md-6 group-col-stu">
 						<label class="col-sm-4 col-form-label" for="">Company name</label>
 						<div class="col-sm-8">
-							<input type="text" name="" id="" class="form-control" placeholder="...">
+							<input type="text" name="name" id="" class="form-control" placeholder="" value="<?php echo $company['name'] ?>">
 						</div>
 					</div>
 					<div class="form-group row col-md-6 group-col-stu">
 						<label class="col-sm-4 col-form-label" for="">Description</label>
 						<div class="col-sm-8">
-							<input type="text" name="" id="" class="form-control" placeholder="...">
+							<input type="text" name="itemdescription" id="" class="form-control" placeholder="" value="<?php echo $company['itemdescription'] ?>">
 						</div>
 					</div>
 					<div class="form-group row col-md-6 group-col-stu">
 						<label class="col-sm-4 col-form-label" for="">Company address</label>
 						<div class="col-sm-8">
-							<input type="text" name="" id="" class="form-control" placeholder="...">
+							<input type="text" name="postaladdress" id="" class="form-control" placeholder="" value="<?php echo $company['postaladdress'] ?>">
 						</div>
 					</div>
 					<div class="form-group row col-md-6 group-col-stu">
 						<label class="col-sm-4 col-form-label" for="">Location</label>
 						<div class="col-sm-8">
-							<input type="text" name="" id="" class="form-control" placeholder="...">
+							<input type="text" name="location" id="" class="form-control" placeholder="" value="<?php echo $company['location'] ?>">
 						</div>
 					</div>
 					<div class="form-group row col-md-6 group-col-stu">
 						<label class="col-sm-4 col-form-label" for="">Phone number</label>
 						<div class="col-sm-8">
-							<input type="text" name="" id="" class="form-control" placeholder="...">
+							<input type="text" name="phone" id="" class="form-control" placeholder="" value="<?php echo $company['phone'] ?>">
 						</div>
 					</div>
 					<div class="form-group row col-md-6 group-col-stu">
 						<label class="col-sm-4 col-form-label" for="">Website</label>
 						<div class="col-sm-8">
-							<input type="text" name="" id="" class="form-control" placeholder="...">
+							<input type="text" name="url" id="" class="form-control" placeholder="" value="<?php echo $company['url'] ?>">
 						</div>
 					</div><br><br><br>
 					<div class="col-md-4"></div>
@@ -61,6 +62,7 @@
 					<div class="col-md-4"></div>
 				</div>
 			</form>
+			<?php endforeach ?>
 		</div> 
 	</div>
 </div>

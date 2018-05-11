@@ -41,7 +41,6 @@ class Welcome_IF extends CI_Controller {
 	public function detailCompany()
 	{
 		$companyId = $_GET['id'];
-		$this->load->Model('users_model');
 		$data['company'] = $this->users_model->getCompanyDataDetail($companyId);
 		$data['activeLink'] = 'Company';
 		$this->load->view('templates/header.php',$data);
@@ -51,10 +50,32 @@ class Welcome_IF extends CI_Controller {
 	}
 	public function editeCompany()
 	{
+		$companyId = $_GET['id'];
+		$this->load->Model('users_model');
+		$data['company'] = $this->users_model->getCompanyDataDetail($companyId);
 		$data['activeLink'] = 'Company';
 		$this->load->view('templates/header.php',$data);
 		$this->load->view('menu/index.php',$data);
 		$this->load->view('pages/company/edite.php');
+		$this->load->view('templates/footer.php');
+	}
+	public function seEediteCompany()
+	{
+		$this->load->helper('form');
+		$this->load->Model('users_model');
+		$companyId = $_GET['id'];
+		$name = $this->input->post("name");
+		$description = $this->input->post("itemdescription");
+		$location = $this->input->post("location");
+		$phone = $this->input->post("phone");
+		$address = $this->input->post("postaladdress");
+		$url = $this->input->post("url");
+		$this->users_model->editCompany($companyId,$name,$address,$phone,$description,$location,$url);
+		$data['company'] = $this->users_model->getCompanyData();
+		$data['activeLink'] = 'Company';
+		$this->load->view('templates/header.php',$data);
+		$this->load->view('menu/index.php',$data);
+		$this->load->view('pages/company/index.php',$data);
 		$this->load->view('templates/footer.php');
 	}
 	public function createCompany()
@@ -83,7 +104,18 @@ class Welcome_IF extends CI_Controller {
 		$this->load->view('pages/company/index.php',$data);
 		$this->load->view('templates/footer.php');
 
-
+	}
+	public function deleteCompany()
+	{
+		$this->load->Model('users_model');
+		$companyId = $_GET['id'];
+		$this->users_model->deleteCompany($companyId);
+		$data['activeLink'] = 'Company';
+		$this->load->view('templates/header.php',$data);
+		$this->load->view('menu/index.php',$data);
+		$this->load->view('pages/company/index.php',$data);
+		$this->load->view('templates/footer.php');
+		
 	}
 	// End of Company function 
 

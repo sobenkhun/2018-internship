@@ -20,17 +20,17 @@
         <tbody>
             <?php foreach ($supervisor as $supervisor):?>
           <tr>
-              <td><?php echo $supervisor['userid']; ?></td>
+              <td><?php echo $supervisor['id']; ?></td>
               <td><?php echo $supervisor['name']; ?></td>
               <td><?php echo $supervisor['supervisorName']; ?></td>
               <td class="text-center">
-                    <a href="<?php echo base_url() ?>Welcome_IF/questionniare?&id=<?php echo $supervisor['userid']; ?>"><i class="mdi mdi-book-minus mdi-24px text-dark" data-toggle ="tooltip" title=" Questionniare"></i></a>
+                    <a href="<?php echo base_url() ?>Welcome_IF/questionniare?&id=<?php echo $supervisor['id']; ?>"><i class="mdi mdi-book-minus mdi-24px text-dark" data-toggle ="tooltip" title=" Questionniare"></i></a>
                     
                 </td>
               <td>
-           <a href="<?php echo base_url();?>Welcome_IF/detailTutor?&id=<?php echo $supervisor['userrole_id']; ?>"><span class="mdi mdi-eye mdi-24px text-info" data-toggle ="tooltip" title="View "></span></a>
-           <a href="<?php echo base_url();?>Welcome_IF/editTutor?&id=<?php echo $supervisor['userrole_id']; ?>"><span class="mdi mdi-pencil mdi-24px fa-lg text-success" data-toggle ="tooltip" title="Edite "></span></a>
-           <a href="<?php echo base_url();?>Welcome_IF/deleteTutor?&id=<?php echo $supervisor['userrole_id']; ?>" onclick="return confirm('Are you sure to delete this Company?');">
+           <a href="<?php echo base_url();?>Welcome_IF/detailTutor?&id=<?php echo $supervisor['id']; ?>"><span class="mdi mdi-eye mdi-24px text-info" data-toggle ="tooltip" title="View "></span></a>
+           <a href="<?php echo base_url();?>Welcome_IF/editTutor?&id=<?php echo $supervisor['id']; ?>"><span class="mdi mdi-pencil mdi-24px fa-lg text-success" data-toggle ="tooltip" title="Edite "></span></a>
+           <a href="<?php echo base_url();?>Welcome_IF/deleteTutor?&id=<?php echo $supervisor['id']; ?>" onclick="return confirm('Are you sure to delete this Company?');">
             <i class="text-danger mdi mdi-delete mdi-24px " data-toggle ="tooltip" title="Delete"></i>
           </a>
         </td>

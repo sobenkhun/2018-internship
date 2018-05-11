@@ -31,8 +31,6 @@ $activeLink = (isset($activeLink)) ? $activeLink :  "";?>
       </li>
     </ul>
   </div>
-
-<?php if($this->session->loggedIn === TRUE) { ?>
   <div class="navbar-collapse collapse navbar-right">
       <ul class="navbar-nav ml-auto">
         <li class="nav-item dropdown">
@@ -79,7 +77,6 @@ $activeLink = (isset($activeLink)) ? $activeLink :  "";?>
           </li>
       </ul>
   </div>
-<?php } ?>
 </nav>
 <br>
 <br>

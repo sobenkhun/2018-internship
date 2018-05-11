@@ -15,6 +15,7 @@ class supervisor extends CI_Controller {
 		$this->load->Model('Supervisor_model');
 	    $data['student'] = $this->Supervisor_model->getDataStudentList();
 	    $data['activeLink'] = 'Student';
+	    $data['activeLink'] = 'student';
 	    // var_dump($data);
 		$this->load->view('templates/header.php',$data);
 		$this->load->view('menu/supervisorMenu.php',$data);

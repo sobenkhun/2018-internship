@@ -2,7 +2,7 @@
 defined('BASEPATH') OR exit('No direct script access allowed');
 $activeLink = (isset($activeLink)) ? $activeLink :  "";?>
 
-<nav class="nav navbar navbar-expand-md fixed-top">
+<nav class=" nav navbar navbar-expand-md fixed-top">
   
   <a class="navbar-brand" href="<?php echo base_url();?>welcome">
     <img  src="<?php echo base_url();?>assets/images/logoL.png" alt="Logo" style="width:150px;">
@@ -11,7 +11,7 @@ $activeLink = (isset($activeLink)) ? $activeLink :  "";?>
     <span class="navbar-toggler-icon"></span> 
   </button>
 
-  <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+  <div class=" collapse navbar-collapse" id="navbarsExampleDefault">
     <ul class="navbar-nav mr-auto">
       <li class="nav-item <?php echo ($activeLink=='Company'?'active':'');?>">
         <a class="nav_link nav-link" href="<?php echo base_url();?>Welcome_IF/company">Company</a>
@@ -66,7 +66,7 @@ $activeLink = (isset($activeLink)) ? $activeLink :  "";?>
               </ul>
           </li>
           <li class="nav-item ">
-            <a class="nav-link" href="#" data-toggle="modal" data-target="#myProfile">       
+            <a class="nav-link" href="#" data-toggle="modal" data-target="#myProfiles">       
               <b class="colorTextMenu">  
                 <span class="mdi mdi-account-circle mdi-24px" data-toggle="tooltip" title="Username"></span> 
               </b>
@@ -86,7 +86,7 @@ $activeLink = (isset($activeLink)) ? $activeLink :  "";?>
 <br>
 <br>
 <br>
-<div class="modal fade" id="myProfile">
+<div class="modal fade" id="myProfiles">
   <div class="modal-dialog">
     <div class="modal-content">
       <!-- Modal Header -->
@@ -136,8 +136,6 @@ $activeLink = (isset($activeLink)) ? $activeLink :  "";?>
       <div class="modal-footer">
         <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
       </div>
-
-      <!-- <div class="col-md-2 col-sm-12"></div> -->
     </div>
   </div>
 </div>

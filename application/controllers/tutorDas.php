@@ -1,66 +1,79 @@
 <?php
 
 class tutorDas extends CI_Controller {
+	function __construct()
+	{
+			parent::__construct();
+			log_message('debug', 'URI=' . $this->uri->uri_string());
+	}
 
 	function index()
 	{
-		$this->load->view('templates/header.php');
-		$this->load->view('menu/tutor.php');
+		$data['activeLink'] = 'Home Page';
+		$this->load->view('templates/header.php',$data);
+		$this->load->view('menu/tutor.php',$data);
 		$this->load->view('tutorDashboard/index.php');
 		$this->load->view('templates/footer.php');
 	}
 	function studentDas()
 	{
-		$this->load->view('templates/header.php');
-		$this->load->view('menu/tutor.php');
-		$this->load->view('tutorDashboard/student/index.php');
+		$data['activeLink'] = 'student';
+		$this->load->view('templates/header.php',$data);
+		$this->load->view('menu/tutor.php',$data);
+		$this->load->view('tutorDashboard/student/index.php',$data);
 		
 		$this->load->view('templates/footer.php');
 	}
 	function companyDas()
 	{
-		$this->load->view('templates/header.php');
-		$this->load->view('menu/tutor.php');
-		$this->load->view('tutorDashboard/company/index.php');
+		$data['activeLink'] = 'company';
+		$this->load->view('templates/header.php',$data);
+		$this->load->view('menu/tutor.php',$data);
+		$this->load->view('tutorDashboard/company/index.php',$data);
 		
 		$this->load->view('templates/footer.php');
 	}
 	function tutorList()
 	{
-		$this->load->view('templates/header.php');
-		$this->load->view('menu/tutor.php');
-		$this->load->view('tutorDashboard/tutor/index.php');
+		$data['activeLink'] = 'tutor';
+		$this->load->view('templates/header.php',$data);
+		$this->load->view('menu/tutor.php',$data);
+		$this->load->view('tutorDashboard/tutor/index.php',$data);
 		$this->load->view('templates/footer.php');
 	}
 	function tutorDtail()
 	{
-		$this->load->view('templates/header.php');
-		$this->load->view('menu/tutor.php');
-		$this->load->view('tutorDashboard/tutor/detail.php');
+		$data['activeLink'] = 'tutor';
+		$this->load->view('templates/header.php',$data);
+		$this->load->view('menu/tutor.php',$data);
+		$this->load->view('tutorDashboard/tutor/detail.php',$data);
 		$this->load->view('templates/footer.php');
 	}
 	function barChartDas()
 	{
-		$this->load->view('templates/header.php');
-		$this->load->view('menu/tutor.php');
-		$this->load->view('tutorDashboard/company/barChart.php');
+		$data['activeLink'] = 'company';
+		$this->load->view('templates/header.php',$data);
+		$this->load->view('menu/tutor.php',$data);
+		$this->load->view('tutorDashboard/company/barChart.php',$data);
 		
 		// $this->load->view('templates/footer.php');
 	}
 	function cDetailDas()
 	{
-		$this->load->view('templates/header.php');
-		$this->load->view('menu/tutor.php');
-		$this->load->view('tutorDashboard/company/detail.php');
+		$data['activeLink'] = 'company';
+		$this->load->view('templates/header.php',$data);
+		$this->load->view('menu/tutor.php',$data);
+		$this->load->view('tutorDashboard/company/detail.php',$data);
 		
 		$this->load->view('templates/footer.php');
 	}
 
 	function detailStudentDas()
 	{
-		$this->load->view('templates/header.php');
-		$this->load->view('menu/tutor.php');
-		$this->load->view('tutorDashboard/student/sDetail.php');
+		$data['activeLink'] = 'student';
+		$this->load->view('templates/header.php',$data);
+		$this->load->view('menu/tutor.php',$data);
+		$this->load->view('tutorDashboard/student/sDetail.php',$data);
 		
 		$this->load->view('templates/footer.php');
 	}
@@ -68,57 +81,64 @@ class tutorDas extends CI_Controller {
 
 	function supervisorDas()
 	{
-		$this->load->view('templates/header.php');
-		$this->load->view('menu/tutor.php');
-		$this->load->view('tutorDashboard/supervisor/index.php');
+		$data['activeLink'] = 'supervisor';
+		$this->load->view('templates/header.php',$data);
+		$this->load->view('menu/tutor.php',$data);
+		$this->load->view('tutorDashboard/supervisor/index.php',$data);
 		
 		$this->load->view('templates/footer.php');
 	}
 	function viewSupervisorDas()
 	{
-		$this->load->view('templates/header.php');
-		$this->load->view('menu/tutor.php');
-		$this->load->view('tutorDashboard/supervisor/detail.php');
+		$data['activeLink'] = 'supervisor';
+		$this->load->view('templates/header.php',$data);
+		$this->load->view('menu/tutor.php',$data);
+		$this->load->view('tutorDashboard/supervisor/detail.php',$data);
 		
 		$this->load->view('templates/footer.php');
 	}
 	function listCommStuDas()
 	{
-		$this->load->view('templates/header.php');
-		$this->load->view('menu/tutor.php');
-		$this->load->view('tutorDashboard/comment/index.php');
+		$data['activeLink'] = 'comment';
+		$this->load->view('templates/header.php',$data);
+		$this->load->view('menu/tutor.php',$data);
+		$this->load->view('tutorDashboard/comment/index.php',$data);
 		
 		$this->load->view('templates/footer.php');
 	}
 
 	function CommStuDas()
 	{
-		$this->load->view('templates/header.php');
-		$this->load->view('menu/tutor.php');
-		$this->load->view('tutorDashboard/comment/commentStudent.php');
+		$data['activeLink'] = 'comment';
+		$this->load->view('templates/header.php',$data);
+		$this->load->view('menu/tutor.php',$data);
+		$this->load->view('tutorDashboard/comment/commentStudent.php',$data);
 		$this->load->view('templates/footer.php');
 	}
 	function addCommStuDas()
 	{
-		$this->load->view('templates/header.php');
-		$this->load->view('menu/tutor.php');
-		$this->load->view('tutorDashboard/comment/addComment.php');
+		$data['activeLink'] = 'comment';
+		$this->load->view('templates/header.php',$data);
+		$this->load->view('menu/tutor.php',$data);
+		$this->load->view('tutorDashboard/comment/addComment.php',$data);
 		$this->load->view('templates/footer.php');
 	}
 
 	function viewWorkLog()
 	{
-		$this->load->view('templates/header.php');
-		$this->load->view('menu/tutor.php');
-		$this->load->view('tutorDashboard/student/viewWorkLog.php');
+		$data['activeLink'] = 'work-log';
+		$this->load->view('templates/header.php',$data);
+		$this->load->view('menu/tutor.php',$data);
+		$this->load->view('tutorDashboard/student/viewWorkLog.php',$data);
 		$this->load->view('templates/footer.php');
 	}
 
 	function calendar()
 	{
-		$this->load->view('templates/header.php');
-		$this->load->view('menu/tutor.php');
-		$this->load->view('tutorDashboard/calendar/index.php');
+		$data['activeLink'] = 'calendar';
+		$this->load->view('templates/header.php',$data);
+		$this->load->view('menu/tutor.php',$data);
+		$this->load->view('tutorDashboard/calendar/index.php',$data);
 		// $this->load->view('templates/footer.php');
 		
 		//  
@@ -126,9 +146,9 @@ class tutorDas extends CI_Controller {
 	}
 	function questionnair()
 	{
-		$this->load->view('templates/header.php');
-		$this->load->view('menu/tutor.php');
-		$this->load->view('tutorDashboard/supervisor/questionnair.php');
+		$this->load->view('templates/header.php',$data);
+		$this->load->view('menu/tutor.php',$data);
+		$this->load->view('tutorDashboard/supervisor/questionnair.php',$data);
 		$this->load->view('templates/footer.php');
 		
 		//  

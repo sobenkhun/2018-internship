@@ -16,10 +16,12 @@ class Welcome_IF extends CI_Controller {
 	}
 	public function home()
 	{
-		$this->load->view('template/header.php');
-		$this->load->view('menu/index.php');
-		$this->load->view('index.php');
-		$this->load->view('template/footer.php');
+		$data['activeLink'] = 'home';
+		$this->load->view('templates/header.php',$data);
+		$this->load->view('menu/index.php',$data);
+		$this->load->view('pages/index.php');
+		$this->load->view('templates/footer.php');
+
 	}
 
 	// Company Function 
@@ -146,6 +148,9 @@ class Welcome_IF extends CI_Controller {
 	// student
 	public function student()
 	{
+		// $this->load->helper('form');
+		// $this->load->Model('users_model');
+  //       $data['supervisor'] = $this->users_model->getStudentData();
 		$data['activeLink'] = 'student';
 		$this->load->view('templates/header.php',$data);
 		$this->load->view('menu/index.php',$data);

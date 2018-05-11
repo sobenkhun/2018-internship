@@ -28,15 +28,14 @@ $langCode= (isset($langCode)) ? $langCode :  "en";
   <!--Datepicker widget needs its CSS and JS files to work //-->
   <script src="<?php echo base_url();?>assets/bootstrap-datepicker-1.7.1/js/bootstrap-datepicker.min.js"></script>
   
-
-  <div class="container">
-    <div class="row">
-      <!-- <div class="col-md-2 col-sm-12"></div> -->
-      <div class="col-md-12 col-sm-12">
-        <br>
-        <br>
-        <h1 class="text-center">Cooming Soon</h1>
-        <h4 class="text-center">Calendar</h4>
+  <marquee behavior="" direction=""><h1 class="text-info">Comming Soon..</h1></marquee>
+    <div class="container">
+      <div class="row">
+        <!-- <div class="col-md-2 col-sm-12"></div> -->
+        <div class="col-md-12 col-sm-12">
+          <br>
+          <br>
+          <h3 class="text-center text-info"><b class="text-info">Calendar</b></h3>
         <br>
         <br>
         <div id='calendar' class="col-centered"></div>

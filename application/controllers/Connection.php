@@ -52,7 +52,7 @@ class Connection extends CI_Controller {
 	}
 
 	/**
-	 * ll endpoint. Destroy the PHP session
+	 * logout endpoint. Destroy the PHP session
 	 * @author Benjamin BALET <benjamin.balet@gmail.com>
 	 */
 	public function logout()

@@ -73,23 +73,15 @@ class Users_model extends CI_Model {
      return $query->result_array(); 
     }
     public function getStudentData()
-    {
-     //  $this->db->select("*");
-     //  $this->db->from('users');
-     //  $this->db->join('users','users.id = users.users_userid');   
-     //  // $this->db->get_where(array('users.userrole_id' => 3));
-     //  $query = $this->db->get();
-     // return $query->result_array(); 
-
+    { 
      $this->db->select('*');
+    $this->db->join('company', 'company.ID = users.userid');
+    $this->db->join('users', 'users.users_userid = users.userid');
     $this->db->from('users');
-    $this->db->join('users', 'users.userid = users.users_userid', 'left');
-    $this->db->order_by('users.userid', 'asc');
-    $query = $this->db->get();
+
+      $query = $this->db->get();
       var_dump($query->result_array());die();
-
-
-
+     return $query->result_array(); 
     }
   /**
    * Get the list of roles or one role
@@ -255,12 +247,9 @@ class Users_model extends CI_Model {
         }
 
         $newdata = array(
-            'login' => $row->emailpro,
+            'login' => $row->email,
             'id' => $row->id,
             'role' => $row->userrole_id,
-            'firstname' => $row->firstname,
-            'lastname' => $row->lastname,
-            'fullname' => $row->firstname . ' ' . $row->lastname,
             'isAdmin' => $isAdmin,
             'isSuperAdmin' => $isSuperAdmin,
             'loggedIn' => TRUE
@@ -276,8 +265,8 @@ class Users_model extends CI_Model {
      * @author Benjamin BALET <benjamin.balet@gmail.com>
      */
     public function checkCredentials($login, $password) {
-        $this->db->from('users');
-        $this->db->where('emailpro', $login);
+        $this->db->from('admin');
+        $this->db->where('email', $login);
         $query = $this->db->get();
 
         if ($query->num_rows() == 0) {

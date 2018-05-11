@@ -37,10 +37,10 @@
               <tr>
                   <td><?php echo $student['userid']; ?></td>
                   <td><?php echo $student['studentName']; ?></td>
-                  <td>
-               <!-- <a href="<?php echo base_url();?>supervisor/studentDetail?&id=<?php echo $student['id']; ?>"><span class="mdi mdi-eye mdi-24px text-info" data-toggle ="tooltip" title="View "></span></a> -->
+                <!--   <td>
+               <a href="<?php echo base_url();?>supervisor/studentDetail?&id=<?php echo $student['userid']; ?>"><span class="mdi mdi-eye mdi-24px text-info" data-toggle ="tooltip" title="View "></span></a>
               
-            </td>
+            </td> -->
               </tr>
               <?php endforeach ?>
         </tbody>
@@ -50,7 +50,7 @@
                  <td>Devit</td>
                
                 <td>
-                <a href="<?php echo base_url() ?>/supervisor/questionnair" data-toggle="tooltip" title="Questionnair"><i class="mdi mdi-book-minus text-success" style="font-size: 24px;" ></i></a>
+                <a href="/supervisor/questionnair" data-toggle="tooltip" title="Questionnair"><i class="mdi mdi-book-minus text-success" style="font-size: 24px;" ></i></a>
                 </td>
             </tr>
         </tbody> -->

@@ -18,7 +18,7 @@
           <h5 class="card-title">124</h5>
         </div>
         <div class="card-body">
-          <a href="<?php echo base_url();?>Welcome_IF/company" class="btn btn-primary">Go Companies</a>
+          <a href="<?php echo base_url();?>tutorDas/companyDas" class="btn btn-primary">Go Companies</a>
         </div>
       </div>
     </div>
@@ -31,7 +31,7 @@
           <h5 class="card-title">299</h5>
         </div>
         <div class="card-body">
-          <a href="<?php echo base_url();?>Welcome_IF/supervisor" class="btn btn-primary">Go Supervisors</a>
+          <a href="<?php echo base_url();?>tutorDas/supervisorDas" class="btn btn-primary">Go Supervisors</a>
         </div>
 
       </div>
@@ -46,7 +46,7 @@
           <h5 class="card-title">149</h5>
         </div>
         <div class="card-body">
-          <a href="<?php echo base_url();?>Welcome_IF/tutor" class="btn btn-primary">Go Tutors</a>
+          <a href="<?php echo base_url();?>tutorDas/tutorList" class="btn btn-primary">Go Tutors</a>
         </div>
       </div>
     </div>
@@ -58,7 +58,7 @@
           <h5 class="card-title">232</h5>
         </div>
         <div class="card-body">
-          <a href="<?php echo base_url();?>Welcome_IF/student" class="btn btn-primary">Go Students</a>
+          <a href="<?php echo base_url();?>tutorDas/studentDas" class="btn btn-primary">Go Students</a>
         </div>
 
       </div>

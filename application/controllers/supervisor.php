@@ -21,16 +21,16 @@ class supervisor extends CI_Controller {
 		$this->load->view('supervisorDashboard/student/index.php',$data);
 		$this->load->view('templates/footer.php');
 	}
-	function profile()
+	function studentProfile()
 	{
 		$this->load->helper('form');
 		$this->load->Model('Supervisor_model');
 	    $data['studentProfile'] = $this->Supervisor_model->getDataSudentDetail();
-	    $data['activeLink'] = 'Company';
+	    $data['activeLink'] = 'student';
 	    var_dump($data);
-		// $this->load->view('templates/header.php',$data);
-		// $this->load->view('menu/supervisorMenu.php',$data);
-		// $this->load->view('supervisorDashboard/student/studentProfile.php',$data);
+		// $this->load->view('templates/header.php');
+		// $this->load->view('menu/supervisorMenu.php');
+		// $this->load->view('supervisorDashboard/student/studentProfile.php');
 		// $this->load->view('templates/footer.php');
 	}
 	// function student()
@@ -52,9 +52,14 @@ class supervisor extends CI_Controller {
 		$this->load->view('supervisorDashboard/student/index.php',$data);
 		$this->load->view('templates/footer.php');
 	}
-	function questionnair()
+	function questionnaire()
 	{
-		$data['activeLink'] = 'questionnair';
+
+		$this->load->helper('form');
+		$this->load->Model('Supervisor_model');
+	    $data['student'] = $this->Supervisor_model->getQuestionnaire();
+	    $data['activeLink'] = 'questionnair';
+	    // var_dump($data);
 		$this->load->view('templates/header.php',$data);
 		$this->load->view('menu/supervisorMenu.php',$data);
 		$this->load->view('supervisorDashboard/questionnair.php',$data);
@@ -83,6 +88,7 @@ class supervisor extends CI_Controller {
 		$this->load->view('templates/header.php',$data);
 		$this->load->view('menu/supervisorMenu.php',$data);
 		$this->load->view('supervisorDashboard/student/questionnairStudentList.php',$data);
+		$this->load->view('templates/footer.php');
 	}
 	// function profile()
 	// {

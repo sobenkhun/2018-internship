@@ -14,6 +14,7 @@ class supervisor extends CI_Controller {
 		$this->load->helper('form');
 		$this->load->Model('Supervisor_model');
 	    $data['student'] = $this->Supervisor_model->getDataStudentList();
+	    $data['activeLink'] = 'Student';
 	    $data['activeLink'] = 'student';
 	    // var_dump($data);
 		$this->load->view('templates/header.php',$data);
@@ -23,15 +24,17 @@ class supervisor extends CI_Controller {
 	}
 	function studentProfile()
 	{
+		$stuId = $_GET['id'];
 		$this->load->helper('form');
 		$this->load->Model('Supervisor_model');
-	    $data['studentProfile'] = $this->Supervisor_model->getDataSudentDetail();
-	    $data['activeLink'] = 'student';
-	    var_dump($data);
-		// $this->load->view('templates/header.php');
-		// $this->load->view('menu/supervisorMenu.php');
-		// $this->load->view('supervisorDashboard/student/studentProfile.php');
-		// $this->load->view('templates/footer.php');
+	    // $data['studentProfile'] = $this->Supervisor_model->getDataSudentDetail($stuId);
+	    $data['activeLink'] = 'Student';
+		// var_dump($data);die();
+	    // 
+		$this->load->view('templates/header.php');
+		$this->load->view('menu/supervisorMenu.php');
+		$this->load->view('supervisorDashboard/student/studentProfile.php');
+		$this->load->view('templates/footer.php');
 	}
 	// function student()
 	// {

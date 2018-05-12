@@ -143,10 +143,13 @@ class Welcome_IF extends CI_Controller {
 	}
 	public function detailTutor()
 	{
+		$tutorId = $_GET['id'];
+		$this->load->Model('users_model');
+        $data['tutor'] = $this->users_model->getTutorDataDetail($tutorId);
 		$data['activeLink'] = 'Tutor';
 		$this->load->view('templates/header.php',$data);
 		$this->load->view('menu/index.php',$data);
-		$this->load->view('pages/tutor/detailTutor.php');
+		$this->load->view('pages/tutor/detailTutor.php',$data);
 		$this->load->view('templates/footer.php');
 	}
 	public function editTutor()

@@ -139,6 +139,35 @@ class Users_model extends CI_Model {
       $query = $this->db->get();
      return $query->result_array(); 
     }
+    public function viewSupervisor($sId)
+    {
+        $this->db->select('*');
+        $this->db->from('supervisor');
+        $this->db->join('company', 'company.id = supervisor.id');
+        $this->db->where('supervisor.id', $sId);
+        $query = $this->db->get();
+        return $query->result_array();
+    }
+    public function addSupervisor($company,$firstname,$lastname,$username,$password,$position,$sEmail,$phone)
+    {
+        $this->db->select("id");
+        $this->db->from("company");
+        $this->db->where('name', $company);
+        $query = $this->db->get();
+        $company_id = $query->result_array();
+        $data = array('firstname'=>$firstname,
+                     'lastname'=>$lastname,
+                     'position'=>$position,
+                     'id' => '2',
+                     'username' =>$username,
+                     'password' =>$password,
+                     'email'=>$sEmail,
+                     'phone'=>$phone,
+                     'company_id'=>$company_id, 
+                     'userrole_id'=>'3'
+                 );
+        $this->db->insert('supervisor', $data);
+    }
     
     public function getStudentData()
     { 

@@ -62,17 +62,6 @@
 						<div class="col-sm-8">
 							<input type="file" name="image" id="" class="form-control" placeholder="...">
 						</div>
-					</div>
-					<div class="form-group row col-md-6 group-col-stu">
-						<label class="col-sm-4 col-form-label" for="">Company</label>
-						<div class="col-sm-8">
-							<input type="text" name="company" id="" class="form-control" placeholder="..." value="<?php echo $tutor['company'] ?>">
-						</div>
-					</div>
-					<div class="form-group row col-md-6 group-col-stu">
-						<label class="col-sm-4 col-form-label" for=""></label>
-						<div class="col-sm-8">
-						</div>
 					</div><br><br><br>
 					<div class="col-md-4"></div>
 					<div class="col-md-2 text-center">

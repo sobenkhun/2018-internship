@@ -15,9 +15,11 @@
 	<br>
 	<div class="row bg-white">
 		<div class="col-md-1"></div>
-		<div class="col-md-4 text-center "><br>
+		<div class="col-md-4 text-center ">
+			<?php foreach ($supervisor as $supervisor):?>
+			<br>
 			<img class="user userSupervisor"  src="<?php echo base_url(); ?>assets/images/studentpiture.jpg" alt="" style="height: 260px; margin-top: 17px; padding: 10px;"><br>
-			<a class="link" href="#" >Meng Hak</a>
+			<a class="link" href="#" ><?php echo $supervisor['firstname']." ".$supervisor['lastname']; ?></a>
 		</div>
 		<div class="col-md-6">
 			<form action="/action_page.php">
@@ -31,7 +33,7 @@
 						<td> </td>
 						<td>
 							<div class="form-group">
-								<b class="text-dark">Bunthean</b>
+								<b class="text-dark"><?php echo $supervisor['firstname']; ?></b>
 							</div>
 						</td>
 					</tr>
@@ -44,7 +46,7 @@
 						<td> </td>
 						<td>
 							<div class="form-group">
-								<b class="text-dark">MOV</b>
+								<b class="text-dark"><?php echo $supervisor['lastname']; ?></b>
 							</div>
 						</td>
 					</tr>
@@ -57,7 +59,7 @@
 						<td> </td>
 						<td>
 							<div class="form-group">
-								<a href="https://www.codingate.com/">Coding Get Website</a>
+								<a href="https://www.codingate.com/"><?php echo $supervisor['url']; ?></a>
 							</div>
 						</td>
 					</tr>
@@ -70,7 +72,7 @@
 						<td> </td>
 						<td>
 							<div class="form-group">
-								<b class="text-dark">Team Leader</b>
+								<b class="text-dark"><?php echo $supervisor['position']; ?></b>
 							</div>
 						</td>
 					</tr>
@@ -83,7 +85,7 @@
 						<td> </td>
 						<td>
 							<div class="form-group">
-								<a href="">bunthean.mov@gmail.com</a>
+								<a href=""><?php echo $supervisor['email']; ?></a>
 							</div>
 						</td>
 					</tr>
@@ -96,12 +98,13 @@
 						<td> </td>
 						<td>
 							<div class="form-group">
-								<a href="">0964242103</a>
+								<a href=""><?php echo $supervisor['phone']; ?></a>
 							</div>
 						</td>
 					</tr>
 				</table><br>
 			</form>
+			 <?php endforeach ?>
 		</div>
 	</div>
 	<!-- </div> -->

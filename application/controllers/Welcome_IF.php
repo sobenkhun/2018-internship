@@ -179,7 +179,6 @@ class Welcome_IF extends CI_Controller {
 		$tutorId = $_GET['id'];
 		$this->load->Model('users_model');
         $data['tutor'] = $this->users_model->getTutorDataDetail($tutorId);
-        var_dump($data['tutor']);die();
 		$data['activeLink'] = 'Tutor';
 		$this->load->view('templates/header.php',$data);
 		$this->load->view('menu/index.php',$data);
@@ -236,18 +235,44 @@ class Welcome_IF extends CI_Controller {
 
 	public function createSupervisor()
 	{
+		$this->load->helper('form');
+		$this->load->Model('users_model');
+		$data['company'] = $this->users_model->getCompanyData();
 		$data['activeLink'] = 'supervisor';
 		$this->load->view('templates/header.php',$data);
 		$this->load->view('menu/index.php',$data);
 		$this->load->view('pages/supervisor/createSupervisor.php');
 		$this->load->view('templates/footer.php');
 	}
-	public function viewSupervisor()
+	public function addSupervisor()
 	{
+		$this->load->helper('form');
+		$firstname = $this->input->post("firstname");
+		$lastname = $this->input->post("lastname");
+		$username = $this->input->post("userName");
+		$password = $this->input->post("password");
+		$company = $this->input->post("company");
+		$position = $this->input->post("position");
+		$sEmail = $this->input->post("sEmail");
+		$phone = $this->input->post("phone");
+		$this->load->Model('users_model');
+       	$this->users_model->addSupervisor($company,$firstname,$lastname,$username,$password,$position,$sEmail,$phone);
+       	$data['supervisor'] = $this->users_model->viewSupervisor($sId);
 		$data['activeLink'] = 'supervisor';
 		$this->load->view('templates/header.php',$data);
 		$this->load->view('menu/index.php',$data);
-		$this->load->view('pages/supervisor/view.php');
+		$this->load->view('pages/supervisor/view.php',$data);
+		$this->load->view('templates/footer.php');
+	}
+	public function viewSupervisor()
+	{
+		$sId = $_GET['id'];
+		$this->load->Model('users_model');
+		$data['supervisor'] = $this->users_model->viewSupervisor($sId);
+		$data['activeLink'] = 'supervisor';
+		$this->load->view('templates/header.php',$data);
+		$this->load->view('menu/index.php',$data);
+		$this->load->view('pages/supervisor/view.php',$data);
 		$this->load->view('templates/footer.php');
 	}
 	public function editSupervisor()

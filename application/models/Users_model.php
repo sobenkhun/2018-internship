@@ -101,6 +101,32 @@ class Users_model extends CI_Model {
         $query = $this->db->get_where('tutor', array('id' => $tutorId));
         return $query->result_array();  
     }
+    public function addTutor($firstname,$lastname,$position,$sEmail,$phone)
+    {
+        $data = array('firstname'=>$firstname,
+                     'lastname'=>$lastname,
+                     'position'=>$position,
+                     'email'=>$sEmail,
+                     'phone'=>$phone,
+                     'userrole_id'=>'2'
+                 );
+        $this->db->insert('tutor', $data);
+    }
+    public function editTutor($id,$firstname,$lastname,$position,$sEmail,$phone)
+    {
+        $data = array('firstname'=>$firstname,
+                     'lastname'=>$lastname,
+                     'position'=>$position,
+                     'email'=>$sEmail,
+                     'phone'=>$phone
+                 );
+        $this->db->where('id', $id);
+        $this->db->update('tutor', $data);
+    }
+    public function deleteTutor($tutorId)
+    {
+        $this->db->delete('tutor', array('id' => $tutorId));
+    }
     public function getSupervisorData()
     {
       $this->db->select("supervisor.id,name,CONCAT(firstname,' ',lastname) AS supervisorName");

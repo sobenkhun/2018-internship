@@ -133,14 +133,29 @@ class Welcome_IF extends CI_Controller {
 		$this->load->view('pages/tutor/index.php',$data);
 		$this->load->view('templates/footer.php');
 	}
-	public function addTutor()
+	public function loadAddTutor()
 	{
-		$this->load->Model('users_model');
-        $data['tutor'] = $this->users_model->getTutorData();
 		$data['activeLink'] = 'Tutor';
 		$this->load->view('templates/header.php',$data);
 		$this->load->view('menu/index.php',$data);
 		$this->load->view('pages/tutor/addNew.php',$data);
+		$this->load->view('templates/footer.php');
+	}
+	public function addTutor()
+	{
+		$this->load->helper('form');
+		$firstname = $this->input->post("firstname");
+		$lastname = $this->input->post("lastname");
+		$position = $this->input->post("position");
+		$sEmail = $this->input->post("sEmail");
+		$phone = $this->input->post("phone");
+		$this->load->Model('users_model');
+       	$this->users_model->addTutor($firstname,$lastname,$position,$sEmail,$phone);
+        $data['tutor'] = $this->users_model->getTutorData();
+		$data['activeLink'] = 'Tutor';
+		$this->load->view('templates/header.php',$data);
+		$this->load->view('menu/index.php',$data);
+		$this->load->view('pages/tutor/index.php',$data);
 		$this->load->view('templates/footer.php');
 	}
 	public function detailTutor()
@@ -154,12 +169,47 @@ class Welcome_IF extends CI_Controller {
 		$this->load->view('pages/tutor/detailTutor.php',$data);
 		$this->load->view('templates/footer.php');
 	}
-	public function editTutor()
+	public function loadEditTutor()
 	{
+		$tutorId = $_GET['id'];
+		$this->load->Model('users_model');
+        $data['tutor'] = $this->users_model->getTutorDataDetail($tutorId);
 		$data['activeLink'] = 'Tutor';
 		$this->load->view('templates/header.php',$data);
 		$this->load->view('menu/index.php',$data);
 		$this->load->view('pages/tutor/editTutor.php');
+		$this->load->view('templates/footer.php');
+	}
+	public function editTutor()
+	{
+		$tutorId = $_GET['id'];
+		$this->load->helper('form');
+		$firstname = $this->input->post("firstname");
+		$lastname = $this->input->post("lastname");
+		$position = $this->input->post("position");
+		$sEmail = $this->input->post("sEmail");
+		$phone = $this->input->post("phone");
+		$this->load->Model('users_model');
+       	$this->users_model->editTutor($tutorId,$firstname,$lastname,$position,$sEmail,$phone);
+       	$data['tutor'] = $this->users_model->getTutorData();
+		$data['activeLink'] = 'Tutor';
+		$this->load->view('templates/header.php',$data);
+		$this->load->view('menu/index.php',$data);
+		$this->load->view('pages/tutor/index.php',$data);
+		$this->load->view('templates/footer.php');
+	}
+	public function deleteTutor()
+	{
+		$tutorId = $_GET['id'];
+		$this->load->Model('users_model');
+		$this->users_model->deleteTutor($tutorId);
+		$this->load->helper('form');
+		$this->load->Model('users_model');
+        $data['tutor'] = $this->users_model->getTutorData();
+		$data['activeLink'] = 'Tutor';
+		$this->load->view('templates/header.php',$data);
+		$this->load->view('menu/index.php',$data);
+		$this->load->view('pages/tutor/index.php',$data);
 		$this->load->view('templates/footer.php');
 	}
 	// End of tutor function 

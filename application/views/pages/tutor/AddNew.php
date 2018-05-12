@@ -12,42 +12,42 @@
 		<div class="border border-form rounded bg-white">	
 			<br>
 			<br>	
-			<form action="" method="">
+			<form action="<?php echo base_url();?>Welcome_IF/addTutor" method="post">
 				<div class="form-row">
 					<div class="form-group row col-md-6 group-col-stu">
 						<label class="col-sm-4 col-form-label" for="">First Name</label>
 						<div class="col-sm-8">
-							<input type="text" name="" id="" class="form-control" placeholder="...">
+							<input type="text" name="firstname" id="" class="form-control" placeholder="...">
 						</div>
 					</div>
 					<div class="form-group row col-md-6 group-col-stu">
 						<label class="col-sm-4 col-form-label" for="">Last Name</label>
 						<div class="col-sm-8">
-							<input type="text" name="" id="" class="form-control" placeholder="...">
+							<input type="text" name="lastname" id="" class="form-control" placeholder="...">
 						</div>
 					</div>
 					<div class="form-group row col-md-6 group-col-stu">
 						<label class="col-sm-4 col-form-label" for="">Position</label>
 						<div class="col-sm-8">
-							<input type="text" name="" id="" class="form-control" placeholder="...">
+							<input type="text" name="position" id="" class="form-control" placeholder="...">
 						</div>
 					</div>
 					<div class="form-group row col-md-6 group-col-stu">
 						<label class="col-sm-4 col-form-label" for="">School Email</label>
 						<div class="col-sm-8">
-							<input type="text" name="" id="" class="form-control" placeholder="...">
+							<input type="text" name="sEmail" id="" class="form-control" placeholder="...">
 						</div>
 					</div>
 					<div class="form-group row col-md-6 group-col-stu">
 						<label class="col-sm-4 col-form-label" for="">Phone number</label>
 						<div class="col-sm-8">
-							<input type="text" name="" id="" class="form-control" placeholder="...">
+							<input type="text" name="phone" id="" class="form-control" placeholder="...">
 						</div>
 					</div>
 					<div class="form-group row col-md-6 group-col-stu">
 						<label class="col-sm-4 col-form-label" for="">Image Tutor</label>
 						<div class="col-sm-8">
-							<input type="file" name="" id="" class="form-control" placeholder="...">
+							<input type="file" name="image" id="" class="form-control" placeholder="...">
 						</div>
 					</div><br><br><br>
 					<div class="col-md-4"></div>

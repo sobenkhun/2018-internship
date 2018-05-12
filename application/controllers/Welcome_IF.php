@@ -41,6 +41,7 @@ class Welcome_IF extends CI_Controller {
 	public function detailCompany()
 	{
 		$companyId = $_GET['id'];
+		$this->load->Model('users_model');
 		$data['company'] = $this->users_model->getCompanyDataDetail($companyId);
 		$data['activeLink'] = 'Company';
 		$this->load->view('templates/header.php',$data);
@@ -110,6 +111,7 @@ class Welcome_IF extends CI_Controller {
 		$this->load->Model('users_model');
 		$companyId = $_GET['id'];
 		$this->users_model->deleteCompany($companyId);
+		$data['company'] = $this->users_model->getCompanyData();
 		$data['activeLink'] = 'Company';
 		$this->load->view('templates/header.php',$data);
 		$this->load->view('menu/index.php',$data);

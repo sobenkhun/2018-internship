@@ -74,6 +74,21 @@ class Users_model extends CI_Model {
                      'url'=>$url);
                      $this->db->insert('company',$data);
     }
+    public function editCompany($id,$name,$address,$phone,$description,$location,$url)
+    {
+        $data = array('name'=>$name,
+                     'itemdescription'=>$description,
+                     'postaladdress'=>$address,
+                     'location'=>$location,
+                     'phone'=>$phone,
+                     'url'=>$url);
+        $this->db->where('id', $id);
+        $this->db->update('company', $data);
+    }
+    public function deleteCompany($id)
+    {
+        $this->db->delete('company', array('id' => $id));
+    }
     public function getTutorData()
     {
       $this->db->select("id,CONCAT(firstname,' ',lastname) AS tutorName,position");

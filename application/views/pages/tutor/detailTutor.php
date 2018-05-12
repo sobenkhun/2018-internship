@@ -53,6 +53,32 @@
 					<tr>
 						<td> 
 							<div class="form-group">
+								<label class="text-dark">User Name</label>
+							</div> 
+						</td>
+						<td> </td>
+						<td>
+							<div class="form-group">
+								<b class="text-dark"><?php echo $tutor['username']; ?></b>
+							</div>
+						</td>
+					</tr>
+					<tr>
+						<td> 
+							<div class="form-group">
+								<label class="text-dark">PassWord</label>
+							</div> 
+						</td>
+						<td> </td>
+						<td>
+							<div class="form-group">
+								<b class="text-dark"><?php echo $tutor['password']; ?></b>
+							</div>
+						</td>
+					</tr>
+					<tr>
+						<td> 
+							<div class="form-group">
 								<label for="email">Position</label>
 							</div> 
 						</td>

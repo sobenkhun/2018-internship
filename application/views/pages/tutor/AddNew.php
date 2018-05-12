@@ -27,6 +27,18 @@
 						</div>
 					</div>
 					<div class="form-group row col-md-6 group-col-stu">
+						<label class="col-sm-4 col-form-label" for="">UserName</label>
+						<div class="col-sm-8">
+							<input type="text" name="userName" id="" class="form-control" placeholder="...">
+						</div>
+					</div>
+					<div class="form-group row col-md-6 group-col-stu">
+						<label class="col-sm-4 col-form-label" for="">Password</label>
+						<div class="col-sm-8">
+							<input type="text" name="password" id="" class="form-control" placeholder="...">
+						</div>
+					</div>
+					<div class="form-group row col-md-6 group-col-stu">
 						<label class="col-sm-4 col-form-label" for="">Position</label>
 						<div class="col-sm-8">
 							<input type="text" name="position" id="" class="form-control" placeholder="...">
@@ -49,7 +61,24 @@
 						<div class="col-sm-8">
 							<input type="file" name="image" id="" class="form-control" placeholder="...">
 						</div>
-					</div><br><br><br>
+					</div>
+					<div class="form-group row col-md-6 group-col-stu">
+						<label class="col-sm-4 col-form-label" for="">Company</label>
+						<div class="col-sm-8">
+							 <select class="form-control" id="" name="company">
+							<?php foreach ($company as $company):?>
+							   <option><?php echo $company['name']; ?></option>
+							 <?php endforeach ?>
+							 </select>
+						</div>
+					</div>
+					<div class="form-group row col-md-6 group-col-stu">
+						<label class="col-sm-4 col-form-label" for=""></label>
+						<div class="col-sm-8">
+							<!-- <input type="file" name="image" id="" class="form-control" placeholder="..."> -->
+						</div>
+					</div>
+					<br><br><br>
 					<div class="col-md-4"></div>
 					<div class="col-md-2 text-center">
 						<button class="btn btn-outline-success" type="submit" name="btn-submit">Submit</button>

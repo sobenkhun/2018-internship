@@ -135,6 +135,9 @@ class Welcome_IF extends CI_Controller {
 	}
 	public function loadAddTutor()
 	{
+		$this->load->helper('form');
+		$this->load->Model('users_model');
+		$data['company'] = $this->users_model->getCompanyData();
 		$data['activeLink'] = 'Tutor';
 		$this->load->view('templates/header.php',$data);
 		$this->load->view('menu/index.php',$data);
@@ -146,11 +149,13 @@ class Welcome_IF extends CI_Controller {
 		$this->load->helper('form');
 		$firstname = $this->input->post("firstname");
 		$lastname = $this->input->post("lastname");
+		$username = $this->input->post("userName");
+		$password = $this->input->post("password");
 		$position = $this->input->post("position");
 		$sEmail = $this->input->post("sEmail");
 		$phone = $this->input->post("phone");
 		$this->load->Model('users_model');
-       	$this->users_model->addTutor($firstname,$lastname,$position,$sEmail,$phone);
+       	$this->users_model->addTutor($firstname,$lastname,$username,$password,$position,$sEmail,$phone);
         $data['tutor'] = $this->users_model->getTutorData();
 		$data['activeLink'] = 'Tutor';
 		$this->load->view('templates/header.php',$data);
@@ -174,10 +179,11 @@ class Welcome_IF extends CI_Controller {
 		$tutorId = $_GET['id'];
 		$this->load->Model('users_model');
         $data['tutor'] = $this->users_model->getTutorDataDetail($tutorId);
+        var_dump($data['tutor']);die();
 		$data['activeLink'] = 'Tutor';
 		$this->load->view('templates/header.php',$data);
 		$this->load->view('menu/index.php',$data);
-		$this->load->view('pages/tutor/editTutor.php');
+		$this->load->view('pages/tutor/editTutor.php',$data);
 		$this->load->view('templates/footer.php');
 	}
 	public function editTutor()
@@ -186,12 +192,14 @@ class Welcome_IF extends CI_Controller {
 		$this->load->helper('form');
 		$firstname = $this->input->post("firstname");
 		$lastname = $this->input->post("lastname");
+		$userName = $this->input->post("username");
+		$password = $this->input->post("password");
 		$position = $this->input->post("position");
 		$sEmail = $this->input->post("sEmail");
 		$phone = $this->input->post("phone");
 		$this->load->Model('users_model');
-       	$this->users_model->editTutor($tutorId,$firstname,$lastname,$position,$sEmail,$phone);
-       	$data['tutor'] = $this->users_model->getTutorData();
+       	$this->users_model->editTutor($tutorId,$firstname,$lastname,$userName,$password,$position,$sEmail,$phone);
+       	$data['tutor'] = $this->users_model->getTutorData($tutorId);
 		$data['activeLink'] = 'Tutor';
 		$this->load->view('templates/header.php',$data);
 		$this->load->view('menu/index.php',$data);

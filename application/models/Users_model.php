@@ -101,21 +101,25 @@ class Users_model extends CI_Model {
         $query = $this->db->get_where('tutor', array('id' => $tutorId));
         return $query->result_array();  
     }
-    public function addTutor($firstname,$lastname,$position,$sEmail,$phone)
+    public function addTutor($firstname,$lastname,$username,$password,$position,$sEmail,$phone)
     {
         $data = array('firstname'=>$firstname,
                      'lastname'=>$lastname,
                      'position'=>$position,
+                     'username' =>$username,
+                     'password' =>$password,
                      'email'=>$sEmail,
                      'phone'=>$phone,
                      'userrole_id'=>'2'
                  );
         $this->db->insert('tutor', $data);
     }
-    public function editTutor($id,$firstname,$lastname,$position,$sEmail,$phone)
+    public function editTutor($id,$firstname,$lastname,$username,$password,$position,$sEmail,$phone)
     {
         $data = array('firstname'=>$firstname,
                      'lastname'=>$lastname,
+                     'username' =>$username,
+                     'password' =>$password,
                      'position'=>$position,
                      'email'=>$sEmail,
                      'phone'=>$phone

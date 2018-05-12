@@ -95,6 +95,12 @@ class Users_model extends CI_Model {
         $query = $this->db->get('tutor');
         return $query->result_array(); 
     }
+    public function getTutorDataDetail($tutorId)
+    {
+        $this->db->select('*');
+        $query = $this->db->get_where('tutor', array('id' => $tutorId));
+        return $query->result_array();  
+    }
     public function getSupervisorData()
     {
       $this->db->select("supervisor.id,name,CONCAT(firstname,' ',lastname) AS supervisorName");
@@ -103,6 +109,7 @@ class Users_model extends CI_Model {
       $query = $this->db->get();
      return $query->result_array(); 
     }
+    
     public function getStudentData()
     { 
      $this->db->select("s.id,s.firstname as stuFName,s.lastname as stuLName,

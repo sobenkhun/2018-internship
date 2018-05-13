@@ -110,7 +110,7 @@ class Users_model extends CI_Model {
                      'password' =>$password,
                      'email'=>$sEmail,
                      'phone'=>$phone,
-                     'userrole_id'=>'2'
+                     'userrole_id'=>'2' 
                  );
         $this->db->insert('tutor', $data);
     }
@@ -135,7 +135,7 @@ class Users_model extends CI_Model {
     {
       $this->db->select("supervisor.id,name,CONCAT(firstname,' ',lastname) AS supervisorName");
       $this->db->from('supervisor');
-      $this->db->join('company','company.id = supervisor.id');
+      $this->db->join('company','company.id = supervisor.company_id');
       $query = $this->db->get();
      return $query->result_array(); 
     }
@@ -158,7 +158,6 @@ class Users_model extends CI_Model {
         $data = array('firstname'=>$firstname,
                      'lastname'=>$lastname,
                      'position'=>$position,
-                     'id' => '2',
                      'username' =>$username,
                      'password' =>$password,
                      'email'=>$sEmail,
@@ -178,7 +177,7 @@ class Users_model extends CI_Model {
      $this->db->from('supervisor su');
      $this->db->join('student s', 's.supervisor_id = su.id');
      $this->db->join('company c', 'c.id = su.company_id');
-     $this->db->join('tutor t', 't.id = su.id');
+     $this->db->join('tutor t', 't.company_id = c.id');
     $query = $this->db->get();
      return $query->result_array(); 
     }
@@ -216,7 +215,7 @@ class Users_model extends CI_Model {
         }
     }
 
-    /**
+    /**ujr5q 
      * Check if a login can be used before creating the user
      * @param string $login login identifier
      * @return bool TRUE if available, FALSE otherwise

@@ -362,11 +362,11 @@ class Users_model extends CI_Model {
      * @author Benjamin BALET <benjamin.balet@gmail.com>
      */
     public function checkCredentials($login, $password) {
-        $this->db->from('admin');
+        $row = $this->db->from('tutor');
         $this->db->where('email', $login);
         $query = $this->db->get();
-        // var_dump($query->result());die();
-
+        $data = $query->row();
+        var_dump($data);die();
         if ($query->num_rows() == 0) {
             //No match found
             return FALSE;
@@ -377,7 +377,7 @@ class Users_model extends CI_Model {
             if ($hash == $row->password) {
                 // Password does match stored password.
                 $this->loadProfile($row);
-                return TRUE;
+                return $query->userrole_id();
             } else {
                 // Password does not match stored password.
                 return FALSE;

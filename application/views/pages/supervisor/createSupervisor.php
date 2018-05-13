@@ -27,6 +27,26 @@
 						</div>
 					</div>
 					<div class="form-group row col-md-6 group-col-stu">
+						<label class="col-sm-4 col-form-label" for="">Company</label>
+						<div class="col-sm-8">
+							 <select class="form-control" id="" name="company">
+							<?php foreach ($company as $company):?>
+							   <option><?php echo $company['name']; ?></option>
+							 <?php endforeach ?>
+							 </select>
+						</div>
+					</div>
+					<div class="form-group row col-md-6 group-col-stu">
+						<label class="col-sm-4 col-form-label" for="">Company</label>
+						<div class="col-sm-8">
+							 <select class="form-control" id="" name="student">
+							<?php foreach ($student as $student):?>
+							   <option><?php echo $student['firstname']; ?></option>
+							 <?php endforeach ?>
+							 </select>
+						</div>
+					</div>
+					<div class="form-group row col-md-6 group-col-stu">
 						<label class="col-sm-4 col-form-label" for="">UserName</label>
 						<div class="col-sm-8">
 							<input type="text" name="userName" id="" class="form-control" placeholder="...">
@@ -60,16 +80,6 @@
 						<label class="col-sm-4 col-form-label" for="">Image Tutor</label>
 						<div class="col-sm-8">
 							<input type="file" name="image" id="" class="form-control" placeholder="...">
-						</div>
-					</div>
-					<div class="form-group row col-md-6 group-col-stu">
-						<label class="col-sm-4 col-form-label" for="">Company</label>
-						<div class="col-sm-8">
-							 <select class="form-control" id="" name="company">
-							<?php foreach ($company as $company):?>
-							   <option><?php echo $company['name']; ?></option>
-							 <?php endforeach ?>
-							 </select>
 						</div>
 					</div>
 					<div class="form-group row col-md-6 group-col-stu">

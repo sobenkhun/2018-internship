@@ -36,13 +36,13 @@
 					<div class="form-group row col-md-6 group-col-stu">
 						<label class="col-sm-4 col-form-label" for="">User Name</label>
 						<div class="col-sm-8">
-							<input type="text" name="position" id="" class="form-control" placeholder="..." value="<?php echo $tutor['username'] ?>">
+							<input type="text" name="username" id="" class="form-control" placeholder="..." value="<?php echo $tutor['username'] ?>">
 						</div>
 					</div>
 					<div class="form-group row col-md-6 group-col-stu">
 						<label class="col-sm-4 col-form-label" for="">Password</label>
 						<div class="col-sm-8">
-							<input type="text" name="position" id="" class="form-control" placeholder="..." value="<?php echo $tutor['password'] ?>">
+							<input type="text" name="password" id="" class="form-control" placeholder="..." value="<?php echo $tutor['password'] ?>">
 						</div>
 					</div>
 					<div class="form-group row col-md-6 group-col-stu">
@@ -74,8 +74,6 @@
 					</div>
 					<?php endforeach ?>
 					<div class="col-md-4"></div>
-
-
 				</div>
 			</form>
 		</div> 

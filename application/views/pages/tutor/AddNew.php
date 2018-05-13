@@ -1,6 +1,4 @@
 
-
-
 <div class="container con-body">
 	<a href="<?php echo base_url(); ?>Welcome_IF/tutor">
 		<button class="btn btn-primary">

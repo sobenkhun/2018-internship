@@ -345,7 +345,7 @@ class Users_model extends CI_Model {
         }
 
         $newdata = array(
-            'login' => $row->email,
+            'login' => $row->username,
             'id' => $row->id,
             'role' => $row->userrole_id,
             'isAdmin' => $isAdmin,
@@ -362,9 +362,8 @@ class Users_model extends CI_Model {
      * @author Benjamin BALET <benjamin.balet@gmail.com>
      */
     public function checkCredentials($login, $password) {
-        $this->db->from('tutor');
+        $row = $this->db->from('getusers');
         $this->db->where('username', $login);
-        // $this->db->where('active = TRUE');
         $query = $this->db->get();
         if ($query->num_rows() == 0) {
             //No match found
@@ -373,10 +372,11 @@ class Users_model extends CI_Model {
             $row = $query->row();
             $hash = crypt($password, $row->password);
             if ($hash == $row->password) {
+            // var_dump($hash."".$row->password);die();
                 // Password does match stored password.
-                // var_dump($hash);die();
                 $this->loadProfile($row);
-                return TRUE;
+                // var_dump($row->userrole_id);die();
+                return $row->userrole_id;
             } else {
                 // Password does not match stored password.
                 return FALSE;

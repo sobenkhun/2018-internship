@@ -8,8 +8,8 @@
 		</button>
 	</a>
 	<h3 class="text-primary text-center">New Supervisor</h3><br>
-	<div class="row">
-		<div class="border border-form rounded bg-white">	
+	<div class="row border border-form rounded bg-white">
+		<div class="rounded bg-white">	
 			<br>
 			<br>	
 			<form action="<?php echo base_url();?>Welcome_IF/addSupervisor" method="post">
@@ -37,11 +37,11 @@
 						</div>
 					</div>
 					<div class="form-group row col-md-6 group-col-stu">
-						<label class="col-sm-4 col-form-label" for="">Company</label>
+						<label class="col-sm-4 col-form-label" for="">Student</label>
 						<div class="col-sm-8">
 							 <select class="form-control" id="" name="student">
-							<?php foreach ($student as $student):?>
-							   <option><?php echo $student['firstname']; ?></option>
+								<?php foreach ($student as $student):?>
+							   <option><?php echo $student['firstname']." ".$student['lastname'];?></option>
 							 <?php endforeach ?>
 							 </select>
 						</div>
@@ -49,7 +49,7 @@
 					<div class="form-group row col-md-6 group-col-stu">
 						<label class="col-sm-4 col-form-label" for="">UserName</label>
 						<div class="col-sm-8">
-							<input type="text" name="userName" id="" class="form-control" placeholder="...">
+							<input type="text" name="username" id="" class="form-control" placeholder="...">
 						</div>
 					</div>
 					<div class="form-group row col-md-6 group-col-stu">
@@ -67,7 +67,7 @@
 					<div class="form-group row col-md-6 group-col-stu">
 						<label class="col-sm-4 col-form-label" for="">Email</label>
 						<div class="col-sm-8">
-							<input type="text" name="sEmail" id="" class="form-control" placeholder="...">
+							<input type="text" name="email" id="" class="form-control" placeholder="...">
 						</div>
 					</div>
 					<div class="form-group row col-md-6 group-col-stu">
@@ -87,9 +87,11 @@
 						<div class="col-sm-8">
 							<!-- <input type="file" name="image" id="" class="form-control" placeholder="..."> -->
 						</div>
-					</div>
-					<br><br><br>
-					<div class="col-md-4"></div>
+					</div><br>
+					
+				</div>
+	</div>
+			<div class="col-md-4"></div>
 					<div class="col-md-2 text-center">
 						<button class="btn btn-outline-success" type="submit" name="btn-submit">Submit</button>
 					</div>
@@ -97,13 +99,7 @@
 						<button class="btn btn-outline-danger pull-right" type="reset" name="btn-cancel">Cancel</button>
 						<br>
 						<br>
-					</div>
-
-					<div class="col-md-4"></div>
-
-
-				</div>
+						<div class="col-md-4"></div>
 			</form>
 		</div> 
-	</div>
 </div>

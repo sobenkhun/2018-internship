@@ -2,7 +2,7 @@
 
 
 <div class="container con-body">
-	<a href="<?php echo base_url(); ?>Welcome_IF/tutor">
+	<a href="<?php echo base_url(); ?>Welcome_IF/supervisor">
 		<button class="btn btn-primary">
 			<i class="mdi mdi-chevron-left mdi-15px text-white"></i>Back
 		</button>

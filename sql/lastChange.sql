@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: May 14, 2018 at 09:00 PM
+-- Generation Time: May 14, 2018 at 07:44 AM
 -- Server version: 10.1.26-MariaDB
 -- PHP Version: 7.1.9
 
@@ -63,6 +63,7 @@ CREATE TABLE `alluser` (
 
 CREATE TABLE `comment` (
   `id` int(11) NOT NULL,
+  `student_id` int(11) DEFAULT NULL,
   `comment` varchar(45) DEFAULT NULL,
   `status` int(11) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
@@ -71,15 +72,15 @@ CREATE TABLE `comment` (
 -- Dumping data for table `comment`
 --
 
-INSERT INTO `comment` (`id`, `comment`, `status`) VALUES
-(1, 'He is good at team work', 0),
-(2, 'Work hard ', NULL),
-(3, 'He is a smart student', 1),
-(4, 'He never late', 0),
-(5, NULL, NULL),
-(6, NULL, NULL),
-(7, 'He focus with his work', 1),
-(8, 'He try very hard ', 0);
+INSERT INTO `comment` (`id`, `student_id`, `comment`, `status`) VALUES
+(1, 3, 'He is good at team work', 0),
+(2, 3, 'Work hard ', NULL),
+(3, 4, 'He is a smart student', 1),
+(4, 4, 'He never late', 0),
+(5, 5, NULL, NULL),
+(6, 5, NULL, NULL),
+(7, 6, 'He focus with his work', 1),
+(8, 6, 'He try very hard ', 0);
 
 -- --------------------------------------------------------
 
@@ -107,50 +108,6 @@ INSERT INTO `company` (`id`, `name`, `itemdescription`, `postaladdress`, `locati
 (4, 'testing ', 'testing ', 'testing ', 'testing', 'testing', 'testing'),
 (7, 'qwertyuiop', '', '', 'Phnom Penh', '', ''),
 (8, 'testing ', 'test', 'testing ', 'test', 'test', 'test');
-
--- --------------------------------------------------------
-
---
--- Stand-in structure for view `getcid`
--- (See below for the actual view)
---
-CREATE TABLE `getcid` (
-`name` varchar(45)
-,`id` int(11)
-);
-
--- --------------------------------------------------------
-
---
--- Stand-in structure for view `getstuid`
--- (See below for the actual view)
---
-CREATE TABLE `getstuid` (
-`stuName` varchar(91)
-,`id` int(11)
-);
-
--- --------------------------------------------------------
-
---
--- Stand-in structure for view `getsuid`
--- (See below for the actual view)
---
-CREATE TABLE `getsuid` (
-`suName` varchar(91)
-,`id` int(11)
-);
-
--- --------------------------------------------------------
-
---
--- Stand-in structure for view `gettid`
--- (See below for the actual view)
---
-CREATE TABLE `gettid` (
-`tName` varchar(91)
-,`id` int(11)
-);
 
 -- --------------------------------------------------------
 
@@ -215,7 +172,8 @@ CREATE TABLE `questionnaire` (
   `question14` int(11) DEFAULT NULL,
   `question15` int(11) DEFAULT NULL,
   `question16` longtext,
-  `question17` longtext
+  `question17` longtext,
+  `student_id` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
@@ -238,22 +196,18 @@ CREATE TABLE `student` (
   `picture` varchar(45) DEFAULT NULL,
   `password` varchar(100) DEFAULT NULL,
   `username` varchar(45) DEFAULT NULL,
-  `userrole_id` int(11) NOT NULL,
-  `worklog_id` int(11) DEFAULT NULL,
-  `questionnaire_id` int(11) DEFAULT NULL,
-  `comment_id` int(11) DEFAULT NULL
+  `userrole_id` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `student`
 --
 
-INSERT INTO `student` (`id`, `supervisor_id`, `firstname`, `lastname`, `batch`, `year`, `schoolemail`, `peremail`, `phone`, `hired`, `picture`, `password`, `username`, `userrole_id`, `worklog_id`, `questionnaire_id`, `comment_id`) VALUES
-(3, 4, 'Prem', 'Mann', 'WEB', 2018, 's.prem@gmail.com', 'p.prem@gmail.com', 675656, 1, 'premImage', '123', 'p.prem@gmail.com', 4, NULL, NULL, NULL),
-(5, 2, 'Touch', 'Ban', 'WEB', 2018, 's.touch@gmail.com', 'p.touch@gmail.com', 76567845, 1, 'touch@gmail.com', '123', 'p.touch@gmail.com', 4, NULL, NULL, NULL),
-(13, 4, 'Prem', 'testing', 'Web', 765432, '', '', 0, NULL, NULL, '', '', 4, NULL, NULL, NULL),
-(14, 4, '', '', 'Web', 0, '', '', 0, NULL, NULL, '', '', 4, NULL, NULL, NULL),
-(15, 4, '', '', 'Web', 0, '', '', 0, NULL, NULL, '', '', 4, NULL, NULL, NULL);
+INSERT INTO `student` (`id`, `supervisor_id`, `firstname`, `lastname`, `batch`, `year`, `schoolemail`, `peremail`, `phone`, `hired`, `picture`, `password`, `username`, `userrole_id`) VALUES
+(3, 4, 'Prem', 'Mann', 'WEB', 2018, 's.prem@gmail.com', 'p.prem@gmail.com', 675656, 1, 'premImage', '123', 'p.prem@gmail.com', 4),
+(4, 5, 'Devith', 'Chea', 'WEB', 2018, 's.devith@gmail.com', 'p.devith@gmail.com', 6767545, 0, 'devithImage', '123', 'p.devith@gmail.com', 4),
+(5, 2, 'Touch', 'Ban', 'WEB', 2018, 's.touch@gmail.com', 'p.touch@gmail.com', 76567845, 1, 'touch@gmail.com', '123', 'p.touch@gmail.com', 4),
+(6, 1, 'Bunthean', 'Mov', 'Web', 2018, 's.bunthean@gmail.com', 'p.bunthean@gmail.com', 56745686, 0, 'buntheanImage', '$2a$08$cnX6al6aTkoyh/N/tKZ11e8ec9J/sldA6R4NdP.2qhhDi0OD3ek1G', 'student@gmail.com', 4);
 
 -- --------------------------------------------------------
 
@@ -272,20 +226,16 @@ CREATE TABLE `supervisor` (
   `picture` varchar(45) DEFAULT NULL,
   `password` varchar(100) DEFAULT NULL,
   `username` varchar(100) DEFAULT NULL,
-  `userrole_id` int(11) NOT NULL,
-  `student_id` int(1) DEFAULT NULL
+  `userrole_id` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `supervisor`
 --
 
-INSERT INTO `supervisor` (`id`, `company_id`, `firstname`, `lastname`, `position`, `email`, `phone`, `picture`, `password`, `username`, `userrole_id`, `student_id`) VALUES
-(4, 2, 'Vi', 'Bol', 'Team Leader', 'vibol@gmail.com', '09543334', 'Image', '$2a$08$cnX6al6aTkoyh/N/tKZ11e8ec9J/sldA6R4NdP.2qhhDi0OD3ek1G', 'supervisor@gmail.com', 3, 3),
-(5, 2, 'sFirstname', 'SuLastName', 'Position', NULL, NULL, NULL, NULL, NULL, 3, NULL),
-(8, 8, 'firstName', 'lastName', 'Position', 'Email', '6543', NULL, 'Password test', 'UserName test', 3, 3),
-(9, 8, 'firstName', 'lastName', 'Position', 'Email', '6543', NULL, 'Password test', 'UserName test', 3, 3),
-(25, 2, '', '', '', '', '', NULL, '', '', 3, 3);
+INSERT INTO `supervisor` (`id`, `company_id`, `firstname`, `lastname`, `position`, `email`, `phone`, `picture`, `password`, `username`, `userrole_id`) VALUES
+(4, 4, 'Vi', 'Bol', 'Team Leader', 'vibol@gmail.com', '09543334', 'Image', '$2a$08$cnX6al6aTkoyh/N/tKZ11e8ec9J/sldA6R4NdP.2qhhDi0OD3ek1G', 'supervisor@gmail.com', 3),
+(5, 2, 'sFirstname', 'SuLastName', 'Position', NULL, NULL, NULL, NULL, NULL, 3);
 
 -- --------------------------------------------------------
 
@@ -312,10 +262,10 @@ CREATE TABLE `tutor` (
 --
 
 INSERT INTO `tutor` (`id`, `firstname`, `lastname`, `position`, `email`, `phone`, `picture`, `password`, `username`, `company_id`, `userrole_id`) VALUES
-(16, 'firstName test', 'lastname test', 'Position test', 'email.com test', '098765 test', NULL, '$2a$08$cnX6al6aTkoyh/N/tKZ11e8ec9J/sldA6R4NdP.2qhhDi0OD3ek1G', 'tutor@gmail.com', 1, 2),
+(16, 'firstName test', 'lastname test', 'Position test', 'email.com test', '098765 test', NULL, '$2a$08$cnX6al6aTkoyh/N/tKZ11e8ec9J/sldA6R4NdP.2qhhDi0OD3ek1G', 'tutor@gmail.com', 4, 2),
+(19, 'wert', '', 'good', 'alice@gmail.com', 'ghj', 'yesImage', '', '', 3, 2),
 (32, 'wertyuiop', '', 'good', 'aa', '', NULL, '', '', 2, 2),
-(33, 'testing', 'test', 'test', 'test', 'test', NULL, 'test', 'test', 1, 2),
-(34, 'agiant', 'agiant', 'agiant', 'agiant', 'agiant', NULL, 'agiant', 'agiant', 0, 2);
+(33, 'testing', 'test', 'test', 'test', 'test', NULL, 'test', 'test', 0, 2);
 
 -- --------------------------------------------------------
 
@@ -353,7 +303,8 @@ CREATE TABLE `worklog` (
   `difficultiesandssues` varchar(255) DEFAULT NULL,
   `solutions` varchar(255) DEFAULT NULL,
   `todo` varchar(255) DEFAULT NULL,
-  `comment` varchar(45) DEFAULT NULL
+  `comment` varchar(45) DEFAULT NULL,
+  `student_id` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
@@ -364,42 +315,6 @@ CREATE TABLE `worklog` (
 DROP TABLE IF EXISTS `alluser`;
 
 CREATE ALGORITHM=UNDEFINED DEFINER=`root`@`localhost` SQL SECURITY DEFINER VIEW `alluser`  AS  select `admin`.`username` AS `UserName`,`admin`.`password` AS `Password` from `admin` union select `tutor`.`username` AS `username`,`tutor`.`password` AS `password` from `tutor` union select `supervisor`.`username` AS `username`,`supervisor`.`password` AS `password` from `supervisor` union select `student`.`username` AS `username`,`student`.`password` AS `password` from `student` ;
-
--- --------------------------------------------------------
-
---
--- Structure for view `getcid`
---
-DROP TABLE IF EXISTS `getcid`;
-
-CREATE ALGORITHM=UNDEFINED DEFINER=`root`@`localhost` SQL SECURITY DEFINER VIEW `getcid`  AS  select `company`.`name` AS `name`,`company`.`id` AS `id` from `company` ;
-
--- --------------------------------------------------------
-
---
--- Structure for view `getstuid`
---
-DROP TABLE IF EXISTS `getstuid`;
-
-CREATE ALGORITHM=UNDEFINED DEFINER=`root`@`localhost` SQL SECURITY DEFINER VIEW `getstuid`  AS  select concat(`student`.`firstname`,' ',`student`.`lastname`) AS `stuName`,`student`.`id` AS `id` from `student` ;
-
--- --------------------------------------------------------
-
---
--- Structure for view `getsuid`
---
-DROP TABLE IF EXISTS `getsuid`;
-
-CREATE ALGORITHM=UNDEFINED DEFINER=`root`@`localhost` SQL SECURITY DEFINER VIEW `getsuid`  AS  select concat(`supervisor`.`firstname`,' ',`supervisor`.`lastname`) AS `suName`,`supervisor`.`id` AS `id` from `supervisor` ;
-
--- --------------------------------------------------------
-
---
--- Structure for view `gettid`
---
-DROP TABLE IF EXISTS `gettid`;
-
-CREATE ALGORITHM=UNDEFINED DEFINER=`root`@`localhost` SQL SECURITY DEFINER VIEW `gettid`  AS  select concat(`tutor`.`firstname`,' ',`tutor`.`lastname`) AS `tName`,`tutor`.`id` AS `id` from `tutor` ;
 
 -- --------------------------------------------------------
 
@@ -434,7 +349,8 @@ ALTER TABLE `admin`
 -- Indexes for table `comment`
 --
 ALTER TABLE `comment`
-  ADD PRIMARY KEY (`id`);
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `fk_comment_student1_idx` (`student_id`);
 
 --
 -- Indexes for table `company`
@@ -452,7 +368,8 @@ ALTER TABLE `meeting`
 -- Indexes for table `questionnaire`
 --
 ALTER TABLE `questionnaire`
-  ADD PRIMARY KEY (`id`);
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `fk_questionnaire_student1_idx` (`student_id`);
 
 --
 -- Indexes for table `student`
@@ -460,10 +377,7 @@ ALTER TABLE `questionnaire`
 ALTER TABLE `student`
   ADD PRIMARY KEY (`id`,`userrole_id`),
   ADD KEY `fk_student_supervisor1_idx` (`supervisor_id`),
-  ADD KEY `fk_student_userrole1_idx` (`userrole_id`),
-  ADD KEY `worklog_id` (`worklog_id`),
-  ADD KEY `questionnaire_id` (`questionnaire_id`),
-  ADD KEY `comment_id` (`comment_id`);
+  ADD KEY `fk_student_userrole1_idx` (`userrole_id`);
 
 --
 -- Indexes for table `supervisor`
@@ -471,8 +385,7 @@ ALTER TABLE `student`
 ALTER TABLE `supervisor`
   ADD PRIMARY KEY (`id`,`userrole_id`),
   ADD KEY `fk_supervisor_company1_idx` (`company_id`),
-  ADD KEY `fk_supervisor_userrole1_idx` (`userrole_id`),
-  ADD KEY `student_id` (`student_id`);
+  ADD KEY `fk_supervisor_userrole1_idx` (`userrole_id`);
 
 --
 -- Indexes for table `tutor`
@@ -492,7 +405,8 @@ ALTER TABLE `userrole`
 -- Indexes for table `worklog`
 --
 ALTER TABLE `worklog`
-  ADD PRIMARY KEY (`id`);
+  ADD PRIMARY KEY (`id`,`student_id`),
+  ADD KEY `fk_worklog_student1_idx` (`student_id`);
 
 --
 -- AUTO_INCREMENT for dumped tables
@@ -520,19 +434,19 @@ ALTER TABLE `questionnaire`
 -- AUTO_INCREMENT for table `student`
 --
 ALTER TABLE `student`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- AUTO_INCREMENT for table `supervisor`
 --
 ALTER TABLE `supervisor`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=26;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT for table `tutor`
 --
 ALTER TABLE `tutor`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=35;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=34;
 
 --
 -- AUTO_INCREMENT for table `userrole`
@@ -557,13 +471,22 @@ ALTER TABLE `admin`
   ADD CONSTRAINT `fk_admin_userrole1` FOREIGN KEY (`userrole_id`) REFERENCES `userrole` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION;
 
 --
+-- Constraints for table `comment`
+--
+ALTER TABLE `comment`
+  ADD CONSTRAINT `fk_comment_student1` FOREIGN KEY (`student_id`) REFERENCES `student` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION;
+
+--
+-- Constraints for table `questionnaire`
+--
+ALTER TABLE `questionnaire`
+  ADD CONSTRAINT `fk_questionnaire_student1` FOREIGN KEY (`student_id`) REFERENCES `student` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION;
+
+--
 -- Constraints for table `student`
 --
 ALTER TABLE `student`
-  ADD CONSTRAINT `fk_student_userrole1` FOREIGN KEY (`userrole_id`) REFERENCES `userrole` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION,
-  ADD CONSTRAINT `student_ibfk_1` FOREIGN KEY (`worklog_id`) REFERENCES `worklog` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
-  ADD CONSTRAINT `student_ibfk_2` FOREIGN KEY (`questionnaire_id`) REFERENCES `questionnaire` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
-  ADD CONSTRAINT `student_ibfk_3` FOREIGN KEY (`comment_id`) REFERENCES `comment` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
+  ADD CONSTRAINT `fk_student_userrole1` FOREIGN KEY (`userrole_id`) REFERENCES `userrole` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION;
 
 --
 -- Constraints for table `supervisor`
@@ -571,13 +494,19 @@ ALTER TABLE `student`
 ALTER TABLE `supervisor`
   ADD CONSTRAINT `fk_supervisor_company1` FOREIGN KEY (`company_id`) REFERENCES `company` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
   ADD CONSTRAINT `fk_supervisor_userrole1` FOREIGN KEY (`userrole_id`) REFERENCES `userrole` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
-  ADD CONSTRAINT `supervisor_ibfk_1` FOREIGN KEY (`student_id`) REFERENCES `student` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
+  ADD CONSTRAINT `supervisor_ibfk_1` FOREIGN KEY (`id`) REFERENCES `student` (`supervisor_id`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
 -- Constraints for table `tutor`
 --
 ALTER TABLE `tutor`
   ADD CONSTRAINT `fk_tutor_userrole1` FOREIGN KEY (`userrole_id`) REFERENCES `userrole` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
+
+--
+-- Constraints for table `worklog`
+--
+ALTER TABLE `worklog`
+  ADD CONSTRAINT `fk_worklog_student1` FOREIGN KEY (`student_id`) REFERENCES `student` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

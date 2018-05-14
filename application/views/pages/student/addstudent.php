@@ -8,77 +8,79 @@
 	<h3 class="text-primary text-center">Add Student</h3><br>
 	<div class="row">
 		<div class="border border-form rounded bg-white">		
-			<form action="" method="" class="addStudent">
+			<form action="<?php echo base_url();?>Welcome_IF/newStudent" method="post" class="addStudent">
 				<div class="form-row">
 					<div class="form-group row col-md-6 group-col-stu">
 						<label class="col-sm-4 col-form-label" for="">First Name</label>
 						<div class="col-sm-8">
-							<input type="text" name="" id="" class="form-control" placeholder="...">
-						</div>
-					</div>
-					<div class="form-group row col-md-6 group-col-stu">
-						<label class="col-sm-4 col-form-label" for="">Phone Number</label>
-						<div class="col-sm-8">
-							<input type="text" name="" id="" class="form-control" placeholder="...">
+							<input type="text" name="firstname" id="" class="form-control" placeholder="...">
 						</div>
 					</div>
 					<div class="form-group row col-md-6 group-col-stu">
 						<label class="col-sm-4 col-form-label" for="">Last Name</label>
 						<div class="col-sm-8">
-							<input type="text" name="" id="" class="form-control" placeholder="...">
+							<input type="text" name="lastname" id="" class="form-control" placeholder="...">
 						</div>
 					</div>
 					<div class="form-group row col-md-6 group-col-stu">
-						<label class="col-sm-4 col-form-label" for="">Company name</label>
+						<label class="col-sm-4 col-form-label" for="">UserName</label>
 						<div class="col-sm-8">
-							<input type="text" name="" id="" class="form-control" placeholder="...">
+							<input type="text" name="username" id="" class="form-control" placeholder="...">
+						</div>
+					</div>
+					<div class="form-group row col-md-6 group-col-stu">
+						<label class="col-sm-4 col-form-label" for="">Password</label>
+						<div class="col-sm-8">
+							<input type="text" name="password" id="" class="form-control" placeholder="...">
+						</div>
+					</div>
+					<div class="form-group row col-md-6 group-col-stu">
+						<label class="col-sm-4 col-form-label" for="">Phone Number</label>
+						<div class="col-sm-8">
+							<input type="text" name="phone" id="" class="form-control" placeholder="...">
 						</div>
 					</div>
 					<div class="form-group row col-md-6 group-col-stu">
 						<label class="col-sm-4 col-form-label" for="">Batch</label>
 						<div class="col-sm-8">
-							<select id="inputState" class="form-control">
-								<option selected>Web-2018</option>
-								<option>SNA-2018</option>
-								<option>2019-A</option>
-								<option>2019-B</option>
+							<select id="inputState" class="form-control" name="batch">
+								<option selected>Web</option>
+								<option>SNA</option>
 							</select>
 						</div>
 					</div>
 					<div class="form-group row col-md-6 group-col-stu">
 						<label class="col-sm-4 col-form-label" for="">Supervisor</label>
 						<div class="col-sm-8">
-							<input type="text" name="" id="" class="form-control" placeholder="...">
+							<select id="inputState" class="form-control" name="supervisor">
+							  <?php foreach ($sSupervisor as $sSupervisor):?>
+							   <option><?php echo $sSupervisor['suName'];?></option>
+							  <?php endforeach ?>
+							</select>
 						</div>
 					</div>
 					<div class="form-group row col-md-6 group-col-stu">
 						<label class="col-sm-4 col-form-label" for="">Year</label>
 						<div class="col-sm-8">
-							<input type="text" name="" id="" class="form-control" placeholder="...">
-						</div>
-					</div>
-					<div class="form-group row col-md-6 group-col-stu">
-						<label class="col-sm-4 col-form-label" for="">Tutor</label>
-						<div class="col-sm-8">
-							<input type="text" name="" id="" class="form-control" placeholder="...">
+							<input type="text" name="year" id="" class="form-control" placeholder="...">
 						</div>
 					</div>
 					<div class="form-group row col-md-6 group-col-stu">
 						<label class="col-sm-4 col-form-label" for="">Personal Email</label>
 						<div class="col-sm-8">
-							<input type="text" name="" id="" class="form-control" placeholder="...">
+							<input type="text" name="peremail" id="" class="form-control" placeholder="...">
 						</div>
 					</div>
 					<div class="form-group row col-md-6 group-col-stu">
 						<label class="col-sm-4 col-form-label" for="">Hired</label>
 						<div class="col-sm-2">
-							<input type="checkbox" class="custom-control-input">
+							<input type="checkbox" class="custom-control-input" name="hired">
 						</div>
 					</div>
 					<div class="form-group row col-md-6 group-col-stu">
 						<label class="col-sm-4 col-form-label" for="">School Email</label>
 						<div class="col-sm-8">
-							<input type="text" name="" id="" class="form-control" placeholder="...">
+							<input type="text" name="schoolemail" id="" class="form-control" placeholder="...">
 						</div>
 					</div>
 					<div class="form-group row col-md-6 group-col-stu">

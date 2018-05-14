@@ -16,6 +16,7 @@ class Welcome_IF extends CI_Controller {
 	}
 	public function home()
 	{
+
 		$this->load->Model('users_model');
         $data['company'] = $this->users_model->getCompanyData();
 		$data['activeLink'] = 'home';
@@ -330,7 +331,7 @@ class Welcome_IF extends CI_Controller {
 		$data['activeLink'] = 'supervisor';
 		$this->load->view('templates/header.php',$data);
 		$this->load->view('menu/index.php',$data);
-		$this->load->view('pages/supervisor/index.php');
+		$this->load->view('pages/supervisor/index.php',$data);
 		$this->load->view('templates/footer.php');
 	}
 	public function questionniare()
@@ -354,8 +355,12 @@ class Welcome_IF extends CI_Controller {
 		$this->load->view('pages/student/index.php',$data);
 		$this->load->view('templates/footer.php');
 	}
-	public function viewStudent()
+	public function viewStudentData()
 	{
+		$this->load->helper('form');
+		$stuId = $_GET['id'];
+		$this->load->Model('users_model');
+		$data['student'] = $this->users_model->viewStudentData($stuId);
 		$data['activeLink'] = 'student';
 		$this->load->view('templates/header.php',$data);
 		$this->load->view('menu/index.php',$data);
@@ -364,18 +369,85 @@ class Welcome_IF extends CI_Controller {
 	}
 	public function updateStudent()
 	{
+		$this->load->helper('form');
+		$stuId = $_GET['id'];
+		$this->load->Model('users_model');
+		$data['sSupervisor'] = $this->users_model->getSupervisor(); 
+		$data['student'] = $this->users_model->viewStudentData($stuId);
 		$data['activeLink'] = 'student';
 		$this->load->view('templates/header.php',$data);
 		$this->load->view('menu/index.php',$data);
 		$this->load->view('pages/student/editstudent.php');
 		$this->load->view('templates/footer.php');
 	}
-	public function addStudent()
+	public function editStudent()
 	{
+		$this->load->helper('form');
+		$stuId = $_GET['id'];
+		$firstname = $this->input->post("firstname");
+		$lastname = $this->input->post("lastname");
+		$username = $this->input->post("username");
+		$password = $this->input->post("password");
+		$supervisor = $this->input->post("supervisor");
+		$phone = $this->input->post("phone");
+		$batch = $this->input->post("batch");
+		$year = $this->input->post("year");
+		$peremail = $this->input->post("peremail");
+		$schoolemail = $this->input->post("schoolemail");
+		$this->load->Model('users_model');
+		$this->users_model->editStudent($stuId,$firstname,$lastname,$username,$password,$supervisor,$phone,$batch,$year,$peremail,$schoolemail);
+		$data['student'] = $this->users_model->getStudentData();
 		$data['activeLink'] = 'student';
 		$this->load->view('templates/header.php',$data);
 		$this->load->view('menu/index.php',$data);
-		$this->load->view('pages/student/addstudent.php');
+		$this->load->view('pages/student/index.php',$data);
+		$this->load->view('templates/footer.php');
+	}
+	public function addStudent()
+	{
+		$this->load->helper('form');
+		$this->load->Model('users_model');
+		$data['sSupervisor'] = $this->users_model->getSupervisor();
+		$data['activeLink'] = 'student';
+		$this->load->view('templates/header.php',$data);
+		$this->load->view('menu/index.php',$data);
+		$this->load->view('pages/student/addstudent' );
+		$this->load->view('templates/footer.php');
+	}
+	public function newStudent()
+	{
+		$this->load->helper('form');
+		$firstname = $this->input->post("firstname");
+		$lastname = $this->input->post("lastname");
+		$username = $this->input->post("username");
+		$password = $this->input->post("password");
+		$supervisor = $this->input->post("supervisor");
+		$phone = $this->input->post("phone");
+		$batch = $this->input->post("batch");
+		$year = $this->input->post("year");
+		$peremail = $this->input->post("peremail");
+		$schoolemail = $this->input->post("schoolemail");
+		$this->load->Model('users_model');
+		$this->users_model->newStudent($firstname,$lastname,$username,$password,$supervisor,$phone,$batch,$year,$peremail,$schoolemail);
+		$this->load->helper('form');
+		$this->load->Model('users_model');
+	    $data['student'] = $this->users_model->getStudentData();
+		$data['activeLink'] = 'student';
+		$this->load->view('templates/header.php',$data);
+		$this->load->view('menu/index.php',$data);
+		$this->load->view('pages/student/index.php',$data);
+		$this->load->view('templates/footer.php');
+	}
+	public function deleteStudent()
+	{
+		$stuId = $_GET['id'];
+		$this->load->Model('users_model');
+		$this->users_model->deleteStudent($stuId);
+	    $data['student'] = $this->users_model->getStudentData();
+		$data['activeLink'] = 'student';
+		$this->load->view('templates/header.php',$data);
+		$this->load->view('menu/index.php',$data);
+		$this->load->view('pages/student/index.php',$data);
 		$this->load->view('templates/footer.php');
 	}
 	public function worklog()

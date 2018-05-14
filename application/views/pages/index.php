@@ -1,3 +1,4 @@
+
 <div class="container erohome">
   <!-- title welcom -->
   <div class="row">
@@ -14,7 +15,7 @@
           <i class="mdi mdi-domain mdi-light"></i>
           <!-- <br><br> -->
           <h4>Number of Companies</h4>  
-          <h5 class="card-title">124</h5>
+          <h5 class="card-title"><?php echo $company; ?></h5>
         </div>
         <div class="card-body">
           <a href="<?php echo base_url();?>Welcome_IF/company" class="btn btn-primary">Go Companies</a>
@@ -27,7 +28,7 @@
         <div class="card-header card2">
           <i class="mdi mdi-account mdi-light"></i>
           <h4>Number of Supervisors</h4>
-          <h5 class="card-title">299</h5>
+          <h5 class="card-title"><?php echo $supervisor; ?></h5>
         </div>
         <div class="card-body">
           <a href="<?php echo base_url();?>Welcome_IF/supervisor" class="btn btn-primary">Go Supervisors</a>
@@ -42,7 +43,7 @@
         <div class="card-header card3">
           <i class="mdi mdi-account-multiple mdi-light"></i>
           <h4>  Number of <br>Tutors</h4>
-          <h5 class="card-title">149</h5>
+          <h5 class="card-title"><?php echo $tutor; ?></h5>
         </div>
         <div class="card-body">
           <a href="<?php echo base_url();?>Welcome_IF/tutor" class="btn btn-primary">Go Tutors</a>
@@ -54,7 +55,7 @@
         <div class="card-header card4">
           <i class="mdi mdi-school mdi-light"></i>
           <h4>Number of Students</h4>
-          <h5 class="card-title">232</h5>
+          <h5 class="card-title"><?php echo $student; ?></h5>
         </div>
         <div class="card-body">
           <a href="<?php echo base_url();?>Welcome_IF/student" class="btn btn-primary">Go Students</a>

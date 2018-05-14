@@ -33,13 +33,13 @@
 					</td>
 					<td class="text-center">
 						
-						<a href="<?php echo base_url();?>Welcome_IF/viewStudent">
+						<a href="<?php echo base_url();?>Welcome_IF/viewStudentData?&id=<?php echo $student['id']; ?>">
 							<i class="mdi mdi-eye text-info mdi-24px" data-toggle ="tooltip" title="View "></i>
 						</a>
-						<a href="<?php echo base_url();?>Welcome_IF/updateStudent" data-toggle ="tooltip" title="Edit ">
+						<a href="<?php echo base_url();?>Welcome_IF/updateStudent?&id=<?php echo $student['id']; ?>" data-toggle ="tooltip" title="Edit ">
 							<i class="mdi  mdi-border-color text-success mdi-24px" ></i>
 						</a>
-						<a href="" onclick = "return confirm('Are you sure that you want to delete this student?')" data-toggle ="tooltip" title="Delete ">
+						<a href="<?php echo base_url();?>Welcome_IF/deleteStudent?&id=<?php echo $student['id']; ?>" onclick = "return confirm('Are you sure that you want to delete this student?')" data-toggle ="tooltip" title="Delete ">
 							<i class="mdi mdi-delete text-danger mdi-24px" ></i>
 						</a>
 					</td>

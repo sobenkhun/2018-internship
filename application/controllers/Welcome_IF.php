@@ -153,9 +153,10 @@ class Welcome_IF extends CI_Controller {
 		$password = $this->input->post("password");
 		$position = $this->input->post("position");
 		$sEmail = $this->input->post("sEmail");
+		$company = $this->input->post("company");
 		$phone = $this->input->post("phone");
 		$this->load->Model('users_model');
-       	$this->users_model->addTutor($firstname,$lastname,$username,$password,$position,$sEmail,$phone);
+       	$this->users_model->addTutor($company,$firstname,$lastname,$username,$password,$position,$sEmail,$phone);
         $data['tutor'] = $this->users_model->getTutorData();
 		$data['activeLink'] = 'Tutor';
 		$this->load->view('templates/header.php',$data);
@@ -179,6 +180,7 @@ class Welcome_IF extends CI_Controller {
 		$tutorId = $_GET['id'];
 		$this->load->Model('users_model');
         $data['tutor'] = $this->users_model->getTutorDataDetail($tutorId);
+		$data['company'] = $this->users_model->getCompanyData();
 		$data['activeLink'] = 'Tutor';
 		$this->load->view('templates/header.php',$data);
 		$this->load->view('menu/index.php',$data);
@@ -195,9 +197,10 @@ class Welcome_IF extends CI_Controller {
 		$password = $this->input->post("password");
 		$position = $this->input->post("position");
 		$sEmail = $this->input->post("sEmail");
+		$company = $this->input->post("company");
 		$phone = $this->input->post("phone");
 		$this->load->Model('users_model');
-       	$this->users_model->editTutor($tutorId,$firstname,$lastname,$userName,$password,$position,$sEmail,$phone);
+       	$this->users_model->editTutor($tutorId,$company,$firstname,$lastname,$userName,$password,$position,$sEmail,$phone);
        	$data['tutor'] = $this->users_model->getTutorData($tutorId);
 		$data['activeLink'] = 'Tutor';
 		$this->load->view('templates/header.php',$data);
@@ -238,11 +241,11 @@ class Welcome_IF extends CI_Controller {
 		$this->load->helper('form');
 		$this->load->Model('users_model');
 		$data['company'] = $this->users_model->getCompanyData();
-		$data['student'] = $this->users_model->getStudentData();
+		$data['student'] = $this->users_model->getSuStudent();
 		$data['activeLink'] = 'supervisor';
 		$this->load->view('templates/header.php',$data);
 		$this->load->view('menu/index.php',$data);
-		$this->load->view('pages/supervisor/createSupervisor.php');
+		$this->load->view('pages/supervisor/createSupervisor.php',$data);
 		$this->load->view('templates/footer.php');
 	}
 	public function addSupervisor()
@@ -250,19 +253,36 @@ class Welcome_IF extends CI_Controller {
 		$this->load->helper('form');
 		$firstname = $this->input->post("firstname");
 		$lastname = $this->input->post("lastname");
-		$username = $this->input->post("userName");
+		$username = $this->input->post("username");
 		$password = $this->input->post("password");
 		$company = $this->input->post("company");
+		$student = $this->input->post("student");
+		$this->load->Model('users_model');
+		$studntId = $this->users_model->getStuId($student);
 		$position = $this->input->post("position");
-		$sEmail = $this->input->post("sEmail");
+		$sEmail = $this->input->post("email");
 		$phone = $this->input->post("phone");
 		$this->load->Model('users_model');
-       	$this->users_model->addSupervisor($company,$firstname,$lastname,$username,$password,$position,$sEmail,$phone);
-       	$data['supervisor'] = $this->users_model->viewSupervisor($sId);
+       	$this->users_model->addSupervisor($company,$studntId,$firstname,$lastname,$username,$password,$position,$sEmail,$phone);
+       	$this->load->helper('form');
+		$this->load->Model('users_model');
+        $data['supervisor'] = $this->users_model->getSupervisorData();
 		$data['activeLink'] = 'supervisor';
 		$this->load->view('templates/header.php',$data);
 		$this->load->view('menu/index.php',$data);
-		$this->load->view('pages/supervisor/view.php',$data);
+		$this->load->view('pages/supervisor/index.php');
+		$this->load->view('templates/footer.php');
+	}
+	public function deleteSupervisor()
+	{
+		$suId = $_GET['id'];
+		$this->load->Model('users_model');
+		$this->users_model->deleteSupervisor($suId);
+		$data['supervisor'] = $this->users_model->getSupervisorData();
+		$data['activeLink'] = 'supervisor';
+		$this->load->view('templates/header.php',$data);
+		$this->load->view('menu/index.php',$data);
+		$this->load->view('pages/supervisor/index.php');
 		$this->load->view('templates/footer.php');
 	}
 	public function viewSupervisor()
@@ -276,12 +296,41 @@ class Welcome_IF extends CI_Controller {
 		$this->load->view('pages/supervisor/view.php',$data);
 		$this->load->view('templates/footer.php');
 	}
-	public function editSupervisor()
+	public function loadEditSupervisor()
 	{
+		$suId = $_GET['id'];
+		$this->load->helper('form');
+		$this->load->Model('users_model');
+		$data['suDetail'] = $this->users_model->suDetail($suId);
+		$data['company'] = $this->users_model->getCompanyData();
+		$data['student'] = $this->users_model->getSuStudent();
 		$data['activeLink'] = 'supervisor';
 		$this->load->view('templates/header.php',$data);
 		$this->load->view('menu/index.php',$data);
 		$this->load->view('pages/supervisor/edit.php');
+		$this->load->view('templates/footer.php');
+	}
+	public function editSupervisor()
+	{
+		$suId = $_GET['id'];
+		$this->load->helper('form');
+		$firstname = $this->input->post("firstname");
+		$lastname = $this->input->post("lastname");
+		$username = $this->input->post("username");
+		$password = $this->input->post("password");
+		$company = $this->input->post("company");
+		$student = $this->input->post("student");
+		$this->load->Model('users_model');
+		$studntId = $this->users_model->getStuId($student);
+		$position = $this->input->post("position");
+		$sEmail = $this->input->post("email");
+		$phone = $this->input->post("phone");
+		$this->users_model->editSupervisor($suId,$company,$studntId,$firstname,$lastname,$username,$password,$position,$sEmail,$phone);
+        $data['supervisor'] = $this->users_model->getSupervisorData();
+		$data['activeLink'] = 'supervisor';
+		$this->load->view('templates/header.php',$data);
+		$this->load->view('menu/index.php',$data);
+		$this->load->view('pages/supervisor/index.php');
 		$this->load->view('templates/footer.php');
 	}
 	public function questionniare()

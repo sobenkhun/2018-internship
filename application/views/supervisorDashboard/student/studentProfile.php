@@ -14,16 +14,19 @@
 	</div>
 	<br>
 	<div class="row bg-white">
+		<?php foreach ($student as $student):?>
 		<div class="col-md-1"></div>
 		<div class="col-md-4 text-center "><br>
 			<img class="user userSupervisor"  src="<?php echo base_url(); ?>assets/images/studentpiture.jpg" alt="" style="height: 260px; margin-top: 17px; padding: 10px;"><br>
-			<label for="">Prem MANN</label>
-			<?php foreach ($student as $row) {
+			<label for=""><?php echo $student[''] $; ?></label>
+			<!-- <?php foreach ($student as $row) {
 				
 				echo $row['firstname'];
-			} ?>
+				echo $row['schoolemail'];
+			} ?> -->
 		</div>
 		<div class="col-md-6">
+			
 				<table><br>
 					<tr>
 						<td> 
@@ -149,7 +152,9 @@
 						</td>
 					</tr> -->
 				</table>
+				
 		</div>
+		<?php endforeach ?>
 	</div>
 	<!-- </div> -->
 	<!-- </div> -->

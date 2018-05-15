@@ -42,9 +42,9 @@ class supervisor extends CI_Controller {
 	    $data['activeLink'] = 'Student';
 		// var_dump($data);die();
 	    // 
-		$this->load->view('templates/header.php');
-		$this->load->view('menu/supervisorMenu.php');
-		$this->load->view('supervisorDashboard/student/studentProfile.php');
+		$this->load->view('templates/header.php', $data);
+		$this->load->view('menu/supervisorMenu.php', $data);
+		$this->load->view('supervisorDashboard/student/studentProfile.php',$data);
 		$this->load->view('templates/footer.php');
 	}
 	// function student()

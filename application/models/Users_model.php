@@ -51,7 +51,31 @@ class Users_model extends CI_Model {
         $query = $this->db->get('users');
         return $query->result_array();
     }
-
+    //// count number of student company tutor and supervisor
+    public function CNumRow()
+    {
+          $this->db->select('*');
+        $query = $this->db->get('company');
+        return $query->num_rows();
+    }
+    public function sNumRow()
+    {
+          $this->db->select('*');
+        $query = $this->db->get('student');
+        return $query->num_rows();
+    }
+    public function suNumRow()
+    {
+          $this->db->select('*');
+        $query = $this->db->get('supervisor');
+        return $query->num_rows();
+    }
+    public function tNumRow()
+    {
+          $this->db->select('*');
+        $query = $this->db->get('tutor');
+        return $query->num_rows();
+    }
     public function getCompanyData() {
         $this->db->select('*');
         $query = $this->db->get('company');
@@ -95,13 +119,157 @@ class Users_model extends CI_Model {
         $query = $this->db->get('tutor');
         return $query->result_array(); 
     }
+    public function getTutorDataDetail($tutorId)
+    {
+        $this->db->select('*');
+        $query = $this->db->get_where('tutor', array('id' => $tutorId));
+        return $query->result_array();  
+    }
+    public function addTutor($company,$firstname,$lastname,$username,$password,$position,$sEmail,$phone)
+    {
+        $this->db->select("id");
+        $this->db->from("company");
+        $this->db->where('name', $company);
+        $query = $this->db->get();
+        $company_id = $query->result_array();
+        $company_id = (int)$company_id;
+        $data = array('firstname'=>$firstname,
+                     'lastname'=>$lastname,
+                     'position'=>$position,
+                     'username' =>$username,
+                     'password' =>$password,
+                     'company_id' =>$company_id,
+                     'email'=>$sEmail,
+                     'phone'=>$phone,
+                     'userrole_id'=>'2' 
+                 );
+        $this->db->insert('tutor', $data);
+    }
+    public function editTutor($id,$company,$firstname,$lastname,$username,$password,$position,$sEmail,$phone)
+    {
+        $this->db->select("id");
+        $this->db->from("company");
+        $this->db->where('name', $company);
+        $query = $this->db->get();
+        $company_id = $query->result_array();
+        $company_id = (int)$company_id;
+        $data = array('firstname'=>$firstname,
+                     'lastname'=>$lastname,
+                     'username' =>$username,
+                     'password' =>$password,
+                     'company_id' =>$company_id,
+                     'position'=>$position,
+                     'email'=>$sEmail,
+                     'phone'=>$phone
+                 );
+        $this->db->where('id', $id);
+        $this->db->update('tutor', $data);
+    }
+    public function deleteTutor($tutorId)
+    {
+        $this->db->delete('tutor', array('id' => $tutorId));
+    }
     public function getSupervisorData()
     {
       $this->db->select("supervisor.id,name,CONCAT(firstname,' ',lastname) AS supervisorName");
       $this->db->from('supervisor');
-      $this->db->join('company','company.id = supervisor.id');
+      $this->db->join('company','company.id = supervisor.company_id');
       $query = $this->db->get();
      return $query->result_array(); 
+    }
+
+    public function getSuStudent()
+    {
+        $this->db->select('firstname,lastname');
+        $this->db->from('student');
+        $query = $this->db->get();
+        return $query->result_array();
+    }
+    public function viewSupervisor($sId)
+    {
+        $this->db->select('*');
+        $this->db->from('supervisor');
+        $this->db->join('company', 'company.id = supervisor.id');
+        $this->db->where('supervisor.id', $sId);
+        $query = $this->db->get();
+        return $query->result_array();
+    }
+    public function getStuId($studentName)
+    {
+         $this->db->select('id');
+        $this->db->from('getstuid');
+        $this->db->where('stuName', $studentName);
+        $query = $this->db->get();
+        foreach ($query->result_array() as $row)
+            {
+                $stuId = $row['id'];
+            }
+        return $stuId;
+    }
+    public function addSupervisor($company,$student,$firstname,$lastname,$username,$password,$position,$sEmail,$phone)
+    {
+        $this->db->select("id");
+        $this->db->from("company");
+        $this->db->where('name', $company);
+        $query = $this->db->get();
+        foreach ($query->result_array() as $row)
+            {
+                $company_id = $row['id'];
+            }
+            $company_id = (int)$company_id;
+            $student = (int)$student;
+        $data = array('firstname'=>$firstname,
+                     'lastname'=>$lastname,
+                     'position'=>$position,
+                     'username' =>$username,
+                     'company_id' =>$company_id,
+                     'student_id' =>$student,
+                     'password' =>$password,
+                     'email'=>$sEmail,
+                     'phone'=>$phone,
+                     'company_id'=>$company_id, 
+                     'userrole_id'=>'3'
+                 );
+        $this->db->insert('supervisor', $data);
+    }
+    public function suDetail($suId)
+    {
+         $this->db->select('*');
+        $this->db->from('supervisor');
+        $this->db->where('supervisor.id', $suId);
+        $query = $this->db->get();
+        return $query->result_array();
+    }
+    public function editSupervisor($id,$company,$student,$firstname,$lastname,$username,$password,$position,$sEmail,$phone)
+    {
+            $this->db->select("id");
+        $this->db->from("company");
+        $this->db->where('name', $company);
+        $query = $this->db->get();
+        foreach ($query->result_array() as $row)
+            {
+                $company_id = $row['id'];
+            }
+            $company_id = (int)$company_id;
+            $student = (int)$student;
+        $data = array('firstname'=>$firstname,
+                     'lastname'=>$lastname,
+                     'position'=>$position,
+                     'username' =>$username,
+                     'company_id' =>$company_id,
+                     'student_id' =>$student,
+                     'password' =>$password,
+                     'email'=>$sEmail,
+                     'phone'=>$phone,
+                     'company_id'=>$company_id, 
+                     'userrole_id'=>'3'
+                 );
+        $this->db->where('id', $id);
+        $this->db->update('supervisor', $data);
+    }
+    public function deleteSupervisor($suId)
+    {
+        $this->db->delete('supervisor', array('id' => $suId));
     }
     public function getStudentData()
     { 
@@ -112,9 +280,86 @@ class Users_model extends CI_Model {
      $this->db->from('supervisor su');
      $this->db->join('student s', 's.supervisor_id = su.id');
      $this->db->join('company c', 'c.id = su.company_id');
-     $this->db->join('tutor t', 't.id = su.id');
+     $this->db->join('tutor t', 't.company_id = c.id');
     $query = $this->db->get();
      return $query->result_array(); 
+    }
+    public function viewStudentData($stuId)
+    { 
+     $this->db->select("s.id,s.firstname as stuFName,s.lastname as stuLName,
+                            s.phone,s.peremail,s.schoolemail,s.batch,s.year,s.username,s.password,
+                            su.firstname as suFName,su.lastname as suLName,
+                            c.name,
+                            t.firstname as tFName,t.lastname as tLName");
+     $this->db->from('supervisor su');
+     $this->db->join('student s', 's.supervisor_id = su.id');
+     $this->db->join('company c', 'c.id = su.company_id');
+     $this->db->join('tutor t', 't.company_id = c.id');
+     $this->db->where('s.id', $stuId);
+    $query = $this->db->get();
+     return $query->result_array(); 
+    }
+     public function getSupervisor()
+    {
+        $this->db->select("*");
+        $this->db->from('getsuid');
+        $query = $this->db->get();
+        return $query->result_array();
+    }
+    public function newStudent($firstname,$lastname,$username,$password,$supervisor,$phone,$batch,$year,$peremail,$schoolemail)
+    {
+         $this->db->select("id");
+        $this->db->from("getsuid");
+        $this->db->where('suName', $supervisor);
+        $query = $this->db->get();
+        foreach ($query->result_array() as $row)
+            {
+                $supervisor_id = $row['id'];
+            }
+            $supervisor_id = (int)$supervisor_id;
+        $data = array('supervisor_id'=>$supervisor_id,
+                     'firstname'=>$firstname,
+                     'lastname'=>$lastname,
+                     'batch' =>$batch,
+                     'year' =>$year,
+                     'schoolemail' =>$schoolemail,
+                     'peremail' =>$peremail,
+                     'phone'=>$phone,
+                     'password'=>$password,
+                     'username'=>$username, 
+                     'userrole_id'=>'4'
+                 );
+        $this->db->insert('student', $data);
+    }
+    public function editStudent($stuId,$firstname,$lastname,$username,$password,$supervisor,$phone,$batch,$year,$peremail,$schoolemail)
+    {
+        $this->db->select("id");
+        $this->db->from("getsuid");
+        $this->db->where('suName', $supervisor);
+        $query = $this->db->get();
+        foreach ($query->result_array() as $row)
+            {
+                $supervisor_id = $row['id'];
+            }
+            $supervisor_id = (int)$supervisor_id;
+         $data = array('supervisor_id'=>$supervisor_id,
+                     'firstname'=>$firstname,
+                     'lastname'=>$lastname,
+                     'batch' =>$batch,
+                     'year' =>$year,
+                     'schoolemail' =>$schoolemail,
+                     'peremail' =>$peremail,
+                     'phone'=>$phone,
+                     'password'=>$password,
+                     'username'=>$username, 
+                     'userrole_id'=>'4'
+                      );
+        $this->db->where('id', $stuId);
+        $this->db->update('student', $data);
+    }
+    public function deleteStudent($Id)
+    {
+        $this->db->delete('student', array('id' => $Id));
     }
   /**
    * Get the list of roles or one role
@@ -150,7 +395,7 @@ class Users_model extends CI_Model {
         }
     }
 
-    /**
+    /**ujr5q 
      * Check if a login can be used before creating the user
      * @param string $login login identifier
      * @return bool TRUE if available, FALSE otherwise
@@ -280,7 +525,7 @@ class Users_model extends CI_Model {
         }
 
         $newdata = array(
-            'login' => $row->email,
+            'login' => $row->username,
             'id' => $row->id,
             'role' => $row->userrole_id,
             'isAdmin' => $isAdmin,
@@ -297,22 +542,21 @@ class Users_model extends CI_Model {
      * @author Benjamin BALET <benjamin.balet@gmail.com>
      */
     public function checkCredentials($login, $password) {
-        $this->db->from('admin');
-        $this->db->where('email', $login);
+        $row = $this->db->from('getusers');
+        $this->db->where('username', $login);
         $query = $this->db->get();
-        // var_dump($query->result());die();
-
         if ($query->num_rows() == 0) {
             //No match found
             return FALSE;
         } else {
             $row = $query->row();
             $hash = crypt($password, $row->password);
-            // var_dump($hash." ".$row->password);die();
             if ($hash == $row->password) {
+            // var_dump($hash."".$row->password);die();
                 // Password does match stored password.
                 $this->loadProfile($row);
-                return TRUE;
+                // var_dump($row->userrole_id);die();
+                return $row->userrole_id;
             } else {
                 // Password does not match stored password.
                 return FALSE;

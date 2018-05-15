@@ -16,6 +16,7 @@ class Welcome_IF extends CI_Controller {
 	}
 	public function home()
 	{
+
 		$this->load->Model('users_model');
         $data['company'] = $this->users_model->getCompanyData();
 		$data['activeLink'] = 'home';
@@ -41,6 +42,7 @@ class Welcome_IF extends CI_Controller {
 	public function detailCompany()
 	{
 		$companyId = $_GET['id'];
+		$this->load->Model('users_model');
 		$data['company'] = $this->users_model->getCompanyDataDetail($companyId);
 		$data['activeLink'] = 'Company';
 		$this->load->view('templates/header.php',$data);
@@ -110,6 +112,7 @@ class Welcome_IF extends CI_Controller {
 		$this->load->Model('users_model');
 		$companyId = $_GET['id'];
 		$this->users_model->deleteCompany($companyId);
+		$data['company'] = $this->users_model->getCompanyData();
 		$data['activeLink'] = 'Company';
 		$this->load->view('templates/header.php',$data);
 		$this->load->view('menu/index.php',$data);
@@ -131,28 +134,93 @@ class Welcome_IF extends CI_Controller {
 		$this->load->view('pages/tutor/index.php',$data);
 		$this->load->view('templates/footer.php');
 	}
-	public function addTutor()
+	public function loadAddTutor()
 	{
+		$this->load->helper('form');
+		$this->load->Model('users_model');
+		$data['company'] = $this->users_model->getCompanyData();
 		$data['activeLink'] = 'Tutor';
 		$this->load->view('templates/header.php',$data);
 		$this->load->view('menu/index.php',$data);
-		$this->load->view('pages/tutor/addNew.php');
+		$this->load->view('pages/tutor/addNew.php',$data);
+		$this->load->view('templates/footer.php');
+	}
+	public function addTutor()
+	{
+		$this->load->helper('form');
+		$firstname = $this->input->post("firstname");
+		$lastname = $this->input->post("lastname");
+		$username = $this->input->post("userName");
+		$password = $this->input->post("password");
+		$position = $this->input->post("position");
+		$sEmail = $this->input->post("sEmail");
+		$company = $this->input->post("company");
+		$phone = $this->input->post("phone");
+		$this->load->Model('users_model');
+       	$this->users_model->addTutor($company,$firstname,$lastname,$username,$password,$position,$sEmail,$phone);
+        $data['tutor'] = $this->users_model->getTutorData();
+		$data['activeLink'] = 'Tutor';
+		$this->load->view('templates/header.php',$data);
+		$this->load->view('menu/index.php',$data);
+		$this->load->view('pages/tutor/index.php',$data);
 		$this->load->view('templates/footer.php');
 	}
 	public function detailTutor()
 	{
+		$tutorId = $_GET['id'];
+		$this->load->Model('users_model');
+        $data['tutor'] = $this->users_model->getTutorDataDetail($tutorId);
 		$data['activeLink'] = 'Tutor';
 		$this->load->view('templates/header.php',$data);
 		$this->load->view('menu/index.php',$data);
-		$this->load->view('pages/tutor/detailTutor.php');
+		$this->load->view('pages/tutor/detailTutor.php',$data);
+		$this->load->view('templates/footer.php');
+	}
+	public function loadEditTutor()
+	{
+		$tutorId = $_GET['id'];
+		$this->load->Model('users_model');
+        $data['tutor'] = $this->users_model->getTutorDataDetail($tutorId);
+		$data['company'] = $this->users_model->getCompanyData();
+		$data['activeLink'] = 'Tutor';
+		$this->load->view('templates/header.php',$data);
+		$this->load->view('menu/index.php',$data);
+		$this->load->view('pages/tutor/editTutor.php',$data);
 		$this->load->view('templates/footer.php');
 	}
 	public function editTutor()
 	{
+		$tutorId = $_GET['id'];
+		$this->load->helper('form');
+		$firstname = $this->input->post("firstname");
+		$lastname = $this->input->post("lastname");
+		$userName = $this->input->post("username");
+		$password = $this->input->post("password");
+		$position = $this->input->post("position");
+		$sEmail = $this->input->post("sEmail");
+		$company = $this->input->post("company");
+		$phone = $this->input->post("phone");
+		$this->load->Model('users_model');
+       	$this->users_model->editTutor($tutorId,$company,$firstname,$lastname,$userName,$password,$position,$sEmail,$phone);
+       	$data['tutor'] = $this->users_model->getTutorData($tutorId);
 		$data['activeLink'] = 'Tutor';
 		$this->load->view('templates/header.php',$data);
 		$this->load->view('menu/index.php',$data);
-		$this->load->view('pages/tutor/editTutor.php');
+		$this->load->view('pages/tutor/index.php',$data);
+		$this->load->view('templates/footer.php');
+	}
+	public function deleteTutor()
+	{
+		$tutorId = $_GET['id'];
+		$this->load->Model('users_model');
+		$this->users_model->deleteTutor($tutorId);
+		$this->load->helper('form');
+		$this->load->Model('users_model');
+        $data['tutor'] = $this->users_model->getTutorData();
+		$data['activeLink'] = 'Tutor';
+		$this->load->view('templates/header.php',$data);
+		$this->load->view('menu/index.php',$data);
+		$this->load->view('pages/tutor/index.php',$data);
 		$this->load->view('templates/footer.php');
 	}
 	// End of tutor function 
@@ -171,26 +239,99 @@ class Welcome_IF extends CI_Controller {
 
 	public function createSupervisor()
 	{
+		$this->load->helper('form');
+		$this->load->Model('users_model');
+		$data['company'] = $this->users_model->getCompanyData();
+		$data['student'] = $this->users_model->getSuStudent();
 		$data['activeLink'] = 'supervisor';
 		$this->load->view('templates/header.php',$data);
 		$this->load->view('menu/index.php',$data);
-		$this->load->view('pages/supervisor/createSupervisor.php');
+		$this->load->view('pages/supervisor/createSupervisor.php',$data);
+		$this->load->view('templates/footer.php');
+	}
+	public function addSupervisor()
+	{
+		$this->load->helper('form');
+		$firstname = $this->input->post("firstname");
+		$lastname = $this->input->post("lastname");
+		$username = $this->input->post("username");
+		$password = $this->input->post("password");
+		$company = $this->input->post("company");
+		$student = $this->input->post("student");
+		$this->load->Model('users_model');
+		$studntId = $this->users_model->getStuId($student);
+		$position = $this->input->post("position");
+		$sEmail = $this->input->post("email");
+		$phone = $this->input->post("phone");
+		$this->load->Model('users_model');
+       	$this->users_model->addSupervisor($company,$studntId,$firstname,$lastname,$username,$password,$position,$sEmail,$phone);
+       	$this->load->helper('form');
+		$this->load->Model('users_model');
+        $data['supervisor'] = $this->users_model->getSupervisorData();
+		$data['activeLink'] = 'supervisor';
+		$this->load->view('templates/header.php',$data);
+		$this->load->view('menu/index.php',$data);
+		$this->load->view('pages/supervisor/index.php');
+		$this->load->view('templates/footer.php');
+	}
+	public function deleteSupervisor()
+	{
+		$suId = $_GET['id'];
+		$this->load->Model('users_model');
+		$this->users_model->deleteSupervisor($suId);
+		$data['supervisor'] = $this->users_model->getSupervisorData();
+		$data['activeLink'] = 'supervisor';
+		$this->load->view('templates/header.php',$data);
+		$this->load->view('menu/index.php',$data);
+		$this->load->view('pages/supervisor/index.php');
 		$this->load->view('templates/footer.php');
 	}
 	public function viewSupervisor()
 	{
+		$sId = $_GET['id'];
+		$this->load->Model('users_model');
+		$data['supervisor'] = $this->users_model->viewSupervisor($sId);
 		$data['activeLink'] = 'supervisor';
 		$this->load->view('templates/header.php',$data);
 		$this->load->view('menu/index.php',$data);
-		$this->load->view('pages/supervisor/view.php');
+		$this->load->view('pages/supervisor/view.php',$data);
 		$this->load->view('templates/footer.php');
 	}
-	public function editSupervisor()
+	public function loadEditSupervisor()
 	{
+		$suId = $_GET['id'];
+		$this->load->helper('form');
+		$this->load->Model('users_model');
+		$data['suDetail'] = $this->users_model->suDetail($suId);
+		$data['company'] = $this->users_model->getCompanyData();
+		$data['student'] = $this->users_model->getSuStudent();
 		$data['activeLink'] = 'supervisor';
 		$this->load->view('templates/header.php',$data);
 		$this->load->view('menu/index.php',$data);
 		$this->load->view('pages/supervisor/edit.php');
+		$this->load->view('templates/footer.php');
+	}
+	public function editSupervisor()
+	{
+		$suId = $_GET['id'];
+		$this->load->helper('form');
+		$firstname = $this->input->post("firstname");
+		$lastname = $this->input->post("lastname");
+		$username = $this->input->post("username");
+		$password = $this->input->post("password");
+		$company = $this->input->post("company");
+		$student = $this->input->post("student");
+		$this->load->Model('users_model');
+		$studntId = $this->users_model->getStuId($student);
+		$position = $this->input->post("position");
+		$sEmail = $this->input->post("email");
+		$phone = $this->input->post("phone");
+		$this->users_model->editSupervisor($suId,$company,$studntId,$firstname,$lastname,$username,$password,$position,$sEmail,$phone);
+        $data['supervisor'] = $this->users_model->getSupervisorData();
+		$data['activeLink'] = 'supervisor';
+		$this->load->view('templates/header.php',$data);
+		$this->load->view('menu/index.php',$data);
+		$this->load->view('pages/supervisor/index.php',$data);
 		$this->load->view('templates/footer.php');
 	}
 	public function questionniare()
@@ -214,8 +355,12 @@ class Welcome_IF extends CI_Controller {
 		$this->load->view('pages/student/index.php',$data);
 		$this->load->view('templates/footer.php');
 	}
-	public function viewStudent()
+	public function viewStudentData()
 	{
+		$this->load->helper('form');
+		$stuId = $_GET['id'];
+		$this->load->Model('users_model');
+		$data['student'] = $this->users_model->viewStudentData($stuId);
 		$data['activeLink'] = 'student';
 		$this->load->view('templates/header.php',$data);
 		$this->load->view('menu/index.php',$data);
@@ -224,18 +369,85 @@ class Welcome_IF extends CI_Controller {
 	}
 	public function updateStudent()
 	{
+		$this->load->helper('form');
+		$stuId = $_GET['id'];
+		$this->load->Model('users_model');
+		$data['sSupervisor'] = $this->users_model->getSupervisor(); 
+		$data['student'] = $this->users_model->viewStudentData($stuId);
 		$data['activeLink'] = 'student';
 		$this->load->view('templates/header.php',$data);
 		$this->load->view('menu/index.php',$data);
 		$this->load->view('pages/student/editstudent.php');
 		$this->load->view('templates/footer.php');
 	}
-	public function addStudent()
+	public function editStudent()
 	{
+		$this->load->helper('form');
+		$stuId = $_GET['id'];
+		$firstname = $this->input->post("firstname");
+		$lastname = $this->input->post("lastname");
+		$username = $this->input->post("username");
+		$password = $this->input->post("password");
+		$supervisor = $this->input->post("supervisor");
+		$phone = $this->input->post("phone");
+		$batch = $this->input->post("batch");
+		$year = $this->input->post("year");
+		$peremail = $this->input->post("peremail");
+		$schoolemail = $this->input->post("schoolemail");
+		$this->load->Model('users_model');
+		$this->users_model->editStudent($stuId,$firstname,$lastname,$username,$password,$supervisor,$phone,$batch,$year,$peremail,$schoolemail);
+		$data['student'] = $this->users_model->getStudentData();
 		$data['activeLink'] = 'student';
 		$this->load->view('templates/header.php',$data);
 		$this->load->view('menu/index.php',$data);
-		$this->load->view('pages/student/addstudent.php');
+		$this->load->view('pages/student/index.php',$data);
+		$this->load->view('templates/footer.php');
+	}
+	public function addStudent()
+	{
+		$this->load->helper('form');
+		$this->load->Model('users_model');
+		$data['sSupervisor'] = $this->users_model->getSupervisor();
+		$data['activeLink'] = 'student';
+		$this->load->view('templates/header.php',$data);
+		$this->load->view('menu/index.php',$data);
+		$this->load->view('pages/student/addstudent' );
+		$this->load->view('templates/footer.php');
+	}
+	public function newStudent()
+	{
+		$this->load->helper('form');
+		$firstname = $this->input->post("firstname");
+		$lastname = $this->input->post("lastname");
+		$username = $this->input->post("username");
+		$password = $this->input->post("password");
+		$supervisor = $this->input->post("supervisor");
+		$phone = $this->input->post("phone");
+		$batch = $this->input->post("batch");
+		$year = $this->input->post("year");
+		$peremail = $this->input->post("peremail");
+		$schoolemail = $this->input->post("schoolemail");
+		$this->load->Model('users_model');
+		$this->users_model->newStudent($firstname,$lastname,$username,$password,$supervisor,$phone,$batch,$year,$peremail,$schoolemail);
+		$this->load->helper('form');
+		$this->load->Model('users_model');
+	    $data['student'] = $this->users_model->getStudentData();
+		$data['activeLink'] = 'student';
+		$this->load->view('templates/header.php',$data);
+		$this->load->view('menu/index.php',$data);
+		$this->load->view('pages/student/index.php',$data);
+		$this->load->view('templates/footer.php');
+	}
+	public function deleteStudent()
+	{
+		$stuId = $_GET['id'];
+		$this->load->Model('users_model');
+		$this->users_model->deleteStudent($stuId);
+	    $data['student'] = $this->users_model->getStudentData();
+		$data['activeLink'] = 'student';
+		$this->load->view('templates/header.php',$data);
+		$this->load->view('menu/index.php',$data);
+		$this->load->view('pages/student/index.php',$data);
 		$this->load->view('templates/footer.php');
 	}
 	public function worklog()

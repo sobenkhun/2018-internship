@@ -1229,24 +1229,10 @@
                  </div>
                  <div class="c-button-section">
                     <div class="c-action"><button class="c-button" id="c-submit-button">Submit</button></div>
-                    <div sys:id="c-submit-warning" class="" sys:attach="dataview" dataview:data="{binding entry, source={{ Cognito.Forms.model }} }" id="c-submit-warning">Please do not submit passwords through Cognito Forms.</div>
+                    <div sys:id="c-submit-warning" class="" sys:attach="dataview" dataview:data="{binding entry, source={{ Cognito.Forms.model }} }" id="c-submit-warning"></div>
                  </div>
               </div>
               <div class="c-forms-confirmation">
-                <!--  <div class="c-forms-heading">
-                    <div class="c-forms-logo" style="display:none;"></div>
-                    <div class="c-forms-form-title">
-                       <h2>Companies Form PNC</h2>
-                    </div>
-                 </div>
--->                  <!-- <div class="c-forms-confirmation-message c-html" sys:attach="dataview" dataview:data="{binding entry, source={{ Cognito.Forms.model }} }"><span>Thank you for filling out the form. Your response has been recorded.</span></div> -->
-              </div>
-              <!-- <div class="c-footer-terms" sys:attach="dataview" dataview:data="{binding entry, source={{ Cognito.Forms.model }} }">
-                 <ul class="terms">
-                    <li><a href="https://www.cognitoforms.com/reportabuse?form=https%3A%2F%2Fwww.cognitoforms.com%2FPasserellesNum%25C3%25A9riques%2FCompaniesFormPNC" target="_blank">Report Abuse</a></li>
-                    <li><a href="https://www.cognitoforms.com/terms" target="_blank">Terms of Service</a></li>
-                 </ul>
-              </div> -->
            </div>
            <input type="hidden" name="NoBots" id="c-nobots" value="2GL5omvmYryVdUEc6ayEavGK3wSDUZc1ZfOKfZGWg2w=|4950efe6567eb630c9c398b0b9550160">
         </form>

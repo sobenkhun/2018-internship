@@ -40,6 +40,9 @@ class supervisor extends CI_Controller {
 		// Udefine this key "student"
 	    $data['student'] = $this->Supervisor_model->getDataStudentDetail($studentId);
 	    $data['activeLink'] = 'Student';
+
+		// var_dump($data);die();
+	    // 
 		$this->load->view('templates/header.php');
 		$this->load->view('menu/supervisorMenu.php');
 		$this->load->view('supervisorDashboard/student/studentProfile.php',$data);

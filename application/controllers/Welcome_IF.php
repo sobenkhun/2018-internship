@@ -18,7 +18,10 @@ class Welcome_IF extends CI_Controller {
 	{
 
 		$this->load->Model('users_model');
-        $data['company'] = $this->users_model->getCompanyData();
+		$data['supervisor'] = $this->users_model->suNumRow();
+        $data['company'] = $this->users_model->CNumRow();
+        $data['tutor'] = $this->users_model->TNumRow();
+        $data['student'] = $this->users_model->sNumRow();
 		$data['activeLink'] = 'home';
 		$this->load->view('templates/header.php',$data);
 		$this->load->view('menu/index.php',$data);

@@ -72,7 +72,7 @@ class Supervisor_model extends CI_Model {
      //      }else{
      //          return $query->result_array();
      //      }
-     return $query->result(); 
+     return $query->result_array(); 
 
     }
 // 	public function getDataSudentDetail()

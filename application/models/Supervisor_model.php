@@ -42,17 +42,16 @@ class Supervisor_model extends CI_Model {
     {
         $this->db->select("student.firstname, 
 							student.lastname AS studentName, 
-							company.url, 
-							CONCAT(tutor.firstname,' ',tutor.lastname) AS tutorName, 
 							student.batch, 
 							student.year, 
 							student.schoolemail, 
 							student.peremail, 
 							student.phone");
-		$this->db->join('tutor','tutor.id = student.id');
-		$this->db->join('company','company.id = student.id');
+        // $this->db->order_by("student.id");
+		// $this->db->join('tutor','tutor.id = student.id');
+		// $this->db->join('company','company.id = student.id');
         // $this
-        $query = $this->db->get_where('student', array('id' => $studentId ));
+        $query = $this->db->get('student');
         return $query->result_array();
     }
 // 	public function getDataSudentDetail()

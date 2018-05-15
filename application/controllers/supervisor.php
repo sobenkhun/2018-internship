@@ -24,10 +24,19 @@ class supervisor extends CI_Controller {
 	}
 	function studentProfile()
 	{
-		$stuId = $_GET['id'];
+		// $companyId = $_GET['id'];
+		// $data['company'] = $this->users_model->getCompanyDataDetail($companyId);
+		// $data['activeLink'] = 'Company';
+		// $this->load->view('templates/header.php',$data);
+		// $this->load->view('menu/index.php',$data);
+		// $this->load->view('pages/company/detail.php',$data);
+		// $this->load->view('templates/footer.php');
+
+
+		$studentId = $_GET['id'];
 		$this->load->helper('form');
 		$this->load->Model('Supervisor_model');
-	    // $data['studentProfile'] = $this->Supervisor_model->getDataSudentDetail($stuId);
+	    $data['student'] = $this->Supervisor_model->getDataSudentDetail($studentId);
 	    $data['activeLink'] = 'Student';
 		// var_dump($data);die();
 	    // 

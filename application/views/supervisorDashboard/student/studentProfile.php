@@ -20,26 +20,7 @@
 			<label for="">Prem MANN</label>
 		</div>
 		<div class="col-md-6">
-			<!--  <table>
-        <thead>
-            <tr>
-                <th>ID</th>
-                <th>Student Name</th>
-                
-                <th class="text-center">Action</th>
-            </tr>
-        </thead>
-         <tbody>
-        <?php foreach ($studentProfile as $student):?>
-          <tr>
-              <td><?php echo $student['userid']; ?></td>
-              <td><?php echo $student['studentName']; ?></td>
-        </td>
-          </tr>
-          <?php endforeach ?>
-    </tbody> 
-    </table> -->
-			<form action="/action_page.php">
+				<?php foreach ($student as $student):?>
 				<table><br>
 					<tr>
 						<td> 
@@ -50,7 +31,7 @@
 						<td> </td>
 						<td>
 							<div class="form-group">
-								<b class="text-dark">Prem</b>
+								<b class="text-dark"><?php echo $student['firstname']; ?></b>
 							</div>
 						</td>
 					</tr>
@@ -63,11 +44,11 @@
 						<td> </td>
 						<td>
 							<div class="form-group">
-								<b class="text-dark">MANN</b>
+								<b class="text-dark"><?php echo $student['lastname']; ?></b>
 							</div>
 						</td>
 					</tr>
-					<tr>
+					<!-- <tr>
 						<td> 
 							<div class="form-group">
 								<label for="email">Company Website</label>
@@ -163,9 +144,9 @@
 								<label for="">0968889878</label>
 							</div>
 						</td>
-					</tr>
-				</table><br>
-			</form>
+					</tr> -->
+				</table>
+				<?php endforeach ?>
 		</div>
 	</div>
 	<!-- </div> -->

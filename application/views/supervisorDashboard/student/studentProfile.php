@@ -18,9 +18,12 @@
 		<div class="col-md-4 text-center "><br>
 			<img class="user userSupervisor"  src="<?php echo base_url(); ?>assets/images/studentpiture.jpg" alt="" style="height: 260px; margin-top: 17px; padding: 10px;"><br>
 			<label for="">Prem MANN</label>
+			<?php foreach ($student as $row) {
+				
+				echo $row['firstname'];
+			} ?>
 		</div>
 		<div class="col-md-6">
-				<?php foreach ($student as $student):?>
 				<table><br>
 					<tr>
 						<td> 
@@ -31,7 +34,7 @@
 						<td> </td>
 						<td>
 							<div class="form-group">
-								<b class="text-dark"><?php echo $student['firstname']; ?></b>
+								<b class="text-dark"></b>
 							</div>
 						</td>
 					</tr>
@@ -44,7 +47,7 @@
 						<td> </td>
 						<td>
 							<div class="form-group">
-								<b class="text-dark"><?php echo $student['lastname']; ?></b>
+								<b class="text-dark"></b>
 							</div>
 						</td>
 					</tr>
@@ -146,7 +149,6 @@
 						</td>
 					</tr> -->
 				</table>
-				<?php endforeach ?>
 		</div>
 	</div>
 	<!-- </div> -->

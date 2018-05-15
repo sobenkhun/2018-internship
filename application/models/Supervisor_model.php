@@ -33,26 +33,47 @@ class Supervisor_model extends CI_Model {
 		 $query =  $this->db->get_where('student',$userRole);
 	     return $query->result_array(); 
 	}
+	 public function addCompany($name,$address,$phone,$description,$location,$url)
+    {
+        $data = array('name'=>$name,
+                     'itemdescription'=>$description,
+                     'postaladdress'=>$address,
+                     'location'=>$location,
+                     'phone'=>$phone,
+                     'url'=>$url);
+                     $this->db->insert('company',$data);
+    }
 	public function getQuestionnaire()
 	{
 		$query = "Hello getQuestionnaire";
 	     return $query; 
 	}
-	 public function getDataSudentDetail($studentId)
+	 public function getDataStudentDetail($studentId)
     {
-        $this->db->select("student.firstname, 
-							student.lastname AS studentName, 
-							student.batch, 
-							student.year, 
-							student.schoolemail, 
-							student.peremail, 
-							student.phone");
-        // $this->db->order_by("student.id");
-		// $this->db->join('tutor','tutor.id = student.id');
-		// $this->db->join('company','company.id = student.id');
-        // $this
-        $query = $this->db->get('student');
-        return $query->result_array();
+    	 $this->db->select(" 
+					s.firstname,
+					s.lastname,
+					c.url,
+    	 			CONCAT(t.firstname,' ', t.lastname) AS tutorName,
+    	 			CONCAT(s.firstname,' ', s.lastname) AS studentName,
+    	 			s.batch,
+    	 			s.year,
+    	 			s.schoolemail,
+    	 			s.peremail,
+    	 			s.phone");
+     $this->db->from('supervisor su');
+     $this->db->join('student s', 's.supervisor_id = su.id');
+     $this->db->join('company c', 'c.id = su.company_id');
+     $this->db->join('tutor t', 't.company_id = c.id');
+     $this->db->where('s.id', $studentId);
+    $query = $this->db->get();
+     // if($query->num_rows()>0){
+     //      return $query->result_array();
+     //      }else{
+     //          return $query->result_array();
+     //      }
+     return $query->result(); 
+
     }
 // 	public function getDataSudentDetail()
 // 	{

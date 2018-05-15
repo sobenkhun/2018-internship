@@ -2,6 +2,7 @@
 <div class="container">
 	<div class="row">
 		<div class="col-md-2">
+			<?php foreach ($student as $student):?>
 			<a href="<?php echo base_url(); ?>supervisor/student">
 				<button type="button" class="btn btn-primary">
 					<i class="mdi mdi-chevron-left"></i>Back
@@ -18,12 +19,8 @@
 		<div class="col-md-1"></div>
 		<div class="col-md-4 text-center "><br>
 			<img class="user userSupervisor"  src="<?php echo base_url(); ?>assets/images/studentpiture.jpg" alt="" style="height: 260px; margin-top: 17px; padding: 10px;"><br>
-			<label for=""><?php echo $student[''] $; ?></label>
-			<!-- <?php foreach ($student as $row) {
-				
-				echo $row['firstname'];
-				echo $row['schoolemail'];
-			} ?> -->
+
+			<label for=""><?php echo $student['firstname']; ?></label>
 		</div>
 		<div class="col-md-6">
 			

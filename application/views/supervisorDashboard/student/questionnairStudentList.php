@@ -20,7 +20,7 @@
           <tr>
               <td><?php echo $student['id']; ?></td>
               <td><?php echo $student['studentName']; ?></td>
-              <td>
+              <td class="text-center">
                 <a href="<?php echo base_url();?>supervisor/questionnaire?&id=<?php echo $student['id']; ?>"><span class="mdi mdi-book-minus mdi-24px text-info" data-toggle ="tooltip" title="View "></span></a>    
             </td>
           </tr>

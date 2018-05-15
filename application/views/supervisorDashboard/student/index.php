@@ -5,6 +5,7 @@
         <div class="col-md-4"></div>
         <div class="col-md-4">
             <h2 class="text-center text-primary">Students List</h2>
+            <!-- <a href="<?php echo base_url();?>supervisor/studentProfile">link</a> -->
         </div>
         <table id="studentList" class="table table-bordered bg-white" style="width:100%">
         <thead>
@@ -20,8 +21,9 @@
           <tr>
               <td><?php echo $student['id']; ?></td>
               <td><?php echo $student['studentName']; ?></td>
-              <td>
-           <a href="<?php echo base_url();?>supervisor/studentProfile?&id=<?php echo $student['id']; ?>"><span class="mdi mdi-eye mdi-24px text-info" data-toggle ="tooltip" title="View "></span></a>
+              <td class="text-center">
+                <!-- <a href="<?php echo base_url();?>Welcome_IF/viewSupervisor?&id=<?php echo $supervisor['id']; ?>"> -->
+           <a href="<?php echo base_url();?>supervisor/studentProfile?&id=<?php echo $student['id']; ?>"><span class="mdi mdi-eye mdi-24px text-info " data-toggle ="tooltip" title="View "></span></a>
         </td>
           </tr>
           <?php endforeach ?>

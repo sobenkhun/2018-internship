@@ -22,7 +22,9 @@
          
          <form>
             <div class="c-forms-form" tabindex="0">
-               <div class="c-editor" style="display:none;"><input type="text" class="c-forms-form-style"></div>
+               <div class="c-editor" style="display:none;">
+                  <input type="text" class="c-forms-form-style">
+               </div>
                <div class="c-forms-form-body">
                   <div class="c-forms-heading">
                      <div class="c-forms-logo" style="display:none;"></div>
@@ -36,7 +38,7 @@
                            <div class="c-label  ">
                               <label for="c-0-205">Name of your company </label></div>
                            <div class="c-editor">
-                              <input type="text" id="c-0-205" placeholder="Your Company Name" required=""></div>
+                              <input type="text"  id="c-0-205" name="companyName" placeholder="Your Company Name" required=""></div>
                            <div class="c-validation">Name of your company  is required.</div>
                         </div>
                         <!-- <div class="c-text-singleline c-field c-col-1 c-sml-col-1 c-span-12 c-sml-span-12  c-required">
@@ -1221,17 +1223,17 @@
                            <div class="c-validation"></div>
                         </div>
                      </div>
-                  </div>
+                  </div><!-- 
                   <div id="c-recaptcha-div"></div>
                   <div class="c-forms-error">
                      <div class="c-validation"></div>
-                  </div>
+                  </div> -->
                   <div class="c-button-section">
-                     <div class="c-action"><button class="c-button" id="c-submit-button">Submit</button></div>
-                     <div sys:id="c-submit-warning" class="" sys:attach="dataview" dataview:data="{binding entry, source={{ Cognito.Forms.model }} }" id="c-submit-warning">Please do not submit passwords through Cognito Forms.</div>
+                     <div class="c-action"><button class="c-button" id="c-submit-button">Submit</button>
+                     </div>
                   </div>
                </div>
-               <div class="c-forms-confirmation">
+               <!-- <div class="c-forms-confirmation"> -->
                  <!--  <div class="c-forms-heading">
                      <div class="c-forms-logo" style="display:none;"></div>
                      <div class="c-forms-form-title">
@@ -1239,7 +1241,7 @@
                      </div>
                   </div>
  -->                  <!-- <div class="c-forms-confirmation-message c-html" sys:attach="dataview" dataview:data="{binding entry, source={{ Cognito.Forms.model }} }"><span>Thank you for filling out the form. Your response has been recorded.</span></div> -->
-               </div>
+               <!-- </div> -->
                <!-- <div class="c-footer-terms" sys:attach="dataview" dataview:data="{binding entry, source={{ Cognito.Forms.model }} }">
                   <ul class="terms">
                      <li><a href="https://www.cognitoforms.com/reportabuse?form=https%3A%2F%2Fwww.cognitoforms.com%2FPasserellesNum%25C3%25A9riques%2FCompaniesFormPNC" target="_blank">Report Abuse</a></li>
@@ -1247,7 +1249,6 @@
                   </ul>
                </div> -->
             </div>
-            <input type="hidden" name="NoBots" id="c-nobots" value="2GL5omvmYryVdUEc6ayEavGK3wSDUZc1ZfOKfZGWg2w=|4950efe6567eb630c9c398b0b9550160">
          </form>
       </div>
       <script>

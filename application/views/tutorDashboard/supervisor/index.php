@@ -16,20 +16,24 @@
             </tr>
         </thead>
         <tbody>
-        	<?php foreach ($supervisor as $value):?>
-            <tr>
-                <td><?php echo $value['sId'] ?></td>
-                <td><?php echo $value['name']; ?></td>
-                <td><?php echo $value['sFname']." ".$value['sLname']; ?></td>
 
+            <?php foreach ($supervisor as $supervisor):?>
+            <tr>
+                <td class="text-center"><?php echo $supervisor['id']; ?></td>
+                <td><?php echo $supervisor['name']; ?></td>
+                <td><?php echo $supervisor['supervisorName']; ?></td>
                 <td class="text-center">
-                	
-                	<a href="<?php echo base_url();?>tutorDas/getSupDataDetail?&id=<?php echo $value['sId']; ?>"><i class="mdi mdi-eye mdi-24px text-info" data-toggle ="tooltip" title="View "></i></a>
-                    <a href="<?php echo base_url() ?>tutorDas/questionnair"><i class="mdi mdi-book-minus mdi-24px text-dark" data-toggle ="tooltip" title=" Questionniare"></i>
+
+                    <a href="<?php echo base_url() ?>tutorDas/viewSupervisorDas?&id=<?php echo $supervisor['id'];?>"><i class="mdi mdi-eye mdi-24px text-info" data-toggle ="tooltip" title="View "></i></a>
+                    <a href="<?php echo base_url() ?>tutorDas/questionnair"><i class="mdi mdi-book-minus mdi-24px text-dark" data-toggle ="tooltip" title=" Questionniare"></i></a>
                     
                 </td>
             </tr>
-            <?php endforeach ?>
+             <?php endforeach ?>   
+
+        	
+          
+
         </tbody>
     </table>
     </div>

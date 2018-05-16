@@ -9,10 +9,10 @@
         <table id="example" class="table table-striped table-bordered bg-white">
         <thead>
             <tr>
-                <th>ID</th>
+                <th class="text-center">ID</th>
                 <th>Company Name</th>
                 <th>Supervisor Name</th>
-                <th>Action</th>
+                <th class="text-center">Action</th>
             </tr>
         </thead>
         <tbody>
@@ -21,6 +21,7 @@
                 <td><?php echo $value['sId'] ?></td>
                 <td><?php echo $value['name']; ?></td>
                 <td><?php echo $value['sFname']." ".$value['sLname']; ?></td>
+
                 <td class="text-center">
                 	
                 	<a href="<?php echo base_url();?>tutorDas/getSupDataDetail?&id=<?php echo $value['sId']; ?>"><i class="mdi mdi-eye mdi-24px text-info" data-toggle ="tooltip" title="View "></i></a>
@@ -32,10 +33,6 @@
         </tbody>
     </table>
     </div>
-    <a href="<?php echo base_url(); ?>Welcome_IF/createSupervisor">
-        <button class="btn btn-primary"><i class="mdi mdi-account-plus mdi-24px"></i> New Supervisor</button>
-    </a>
-
 </div>
 <script src="https://cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js"></script>
 <script src="https://cdn.datatables.net/1.10.16/js/dataTables.bootstrap4.min.js"></script>

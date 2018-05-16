@@ -12,16 +12,16 @@
       <table id="example" class="table table-striped table-bordered bg-white">
        <thead>
          <tr>
-           <th>CID</th>
+           <th class="text-center">ID</th>
            <th>Company</th>
            <th>Location</th>
-           <th>Action</th>
+           <th class="text-center">Action</th>
          </tr>
        </thead>
        <tbody>
         <?php foreach ($company as $company):?>
           <tr>
-              <td><?php echo $company['id']; ?></td>
+              <td class="text-center"><?php echo $company['id']; ?></td>
               <td><?php echo $company['name']; ?></td>
               <td><?php echo $company['location']; ?></td>
             <td>

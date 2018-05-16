@@ -8,26 +8,24 @@
             <!-- <a href="<?php echo base_url();?>supervisor/studentProfile">link</a> -->
         </div>
         <table id="studentList" class="table table-bordered bg-white" style="width:100%">
-        <thead>
+          <thead>
+              <tr>
+                  <th class="text-center">ID</th>
+                  <th>Student Name</th>
+                  <th class="text-center">Action</th>
+              </tr>
+          </thead>
+           <tbody>
+          <?php foreach ($student as $student):?>
             <tr>
-                <th>ID</th>
-                <th>Student Name</th>
-                
-                <th class="text-center">Action</th>
+                <td class="text-center"><?php echo $student['id']; ?></td>
+                <td><?php echo $student['studentName']; ?></td>
+                <td class="text-center">
+             <a href="<?php echo base_url();?>supervisor/studentProfile?&id=<?php echo $student['id']; ?>"><span class="mdi mdi-eye mdi-24px text-info " data-toggle ="tooltip" title="View "></span></a>
+          </td>
             </tr>
-        </thead>
-         <tbody>
-        <?php foreach ($student as $student):?>
-          <tr>
-              <td><?php echo $student['id']; ?></td>
-              <td><?php echo $student['studentName']; ?></td>
-              <td class="text-center">
-                <!-- <a href="<?php echo base_url();?>Welcome_IF/viewSupervisor?&id=<?php echo $supervisor['id']; ?>"> -->
-           <a href="<?php echo base_url();?>supervisor/studentProfile?&id=<?php echo $student['id']; ?>"><span class="mdi mdi-eye mdi-24px text-info " data-toggle ="tooltip" title="View "></span></a>
-        </td>
-          </tr>
-          <?php endforeach ?>
-    </tbody>
+            <?php endforeach ?>
+      </tbody>
     </table>
     </div>
 </div>

@@ -7,8 +7,8 @@
 					<tr>
 						<th style="width: 1em;">ID</th>
 						<th style="width: 5em;">Date</th>
-						<th style="width: 8em;">Who comment?</th>
-						<th style="width: 18em;">Comment</th>
+						<th style="width: 8em;">Student Comment</th>
+						<th style="width: 18em;">Tutor Reply</th>
 					</tr>
 				</thead>
 				<tbody>

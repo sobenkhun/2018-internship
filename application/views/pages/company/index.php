@@ -1,5 +1,4 @@
-<div class="container">
-  
+
   <div class="container  ">
     <div class="row">
       <div class="col-md-12">
@@ -11,19 +10,19 @@
       <table id="example" class="table table-striped table-bordered bg-white">
        <thead>
          <tr>
-           <th>CID</th>
+           <th class="text-center">ID</th>
            <th>Company</th>
            <th>Location</th>
-           <th>Action</th>
+           <th class="text-center">Action</th>
          </tr>
        </thead>
        <tbody>
         <?php foreach ($company as $company):?>
           <tr>
-              <td><?php echo $company['id']; ?></td>
+              <td class="text-center"><?php echo $company['id']; ?></td>
               <td><?php echo $company['name']; ?></td>
               <td><?php echo $company['location']; ?></td>
-              <td>
+              <td class="text-center">
            <a href="<?php echo base_url();?>Welcome_IF/detailCompany?&id=<?php echo $company['id']; ?>"><span class="mdi mdi-eye mdi-24px text-info" data-toggle ="tooltip" title="View "></span></a>
            <a href="<?php echo base_url();?>Welcome_IF/editeCompany?&id=<?php echo $company['id']; ?>"><span class="mdi mdi-pencil mdi-24px fa-lg text-success" data-toggle ="tooltip" title="Edite "></span></a>
            <a href="<?php echo base_url();?>Welcome_IF/deleteCompany?&id=<?php echo $company['id']; ?>" onclick="return confirm('Are you sure to delete this Company?');">
@@ -38,8 +37,7 @@
 </div>
 
 </div>
-</div>
-</div>
+
 <br>
 <div class="container">
   <div class="row">
@@ -49,4 +47,4 @@
   </div>
 </div>
 
-
+</div>

@@ -22,7 +22,7 @@
         <?php foreach ($company as $company):?>
 
           <tr>
-              <td class="text-center"><?php $company['id'] ?></td>
+              <td class="text-center"><?php echo $company['id'] ?></td>
               <td><?php echo $company['name']; ?></td>
               <td><?php echo $company['location']; ?></td>
 

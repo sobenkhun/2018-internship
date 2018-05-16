@@ -71,12 +71,8 @@ class tutorDas extends CI_Controller {
 
 	public function detailTutor()
 	{
-
-
-
 		$tutorId = $_GET['id'];
-		$this->load->Model('tutor_model');
-		$data['dtutor'] = $this->tutor_model->getTutorDataDetail($tutorId);
+		
 		$data['activeLink'] = 'tutor';
 		$this->load->Model('users_model');
 		$data['tutor'] = $this->users_model->getTutorData();
@@ -136,7 +132,7 @@ class tutorDas extends CI_Controller {
 		$data['activeLink'] = 'company';
 		$companyId = $_GET['id'];
 		$this->load->Model('tutor_model');
-		$data['companys'] = $this->tutor_model->getCompanyDetail($companyId);
+		$data['company'] = $this->tutor_model->getCompanyDetail($companyId);
 		$this->load->view('templates/header.php',$data);
 		$this->load->view('menu/tutor.php',$data);
 		$this->load->view('tutorDashboard/company/detail.php',$data);
@@ -159,16 +155,13 @@ class tutorDas extends CI_Controller {
 	}
 
 
-	
-
-	function supervisorDas()
+	function tSupervisorDas()
 	{
+		// $sId = $_GET['id'];
 		$data['activeLink'] = 'supervisor';
-
 		$this->load->Model('users_model');
-
-		$this->load->view('templates/header.php',$data);
 	    $data['supervisor'] = $this->users_model->getSupervisorData();
+		$this->load->view('templates/header.php',$data);
 		$this->load->view('menu/tutor.php',$data);
 		$this->load->view('tutorDashboard/supervisor/index.php',$data);
 		$this->load->view('templates/footer.php');

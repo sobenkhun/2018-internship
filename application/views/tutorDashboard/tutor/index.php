@@ -12,17 +12,17 @@
 				<thead>
 					<tr>
 						<th class="text-center">ID</th>
-						<th class="text-center">Tutor Name</th>
-						<th class="text-center">Position</th>
+						<th>Tutor Name</th>
+						<th>Position</th>
 						<th class="text-center">Action</th>
 					</tr>
 				</thead>
 				<tbody>
 
-					<?php foreach ($tutor as $tutor):?>
+					<?php foreach ($tutors as $tutor):?>
 					<tr>
 						<td class="text-center"><?php echo $tutor['id']; ?></td>
-						<td><?php echo $tutor['tutorName']; ?></td>
+						<td><?php echo $tutor['firstname']; echo " "; echo $tutor['lastname']; ?></td>
 						<td><?php echo $tutor['position']; ?></td>
 						<td class="text-center">
 							<a href="<?php echo base_url();?>tutorDas/tutorDtail?&id=<?php echo $tutor['id']; ?>">

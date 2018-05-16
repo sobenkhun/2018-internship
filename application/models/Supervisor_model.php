@@ -67,12 +67,7 @@ class Supervisor_model extends CI_Model {
      $this->db->join('tutor t', 't.company_id = c.id');
      $this->db->where('s.id', $studentId);
     $query = $this->db->get();
-     // if($query->num_rows()>0){
-     //      return $query->result_array();
-     //      }else{
-     //          return $query->result_array();
-     //      }
-     return $query->result_array(); 
+    return $query->result_array(); 
 
     }
 // 	public function getDataSudentDetail()

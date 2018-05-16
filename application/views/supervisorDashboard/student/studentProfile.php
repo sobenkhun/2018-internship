@@ -2,7 +2,6 @@
 <div class="container">
 	<div class="row">
 		<div class="col-md-2">
-			<?php foreach ($student as $student):?>
 			<a href="<?php echo base_url(); ?>supervisor/student">
 				<button type="button" class="btn btn-primary">
 					<i class="mdi mdi-chevron-left"></i>Back
@@ -20,7 +19,7 @@
 		<div class="col-md-4 text-center "><br>
 			<img class="user userSupervisor"  src="<?php echo base_url(); ?>assets/images/studentpiture.jpg" alt="" style="height: 260px; margin-top: 17px; padding: 10px;"><br>
 
-			<label for=""><?php echo $student['firstname']; ?></label>
+			<label for=""><?php echo $student['studentName']; ?></label>
 		</div>
 		<div class="col-md-6">
 			
@@ -34,7 +33,7 @@
 						<td> </td>
 						<td>
 							<div class="form-group">
-								<b class="text-dark"></b>
+								<label for=""><?php echo $student['firstname']; ?></label>
 							</div>
 						</td>
 					</tr>
@@ -47,11 +46,11 @@
 						<td> </td>
 						<td>
 							<div class="form-group">
-								<b class="text-dark"></b>
+								<label for=""><?php echo $student['lastname']; ?></label>
 							</div>
 						</td>
 					</tr>
-					<!-- <tr>
+					<tr>
 						<td> 
 							<div class="form-group">
 								<label for="email">Company Website</label>
@@ -60,7 +59,7 @@
 						<td> </td>
 						<td>
 							<div class="form-group">
-								<a href="https://www.codingate.com/">Coding Get</a>
+								<a href="#"><?php echo $student['url']; ?></a>
 							</div>
 						</td>
 					</tr>
@@ -73,7 +72,7 @@
 						<td> </td>
 						<td>
 							<div class="form-group">
-								<b class="text-dark">Chanank CHON</b>
+								<label for=""><?php echo $student['tutorName']; ?></label>
 							</div>
 						</td>
 					</tr>
@@ -86,10 +85,7 @@
 						<td> </td>
 						<td>
 							<div class="form-group">
-								<select name="" id="">
-									<option value="">WEB</option>
-									<option value="">WEB</option>
-								</select>
+								<label for=""><?php echo $student['batch']; ?></label>
 							</div>
 						</td>
 					</tr>
@@ -102,10 +98,7 @@
 						<td> </td>
 						<td>
 							<div class="form-group">
-								<select name="" id="">
-									<option value="">2018</option>
-									<option value="">2019</option>
-								</select>
+								<label for=""><?php echo $student['year']; ?></label>
 							</div>
 						</td>
 					</tr>
@@ -118,7 +111,7 @@
 						<td> </td>
 						<td>
 							<div class="form-group">
-								<a href="#">prem.mann@student.passerellesnumeriques.org</a>
+								<a href="#"><?php echo $student['schoolemail']; ?></a>
 							</div>
 						</td>
 					</tr>
@@ -131,7 +124,7 @@
 						<td> </td>
 						<td>
 							<div class="form-group">
-								<a href="#">prem.mann@gmail.com</a>
+								<a href="#"><?php echo $student['peremail']; ?></a>
 							</div>
 						</td>
 					</tr>
@@ -144,10 +137,10 @@
 						<td> </td>
 						<td>
 							<div class="form-group">
-								<label for="">0968889878</label>
+								<label for=""><?php echo $student['phone']; ?></label>
 							</div>
 						</td>
-					</tr> -->
+					</tr>
 				</table>
 				
 		</div>

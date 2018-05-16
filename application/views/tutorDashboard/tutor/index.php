@@ -18,6 +18,7 @@
 					</tr>
 				</thead>
 				<tbody>
+
 					<?php foreach ($tutor as $tutor):?>
 					<tr>
 						<td class="text-center"><?php echo $tutor['id']; ?></td>
@@ -32,6 +33,8 @@
 					</tr>
 					<?php endforeach ?>
 					
+					
+
 				</tbody>
 
 			</table>

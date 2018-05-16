@@ -16,6 +16,7 @@
             </tr>
         </thead>
         <tbody>
+
             <?php foreach ($supervisor as $supervisor):?>
             <tr>
                 <td class="text-center"><?php echo $supervisor['id']; ?></td>
@@ -29,11 +30,13 @@
                 </td>
             </tr>
              <?php endforeach ?>   
+
+        	
+          
+
         </tbody>
     </table>
     </div>
-   
-
 </div>
 <script src="https://cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js"></script>
 <script src="https://cdn.datatables.net/1.10.16/js/dataTables.bootstrap4.min.js"></script>

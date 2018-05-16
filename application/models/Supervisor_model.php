@@ -40,20 +40,24 @@ class Supervisor_model extends CI_Model {
 	}
 	 public function getDataStudentDetail($studentId)
     {
-    //  //    $this->db->select("s.id,s.firstname as stuFName,s.lastname as stuLName,
-    //  //                        s.phone,s.peremail,s.schoolemail,s.batch,s.year,s.username,s.password,
-    //  //                        su.firstname as suFName,su.lastname as suLName,
-    //  //                        c.name,
-    //  //                        t.firstname as tFName,t.lastname as tLName");
-    //  // $this->db->from('supervisor su');
-    //  // $this->db->join('student s', 's.supervisor_id = su.id');
-    //  // $this->db->join('company c', 'c.id = su.company_id');
-    //  // $this->db->join('tutor t', 't.company_id = c.id');
-    //  // $this->db->where('s.id', $stuId);
-    // 	$this->db->select("*");
-    // 	$this->db->from("student");
-    // 	// $this->db->where("student.id", $studentId);
-    // $query = $this->db->get();
-    //  return $query->result_array(); 
+    	 $this->db->select(" 
+					s.firstname,
+					s.lastname,
+					c.url,
+    	 			CONCAT(t.firstname,' ', t.lastname) AS tutorName,
+    	 			CONCAT(s.firstname,' ', s.lastname) AS studentName,
+    	 			s.batch,
+    	 			s.year,
+    	 			s.schoolemail,
+    	 			s.peremail,
+    	 			s.phone");
+     $this->db->from('supervisor su');
+     $this->db->join('student s', 's.supervisor_id = su.id');
+     $this->db->join('company c', 'c.id = su.company_id');
+     $this->db->join('tutor t', 't.company_id = c.id');
+     $this->db->where('s.id', $studentId);
+    $query = $this->db->get();
+    return $query->result_array(); 
+
     }
 }

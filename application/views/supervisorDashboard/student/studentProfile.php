@@ -2,7 +2,10 @@
 <div class="container">
 	<div class="row">
 		<div class="col-md-2">
+<<<<<<< HEAD
 			
+=======
+>>>>>>> b8b481094e194b51941671e0e258a69171a320bc
 			<a href="<?php echo base_url(); ?>supervisor/student">
 				<button type="button" class="btn btn-primary">
 					<i class="mdi mdi-chevron-left"></i>Back
@@ -35,7 +38,11 @@
 						<td> </td>
 						<td>
 							<div class="form-group">
+<<<<<<< HEAD
 								<label "><?php echo $student['firstname']; ?></label>
+=======
+								<label for=""><?php echo $student['firstname']; ?></label>
+>>>>>>> b8b481094e194b51941671e0e258a69171a320bc
 							</div>
 						</td>
 					</tr>
@@ -48,7 +55,11 @@
 						<td> </td>
 						<td>
 							<div class="form-group">
+<<<<<<< HEAD
 								<label ><?php echo $student['lastname']; ?></label>
+=======
+								<label for=""><?php echo $student['lastname']; ?></label>
+>>>>>>> b8b481094e194b51941671e0e258a69171a320bc
 							</div>
 						</td>
 					</tr>
@@ -74,7 +85,11 @@
 						<td> </td>
 						<td>
 							<div class="form-group">
+<<<<<<< HEAD
 								<label class="text-dark"><?php echo $student['tutorName']; ?></label>
+=======
+								<label for=""><?php echo $student['tutorName']; ?></label>
+>>>>>>> b8b481094e194b51941671e0e258a69171a320bc
 							</div>
 						</td>
 					</tr>
@@ -87,7 +102,11 @@
 						<td> </td>
 						<td>
 							<div class="form-group">
+<<<<<<< HEAD
 								<label class="text-dark"><?php echo $student['batch']; ?></label>
+=======
+								<label for=""><?php echo $student['batch']; ?></label>
+>>>>>>> b8b481094e194b51941671e0e258a69171a320bc
 							</div>
 						</td>
 					</tr>
@@ -100,7 +119,11 @@
 						<td> </td>
 						<td>
 							<div class="form-group">
+<<<<<<< HEAD
 								<label class="text-dark"><?php echo $student['year']; ?></label>
+=======
+								<label for=""><?php echo $student['year']; ?></label>
+>>>>>>> b8b481094e194b51941671e0e258a69171a320bc
 							</div>
 						</td>
 					</tr>
@@ -126,7 +149,11 @@
 						<td> </td>
 						<td>
 							<div class="form-group">
+<<<<<<< HEAD
 								<a href="#"><?php echo $student['peremail'] ?></a>
+=======
+								<a href="#"><?php echo $student['peremail']; ?></a>
+>>>>>>> b8b481094e194b51941671e0e258a69171a320bc
 							</div>
 						</td>
 					</tr>
@@ -139,7 +166,11 @@
 						<td> </td>
 						<td>
 							<div class="form-group">
+<<<<<<< HEAD
 								<label class="text-dark" for=""><?php echo $student['phone']; ?></label>
+=======
+								<label for=""><?php echo $student['phone']; ?></label>
+>>>>>>> b8b481094e194b51941671e0e258a69171a320bc
 							</div>
 						</td>
 					</tr>

@@ -20,7 +20,7 @@ $activeLink = (isset($activeLink)) ? $activeLink :  "";?>
         <a class="nav_link nav-link" href="<?php echo base_url();?>tutorDas/tutorList">Tutor</a>
       </li>
       <li class="nav-item <?php echo ($activeLink=='supervisor'?'active':'');?>">
-        <a class="nav_link nav-link" href="<?php echo base_url();?>tutorDas/supervisorDas"></i>Supervisor</a>
+        <a class="nav_link nav-link" href="<?php echo base_url();?>tutorDas/tSupervisorDas"></i>Supervisor</a>
       </li>
       <li class="nav-item <?php echo ($activeLink=='student'?'active':'');?>">
         <a class="nav_link nav-link" href="<?php echo base_url();?>tutorDas/studentDas"></i>Student</a>

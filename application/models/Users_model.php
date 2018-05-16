@@ -54,7 +54,7 @@ class Users_model extends CI_Model {
     //// count number of student company tutor and supervisor
     public function CNumRow()
     {
-          $this->db->select('*');
+        $this->db->select('*');
         $query = $this->db->get('company');
         return $query->num_rows();
     }

@@ -16,117 +16,24 @@
             </tr>
         </thead>
         <tbody>
+        	<?php foreach ($supervisor as $value):?>
             <tr>
-                <td>1</td>
-                <td>Cloude Net</td>
-                <td>Rith NHEL</td>
+                <td><?php echo $value['sId'] ?></td>
+                <td><?php echo $value['name']; ?></td>
+                <td><?php echo $value['sFname']." ".$value['sLname']; ?></td>
                 <td class="text-center">
-
-                    <a href="<?php echo base_url() ?>tutorDas/viewSupervisorDas"><i class="mdi mdi-eye mdi-24px text-info" data-toggle ="tooltip" title="View "></i></a>
-                    <a href="<?php echo base_url() ?>tutorDas/questionnair"><i class="mdi mdi-book-minus mdi-24px text-dark" data-toggle ="tooltip" title=" Questionniare"></i></a>
-                    
-                </td>
-                
-                
-
-            </tr>
-            <tr>
-                <td>2</td>
-                <td>Coding Get</td>
-                <td>Rady Y</td>
-                <td class="text-center">
-                    <a href="<?php echo base_url() ?>tutorDas/viewSupervisorDas"><i class="mdi mdi-eye mdi-24px text-info" data-toggle ="tooltip" title="View "></i></a>
-                    <a href="<?php echo base_url() ?>tutorDas/questionnair"><i class="mdi mdi-book-minus mdi-24px text-dark" data-toggle ="tooltip" title=" Questionniare"></i></a>
-                    
-                </td>
-                
-                
-               
-            </tr>
-            <tr>
-                <td>3</td>
-                <td>Khalibri</td>
-                 <td>Rady</td>
-                 <td class="text-center">
-                     <a href="<?php echo base_url() ?>tutorDas/viewSupervisorDas"><i class="mdi mdi-eye mdi-24px text-info" data-toggle ="tooltip" title="View "></i></a>
-                     <a href="<?php echo base_url() ?>tutorDas/questionnair"><i class="mdi mdi-book-minus mdi-24px text-dark" data-toggle ="tooltip" title=" Questionniare"></i></a>
-                     
-                 </td>
-                
-               
-                
-            </tr>
-            <tr>
-                <td>4</td>
-                <td>EZECOM</td>
-                <td>Kea LOHN</td>
-                <td class="text-center">
-
-                    <a href="<?php echo base_url() ?>tutorDas/viewSupervisorDas"><i class="mdi mdi-eye mdi-24px text-info" data-toggle ="tooltip" title="View "></i></a>
-                    <a href="<?php echo base_url() ?>tutorDas/questionnair"><i class="mdi mdi-book-minus mdi-24px text-dark" data-toggle ="tooltip" title=" Questionniare"></i></a>
-                    
-                </td>
-                
-                
-               
-            </tr>
-            <tr>
-                <td>5</td>
-                <td>Online</td>
-                <td>Sopheak</td>
-                <td class="text-center">
-                    <a href="<?php echo base_url() ?>tutorDas/viewSupervisorDas"><i class="mdi mdi-eye mdi-24px text-info" data-toggle ="tooltip" title="View "></i></a>
-                    <a href="<?php echo base_url() ?>tutorDas/questionnair"><i class="mdi mdi-book-minus mdi-24px text-dark" data-toggle ="tooltip" title=" Questionniare"></i></a>
+                	
+                	<a href="<?php echo base_url();?>tutorDas/getSupDataDetail?&id=<?php echo $value['sId']; ?>"><i class="mdi mdi-eye mdi-24px text-info" data-toggle ="tooltip" title="View "></i></a>
+                    <a href="<?php echo base_url() ?>tutorDas/questionnair"><i class="mdi mdi-book-minus mdi-24px text-dark" data-toggle ="tooltip" title=" Questionniare"></i>
                     
                 </td>
             </tr>
-            <tr>
-                <td>6</td>
-                <td>Eintelego</td>
-                <td>Pisey</td>
-                <td class="text-center">
-
-                    <a href="<?php echo base_url() ?>tutorDas/viewSupervisorDas"><i class="mdi mdi-eye mdi-24px text-info" data-toggle ="tooltip" title="View "></i></a>
-                    <a href="<?php echo base_url() ?>tutorDas/questionnair"><i class="mdi mdi-book-minus mdi-24px text-dark" data-toggle ="tooltip" title=" Questionniare"></i></a>
-                    
-                </td>
-            </tr>
-            <tr>
-                <td>7</td>
-                <td>RCI</td>
-                <td>Rith NHEL</td>
-                <td class="text-center">
-
-                    <a href="<?php echo base_url() ?>tutorDas/viewSupervisorDas"><i class="mdi mdi-eye mdi-24px text-info" data-toggle ="tooltip" title="View "></i></a>
-                    <a href="<?php echo base_url() ?>tutorDas/questionnair"><i class="mdi mdi-book-minus mdi-24px text-dark" data-toggle ="tooltip" title=" Questionniare"></i></a>
-                    
-                </td>
-            </tr>
-            <tr>
-                <td>8</td>
-                <td>Res Up</td>
-                 <td>Chanak CHON</td>
-                 <td class="text-center">
-                     <a href="<?php echo base_url() ?>tutorDas/viewSupervisorDas"><i class="mdi mdi-eye mdi-24px text-info" data-toggle ="tooltip" title="View "></i></a>
-                     <a href="<?php echo base_url() ?>tutorDas/questionnair"><i class="mdi mdi-book-minus mdi-24px text-dark" data-toggle ="tooltip" title=" Questionniare"></i></a>
-                     
-                 </td>
-            </tr>
-            <tr>
-                <td>9</td>
-                <td>Camsolution</td>
-                <td>Rady Y</td>
-                <td class="text-center">
-                    <a href="<?php echo base_url() ?>tutorDas/viewSupervisorDas"><i class="mdi mdi-eye mdi-24px text-info" data-toggle ="tooltip" title="View "></i></a>
-                    <a href="<?php echo base_url() ?>tutorDas/questionnair"><i class="mdi mdi-book-minus mdi-24px text-dark" data-toggle ="tooltip" title=" Questionniare"></i></a>
-                    
-                </td>
-            </tr>
+            <?php endforeach ?>
         </tbody>
     </table>
     </div>
     <a href="<?php echo base_url(); ?>Welcome_IF/createSupervisor">
-        <button class="btn btn-primary"><i class="mdi mdi-account-plus mdi-24px"></i>New Supervisor</button>
+        <button class="btn btn-primary"><i class="mdi mdi-account-plus mdi-24px"></i> New Supervisor</button>
     </a>
 
 </div>

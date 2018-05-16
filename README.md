@@ -1,6 +1,6 @@
 # Internship Followup System
 
-The Internship Followup system is designed for investigate Students in Passerelles Numeriques Cambodia (PNC) that has go to internship at other company. It easy for user  
+The Internship Followup system is designed for investigate Students in Passerelles Numeriques Cambodia (PNC) that has go to internship at other company. 
 
 * Program version 1.0 April 23th, 2018
 * Cliend: from ERO department of PNC.

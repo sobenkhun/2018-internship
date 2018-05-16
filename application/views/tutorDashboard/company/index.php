@@ -24,8 +24,8 @@
               <td class="text-center"><?php echo $company['id']; ?></td>
               <td><?php echo $company['name']; ?></td>
               <td><?php echo $company['location']; ?></td>
-            <td class="text-center">
-               <a href="<?php echo base_url();?>tutorDas/cDetailDas"><span class="mdi mdi-eye mdi-24px text-info" data-toggle ="tooltip" title="View "></span></a>
+            <td>
+               <a href="<?php echo base_url();?>tutorDas/detailCompany2?&id=<?php echo $company['id']; ?>"><span class="mdi mdi-eye mdi-24px text-info" data-toggle ="tooltip" title="View "></span></a>
             </td>
       </tr>
       <?php endforeach ?>

@@ -1,6 +1,6 @@
 
 <div class="container">
-	<a href="<?php echo base_url();?>Welcome_IF/company">
+	<a href="<?php echo base_url();?>tutorDas/detailCompany2">
 		<button class="btn btn-primary">
 			<i class="mdi mdi-chevron-left mdi-15px text-white"></i>Back
 		</button>

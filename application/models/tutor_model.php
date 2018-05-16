@@ -45,6 +45,16 @@ class tutor_model extends CI_Model {
     	return $query->result_array();
     }
 
+    public function viewSupervisor($sId)
+    {
+        $this->db->select('*');
+        $this->db->from('supervisor');
+        $this->db->join('company', 'company.id = supervisor.id');
+        $this->db->where('supervisor.id', $sId);
+        $query = $this->db->get();
+        return $query->result_array();
+    }
+
     
 
 }

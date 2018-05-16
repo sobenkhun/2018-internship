@@ -18,39 +18,18 @@
 					</tr>
 				</thead>
 				<tbody>
+					<?php foreach ($tutors as $tutor):?>
 					<tr>
-						<td class="text-center">1</td>
-						<td class="text-center">Ashton Cox</td>
-						<td class="text-center">English Training</td>
+						<td><?php echo $tutor['id']; ?></td>
+						<td><?php echo $tutor['firstname'].' '.$tutor['lastname']; ?></td>
+						<td><?php echo $tutor['position']; ?></td>
 						<td class="text-center">
-							<a href="<?php echo base_url();?>tutorDas/tutorDtail">
+							<a href="<?php echo base_url();?>tutorDas/detailTutor?&id=<?php echo $tutor['id']; ?>">
 								<i class="mdi mdi-eye text-info data-toggle ="tooltip" title="view  " style="font-size:24px;"></i>
 							</a>
-							
 						</td>
 					</tr>
-					<tr>
-						<td class="text-center">2</td>
-						<td class="text-center">Ashton Cox</td>
-						<td class="text-center">Web Training</td>
-						<td class="text-center">
-							<a href="<?php echo base_url();?>tutorDas/tutorDtail">
-								<i class="mdi mdi-eye text-info data-toggle ="tooltip" title="view  " style="font-size:24px;"></i>
-							</a>
-							
-						</td>
-					</tr>
-					<tr>
-						<td class="text-center">3</td>
-						<td class="text-center">Ashton Cox</td>
-						<td class="text-center">Web Training</td>
-						<td class="text-center">
-							<a href="<?php echo base_url();?>tutorDas/tutorDtail">
-								<i class="mdi mdi-eye text-info data-toggle ="tooltip" title="view " style="font-size:24px;"></i>
-							</a>
-							
-						</td>
-					</tr>
+					<?php endforeach ?>
 				</tbody>
 
 			</table>

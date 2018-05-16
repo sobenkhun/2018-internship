@@ -14,15 +14,17 @@
 		</div>
 	</div>
 	<br>
+	<?php foreach ($dtutor as $tutors):?>
 	<div class="row bg-white">
 		<div class="col-md-1"></div>
 		<div class="col-md-4 text-center "><br>
 			<img class="user userSupervisor"  src="<?php echo base_url(); ?>assets/images/studentpiture.jpg" alt="" style="height: 260px; margin-top: 17px; padding: 10px;"><br>
-			<a class="link" href="#" >Votey Tey</a>
+			<a class="link" href="#" ><?php echo $tutors['firstname'].$tutors['lastname']; ?></a>
 		</div>
 		<div class="col-md-6">
 			<form action="/action_page.php">
 				<table><br>
+					
 					<tr>
 						<td> 
 							<div class="form-group">
@@ -32,7 +34,7 @@
 						<td> </td>
 						<td>
 							<div class="form-group">
-								<b class="text-dark">Votey</b>
+								<b class="text-dark"><?php echo $tutors['firstname']; ?></b>
 							</div>
 						</td>
 					</tr>
@@ -45,7 +47,7 @@
 						<td> </td>
 						<td>
 							<div class="form-group">
-								<b class="text-dark">Tey</b>
+								<b class="text-dark"><?php echo $tutors['lastname']; ?></b>
 							</div>
 						</td>
 					</tr>
@@ -58,7 +60,7 @@
 						<td> </td>
 						<td>
 							<div class="form-group">
-								<b class="text-dark">Web training</b>
+								<b class="text-dark"><?php echo $tutors['position']; ?></b>
 							</div>
 						</td>
 					</tr>
@@ -71,7 +73,7 @@
 						<td> </td>
 						<td>
 							<div class="form-group">
-								<a href="#"> Votey.tey@gmail.com</a>
+								<a href="#"><?php echo $tutors['email']; ?></a>
 							</div>
 						</td>
 					</tr>
@@ -84,13 +86,14 @@
 						<td> </td>
 						<td>
 							<div class="form-group">
-								<b class="text-dark">0714638343</b>
+								<b class="text-dark"><?php echo $tutors['phone']; ?></b>
 							</div>
 						</td>
 					</tr>
 					
 				</table><br>
 			</form>
+			<?php endforeach ?>
 		</div>
 	</div>
 	<!-- </div> -->

@@ -3,7 +3,7 @@
   <!-- title welcom -->
   <div class="row">
     <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 alert alert-primary text-center title">
-      <h2 class="text-center text-dark">Welcome to PNC Internship Follow up</h2>
+      <h2 class="text-center text-dark"><strong>Welcome to PNC Internship Follow up</strong></h2>
     </div>
   </div>
   <br>
@@ -106,4 +106,4 @@
   </div>
   <div class="col-xs-1 col-sm-1 col-md-1 col-lg-1"></div>
 </div>
-</div>
+</div><br><br>

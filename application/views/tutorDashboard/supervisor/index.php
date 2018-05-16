@@ -4,7 +4,7 @@
     <div class="row">
         <div class="col-md-4"></div>
         <div class="col-md-4">
-            <h2 class="text-center text-primary">Supervisors List</h2>
+            <h2 class="text-center text-primary"><strong>Supervisors List</strong></h2>
         </div>
         <table id="example" class="table table-striped table-bordered bg-white">
         <thead>

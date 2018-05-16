@@ -1229,7 +1229,8 @@
                      <div class="c-validation"></div>
                   </div> -->
                   <div class="c-button-section">
-                     <div class="c-action"><button class="c-button" id="c-submit-button">Submit</button>
+                     <div class="c-action">
+                        <button class="c-button" id="c-submit-button">Save</button>
                      </div>
                   </div>
                </div>
@@ -1252,6 +1253,6 @@
          </form>
       </div>
       <script>
-         Cognito.config.reportErrors = true;
+         // Cognito.config.reportErrors = true;
          
       </script>

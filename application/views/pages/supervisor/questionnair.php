@@ -1228,16 +1228,15 @@
                     <div class="c-validation"></div>
                  </div>
                  <div class="c-button-section">
-                    <div class="c-action"><button class="c-button" id="c-submit-button">Submit</button></div>
-                    <div sys:id="c-submit-warning" class="" sys:attach="dataview" dataview:data="{binding entry, source={{ Cognito.Forms.model }} }" id="c-submit-warning"></div>
+                    <div class="c-action"><button class="c-button" id="c-submit-button">Save</button></div>
+                    <!-- <div sys:id="c-submit-warning" class="" sys:attach="dataview" dataview:data="{binding entry, source={{ Cognito.Forms.model }} }" id="c-submit-warning"></div> -->
                  </div>
               </div>
-              <div class="c-forms-confirmation">
-           </div>
-           <input type="hidden" name="NoBots" id="c-nobots" value="2GL5omvmYryVdUEc6ayEavGK3wSDUZc1ZfOKfZGWg2w=|4950efe6567eb630c9c398b0b9550160">
+         <!--      <div class="c-forms-confirmation">
+           </div> -->
         </form>
      </div>
      <script>
-        Cognito.config.reportErrors = true;
+        // Cognito.config.reportErrors = true;
         
      </script>

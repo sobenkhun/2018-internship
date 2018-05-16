@@ -212,7 +212,7 @@ class tutorDas extends CI_Controller {
 		$this->load->view('templates/header.php',$data);
 		$this->load->view('menu/tutor.php',$data);
 
-		$this->load->view('tutorDashboard/student/viewWorkLog.php',$data);
+		$this->load->view('tutorDashboard/student/studentWorkLog.php',$data);
 		$this->load->view('templates/footer.php');
 	}
 	function calendar()

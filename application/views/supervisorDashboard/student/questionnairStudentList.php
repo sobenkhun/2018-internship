@@ -4,15 +4,15 @@
     <div class="row">
         <div class="col-md-4"></div>
         <div class="col-md-4">
-            <h2 class="text-center text-primary">Students List</h2>
+            <h2 class="text-center text-primary"><strong>Students List</strong></h2>
         </div>
-        <table id="studentList" class="table table-bordered bg-white" style="width:100%">
+        <table id="studentList" class="table table-striped table-bordered bg-white" style="width:100%">
         <thead>
             <tr>
                 <th class="text-center">ID</th>
                 <th>Student Name</th>
                 
-                <th class="text-center">Action</th>
+                <th class="text-center">Questionnaire</th>
             </tr>
         </thead>
          <tbody>
@@ -21,7 +21,7 @@
               <td class="text-center"><?php echo $student['id']; ?></td>
               <td><?php echo $student['studentName']; ?></td>
               <td class="text-center">
-                <a href="<?php echo base_url();?>supervisor/questionnaire?&id=<?php echo $student['id']; ?>"><span class="mdi mdi-book-minus mdi-24px text-info" data-toggle ="tooltip" title="View "></span></a>    
+                <a href="<?php echo base_url();?>supervisor/questionnaire?&id=<?php echo $student['id']; ?>"><span class="mdi mdi-book-minus mdi-24px text-info" data-toggle ="tooltip" title="questionnaire "></span></a>    
             </td>
           </tr>
           <?php endforeach ?>

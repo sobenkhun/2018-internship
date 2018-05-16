@@ -2,7 +2,7 @@
 <div class="container">
 	<div class="row">
 		<div class="col-md-12">
-			<h2 class="text-primary text-center">Tutors List</h2>
+			<h2 class="text-primary text-center"><strong>Tutors List</strong></h2>
 		</div>
 	</div>
 	<div class="row">
@@ -25,7 +25,7 @@
               <td><?php echo $tutor['position']; ?></td>
               <td class="text-center">
            <a href="<?php echo base_url();?>Welcome_IF/detailTutor?&id=<?php echo $tutor['id']; ?>"><span class="mdi mdi-eye mdi-24px text-info" data-toggle ="tooltip" title="View "></span></a>
-           <a href="<?php echo base_url();?>Welcome_IF/loadEditTutor?&id=<?php echo $tutor['id']; ?>"><span class="mdi mdi-pencil mdi-24px fa-lg text-success" data-toggle ="tooltip" title="Edite "></span></a>
+           <a href="<?php echo base_url();?>Welcome_IF/loadEditTutor?&id=<?php echo $tutor['id']; ?>"><span class="mdi mdi-pencil mdi-24px fa-lg text-success" data-toggle ="tooltip" title="Edit"></span></a>
            <a href="<?php echo base_url();?>Welcome_IF/deleteTutor?&id=<?php echo $tutor['id']; ?>" onclick="return confirm('Are you sure to delete this tutor ?');">
             <i class="text-danger mdi mdi-delete mdi-24px " data-toggle ="tooltip" title="Delete "></i>
           </a>
@@ -42,7 +42,9 @@
 		<div class="row">
 			<div class="col-md-12">
 				<a href="<?php echo base_url();?>Welcome_IF/loadAddTutor">
-					<button class="btn btn-primary"><span class="mdi mdi-20px mdi-account-plus "></span><i>  </i>New Tutor</button>
+					<button class="btn btn-primary">
+						<span class="mdi mdi-20px mdi-account-plus"></span><i>  </i>New Tutor
+					</button>
 				</a>
 			</div>
 		</div>

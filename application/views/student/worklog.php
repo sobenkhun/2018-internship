@@ -1,4 +1,33 @@
-
+<br><br><br>
+<div class="container">
+	<div class="row">
+		<div class="col-lg-12 dropdown">
+			<!-- <div class="dropdown"> -->
+			    <button type="button" class="btn btn-primary dropdown-toggle text-center" data-toggle="dropdown">
+			      Dropdown button
+			    </button>
+			    <div class="dropdown-menu">
+			      <a class="dropdown-item" href="#">Normal</a>
+			      <a class="dropdown-item active" href="#">Active</a>
+			      <a class="dropdown-item disabled" href="#">Disabled</a>
+			    </div>
+			  <!-- </div> -->
+		</div>
+	</div>
+	<div class="row">
+		
+		<div class="btn-group">
+		  <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" width="100%">
+		    This dropdown's menu is right-aligned
+		  </button>
+		  <div class="dropdown-menu dropdown-menu-right">
+		    <button class="dropdown-item" type="button">Action</button>
+		    <button class="dropdown-item" type="button">Another action</button>
+		    <button class="dropdown-item" type="button">Something else here</button>
+		  </div>
+		</div>
+	</div>
+</div>
 <!-- body -->
 <div class="container row-fluid">
 	<div class="col-md-12 col-lg-12">

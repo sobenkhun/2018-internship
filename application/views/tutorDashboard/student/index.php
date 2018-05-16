@@ -4,7 +4,7 @@
 	<h3 class="text-primary text-center"><strong>Students List</strong></h3>
 	<div class="row"><br><br>
 		<table id="example" class="table table-striped table-bordered bg-white">
-			<thead class="text-center">
+			<thead>
 				<tr>
 					<th>ID</th>
 					<th>Student Name</th>

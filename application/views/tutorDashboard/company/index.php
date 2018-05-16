@@ -12,19 +12,19 @@
       <table id="example" class="table table-striped table-bordered bg-white">
        <thead>
          <tr>
-           <th>CID</th>
+           <th class="text-center">ID</th>
            <th>Company</th>
            <th>Location</th>
-           <th>Action</th>
+           <th class="text-center">Action</th>
          </tr>
        </thead>
        <tbody>
         <?php foreach ($company as $company):?>
           <tr>
-              <td><?php echo $company['id']; ?></td>
+              <td class="text-center"><?php echo $company['id']; ?></td>
               <td><?php echo $company['name']; ?></td>
               <td><?php echo $company['location']; ?></td>
-            <td>
+            <td class="text-center">
                <a href="<?php echo base_url();?>tutorDas/cDetailDas"><span class="mdi mdi-eye mdi-24px text-info" data-toggle ="tooltip" title="View "></span></a>
             </td>
       </tr>

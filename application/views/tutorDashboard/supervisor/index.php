@@ -9,15 +9,15 @@
         <table id="example" class="table table-striped table-bordered bg-white">
         <thead>
             <tr>
-                <th>ID</th>
+                <th class="text-center">ID</th>
                 <th>Company Name</th>
                 <th>Supervisor Name</th>
-                <th>Action</th>
+                <th class="text-center">Action</th>
             </tr>
         </thead>
         <tbody>
             <tr>
-                <td>1</td>
+                <td class="text-center">1</td>
                 <td>Cloude Net</td>
                 <td>Rith NHEL</td>
                 <td class="text-center">
@@ -125,9 +125,7 @@
         </tbody>
     </table>
     </div>
-    <a href="<?php echo base_url(); ?>Welcome_IF/createSupervisor">
-        <button class="btn btn-primary"><i class="mdi mdi-account-plus mdi-24px"></i>New Supervisor</button>
-    </a>
+   
 
 </div>
 <script src="https://cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js"></script>

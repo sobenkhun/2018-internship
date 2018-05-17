@@ -11,37 +11,37 @@
 				<div class="dropdownbtn">
 					<button class="btn dropbtn">June</button>
 					<div class="dropdown-content text-left">
-						<a href="#">Week 1</a>
-						<a href="#">Week 2</a>
-						<a href="#">Week 3</a>
-						<a href="#">Week 4</a>
+						<a href="">Week 1</a>
+						<a href="<?php echo base_url();?>firstMonth/secounWeek">Week 2</a>
+						<a href="<?php echo base_url();?>firstMonth/thirdWeek">Week 3</a>
+						<a href="<?php echo base_url();?>firstMonth/fourWeek">Week 4</a>
 					</div>
 				</div>
 				<div class="dropdownbtn">
 					<button class="btn dropbtn">July</button>
 					<div class="dropdown-content text-left">
-						<a href="#">Week 1</a>
-						<a href="#">Week 2</a>
-						<a href="#">Week 3</a>
-						<a href="#">Week 4</a>
+						<a href="<?php echo base_url();?>secounMonth/weekOne">Week 1</a>
+						<a href="<?php echo base_url();?>secounMonth/secounWeek">Week 2</a>
+						<a href="<?php echo base_url();?>secounMonth/thirdWeek">Week 3</a>
+						<a href="<?php echo base_url();?>secounMonth/fourWeek">Week 4</a>
 					</div>
 				</div>
 				<div class="dropdownbtn">
 					<button class="btn dropbtn">August</button>
 					<div class="dropdown-content text-left">
-						<a href="#">Week 1</a>
-						<a href="#">Week 2</a>
-						<a href="#">Week 3</a>
-						<a href="#">Week 4</a>
+						<a href="<?php echo base_url();?>thirdMonth/weekOne">Week 1</a>
+						<a href="<?php echo base_url();?>thirdMonth/secounWeek">Week 2</a>
+						<a href="<?php echo base_url();?>thirdMonth/thirdWeek">Week 3</a>
+						<a href="<?php echo base_url();?>thirdMonth/fourWeek">Week 4</a>
 					</div>
 				</div>
 				<div class="dropdownbtn">
 					<button class="btn dropbtn">September</button>
 					<div class="dropdown-content text-left">
-						<a href="#">Week 1</a>
-						<a href="#">Week 2</a>
-						<a href="#">Week 3</a>
-						<a href="#">Week 4</a>
+						<a href="<?php echo base_url();?>fourMonth/weekOne">Week 1</a>
+						<a href="<?php echo base_url();?>fourMonth/secounWeek">Week 2</a>
+						<a href="<?php echo base_url();?>fourMonth/thirdWeek">Week 3</a>
+						<a href="<?php echo base_url();?>fourMonth/fourWeek">Week 4</a>
 					</div>
 				</div>
 			</div>

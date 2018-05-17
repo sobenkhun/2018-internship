@@ -1,41 +1,5 @@
-<style>
-.dropbtn {
-	border: none;
-	cursor: pointer;
-	background-color: #CC6600;
-	color: white;
-}
 
-.dropdownbtn {
-	position: relative;
-	display: inline-block;
-}
-
-.dropdown-content {
-	display: none;
-	position: absolute;
-	background-color: #f9f9f9;
-	min-width: 90px;
-	box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-	z-index: 1;
-}
-
-.dropdown-content a {
-	color: black;
-	padding: 5px 16px;
-	text-decoration: none;
-	display: block;
-}
-
-.dropdown-content a:hover {background-color: #a0c1e0}
-
-.dropdownbtn:hover .dropdown-content {
-	display: block;
-}
-
-</style>
 <!-- body -->
-
 <div class="container row-fluid">
 	<h3 class="text-primary text-center">
 		<strong>Weekly Work-log report</strong>
@@ -423,6 +387,6 @@
 			</div>
 		</div>
 	</div>
-</div><br>
+</div>
 <!-- //body -->
 

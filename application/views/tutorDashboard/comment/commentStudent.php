@@ -21,13 +21,15 @@
 				<thead class="text-center">
 					<tr>
 						<th>Date</th>	
-						<th>Comment</th>
+						<th>Student comment</th>
+						<th>Tutor comment</th>
 						<th>Validate</th>
 					</tr>
 				</thead>
 				<tbody>
 					<tr>
 						<td class="text-center">1 may 2018</td>
+						<td class="text-center"> Devit is always let in meeting...</td>
 						<td class="text-center"> Devit is always let in meeting...</td>
 						<td class="text-center">
 							<i class="mdi  mdi-close-box mdi-24px text-danger"></i>
@@ -38,6 +40,7 @@
 						
 						<td class="text-center">14 may 2018</td>
 						<td class="text-center"> Devit should buy a clock for...</td>
+						<td class="text-center"> Devit should buy a clock for...</td>
 						<td class="text-center">
 							<i class="mdi  mdi-close-box mdi-24px text-danger"></i>
 							
@@ -47,6 +50,7 @@
 						
 						<td class="text-center">22 may 2018</td>
 						<td class="text-center"> Devit is has always good at...</td>
+						<td class="text-center"> Devit is has always good at...</td>
 						<td class="text-center">
 							<i class="mdi  mdi-close-box mdi-24px text-danger"></i>
 							
@@ -55,6 +59,7 @@
 					<tr>
 						
 						<td class="text-center">1 may 2018</td>
+						<td class="text-center"> Devit is geting better and...</td>
 						<td class="text-center"> Devit is geting better and...</td>
 						<td class="text-center">
 							<i class="mdi  mdi-close-box mdi-24px text-danger"></i>

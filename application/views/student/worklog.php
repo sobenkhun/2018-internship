@@ -1,160 +1,403 @@
-<br><br><br>
-<div class="container">
-	<div class="row">
-		<div class="col-lg-12 dropdown">
-			<!-- <div class="dropdown"> -->
-			    <button type="button" class="btn btn-primary dropdown-toggle text-center" data-toggle="dropdown">
-			      Dropdown button
-			    </button>
-			    <div class="dropdown-menu">
-			      <a class="dropdown-item" href="#">Normal</a>
-			      <a class="dropdown-item active" href="#">Active</a>
-			      <a class="dropdown-item disabled" href="#">Disabled</a>
-			    </div>
-			  <!-- </div> -->
-		</div>
-	</div>
-	<div class="row">
-		
-		<div class="btn-group">
-		  <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" width="100%">
-		    This dropdown's menu is right-aligned
-		  </button>
-		  <div class="dropdown-menu dropdown-menu-right">
-		    <button class="dropdown-item" type="button">Action</button>
-		    <button class="dropdown-item" type="button">Another action</button>
-		    <button class="dropdown-item" type="button">Something else here</button>
-		  </div>
-		</div>
-	</div>
-</div>
+
 <!-- body -->
 <div class="container row-fluid">
-	<div class="col-md-12 col-lg-12">
-		<h3 class="text-primary text-center"><strong>Weekly work-log report</strong></h3>
+	<h3 class="text-primary text-center">
+		<strong>Weekly work-log report</strong>
+	</h3>
+	<br>
+	<div id="accordion">
+		<div class="row">
+			<div class="col-md-6">
+			</div>
+			<div class="col-md-6 text-right">
+				<button class="btn btn-warning">June</button>
+				<button class="btn btn-warning">July</button>
+				<button class="btn btn-warning">August</button>
+				<button class="btn btn-warning">September</button>
+			</div>
+		</div>
 		<br>
-		<table class="table table-bordered table-hover table-responsive" id="tableWorkLog">
-			<tbody class="bg-white">
-			<tr>
-				<th class="bg-info text-white text-center table-fixed"><br>Date & Time</th>
-				<td>
-					<input class="form-control" type="date" value="DD/MM/YYY"><br>
-					<input class="form-control" type="text" placeholder="Start to end time">
-				</td>
-				<td>
-					<input class="form-control" type="date" value="DD/MM/YYY"><br>
-					<input class="form-control" type="text" placeholder="Start to end time">
-				</td>
-			</tr>
-			<tr>
-				<th class="bg-info text-white text-center table-fixed" style="width: 15em;"><br><br>Work Activities</th>
-				<td>
-					<textarea class="form-group" name="" id="" cols="46" rows="4" placeholder="..."></textarea>
-				</td>
-				<td>
-					<textarea class="form-group" name="" id="" cols="46" rows="4" placeholder="..."></textarea>
-				</td>
-			</tr>
-			<tr>
-				<th class="bg-info text-white text-center table-fixed" style="width: 15em;"><br><br>What did you learn?</th>
-				<td>
-					<textarea class="form-group" name="" id="" cols="46" rows="4" placeholder="..."></textarea>
-				</td>
-				<td>
-					<textarea class="form-group" name="" id="" cols="46" rows="4" placeholder="..."></textarea>
-				</td>
-			</tr>
-			<tr>
-				<th class="bg-info text-white text-center table-fixed" style="width: 15em;"><br><br>Difficulties/ Issues</th>
-				<td>
-					<textarea class="form-group" name="" id="" cols="46" rows="4" placeholder="..."></textarea>
-				</td>
-				<td>
-					<textarea class="form-group" name="" id="" cols="46" rows="4" placeholder="..."></textarea>
-				</td>
-			</tr>
-			<tr>
-				<th class="bg-info text-white text-center table-fixed" style="width:15em;"><br><br>Solutions</th>
-				<td>
-					<textarea class="form-group" name="" id="" cols="46" rows="4" placeholder="..."></textarea>
-				</td>
-				<td>
-					<textarea class="form-group" name="" id="" cols="46" rows="4" placeholder="..."></textarea>
-				</td>
-			</tr>
-			<tr>
-				<th class="bg-info text-white text-center table-fixed" style="width: 15em;"><br><br>To Do (Plan)</th>
-				<td>
-					<textarea class="form-group" name="" id="" cols="46" rows="4" placeholder="..."></textarea>
-				</td>
-				<td>
-					<textarea class="form-group" name="" id="" cols="46" rows="4" placeholder="..."></textarea>
-				</td>
-			</tr>
-			<tr>					
-				<th rowspan="2" class="bg-info text-white text-center table-fixed" style="width: 15em;"><br><br><br>Comment</th>
-				<td>
-					<textarea class="form-group" name="" id="" cols="46" rows="4" placeholder="..."></textarea>
-				</td>
-				<td>
-					<textarea class="form-group" name="" id="" cols="46" rows="4" placeholder="..."></textarea>
-				</td>
-			</tr>
-			<tr>
-				<td colspan="7" class="text-right" style="font-size: 25px; margin-top: 0.1em;">
-					<button class="btn btn-circle text-white bg-info" onclick="addDay" title="Add day">
-						<i class="mdi mdi-table-column-plus-after "></i>
-					</button>
-				</td>
-			</tr>
-			<tr>
-				<td colspan="7">
-					<textarea class="form-group" name="" id="" cols="128" rows="4" placeholder="Reflections for this week:"></textarea>
+		<div class="card">
+			<div class="card-header text-center bg-info" id="headingOne" data-toggle="collapse" data-target="#firstday" aria-expanded="true" aria-controls="firstday">
+				<h5 class="mb-0 text-white"><strong>Monday</strong></h5>
+			</div>
 
-				</td>
-			</tr>
-			</tbody>
-			<!-- </thead> -->
-		</table>
-		
-		<br><br>
-		<ul class="nav nav-tabs mr-auto fixed-bottom bg-dark">
-			<li class="nav-item">
-				<a href="#" class="nav-link text-white">Week1</a>
-			</li>
-			<li class="nav-item">
-				<a href="#" class="nav-link text-white">Week2</a>
-			</li>
-			<li class="nav-item" style="font-size: 25px; margin-top: 0.1em;" data-toggle="modal" data-target="#addWeek">
-				<a href="#" class="text-white" >
-					<i class="mdi mdi-plus-box" data-toggle="tooltip" title="Add week"></i>
-				</a>
-			</li>
-			
-			<li class="nav-item text-right" style="margin: 0.1em 0em 0em 68em;">
-				<input type="button" class="btn btn-warning" name="btn-submit" value="Save">
-			</li>
-		</ul>
-		<!-- The Modal -->
-		<div class="modal smalle" id="addWeek">
-			<div class="modal-dialog">
-				<div class="modal-content">
+			<div id="firstday" class="collapse" aria-labelledby="headingOne" data-parent="#accordion">
+				<div class="card-body rounded">
+					<table class="table table-bordered table-hover" id="tableWorkLog">
+						<tbody class="bg-white">
+							<tr>
+								<th class="bg-info text-white text-center table-fixed"><br><br>Date & Time</th>
+								<td>
+									<input class="form-control" type="date" value="DD/MM/YYY"><br>
+									<input class="form-control" type="text" placeholder="Start to end time"><br>
+								</td>
+							</tr>
+							<tr>
+								<th class="bg-info text-white text-center table-fixed" style="width: 15em;"><br><br>Work Activities</th>
+								<td>
+									<textarea class="col-md-12 form-group" name="" id="" rows="4"  placeholder="..."></textarea>
+								</td>
+							</tr>
+							<tr>
+								<th class="bg-info text-white text-center table-fixed" style="width: 15em;"><br><br>What did you learn?</th>
+								<td>
+									<textarea class="col-md-12 form-group" name="" id="" rows="4"  placeholder="..."></textarea>
+								</td>
+							</tr>
+							<tr>
+								<th class="bg-info text-white text-center table-fixed" style="width: 15em;"><br><br>Difficulties/ Issues</th>
+								<td>
+									<textarea class="col-md-12 form-group" name="" id="" rows="4"  placeholder="..."></textarea>
+								</td>
+							</tr>
+							<tr>
+								<th class="bg-info text-white text-center table-fixed" style="width:15em;"><br><br>Solutions</th>
+								<td>
+									<textarea class="col-md-12 form-group" name="" id="" rows="4"  placeholder="..."></textarea>
+								</td>
+							</tr>
+							<tr>
+								<th class="bg-info text-white text-center table-fixed" style="width: 15em;"><br><br>To Do (Plan)</th>
+								<td>
+									<textarea class="col-md-12 form-group" name="" id="" rows="4"  placeholder="..."></textarea>
+								</td>
+							</tr>
+							<tr>					
+								<th class="bg-info text-white text-center table-fixed" style="width: 15em;"><br><br>Comment</th>
+								<td>
+									<textarea class="col-md-12 form-group" name="" id="" rows="4" placeholder="..."></textarea>
+								</td>
+							</tr>
+									<!-- <tr>
+										<td colspan="7">
+											<textarea class="col-md-12 form-group" name="" id="" rows="4" placeholder="Reflections for this week:"></textarea>
 
-					<!-- Modal Header -->
-					<div class="modal-footer">
-						<button type="button" class="close" data-dismiss="modal">&times;</button>
+										</td>
+									</tr> -->
+								</tbody>
+								<!-- </thead> -->
+							</table>
+						</div>
+						<!-- <hr class="bg-warning"> -->
+					</div>
+				</div>
+
+				<!-- ================ -->
+				<div class="card">
+					<div class="card-header text-center bg-info" id="headingTwo" data-toggle="collapse" data-target="#secounday" aria-expanded="true" aria-controls="secounday">
+						<h5 class="mb-0 text-white"><strong>Tuesday</strong></h5>
 					</div>
 
-					<!-- Modal body -->
-					<div class="modal-body">
-						<label class="modal-title">Add week :</label>
-						<input type="text">
-						<button type="button" class="btn btn-primary btn-submit" data-dismiss="modal">Add</button>
+					<div id="secounday" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
+						<div class="card-body">
+							<table class="table table-bordered table-hover" id="tableWorkLog">
+								<tbody class="bg-white">
+									<tr>
+										<th class="bg-info text-white text-center table-fixed"><br><br>Date & Time</th>
+										<td>
+											<input class="form-control" type="date" value="DD/MM/YYY"><br>
+											<input class="form-control" type="text" placeholder="Start to end time"><br>
+										</td>
+									</tr>
+									<tr>
+										<th class="bg-info text-white text-center table-fixed" style="width: 15em;"><br><br>Work Activities</th>
+										<td>
+											<textarea class="col-md-12 form-group" name="" id="" rows="4"  placeholder="..."></textarea>
+										</td>
+									</tr>
+									<tr>
+										<th class="bg-info text-white text-center table-fixed" style="width: 15em;"><br><br>What did you learn?</th>
+										<td>
+											<textarea class="col-md-12 form-group" name="" id="" rows="4"  placeholder="..."></textarea>
+										</td>
+									</tr>
+									<tr>
+										<th class="bg-info text-white text-center table-fixed" style="width: 15em;"><br><br>Difficulties/ Issues</th>
+										<td>
+											<textarea class="col-md-12 form-group" name="" id="" rows="4"  placeholder="..."></textarea>
+										</td>
+									</tr>
+									<tr>
+										<th class="bg-info text-white text-center table-fixed" style="width:15em;"><br><br>Solutions</th>
+										<td>
+											<textarea class="col-md-12 form-group" name="" id="" rows="4"  placeholder="..."></textarea>
+										</td>
+									</tr>
+									<tr>
+										<th class="bg-info text-white text-center table-fixed" style="width: 15em;"><br><br>To Do (Plan)</th>
+										<td>
+											<textarea class="col-md-12 form-group" name="" id="" rows="4"  placeholder="..."></textarea>
+										</td>
+									</tr>
+									<tr>					
+										<th class="bg-info text-white text-center table-fixed" style="width: 15em;"><br><br>Comment</th>
+										<td>
+											<textarea class="col-md-12 form-group" name="" id="" rows="4" placeholder="..."></textarea>
+										</td>
+									</tr>
+									<!-- <tr>
+										<td colspan="7">
+											<textarea class="col-md-12 form-group" name="" id="" rows="4" placeholder="Reflections for this week:"></textarea>
+
+										</td>
+									</tr> -->
+								</tbody>
+								<!-- </thead> -->
+							</table>
+						</div>
+					</div>
+				</div>
+
+				<!-- ============= -->
+				<div class="card">
+					<div class="card-header text-center bg-info" id="headingThree" data-toggle="collapse" data-target="#thirday" aria-expanded="true" aria-controls="thirday">
+						<h5 class="mb-0 text-white"><strong>Wednesday</strong></h5>
+					</div>
+
+					<div id="thirday" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
+						<div class="card-body">
+							<table class="table table-bordered table-hover" id="tableWorkLog">
+								<tbody class="bg-white">
+									<tr>
+										<th class="bg-info text-white text-center table-fixed"><br><br>Date & Time</th>
+										<td>
+											<input class="form-control" type="date" value="DD/MM/YYY"><br>
+											<input class="form-control" type="text" placeholder="Start to end time"><br>
+										</td>
+									</tr>
+									<tr>
+										<th class="bg-info text-white text-center table-fixed" style="width: 15em;"><br><br>Work Activities</th>
+										<td>
+											<textarea class="col-md-12 form-group" name="" id="" rows="4"  placeholder="..."></textarea>
+										</td>
+									</tr>
+									<tr>
+										<th class="bg-info text-white text-center table-fixed" style="width: 15em;"><br><br>What did you learn?</th>
+										<td>
+											<textarea class="col-md-12 form-group" name="" id="" rows="4"  placeholder="..."></textarea>
+										</td>
+									</tr>
+									<tr>
+										<th class="bg-info text-white text-center table-fixed" style="width: 15em;"><br><br>Difficulties/ Issues</th>
+										<td>
+											<textarea class="col-md-12 form-group" name="" id="" rows="4"  placeholder="..."></textarea>
+										</td>
+									</tr>
+									<tr>
+										<th class="bg-info text-white text-center table-fixed" style="width:15em;"><br><br>Solutions</th>
+										<td>
+											<textarea class="col-md-12 form-group" name="" id="" rows="4"  placeholder="..."></textarea>
+										</td>
+									</tr>
+									<tr>
+										<th class="bg-info text-white text-center table-fixed" style="width: 15em;"><br><br>To Do (Plan)</th>
+										<td>
+											<textarea class="col-md-12 form-group" name="" id="" rows="4"  placeholder="..."></textarea>
+										</td>
+									</tr>
+									<tr>					
+										<th class="bg-info text-white text-center table-fixed" style="width: 15em;"><br><br>Comment</th>
+										<td>
+											<textarea class="col-md-12 form-group" name="" id="" rows="4" placeholder="..."></textarea>
+										</td>
+									</tr>
+									<!-- <tr>
+										<td colspan="7">
+											<textarea class="col-md-12 form-group" name="" id="" rows="4" placeholder="Reflections for this week:"></textarea>
+
+										</td>
+									</tr> -->
+								</tbody>
+								<!-- </thead> -->
+							</table>
+						</div>
+					</div>
+				</div>
+
+				<!-- =================== -->
+				<div class="card">
+					<div class="card-header text-center bg-info" id="headingFour" data-toggle="collapse" data-target="#fourthday" aria-expanded="true" aria-controls="fourthday">
+						<h5 class="mb-0 text-white"><strong>Thursday</strong></h5>
+					</div>
+
+					<div id="fourthday" class="collapse" aria-labelledby="headingFourth" data-parent="#accordion">
+						<div class="card-body">
+							<table class="table table-bordered table-hover" id="tableWorkLog">
+								<tbody class="bg-white">
+									<tr>
+										<th class="bg-info text-white text-center table-fixed"><br><br>Date & Time</th>
+										<td>
+											<input class="form-control" type="date" value="DD/MM/YYY"><br>
+											<input class="form-control" type="text" placeholder="Start to end time"><br>
+										</td>
+									</tr>
+									<tr>
+										<th class="bg-info text-white text-center table-fixed" style="width: 15em;"><br><br>Work Activities</th>
+										<td>
+											<textarea class="col-md-12 form-group" name="" id="" rows="4"  placeholder="..."></textarea>
+										</td>
+									</tr>
+									<tr>
+										<th class="bg-info text-white text-center table-fixed" style="width: 15em;"><br><br>What did you learn?</th>
+										<td>
+											<textarea class="col-md-12 form-group" name="" id="" rows="4"  placeholder="..."></textarea>
+										</td>
+									</tr>
+									<tr>
+										<th class="bg-info text-white text-center table-fixed" style="width: 15em;"><br><br>Difficulties/ Issues</th>
+										<td>
+											<textarea class="col-md-12 form-group" name="" id="" rows="4"  placeholder="..."></textarea>
+										</td>
+									</tr>
+									<tr>
+										<th class="bg-info text-white text-center table-fixed" style="width:15em;"><br><br>Solutions</th>
+										<td>
+											<textarea class="col-md-12 form-group" name="" id="" rows="4"  placeholder="..."></textarea>
+										</td>
+									</tr>
+									<tr>
+										<th class="bg-info text-white text-center table-fixed" style="width: 15em;"><br><br>To Do (Plan)</th>
+										<td>
+											<textarea class="col-md-12 form-group" name="" id="" rows="4"  placeholder="..."></textarea>
+										</td>
+									</tr>
+									<tr>					
+										<th class="bg-info text-white text-center table-fixed" style="width: 15em;"><br><br>Comment</th>
+										<td>
+											<textarea class="col-md-12 form-group" name="" id="" rows="4" placeholder="..."></textarea>
+										</td>
+									</tr>
+									<!-- <tr>
+										<td colspan="7">
+											<textarea class="col-md-12 form-group" name="" id="" rows="4" placeholder="Reflections for this week:"></textarea>
+
+										</td>
+									</tr> -->
+								</tbody>
+								<!-- </thead> -->
+							</table>
+						</div>
+					</div>
+				</div>
+				<!-- ===================== -->
+				<div class="card">
+					<div class="card-header text-center bg-info" id="headingFive" data-toggle="collapse" data-target="#fifthday" aria-expanded="true" aria-controls="fifthday">
+						<h5 class="mb-0 text-white"><strong>Friday</strong></h5>
+					</div>
+
+					<div id="fifthday" class="collapse" aria-labelledby="headingFive" data-parent="#accordion">
+						<div class="card-body">
+							<table class="table table-bordered table-hover" id="tableWorkLog">
+								<tbody class="bg-white">
+									<tr>
+										<th class="bg-info text-white text-center table-fixed"><br><br>Date & Time</th>
+										<td>
+											<input class="form-control" type="date" value="DD/MM/YYY"><br>
+											<input class="form-control" type="text" placeholder="Start to end time"><br>
+										</td>
+									</tr>
+									<tr>
+										<th class="bg-info text-white text-center table-fixed" style="width: 15em;"><br><br>Work Activities</th>
+										<td>
+											<textarea class="col-md-12 form-group" name="" id="" rows="4"  placeholder="..."></textarea>
+										</td>
+									</tr>
+									<tr>
+										<th class="bg-info text-white text-center table-fixed" style="width: 15em;"><br><br>What did you learn?</th>
+										<td>
+											<textarea class="col-md-12 form-group" name="" id="" rows="4"  placeholder="..."></textarea>
+										</td>
+									</tr>
+									<tr>
+										<th class="bg-info text-white text-center table-fixed" style="width: 15em;"><br><br>Difficulties/ Issues</th>
+										<td>
+											<textarea class="col-md-12 form-group" name="" id="" rows="4"  placeholder="..."></textarea>
+										</td>
+									</tr>
+									<tr>
+										<th class="bg-info text-white text-center table-fixed" style="width:15em;"><br><br>Solutions</th>
+										<td>
+											<textarea class="col-md-12 form-group" name="" id="" rows="4"  placeholder="..."></textarea>
+										</td>
+									</tr>
+									<tr>
+										<th class="bg-info text-white text-center table-fixed" style="width: 15em;"><br><br>To Do (Plan)</th>
+										<td>
+											<textarea class="col-md-12 form-group" name="" id="" rows="4"  placeholder="..."></textarea>
+										</td>
+									</tr>
+									<tr>					
+										<th class="bg-info text-white text-center table-fixed" style="width: 15em;"><br><br>Comment</th>
+										<td>
+											<textarea class="col-md-12 form-group" name="" id="" rows="4" placeholder="..."></textarea>
+										</td>
+									</tr>
+									<!-- <tr>
+										<td colspan="7">
+											<textarea class="col-md-12 form-group" name="" id="" rows="4" placeholder="Reflections for this week:"></textarea>
+
+										</td>
+									</tr> -->
+								</tbody>
+								<!-- </thead> -->
+							</table>
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-md-12">
+						<textarea class="col-md-12 form-group" name="" id="" rows="4" placeholder="Reflections for this week:"></textarea>
 					</div>
 				</div>
 			</div>
-		</div>
-	</div>
-</div><br>
-<!-- //body -->
+
+			<br><br>
+			<nav class=" nav navbar navbar-expand-md fixed-bottom bg-dark">
+				<div class="collapse navbar-collapse" id="navbarsExampleDefault">
+					<ul class="navbar-nav mr-auto">
+						<li class="nav-item">
+							<a href="#" class="nav-link text-white">Week1</a>
+						</li>
+						<li class="nav-item">
+							<a href="#" class="nav-link text-white">Week2</a>
+						</li>
+						<li class="nav-item" style="font-size: 25px; margin-top: 0.1em;" data-toggle="modal" data-target="#addWeek">
+							<a href="#" class="text-white" >
+								<i class="mdi mdi-plus-box" data-toggle="tooltip" title="Add week"></i>
+							</a>
+						</li>
+						
+					</ul>
+				</div>
+
+				<div class="navbar-collapse collapse navbar-right">
+					<ul class="navbar-nav ml-auto">
+						<li class="nav-item text-right">
+							<input type="button" class="btn btn-warning" name="btn-submit" value="Save">
+						</li>
+					</ul>
+				</div>
+			</nav>
+			<!-- The Modal -->
+			<div class="modal smalle" id="addWeek">
+				<div class="modal-dialog">
+					<div class="modal-content">
+
+						<!-- Modal Header -->
+						<div class="modal-footer">
+							<button type="button" class="close" data-dismiss="modal">&times;</button>
+						</div>
+
+						<!-- Modal body -->
+						<div class="modal-body">
+							<label class="modal-title">Add week :</label>
+							<input type="text">
+							<button type="button" class="btn btn-primary btn-submit" data-dismiss="modal">Add</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div><br>
+		<!-- //body -->
 

@@ -9,7 +9,7 @@
 			</a>
 		</div>
 		<div class="col-md-8">
-			<h3 class="text-center text-primary">Student Profile</h3>
+			<h3 class="text-center text-primary"><strong>Student Profile</strong></h3>
 		</div>
 	</div>
 	<br>
@@ -28,33 +28,33 @@
 					<tr>
 						<td> 
 							<div class="form-group">
-								<label for="email">First Name</label>
+								<label>First Name</label>
 							</div> 
 						</td>
 						<td> </td>
 						<td>
 							<div class="form-group">
-								<label "><?php echo $student['firstname']; ?></label>
+								<span class="font-weight-bold"><?php echo $student['firstname']; ?></span>
 							</div>
 						</td>
 					</tr>
 					<tr>
 						<td> 
 							<div class="form-group">
-								<label class="text-dark">Last Name</label>
+								<label>Last Name</label>
 							</div> 
 						</td>
 						<td> </td>
 						<td>
 							<div class="form-group">
-								<label ><?php echo $student['lastname']; ?></label>
+								<span class="font-weight-bold" ><?php echo $student['lastname']; ?></span>
 							</div>
 						</td>
 					</tr>
 					<tr>
 						<td> 
 							<div class="form-group">
-								<label for="email">Company Website</label>
+								<label>Company Website</label>
 							</div> 
 						</td>
 						<td> </td>
@@ -68,7 +68,7 @@
 					<tr>
 						<td> 
 							<div class="form-group">
-								<label for="email">Tutor By</label>
+								<label>Tutor By</label>
 							</div> 
 						</td>
 						<td> </td>
@@ -82,26 +82,26 @@
 					<tr>
 						<td> 
 							<div class="form-group">
-								<label for="email">Batch</label>
+								<label>Batch</label>
 							</div> 
 						</td>
 						<td> </td>
 						<td>
 							<div class="form-group">
-								<label><?php echo $student['batch']; ?></label>
+								<span class="font-weight-bold"><?php echo $student['batch']; ?></span>
 							</div>
 						</td>
 					</tr>
 					<tr>
 						<td> 
 							<div class="form-group">
-								<label for="email">Year</label>
+								<label>Year</label>
 							</div> 
 						</td>
 						<td> </td>
 						<td>
 							<div class="form-group">
-								<label><?php echo $student['year']; ?></label>
+								<span class="font-weight-bold"><?php echo $student['year']; ?></span>
 							</div>
 						</td>
 					</tr>
@@ -140,7 +140,7 @@
 						<td> </td>
 						<td>
 							<div class="form-group">
-								<label><?php echo $student['phone']; ?></label>
+								<span class="font-weight-bold"><?php echo $student['phone']; ?></span>
 							</div>
 						</td>
 					</tr>

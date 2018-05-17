@@ -19,7 +19,8 @@
 		<div class="col-md-4 text-center "><br>
 			<img class="user userSupervisor"  src="<?php echo base_url(); ?>assets/images/studentpiture.jpg" alt="" style="height: 260px; margin-top: 17px; padding: 10px;"><br>
 
-			<label for=""><?php echo $student['studentName']; ?></label>
+			<label for=""><?php echo $student['firstname']; ?></label>
+			<label for=""><?php echo $student['lastname']; ?></label>
 		</div>
 		<div class="col-md-6">
 			
@@ -59,7 +60,8 @@
 						<td> </td>
 						<td>
 							<div class="form-group">
-								<a href="#"><?php echo $student['url']; ?></a>
+								<!-- <a href="#"><?php echo $student['url']; ?></a> -->
+								<a href="#">www.codingget.com</a>
 							</div>
 						</td>
 					</tr>
@@ -72,7 +74,8 @@
 						<td> </td>
 						<td>
 							<div class="form-group">
-								<label><?php echo $student['tutorName']; ?></label>
+								<!-- <label><?php echo $student['tutorName']; ?></label> -->
+								<label>Rady Y</label>
 							</div>
 						</td>
 					</tr>

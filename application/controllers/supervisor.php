@@ -3,6 +3,9 @@
 class supervisor extends CI_Controller {
 	function index()
 	{
+		$this->load->helper('form');
+		$this->load->Model('Supervisor_model');
+		$data['student'] = $this->Supervisor_model->countStudent();
 		$data['activeLink'] = 'Home Page';
 		$this->load->view('templates/header.php',$data);
 		$this->load->view('menu/supervisorMenu.php',$data);
@@ -29,6 +32,7 @@ class supervisor extends CI_Controller {
 		$this->load->Model('Supervisor_model');
 	    $data['student'] = $this->Supervisor_model->getDataStudentDetail($studentId);
 	    $data['activeLink'] = 'Student';
+	    // var_dump($data); die();
 		$this->load->view('templates/header.php');
 		$this->load->view('menu/supervisorMenu.php');
 		$this->load->view('supervisorDashboard/student/studentProfile.php',$data);
@@ -53,14 +57,27 @@ class supervisor extends CI_Controller {
 		$this->load->view('supervisorDashboard/student/index.php',$data);
 		$this->load->view('templates/footer.php');
 	}
+	// function questionnaire()
+	// {
+
+	// 	$this->load->helper('form');
+	// 	$this->load->Model('Supervisor_model');
+	//     $data['student'] = $this->Supervisor_model->getQuestionnaire();
+	//     $data['activeLink'] = 'questionnair';
+	//     // var_dump($data);
+	// 	$this->load->view('templates/header.php',$data);
+	// 	$this->load->view('menu/supervisorMenu.php',$data);
+	// 	$this->load->view('supervisorDashboard/questionnair.php',$data);
+	// 	$this->load->view('templates/footer.php');
+	// }
 	function questionnaire()
 	{
-
+		$studentId = $_GET['id'];
 		$this->load->helper('form');
 		$this->load->Model('Supervisor_model');
-	    $data['student'] = $this->Supervisor_model->getQuestionnaire();
+	    $data['questionnaire'] = $this->Supervisor_model->questionnaire($studentId);
 	    $data['activeLink'] = 'questionnair';
-	    // var_dump($data);
+	    var_dump($data); die();
 		$this->load->view('templates/header.php',$data);
 		$this->load->view('menu/supervisorMenu.php',$data);
 		$this->load->view('supervisorDashboard/questionnair.php',$data);
@@ -114,6 +131,7 @@ class supervisor extends CI_Controller {
 		$this->load->view('supervisorDashboard/calendar/calendar.php',$data);
 		// $this->load->view('templates/footer.php');
 	}
+
 }
 
 

@@ -2,7 +2,6 @@
 <div class="container">
 	<div class="row">
 		<div class="col-md-2">
-			<?php foreach ($student as $student):?>
 			<a href="<?php echo base_url(); ?>supervisor/student">
 				<button type="button" class="btn btn-primary">
 					<i class="mdi mdi-chevron-left"></i>Back
@@ -10,7 +9,7 @@
 			</a>
 		</div>
 		<div class="col-md-8">
-			<h3 class="text-center text-primary">Student Profile</h3>
+			<h3 class="text-center text-primary"><strong>Student Profile</strong></h3>
 		</div>
 	</div>
 	<br>
@@ -21,6 +20,7 @@
 			<img class="user userSupervisor"  src="<?php echo base_url(); ?>assets/images/studentpiture.jpg" alt="" style="height: 260px; margin-top: 17px; padding: 10px;"><br>
 
 			<label for=""><?php echo $student['firstname']; ?></label>
+			<label for=""><?php echo $student['lastname']; ?></label>
 		</div>
 		<div class="col-md-6">
 			
@@ -28,84 +28,80 @@
 					<tr>
 						<td> 
 							<div class="form-group">
-								<label for="email">First Name</label>
+								<label>First Name</label>
 							</div> 
 						</td>
 						<td> </td>
 						<td>
 							<div class="form-group">
-								<b class="text-dark"></b>
+								<span class="font-weight-bold"><?php echo $student['firstname']; ?></span>
 							</div>
 						</td>
 					</tr>
 					<tr>
 						<td> 
 							<div class="form-group">
-								<label class="text-dark">Last Name</label>
+								<label>Last Name</label>
 							</div> 
 						</td>
 						<td> </td>
 						<td>
 							<div class="form-group">
-								<b class="text-dark"></b>
-							</div>
-						</td>
-					</tr>
-					<!-- <tr>
-						<td> 
-							<div class="form-group">
-								<label for="email">Company Website</label>
-							</div> 
-						</td>
-						<td> </td>
-						<td>
-							<div class="form-group">
-								<a href="https://www.codingate.com/">Coding Get</a>
+								<span class="font-weight-bold" ><?php echo $student['lastname']; ?></span>
 							</div>
 						</td>
 					</tr>
 					<tr>
 						<td> 
 							<div class="form-group">
-								<label for="email">Tutor By</label>
+								<label>Company Website</label>
 							</div> 
 						</td>
 						<td> </td>
 						<td>
 							<div class="form-group">
-								<b class="text-dark">Chanank CHON</b>
+								<!-- <a href="#"><?php echo $student['url']; ?></a> -->
+								<a href="#">www.codingget.com</a>
 							</div>
 						</td>
 					</tr>
 					<tr>
 						<td> 
 							<div class="form-group">
-								<label for="email">Batch</label>
+								<label>Tutor By</label>
 							</div> 
 						</td>
 						<td> </td>
 						<td>
 							<div class="form-group">
-								<select name="" id="">
-									<option value="">WEB</option>
-									<option value="">WEB</option>
-								</select>
+								<!-- <label><?php echo $student['tutorName']; ?></label> -->
+								<label>Rady Y</label>
 							</div>
 						</td>
 					</tr>
 					<tr>
 						<td> 
 							<div class="form-group">
-								<label for="email">Year</label>
+								<label>Batch</label>
 							</div> 
 						</td>
 						<td> </td>
 						<td>
 							<div class="form-group">
-								<select name="" id="">
-									<option value="">2018</option>
-									<option value="">2019</option>
-								</select>
+								<span class="font-weight-bold"><?php echo $student['batch']; ?></span>
+							</div>
+						</td>
+					</tr>
+					<tr>
+						<td> 
+							<div class="form-group">
+								<label>Year</label>
+							</div> 
+						</td>
+						<td> </td>
+						<td>
+							<div class="form-group">
+								<span class="font-weight-bold"><?php echo $student['year']; ?></span>
 							</div>
 						</td>
 					</tr>
@@ -118,7 +114,7 @@
 						<td> </td>
 						<td>
 							<div class="form-group">
-								<a href="#">prem.mann@student.passerellesnumeriques.org</a>
+								<a href="#"><?php echo $student['schoolemail']; ?></a>
 							</div>
 						</td>
 					</tr>
@@ -131,7 +127,7 @@
 						<td> </td>
 						<td>
 							<div class="form-group">
-								<a href="#">prem.mann@gmail.com</a>
+								<a href="#"><?php echo $student['peremail'] ?></a>
 							</div>
 						</td>
 					</tr>
@@ -144,17 +140,12 @@
 						<td> </td>
 						<td>
 							<div class="form-group">
-								<label for="">0968889878</label>
+								<span class="font-weight-bold"><?php echo $student['phone']; ?></span>
 							</div>
 						</td>
-					</tr> -->
+					</tr>
 				</table>
-				
 		</div>
 		<?php endforeach ?>
 	</div>
-	<!-- </div> -->
-	<!-- </div> -->
-	<!-- </div>			 -->
 </div>
-<!-- </div> -->

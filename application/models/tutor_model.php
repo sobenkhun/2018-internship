@@ -34,6 +34,7 @@ class tutor_model extends CI_Model {
     {
         $this->db->select('*');
         $query = $this->db->get_where('company', array('id' => $companyId));
+        //var_dump($query);die();
         return $query->result_array();
     }
 
@@ -45,6 +46,51 @@ class tutor_model extends CI_Model {
     	return $query->result_array();
     }
 
+
+    public function viewSupervisor($sId)
+    {
+        $this->db->select('*');
+        $this->db->from('supervisor');
+        $this->db->join('company', 'company.id = supervisor.id');
+        $this->db->where('supervisor.id', $sId);
+        $query = $this->db->get();
+        return $query->result_array();
+    }
+
     
+
+
+    public function getCompanyDataDetail2($companyId)
+    {
+        $this->db->select('*');
+        $query = $this->db->get_where('company', array('id' => $companyId));
+        return $query->result_array();
+    }
+    public function getTutorDataDetail($tutorId)
+    {
+        $this->db->select('*');
+        $query = $this->db->get_where('tutor', array('id' => $tutorId));
+        return $query->result_array();
+    }
+
+    /* superviser detail */
+    public function getSupDataDetail($supId)
+    {
+        $this->db->select('*');
+        $query = $this->db->get_where('supervisor', array('id' => $supId));
+        // var_dump($query->result_array());die();
+        return $query->result_array();
+    }
+    /* join table compnay with subperviser*/
+
+    // public function viewSupervisor()
+    // {
+    //     $this->db->select('supervisor.id as sId, name, supervisor.firstname AS sFname, Supervisor.lastname AS sLname');
+    //     $this->db->from('supervisor');
+    //     $this->db->join('company', 'company.id = supervisor.company_id');
+    //     //$this->db->where('supervisor.id');
+    //     $query = $this->db->get();
+    //     return $query->result_array();
+    // }
 
 }

@@ -7,7 +7,7 @@
 			<i class="mdi mdi-chevron-left mdi-15px text-white"></i>Back
 		</button>
 	</a>
-	<h3 class="text-primary text-center">New Supervisor</h3><br>
+	<h3 class="text-primary text-center">Edit Supervisor</h3><br>
 	<div class="row border border-form rounded bg-white">
 		<div class="rounded bg-white">	
 			<br>

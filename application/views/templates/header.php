@@ -23,12 +23,12 @@ $langCode= (isset($langCode)) ? $langCode :  "en";
   <link rel="shortcut icon" href="<?php echo base_url();?>assets/images/logo.png" type="image/x-icon">
 
   <!-- Custom style skeleton -->
-  <link rel="stylesheet" href="<?php echo base_url();?>assets/css/customCss.css">
+  <link rel="stylesheet" href="<?php echo base_url();?>/assets/css/customCss.css">
   
   <!-- materil icon -->
   <link href="<?php echo base_url();?>assets/MDI-2.1.19/css/materialdesignicons.min.css" media="all" rel="stylesheet" type="text/css">
 
-  <link rel="stylesheet" href="<?php echo base_url();?>assets/css/skeleton-1.0.0.css">
+  <link rel="stylesheet" href="<?php echo base_url();?>/assets/css/skeleton-1.0.0.css">
 </head>
 <body> 
 

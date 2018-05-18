@@ -14,15 +14,20 @@
 		</div>
 	</div>
 	<br>
+
+		<?php foreach ($tutor as $tutor):?>
 	<div class="row bg-white">
 		<div class="col-md-1"></div>
 		<div class="col-md-4 text-center "><br>
 			<img class="user userSupervisor"  src="<?php echo base_url(); ?>assets/images/studentpiture.jpg" alt="" style="height: 260px; margin-top: 17px; padding: 10px;"><br>
-			<a class="link" href="#" >Votey Tey</a>
+
+			<a class="link" href="#" ><?php echo $tutor['firstname']." ".$tutor['lastname']; ?></a>
+
 		</div>
 		<div class="col-md-6">
 			<form action="/action_page.php">
 				<table><br>
+					
 					<tr>
 						<td> 
 							<div class="form-group">
@@ -32,7 +37,9 @@
 						<td> </td>
 						<td>
 							<div class="form-group">
-								<b class="text-dark">Votey</b>
+
+								<b class="text-dark"><?php echo $tutor['firstname']; ?></b>
+							
 							</div>
 						</td>
 					</tr>
@@ -45,7 +52,24 @@
 						<td> </td>
 						<td>
 							<div class="form-group">
-								<b class="text-dark">Tey</b>
+
+								<b class="text-dark"><?php echo $tutor['lastname']; ?></b>
+							</div>
+						</td>
+					</tr>
+					<tr>
+						<td> 
+							<div class="form-group">
+								<label class="text-dark">User Name</label>
+							</div> 
+						</td>
+						<td> </td>
+						<td>
+							<div class="form-group">
+								<b class="text-dark"><?php echo $tutor['username']; ?></b>
+
+								
+
 							</div>
 						</td>
 					</tr>
@@ -58,7 +82,9 @@
 						<td> </td>
 						<td>
 							<div class="form-group">
-								<b class="text-dark">Web training</b>
+
+								<b class="text-dark"><?php echo $tutor['position']; ?></b>
+
 							</div>
 						</td>
 					</tr>
@@ -71,7 +97,10 @@
 						<td> </td>
 						<td>
 							<div class="form-group">
-								<a href="#"> Votey.tey@gmail.com</a>
+
+								<a href="#"><?php echo $tutor['email']; ?></a>
+
+	
 							</div>
 						</td>
 					</tr>
@@ -84,13 +113,16 @@
 						<td> </td>
 						<td>
 							<div class="form-group">
-								<b class="text-dark">0714638343</b>
+
+								<b class="text-dark"><?php echo $tutor['phone']; ?></b>
+
 							</div>
 						</td>
 					</tr>
 					
 				</table><br>
 			</form>
+			<?php endforeach ?>
 		</div>
 	</div>
 	<!-- </div> -->

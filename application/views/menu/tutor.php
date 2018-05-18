@@ -20,7 +20,7 @@ $activeLink = (isset($activeLink)) ? $activeLink :  "";?>
         <a class="nav_link nav-link" href="<?php echo base_url();?>tutorDas/tutorList">Tutor</a>
       </li>
       <li class="nav-item <?php echo ($activeLink=='supervisor'?'active':'');?>">
-        <a class="nav_link nav-link" href="<?php echo base_url();?>tutorDas/supervisorDas"></i>Supervisor</a>
+        <a class="nav_link nav-link" href="<?php echo base_url();?>tutorDas/tSupervisorDas"></i>Supervisor</a>
       </li>
       <li class="nav-item <?php echo ($activeLink=='student'?'active':'');?>">
         <a class="nav_link nav-link" href="<?php echo base_url();?>tutorDas/studentDas"></i>Student</a>
@@ -36,7 +36,7 @@ $activeLink = (isset($activeLink)) ? $activeLink :  "";?>
               <a class="nav-link " href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 <i class="mdi mdi-24px mdi-bell " data-toggle="tooltip" title="Notification" id="iconBell"> </i>
               </a>
-                <ul class="dropdown-menu">
+                <ul class="dropdown-menu menu-dropdown">
                   <li class="head text-light bg-info">
                     <div class="row">
                       <div class="col-lg-12 col-sm-12 col-12">

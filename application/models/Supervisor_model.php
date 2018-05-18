@@ -25,6 +25,7 @@ class Supervisor_model extends CI_Model {
 		 $query =  $this->db->get_where('student',$userRole);
 	     return $query->result_array(); 
 	}
+
 	public function getDataCompleteQuestionnaire()
 	{
 		$this->db->select("id, CONCAT(firstname,' ',lastname) AS studentName");
@@ -33,79 +34,102 @@ class Supervisor_model extends CI_Model {
 		 $query =  $this->db->get_where('student',$userRole);
 	     return $query->result_array(); 
 	}
-	 public function addCompany($name,$address,$phone,$description,$location,$url)
+
+    public function questionnaire($stuId)
     {
-        $data = array('name'=>$name,
-                     'itemdescription'=>$description,
-                     'postaladdress'=>$address,
-                     'location'=>$location,
-                     'phone'=>$phone,
-                     'url'=>$url);
-                     $this->db->insert('company',$data);
+		 $this->db->select("s.id,s.firstname as stuFName,s.lastname as stuLName,
+		                        s.phone,s.peremail,s.schoolemail,s.batch,s.year,s.username,s.password,
+		                        su.firstname as suFName,su.lastname as suLName,
+		                        c.name,
+		                        t.firstname as tFName,t.lastname as tLName");
+		 $this->db->from('supervisor su');
+		 $this->db->join('student s', 's.supervisor_id = su.id');
+		 $this->db->join('company c', 'c.id = su.company_id');
+		 $this->db->join('tutor t', 't.company_id = c.id');
+		 $this->db->where('s.id', $stuId);
+		$query = $this->db->get();
+		 return $query->result_array(); 
+
+
+        // $this->db->select("id");
+        // $this->db->from("company");
+        // $this->db->where('name', $company);
+        // $query = $this->db->get();
+        // $company_id = $query->result_array();
+        // $company_id = (int)$company_id;
+        // $data = array('firstname'=>$firstname,
+        //              'lastname'=>$lastname,
+        //              'position'=>$position,
+        //              'username' =>$username,
+        //              'password' =>$password,
+        //              'company_id' =>$company_id,
+        //              'email'=>$sEmail,
+        //              'phone'=>$phone,
+        //              'userrole_id'=>'2' 
+        //          );
+        // $this->db->insert('tutor', $data);
     }
 	public function getQuestionnaire()
 	{
 		$query = "Hello getQuestionnaire";
 	     return $query; 
 	}
-	 public function getDataStudentDetail($studentId)
+	
+	public function getDataStudentDetail($studentId)
     {
-    	 $this->db->select(" 
-					s.firstname,
-					s.lastname,
-					c.url,
-    	 			CONCAT(t.firstname,' ', t.lastname) AS tutorName,
-    	 			CONCAT(s.firstname,' ', s.lastname) AS studentName,
-    	 			s.batch,
-    	 			s.year,
-    	 			s.schoolemail,
-    	 			s.peremail,
-    	 			s.phone");
-     $this->db->from('supervisor su');
-     $this->db->join('student s', 's.supervisor_id = su.id');
-     $this->db->join('company c', 'c.id = su.company_id');
-     $this->db->join('tutor t', 't.company_id = c.id');
-     $this->db->where('s.id', $studentId);
-    $query = $this->db->get();
-     // if($query->num_rows()>0){
-     //      return $query->result_array();
-     //      }else{
-     //          return $query->result_array();
-     //      }
-     return $query->result_array(); 
+    // 	 $this->db->select(" 
+				// 	s.firstname,
+				// 	s.lastname,
+				// 	c.url,
+    // 	 			CONCAT(t.firstname,' ', t.lastname) AS tutorName,
+    // 	 			CONCAT(s.firstname,' ', s.lastname) AS studentName,
+    // 	 			s.batch,
+    // 	 			s.year,
+    // 	 			s.schoolemail,
+    // 	 			s.peremail,
+    // 	 			s.phone");
+    //  $this->db->from('supervisor su');
+    //  $this->db->join('student s', 's.supervisor_id = su.id');
+    //  $this->db->join('company c', 'c.id = su.company_id');
+    //  $this->db->join('tutor t', 't.company_id = c.id');
+    //  $this->db->where('s.id', $studentId);
+    // $query = $this->db->get();
+    // return $query->result_array(); 
+
+    	$this->db->select("*");
+    	$this->db->from("student");
+    	$this->db->where('student.id', $studentId);
+    	$query = $this->db->get();
+    	return $query-> result_array();
 
     }
-// 	public function getDataSudentDetail()
-// 	{
-// 		$this->db->select("student.firstname, 
-// 		student.lastname, 
-// 		company.url, 
-// 		CONCAT(tutor.firstname,' ',tutor.lastname) AS tutorName, 
-// 		student.batch, 
-// 		student.year, 
-// 		student.schoolemail, 
-// 		student.peremail, 
-// 		student.phone");
 
-// 		$this->db->join('tutor','tutor.id = student.id');
-// 		$this->db->join('company','company.id = student.id');
-// 		$this->db->where('id'= $student);
-// 		// $studentRole = 4; 
-// 		// $tutorRole = 2; 
-// 		$this->db->select('book_id, book_name, author_name, category_name');
-// 		$this->db->from('books');
-// 		$this->db->join('category', 'category.category_id = books.category_id');
-// 		$this->db->where('category_name', 'Self Development');
-// 		$query = $this->db->get();
-
-
-// 		// $studentUserRole = array('student.userrole_id' => $studentRole, 'student.userid' => $tutorRole);
-// // lvb;sd;ld;b
-// 		// $array = array('internship_users.userrole_id' => $studentRole, 'internship_users.userrole_id' => $tutorRole);
-// 		// $this->db->where($array);
-
-
-// 		$query =  $this->db->get('student');
-// 		return $query ->result_array();
-// 	}
+    public function countStudent()
+    {
+        $this->db->select('*');
+        $query = $this->db->get('student');
+        return $query->num_rows();
+    }
+    // Add questionnaire
+ 
+    // public function addTutor($company,$firstname,$lastname,$username,$password,$position,$sEmail,$phone)
+    // {
+    //     $this->db->select("id");
+    //     $this->db->from("company");
+    //     $this->db->where('name', $company);
+    //     $query = $this->db->get();
+    //     $company_id = $query->result_array();
+    //     $company_id = (int)$company_id;
+    //     $data = array('firstname'=>$firstname,
+    //                  'lastname'=>$lastname,
+    //                  'position'=>$position,
+    //                  'username' =>$username,
+    //                  'password' =>$password,
+    //                  'company_id' =>$company_id,
+    //                  'email'=>$sEmail,
+    //                  'phone'=>$phone,
+    //                  'userrole_id'=>'2' 
+    //              );
+    //     $this->db->insert('tutor', $data);
+    // }
 }

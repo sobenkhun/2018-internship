@@ -8,7 +8,6 @@
 			<thead class="bg-info text-white text-center table-fixed">
 				<tr>
 					<th>Date & Time</th>
-					<!-- <th>Time</th> -->
 					<th>Work Activities</th>
 					<th>What did you learn?</th>
 					<th>Difficulties/ Issues</th>

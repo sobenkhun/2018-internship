@@ -1,8 +1,8 @@
 
-      <link type="text/css" rel="stylesheet" href="<?php echo base_url(); ?>/assets/CognitorFormFiles/1793887487">
-      <link rel="shortcut icon" href="https://www.cognitoforms.com/Content/images/cogicon.ico">
-      <link rel="apple-touch-icon" href="https://www.cognitoforms.com/Content/images/apple-icon.png">
-      <link rel="alternate" type="application/json+oembed" href="https://services.cognitoforms.com/admin/oembed?url=https%3a%2f%2fwww.cognitoforms.com%2fPasserellesNum%25C3%25A9riques%2fCompaniesFormPNC" title="Companies Form PNC">
+      <!-- <link type="text/css" rel="stylesheet" href="<?php echo base_url(); ?>/assets/CognitorFormFiles/1793887487"> -->
+      <!-- <link rel="shortcut icon" href="https://www.cognitoforms.com/Content/images/cogicon.ico"> -->
+      <!-- <link rel="apple-touch-icon" href="https://www.cognitoforms.com/Content/images/apple-icon.png"> -->
+      <!-- <link rel="alternate" type="application/json+oembed" href="https://services.cognitoforms.com/admin/oembed?url=https%3a%2f%2fwww.cognitoforms.com%2fPasserellesNum%25C3%25A9riques%2fCompaniesFormPNC" title="Companies Form PNC"> -->
       <link rel="stylesheet" href="<?php echo base_url(); ?>/assets/CognitorFormFiles/style1.css">
        <div class="container">
          <div class="row">
@@ -14,20 +14,21 @@
             <div class="col-md-4"></div>
          </div>
        </div>  
+
       <div id="c-forms-container" class="cognito c-safari c-lrg container">
          <script src="<?php echo base_url();?>/assets/CognitorFormFiles/88be12b9-8c99-4872-a5dd-446f35bfd50f"></script>
          <link rel="stylesheet" href="<?php echo base_url(); ?>/assets/CognitorFormFiles/style2.css">
-         <link href="<?php echo base_url(); ?>/assets/CognitorFormFiles/css" rel="stylesheet" type="text/css">
+         <!-- <link href="<?php echo base_url(); ?>/assets/CognitorFormFiles/css" rel="stylesheet" type="text/css"> -->
          <link rel="stylesheet" href="<?php echo base_url(); ?>/assets/CognitorFormFiles/style3.css">
          
-         <form>
+         <form action="<?php echo base_url();?>supervisor/questionnaire" method="post">
             <div class="c-forms-form" tabindex="0">
-               <div class="c-editor" style="display:none;">
+               <!-- <div class="c-editor" style="display:none;">
                   <input type="text" class="c-forms-form-style">
-               </div>
+               </div> -->
                <div class="c-forms-form-body">
                   <div class="c-forms-heading">
-                     <div class="c-forms-logo" style="display:none;"></div>
+                     <!-- <div class="c-forms-logo" style="display:none;"></div> -->
                      <div class="c-forms-form-title">
                         <h2>Companies Form PNC</h2>
                      </div>
@@ -1229,7 +1230,8 @@
                      <div class="c-validation"></div>
                   </div> -->
                   <div class="c-button-section">
-                     <div class="c-action"><button class="c-button" id="c-submit-button">Submit</button>
+                     <div class="c-action">
+                        <button class="c-button" id="c-submit-button">Save</button>
                      </div>
                   </div>
                </div>
@@ -1252,6 +1254,6 @@
          </form>
       </div>
       <script>
-         Cognito.config.reportErrors = true;
+         // Cognito.config.reportErrors = true;
          
       </script>

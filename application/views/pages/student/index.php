@@ -4,21 +4,21 @@
 	<h3 class="text-primary text-center"><strong>Students List</strong></h3>
 	<div class="row"><br><br>
 		<table id="example" class="table table-striped table-bordered bg-white">
-			<thead class="text-center">
+			<thead>
 				<tr>
-					<th>ID</th>
+					<th class="text-center">ID</th>
 					<th>Student Name</th>
 					<th>Company</th>
 					<th>Supervisor</th>
 					<th>Tutor</th>
-					<th>Comment</th>
+					<th>Work-log</th>
 					<th>Action</th>
 				</tr>
 			</thead>
 			<tbody>
 				 <?php foreach ($student as $student):?>
 				<tr>
-					<td><?php echo $student['id']; ?></td>
+					<td class="text-center"><?php echo $student['id']; ?></td>
 					<td><?php echo $student['stuFName']." ".$student['stuLName']; ?></td>
 					<td><?php echo $student['name']; ?></td>
 					<td><?php echo $student['suFName']." ".$student['suLName']; ?></td>
@@ -36,7 +36,7 @@
 						<a href="<?php echo base_url();?>Welcome_IF/viewStudentData?&id=<?php echo $student['id']; ?>">
 							<i class="mdi mdi-eye text-info mdi-24px" data-toggle ="tooltip" title="View "></i>
 						</a>
-						<a href="<?php echo base_url();?>Welcome_IF/updateStudent?&id=<?php echo $student['id']; ?>" data-toggle ="tooltip" title="Edit ">
+						<a href="<?php echo base_url();?>Welcome_IF/updateStudent?&id=<?php echo $student['id']; ?>" data-toggle ="tooltip" title="Edit">
 							<i class="mdi  mdi-border-color text-success mdi-24px" ></i>
 						</a>
 						<a href="<?php echo base_url();?>Welcome_IF/deleteStudent?&id=<?php echo $student['id']; ?>" onclick = "return confirm('Are you sure that you want to delete this student?')" data-toggle ="tooltip" title="Delete ">
@@ -53,7 +53,7 @@
 		<div class="col-md-12">
 			<a href="<?php echo base_url();?>Welcome_IF/addStudent">
 				<button class="btn btn-primary">
-					<i class="mdi mdi-account-plus text-white mdi-20px"></i>New Student
+					<i class="mdi mdi-account-plus text-white mdi-20px">  </i>New Student
 				</button>
 			</a>
 		</div>

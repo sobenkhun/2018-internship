@@ -1,6 +1,10 @@
-
 <!-- body -->
 <div class="container row-fluid">
+	<a href="<?php echo base_url();?>Welcome_IF/student">
+		<button class="btn btn-primary">
+			<i class="mdi mdi-chevron-left mdi-15px text-white"></i>Back
+		</button>
+	</a>
 	<h3 class="text-primary text-center">
 		<strong>Weekly Work-log report</strong>
 	</h3>
@@ -254,7 +258,6 @@
 				<div class="card-header text-center bg-info" id="headingFour" data-toggle="collapse" data-target="#fourthday" aria-expanded="true" aria-controls="fourthday">
 					<h5 class="mb-0 text-white"><strong>Thursday</strong></h5>
 				</div>
-
 				<div id="fourthday" class="collapse" aria-labelledby="headingFourth" data-parent="#accordion">
 					<div class="card-body">
 						<table class="table table-bordered table-hover" id="tableWorkLog">
@@ -386,7 +389,6 @@
 				</form>
 			</div>
 		</div>
+		
 	</div>
 </div>
-<!-- //body -->
-

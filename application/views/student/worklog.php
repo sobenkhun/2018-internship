@@ -7,47 +7,103 @@
 	<br>
 	<div id="accordion">
 		<div class="row">
-			<div class="col-md-6 text-left">
-				<div class="dropdownbtn">
-					<button class="btn dropbtn">June</button>
-					<div class="dropdown-content text-left">
-						<a href="">Week 1</a>
-						<a href="<?php echo base_url();?>firstMonth/secounWeek">Week 2</a>
-						<a href="<?php echo base_url();?>firstMonth/thirdWeek">Week 3</a>
-						<a href="<?php echo base_url();?>firstMonth/fourWeek">Week 4</a>
-					</div>
-				</div>
-				<div class="dropdownbtn">
-					<button class="btn dropbtn">July</button>
-					<div class="dropdown-content text-left">
-						<a href="<?php echo base_url();?>secounMonth/weekOne">Week 1</a>
-						<a href="<?php echo base_url();?>secounMonth/secounWeek">Week 2</a>
-						<a href="<?php echo base_url();?>secounMonth/thirdWeek">Week 3</a>
-						<a href="<?php echo base_url();?>secounMonth/fourWeek">Week 4</a>
-					</div>
-				</div>
-				<div class="dropdownbtn">
-					<button class="btn dropbtn">August</button>
-					<div class="dropdown-content text-left">
-						<a href="<?php echo base_url();?>thirdMonth/weekOne">Week 1</a>
-						<a href="<?php echo base_url();?>thirdMonth/secounWeek">Week 2</a>
-						<a href="<?php echo base_url();?>thirdMonth/thirdWeek">Week 3</a>
-						<a href="<?php echo base_url();?>thirdMonth/fourWeek">Week 4</a>
-					</div>
-				</div>
-				<div class="dropdownbtn">
-					<button class="btn dropbtn">September</button>
-					<div class="dropdown-content text-left">
-						<a href="<?php echo base_url();?>fourMonth/weekOne">Week 1</a>
-						<a href="<?php echo base_url();?>fourMonth/secounWeek">Week 2</a>
-						<a href="<?php echo base_url();?>fourMonth/thirdWeek">Week 3</a>
-						<a href="<?php echo base_url();?>fourMonth/fourWeek">Week 4</a>
-					</div>
-				</div>
+			<div class="col-md-12">
+					<a href="<?php echo base_url();?>cStudent/weekWorklog">
+						<button class="btn dropbtn text-right"> Week 1</button>
+					</a>
+					<a href="<?php echo base_url();?>cStudent/weekWorklog">
+						<button class="btn dropbtn text-right">Week 2</button>
+					</a>
+					<a href="<?php echo base_url();?>cStudent/weekWorklog">
+						<button class="btn dropbtn text-right">Week 3</button>
+					</a>
+					<a href="<?php echo base_url();?>cStudent/weekWorklog">
+						<button class="btn dropbtn text-right">Week 4</button>
+					</a>
+					<a href="<?php echo base_url();?>cStudent/weekWorklog">
+						<button class="btn dropbtn text-right">Week 5</button>
+					</a>
+					<a href="<?php echo base_url();?>cStudent/weekWorklog">
+						<button class="btn dropbtn text-right">Week 6</button>
+					</a>
+					<a href="<?php echo base_url();?>cStudent/weekWorklog">
+						<button class="btn dropbtn text-right">Week 7</button>
+					</a>
+					<a href="<?php echo base_url();?>cStudent/weekWorklog">
+						<button class="btn dropbtn text-right">Week 8</button>
+					</a>
+					<a href="<?php echo base_url();?>cStudent/weekWorklog">
+						<button class="btn dropbtn text-right">Week 9</button>
+					</a>
+					<a href="<?php echo base_url();?>cStudent/weekWorklog">
+						<button class="btn dropbtn text-right">Week 10</button>
+					</a>
+					<a href="<?php echo base_url();?>cStudent/weekWorklog">
+						<button class="btn dropbtn text-right">Week 11</button>
+					</a>
+					<a href="<?php echo base_url();?>cStudent/weekWorklog">
+						<button class="btn dropbtn text-right">Week 12</button>
+					</a>
+					<a href="<?php echo base_url();?>cStudent/weekWorklog">
+						<button class="btn dropbtn text-right">Week 13</button>
+					</a>
 			</div>
-			<!-- <div class="col-md-6 text-right">
-				<input type="button" class="btn btn-outline-success" name="btn-submit" value="Save report">
-				
+
+			<!-- <div class="col-xs-5"></div> -->
+			<!-- <div class="col-xs-2 monthAdd" style="margin: 0em 0em 0em 1em;"> -->
+				<!-- <div class="dropdownbtn"> -->
+					<!-- <button class="btn dropbtn text-right">Week 1</button> -->
+					<!-- <div class="dropdown-content text-left">
+						<a href="">Week 1</a>
+					</div> -->
+				<!-- </div> -->
+			<!-- </div> -->
+			<!-- <p id="month"></p> -->
+			<!-- <div class="col-xs-2">
+				<div class="dropdownbtn">
+					<button class="btn dropbtn text-right" id="month"></button>
+					<div class="dropdown-content text-left">
+						<a href="" id="week"></a>
+					</div>
+				</div>
+			</div> -->
+			<!-- <div class="col-xs-1">
+				<div class="text-right" style="font-size: 25px;" data-toggle="modal" data-target="#addWeek">
+					<a href="#" class="text-primary" >
+						<i class="mdi mdi-plus-box" data-toggle="tooltip" title="Add month&week"></i>
+					</a>
+				</div>
+			</div> -->
+			<!-- The Modal -->
+			<!-- <div class="modal smalle" id="addWeek">
+				<div class="modal-dialog">
+					<div class="modal-content">
+
+						Modal Header
+						<div class="modal-header bg-primary">
+							<h4 class="modal-title text-white">Add Month and Week</h4>
+							<button type="button" class="close" data-dismiss="modal">&times;</button>
+						</div>
+
+						Modal body
+						<div class="modal-body">
+							<form action="<?php echo base_url();?>cStudent/add" role="form" method="post">
+								<div class="form-group">
+									<label for="month" class="modal-title"><strong>Month:</strong></label>
+									<input type="text" class="form-control" id="month" name="month" placeholder="Month name">
+								</div>
+								<div class="form-group">
+									<label for="week" class="modal-title"><strong>Week:</strong></label>
+									<input type="text" class="form-control" id="week" name="week" placeholder="Week number">
+								</div>
+								<div class="form-group text-right">
+									<button type="button" class="btn btn-outline-success btn-submit" data-dismiss="modal" onclick="myFunction()">Add</button>
+									<button type="submit" class="btn btn-outline-danger btn-default" data-dismiss="modal">Cancel</button>
+								</div>
+							</form>
+						</div>
+					</div>
+				</div>
 			</div> -->
 		</div>
 		<br>
@@ -390,3 +446,9 @@
 </div>
 <!-- //body -->
 
+<!-- <script>
+	function myFunction() {
+		var x = document.getElementById("month").name;
+		document.getElementById("month").innerHTML = x;
+	}
+</script> -->

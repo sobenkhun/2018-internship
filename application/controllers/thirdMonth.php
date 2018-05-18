@@ -1,3 +1,4 @@
+
 <?php 
 	class thirdMonth extends CI_controller {
 		public function firstWeek() 
@@ -29,5 +30,6 @@
 			$this->load->view('templates/footer.php');
 		}
 	}
+
 
  ?>

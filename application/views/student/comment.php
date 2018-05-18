@@ -1,5 +1,5 @@
 <div class="container con-body">
-	<h3 class="text-primary text-center"><strong>Comment board</strong></h3>
+	<h3 class="text-primary text-center"><strong>Board of Comments</strong></h3>
 	<div class="row"><br><br>
 		<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
 			<table id="studentList" class="table table-striped table-bordered bg-white" style="width:100%">
@@ -7,7 +7,7 @@
 					<tr>
 						<th class="text-center">ID</th>
 						<th style="width: 5em;">Date</th>
-						<th>Student Comment</th>
+						<th>Student Comments</th>
 						<th>Tutor Reply</th>
 					</tr>
 				</thead>

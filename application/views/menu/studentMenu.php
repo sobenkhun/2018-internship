@@ -14,10 +14,10 @@ $activeLink = (isset($activeLink)) ? $activeLink :  "";?>
   <div class="collapse navbar-collapse" id="navbarsExampleDefault">
     <ul class="navbar-nav mr-auto">
       <li class="nav-item <?php echo ($activeLink=='work-log'?'active':'');?>">
-        <a class="nav_link nav-link" href="<?php echo base_url();?>cStudent/worklog">Worklog</a>
+        <a class="nav_link nav-link" href="<?php echo base_url();?>cStudent/worklog">Work-log</a>
       </li>
       <li class="nav-item <?php echo ($activeLink=='Comment'?'active':'');?>">
-        <a class="nav_link nav-link" href="<?php echo base_url();?>cStudent/comment">Comment</a>
+        <a class="nav_link nav-link" href="<?php echo base_url();?>cStudent/comment">Comments</a>
       </li>
       <li class="nav-item <?php echo ($activeLink=='Calendar'?'active':'');?>">
         <a class="nav_link nav-link" href="<?php echo base_url();?>cStudent/calendar"></i>Calendar</a>
@@ -31,7 +31,7 @@ $activeLink = (isset($activeLink)) ? $activeLink :  "";?>
               <a class="nav-link " href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 <i class="mdi mdi-24px mdi-bell " data-toggle="tooltip" title="Notification" id="iconBell"> </i>
               </a>
-                <ul class="dropdown-menu">
+                <ul class="dropdown-menu menu-dropdown">
                   <li class="head text-light bg-info">
                     <div class="row">
                       <div class="col-lg-12 col-sm-12 col-12">

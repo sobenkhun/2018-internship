@@ -2,7 +2,7 @@
 <div class="container con-body">
 	<div class="row">
 		<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-			<a href="<?php echo base_url();?>cStudent/index">
+			<a href="<?php echo base_url();?>Welcome_IF/student">
 				<button type="button" class="btn btn-primary">
 					<i class="mdi mdi-chevron-left"></i>Back
 				</button>
@@ -18,39 +18,39 @@
 				<thead class="text-center">
 					<tr>
 						<th>Date</th>
-						<th>Comment</th>
+						<th>Tutor Comments</th>
 						<th>Validate</th>
 					</tr>
 				</thead>
 				<tbody>
-					<tr>
+					<tr class="text-center">
 						<td>1 may 2018</td>
-						<td class="text-center"> Devit is always let in meeting...</td>
+						<td> Devit is always let in meeting...</td>
 						<td class="text-center">
 							<a href="#"><span class="mdi mdi-checkbox-marked-outline mdi-24px text-info" data-toggle ="tooltip" title="validated"></span></a>
 							<a href="#"><span class="mdi mdi-pencil mdi-24px text-success" data-toggle ="tooltip" title="validated"></span></a>
 						</td>
 					</tr>
-					<tr>
+					<tr class="text-center">
 						<td>14 may 2018</td>
-						<td class="text-center"> Devit should buy a clock for...</td>
-						<td class="text-center">
+						<td> Devit should buy a clock for...</td>
+						<td>
 							<i class="mdi  mdi-close-box mdi-24px text-danger"></i>
 							<i class="mdi  mdi-pencil mdi-24px text-success"></i>
 						</td>
 					</tr>
-					<tr>
+					<tr class="text-center">
 						<td>22 may 2018</td>
-						<td class="text-center"> Devit is has always good at...</td>
-						<td class="text-center">
+						<td> Devit is has always good at...</td>
+						<td>
 							<i class="mdi  mdi-checkbox-marked-outline mdi-24px text-info"></i>
 							<i class="mdi  mdi-pencil mdi-24px text-success"></i>
 						</td>
 					</tr>
-					<tr>
+					<tr class="text-center">
 						<td>1 may 2018</td>
-						<td class="text-center"> Devit is geting better and...</td>
-						<td class="text-center">
+						<td> Devit is geting better and...</td>
+						<td>
 							<i class="mdi  mdi-close-box mdi-24px text-danger"></i>
 							<i class="mdi  mdi-pencil mdi-24px text-success"></i>
 						</td>

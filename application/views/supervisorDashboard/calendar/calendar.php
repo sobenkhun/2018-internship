@@ -1,178 +1,59 @@
-<?php
-defined('BASEPATH') OR exit('No direct script access allowed');
-$title = (isset($title)) ? $title :  "Skeleton";
-$langCode= (isset($langCode)) ? $langCode :  "en";
-
-
-?>
-
-  <meta charset="utf-8">
-  <title><?php echo $title; ?></title>
-  <link rel="shortcut icon" href="<?php echo base_url();?>favicon.ico" type="image/x-icon">
-  <link rel="stylesheet" href="<?php echo base_url();?>assets/bootstrap-4.0.0/css/bootstrap.min.css">
-  <link href="<?php echo base_url();?>assets/MDI-2.1.19/css/materialdesignicons.min.css" media="all" rel="stylesheet" type="text/css" />
-
-  <!-- Custom style //-->
-  <link rel="stylesheet" href="<?php echo base_url();?>assets/css/skeleton-1.0.0.css">
-  <!-- Custom style skeleton -->
-  <link rel="stylesheet" href="<?php echo base_url();?>/assets/css/customCss.css">
-
-  <script src="<?php echo base_url();?>assets/js/jquery-3.2.1.min.js"></script>
-  <script src="<?php echo base_url();?>assets/tether-1.4.3/js/tether.min.js"></script>
-  <script src="<?php echo base_url();?>assets/js/popper-1.12.9..min.js"></script>
-  <script src="<?php echo base_url();?>assets/bootstrap-4.0.0/js/bootstrap.min.js"></script>
-  
-  <link rel="stylesheet" href="<?php echo base_url();?>assets/fullcalendar-3.8.2/fullcalendar.min.css">
-  <link rel="stylesheet" href="<?php echo base_url();?>assets/bootstrap-datepicker-1.7.1/css/bootstrap-datepicker.min.css">
-  <script src="<?php echo base_url();?>assets/js/moment-with-locales-2.19.3.min.js"></script>
-  <script src="<?php echo base_url();?>assets/fullcalendar-3.8.2/fullcalendar.min.js"></script>
-  <!--Datepicker widget needs its CSS and JS files to work //-->
-  <script src="<?php echo base_url();?>assets/bootstrap-datepicker-1.7.1/js/bootstrap-datepicker.min.js"></script>
-  <marquee behavior="" direction=""><h1 class="text-info">Comming Soon..</h1></marquee>
-  <div class="container">
-    <div class="row">
-      <!-- <div class="col-md-2 col-sm-12"></div> -->
-      <div class="col-md-12 col-sm-12">
-        <br>
-        <br>
-        <h3 class="text-center text-info"><b class="text-info">Calendar</b></h3>
-        <br>
-        <br>
-        <div id='calendar' class="col-centered"></div>
-        <div id='datepicker' class="col-centered"></div>
-      </div>
-      <!-- <div class="col-md-2 col-sm-12"></div> -->
+<script src='<?php echo base_url();?>assets/assets/js/moment.min.js'></script>
+<script src="<?php echo base_url();?>assets/assets/js/jquery.min.js"></script>
+<script src="<?php echo base_url();?>assets/assets/js/bootstrap.min.js"></script>
+<script src="<?php echo base_url();?>assets/assets/js/bootstrapValidator.min.js"></script>
+<script src="<?php echo base_url();?>assets/assets/js/fullcalendar.min.js"></script>
+<script src='<?php echo base_url();?>assets/assets/js/bootstrap-colorpicker.min.js'></script>
+<script src='<?php echo base_url();?>assets/js/main.js'></script>
+<div class="container">
+    <!-- Notification -->
+    <div class="alert"></div>
+    <div class="row clearfix">
+        <div class="col-md-12 column">
+            <div id='calendar'></div>
+        </div>
     </div>
-  </div>
-    <!-- create modal of order item -->
-        <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-            <div class="modal-dialog" role="document">
-              <div class="modal-content">
-                <div class="modal-header">
-                  <h5 class="modal-title" id="exampleModalLabel">Plant a meeting</h5>
-                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                  </button>
-                </div>
-                <div class="modal-body">
-                  <div class="form-group row">
-                   <label for="example-datetime-local-input" class="col-2 col-form-label">Tutor</label>
-                   <div class="col-10">
-                       <select class="form-control" id="exampleSelect1">
-                         <option>Tutor 1</option>
-                         <option>Tutor 2</option>
-                         <option>Tutor 3</option>
-                         <option>Tutor 4</option>
-                         <option>Tutor 5</option>
-                       </select>
-                    </div>
-                  </div>
-                    <div class="form-group row">
-                    <label for="example-datetime-local-input" class="col-2 col-form-label">Date</label>
-                    <div class="col-10">
-                      <input class="form-control" type="date" value="2011-08-19T13:45:00" id="example-datetime-local-input">
-                    </div>
-                  </div>
-                  <div class="form-group row">
-                    <label for="example-password-input" class="col-2 col-form-label">Title</label>
-                    <div class="col-10">
-                      <input class="form-control" type="text" value="Meeting about student student name" id="example-password-input">
-                    </div>
-                  </div>
-                  <div class="form-group row">
-                    <label for="example-time-input" class="col-2 col-form-label">From</label>
-                    <div class="col-10">
-                      <input class="form-control" type="time" value="13:45:00" id="example-time-input">
-                    </div>
-                  </div>
-                  <div class="form-group row">
-                    <label for="example-time-input" class="col-2 col-form-label">To</label>
-                    <div class="col-10">
-                      <input class="form-control" type="time" value="13:45:00" id="example-time-input">
-                    </div>
-                  </div>
-                  <div class="form-group row">
-                    <label for="example-color-input" class="col-2 col-form-label">Color</label>
-                    <div class="col-10">
-                      <input class="form-control" type="color" value="#563d7c" id="example-color-input">
-                    </div>
-                  </div>
-
-                </div>
-                <div class="modal-footer">
-                  <button type="reset" class="btn btn-danger" data-dismiss="modal">Cancel</button>
-                  <button type="submit" class="btn btn-primary">Save</button>
-                </div>
-              </div>
+</div>
+<div class="modal">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title"></h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
             </div>
-          </div>
-    <!-- End of modal creation -->
-    <script type="text/javascript">
-    $(document).ready(function() {
-      $('.datepicker').datepicker({
-        orientation:"bottom",
-        todayBtn: true,
-        todayHighlight: true,
-        autoclose:true,
-      });
-    });
-    </script>
-    <script>
-      $(document).ready(function() {
-
-             $('#calendar').fullCalendar({
-                 header: {
-                     left: 'prev,next today',
-                     center: 'title',
-                     right: 'month,agendaWeek,agendaDay'
-                 },
-                 defaultDate: '2016-09-12',
-                 navLinks: true, // can click day/week names to navigate views
-                 selectable: true,
-                 selectHelper: true,
-                 select: function(start, end) {
-                     // Display the modal.
-                     // You could fill in the start and end fields based on the parameters
-                     $('.modal').modal('show');
-
-                 },
-                 eventClick: function(event, element) {
-                     // Display the modal and set the values to the event values.
-                     $('.modal').modal('show');
-                     $('.modal').find('#title').val(event.title);
-                     $('.modal').find('#starts-at').val(event.start);
-                     $('.modal').find('#ends-at').val(event.end);
-
-                 },
-                 editable: true,
-                 eventLimit: true // allow "more" link when too many events
+            <div class="modal-body">
+                <div class="error"></div>
+                <form class="form-horizontal" id="crud-form">
+                    <input type="hidden" id="start">
+                    <input type="hidden" id="end">
+                    <div class="form-group">
+                        <label class="col-md-4 control-label" for="title">Title</label>
+                        <div class="col-md-4">
+                            <input id="title" name="title" type="text" class="form-control input-md" />
+                        </div>
+                    </div>                            
+                    <div class="form-group">
+                        <label class="col-md-4 control-label" for="description">Description</label>
+                        <div class="col-md-4">
+                            <textarea class="form-control" id="description" name="description"></textarea>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-md-4 control-label" for="color">Color</label>
+                        <div class="col-md-4">
+                            <input id="color" name="color" type="text" class="form-control input-md" readonly="readonly" />
+                            <span class="help-block">Click to pick a color</span>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+            </div>
+        </div>
+    </div>
+</div>
 
 
-             });
 
-             // Bind the dates to datetimepicker.
-             // You should pass the options you need
-             $("#starts-at, #ends-at").datetimepicker();
-
-             // Whenever the user clicks on the "save" button om the dialog
-             $('#save-event').on('click', function() {
-                 var title = $('#title').val();
-                 if (title) {
-                     var eventData = {
-                         title: title,
-                         start: $('#starts-at').val(),
-                         end: $('#ends-at').val()
-                     };
-                     $('#calendar').fullCalendar('renderEvent', eventData, true); // stick? = true
-                 }
-                 $('#calendar').fullCalendar('unselect');
-
-                 // Clear modal inputs
-                 $('.modal').find('input').val('');
-
-                 // hide modal
-                 $('.modal').modal('hide');
-             });
-         });
-    </script>
 

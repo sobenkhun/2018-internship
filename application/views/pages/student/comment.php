@@ -28,7 +28,7 @@
 						<td> Devit is always let in meeting...</td>
 						<td class="text-center">
 							<a href="#"><span class="mdi mdi-checkbox-marked-outline mdi-24px text-info" data-toggle ="tooltip" title="validated"></span></a>
-							<a href="#"><span class="mdi mdi-pencil mdi-24px text-success" data-toggle ="tooltip" title="validated"></span></a>
+							<a href="#"><span class="mdi mdi-pencil mdi-24px text-success" data-toggle ="tooltip" title="edit"></span></a>
 						</td>
 					</tr>
 					<tr class="text-center">

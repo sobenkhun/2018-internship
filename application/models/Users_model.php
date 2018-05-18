@@ -143,7 +143,7 @@ class Users_model extends CI_Model {
                      'position'=>$position,
                      'username' =>$username,
                      'password' =>$hash,
-                     'company_id' =>'9',
+                     'company_id' =>$company_id,
                      'email'=>$sEmail,
                      'phone'=>$phone,
                      'userrole_id'=>'2' 
@@ -196,7 +196,7 @@ class Users_model extends CI_Model {
     {
         $this->db->select('*');
         $this->db->from('supervisor');
-        $this->db->join('company', 'company.id = supervisor.id');
+        $this->db->join('company', 'company.id = supervisor.company_id');
         $this->db->where('supervisor.id', $sId);
         $query = $this->db->get();
         return $query->result_array();
@@ -224,7 +224,6 @@ class Users_model extends CI_Model {
                 $company_id = $row['id'];
             }
             $company_id = (int)$company_id;
-            $student = (int)$student;
             $salt = '$2a$08$' . substr(strtr(base64_encode($this->getRandomBytes(16)), '+', '.'), 0, 22) . '$';
         $hash = crypt($password, $salt);
         $data = array('firstname'=>$firstname,
@@ -232,7 +231,6 @@ class Users_model extends CI_Model {
                      'position'=>$position,
                      'username' =>$username,
                      'company_id' =>$company_id,
-                     'student_id' =>$student,
                      'password' =>$hash,
                      'email'=>$sEmail,
                      'phone'=>$phone,
@@ -260,13 +258,11 @@ class Users_model extends CI_Model {
                 $company_id = $row['id'];
             }
             $company_id = (int)$company_id;
-            $student = (int)$student;
         $data = array('firstname'=>$firstname,
                      'lastname'=>$lastname,
                      'position'=>$position,
                      'username' =>$username,
                      'company_id' =>$company_id,
-                     'student_id' =>$student,
                      'password' =>$password,
                      'email'=>$sEmail,
                      'phone'=>$phone,
@@ -371,6 +367,16 @@ class Users_model extends CI_Model {
     public function deleteStudent($Id)
     {
         $this->db->delete('student', array('id' => $Id));
+    }
+    public function getComment($stuId)
+    {
+        $this->db->select("comment.comment");
+        $this->db->from('comment');
+        $this->db->join('student', 'student.comment_id = comment.id');
+        $this->db->where('student.id', $stuId);
+        $query = $this->db->get();
+        var_dump($query->result_array());die();
+        return $query->result_array();
     }
   /**
    * Get the list of roles or one role

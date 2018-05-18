@@ -29,7 +29,7 @@
                 </td>
               <td class="text-center">
            <a href="<?php echo base_url();?>Welcome_IF/viewSupervisor?&id=<?php echo $supervisor['id']; ?>"><span class="mdi mdi-eye mdi-24px text-info" data-toggle ="tooltip" title="View "></span></a>
-           <a href="<?php echo base_url();?>Welcome_IF/loadEditSupervisor?&id=<?php echo $supervisor['id']; ?>"><span class="mdi mdi-pencil mdi-24px fa-lg text-success" data-toggle ="tooltip" title="Edi"></span></a>
+           <a href="<?php echo base_url();?>Welcome_IF/loadEditSupervisor?&id=<?php echo $supervisor['id']; ?>"><span class="mdi mdi-pencil mdi-24px fa-lg text-success" data-toggle ="tooltip" title="Edit"></span></a>
            <a href="<?php echo base_url();?>Welcome_IF/deleteSupervisor?&id=<?php echo $supervisor['id']; ?>" onclick="return confirm('Are you sure to delete this Company?');">
             <i class="text-danger mdi mdi-delete mdi-24px " data-toggle ="tooltip" title="Delete"></i>
           </a>

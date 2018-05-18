@@ -27,7 +27,7 @@
 						<a href="<?php echo base_url();?>Welcome_IF/worklog" data-toggle ="tooltip" title="View Worklog">
 							<i class="mdi  mdi-book-open-page-variant text-dark mdi-24px"></i>
 						</a>
-						<a href="<?php echo base_url();?>Welcome_IF/comment" data-toggle ="tooltip" title="View Comment">
+						<a href="<?php echo base_url();?>Welcome_IF/comment?&id=<?php echo $student['id'] ?>" data-toggle ="tooltip" title="View Comment">
 							<i class="mdi  mdi-comment mdi-24px box-back" ></i>
 						</a>
 					</td>

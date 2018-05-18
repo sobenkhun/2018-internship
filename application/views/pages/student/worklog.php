@@ -10,6 +10,51 @@
 	</h3>
 	<br>
 	<div id="accordion">
+		<div class="row">
+			<div class="col-md-6 text-left">
+				<div class="dropdownbtn">
+					<button class="btn dropbtn">June</button>
+					<div class="dropdown-content text-left">
+						<a href="">Week 1</a>
+						<a href="<?php echo base_url();?>firstMonth/secounWeek">Week 2</a>
+						<a href="<?php echo base_url();?>firstMonth/thirdWeek">Week 3</a>
+						<a href="<?php echo base_url();?>firstMonth/fourWeek">Week 4</a>
+					</div>
+				</div>
+				<div class="dropdownbtn">
+					<button class="btn dropbtn">July</button>
+					<div class="dropdown-content text-left">
+						<a href="<?php echo base_url();?>secounMonth/weekOne">Week 1</a>
+						<a href="<?php echo base_url();?>secounMonth/secounWeek">Week 2</a>
+						<a href="<?php echo base_url();?>secounMonth/thirdWeek">Week 3</a>
+						<a href="<?php echo base_url();?>secounMonth/fourWeek">Week 4</a>
+					</div>
+				</div>
+				<div class="dropdownbtn">
+					<button class="btn dropbtn">August</button>
+					<div class="dropdown-content text-left">
+						<a href="<?php echo base_url();?>thirdMonth/weekOne">Week 1</a>
+						<a href="<?php echo base_url();?>thirdMonth/secounWeek">Week 2</a>
+						<a href="<?php echo base_url();?>thirdMonth/thirdWeek">Week 3</a>
+						<a href="<?php echo base_url();?>thirdMonth/fourWeek">Week 4</a>
+					</div>
+				</div>
+				<div class="dropdownbtn">
+					<button class="btn dropbtn">September</button>
+					<div class="dropdown-content text-left">
+						<a href="<?php echo base_url();?>fourMonth/weekOne">Week 1</a>
+						<a href="<?php echo base_url();?>fourMonth/secounWeek">Week 2</a>
+						<a href="<?php echo base_url();?>fourMonth/thirdWeek">Week 3</a>
+						<a href="<?php echo base_url();?>fourMonth/fourWeek">Week 4</a>
+					</div>
+				</div>
+			</div>
+			<!-- <div class="col-md-6 text-right">
+				<input type="button" class="btn btn-outline-success" name="btn-submit" value="Save report">
+				
+			</div> -->
+		</div>
+		<br>
 		<div class="card">
 			<form action="">
 				<div class="card-header text-center bg-info" id="headingOne" data-toggle="collapse" data-target="#firstday" aria-expanded="true" aria-controls="firstday">
@@ -213,7 +258,6 @@
 				<div class="card-header text-center bg-info" id="headingFour" data-toggle="collapse" data-target="#fourthday" aria-expanded="true" aria-controls="fourthday">
 					<h5 class="mb-0 text-white"><strong>Thursday</strong></h5>
 				</div>
-
 				<div id="fourthday" class="collapse" aria-labelledby="headingFourth" data-parent="#accordion">
 					<div class="card-body">
 						<table class="table table-bordered table-hover" id="tableWorkLog">
@@ -341,10 +385,10 @@
 			<div class="col-md-12 text-right">
 				<form action="">
 					<textarea class="col-md-12 form-group" name="" id="" rows="4" placeholder="Reflections for this week:"></textarea>
+					<input type="button" class="btn btn-outline-success" name="btn-submit" value="Save Week Reflections">
 				</form>
 			</div>
 		</div>
 		
 	</div>
 </div>
-<!-- //body -->

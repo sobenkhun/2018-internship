@@ -352,7 +352,6 @@ class Welcome_IF extends CI_Controller {
 		$this->load->helper('form');
 		$this->load->Model('users_model');
 	    $data['student'] = $this->users_model->getStudentData();
-	    // var_dump($data['student']);die();
 		$data['activeLink'] = 'student';
 		$this->load->view('templates/header.php',$data);
 		$this->load->view('menu/index.php',$data);
@@ -469,11 +468,15 @@ class Welcome_IF extends CI_Controller {
 		 $this->load->view('templates/header.php',$data);
 		 $this->load->view('menu/index.php',$data);
 		$this->load->view('pages/calendar/index.php');
-		// $this->load->view('templates/footer.php');
+		// $this->load->view('
 	}
 	// comment 
 	public function comment()
 	{
+		$stuId = $_GET['id'];
+		$this->load->helper('form');
+		$this->load->Model('users_model');
+	    $data['student'] = $this->users_model->getComment($stuId);
 		$data['activeLink'] = 'student';
 		$this->load->view('templates/header.php',$data);
 		$this->load->view('menu/index.php',$data);

@@ -29,6 +29,8 @@ $langCode= (isset($langCode)) ? $langCode :  "en";
   <link href="<?php echo base_url();?>assets/MDI-2.1.19/css/materialdesignicons.min.css" media="all" rel="stylesheet" type="text/css">
 
   <link rel="stylesheet" href="<?php echo base_url();?>/assets/css/skeleton-1.0.0.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  
 </head>
 <body> 
 

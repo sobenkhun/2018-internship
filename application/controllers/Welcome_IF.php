@@ -22,7 +22,7 @@ class Welcome_IF extends CI_Controller {
         $data['company'] = $this->users_model->CNumRow();
         $data['tutor'] = $this->users_model->TNumRow();
         $data['student'] = $this->users_model->sNumRow();
-		$data['activeLink'] = 'home';
+		$data['activeLink'] = 'Home';
 		$this->load->view('templates/header.php',$data);
 		$this->load->view('menu/index.php',$data);
 		$this->load->view('pages/index.php',$data);
@@ -352,6 +352,7 @@ class Welcome_IF extends CI_Controller {
 		$this->load->helper('form');
 		$this->load->Model('users_model');
 	    $data['student'] = $this->users_model->getStudentData();
+	    // var_dump($data['student']);die();
 		$data['activeLink'] = 'student';
 		$this->load->view('templates/header.php',$data);
 		$this->load->view('menu/index.php',$data);

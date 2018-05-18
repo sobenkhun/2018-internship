@@ -13,19 +13,19 @@
 					<div class="form-group row col-md-6 group-col-stu">
 						<label class="col-sm-4 col-form-label" for="">First Name</label>
 						<div class="col-sm-8">
-							<input type="text" name="firstname" id="" class="form-control" placeholder="...">
+							<input type="text" name="firstname" id="firstname" class="form-control" placeholder="...">
 						</div>
 					</div>
 					<div class="form-group row col-md-6 group-col-stu">
 						<label class="col-sm-4 col-form-label" for="">Last Name</label>
 						<div class="col-sm-8">
-							<input type="text" name="lastname" id="" class="form-control" placeholder="...">
+							<input type="text" name="lastname" id="lastname" class="form-control" placeholder="...">
 						</div>
 					</div>
 					<div class="form-group row col-md-6 group-col-stu">
 						<label class="col-sm-4 col-form-label" for="">UserName</label>
 						<div class="col-sm-8">
-							<input type="text" name="username" id="" class="form-control" placeholder="...">
+							<input type="text" name="username" id="username" class="form-control" placeholder="...">
 						</div>
 					</div>
 					<div class="form-group row col-md-6 group-col-stu">

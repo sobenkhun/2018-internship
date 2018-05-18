@@ -17,18 +17,15 @@
 			</div>
 		</div>
 		<?php foreach ($student as $student):?>
-			<?php 	
-					$studentLName = $student['stuFName'];
-			 ?>
 		 <?php endforeach ?>						
 		<table id="example" class="table table-striped table-bordered bg-white">
 		<div class="col-md-8"><br>
 			<label for="">First Name : </label> 
-			<span class="font-weight-bold">  <?php echo $studentName; ?></span><br>
+			<span class="font-weight-bold">  <?php echo $student['stuFName'];; ?></span><br>
 			<label for="">Last Name : </label> 
 			<span class="font-weight-bold">  <?php echo $student['stuLName']; ?></span><br>
 			<label for="">Company : </label> 
-			<span class="font-weight-bold">  <?php echo $student['stuLName']; ?></span><br>
+			<span class="font-weight-bold">  <?php echo $student['name']; ?></span><br>
 			<label for="">Suppervisor : </label> 
 			<span class="font-weight-bold">  <?php echo $student['suFName']." ".$student['suLName']; ?></span><br>
 			<label for="">Tutor : </label>

@@ -11,8 +11,8 @@
 					<th>Company</th>
 					<th>Supervisor</th>
 					<th>Tutor</th>
-					<th>Work-log</th>
-					<th>Action</th>
+					<th class="text-center">Work-log</th>
+					<th class="text-center">Action</th>
 				</tr>
 			</thead>
 			<tbody>

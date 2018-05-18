@@ -372,10 +372,10 @@ class Users_model extends CI_Model {
     {
         $this->db->select("comment.comment");
         $this->db->from('comment');
-        $this->db->join('student', 'student.comment_id = comment.id');
+        $this->db->join('student', 'student.id = comment.student_id');
         $this->db->where('student.id', $stuId);
         $query = $this->db->get();
-        var_dump($query->result_array());die();
+        // var_dump($query->result_array());die();
         return $query->result_array();
     }
   /**

@@ -27,8 +27,8 @@
 						<td>1 may 2018</td>
 						<td class="text-center"> Devit is always let in meeting...</td>
 						<td class="text-center">
-							<i class="mdi  mdi-checkbox-marked-outline mdi-24px text-info"></i>
-							<i class="mdi  mdi-pencil mdi-24px text-success"></i>
+							<a href="#"><span class="mdi mdi-checkbox-marked-outline mdi-24px text-info" data-toggle ="tooltip" title="validated"></span></a>
+							<a href="#"><span class="mdi mdi-pencil mdi-24px text-success" data-toggle ="tooltip" title="validated"></span></a>
 						</td>
 					</tr>
 					<tr>
@@ -59,18 +59,5 @@
 				</tbody>
 			</table>
 		</div>
-		<!-- <div class="col-xs-2 col-sm-2yy col-md-2 col-lg-2"></div> -->
-	</div>
-	<div class="row">
-		<!-- <div class="col-md-"></div> -->
-		<!-- <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2"></div> -->
-		<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 text-left">
-			<a href="<?php echo base_url();?>Welcome_IF/addComment">
-				<button class="btn btn-primary">
-					<i class="mdi mdi-account-plus text-white mdi-20px"></i>New Comment
-				</button>
-			</a>
-		</div>
-		<!-- <div class="col-xs-8 col-sm-8 col-md-8 col-lg-8"></div> -->
 	</div>
 </div>

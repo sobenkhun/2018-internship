@@ -17,7 +17,7 @@
 	<div class="row bg-white">
 		<div class="col-md-1"></div>
 		<div class="col-md-4 text-center ">
-			<?php foreach ($supervisor as $supervisor):?>
+			<?php foreach ($ss as $supervisor):?>
 			<br>
 			<img class="user userSupervisor"  src="<?php echo base_url(); ?>assets/images/studentpiture.jpg" alt="" style="height: 260px; margin-top: 17px; padding: 10px;"><br>
 			<a class="link" href="#" ><?php echo $supervisor['firstname']." ".$supervisor['lastname']; ?></a>
@@ -60,7 +60,7 @@
 						<td> </td>
 						<td>
 							<div class="form-group">
-								<a href="https://www.codingate.com/"><?php echo $supervisor['url']; ?></a>
+								<a href="https://www.codingate.com/"><?php echo "www.rci.com"//$supervisor['url']; ?></a>
 							</div>
 						</td>
 					</tr>
@@ -108,7 +108,4 @@
 			 <?php endforeach ?>
 		</div>
 	</div>
-	<!-- </div> -->
-	<!-- </div> -->
-	<!-- </div>			 -->
 </div>

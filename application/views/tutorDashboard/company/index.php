@@ -1,47 +1,45 @@
 
 <div class="container">
-  
   <div class="container  ">
     <div class="row">
       <div class="col-md-12">
-        <h2 class="text-center text-primary">Companies List</h2>
+        <h2 class="text-center text-primary"><strong>Companies List</strong></h2>
       </div>
     </div>
-  <div class="row">
-    <div class="col-md-12 ">
-      <table id="example" class="table table-striped table-bordered bg-white">
-       <thead>
-         <tr>
-           <th class="text-center">ID</th>
-           <th>Company</th>
-           <th>Location</th>
-           <th class="text-center">Action</th>
-         </tr>
-       </thead>
-       <tbody>
-        <?php foreach ($company as $company):?>
+    <div class="row">
+      <div class="col-md-12 ">
+        <table id="example" class="table table-striped table-bordered bg-white">
+         <thead>
+           <tr>
+             <th class="text-center">ID</th>
+             <th>Company</th>
+             <th>Location</th>
+             <th class="text-center">Action</th>
+           </tr>
+         </thead>
+         <tbody>
+          <?php foreach ($company as $company):?>
 
-          <tr>
+            <tr>
               <td class="text-center"><?php echo $company['id'] ?></td>
               <td><?php echo $company['name']; ?></td>
               <td><?php echo $company['location']; ?></td>
 
-            <td class="text-center">
+              <td class="text-center">
                <a href="<?php echo base_url();?>tutorDas/cDetailDas?&id=<?php echo $company['id']; ?>"><span class="mdi mdi-eye mdi-24px text-info" data-toggle ="tooltip" title="View "></span></a>
 
-            </td>
-      </tr>
-      <?php endforeach ?>
-      
-    </tbody>
+             </td>
+           </tr>
+         <?php endforeach ?>
 
-  </table>
+       </tbody>
+
+     </table>
+   </div>
+ </div>
+</div>
 </div>
 
-</div>
-</div>
-</div>
-<br>
 
 
 

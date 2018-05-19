@@ -1,4 +1,3 @@
-
  <div class="container">
  	<div class="row">
  		<!-- <div class="col-md-2"></div> -->
@@ -9,10 +8,8 @@
  			    </button>
  			</a>
  		</div>
- </div>	 
-
+ </div>
 <div class="container con-body">
-	
 	<h3 class="text-primary text-center"><strong>Comment of student</strong></h3>
 	<div class="row">
 		<!-- <div class="col-md-3"></div> -->
@@ -47,7 +44,6 @@
 						</td>
 					</tr>
 					<tr>
-						
 						<td class="text-center">22 may 2018</td>
 						<td class="text-center"> Devit is has always good at...</td>
 						<td class="text-center"> Devit is has always good at...</td>
@@ -57,7 +53,6 @@
 						</td>
 					</tr>
 					<tr>
-						
 						<td class="text-center">1 may 2018</td>
 						<td class="text-center"> Devit is geting better and...</td>
 						<td class="text-center"> Devit is geting better and...</td>

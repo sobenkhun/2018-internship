@@ -7,13 +7,15 @@ class Welcome_IF extends CI_Controller {
 	function __construct()
 	{
 			parent::__construct();
-			log_message('debug', 'URI=' . $this->uri->uri_string());
+			log_message('debug', 'URI=' . $this->uri->uri_string()); 
 	}
 	// view login
 	public function index()
 	{
 		$this->load->view('login/login');
 	}
+	/*==============================*/
+
 	public function home()
 	{
 
@@ -467,10 +469,42 @@ class Welcome_IF extends CI_Controller {
 	public function calendar()
 	{
 		$data['activeLink'] = 'calendar';
-		 $this->load->view('templates/header.php',$data);
-		 $this->load->view('menu/index.php',$data);
-		$this->load->view('pages/calendar/index.php');
-		// $this->load->view('
+		$this->load->view('templates/header.php',$data);
+		$this->load->view('menu/index.php',$data);
+		$this->load->view('pages/calendar/calendar');
+		$this->load->view('templates/footer.php');
+	}
+
+	/*Get all Events */
+
+	Public function getEvents()
+	{
+		$result=$this->Calendar_model->getEvents();
+		echo json_encode($result);
+	}
+	/*Add new event */
+	Public function addEvent()
+	{
+		$result=$this->Calendar_model->addEvent();
+		echo $result;
+	}
+	/*Update Event */
+	Public function updateEvent()
+	{
+		$result=$this->Calendar_model->updateEvent();
+		echo $result;
+	}
+	/*Delete Event*/
+	Public function deleteEvent()
+	{
+		$result=$this->Calendar_model->deleteEvent();
+		echo $result;
+	}
+	Public function dragUpdateEvent()
+	{	
+
+		$result=$this->Calendar_model->dragUpdateEvent();
+		echo $result;
 	}
 	// comment 
 	public function comment()

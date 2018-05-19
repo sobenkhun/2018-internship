@@ -192,8 +192,8 @@ class tutorDas extends CI_Controller {
 
 	function CommStuDas()
 	{
+		$data['activeLink'] = 'student';
 
-		$data['activeLink'] = 'comment';
 		$this->load->view('templates/header.php',$data);
 		$this->load->view('menu/tutor.php',$data);
 		$this->load->view('tutorDashboard/comment/commentStudent.php',$data);
@@ -229,7 +229,7 @@ class tutorDas extends CI_Controller {
 		$this->load->view('menu/tutor.php',$data);
 
 		$this->load->view('tutorDashboard/calendar/index.php',$data);
-		$this->load->view('templates/footer.php');
+		//$this->load->view('templates/footer.php');
 		
 		}
 		

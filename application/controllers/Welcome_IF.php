@@ -464,6 +464,15 @@ class Welcome_IF extends CI_Controller {
 		$this->load->view('menu/index.php',$data);
 		$this->load->view('pages/student/worklog.php');
 		$this->load->view('templates/footer.php');
+	} 
+	public function weekWorklog(){
+		$data['activeLink'] = 'student';
+		$this->load->view('templates/header.php',$data);
+		$this->load->view('menu/index.php',$data);
+		$this->load->view('pages/student/worklog.php');
+		$this->load->view('pages/student/weekWorklog.php');
+		$this->load->view('templates/footer.php');
+		
 	}
 // calenders
 	public function calendar()

@@ -17,6 +17,12 @@ class Supervisor_model extends CI_Model {
     public function __construct() {
 
     }
+    /**
+     * Get list all of student on supervisor dashboard
+     * @param Variable $studentRole Identifier of student role
+     * @param string $userRole store array of stuent role
+     * @author Bunthean MOV <bunthean.mov2727@gmail.com>
+     */
 	public function getDataStudentList()
 	{
 		$this->db->select("id, CONCAT(firstname,' ',lastname) AS studentName");
@@ -25,7 +31,12 @@ class Supervisor_model extends CI_Model {
 		 $query =  $this->db->get_where('student',$userRole);
 	     return $query->result_array(); 
 	}
-
+	/**
+     * Get list all of student for supervisor complete the questionnaire 
+     * @param Variable $studentRole Identifier of student role
+     * @param string $userRole store array of stuent role
+     * @author Bunthean MOV <bunthean.mov2727@gmail.com>
+     */
 	public function getDataCompleteQuestionnaire()
 	{
 		$this->db->select("id, CONCAT(firstname,' ',lastname) AS studentName");
@@ -34,67 +45,46 @@ class Supervisor_model extends CI_Model {
 		 $query =  $this->db->get_where('student',$userRole);
 	     return $query->result_array(); 
 	}
-
-    public function questionnaire($stuId)
+	/**
+	 * Add questionnaire for student specific 
+	 * @param string $data store all feild the table questionnaire 
+	 * @param 
+	 * @author Bunthean MOV <bunthean.mov2727@gmail.com>
+	 */
+    public function addQuestionnaire($gender,$q1,$major,$q2,$q3)
     {
-		 $this->db->select("s.id,s.firstname as stuFName,s.lastname as stuLName,
-		                        s.phone,s.peremail,s.schoolemail,s.batch,s.year,s.username,s.password,
-		                        su.firstname as suFName,su.lastname as suLName,
-		                        c.name,
-		                        t.firstname as tFName,t.lastname as tLName");
-		 $this->db->from('supervisor su');
-		 $this->db->join('student s', 's.supervisor_id = su.id');
-		 $this->db->join('company c', 'c.id = su.company_id');
-		 $this->db->join('tutor t', 't.company_id = c.id');
-		 $this->db->where('s.id', $stuId);
-		$query = $this->db->get();
-		 return $query->result_array(); 
-
-
-        // $this->db->select("id");
-        // $this->db->from("company");
-        // $this->db->where('name', $company);
-        // $query = $this->db->get();
-        // $company_id = $query->result_array();
-        // $company_id = (int)$company_id;
-        // $data = array('firstname'=>$firstname,
-        //              'lastname'=>$lastname,
-        //              'position'=>$position,
-        //              'username' =>$username,
-        //              'password' =>$password,
-        //              'company_id' =>$company_id,
-        //              'email'=>$sEmail,
-        //              'phone'=>$phone,
-        //              'userrole_id'=>'2' 
-        //          );
-        // $this->db->insert('tutor', $data);
+		$data = array('gender'   =>$gender,
+					'question1'  =>$q1,
+					'major'      =>$major,
+					'question2'  =>$q2,
+					'question3'  =>$q3
+		);
+		 // $this->db->trans_start();
+		$this->db->insert('questionnaire',$data);
+		// return "Insert success";
+		// $this->db->trans_complete();
     }
-	public function getQuestionnaire()
+    /**
+	 * Select stuent's questionnaire to complete
+	 * @param string $data store all feild the table questionnaire 
+	 * @param 
+	 * @author Bunthean MOV <bunthean.mov2727@gmail.com>
+	 */
+	public function getQuestionnaire($studentId)
 	{
-		$query = "Hello getQuestionnaire";
-	     return $query; 
+
+	$this->db->select("stu.firstname, stu.lastname, c.name");
+     $this->db->from('student stu');
+     $this->db->join('supervisor s', 'stu.supervisor_id = s.id');
+     $this->db->join('company c', 'stu.supervisor_id = c.id');
+     // $this->db->join('tutor t', 't.company_id = c.id');
+     $this->db->where('stu.id', $studentId);
+    $query = $this->db->get();
+    return $query->result_array();
 	}
 	
 	public function getDataStudentDetail($studentId)
     {
-    // 	 $this->db->select(" 
-				// 	s.firstname,
-				// 	s.lastname,
-				// 	c.url,
-    // 	 			CONCAT(t.firstname,' ', t.lastname) AS tutorName,
-    // 	 			CONCAT(s.firstname,' ', s.lastname) AS studentName,
-    // 	 			s.batch,
-    // 	 			s.year,
-    // 	 			s.schoolemail,
-    // 	 			s.peremail,
-    // 	 			s.phone");
-    //  $this->db->from('supervisor su');
-    //  $this->db->join('student s', 's.supervisor_id = su.id');
-    //  $this->db->join('company c', 'c.id = su.company_id');
-    //  $this->db->join('tutor t', 't.company_id = c.id');
-    //  $this->db->where('s.id', $studentId);
-    // $query = $this->db->get();
-    // return $query->result_array(); 
 
     	$this->db->select("*");
     	$this->db->from("student");
@@ -110,26 +100,4 @@ class Supervisor_model extends CI_Model {
         $query = $this->db->get('student');
         return $query->num_rows();
     }
-    // Add questionnaire
- 
-    // public function addTutor($company,$firstname,$lastname,$username,$password,$position,$sEmail,$phone)
-    // {
-    //     $this->db->select("id");
-    //     $this->db->from("company");
-    //     $this->db->where('name', $company);
-    //     $query = $this->db->get();
-    //     $company_id = $query->result_array();
-    //     $company_id = (int)$company_id;
-    //     $data = array('firstname'=>$firstname,
-    //                  'lastname'=>$lastname,
-    //                  'position'=>$position,
-    //                  'username' =>$username,
-    //                  'password' =>$password,
-    //                  'company_id' =>$company_id,
-    //                  'email'=>$sEmail,
-    //                  'phone'=>$phone,
-    //                  'userrole_id'=>'2' 
-    //              );
-    //     $this->db->insert('tutor', $data);
-    // }
 }

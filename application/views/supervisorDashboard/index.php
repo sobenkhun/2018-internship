@@ -18,7 +18,7 @@
                   <div class="card-header" style="background-color: #FFD740 ;">
                     <i class="mdi mdi-comment-text" style="font-size:70px;"></i><br>
                     <h4 style="font-family:  sans-serif;">Number Of Your Students</h4>
-                    <h5 class="card-title">7</h5>
+                    <h5 class="card-title"><?php echo $student; ?></h5>
                   </div>
                   <div class="card-body">
 

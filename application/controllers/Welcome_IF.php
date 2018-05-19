@@ -24,7 +24,7 @@ class Welcome_IF extends CI_Controller {
         $data['company'] = $this->users_model->CNumRow();
         $data['tutor'] = $this->users_model->TNumRow();
         $data['student'] = $this->users_model->sNumRow();
-		$data['activeLink'] = 'home';
+		$data['activeLink'] = 'Home';
 		$this->load->view('templates/header.php',$data);
 		$this->load->view('menu/index.php',$data);
 		$this->load->view('pages/index.php',$data);
@@ -59,6 +59,7 @@ class Welcome_IF extends CI_Controller {
 	{
 		$companyId = $_GET['id'];
 		$this->load->Model('users_model');
+		// var_dump($companyId);die();
 		$data['company'] = $this->users_model->getCompanyDataDetail($companyId);
 		$data['activeLink'] = 'Company';
 		$this->load->view('templates/header.php',$data);
@@ -366,6 +367,7 @@ class Welcome_IF extends CI_Controller {
 		$stuId = $_GET['id'];
 		$this->load->Model('users_model');
 		$data['student'] = $this->users_model->viewStudentData($stuId);
+		// var_dump($data['student']);die();
 		$data['activeLink'] = 'student';
 		$this->load->view('templates/header.php',$data);
 		$this->load->view('menu/index.php',$data);
@@ -507,10 +509,14 @@ class Welcome_IF extends CI_Controller {
 	// comment 
 	public function comment()
 	{
+		$stuId = $_GET['id'];
+		$this->load->helper('form');
+		$this->load->Model('users_model');
+	    $data['comment'] = $this->users_model->getComment($stuId);
 		$data['activeLink'] = 'student';
 		$this->load->view('templates/header.php',$data);
 		$this->load->view('menu/index.php',$data);
-		$this->load->view('pages/student/comment.php');
+		$this->load->view('pages/student/comment.php',$data);
 		$this->load->view('templates/footer.php');
 	}
 	public function addComment()

@@ -193,18 +193,25 @@ class tutorDas extends CI_Controller {
 	function CommStuDas()
 	{
 		$data['activeLink'] = 'student';
+
 		$this->load->view('templates/header.php',$data);
 		$this->load->view('menu/tutor.php',$data);
 		$this->load->view('tutorDashboard/comment/commentStudent.php',$data);
 		$this->load->view('templates/footer.php');
 	}
-	function addCommStuD()
+	function addCommStuDas()
 	{
 		$data['activeLink'] = 'comment';
 		$this->load->view('templates/header.php',$data);
 		$this->load->view('menu/tutor.php',$data);
 		$this->load->view('tutorDashboard/comment/addComment.php',$data);
 		$this->load->view('templates/footer.php');
+	}
+	public function addComment()
+	{
+		$this->load->helper('form');
+		$name = $this->input->post("comment");
+		var_dump($name);die();
 	}
 	function viewWorkLog()
 	{

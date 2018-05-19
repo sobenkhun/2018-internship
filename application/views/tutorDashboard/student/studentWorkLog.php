@@ -311,11 +311,7 @@
 		<div class="row">
 			<textarea class="col-md-12 form-group" name="" id="" rows="4" placeholder="Reflections for this week:"></textarea>
 		</div>
-		<!-- ================= -->
-		<!-- </div> -->
-		<!-- </div> -->
 	</div>
-
 	<br><br>
 	<nav class=" nav navbar navbar-expand-md fixed-bottom bg-dark">
 		<div class="collapse navbar-collapse" id="navbarsExampleDefault">

@@ -192,19 +192,26 @@ class tutorDas extends CI_Controller {
 
 	function CommStuDas()
 	{
-		$data['activeLink'] = 'comment';
+		$data['activeLink'] = 'student';
+
 		$this->load->view('templates/header.php',$data);
 		$this->load->view('menu/tutor.php',$data);
 		$this->load->view('tutorDashboard/comment/commentStudent.php',$data);
 		$this->load->view('templates/footer.php');
 	}
-	function addCommStuD()
+	function addCommStuDas()
 	{
 		$data['activeLink'] = 'comment';
 		$this->load->view('templates/header.php',$data);
 		$this->load->view('menu/tutor.php',$data);
 		$this->load->view('tutorDashboard/comment/addComment.php',$data);
 		$this->load->view('templates/footer.php');
+	}
+	public function addComment()
+	{
+		$this->load->helper('form');
+		$name = $this->input->post("comment");
+		var_dump($name);die();
 	}
 	function viewWorkLog()
 	{
@@ -222,7 +229,7 @@ class tutorDas extends CI_Controller {
 		$this->load->view('menu/tutor.php',$data);
 
 		$this->load->view('tutorDashboard/calendar/index.php',$data);
-		$this->load->view('templates/footer.php');
+		//$this->load->view('templates/footer.php');
 		
 		}
 		

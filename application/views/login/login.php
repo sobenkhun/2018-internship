@@ -212,12 +212,6 @@
 
 			<input type="submit" name="submit" value="Login" >
 			<br/> <br/>
-			
-			<div class="form-check">
-			   <input type="checkbox" class="form-check-input" id="check">
-			   <label class="form-check-label" for="check">Remember me</label>
-			   <a href="#" class="forgetpass">Forget Password?</a>
-			</div>
 			 
 		</form>	
 		<hr>

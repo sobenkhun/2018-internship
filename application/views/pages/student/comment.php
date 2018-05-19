@@ -2,7 +2,7 @@
 <div class="container con-body">
 	<div class="row">
 		<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-			<a href="<?php echo base_url();?>cStudent/index">
+			<a href="<?php echo base_url();?>Welcome_IF/student">
 				<button type="button" class="btn btn-primary">
 					<i class="mdi mdi-chevron-left"></i>Back
 				</button>
@@ -15,41 +15,47 @@
 		<!-- <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2"></div> -->
 		<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
 			<table id="studentList" class="table table-striped table-bordered bg-white">
+				<?php foreach ($comment as $comment):?>
 				<thead class="text-center">
-					<tr>
+					<tr >
 						<th>Date</th>
-						<th>Comment</th>
+						<th>Student Comments</th>
+						<th>Tutor Comments</th>
 						<th>Validate</th>
 					</tr>
 				</thead>
 				<tbody>
-					<tr>
-						<td>1 may 2018</td>
-						<td class="text-center"> Devit is always let in meeting...</td>
+					<tr class="text-left">
+						<td class="text-center">1 may 2018</td>
+						<td>I have no task to do</td>
+						<td> You should ask your supervisor for have tasks to do</td>
 						<td class="text-center">
-							<i class="mdi  mdi-checkbox-marked-outline mdi-24px text-info"></i>
-							<i class="mdi  mdi-pencil mdi-24px text-success"></i>
+							<a href="#"><span class="mdi mdi-checkbox-marked-outline mdi-24px text-info" data-toggle ="tooltip" title="validated"></span></a>
+							<a href="#"><span class="mdi mdi-pencil mdi-24px text-success" data-toggle ="tooltip" title="edit"></span></a>
 						</td>
 					</tr>
-					<tr>
-						<td>14 may 2018</td>
-						<td class="text-center"> Devit should buy a clock for...</td>
+					<tr class="text-left">
+						<td class="text-center">14 may 2018</td>
+						<td> I have problem with communicate </td>
+						<td> Communication is important could you improve it </td>
 						<td class="text-center">
 							<i class="mdi  mdi-close-box mdi-24px text-danger"></i>
 							<i class="mdi  mdi-pencil mdi-24px text-success"></i>
 						</td>
 					</tr>
-					<tr>
-						<td>22 may 2018</td>
-						<td class="text-center"> Devit is has always good at...</td>
-						<td class="text-center">
+					<tr class="text-center">
+						<td class="text-center">22 may 2018</td>
+						<td>I have problem with my task but I can't tell to supervisor </td>
+						<td> Be brave for tell him.You should ask for help from your supervisor with you met the problem</td>
+						<td>
 							<i class="mdi  mdi-checkbox-marked-outline mdi-24px text-info"></i>
 							<i class="mdi  mdi-pencil mdi-24px text-success"></i>
 						</td>
 					</tr>
-					<tr>
-						<td>1 may 2018</td>
-						<td class="text-center"> Devit is geting better and...</td>
+					<tr class="text-left">
+						<td class="text-center"> 1 may 2018</td>
+						<td> I have many task to do the same so I can't complate it </td>
+						<td> Devit is geting better and...</td>
 						<td class="text-center">
 							<i class="mdi  mdi-close-box mdi-24px text-danger"></i>
 							<i class="mdi  mdi-pencil mdi-24px text-success"></i>
@@ -57,20 +63,8 @@
 					</tr>
 
 				</tbody>
+				<?php endforeach ?>
 			</table>
 		</div>
-		<!-- <div class="col-xs-2 col-sm-2yy col-md-2 col-lg-2"></div> -->
-	</div>
-	<div class="row">
-		<!-- <div class="col-md-"></div> -->
-		<!-- <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2"></div> -->
-		<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 text-left">
-			<a href="<?php echo base_url();?>Welcome_IF/addComment">
-				<button class="btn btn-primary">
-					<i class="mdi mdi-account-plus text-white mdi-20px"></i>New Comment
-				</button>
-			</a>
-		</div>
-		<!-- <div class="col-xs-8 col-sm-8 col-md-8 col-lg-8"></div> -->
 	</div>
 </div>

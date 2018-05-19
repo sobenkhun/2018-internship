@@ -49,7 +49,7 @@
 						<td>Prem MANN</td>	
 						<td>
 							<a href="<?php echo base_url(); ?>tutorDas/CommStuDas">
-								<i class="mdi  mdi-comment text-warning TCMDI" data-toggle="tooltip" title="Comment" ></i>
+								<i class="mdi mdi-comment text-warning TCMDI" data-toggle="tooltip" title="Comment" ></i>
 							</a>
 						</td>
 					</tr>

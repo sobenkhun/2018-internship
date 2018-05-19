@@ -1,4 +1,4 @@
-<?php
+    <?php
 /**
  * This model contains the business logic and manages the persistence of users and roles
  * @copyright  Copyright (c) 2018 Benjamin BALET
@@ -51,6 +51,7 @@ class Users_model extends CI_Model {
         $query = $this->db->get('users');
         return $query->result_array();
     }
+
     //// count number of student company tutor and supervisor
     public function CNumRow()
     {
@@ -131,13 +132,18 @@ class Users_model extends CI_Model {
         $this->db->from("company");
         $this->db->where('name', $company);
         $query = $this->db->get();
-        $company_id = $query->result_array();
+        foreach ($query->result_array() as $row)
+            {
+                $company_id = $row['id'];
+            }
         $company_id = (int)$company_id;
+        $salt = '$2a$08$' . substr(strtr(base64_encode($this->getRandomBytes(16)), '+', '.'), 0, 22) . '$';
+        $hash = crypt($password, $salt);
         $data = array('firstname'=>$firstname,
                      'lastname'=>$lastname,
                      'position'=>$position,
                      'username' =>$username,
-                     'password' =>$password,
+                     'password' =>$hash,
                      'company_id' =>$company_id,
                      'email'=>$sEmail,
                      'phone'=>$phone,
@@ -151,12 +157,14 @@ class Users_model extends CI_Model {
         $this->db->from("company");
         $this->db->where('name', $company);
         $query = $this->db->get();
-        $company_id = $query->result_array();
+        foreach ($query->result_array() as $row)
+            {
+                $company_id = $row['id'];
+            }
         $company_id = (int)$company_id;
         $data = array('firstname'=>$firstname,
                      'lastname'=>$lastname,
                      'username' =>$username,
-                     'password' =>$password,
                      'company_id' =>$company_id,
                      'position'=>$position,
                      'email'=>$sEmail,
@@ -189,7 +197,7 @@ class Users_model extends CI_Model {
     {
         $this->db->select('*');
         $this->db->from('supervisor');
-        $this->db->join('company', 'company.id = supervisor.id');
+        $this->db->join('company', 'company.id = supervisor.company_id');
         $this->db->where('supervisor.id', $sId);
         $query = $this->db->get();
         return $query->result_array();
@@ -217,14 +225,14 @@ class Users_model extends CI_Model {
                 $company_id = $row['id'];
             }
             $company_id = (int)$company_id;
-            $student = (int)$student;
+            $salt = '$2a$08$' . substr(strtr(base64_encode($this->getRandomBytes(16)), '+', '.'), 0, 22) . '$';
+        $hash = crypt($password, $salt);
         $data = array('firstname'=>$firstname,
                      'lastname'=>$lastname,
                      'position'=>$position,
                      'username' =>$username,
                      'company_id' =>$company_id,
-                     'student_id' =>$student,
-                     'password' =>$password,
+                     'password' =>$hash,
                      'email'=>$sEmail,
                      'phone'=>$phone,
                      'company_id'=>$company_id, 
@@ -251,13 +259,11 @@ class Users_model extends CI_Model {
                 $company_id = $row['id'];
             }
             $company_id = (int)$company_id;
-            $student = (int)$student;
         $data = array('firstname'=>$firstname,
                      'lastname'=>$lastname,
                      'position'=>$position,
                      'username' =>$username,
                      'company_id' =>$company_id,
-                     'student_id' =>$student,
                      'password' =>$password,
                      'email'=>$sEmail,
                      'phone'=>$phone,
@@ -316,7 +322,9 @@ class Users_model extends CI_Model {
             {
                 $supervisor_id = $row['id'];
             }
-            $supervisor_id = (int)$supervisor_id;
+         $supervisor_id = (int)$supervisor_id;
+        $salt = '$2a$08$' . substr(strtr(base64_encode($this->getRandomBytes(16)), '+', '.'), 0, 22) . '$';
+        $hash = crypt($password, $salt);
         $data = array('supervisor_id'=>$supervisor_id,
                      'firstname'=>$firstname,
                      'lastname'=>$lastname,
@@ -325,7 +333,7 @@ class Users_model extends CI_Model {
                      'schoolemail' =>$schoolemail,
                      'peremail' =>$peremail,
                      'phone'=>$phone,
-                     'password'=>$password,
+                     'password'=>$hash,
                      'username'=>$username, 
                      'userrole_id'=>'4'
                  );
@@ -360,6 +368,16 @@ class Users_model extends CI_Model {
     public function deleteStudent($Id)
     {
         $this->db->delete('student', array('id' => $Id));
+    }
+    public function getComment($stuId)
+    {
+        $this->db->select("comment.comment");
+        $this->db->from('comment');
+        $this->db->join('student', 'student.id = comment.student_id');
+        $this->db->where('student.id', $stuId);
+        $query = $this->db->get();
+        // var_dump($query->result_array());die();
+        return $query->result_array();
     }
   /**
    * Get the list of roles or one role

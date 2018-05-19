@@ -7,13 +7,15 @@ class Welcome_IF extends CI_Controller {
 	function __construct()
 	{
 			parent::__construct();
-			log_message('debug', 'URI=' . $this->uri->uri_string());
+			log_message('debug', 'URI=' . $this->uri->uri_string()); 
 	}
 	// view login
 	public function index()
 	{
 		$this->load->view('login/login');
 	}
+	/*==============================*/
+
 	public function home()
 	{
 
@@ -22,7 +24,7 @@ class Welcome_IF extends CI_Controller {
         $data['company'] = $this->users_model->CNumRow();
         $data['tutor'] = $this->users_model->TNumRow();
         $data['student'] = $this->users_model->sNumRow();
-		$data['activeLink'] = 'home';
+		$data['activeLink'] = 'Home';
 		$this->load->view('templates/header.php',$data);
 		$this->load->view('menu/index.php',$data);
 		$this->load->view('pages/index.php',$data);
@@ -57,6 +59,7 @@ class Welcome_IF extends CI_Controller {
 	{
 		$companyId = $_GET['id'];
 		$this->load->Model('users_model');
+		// var_dump($companyId);die();
 		$data['company'] = $this->users_model->getCompanyDataDetail($companyId);
 		$data['activeLink'] = 'Company';
 		$this->load->view('templates/header.php',$data);
@@ -364,6 +367,7 @@ class Welcome_IF extends CI_Controller {
 		$stuId = $_GET['id'];
 		$this->load->Model('users_model');
 		$data['student'] = $this->users_model->viewStudentData($stuId);
+		// var_dump($data['student']);die();
 		$data['activeLink'] = 'student';
 		$this->load->view('templates/header.php',$data);
 		$this->load->view('menu/index.php',$data);
@@ -465,18 +469,54 @@ class Welcome_IF extends CI_Controller {
 	public function calendar()
 	{
 		$data['activeLink'] = 'calendar';
-		 $this->load->view('templates/header.php',$data);
-		 $this->load->view('menu/index.php',$data);
-		$this->load->view('pages/calendar/index.php');
-		// $this->load->view('templates/footer.php');
+		$this->load->view('templates/header.php',$data);
+		$this->load->view('menu/index.php',$data);
+		$this->load->view('pages/calendar/calendar');
+		$this->load->view('templates/footer.php');
+	}
+
+	/*Get all Events */
+
+	Public function getEvents()
+	{
+		$result=$this->Calendar_model->getEvents();
+		echo json_encode($result);
+	}
+	/*Add new event */
+	Public function addEvent()
+	{
+		$result=$this->Calendar_model->addEvent();
+		echo $result;
+	}
+	/*Update Event */
+	Public function updateEvent()
+	{
+		$result=$this->Calendar_model->updateEvent();
+		echo $result;
+	}
+	/*Delete Event*/
+	Public function deleteEvent()
+	{
+		$result=$this->Calendar_model->deleteEvent();
+		echo $result;
+	}
+	Public function dragUpdateEvent()
+	{	
+
+		$result=$this->Calendar_model->dragUpdateEvent();
+		echo $result;
 	}
 	// comment 
 	public function comment()
 	{
+		$stuId = $_GET['id'];
+		$this->load->helper('form');
+		$this->load->Model('users_model');
+	    $data['comment'] = $this->users_model->getComment($stuId);
 		$data['activeLink'] = 'student';
 		$this->load->view('templates/header.php',$data);
 		$this->load->view('menu/index.php',$data);
-		$this->load->view('pages/student/comment.php');
+		$this->load->view('pages/student/comment.php',$data);
 		$this->load->view('templates/footer.php');
 	}
 	public function addComment()

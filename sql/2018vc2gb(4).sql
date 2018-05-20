@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: May 18, 2018 at 09:05 AM
--- Server version: 10.1.26-MariaDB
--- PHP Version: 7.1.9
+-- Generation Time: May 20, 2018 at 05:28 AM
+-- Server version: 10.1.29-MariaDB
+-- PHP Version: 7.2.0
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -41,7 +41,7 @@ CREATE TABLE `admin` (
 --
 
 INSERT INTO `admin` (`id`, `username`, `password`, `email`, `userrole_id`) VALUES
-(1, 'admin', '123', 'admin@gmail.com', 1);
+(1, 'admin', '$2a$08$d8dL17ICMpH/HUyRVQLV4eDHA90zFIE/EWiyJnpYqFMwctMnn1C0i', 'admin@gmail.com', 1);
 
 -- --------------------------------------------------------
 
@@ -222,10 +222,11 @@ CREATE TABLE `student` (
 --
 
 INSERT INTO `student` (`id`, `firstname`, `lastname`, `batch`, `year`, `schoolemail`, `peremail`, `phone`, `hire`, `password`, `username`, `picture`, `supervisor_id`, `userrole_id`) VALUES
-(1, 'Prem', 'Mann', 'WEB', 2018, 's.prem@gmail.com', 'p.prem@gmail.com', 3456765, 1, '123', 'mPrem', 'premImage', 2, 4),
-(2, 'Devith', 'Chea', 'Web', 2018, 's.devit@gmail.com', 'p.devit@gmail.com', 98765444, 0, '123', 'g-dvith', 'dImage', 1, 4),
-(3, 'Touch', 'Ban', 'WEB', 2018, 's.touch@gmail.com', 'p.touch@gmail.com', 86784485, 1, '123', 'btouch', 'tImage', 3, 4),
-(4, 'Bunthean', 'Mov', 'Web', 2018, 's.bunthean@gmail.com', 'p.bunthean@gmail.com', 876546, 1, '123', 'mbunthean', 'bImage', 3, 4);
+(1, 'Prem', 'Mann', 'WEB', 2018, 's.prem@gmail.com', 'p.prem@gmail.com', 3456765, 1, '$2a$08$d8dL17ICMpH/HUyRVQLV4eDHA90zFIE/EWiyJnpYqFMwctMnn1C0i', 'mPrem', 'premImage', 2, 4),
+(2, 'Devith', 'Chea', 'Web', 2018, 's.devit@gmail.com', 'p.devit@gmail.com', 98765444, 0, '$2a$08$d8dL17ICMpH/HUyRVQLV4eDHA90zFIE/EWiyJnpYqFMwctMnn1C0i', 'g-dvith', 'dImage', 1, 4),
+(3, 'Touch', 'Ban', 'WEB', 2018, 's.touch@gmail.com', 'p.touch@gmail.com', 86784485, 1, '$2a$08$d8dL17ICMpH/HUyRVQLV4eDHA90zFIE/EWiyJnpYqFMwctMnn1C0i', 'btouch', 'tImage', 3, 4),
+(4, 'Bunthean', 'Mov', 'Web', 2018, 's.bunthean@gmail.com', 'p.bunthean@gmail.com', 876546, 1, '$2a$08$d8dL17ICMpH/HUyRVQLV4eDHA90zFIE/EWiyJnpYqFMwctMnn1C0i', 'mbunthean', 'bImage', 3, 4),
+(5, 'soben', 'khun', 'Web2018', 2, 'soben.khun@student.passerellesnumeriques.org', 'sobenkhun.sk@gmail.com', 81477282, NULL, '$2a$08$d8dL17ICMpH/HUyRVQLV4eDHA90zFIE/EWiyJnpYqFMwctMnn1C0i', 'soben.khun', NULL, 2, 4);
 
 -- --------------------------------------------------------
 
@@ -313,14 +314,24 @@ INSERT INTO `userrole` (`id`, `role`) VALUES
 
 CREATE TABLE `worklog` (
   `id` int(11) NOT NULL,
-  `workactivities` varchar(200) DEFAULT NULL,
-  `youhavelearn` varchar(200) DEFAULT NULL,
-  `difficultiesandssues` varchar(200) DEFAULT NULL,
-  `solutions` varchar(200) DEFAULT NULL,
-  `todo` varchar(200) DEFAULT NULL,
-  `comment` varchar(200) DEFAULT NULL,
-  `student_id` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+  `data` date DEFAULT NULL,
+  `workactivities` text,
+  `youhavelearn` text,
+  `issues` text,
+  `solutions` text,
+  `todo` text,
+  `comment` text,
+  `reflections_week` text,
+  `student_id` int(11) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `worklog`
+--
+
+INSERT INTO `worklog` (`id`, `data`, `workactivities`, `youhavelearn`, `issues`, `solutions`, `todo`, `comment`, `reflections_week`, `student_id`) VALUES
+(1, '2018-05-18', '- Meeting with client and manager for got the requirement \r\n- Install skeleton in local Computer', '-We know more  with requirement\r\n- We understand more about what client need(Process of project)\r\n- We got some advice from manager the procees of project\r\n- we learnt about how to prepar overself for met client first time ', ' - some member still not clear about what client need \r\nand rocess of skeleton\r\n- we not yet see the requement before go to meeting\r\n with client and manager so we have more not clear \r\nabout project', 'In group have some one understand clearly more than \r\neveryone explain more what is client need\r\n- ask client more detail which part that we not clear\r\n- We go to read detail with requirement\r\n- who don\'t understand about skeleton we provide \r\nmore time for play around it and give some guide to their', 'Play around with skeleton\r\n - Create few tests case for Play around with skeleton\r\n - fix some sever have problem with version PHP', ' kick of meeting\r\n- know more about process of project\r\n- varify the requirement\r\n- know each other with client manager and developer\r\n- got some advice from project manager', 'Reflections for this week: \r\nThis week we learnt alot of from  VC2 project (Internship follow up) and the purpose this week is meet with client for get the requirement and design logo and layout demo to client.\r\n  We learnt from this project such as \r\n+ From project\r\n- We can know the beginning  process for develop the system \r\n - we can learnt from client how to prepar ourself for the meeting with client and how to have communication with non-technical client.\r\n- we learnt new technology for us. We learnt how to control the project and management tasks on account github(create board for management task and for sharing the project on account)\r\n- We know clearly about layout\r\n- We can solve new problem that we never learnt before (fix problem server , clone project from github account ).\r\n- We got some advise from manager for complate some parts that we still not clear how to work and management .\r\n+ From team member\r\n- We can  learnt how to help each other when have the problem in group member\r\n- We learnt from each other for discussion design logo and layout\r\n- We share something new together (idea for design layout and process of system , use git for do the project)\r\n- we  have learnt how to work in group and good communication with each other when do the project.\r\n', 2),
+(2, '2018-05-02', '\r\n-stand up meeting \r\n- Validate Logo \r\n- design layout', '-  We can know the problem detail that member met  and tried to solve it quickly together\r\n- we know how to design layout for system', '-  We have difficult to modify the Logo \r\nand have one member missing during this task so we have difficult to complate the task that devided to each other', '- We add more tasks on which members that can complate it on time\r\n- we tried to read the requirement design logo again and again untill we can design logo base on client need. ', '- combine each page layout system\r\n- continue design logo \r\n- Tried to test  pull and push project on account github\r\n- provide more time which member not finish design layout', '\r\nMeeting with client and manager\r\n  - For choose logo use in system\r\n  - Suggestion to client and manager that have featur need to chang in system (change the action)\r\n  - client Explain more detail about some parts that us don\'t understand and  not clear', NULL, 5);
 
 -- --------------------------------------------------------
 
@@ -451,7 +462,7 @@ ALTER TABLE `userrole`
 --
 ALTER TABLE `worklog`
   ADD PRIMARY KEY (`id`),
-  ADD KEY `fk_worklog_student1_idx` (`student_id`);
+  ADD KEY `student_id` (`student_id`);
 
 --
 -- AUTO_INCREMENT for dumped tables
@@ -473,7 +484,7 @@ ALTER TABLE `company`
 -- AUTO_INCREMENT for table `student`
 --
 ALTER TABLE `student`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT for table `supervisor`
@@ -492,6 +503,12 @@ ALTER TABLE `tutor`
 --
 ALTER TABLE `userrole`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+
+--
+-- AUTO_INCREMENT for table `worklog`
+--
+ALTER TABLE `worklog`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- Constraints for dumped tables
@@ -540,7 +557,7 @@ ALTER TABLE `tutor`
 -- Constraints for table `worklog`
 --
 ALTER TABLE `worklog`
-  ADD CONSTRAINT `fk_worklog_student1` FOREIGN KEY (`student_id`) REFERENCES `student` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION;
+  ADD CONSTRAINT `worklog_ibfk_1` FOREIGN KEY (`student_id`) REFERENCES `student` (`id`);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

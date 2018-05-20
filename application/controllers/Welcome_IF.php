@@ -97,20 +97,18 @@ class Welcome_IF extends CI_Controller {
 	public function addCompany()
 	{
 		$this->load->library('form_validation');
-		$this->form_validation->set_rules("name", "Company Name",'trim|required|min_length[2]|max_length[100]');
-		$this->form_validation->set_rules("itemdescription" ,"Company discription",'trim|required|min_length[2]|max_length[200]');
-		$this->form_validation->set_rules("postaladdress" ,"Company Address",'trim|required|min_length[2]|max_length[100]');
-		$this->form_validation->set_rules("location" ,"Company location",'trim|required|min_length[2]|max_length[100]');
-		$this->form_validation->set_rules("phone" ,"Mobile Number",'trim|required|min_length[2]|max_length[20]|required|regex_match[/^[0-9]{10}$/]');
-		$this->form_validation->set_rules("url" ,"Company Website",'trim|required|min_length[2]|max_length[50]');
-
+		$this->form_validation->set_rules("name", "Company Name",'trim|required|min_length[0]|max_length[100]');
+		$this->form_validation->set_rules("itemdescription" ,"Company discription",'trim|required|min_length[0]|max_length[200]');
+		$this->form_validation->set_rules("postaladdress" ,"Company Address",'trim|required|min_length[0]|max_length[100]');
+		$this->form_validation->set_rules("location" ,"Company location",'trim|required|min_length[0]|max_length[100]');
+		$this->form_validation->set_rules("phone" ,"Mobile Number",'trim|required|min_length[0]|max_length[20]|required|regex_match[/^[0-9]{10}$/]');
+		$this->form_validation->set_rules("url" ,"Company Website",'trim|required|min_length[0]|max_length[50]');
 		if ($this->form_validation->run() == FALSE) {
 			$data['activeLink'] = 'Company';
 			$this->load->view('templates/header.php',$data);
 			$this->load->view('menu/index.php',$data);
 			$this->load->view('pages/company/add.php');
 			$this->load->view('templates/footer.php');
-			//print "<script type=\"text/javascript\">alert('Please filde all input!');</script>";
 		}else{
 			$this->load->helper('form');
 			$this->load->Model('users_model');
@@ -169,23 +167,45 @@ class Welcome_IF extends CI_Controller {
 	}
 	public function addTutor()
 	{
-		$this->load->helper('form');
-		$firstname = $this->input->post("firstname");
-		$lastname = $this->input->post("lastname");
-		$username = $this->input->post("userName");
-		$password = $this->input->post("password");
-		$position = $this->input->post("position");
-		$sEmail = $this->input->post("sEmail");
-		$company = $this->input->post("company");
-		$phone = $this->input->post("phone");
-		$this->load->Model('users_model');
-       	$this->users_model->addTutor($company,$firstname,$lastname,$username,$password,$position,$sEmail,$phone);
-        $data['tutor'] = $this->users_model->getTutorData();
-		$data['activeLink'] = 'Tutor';
-		$this->load->view('templates/header.php',$data);
-		$this->load->view('menu/index.php',$data);
-		$this->load->view('pages/tutor/index.php',$data);
-		$this->load->view('templates/footer.php');
+		$this->load->library('form_validation');
+		$this->form_validation->set_rules("firstname", "First Name",'trim|required|min_length[3]|max_length[15]');
+		$this->form_validation->set_rules("lastname" ,"Last Name",'trim|required|min_length[3]|max_length[20]');
+		$this->form_validation->set_rules("userName" ,"User Name",'trim|required|min_length[3]|max_length[100]');
+		$this->form_validation->set_rules("position" ,"Position",'trim|required|min_length[3]|max_length[50]');
+		$this->form_validation->set_rules("phone" ,"Mobile Number",'trim|required|min_length[0]|max_length[25]|required|regex_match[/^[0-9]{10}$/]');
+		$this->form_validation->set_rules("password" ,"Password",'trim|required|min_length[0]|max_length[100]');
+		$this->form_validation->set_rules("sEmail" ,"School Email",'trim|required|min_length[0]|max_length[100]');
+		$this->form_validation->set_rules("image" ,"Picture Profile",'trim|required|min_length[0]|max_length[100]');
+		$this->form_validation->set_rules("company" ,"Company Name",'trim|required|min_length[0]|max_length[50]');
+
+		if ($this->form_validation->run() == FALSE) {
+			$this->load->helper('form');
+			$this->load->Model('users_model');
+			$data['company'] = $this->users_model->getCompanyData();
+			$data['activeLink'] = 'Tutor';
+			$this->load->view('templates/header.php',$data);
+			$this->load->view('menu/index.php',$data);
+			$this->load->view('pages/tutor/addNew.php',$data);
+			$this->load->view('templates/footer.php');
+		}else{
+			$this->load->helper('form');
+			$firstname = $this->input->post("firstname");
+			$lastname = $this->input->post("lastname");
+			$username = $this->input->post("userName");
+			$password = $this->input->post("password");
+			$position = $this->input->post("position");
+			$sEmail = $this->input->post("sEmail");
+			$company = $this->input->post("company");
+			$phone = $this->input->post("phone");
+			$this->load->Model('users_model');
+	       	$this->users_model->addTutor($company,$firstname,$lastname,$username,$password,$position,$sEmail,$phone);
+	        $data['tutor'] = $this->users_model->getTutorData();
+			$data['activeLink'] = 'Tutor';
+			$this->load->view('templates/header.php',$data);
+			$this->load->view('menu/index.php',$data);
+			$this->load->view('pages/tutor/index.php',$data);
+			$this->load->view('templates/footer.php');		
+		}
 	}
 	public function detailTutor()
 	{
@@ -273,28 +293,52 @@ class Welcome_IF extends CI_Controller {
 	}
 	public function addSupervisor()
 	{
-		$this->load->helper('form');
-		$firstname = $this->input->post("firstname");
-		$lastname = $this->input->post("lastname");
-		$username = $this->input->post("username");
-		$password = $this->input->post("password");
-		$company = $this->input->post("company");
-		$student = $this->input->post("student");
-		$this->load->Model('users_model');
-		$studntId = $this->users_model->getStuId($student);
-		$position = $this->input->post("position");
-		$sEmail = $this->input->post("email");
-		$phone = $this->input->post("phone");
-		$this->load->Model('users_model');
-       	$this->users_model->addSupervisor($company,$studntId,$firstname,$lastname,$username,$password,$position,$sEmail,$phone);
-       	$this->load->helper('form');
-		$this->load->Model('users_model');
-        $data['supervisor'] = $this->users_model->getSupervisorData();
-		$data['activeLink'] = 'supervisor';
-		$this->load->view('templates/header.php',$data);
-		$this->load->view('menu/index.php',$data);
-		$this->load->view('pages/supervisor/index.php');
-		$this->load->view('templates/footer.php');
+		$this->load->library('form_validation');
+		$this->form_validation->set_rules("firstname", "First Name",'trim|required|min_length[3]|max_length[15]');
+		$this->form_validation->set_rules("lastname" ,"Last Name",'trim|required|min_length[3]|max_length[20]');
+		$this->form_validation->set_rules("company" ,"Company Name",'trim|required|min_length[0]|max_length[50]');
+		$this->form_validation->set_rules("student" ,"Student Name",'trim|required|min_length[0]|max_length[50]');
+		$this->form_validation->set_rules("username" ,"User Name",'trim|required|min_length[3]|max_length[100]');
+		$this->form_validation->set_rules("password" ,"Password",'trim|required|min_length[0]|max_length[100]');
+		$this->form_validation->set_rules("position" ,"Position",'trim|required|min_length[3]|max_length[10]');
+		$this->form_validation->set_rules("email" ,"School Email",'trim|required|min_length[0]|max_length[100]');
+		$this->form_validation->set_rules("phone" ,"Mobile Number",'trim|required|min_length[0]|max_length[25]|required|regex_match[/^[0-9]{10}$/]');
+		$this->form_validation->set_rules("image" ,"Picture Profile",'trim|required|min_length[0]|max_length[100]');
+
+		if ($this->form_validation->run() == FALSE) {
+			$this->load->helper('form');
+			$this->load->Model('users_model');
+			$data['company'] = $this->users_model->getCompanyData();
+			$data['student'] = $this->users_model->getSuStudent();
+			$data['activeLink'] = 'supervisor';
+			$this->load->view('templates/header.php',$data);
+			$this->load->view('menu/index.php',$data);
+			$this->load->view('pages/supervisor/createSupervisor.php',$data);
+			$this->load->view('templates/footer.php');
+		}else{
+			$this->load->helper('form');
+			$firstname = $this->input->post("firstname");
+			$lastname = $this->input->post("lastname");
+			$username = $this->input->post("username");
+			$password = $this->input->post("password");
+			$company = $this->input->post("company");
+			$student = $this->input->post("student");
+			$this->load->Model('users_model');
+			$studntId = $this->users_model->getStuId($student);
+			$position = $this->input->post("position");
+			$sEmail = $this->input->post("email");
+			$phone = $this->input->post("phone");
+			$this->load->Model('users_model');
+	       	$this->users_model->addSupervisor($company,$studntId,$firstname,$lastname,$username,$password,$position,$sEmail,$phone);
+	       	$this->load->helper('form');
+			$this->load->Model('users_model');
+	        $data['supervisor'] = $this->users_model->getSupervisorData();
+			$data['activeLink'] = 'supervisor';
+			$this->load->view('templates/header.php',$data);
+			$this->load->view('menu/index.php',$data);
+			$this->load->view('pages/supervisor/index.php');
+			$this->load->view('templates/footer.php');				
+		}	
 	}
 	public function deleteSupervisor()
 	{

@@ -31,23 +31,23 @@
 					<div class="form-group row col-md-6 group-col-stu">
 						<label class="col-sm-4 col-form-label" for="">Company</label>
 						<div class="col-sm-8">
-							 <select class="form-control" id="" name="company">
-							<?php foreach ($company as $company):?>
-							   <option><?php echo $company['name']; ?></option>
-							 <?php endforeach ?>
-							 </select>
-							 <span class="required text-danger"><?php echo form_error("company"); ?></span>
+							<select class="form-control" id="" name="company">
+								<?php foreach ($company as $company):?>
+									<option><?php echo $company['name']; ?></option>
+								<?php endforeach ?>
+							</select>
+							<span class="required text-danger"><?php echo form_error("company"); ?></span>
 						</div>
 					</div>
 					<div class="form-group row col-md-6 group-col-stu">
 						<label class="col-sm-4 col-form-label" for="">Student</label>
 						<div class="col-sm-8">
-							 <select class="form-control" id="" name="student">
+							<select class="form-control" id="" name="student">
 								<?php foreach ($student as $student):?>
-							   <option><?php echo $student['firstname']." ".$student['lastname'];?></option>
-							 <?php endforeach ?>
-							 </select>
-							 <span class="required text-danger"><?php echo form_error("student"); ?></span>
+									<option><?php echo $student['firstname']." ".$student['lastname'];?></option>
+								<?php endforeach ?>
+							</select>
+							<span class="required text-danger"><?php echo form_error("student"); ?></span>
 						</div>
 					</div>
 					<div class="form-group row col-md-6 group-col-stu">
@@ -98,18 +98,17 @@
 							<!-- <input type="file" name="image" id="" class="form-control" placeholder="..."> -->
 						</div>
 					</div><br>
-					
 				</div>
-	</div>
+			</div>
 			<div class="col-md-4"></div>
-					<div class="col-md-2 text-center">
-						<button class="btn btn-outline-success" type="submit" name="btn-submit">Submit</button>
-					</div>
-					<div class="col-md-2 text-center">
-						<button class="btn btn-outline-danger pull-right" type="reset" name="btn-cancel">Cancel</button>
-						<br>
-						<br>
-						<div class="col-md-4"></div>
+			<div class="col-md-2 text-center">
+				<button class="btn btn-outline-success" type="submit" name="btn-submit">Submit</button>
+			</div>
+			<div class="col-md-2 text-center">
+				<button class="btn btn-outline-danger pull-right" type="reset" name="btn-cancel">Cancel</button>
+				<br>
+				<br>
+				<div class="col-md-4"></div>
 			</form>
 		</div> 
-</div>
+	</div>

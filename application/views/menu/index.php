@@ -64,7 +64,7 @@ $activeLink = (isset($activeLink)) ? $activeLink :  "";?>
               </ul>
           </li>
           <li class="nav-item ">
-            <a class="nav-link" href="#" data-toggle="modal" data-target="#myProfiles">       
+            <a class="nav-link" href="#" data-toggle="modal" data-target="#userprofile">       
               <b class="colorTextMenu">  
                 <span class="mdi mdi-account-circle mdi-24px" data-toggle="tooltip" title="Username"></span> 
               </b>
@@ -83,7 +83,7 @@ $activeLink = (isset($activeLink)) ? $activeLink :  "";?>
 <br>
 <br>
 <br>
-<div class="modal fade" id="myProfiles">
+<div class="modal fade" id="userprofile">
   <div class="modal-dialog">
     <div class="modal-content">
       <!-- Modal Header -->

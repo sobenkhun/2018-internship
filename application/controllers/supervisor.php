@@ -21,6 +21,7 @@ class supervisor extends CI_Controller {
 		$this->load->helper('form');
 		$this->load->Model('Supervisor_model');
 	    $data['student'] = $this->Supervisor_model->getDataStudentList();
+	    $data['student'] = $this->Supervisor_model->getDataStudentList();
 	    $data['activeLink'] = 'Student';
 	    $data['activeLink'] = 'student';
 	    // var_dump($data);
@@ -61,13 +62,52 @@ class supervisor extends CI_Controller {
 		$this->load->Model('Supervisor_model');
 	    $data['student'] = $this->Supervisor_model->getQuestionnaire($studentId);
 	    $data['activeLink'] = 'questionnair';
-	    // var_dump($data); die();
 		$this->load->view('templates/header.php');
 		$this->load->view('menu/supervisorMenu.php', $data);
 		$this->load->view('supervisorDashboard/questionnair.php',$data);
 		$this->load->view('templates/footer.php');
 	}
-	function addQuestionnaire()
+	// ========================================================================
+	public function addQuestionnaire()
+	{
+		$stuid = $_GET['id'];
+		$this->load->helper('form');
+		$this->load->library('form_validation');
+	    $this->form_validation->set_rules('sex', 'gender', 'required'); 
+	    $this->form_validation->set_rules('q1', 'question 1', 'required'); 
+	    $this->form_validation->set_rules('major', 'major', 'required'); 
+	    $this->form_validation->set_rules('q2', 'question 2', 'required'); 
+	    $this->form_validation->set_rules('q3', 'question 3', 'required'); 
+
+	    if ($this->form_validation->run() == FALSE ) {
+	    	echo "Invalid input..."; 
+	    }
+	    else {
+	    	
+	        $sex = $this->input->post('sex');
+	        $q1 = $this->input->post('q1');
+	        $major = $this->input->post('major');
+	        $q2 = $this->input->post('q2');// Yest/No question
+	        $q3 = $this->input->post('q3');
+
+	        // $student = $this->input->post("student_id");
+	        // $this->load->Model('Supervisor_model');
+	        // $studentId = $this->Supervisor_model->getStuId($student);
+
+	        $data['activeLink'] = 'questionnaire';
+	        $this->load->Model('Supervisor_model');
+	        $data['student'] = $this->Supervisor_model->addQuestionnaire($stuid,$sex,$q1,$major,$q2,$q3);
+	        $data['activeLink'] = 'questionnaire';
+	        var_dump($data); die();
+	     	$this->load->view('templates/header.php');
+	     	$this->load->view('menu/supervisorMenu.php' ,$data);
+	     	$this->load->view('supervisorDashboard/index.php',$data);
+	     	$this->load->view('templates/footer.php');
+	    }
+	}
+
+	// ========================================================================
+	function addQuestionnakjkklire()
 	{
 		$this->load->helper('form');
 		$this->load->library('form_validation');
@@ -78,25 +118,24 @@ class supervisor extends CI_Controller {
 	    $this->form_validation->set_rules('q2', 'question 2', 'required'); 
 	    $this->form_validation->set_rules('q3', 'question 3', 'required'); 
 
-	    if ($this->form_validation->run()) {
-	    	    $sex = $this->input->post('sex');
-	    	     $q1 = $this->input->post('q1');
-	    	      $major = $this->input->post('major');
-	    	      $q2 = $this->input->post('q2');// Yest/No question
-	    	      $q3 = $this->input->post('q3');
-
-	    	    $this->load->Model('Supervisor_model');
-	    	    $data['student'] = $this->Supervisor_model->addQuestionnaire($sex, $q1, $major,$q2,$q3);
-	    	    $data['activeLink'] = 'questionnaire';
-	    	    // var_dump($data); die();
-	    		$this->load->view('templates/header.php');
-	    		$this->load->view('menu/supervisorMenu.php' ,$data);
-	    		$this->load->view('supervisorDashboard/index.php',$data);
-	    		$this->load->view('templates/footer.php');
+	    if ($this->form_validation->run() == FALSE ) {
+	    	echo "has error"; 
 	    }
 	    else {
-	     echo "has error";
-            
+	         $sex = $this->input->post('sex');
+	          $q1 = $this->input->post('q1');
+	           $major = $this->input->post('major');
+	           $q2 = $this->input->post('q2');// Yest/No question
+	           $q3 = $this->input->post('q3');
+
+	         $this->load->Model('Supervisor_model');
+	         $data['student'] = $this->Supervisor_model->addQuestionnaire($studentId,$sex, $q1, $major,$q2,$q3);
+	         $data['activeLink'] = 'questionnaire';
+	         // var_dump($data); die();
+	     	$this->load->view('templates/header.php');
+	     	$this->load->view('menu/supervisorMenu.php' ,$data);
+	     	$this->load->view('supervisorDashboard/index.php',$data);
+	     	$this->load->view('templates/footer.php');
 	    }
 		
 	}

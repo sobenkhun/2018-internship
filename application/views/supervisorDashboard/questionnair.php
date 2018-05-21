@@ -7,9 +7,7 @@
                   <button class="btn btn-primary"><i class="mdi mdi-chevron-left"></i>Back</button>
                </a>
             </div>
-            <div class="col-md-4">
-            
-            </div>
+            <div class="col-md-4"></div>
          </div>
        </div>  
 
@@ -19,7 +17,8 @@
          <!-- <link href="<?php echo base_url(); ?>/assets/CognitorFormFiles/css" rel="stylesheet" type="text/css"> -->
          <link rel="stylesheet" href="<?php echo base_url(); ?>/assets/CognitorFormFiles/style3.css">
          
-         <form action="<?php echo base_url();?>supervisor/addQuestionnaire" method="post">
+            <?php foreach ($student as $student):?>
+            <form action="<?php echo base_url();?>supervisor/addQuestionnaire?&id=<?php echo $student['id']; ?>" method="post">
             <div class="c-forms-form" tabindex="0">
                <div class="c-forms-form-body">
                   <div class="c-forms-heading">
@@ -29,7 +28,6 @@
                   </div>
                   <div class="c-forms-template" sys:attach="dataview" >
                      <div class="c-forms-form-main c-span-24 c-sml-span-12">
-                        <?php foreach ($student as $student):?>
                         <div class="c-text-singleline c-field c-col-1 c-sml-col-1 c-span-12 c-sml-span-12  c-required">
                            <div class="c-label  ">
                               <label for="c-0-205">Name of your company </label></div>
@@ -44,37 +42,33 @@
                               <label>Name of the intern </label>
                            </div>
                            <div>
-                              
                               <div class="c-offscreen">
                                  <label for="c-1-204">First</label>
                               </div>
                               <div class="c-editor c-span-1" style="width: 50%; float: left;">
-                                 <input type="text" id="c-1-204" value="<?php echo $student['firstname'] ?>" placeholder="First Name" >
+                                 <input type="text" id="c-1-204" name="firstname" value="<?php echo $student['firstname'] ?>" placeholder="First Name" >
                               </div>
                               <div class="c-offscreen">
                                  <label for="c-2-204">Last</label>
                               </div>
                               <div class="c-editor c-span-1" style="width: 50%; float: left;">
-                                 <input type="text" id="c-2-204" value="<?php echo $student['lastname'] ?>" placeholder="Last Name" >
+                                 <input type="text" id="c-2-204" name="lastname" value="<?php echo $student['lastname'] ?>" placeholder="Last Name" >
                               </div>
-                           
                            </div>
                            <div class="c-validation">First and Last are required.</div>
                         </div>
-                     <?php endforeach ?>
+                     
                         <div class="c-choice-radiobuttons c-field c-col-1 c-sml-col-1 c-span-24 c-sml-span-12  c-required">
                            <legend class="c-label  ">Sex</legend>
                            <div class="c-editor c-columns-0">
                               <div class="c-choice-option">
                                  <label for="c-4-202">
-                                    <input type="radio" name="sex" value="male" id="c-4-202"><span>Male</span>
-                                    <!-- <?php echo form_error('sex'); ?> -->
+                                 <input type="radio" name="sex" id="c-4-202" <?php if ($student['gender']=='Male') {echo "checked='checked'";}?> value="Male"><span>Male</span>
                                  </label>
                               </div>
                               <div class="c-choice-option">
                                  <label for="c-4-203">
-                                    <input type="radio" name="sex" value="female" id="c-4-203"><span>Female</span>
-                                    <!-- <?php echo form_error('sex'); ?> -->
+                                 <input type="radio" name="sex"  id="c-4-203" <?php if ($student['gender']=='Female') { echo "checked='checked'";}?> value="Female"><span>Female</span>
                                  </label>
                               </div>
                            </div>
@@ -105,54 +99,54 @@
                                        <td class="c-choice-option">
                                        
                                           <label for="c-5-191">
-                                             <input type="radio" name="q1" value="1" id="c-5-191">
+                                             <input type="radio" name="q1" value="1" id="c-5-191" <?php if ($student['question1']==1) { echo "checked='checked'";}?>>
                                              <span><span class="c-offscreen">1 (Not likely at all)</span></span>
                                           </label>
                                        </td>
                                        <td class="c-choice-option">
                                           <label for="c-5-192">
-                                             <input type="radio" name="q1" value="2"  id="c-5-192">
+                                             <input type="radio" name="q1" value="2"  id="c-5-192" <?php if ($student['question1']==2) { echo "checked='checked'";}?>>
                                              <span><span class="c-offscreen">2</span></span>
                                           </label></td>
                                        <td class="c-choice-option">
                                           <label for="c-5-193">
-                                             <input type="radio" name="q1" value="3" id="c-5-193">
+                                             <input type="radio" name="q1" value="3" id="c-5-193" <?php if ($student['question1']==3) { echo "checked='checked'";}?>>
                                              <span><span class="c-offscreen">3</span></span>
                                           </label>
                                        </td>
                                        <td class="c-choice-option">
                                           <label for="c-5-194">
-                                             <input type="radio" name="q1" value="4" id="c-5-194">
+                                             <input type="radio" name="q1" value="4" id="c-5-194" <?php if ($student['question1']==4) { echo "checked='checked'";}?>>
                                              <span><span class="c-offscreen">4</span></span></label></td>
                                        <td class="c-choice-option">
                                           <label for="c-5-195"> 
-                                             <input type="radio" name="q1" value="5" id="c-5-195">
+                                             <input type="radio" name="q1" value="5" id="c-5-195" <?php if ($student['question1']==5) { echo "checked='checked'";}?>>
                                              <span><span class="c-offscreen">5</span></span>
                                           </label></td>
                                        <td class="c-choice-option">
                                           <label for="c-5-196">
-                                             <input type="radio" name="q1" value="6" id="c-5-196">
+                                             <input type="radio" name="q1" value="6" id="c-5-196" <?php if ($student['question1']==6) { echo "checked='checked'";}?>>
                                              <span><span class="c-offscreen">6</span></span>
                                           </label></td>
                                        <td class="c-choice-option">
                                           <label for="c-5-197">
-                                             <input type="radio" name="q1" value="7" id="c-5-197">
+                                             <input type="radio" name="q1" value="7" id="c-5-197" <?php if ($student['question1']==7) { echo "checked='checked'";}?>>
                                              <span><span class="c-offscreen">7</span></span>
                                           </label></td>
                                        <td class="c-choice-option">
                                           <label for="c-5-198">
-                                             <input type="radio" name="q1" value="8" id="c-5-198">
+                                             <input type="radio" name="q1" value="8" id="c-5-198" <?php if ($student['question1']==8) { echo "checked='checked'";}?>>
                                              <span><span class="c-offscreen">8</span></span>
                                           </label></td>
                                        <td class="c-choice-option">
                                           <label for="c-5-199">
                                           
-<input type="radio" name="q1" value="9" id="c-5-199"/>
+                                             <input type="radio" name="q1" value="9" id="c-5-199" <?php if ($student['question1']==9) { echo "checked='checked'";}?>/>
                                              <span><span class="c-offscreen">9</span></span>
                                           </label></td>
                                        <td class="c-choice-option">
                                           <label for="c-5-200">
-<input type="radio" name="q1" value="10" id="c-5-200"/>
+                                          <input type="radio" name="q1" value="10" id="c-5-200" <?php if ($student['question1']==10) { echo "checked='checked'";}?>/>
                                              <span><span class="c-offscreen">10 (Extremely likely)</span></span></label></td>
                                     </tr>
                                     <tr>
@@ -170,13 +164,13 @@
                            <div class="c-editor c-columns-0">
                               <div class="c-choice-option">
                                  <label for="c-7-187">
-                                    <input type="radio" name="major" value="1" id="c-7-187">
+                                    <input type="radio" name="major" value="WEB" id="c-7-187" <?php if ($student['major']=='WEB') { echo "checked='checked'";}?>>
                                     <span>WEP</span>
                                  </label>
                               </div>
                               <div class="c-choice-option">
                                  <label for="c-7-188">
-                                    <input type="radio" name="major" value="0" id="c-7-188">
+                                    <input type="radio" name="major" value="SNA" id="c-7-188" <?php if ($student['major']=='SNA') { echo "checked='checked'";}?>>
                                     <span>SNA</span>
                                  </label>
                               </div>
@@ -776,9 +770,9 @@
                            <legend class="c-label  ">2/ Did your company use Linux operating system ?</legend>
                            <div class="c-editor c-columns-0">
                               <div class="c-choice-option"><label for="c-28-84">
-                                 <input type="radio" name="q2" value="1" id="c-28-84"><span>Yes</span></label></div>
+                                 <input type="radio" name="q2" value="1" id="c-28-84" <?php if ($student['question2']==1) { echo "checked='checked'";}?>><span>Yes</span></label></div>
                               <div class="c-choice-option"><label for="c-28-85">
-                                 <input type="radio" name="q2" value="0" id="c-28-85"><span>No</span></label></div>
+                                 <input type="radio" name="q2" value="0" id="c-28-85" <?php if ($student['question2']==0) { echo "checked='checked'";}?>><span>No</span></label></div>
                            </div>
                            <div class="c-validation">Did your company use Linux operating system ? is required.</div>
                         </div>
@@ -814,11 +808,11 @@
                            <legend class="c-label  ">3/ Did your company use the CISCO device ?</legend>
                            <div class="c-editor c-columns-0">
                               <div class="c-choice-option">
-                                 <label for="c-30-75"><input type="radio" name="q3" value="1" id="c-30-75">   <span>Yes</span>
+                                 <label for="c-30-75"><input type="radio" name="q3" value="1" id="c-30-75" <?php if ($student['question3']==1) { echo "checked='checked'";}?>>   <span>Yes</span>
                                  </label>
                               </div>
                               <div class="c-choice-option">
-                                 <label for="c-30-76"><input type="radio" name="q3" value="0" id="c-30-76">   <span>No</span>
+                                 <label for="c-30-76"><input type="radio" name="q3" value="0" id="c-30-76" <?php if ($student['question3']==0) { echo "checked='checked'";}?>>   <span>No</span>
                                  </label>
                               </div>
                            </div>
@@ -836,7 +830,7 @@
                            </div>
                         </span>
                         <div class="c-rating-scale c-field c-col-1 c-sml-col-1 c-span-24 c-sml-span-12  c-required">
-                           <legend class="c-label ">Where would you rank your PN intern amongst your other interns/junior staff ?</legend>
+                           <legend class="c-label ">4/ Where would you rank your PN intern amongst your other interns/junior staff ?</legend>
                            <div class="c-rating-scale-questions">
                               <table>
                                  <thead>
@@ -851,25 +845,25 @@
                                  </thead>
                                  <tbody class="">
                                     <tr class="">
-                                       <th class="c-choice-question" scope="row">Respect of working hours</th>
+                                       <th class="c-choice-question" scope="row">4/ Respect of working hours</th>
                                        <td class="c-choice-option">
-                                          <label for="c-32-68"><input type="radio" name="group67" id="c-32-68"><span><span class="c-offscreen">Cannot judge (X)</span></span>
+                                          <label for="c-32-68"><input type="radio" name="group67" value="1" id="c-32-68" <?php if ($student['question4']==1) { echo "checked='checked'";}?>><span><span class="c-offscreen">Cannot judge (X)</span></span>
                                           </label>
                                        </td>
                                        <td class="c-choice-option">
-                                          <label for="c-32-69"><input type="radio" name="group67" id="c-32-69"><span><span class="c-offscreen">Below average (-)</span></span>
+                                          <label for="c-32-69"><input type="radio" name="group67" value="2" id="c-32-69" <?php if ($student['question4']==2) { echo "checked='checked'";}?>><span><span class="c-offscreen">Below average (-)</span></span>
                                           </label>
                                        </td>
                                        <td class="c-choice-option">
-                                          <label for="c-32-70"><input type="radio" name="group67" id="c-32-70"><span><span class="c-offscreen">Around average (=)</span></span>
+                                          <label for="c-32-70"><input type="radio" name="group67" value="3" id="c-32-70" <?php if ($student['question4']==3) { echo "checked='checked'";}?>><span><span class="c-offscreen">Around average (=)</span></span>
                                           </label>
                                        </td>
                                        <td class="c-choice-option">
-                                          <label for="c-32-71"><input type="radio" name="group67" id="c-32-71"><span><span class="c-offscreen">Above average (+)</span></span>
+                                          <label for="c-32-71"><input type="radio" name="group67" value="4" id="c-32-71" <?php if ($student['question4']==4) { echo "checked='checked'";}?>><span><span class="c-offscreen">Above average (+)</span></span>
                                           </label>
                                        </td>
                                        <td class="c-choice-option">
-                                          <label for="c-32-72"><input type="radio" name="group67" id="c-32-72"><span><span class="c-offscreen">One of the best (++)</span></span>
+                                          <label for="c-32-72"><input type="radio" name="group67" value="5" id="c-32-72" <?php if ($student['question4']==5) { echo "checked='checked'";}?>><span><span class="c-offscreen">One of the best (++)</span></span>
                                           </label>
                                        </td>
                                     </tr>
@@ -881,25 +875,25 @@
                                  </tbody>
                                  <tbody class="">
                                     <tr class="">
-                                       <th class="c-choice-question" scope="row">Information management skills (synthesis, attention to details, broad picture)</th>
+                                       <th class="c-choice-question" scope="row">5/ Information management skills (synthesis, attention to details, broad picture)</th>
                                        <td class="c-choice-option">
-                                          <label for="c-33-62"><input type="radio" name="group61" id="c-33-62"><span><span class="c-offscreen">Cannot judge (X)</span></span>
+                                          <label for="c-33-62"><input type="radio" name="group61" value="1" id="c-33-62" <?php if ($student['question5']==1) { echo "checked='checked'";}?>><span><span class="c-offscreen">Cannot judge (X)</span></span>
                                           </label>
                                        </td>
                                        <td class="c-choice-option">
-                                          <label for="c-33-63"><input type="radio" name="group61" id="c-33-63"><span><span class="c-offscreen">Below average (-)</span></span>
+                                          <label for="c-33-63"><input type="radio" name="group61" value="2" id="c-33-63" <?php if ($student['question5']==2) { echo "checked='checked'";}?>><span><span class="c-offscreen">Below average (-)</span></span>
                                           </label>
                                        </td>
                                        <td class="c-choice-option">
-                                          <label for="c-33-64"><input type="radio" name="group61" id="c-33-64"><span><span class="c-offscreen">Around average (=)</span></span>
+                                          <label for="c-33-64"><input type="radio" name="group61" value="3" id="c-33-64" <?php if ($student['question5']==3) { echo "checked='checked'";}?>><span><span class="c-offscreen">Around average (=)</span></span>
                                           </label>
                                        </td>
                                        <td class="c-choice-option">
-                                          <label for="c-33-65"><input type="radio" name="group61" id="c-33-65"><span><span class="c-offscreen">Above average (+)</span></span>
+                                          <label for="c-33-65"><input type="radio" name="group61" value="4" id="c-33-65" <?php if ($student['question5']==4) { echo "checked='checked'";}?>><span><span class="c-offscreen">Above average (+)</span></span>
                                           </label>
                                        </td>
                                        <td class="c-choice-option">
-                                          <label for="c-33-66"><input type="radio" name="group61" id="c-33-66"><span><span class="c-offscreen">One of the best (++)</span></span>
+                                          <label for="c-33-66"><input type="radio" name="group61" value="5" id="c-33-66" <?php if ($student['question5']==5) { echo "checked='checked'";}?>><span><span class="c-offscreen">One of the best (++)</span></span>
                                           </label>
                                        </td>
                                     </tr>
@@ -911,25 +905,25 @@
                                  </tbody>
                                  <tbody class="">
                                     <tr class="">
-                                       <th class="c-choice-question" scope="row">Communication</th>
+                                       <th class="c-choice-question" scope="row">6/ Communication</th>
                                        <td class="c-choice-option">
-                                          <label for="c-34-56"><input type="radio" name="group55" id="c-34-56"><span><span class="c-offscreen">Cannot judge (X)</span></span>
+                                          <label for="c-34-56"><input type="radio" name="group55" value="1" id="c-34-56" <?php if ($student['question6']==1) { echo "checked='checked'";}?>><span><span class="c-offscreen">Cannot judge (X)</span></span>
                                           </label>
                                        </td>
                                        <td class="c-choice-option">
-                                          <label for="c-34-57"><input type="radio" name="group55" id="c-34-57"><span><span class="c-offscreen">Below average (-)</span></span>
+                                          <label for="c-34-57"><input type="radio" name="group55" value="2" id="c-34-57" <?php if ($student['question6']==2) { echo "checked='checked'";}?>><span><span class="c-offscreen">Below average (-)</span></span>
                                           </label>
                                        </td>
                                        <td class="c-choice-option">
-                                          <label for="c-34-58"><input type="radio" name="group55" id="c-34-58"><span><span class="c-offscreen">Around average (=)</span></span>
+                                          <label for="c-34-58"><input type="radio" name="group55" value="3" id="c-34-58" <?php if ($student['question6']==3) { echo "checked='checked'";}?>><span><span class="c-offscreen">Around average (=)</span></span>
                                           </label>
                                        </td>
                                        <td class="c-choice-option">
-                                          <label for="c-34-59"><input type="radio" name="group55" id="c-34-59"><span><span class="c-offscreen">Above average (+)</span></span>
+                                          <label for="c-34-59"><input type="radio" name="group55" value="4" id="c-34-59" <?php if ($student['question6']==4) { echo "checked='checked'";}?>><span><span class="c-offscreen">Above average (+)</span></span>
                                           </label>
                                        </td>
                                        <td class="c-choice-option">
-                                          <label for="c-34-60"><input type="radio" name="group55" id="c-34-60"><span><span class="c-offscreen">One of the best (++)</span></span>
+                                          <label for="c-34-60"><input type="radio" name="group55" value="5" id="c-34-60" <?php if ($student['question6']==5) { echo "checked='checked'";}?>><span><span class="c-offscreen">One of the best (++)</span></span>
                                           </label>
                                        </td>
                                     </tr>
@@ -941,25 +935,25 @@
                                  </tbody>
                                  <tbody class="">
                                     <tr class="">
-                                       <th class="c-choice-question" scope="row">Interest in learning, curiosity</th>
+                                       <th class="c-choice-question" scope="row">7/ Interest in learning, curiosity</th>
                                        <td class="c-choice-option">
-                                          <label for="c-35-50"><input type="radio" name="group49" id="c-35-50"><span><span class="c-offscreen">Cannot judge (X)</span></span>
+                                          <label for="c-35-50"><input type="radio" name="group49" value="1" id="c-35-50" <?php if ($student['question7']==1) { echo "checked='checked'";}?>><span><span class="c-offscreen">Cannot judge (X)</span></span>
                                           </label>
                                        </td>
                                        <td class="c-choice-option">
-                                          <label for="c-35-51"><input type="radio" name="group49" id="c-35-51"><span><span class="c-offscreen">Below average (-)</span></span>
+                                          <label for="c-35-51"><input type="radio" name="group49" value="2" id="c-35-51" <?php if ($student['question7']==2) { echo "checked='checked'";}?>><span><span class="c-offscreen">Below average (-)</span></span>
                                           </label>
                                        </td>
                                        <td class="c-choice-option">
-                                          <label for="c-35-52"><input type="radio" name="group49" id="c-35-52"><span><span class="c-offscreen">Around average (=)</span></span>
+                                          <label for="c-35-52"><input type="radio" name="group49" value="3" id="c-35-52" <?php if ($student['question7']==3) { echo "checked='checked'";}?>><span><span class="c-offscreen">Around average (=)</span></span>
                                           </label>
                                        </td>
                                        <td class="c-choice-option">
-                                          <label for="c-35-53"><input type="radio" name="group49" id="c-35-53"><span><span class="c-offscreen">Above average (+)</span></span>
+                                          <label for="c-35-53"><input type="radio" name="group49" value="4" id="c-35-53" <?php if ($student['question7']==4) { echo "checked='checked'";}?>><span><span class="c-offscreen">Above average (+)</span></span>
                                           </label>
                                        </td>
                                        <td class="c-choice-option">
-                                          <label for="c-35-54"><input type="radio" name="group49" id="c-35-54"><span><span class="c-offscreen">One of the best (++)</span></span>
+                                          <label for="c-35-54"><input type="radio" name="group49" value="5" id="c-35-54" <?php if ($student['question7']==5) { echo "checked='checked'";}?>><span><span class="c-offscreen">One of the best (++)</span></span>
                                           </label>
                                        </td>
                                     </tr>
@@ -971,25 +965,25 @@
                                  </tbody>
                                  <tbody class="">
                                     <tr class="">
-                                       <th class="c-choice-question" scope="row">Leadership, team-work</th>
+                                       <th class="c-choice-question" scope="row">8/ Leadership, team-work</th>
                                        <td class="c-choice-option">
-                                          <label for="c-36-44"><input type="radio" name="group43" id="c-36-44"><span><span class="c-offscreen">Cannot judge (X)</span></span>
+                                          <label for="c-36-44"><input type="radio" name="group43" value="1" id="c-36-44" <?php if ($student['question8']==1) { echo "checked='checked'";}?>><span><span class="c-offscreen">Cannot judge (X)</span></span>
                                           </label>
                                        </td>
                                        <td class="c-choice-option">
-                                          <label for="c-36-45"><input type="radio" name="group43" id="c-36-45"><span><span class="c-offscreen">Below average (-)</span></span>
+                                          <label for="c-36-45"><input type="radio" name="group43" value="2" id="c-36-45" <?php if ($student['question8']==2) { echo "checked='checked'";}?>><span><span class="c-offscreen">Below average (-)</span></span>
                                           </label>
                                        </td>
                                        <td class="c-choice-option">
-                                          <label for="c-36-46"><input type="radio" name="group43" id="c-36-46"><span><span class="c-offscreen">Around average (=)</span></span>
+                                          <label for="c-36-46"><input type="radio" name="group43" value="3" id="c-36-46" <?php if ($student['question8']==3) { echo "checked='checked'";}?>><span><span class="c-offscreen">Around average (=)</span></span>
                                           </label>
                                        </td>
                                        <td class="c-choice-option">
-                                          <label for="c-36-47"><input type="radio" name="group43" id="c-36-47"><span><span class="c-offscreen">Above average (+)</span></span>
+                                          <label for="c-36-47"><input type="radio" name="group43" value="4" id="c-36-47" <?php if ($student['question8']==4) { echo "checked='checked'";}?>><span><span class="c-offscreen">Above average (+)</span></span>
                                           </label>
                                        </td>
                                        <td class="c-choice-option">
-                                          <label for="c-36-48"><input type="radio" name="group43" id="c-36-48"><span><span class="c-offscreen">One of the best (++)</span></span>
+                                          <label for="c-36-48"><input type="radio" name="group43" value="5" id="c-36-48" <?php if ($student['question8']==5) { echo "checked='checked'";}?>><span><span class="c-offscreen">One of the best (++)</span></span>
                                           </label>
                                        </td>
                                     </tr>
@@ -1001,25 +995,25 @@
                                  </tbody>
                                  <tbody class="">
                                     <tr class="">
-                                       <th class="c-choice-question" scope="row">Critical thinking, problem solving, decision-making, logic, creativity</th>
+                                       <th class="c-choice-question" scope="row">9/ Critical thinking, problem solving, decision-making, logic, creativity</th>
                                        <td class="c-choice-option">
-                                          <label for="c-37-38"><input type="radio" name="group37" id="c-37-38"><span><span class="c-offscreen">Cannot judge (X)</span></span>
+                                          <label for="c-37-38"><input type="radio" name="group37" value="1" id="c-37-38" <?php if ($student['question9']==1) { echo "checked='checked'";}?>><span><span class="c-offscreen">Cannot judge (X)</span></span>
                                           </label>
                                        </td>
                                        <td class="c-choice-option">
-                                          <label for="c-37-39"><input type="radio" name="group37" id="c-37-39"><span><span class="c-offscreen">Below average (-)</span></span>
+                                          <label for="c-37-39"><input type="radio" name="group37" value="2" id="c-37-39" <?php if ($student['question9']==2) { echo "checked='checked'";}?>><span><span class="c-offscreen">Below average (-)</span></span>
                                           </label>
                                        </td>
                                        <td class="c-choice-option">
-                                          <label for="c-37-40"><input type="radio" name="group37" id="c-37-40"><span><span class="c-offscreen">Around average (=)</span></span>
+                                          <label for="c-37-40"><input type="radio" name="group37" value="3" id="c-37-40" <?php if ($student['question9']==3) { echo "checked='checked'";}?>><span><span class="c-offscreen">Around average (=)</span></span>
                                           </label>
                                        </td>
                                        <td class="c-choice-option">
-                                          <label for="c-37-41"><input type="radio" name="group37" id="c-37-41"><span><span class="c-offscreen">Above average (+)</span></span>
+                                          <label for="c-37-41"><input type="radio" name="group37" value="4" id="c-37-41" <?php if ($student['question9']==4) { echo "checked='checked'";}?>><span><span class="c-offscreen">Above average (+)</span></span>
                                           </label>
                                        </td>
                                        <td class="c-choice-option">
-                                          <label for="c-37-42"><input type="radio" name="group37" id="c-37-42"><span><span class="c-offscreen">One of the best (++)</span></span>
+                                          <label for="c-37-42"><input type="radio" name="group37" value="5" id="c-37-42" <?php if ($student['question9']==5) { echo "checked='checked'";}?>><span><span class="c-offscreen">One of the best (++)</span></span>
                                           </label>
                                        </td>
                                     </tr>
@@ -1031,25 +1025,25 @@
                                  </tbody>
                                  <tbody class="">
                                     <tr class="">
-                                       <th class="c-choice-question" scope="row">Good relationship with coworkers</th>
+                                       <th class="c-choice-question" scope="row">10/ Good relationship with coworkers</th>
                                        <td class="c-choice-option">
-                                          <label for="c-38-32"><input type="radio" name="group31" id="c-38-32"><span><span class="c-offscreen">Cannot judge (X)</span></span>
+                                          <label for="c-38-32"><input type="radio" name="group31" value="1" id="c-38-32" <?php if ($student['question10']==1) { echo "checked='checked'";}?>><span><span class="c-offscreen">Cannot judge (X)</span></span>
                                           </label>
                                        </td>
                                        <td class="c-choice-option">
-                                          <label for="c-38-33"><input type="radio" name="group31" id="c-38-33"><span><span class="c-offscreen">Below average (-)</span></span>
+                                          <label for="c-38-33"><input type="radio" name="group31" value="2" id="c-38-33" <?php if ($student['question10']==2) { echo "checked='checked'";}?>><span><span class="c-offscreen">Below average (-)</span></span>
                                           </label>
                                        </td>
                                        <td class="c-choice-option">
-                                          <label for="c-38-34"><input type="radio" name="group31" id="c-38-34"><span><span class="c-offscreen">Around average (=)</span></span>
+                                          <label for="c-38-34"><input type="radio" name="group31" value="3" id="c-38-34" <?php if ($student['question10']==3) { echo "checked='checked'";}?>><span><span class="c-offscreen">Around average (=)</span></span>
                                           </label>
                                        </td>
                                        <td class="c-choice-option">
-                                          <label for="c-38-35"><input type="radio" name="group31" id="c-38-35"><span><span class="c-offscreen">Above average (+)</span></span>
+                                          <label for="c-38-35"><input type="radio" name="group31" value="4" id="c-38-35" <?php if ($student['question10']==4) { echo "checked='checked'";}?>><span><span class="c-offscreen">Above average (+)</span></span>
                                           </label>
                                        </td>
                                        <td class="c-choice-option">
-                                          <label for="c-38-36"><input type="radio" name="group31" id="c-38-36"><span><span class="c-offscreen">One of the best (++)</span></span>
+                                          <label for="c-38-36"><input type="radio" name="group31" value="5" id="c-38-36" <?php if ($student['question10']==5) { echo "checked='checked'";}?>><span><span class="c-offscreen">One of the best (++)</span></span>
                                           </label>
                                        </td>
                                     </tr>
@@ -1061,25 +1055,25 @@
                                  </tbody>
                                  <tbody class="">
                                     <tr class="">
-                                       <th class="c-choice-question" scope="row">Self-management (time, stress, priority, autonomy etc.)</th>
+                                       <th class="c-choice-question" scope="row">11/ Self-management (time, stress, priority, autonomy etc.)</th>
                                        <td class="c-choice-option">
-                                          <label for="c-39-26"><input type="radio" name="group25" id="c-39-26"><span><span class="c-offscreen">Cannot judge (X)</span></span>
+                                          <label for="c-39-26"><input type="radio" name="group25" value="1" id="c-39-26" <?php if ($student['question11']==1) { echo "checked='checked'";}?>><span><span class="c-offscreen">Cannot judge (X)</span></span>
                                           </label>
                                        </td>
                                        <td class="c-choice-option">
-                                          <label for="c-39-27"><input type="radio" name="group25" id="c-39-27"><span><span class="c-offscreen">Below average (-)</span></span>
+                                          <label for="c-39-27"><input type="radio" name="group25" value="2" id="c-39-27" <?php if ($student['question11']==2) { echo "checked='checked'";}?>><span><span class="c-offscreen">Below average (-)</span></span>
                                           </label>
                                        </td>
                                        <td class="c-choice-option">
-                                          <label for="c-39-28"><input type="radio" name="group25" id="c-39-28"><span><span class="c-offscreen">Around average (=)</span></span>
+                                          <label for="c-39-28"><input type="radio" name="group25" value="3" id="c-39-28" <?php if ($student['question11']==3) { echo "checked='checked'";}?>><span><span class="c-offscreen">Around average (=)</span></span>
                                           </label>
                                        </td>
                                        <td class="c-choice-option">
-                                          <label for="c-39-29"><input type="radio" name="group25" id="c-39-29"><span><span class="c-offscreen">Above average (+)</span></span>
+                                          <label for="c-39-29"><input type="radio" name="group25" value="4" id="c-39-29" <?php if ($student['question11']==4) { echo "checked='checked'";}?>><span><span class="c-offscreen">Above average (+)</span></span>
                                           </label>
                                        </td>
                                        <td class="c-choice-option">
-                                          <label for="c-39-30"><input type="radio" name="group25" id="c-39-30"><span><span class="c-offscreen">One of the best (++)</span></span>
+                                          <label for="c-39-30"><input type="radio" name="group25" value="5" id="c-39-30" <?php if ($student['question11']==5) { echo "checked='checked'";}?>><span><span class="c-offscreen">One of the best (++)</span></span>
                                           </label>
                                        </td>
                                     </tr>
@@ -1094,8 +1088,8 @@
                            <div class="c-validation"></div>
                         </div>
                         <div class="c-text-multiplelines c-field c-col-1 c-sml-col-1 c-span-24 c-sml-span-12">
-                           <div class="c-label  "><label for="c-41-23">Feel free to add any comments regarding the intern's performance</label></div>
-                           <div class="c-editor"><textarea id="c-41-23" placeholder="" type="text" height="" ></textarea></div>
+                           <div class="c-label  "><label for="c-41-23">12/ Feel free to add any comments regarding the intern's performance</label></div>
+                           <div class="c-editor"><textarea id="c-41-23" type="text" height=""><?php echo $student['question12'];?></textarea></div>
                            <div class="c-validation"></div>
                         </div>
                         <div class="c-rating-scale c-field c-col-1 c-sml-col-1 c-span-24 c-sml-span-12  c-required">
@@ -1114,25 +1108,25 @@
                                  </thead>
                                  <tbody class="">
                                     <tr class="">
-                                       <th class="c-choice-question" scope="row">Writing documents and mails</th>
+                                       <th class="c-choice-question" scope="row">13/ Writing documents and mails</th>
                                        <td class="c-choice-option">
-                                          <label for="c-42-18"><input type="radio" name="group17" id="c-42-18"><span><span class="c-offscreen">1 (very insufficient)</span></span>
+                                          <label for="c-42-18"><input type="radio" name="group17" value="1" id="c-42-18" <?php if ($student['question13']==1) { echo "checked='checked'";}?>><span><span class="c-offscreen">1 (very insufficient)</span></span>
                                           </label>
                                        </td>
                                        <td class="c-choice-option">
-                                          <label for="c-42-19"><input type="radio" name="group17" id="c-42-19"><span><span class="c-offscreen">2</span></span>
+                                          <label for="c-42-19"><input type="radio" name="group17" value="2" id="c-42-19" <?php if ($student['question13']==2) { echo "checked='checked'";}?>><span><span class="c-offscreen">2</span></span>
                                           </label>
                                        </td>
                                        <td class="c-choice-option">
-                                          <label for="c-42-20"><input type="radio" name="group17" id="c-42-20"><span><span class="c-offscreen">3</span></span>
+                                          <label for="c-42-20"><input type="radio" name="group17" value="3" id="c-42-20" <?php if ($student['question13']==3) { echo "checked='checked'";}?>><span><span class="c-offscreen">3</span></span>
                                           </label>
                                        </td>
                                        <td class="c-choice-option">
-                                          <label for="c-42-21"><input type="radio" name="group17" id="c-42-21"><span><span class="c-offscreen">4</span></span>
+                                          <label for="c-42-21"><input type="radio" name="group17" value="4" id="c-42-21" <?php if ($student['question13']==4) { echo "checked='checked'";}?>><span><span class="c-offscreen">4</span></span>
                                           </label>
                                        </td>
                                        <td class="c-choice-option">
-                                          <label for="c-42-22"><input type="radio" name="group17" id="c-42-22"><span><span class="c-offscreen">5 (very good)</span></span>
+                                          <label for="c-42-22"><input type="radio" name="group17" value="5" id="c-42-22" <?php if ($student['question13']==5) { echo "checked='checked'";}?>><span><span class="c-offscreen">5 (very good)</span></span>
                                           </label>
                                        </td>
                                     </tr>
@@ -1144,25 +1138,25 @@
                                  </tbody>
                                  <tbody class="">
                                     <tr class="">
-                                       <th class="c-choice-question" scope="row">Speaking in meetings</th>
+                                       <th class="c-choice-question" scope="row">14/ Speaking in meetings</th>
                                        <td class="c-choice-option">
-                                          <label for="c-43-12"><input type="radio" name="group11" id="c-43-12"><span><span class="c-offscreen">1 (very insufficient)</span></span>
+                                          <label for="c-43-12"><input type="radio" name="group11" value="1" id="c-43-12" <?php if ($student['question14']==1) { echo "checked='checked'";}?>><span><span class="c-offscreen">1 (very insufficient)</span></span>
                                           </label>
                                        </td>
                                        <td class="c-choice-option">
-                                          <label for="c-43-13"><input type="radio" name="group11" id="c-43-13"><span><span class="c-offscreen">2</span></span>
+                                          <label for="c-43-13"><input type="radio" name="group11" value="2" id="c-43-13" <?php if ($student['question14']==2) { echo "checked='checked'";}?>><span><span class="c-offscreen">2</span></span>
                                           </label>
                                        </td>
                                        <td class="c-choice-option">
-                                          <label for="c-43-14"><input type="radio" name="group11" id="c-43-14"><span><span class="c-offscreen">3</span></span>
+                                          <label for="c-43-14"><input type="radio" name="group11" value="3" id="c-43-14" <?php if ($student['question14']==3) { echo "checked='checked'";}?>><span><span class="c-offscreen">3</span></span>
                                           </label>
                                        </td>
                                        <td class="c-choice-option">
-                                          <label for="c-43-15"><input type="radio" name="group11" id="c-43-15"><span><span class="c-offscreen">4</span></span>
+                                          <label for="c-43-15"><input type="radio" name="group11" value="4" id="c-43-15" <?php if ($student['question14']==4) { echo "checked='checked'";}?>><span><span class="c-offscreen">4</span></span>
                                           </label>
                                        </td>
                                        <td class="c-choice-option">
-                                          <label for="c-43-16"><input type="radio" name="group11" id="c-43-16"><span><span class="c-offscreen">5 (very good)</span></span>
+                                          <label for="c-43-16"><input type="radio" name="group11" value="5" id="c-43-16" <?php if ($student['question14']==5) { echo "checked='checked'";}?>><span><span class="c-offscreen">5 (very good)</span></span>
                                           </label>
                                        </td>
                                     </tr>
@@ -1174,25 +1168,25 @@
                                  </tbody>
                                  <tbody class="">
                                     <tr class="">
-                                       <th class="c-choice-question" scope="row">Researching information in English, reading documents</th>
+                                       <th class="c-choice-question" scope="row">15/ Researching information in English, reading documents</th>
                                        <td class="c-choice-option">
-                                          <label for="c-44-6"><input type="radio" name="group5" id="c-44-6"><span><span class="c-offscreen">1 (very insufficient)</span></span>
+                                          <label for="c-44-6"><input type="radio" name="group5" value="1" id="c-44-6" <?php if ($student['question15']==1) { echo "checked='checked'";}?>><span><span class="c-offscreen">1 (very insufficient)</span></span>
                                           </label>
                                        </td>
                                        <td class="c-choice-option">
-                                          <label for="c-44-7"><input type="radio" name="group5" id="c-44-7"><span><span class="c-offscreen">2</span></span>
+                                          <label for="c-44-7"><input type="radio" name="group5" value="2" id="c-44-7" <?php if ($student['question15']==2) { echo "checked='checked'";}?>><span><span class="c-offscreen">2</span></span>
                                           </label>
                                        </td>
                                        <td class="c-choice-option">
-                                          <label for="c-44-8"><input type="radio" name="group5" id="c-44-8"><span><span class="c-offscreen">3</span></span>
+                                          <label for="c-44-8"><input type="radio" name="group5" value="3" id="c-44-8" <?php if ($student['question15']==3) { echo "checked='checked'";}?>><span><span class="c-offscreen">3</span></span>
                                           </label>
                                        </td>
                                        <td class="c-choice-option">
-                                          <label for="c-44-9"><input type="radio" name="group5" id="c-44-9"><span><span class="c-offscreen">4</span></span>
+                                          <label for="c-44-9"><input type="radio" name="group5" value="4" id="c-44-9" <?php if ($student['question15']==4) { echo "checked='checked'";}?>><span><span class="c-offscreen">4</span></span>
                                           </label>
                                        </td>
                                        <td class="c-choice-option">
-                                          <label for="c-44-10"><input type="radio" name="group5" id="c-44-10"><span><span class="c-offscreen">5 (very good)</span></span>
+                                          <label for="c-44-10"><input type="radio" name="group5" value="5" id="c-44-10" <?php if ($student['question15']==5) { echo "checked='checked'";}?>><span><span class="c-offscreen">5 (very good)</span></span>
                                           </label>
                                        </td>
                                     </tr>
@@ -1207,47 +1201,28 @@
                            <div class="c-validation"></div>
                         </div>
                         <div class="c-text-multiplelines c-field c-col-1 c-sml-col-1 c-span-24 c-sml-span-12">
-                           <div class="c-label  "><label for="c-46-3">Feel free to add any comments regarding the intern's performance</label></div>
-                           <div class="c-editor"><textarea id="c-46-3" placeholder="" type="text" height="" ></textarea></div>
+                           <div class="c-label  "><label for="c-46-3">16/ Feel free to add any comments regarding the intern's performance</label></div>
+                           <div class="c-editor"><textarea id="c-46-3" placeholder="" type="text" height="" ><?php echo $student['question16']; ?></textarea></div>
                            <div class="c-validation"></div>
                         </div>
                         <div class="c-text-multiplelines c-field c-col-1 c-sml-col-1 c-span-24 c-sml-span-12">
-                           <div class="c-label  "><label for="c-47-2">What skills would you have wished your PN intern had ?</label></div>
-                           <div class="c-editor"><textarea id="c-47-2" placeholder="" type="text" height="" ></textarea></div>
+                           <div class="c-label  "><label for="c-47-2">17/ What skills would you have wished your PN intern had ?</label></div>
+                           <div class="c-editor"><textarea id="c-47-2" placeholder="" type="text" height="" ><?php echo $student['question17']; ?></textarea></div>
                            <div class="c-validation"></div>
                         </div>
                      </div>
-                  </div><!-- 
-                  <div id="c-recaptcha-div"></div>
-                  <div class="c-forms-error">
-                     <div class="c-validation"></div>
-                  </div> -->
+                  </div>
                   <div class="c-button-section">
-                     <div class="c-action">
-                        <button type="submit" class="c-button" id="c-submit-button">Save</button>
-                        <!-- <button type="button" id="c-submit-button" class="c-button btn btn-primary" >Submit</button> -->
+                     <div class="c-ac tion">
+                        <button type="submit" class="c-button" id="c-submit-button" style="float: right;">Submit</button>
+                        <button type="submit" id="c-submit-button" class="c-button" style="background-color: green; float: left;">Save</button>
                      </div>
                   </div>
                </div>
-               <!-- <div class="c-forms-confirmation"> -->
-                 <!--  <div class="c-forms-heading">
-                     <div class="c-forms-logo" style="display:none;"></div>
-                     <div class="c-forms-form-title">
-                        <h2>Companies Form PNC</h2>
-                     </div>
-                  </div>
- -->                  <!-- <div class="c-forms-confirmation-message c-html" sys:attach="dataview" dataview:data="{binding entry, source={{ Cognito.Forms.model }} }"><span>Thank you for filling out the form. Your response has been recorded.</span></div> -->
-               <!-- </div> -->
-               <!-- <div class="c-footer-terms" sys:attach="dataview" dataview:data="{binding entry, source={{ Cognito.Forms.model }} }">
-                  <ul class="terms">
-                     <li><a href="https://www.cognitoforms.com/reportabuse?form=https%3A%2F%2Fwww.cognitoforms.com%2FPasserellesNum%25C3%25A9riques%2FCompaniesFormPNC" target="_blank">Report Abuse</a></li>
-                     <li><a href="https://www.cognitoforms.com/terms" target="_blank">Terms of Service</a></li>
-                  </ul>
-               </div> -->
             </div>
          </form>
+         <?php endforeach ?>
       </div>
-      <?php echo validation_errors() ?>
       <script>
           $(function(){
             $('.form-control').keypress(function(event) {

@@ -1,8 +1,4 @@
 
-      <!-- <link type="text/css" rel="stylesheet" href="<?php echo base_url(); ?>/assets/CognitorFormFiles/1793887487"> -->
-      <!-- <link rel="shortcut icon" href="https://www.cognitoforms.com/Content/images/cogicon.ico"> -->
-      <!-- <link rel="apple-touch-icon" href="https://www.cognitoforms.com/Content/images/apple-icon.png"> -->
-      <!-- <link rel="alternate" type="application/json+oembed" href="https://services.cognitoforms.com/admin/oembed?url=https%3a%2f%2fwww.cognitoforms.com%2fPasserellesNum%25C3%25A9riques%2fCompaniesFormPNC" title="Companies Form PNC"> -->
       <link rel="stylesheet" href="<?php echo base_url(); ?>/assets/CognitorFormFiles/style1.css">
        <div class="container">
          <div class="row">

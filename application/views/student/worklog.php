@@ -7,7 +7,7 @@
 	<div id="accordion">
 		<div class="row">
 			<div class="col-md-6 text-left">
-				<div class="dropdownbtn">
+				<div class="dropdownbtn text-white">
 					<button class="btn dropbtn">June</button>
 					<div class="dropdown-content text-left">
 						<a href="<?php echo base_url();?>cStudent/weekWorklog">Week 1</a>

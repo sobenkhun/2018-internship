@@ -582,6 +582,7 @@ class Users_model extends CI_Model {
             if ($hash == $row->password) {
             // var_dump($hash."".$row->password);die();
                 // Password does match stored password.
+                // var_dump($row);die();
                 $this->loadProfile($row);
                 // var_dump($row->userrole_id);die();
                 return $row->userrole_id;

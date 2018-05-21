@@ -8,6 +8,7 @@ class Welcome_IF extends CI_Controller {
 	{
 			parent::__construct();
 			log_message('debug', 'URI=' . $this->uri->uri_string()); 
+			$this->load->helper(array('form','url'));
 	}
 	// view login
 	public function index()
@@ -16,6 +17,25 @@ class Welcome_IF extends CI_Controller {
 	}
 	/*==============================*/
 
+	public function loadDoUpload()
+	{
+		$this->load->view('image.php');
+
+	}
+	public function do_upload()
+	{
+		  		$config['upload_path']          = './assets/images/examples/';
+                $config['allowed_types']        = 'gif|jpg|png';
+                $config['max_size']             = 1024;
+                $config['max_width']            = 1024;
+                $config['max_height']           = 768;
+                $this->load->library('Upload',$config);
+                if (!$this->upload->do_upload('userfile')) {
+                	$error = array('error'=>$this->upload->display_errors());
+					$this->load->view('image.php',$error);
+                	
+                }
+	}
 	public function home()
 	{
 
@@ -33,7 +53,6 @@ class Welcome_IF extends CI_Controller {
 		$this->load->view('templates/footer.php');
 
 	}
-
 	// Company Function 
 	public function company()
 	{
@@ -325,6 +344,9 @@ class Welcome_IF extends CI_Controller {
 			$password = $this->input->post("password");
 			$company = $this->input->post("company");
 			$student = $this->input->post("student");
+ }
+
+
 			$this->load->Model('users_model');
 			$studntId = $this->users_model->getStuId($student);
 			$position = $this->input->post("position");
@@ -341,7 +363,7 @@ class Welcome_IF extends CI_Controller {
 			$this->load->view('pages/supervisor/index.php');
 			$this->load->view('templates/footer.php');				
 		}	
-	}
+	
 	public function deleteSupervisor()
 	{
 		$suId = $_GET['id'];

@@ -36,14 +36,14 @@
 			$this->load->view('student/calendarStu.php',$data);
 			// $this->load->view('templates/footer.php');
 		}
-		// public function weekWorklog(){
-		// 	$data['activeLink'] = 'work-log';
-		// 	$this->load->view('templates/header.php',$data);
-		// 	$this->load->view('menu/studentMenu.php',$data);
-		// 	$this->load->view('student/worklog.php',$data);
-		// 	$this->load->view('student/worklogForm.php');
-		// 	$this->load->view('templates/footer.php');
+		public function weekWorklog(){
+			$data['activeLink'] = 'work-log';
+			$this->load->view('templates/header.php',$data);
+			$this->load->view('menu/studentMenu.php',$data);
+			$this->load->view('student/worklog.php',$data);
+			$this->load->view('student/worklogForm.php');
+			$this->load->view('templates/footer.php');
 			
-		// }
+		}
 	}
  ?>

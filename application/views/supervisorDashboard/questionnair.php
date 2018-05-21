@@ -11,7 +11,9 @@
                   <button class="btn btn-primary"><i class="mdi mdi-chevron-left"></i>Back</button>
                </a>
             </div>
-            <div class="col-md-4"></div>
+            <div class="col-md-4">
+            
+            </div>
          </div>
        </div>  
 
@@ -21,71 +23,62 @@
          <!-- <link href="<?php echo base_url(); ?>/assets/CognitorFormFiles/css" rel="stylesheet" type="text/css"> -->
          <link rel="stylesheet" href="<?php echo base_url(); ?>/assets/CognitorFormFiles/style3.css">
          
-         <form action="<?php echo base_url();?>supervisor/questionnaire" method="post">
+         <form action="<?php echo base_url();?>supervisor/addQuestionnaire" method="post">
             <div class="c-forms-form" tabindex="0">
-               <!-- <div class="c-editor" style="display:none;">
-                  <input type="text" class="c-forms-form-style">
-               </div> -->
                <div class="c-forms-form-body">
                   <div class="c-forms-heading">
-                     <!-- <div class="c-forms-logo" style="display:none;"></div> -->
                      <div class="c-forms-form-title">
                         <h2>Companies Form PNC</h2>
                      </div>
                   </div>
-                  <div class="c-forms-template" sys:attach="dataview" dataview:data="{binding entry, source={{ Cognito.Forms.model }} }">
+                  <div class="c-forms-template" sys:attach="dataview" >
                      <div class="c-forms-form-main c-span-24 c-sml-span-12">
+                        <?php foreach ($student as $student):?>
                         <div class="c-text-singleline c-field c-col-1 c-sml-col-1 c-span-12 c-sml-span-12  c-required">
                            <div class="c-label  ">
                               <label for="c-0-205">Name of your company </label></div>
                            <div class="c-editor">
-                              <input type="text"  id="c-0-205" name="companyName" placeholder="Your Company Name" required=""></div>
-                           <div class="c-validation">Name of your company  is required.</div>
-                        </div>
-                        <!-- <div class="c-text-singleline c-field c-col-1 c-sml-col-1 c-span-12 c-sml-span-12  c-required">
-                           <div class="c-label  ">
-                              <label for="c-0-205">Choose a student </label></div>
-                           <div class="c-editor">
-                              <select>
-                                <option value="Student">Student</option>
-                                <option value="Bunthean MOMV">Bunthean MOMV</option>
-                                <option value="Prem MANN">Prem MANN</option>
-                                <option value="Soben KHUN">Soben KHUN</option>
-                                <option value="Toch BAN">Toch BAN</option>
-                              </select>
+                              <input type="text"  id="c-0-205" value="<?php echo $student['name'] ?>" name="companyName" placeholder="Your Company Name" >
                            </div>
                            <div class="c-validation">Name of your company  is required.</div>
-                        </div> -->
+                        </div>
+                        
                         <div class="c-name c-field c-col-1 c-sml-col-1 c-span-24 c-sml-span-12  c-required">
                            <div class="c-label ">
                               <label>Name of the intern </label>
                            </div>
                            <div>
+                              
                               <div class="c-offscreen">
                                  <label for="c-1-204">First</label>
                               </div>
                               <div class="c-editor c-span-1" style="width: 50%; float: left;">
-                                 <input type="text" id="c-1-204" placeholder="First Name" required="">
+                                 <input type="text" id="c-1-204" value="<?php echo $student['firstname'] ?>" placeholder="First Name" >
                               </div>
                               <div class="c-offscreen">
                                  <label for="c-2-204">Last</label>
                               </div>
                               <div class="c-editor c-span-1" style="width: 50%; float: left;">
-                                 <input type="text" id="c-2-204" placeholder="Last Name" required="">
+                                 <input type="text" id="c-2-204" value="<?php echo $student['lastname'] ?>" placeholder="Last Name" >
                               </div>
+                           
                            </div>
                            <div class="c-validation">First and Last are required.</div>
                         </div>
+                     <?php endforeach ?>
                         <div class="c-choice-radiobuttons c-field c-col-1 c-sml-col-1 c-span-24 c-sml-span-12  c-required">
                            <legend class="c-label  ">Sex</legend>
                            <div class="c-editor c-columns-0">
                               <div class="c-choice-option">
                                  <label for="c-4-202">
-                                    <input type="radio" name="male" id="c-4-202"><span>Male</span></label>
+                                    <input type="radio" name="sex" value="male" id="c-4-202"><span>Male</span>
+                                    <!-- <?php echo form_error('sex'); ?> -->
+                                 </label>
                               </div>
                               <div class="c-choice-option">
                                  <label for="c-4-203">
-                                    <input type="radio" name="female" id="c-4-203"><span>Female</span>
+                                    <input type="radio" name="sex" value="female" id="c-4-203"><span>Female</span>
+                                    <!-- <?php echo form_error('sex'); ?> -->
                                  </label>
                               </div>
                            </div>
@@ -112,56 +105,58 @@
                                  </thead>
                                  <tbody class="">
                                     <tr class="">
-                                       <th class="c-choice-question" scope="row">How likely is that you would recommend a PN intern ?</th>
+                                       <th class="c-choice-question" scope="row">1/ How likely is that you would recommend a PN intern ?</th>
                                        <td class="c-choice-option">
+                                       
                                           <label for="c-5-191">
-                                             <input type="radio" name="notLikeAtAll" id="c-5-191">
+                                             <input type="radio" name="q1" value="1" id="c-5-191">
                                              <span><span class="c-offscreen">1 (Not likely at all)</span></span>
                                           </label>
                                        </td>
                                        <td class="c-choice-option">
                                           <label for="c-5-192">
-                                             <input type="radio" name="group190" id="c-5-192">
+                                             <input type="radio" name="q1" value="2"  id="c-5-192">
                                              <span><span class="c-offscreen">2</span></span>
                                           </label></td>
                                        <td class="c-choice-option">
                                           <label for="c-5-193">
-                                             <input type="radio" name="group190" id="c-5-193">
+                                             <input type="radio" name="q1" value="3" id="c-5-193">
                                              <span><span class="c-offscreen">3</span></span>
                                           </label>
                                        </td>
                                        <td class="c-choice-option">
                                           <label for="c-5-194">
-                                             <input type="radio" name="group190" id="c-5-194">
+                                             <input type="radio" name="q1" value="4" id="c-5-194">
                                              <span><span class="c-offscreen">4</span></span></label></td>
                                        <td class="c-choice-option">
-                                          <label for="c-5-195">
-                                             <input type="radio" name="group190" id="c-5-195">
+                                          <label for="c-5-195"> 
+                                             <input type="radio" name="q1" value="5" id="c-5-195">
                                              <span><span class="c-offscreen">5</span></span>
                                           </label></td>
                                        <td class="c-choice-option">
                                           <label for="c-5-196">
-                                             <input type="radio" name="group190" id="c-5-196">
+                                             <input type="radio" name="q1" value="6" id="c-5-196">
                                              <span><span class="c-offscreen">6</span></span>
                                           </label></td>
                                        <td class="c-choice-option">
                                           <label for="c-5-197">
-                                             <input type="radio" name="group190" id="c-5-197">
+                                             <input type="radio" name="q1" value="7" id="c-5-197">
                                              <span><span class="c-offscreen">7</span></span>
                                           </label></td>
                                        <td class="c-choice-option">
                                           <label for="c-5-198">
-                                             <input type="radio" name="group190" id="c-5-198">
+                                             <input type="radio" name="q1" value="8" id="c-5-198">
                                              <span><span class="c-offscreen">8</span></span>
                                           </label></td>
                                        <td class="c-choice-option">
                                           <label for="c-5-199">
-                                             <input type="radio" name="group190" id="c-5-199">
+                                          
+<input type="radio" name="q1" value="9" id="c-5-199"/>
                                              <span><span class="c-offscreen">9</span></span>
                                           </label></td>
                                        <td class="c-choice-option">
                                           <label for="c-5-200">
-                                             <input type="radio" name="group190" id="c-5-200">
+<input type="radio" name="q1" value="10" id="c-5-200"/>
                                              <span><span class="c-offscreen">10 (Extremely likely)</span></span></label></td>
                                     </tr>
                                     <tr>
@@ -175,22 +170,22 @@
                            <div class="c-validation"></div>
                         </div>
                         <div class="c-choice-radiobuttons c-field c-col-1 c-sml-col-1 c-span-24 c-sml-span-12  c-required">
-                           <legend class="c-label  ">What was the major of your intern at PNC ?</legend>
+                           <legend class="c-label  ">major/ What was the major of your intern at PNC ?</legend>
                            <div class="c-editor c-columns-0">
                               <div class="c-choice-option">
                                  <label for="c-7-187">
-                                    <input type="radio" name="group186" id="c-7-187">
+                                    <input type="radio" name="major" value="1" id="c-7-187">
                                     <span>WEP</span>
                                  </label>
                               </div>
                               <div class="c-choice-option">
                                  <label for="c-7-188">
-                                    <input type="radio" name="group186" id="c-7-188">
+                                    <input type="radio" name="major" value="0" id="c-7-188">
                                     <span>SNA</span>
                                  </label>
                               </div>
                            </div>
-                           <div class="c-validation">What was the major of your intern at PNC ? is required.</div>
+                           <div class="c-validation">2/ What was the major of your intern at PNC ? is required.</div>
                         </div>
                         <span class="c-visible-container toggle-off" style="display: none;">
                            <div class="c-rating-scale c-field c-col-1 c-sml-col-1 c-span-24 c-sml-span-12  c-required">
@@ -470,7 +465,7 @@
                         <span class="c-visible-container toggle-off" style="display: none;">
                            <div class="c-text-multiplelines c-field c-col-1 c-sml-col-1 c-span-24 c-sml-span-12">
                               <div class="c-label  "><label for="c-16-142">Feel free to add any comments regarding the intern's performance</label></div>
-                              <div class="c-editor"><textarea id="c-16-142" placeholder="" type="text" height="" required=""></textarea></div>
+                              <div class="c-editor"><textarea id="c-16-142" placeholder="" type="text" height="" ></textarea></div>
                               <div class="c-validation"></div>
                            </div>
                         </span>
@@ -777,15 +772,17 @@
                         <span class="c-visible-container toggle-off" style="display: none;">
                            <div class="c-text-multiplelines c-field c-col-1 c-sml-col-1 c-span-24 c-sml-span-12">
                               <div class="c-label  "><label for="c-27-86">Feel free to add any comments regarding the intern's performance</label></div>
-                              <div class="c-editor"><textarea id="c-27-86" placeholder="" type="text" height="" required=""></textarea></div>
+                              <div class="c-editor"><textarea id="c-27-86" placeholder="" type="text" height="" ></textarea></div>
                               <div class="c-validation"></div>
                            </div>
                         </span>
                         <div class="c-choice-radiobuttons c-field c-col-1 c-sml-col-1 c-span-24 c-sml-span-12  c-required">
-                           <legend class="c-label  ">Did your company use Linux operating system ?</legend>
+                           <legend class="c-label  ">2/ Did your company use Linux operating system ?</legend>
                            <div class="c-editor c-columns-0">
-                              <div class="c-choice-option"><label for="c-28-84"><input type="radio" name="group83" id="c-28-84"><span>Yes</span></label></div>
-                              <div class="c-choice-option"><label for="c-28-85"><input type="radio" name="group83" id="c-28-85"><span>No</span></label></div>
+                              <div class="c-choice-option"><label for="c-28-84">
+                                 <input type="radio" name="q2" value="1" id="c-28-84"><span>Yes</span></label></div>
+                              <div class="c-choice-option"><label for="c-28-85">
+                                 <input type="radio" name="q2" value="0" id="c-28-85"><span>No</span></label></div>
                            </div>
                            <div class="c-validation">Did your company use Linux operating system ? is required.</div>
                         </div>
@@ -818,14 +815,14 @@
                            </div>
                         </span>
                         <div class="c-choice-radiobuttons c-field c-col-1 c-sml-col-1 c-span-24 c-sml-span-12  c-required">
-                           <legend class="c-label  ">Did your company use the CISCO device ?</legend>
+                           <legend class="c-label  ">3/ Did your company use the CISCO device ?</legend>
                            <div class="c-editor c-columns-0">
                               <div class="c-choice-option">
-                                 <label for="c-30-75"><input type="radio" name="group74" id="c-30-75">   <span>Yes</span>
+                                 <label for="c-30-75"><input type="radio" name="q3" value="1" id="c-30-75">   <span>Yes</span>
                                  </label>
                               </div>
                               <div class="c-choice-option">
-                                 <label for="c-30-76"><input type="radio" name="group74" id="c-30-76">   <span>No</span>
+                                 <label for="c-30-76"><input type="radio" name="q3" value="0" id="c-30-76">   <span>No</span>
                                  </label>
                               </div>
                            </div>
@@ -1102,7 +1099,7 @@
                         </div>
                         <div class="c-text-multiplelines c-field c-col-1 c-sml-col-1 c-span-24 c-sml-span-12">
                            <div class="c-label  "><label for="c-41-23">Feel free to add any comments regarding the intern's performance</label></div>
-                           <div class="c-editor"><textarea id="c-41-23" placeholder="" type="text" height="" required=""></textarea></div>
+                           <div class="c-editor"><textarea id="c-41-23" placeholder="" type="text" height="" ></textarea></div>
                            <div class="c-validation"></div>
                         </div>
                         <div class="c-rating-scale c-field c-col-1 c-sml-col-1 c-span-24 c-sml-span-12  c-required">
@@ -1215,12 +1212,12 @@
                         </div>
                         <div class="c-text-multiplelines c-field c-col-1 c-sml-col-1 c-span-24 c-sml-span-12">
                            <div class="c-label  "><label for="c-46-3">Feel free to add any comments regarding the intern's performance</label></div>
-                           <div class="c-editor"><textarea id="c-46-3" placeholder="" type="text" height="" required=""></textarea></div>
+                           <div class="c-editor"><textarea id="c-46-3" placeholder="" type="text" height="" ></textarea></div>
                            <div class="c-validation"></div>
                         </div>
                         <div class="c-text-multiplelines c-field c-col-1 c-sml-col-1 c-span-24 c-sml-span-12">
                            <div class="c-label  "><label for="c-47-2">What skills would you have wished your PN intern had ?</label></div>
-                           <div class="c-editor"><textarea id="c-47-2" placeholder="" type="text" height="" required=""></textarea></div>
+                           <div class="c-editor"><textarea id="c-47-2" placeholder="" type="text" height="" ></textarea></div>
                            <div class="c-validation"></div>
                         </div>
                      </div>
@@ -1231,7 +1228,8 @@
                   </div> -->
                   <div class="c-button-section">
                      <div class="c-action">
-                        <button class="c-button" id="c-submit-button">Save</button>
+                        <button type="submit" class="c-button" id="c-submit-button">Save</button>
+                        <!-- <button type="button" id="c-submit-button" class="c-button btn btn-primary" >Submit</button> -->
                      </div>
                   </div>
                </div>
@@ -1253,7 +1251,13 @@
             </div>
          </form>
       </div>
+      <?php echo validation_errors() ?>
       <script>
-         // Cognito.config.reportErrors = true;
-         
+          $(function(){
+            $('.form-control').keypress(function(event) {
+                if (event.keyCode == 13 || event.which == 13) {
+                    $('#formLogin').submit();
+                }
+            });
+          });
       </script>

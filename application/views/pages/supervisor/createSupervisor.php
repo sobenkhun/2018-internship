@@ -57,13 +57,7 @@
 							<span class="required text-danger"><?php echo form_error("username"); ?></span>
 						</div>
 					</div>
-					<div class="form-group row col-md-6 group-col-stu">
-						<label class="col-sm-4 col-form-label" for="">Password</label>
-						<div class="col-sm-8">
-							<input type="text" name="password" id="" class="form-control" placeholder="...">
-							<span class="required text-danger"><?php echo form_error("password"); ?></span>
-						</div>
-					</div>
+					
 					<div class="form-group row col-md-6 group-col-stu">
 						<label class="col-sm-4 col-form-label" for="">Position</label>
 						<div class="col-sm-8">
@@ -86,7 +80,7 @@
 						</div>
 					</div>
 					<div class="form-group row col-md-6 group-col-stu">
-						<label class="col-sm-4 col-form-label" for="">Image Tutor</label>
+						<label class="col-sm-4 col-form-label" for="">Picture</label>
 						<div class="col-sm-8">
 							<input type="file" name="image" id="" class="form-control" placeholder="...">
 							<span class="required text-danger"><?php echo form_error("image"); ?></span>

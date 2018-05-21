@@ -21,7 +21,7 @@
               <td class="text-center"><?php echo $student['id']; ?></td>
               <td><?php echo $student['studentName']; ?></td>
               <td class="text-center">
-                <a href="<?php echo base_url();?>supervisor/questionnaire?&id=<?php echo $student['id']; ?>"><span class="mdi mdi-book-minus mdi-24px text-info" data-toggle ="tooltip" title="questionnaire "></span></a>    
+                <a href="<?php echo base_url();?>supervisor/questionnaire?&id=<?php echo $student['id']; ?>"><span class="mdi mdi-book-minus mdi-24px" data-toggle ="tooltip" title="questionnaire " style="color: #CC6600;"></span></a>    
             </td>
           </tr>
           <?php endforeach ?>

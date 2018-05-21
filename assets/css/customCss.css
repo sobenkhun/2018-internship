@@ -67,6 +67,7 @@ img{
 .erohome .card-body a{ 	background-color: #31b5eb ; }
 
 .erohome .card-body a:hover{ box-shadow: -4px -2px 8px 2px rgb(18, 101, 165) }
+
 /*=========== home page of ero ==========*/
 
 /* student page of ero */
@@ -304,4 +305,38 @@ table {
     .message{
       font-size: 13px;
     }
+}
+
+#contact label{
+	display: inline-block;
+	width: 100px;
+	text-align: right;
+}
+#contact_submit{
+	padding-left: 100px;
+}
+#contact div{
+	margin-top: 1em;
+}
+textarea{
+	vertical-align: top;
+	height: 5em;
+}
+	
+.error{
+	display: none;
+	margin-left: 10px;
+}		
+
+.error_show{
+	color: red;
+	margin-left: 10px;
+}
+
+input.invalid, textarea.invalid{
+	border: 1px solid red;
+}
+
+input.valid, textarea.valid{
+	border: 1px solid green;
 }

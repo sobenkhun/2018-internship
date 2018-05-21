@@ -17,6 +17,8 @@ class Welcome extends CI_Controller {
         $data['company'] = $this->users_model->CNumRow();
         $data['tutor'] = $this->users_model->TNumRow();
         $data['student'] = $this->users_model->sNumRow();
+        $data['student_bar'] = $this->users_model->getCompanyName();
+        $data['numstu'] = $this->users_model->getNumStu();
 		$data['activeLink'] = 'company';
 		$this->load->view('IF/template/header', $data);
 		$this->load->view('menu/index', $data);

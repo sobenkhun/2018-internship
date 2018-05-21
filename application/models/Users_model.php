@@ -82,6 +82,16 @@ class Users_model extends CI_Model {
         $query = $this->db->get('company');
         return $query->result_array();
     }
+    public function getCompanyName() {
+        $this->db->select('name');
+        $query = $this->db->get('company');
+        return $query->result_array();
+    }
+    public function getNumStu() {
+        $this->db->select('numStu');
+        $query = $this->db->get('getnumstu');
+        return $query->result_array();
+    }
     public function getCompanyDataDetail($companyId)
     {
         $this->db->select('*');

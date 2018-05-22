@@ -12,8 +12,11 @@
 		<div class="rounded bg-white">	
 			<br>
 			<br>	
-			<?php foreach ($suDetail as $suDetail):?>
-			<form action="<?php echo base_url();?>Welcome_IF/editSupervisor?&id=<?php echo $suDetail['id']; ?>" method="post">
+				<?php foreach ($suDetail as $suDetail):?>				
+				<?php $submitEditSu = "Welcome_IF/editSupervisor?&id=".$suDetail['id']; ?>
+	
+				<?php echo form_open_multipart($submitEditSu,'class="form-horizontal"'); ?>
+
 				<div class="form-row">
 					<div class="form-group row col-md-6 group-col-stu">
 						<label class="col-sm-4 col-form-label" for="">First Name</label>

@@ -17,8 +17,9 @@
 		<div class="col-md-1"></div>
 		<div class="col-md-4 text-center ">
 			<?php foreach ($supervisor as $supervisor):?>
+			<?php $imagepart =  "assets/images/users/".$supervisor['picture'];?>
 			<br>
-			<img class="user userSupervisor"  src="<?php echo base_url(); ?>assets/images/studentpiture.jpg" alt="" style="height: 260px; margin-top: 17px; padding: 10px;"><br>
+			<img class="user userSupervisor"  src="<?php echo base_url(); ?><?php  echo $imagepart?>" alt="" style="height: 260px; margin-top: 17px; padding: 10px;"><br>
 			<a class="link" href="#" ><?php echo $supervisor['firstname']." ".$supervisor['lastname']; ?></a>
 		</div>
 		<div class="col-md-6">

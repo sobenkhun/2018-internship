@@ -7,9 +7,14 @@
 	</a>
 	<h3 class="text-primary text-center">Add Student</h3><br>
 	<div class="row">
-		<div class="border border-form rounded bg-white">	
-		<?php foreach ($student as $student):?>
-			<form action="<?php echo base_url();?>Welcome_IF/editStudent?&id=<?php echo $student['id']; ?>" method="post" class="addStudent">
+		<div class="border border-form rounded bg-white">
+		<br>
+		<br>	
+				<?php foreach ($student as $student):?>				
+				<?php $submitEditStu = "Welcome_IF/editStudent?&id=".$student['id']; ?>
+	
+				<?php echo form_open_multipart($submitEditStu,'class="form-horizontal"'); ?>
+
 				<div class="form-row">
 					<div class="form-group row col-md-6 group-col-stu">
 						<label class="col-sm-4 col-form-label" for="">First Name</label>
@@ -87,7 +92,7 @@
 					<div class="form-group row col-md-6 group-col-stu">
 						<label class="col-sm-4 col-form-label" for="">Profile picture</label>
 						<div class="col-sm-8">
-							<button class="btn btn-primary pull-left" type="submit" name="btn-submit">Choose file</button>
+							<input type="file" name="image" id="" class="form-control" placeholder="...">
 						</div>
 					</div><br><br><br>
 					<div class="col-md-4"></div>

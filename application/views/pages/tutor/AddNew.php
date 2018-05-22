@@ -10,7 +10,7 @@
 		<div class="border border-form rounded bg-white">	
 			<br>
 			<br>	
-			<form action="<?php echo base_url();?>Welcome_IF/addTutor" method="post">
+				<?php echo form_open_multipart('Welcome_IF/addTutor','class="form-horizontal"'); ?>
 				<div class="form-row">
 					<div class="form-group row col-md-6 group-col-stu">
 						<label class="col-sm-4 col-form-label" for="">First Name</label>
@@ -97,10 +97,8 @@
 					</div>
 
 					<div class="col-md-4"></div>
-
-
 				</div>
-			</form>
+			<?php echo form_close(); ?>
 		</div> 
 	</div>
 </div>

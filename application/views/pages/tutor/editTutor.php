@@ -12,8 +12,11 @@
 		<div class="border border-form rounded bg-white">	
 			<br>
 			<br>	
-			<?php foreach ($tutor as $tutor):?>
-			<form action="<?php echo base_url();?>Welcome_IF/editTutor?&id=<?php echo $tutor['id'] ?>" method="post">
+			<?php foreach ($tutor as $tutor):?>				
+				<?php $submitEditTutor = "Welcome_IF/editTutor?&id=".$tutor['id']; ?>
+	
+				<?php echo form_open_multipart($submitEditTutor,'class="form-horizontal"'); ?>
+
 				<div class="form-row">
 					<div class="form-group row col-md-6 group-col-stu">
 						<label class="col-sm-4 col-form-label" for="">First Name</label>
@@ -91,7 +94,7 @@
 					<?php endforeach ?>
 					<div class="col-md-4"></div>
 				</div>
-			</form>
+			<?php echo form_close(); ?>
 		</div> 
 	</div>
 </div>

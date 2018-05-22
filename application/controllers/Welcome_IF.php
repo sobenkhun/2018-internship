@@ -81,7 +81,7 @@ class Welcome_IF extends CI_Controller {
 		$companyId = $_GET['id'];
 		$name = $this->input->post("name");
 		$description = $this->input->post("itemdescription");
-		$location = $this->input->post("location");
+		$location = $this->input->post("address");
 		$phone = $this->input->post("phone");
 		$lat = $this->input->post("lat");
 		$lng = $this->input->post("long");

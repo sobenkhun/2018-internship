@@ -16,11 +16,11 @@ $activeLink = (isset($activeLink)) ? $activeLink :  "";?>
       <li class="nav-item <?php echo ($activeLink=='Company'?'active':'');?>">
         <a class="nav_link nav-link" href="<?php echo base_url();?>Welcome_IF/company">Company</a>
       </li>
-      <li class="nav-item <?php echo ($activeLink=='supervisor'?'active':'');?>">
-        <a class="nav_link nav-link" href="<?php echo base_url();?>Welcome_IF/supervisor"></i>Supervisor</a>
-      </li>
       <li class="nav-item <?php echo ($activeLink=='Tutor'?'active':'');?>">
         <a class="nav_link nav-link" href="<?php echo base_url();?>Welcome_IF/tutor">Tutor</a>
+      </li>
+      <li class="nav-item <?php echo ($activeLink=='supervisor'?'active':'');?>">
+        <a class="nav_link nav-link" href="<?php echo base_url();?>Welcome_IF/supervisor"></i>Supervisor</a>
       </li>
       <li class="nav-item <?php echo ($activeLink=='student'?'active':'');?>">
         <a class="nav_link nav-link" href="<?php echo base_url();?>Welcome_IF/student"></i>Student</a>

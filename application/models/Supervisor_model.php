@@ -47,23 +47,53 @@ class Supervisor_model extends CI_Model {
 	}
 	/**
 	 * Add questionnaire for student specific 
-	 * @param string $data store all feild the table questionnaire 
+	 * @param array $data store all feild the table questionnaire 
 	 * @param 
-	 * @author Bunthean MOV <bunthean.mov2727@gmail.com>
+	 * @author Bunthean MOV <bunthean.mov2727@gmail.com>=====================================================
 	 */
-    public function addQuestionnaire($gender,$q1,$major,$q2,$q3)
+	public function getStuId($studentName)
     {
-		$data = array('gender'   =>$gender,
-					'question1'  =>$q1,
-					'major'      =>$major,
-					'question2'  =>$q2,
-					'question3'  =>$q3
-		);
-		 // $this->db->trans_start();
-		$this->db->insert('questionnaire',$data);
-		// return "Insert success";
-		// $this->db->trans_complete();
+    	
+         $this->db->select('id');
+        $this->db->from('student');
+        $this->db->where('id', $studentName);
+        $query = $this->db->get();
+        foreach ($query->result_array() as $row)
+            {
+                $stuId = $row['id'];
+            }
+            // var_dump($studentName);die();
+        return $stuId;
     }
+    public function addQuestionnaire($studentId,$gender,$q1,$major,$q2,$q3)
+    {
+        // $this->db->select("*");
+        // $this->db->from("student");
+        // $this->db->where('id', $student_id);
+        // $query = $this->db->get();
+    	$this->db->select("*");
+        $this->db->from('questionnaire q');
+        $this->db->join('student stu', 'q.student_id = stu.id');
+        $this->db->join('supervisor s', 'stu.supervisor_id = s.id');
+        $this->db->join('company c', 's.company_id = c.id');
+        $this->db->where('stu.id', $studentId);
+        $query = $this->db->get();
+        foreach ($query->result_array() as $row)
+        {
+            $student_id = $row['id'];
+        }
+        $student_id = (int)$student_id;
+       	$data = array('student_id' =>$student_id,
+       			'gender'     =>$gender,
+       			'question1'  =>$q1,
+       			'major'      =>$major,
+       			'question2'  =>$q2,
+       			'question3'  =>$q3
+       	);
+       // var_dump($data);
+        $this->db->insert('questionnaire', $data);
+    }
+
     /**
 	 * Select stuent's questionnaire to complete
 	 * @param string $data store all feild the table questionnaire 
@@ -72,13 +102,12 @@ class Supervisor_model extends CI_Model {
 	 */
 	public function getQuestionnaire($studentId)
 	{
-
-	$this->db->select("stu.firstname, stu.lastname, c.name");
-     $this->db->from('student stu');
-     $this->db->join('supervisor s', 'stu.supervisor_id = s.id');
-     $this->db->join('company c', 'stu.supervisor_id = c.id');
-     // $this->db->join('tutor t', 't.company_id = c.id');
-     $this->db->where('stu.id', $studentId);
+	$this->db->select("stu.id,stu.firstname, stu.lastname, c.name, q.*");
+    $this->db->from('questionnaire q');
+    $this->db->join('student stu', 'q.student_id = stu.id');
+    $this->db->join('supervisor s', 'stu.supervisor_id = s.id');
+    $this->db->join('company c', 's.company_id = c.id');
+    $this->db->where('stu.id', $studentId);
     $query = $this->db->get();
     return $query->result_array();
 	}

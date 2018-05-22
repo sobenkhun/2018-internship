@@ -46,34 +46,23 @@
 		// select date in DB
 		public function selectDateTime()
 		{
-			// $this->db->SELECT('*');
-			// $this->db->FROM('worklog');
-			// $this->db->WHERE('date');
-			// $this->db->BETWEEN('2018-04-23' AND '2018-04-27')
-			// $query = $this->db->get_where('worklog', 'date' BETWEEN '2018-04-23' AND '2018-04-27'));
-			// return $query->result_array();
-
-			// $this->db->select('*');
-			// $this->db->from('worklog');
-			// $this->db->where('starttime >=', $start_deadline);
-			// $this->db->where('endtime <=', $end_deadline);
-			// $query = $this->db->get();
-			// $result = $query->result();
-			// print_r($result);
+			
 			$this->db->select('*');
+			$this->db->where("date BETWEEN '2018-06-1' AND '2018-06-7'", NULL, FALSE);
 			$query = $this->db->get('worklog');
-			// $this->db->where('`date` BETWEEN 2018-04-23 AND 2018-04-24', NULL, FALSE);
 			$result = $query->result();
 			print_r($result);
-
-			// if ($query->num_rows() > 0) {
-			// 	foreach ($query->result() as $row) {
-			// 	}
+			// if (){
+				$nextWeek = time() + (7 * 24 * 60 * 60);
+				                   // 7 days; 24 hours; 60 mins; 60 secs
+				echo '<br>Now:       '. date('Y-m-d') ."\n";
+				echo '<br>Next Week: '. date('Y-m-d', $nextWeek) ."\n";
+				// or using strtotime():
+				echo '<br>Next Week: '. date('Y-m-d', strtotime('+1 week')) ."\n";
 			// }
+				$period = array (" second", " minute", " hour", " day", " month", " year");
 
-			// $this->db->select('*');
-			// $this->db->from('worklog');
-			// $this-> db ->where('date' between $start_deadline and $end_deadline);
 		}
+		// ==========
 	}
  ?>

@@ -83,65 +83,67 @@
 
 				<div id="secounday" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
 					<div class="card-body">
-						<table class="table table-bordered table-hover" id="tableWorkLog">
-							<tbody class="bg-white">
-								<tr>
-									<th class="bg-info text-white text-center table-fixed"><br><br>Date & Time</th>
-									<td>
-										<input class="form-control" type="date" name="date" value="DD/MM/YYY"><br>
-										<div class="row time">
-											<div class="col-md-6">
-												<input class="form-control" name="starttime" type="time" placeholder="Start time">
+						<?php foreach ($worklog as $workLog):?>
+							<table class="table table-bordered table-hover" id="tableWorkLog">
+								<tbody class="bg-white">
+									<tr>
+										<th class="bg-info text-white text-center table-fixed"><br><br>Date & Time</th>
+										<td>
+											<input class="form-control" type="date" name="date" value="<?php echo $workLog['date'] ?>"><br>
+											<div class="row time">
+												<div class="col-md-6">
+													<input class="form-control" type="time" placeholder="Start time" name="starttime" value="<?php echo $workLog['starttime'] ?>">
+												</div>
+												<div class="col-md-6">
+													<input class="form-control" type="time" placeholder="End time" name="endtime" value="<?php echo $workLog['endtime'] ?>"><br>
+												</div>
 											</div>
-											<div class="col-md-6">
-												<input class="form-control" name="endtime" type="time" placeholder="End time"><br>
-											</div>
-										</div>
-									</td>
-								</tr>
-								<tr>
-									<th class="bg-info text-white text-center table-fixed" style="width: 15em;"><br><br>Work Activities</th>
-									<td>
-										<textarea class="col-md-12 form-group" name="activities" id="" rows="4"  placeholder="..."></textarea>
-									</td>
-								</tr>
-								<tr>
-									<th class="bg-info text-white text-center table-fixed" style="width: 15em;"><br><br>What did you learn?</th>
-									<td>
-										<textarea class="col-md-12 form-group" name="yourlearn" id="" rows="4"  placeholder="..."></textarea>
-									</td>
-								</tr>
-								<tr>
-									<th class="bg-info text-white text-center table-fixed" style="width: 15em;"><br><br>Difficulties/ Issues</th>
-									<td>
-										<textarea class="col-md-12 form-group" name="issues" id="" rows="4"  placeholder="..."></textarea>
-									</td>
-								</tr>
-								<tr>
-									<th class="bg-info text-white text-center table-fixed" style="width:15em;"><br><br>Solutions</th>
-									<td>
-										<textarea class="col-md-12 form-group" name="solution" id="" rows="4"  placeholder="..."></textarea>
-									</td>
-								</tr>
-								<tr>
-									<th class="bg-info text-white text-center table-fixed" style="width: 15em;"><br><br>To Do (Plan)</th>
-									<td>
-										<textarea class="col-md-12 form-group" name="todo" id="" rows="4"  placeholder="..."></textarea>
-									</td>
-								</tr>
-								<tr>					
-									<th rowspan="2" class="bg-info text-white text-center table-fixed" style="width: 15em;"><br><br>Comment</th>
-									<td>
-										<textarea class="col-md-12 form-group" name="comment" id="" rows="4" placeholder="..."></textarea>
-									</td>
-								</tr>
-								<tr>
-									<td class="text-right">
-										<button type="submit" class="btn btn-outline-success" name="btn-submit">Save report</button>
-									</td>
-								</tr>
-							</tbody>
-						</table>
+										</td>
+									</tr>
+									<tr>
+										<th class="bg-info text-white text-center table-fixed" style="width: 15em;"><br><br>Work Activities</th>
+										<td>
+											<textarea class="col-md-12 form-group" name="activities" id="" rows="4"  placeholder="..."><?php echo $workLog['workactivities'] ?></textarea>
+										</td>
+									</tr>
+									<tr>
+										<th class="bg-info text-white text-center table-fixed" style="width: 15em;"><br><br>What did you learn?</th>
+										<td>
+											<textarea class="col-md-12 form-group" name="yourlearn" id="" rows="4"  placeholder="..."><?php echo $workLog['youhavelearn'] ?></textarea>
+										</td>
+									</tr>
+									<tr>
+										<th class="bg-info text-white text-center table-fixed" style="width: 15em;"><br><br>Difficulties/ Issues</th>
+										<td>
+											<textarea class="col-md-12 form-group" name="issues" id="" rows="4"  placeholder="..."><?php echo $workLog['issues'] ?></textarea>
+										</td>
+									</tr>
+									<tr>
+										<th class="bg-info text-white text-center table-fixed" style="width:15em;"><br><br>Solutions</th>
+										<td>
+											<textarea class="col-md-12 form-group" name="solution" id="" rows="4"  placeholder="..."><?php echo $workLog['solutions'] ?></textarea>
+										</td>
+									</tr>
+									<tr>
+										<th class="bg-info text-white text-center table-fixed" style="width: 15em;"><br><br>To Do (Plan)</th>
+										<td>
+											<textarea class="col-md-12 form-group" name="todo" id="" rows="4"  placeholder="..."><?php echo $workLog['todo'] ?></textarea>
+										</td>
+									</tr>
+									<tr>					
+										<th rowspan="2" class="bg-info text-white text-center table-fixed" style="width: 15em;"><br><br>Comment</th>
+										<td>
+											<textarea class="col-md-12 form-group" name="comment" id="" rows="4" placeholder="..."><?php echo $workLog['comment'] ?></textarea>
+										</td>
+									</tr>
+									<tr>
+										<td class="text-right">
+											<button type="submit" class="btn btn-outline-success" name="btn-submit">Save report</button>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						<?php endforeach ?>
 					</div>
 				</div>
 			</form>
@@ -156,65 +158,67 @@
 
 				<div id="secounday" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
 					<div class="card-body">
-						<table class="table table-bordered table-hover" id="tableWorkLog">
-							<tbody class="bg-white">
-								<tr>
-									<th class="bg-info text-white text-center table-fixed"><br><br>Date & Time</th>
-									<td>
-										<input class="form-control" type="date" name="date" value="DD/MM/YYY"><br>
-										<div class="row time">
-											<div class="col-md-6">
-												<input class="form-control" name="starttime" type="time" placeholder="Start time">
+						<?php foreach ($worklog as $workLog):?>
+							<table class="table table-bordered table-hover" id="tableWorkLog">
+								<tbody class="bg-white">
+									<tr>
+										<th class="bg-info text-white text-center table-fixed"><br><br>Date & Time</th>
+										<td>
+											<input class="form-control" type="date" name="date" value="<?php echo $workLog['date'] ?>"><br>
+											<div class="row time">
+												<div class="col-md-6">
+													<input class="form-control" type="time" placeholder="Start time" name="starttime" value="<?php echo $workLog['starttime'] ?>">
+												</div>
+												<div class="col-md-6">
+													<input class="form-control" type="time" placeholder="End time" name="endtime" value="<?php echo $workLog['endtime'] ?>"><br>
+												</div>
 											</div>
-											<div class="col-md-6">
-												<input class="form-control" name="endtime" type="time" placeholder="End time"><br>
-											</div>
-										</div>
-									</td>
-								</tr>
-								<tr>
-									<th class="bg-info text-white text-center table-fixed" style="width: 15em;"><br><br>Work Activities</th>
-									<td>
-										<textarea class="col-md-12 form-group" name="activities" id="" rows="4"  placeholder="..."></textarea>
-									</td>
-								</tr>
-								<tr>
-									<th class="bg-info text-white text-center table-fixed" style="width: 15em;"><br><br>What did you learn?</th>
-									<td>
-										<textarea class="col-md-12 form-group" name="yourlearn" id="" rows="4"  placeholder="..."></textarea>
-									</td>
-								</tr>
-								<tr>
-									<th class="bg-info text-white text-center table-fixed" style="width: 15em;"><br><br>Difficulties/ Issues</th>
-									<td>
-										<textarea class="col-md-12 form-group" name="issues" id="" rows="4"  placeholder="..."></textarea>
-									</td>
-								</tr>
-								<tr>
-									<th class="bg-info text-white text-center table-fixed" style="width:15em;"><br><br>Solutions</th>
-									<td>
-										<textarea class="col-md-12 form-group" name="solution" id="" rows="4"  placeholder="..."></textarea>
-									</td>
-								</tr>
-								<tr>
-									<th class="bg-info text-white text-center table-fixed" style="width: 15em;"><br><br>To Do (Plan)</th>
-									<td>
-										<textarea class="col-md-12 form-group" name="todo" id="" rows="4"  placeholder="..."></textarea>
-									</td>
-								</tr>
-								<tr>					
-									<th rowspan="2" class="bg-info text-white text-center table-fixed" style="width: 15em;"><br><br>Comment</th>
-									<td>
-										<textarea class="col-md-12 form-group" name="comment" id="" rows="4" placeholder="..."></textarea>
-									</td>
-								</tr>
-								<tr>
-									<td class="text-right">
-										<button type="submit" class="btn btn-outline-success" name="btn-submit">Save report</button>
-									</td>
-								</tr>
-							</tbody>
-						</table>
+										</td>
+									</tr>
+									<tr>
+										<th class="bg-info text-white text-center table-fixed" style="width: 15em;"><br><br>Work Activities</th>
+										<td>
+											<textarea class="col-md-12 form-group" name="activities" id="" rows="4"  placeholder="..."><?php echo $workLog['workactivities'] ?></textarea>
+										</td>
+									</tr>
+									<tr>
+										<th class="bg-info text-white text-center table-fixed" style="width: 15em;"><br><br>What did you learn?</th>
+										<td>
+											<textarea class="col-md-12 form-group" name="yourlearn" id="" rows="4"  placeholder="..."><?php echo $workLog['youhavelearn'] ?></textarea>
+										</td>
+									</tr>
+									<tr>
+										<th class="bg-info text-white text-center table-fixed" style="width: 15em;"><br><br>Difficulties/ Issues</th>
+										<td>
+											<textarea class="col-md-12 form-group" name="issues" id="" rows="4"  placeholder="..."><?php echo $workLog['issues'] ?></textarea>
+										</td>
+									</tr>
+									<tr>
+										<th class="bg-info text-white text-center table-fixed" style="width:15em;"><br><br>Solutions</th>
+										<td>
+											<textarea class="col-md-12 form-group" name="solution" id="" rows="4"  placeholder="..."><?php echo $workLog['solutions'] ?></textarea>
+										</td>
+									</tr>
+									<tr>
+										<th class="bg-info text-white text-center table-fixed" style="width: 15em;"><br><br>To Do (Plan)</th>
+										<td>
+											<textarea class="col-md-12 form-group" name="todo" id="" rows="4"  placeholder="..."><?php echo $workLog['todo'] ?></textarea>
+										</td>
+									</tr>
+									<tr>					
+										<th rowspan="2" class="bg-info text-white text-center table-fixed" style="width: 15em;"><br><br>Comment</th>
+										<td>
+											<textarea class="col-md-12 form-group" name="comment" id="" rows="4" placeholder="..."><?php echo $workLog['comment'] ?></textarea>
+										</td>
+									</tr>
+									<tr>
+										<td class="text-right">
+											<button type="submit" class="btn btn-outline-success" name="btn-submit">Save report</button>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						<?php endforeach ?>
 					</div>
 				</div>
 			</form>
@@ -229,65 +233,67 @@
 
 				<div id="secounday" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
 					<div class="card-body">
-						<table class="table table-bordered table-hover" id="tableWorkLog">
-							<tbody class="bg-white">
-								<tr>
-									<th class="bg-info text-white text-center table-fixed"><br><br>Date & Time</th>
-									<td>
-										<input class="form-control" type="date" name="date" value="DD/MM/YYY"><br>
-										<div class="row time">
-											<div class="col-md-6">
-												<input class="form-control" name="starttime" type="time" placeholder="Start time">
+						<?php foreach ($worklog as $workLog):?>
+							<table class="table table-bordered table-hover" id="tableWorkLog">
+								<tbody class="bg-white">
+									<tr>
+										<th class="bg-info text-white text-center table-fixed"><br><br>Date & Time</th>
+										<td>
+											<input class="form-control" type="date" name="date" value="<?php echo $workLog['date'] ?>"><br>
+											<div class="row time">
+												<div class="col-md-6">
+													<input class="form-control" type="time" placeholder="Start time" name="starttime" value="<?php echo $workLog['starttime'] ?>">
+												</div>
+												<div class="col-md-6">
+													<input class="form-control" type="time" placeholder="End time" name="endtime" value="<?php echo $workLog['endtime'] ?>"><br>
+												</div>
 											</div>
-											<div class="col-md-6">
-												<input class="form-control" name="endtime" type="time" placeholder="End time"><br>
-											</div>
-										</div>
-									</td>
-								</tr>
-								<tr>
-									<th class="bg-info text-white text-center table-fixed" style="width: 15em;"><br><br>Work Activities</th>
-									<td>
-										<textarea class="col-md-12 form-group" name="activities" id="" rows="4"  placeholder="..."></textarea>
-									</td>
-								</tr>
-								<tr>
-									<th class="bg-info text-white text-center table-fixed" style="width: 15em;"><br><br>What did you learn?</th>
-									<td>
-										<textarea class="col-md-12 form-group" name="yourlearn" id="" rows="4"  placeholder="..."></textarea>
-									</td>
-								</tr>
-								<tr>
-									<th class="bg-info text-white text-center table-fixed" style="width: 15em;"><br><br>Difficulties/ Issues</th>
-									<td>
-										<textarea class="col-md-12 form-group" name="issues" id="" rows="4"  placeholder="..."></textarea>
-									</td>
-								</tr>
-								<tr>
-									<th class="bg-info text-white text-center table-fixed" style="width:15em;"><br><br>Solutions</th>
-									<td>
-										<textarea class="col-md-12 form-group" name="solution" id="" rows="4"  placeholder="..."></textarea>
-									</td>
-								</tr>
-								<tr>
-									<th class="bg-info text-white text-center table-fixed" style="width: 15em;"><br><br>To Do (Plan)</th>
-									<td>
-										<textarea class="col-md-12 form-group" name="todo" id="" rows="4"  placeholder="..."></textarea>
-									</td>
-								</tr>
-								<tr>					
-									<th rowspan="2" class="bg-info text-white text-center table-fixed" style="width: 15em;"><br><br>Comment</th>
-									<td>
-										<textarea class="col-md-12 form-group" name="comment" id="" rows="4" placeholder="..."></textarea>
-									</td>
-								</tr>
-								<tr>
-									<td class="text-right">
-										<button type="submit" class="btn btn-outline-success" name="btn-submit">Save report</button>
-									</td>
-								</tr>
-							</tbody>
-						</table>
+										</td>
+									</tr>
+									<tr>
+										<th class="bg-info text-white text-center table-fixed" style="width: 15em;"><br><br>Work Activities</th>
+										<td>
+											<textarea class="col-md-12 form-group" name="activities" id="" rows="4"  placeholder="..."><?php echo $workLog['workactivities'] ?></textarea>
+										</td>
+									</tr>
+									<tr>
+										<th class="bg-info text-white text-center table-fixed" style="width: 15em;"><br><br>What did you learn?</th>
+										<td>
+											<textarea class="col-md-12 form-group" name="yourlearn" id="" rows="4"  placeholder="..."><?php echo $workLog['youhavelearn'] ?></textarea>
+										</td>
+									</tr>
+									<tr>
+										<th class="bg-info text-white text-center table-fixed" style="width: 15em;"><br><br>Difficulties/ Issues</th>
+										<td>
+											<textarea class="col-md-12 form-group" name="issues" id="" rows="4"  placeholder="..."><?php echo $workLog['issues'] ?></textarea>
+										</td>
+									</tr>
+									<tr>
+										<th class="bg-info text-white text-center table-fixed" style="width:15em;"><br><br>Solutions</th>
+										<td>
+											<textarea class="col-md-12 form-group" name="solution" id="" rows="4"  placeholder="..."><?php echo $workLog['solutions'] ?></textarea>
+										</td>
+									</tr>
+									<tr>
+										<th class="bg-info text-white text-center table-fixed" style="width: 15em;"><br><br>To Do (Plan)</th>
+										<td>
+											<textarea class="col-md-12 form-group" name="todo" id="" rows="4"  placeholder="..."><?php echo $workLog['todo'] ?></textarea>
+										</td>
+									</tr>
+									<tr>					
+										<th rowspan="2" class="bg-info text-white text-center table-fixed" style="width: 15em;"><br><br>Comment</th>
+										<td>
+											<textarea class="col-md-12 form-group" name="comment" id="" rows="4" placeholder="..."><?php echo $workLog['comment'] ?></textarea>
+										</td>
+									</tr>
+									<tr>
+										<td class="text-right">
+											<button type="submit" class="btn btn-outline-success" name="btn-submit">Save report</button>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						<?php endforeach ?>
 					</div>
 				</div>
 			</form>
@@ -301,65 +307,67 @@
 
 				<div id="secounday" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
 					<div class="card-body">
-						<table class="table table-bordered table-hover" id="tableWorkLog">
-							<tbody class="bg-white">
-								<tr>
-									<th class="bg-info text-white text-center table-fixed"><br><br>Date & Time</th>
-									<td>
-										<input class="form-control" type="date" name="date" value="DD/MM/YYY"><br>
-										<div class="row time">
-											<div class="col-md-6">
-												<input class="form-control" name="starttime" type="time" placeholder="Start time">
+						<?php foreach ($worklog as $workLog):?>
+							<table class="table table-bordered table-hover" id="tableWorkLog">
+								<tbody class="bg-white">
+									<tr>
+										<th class="bg-info text-white text-center table-fixed"><br><br>Date & Time</th>
+										<td>
+											<input class="form-control" type="date" name="date" value="<?php echo $workLog['date'] ?>"><br>
+											<div class="row time">
+												<div class="col-md-6">
+													<input class="form-control" type="time" placeholder="Start time" name="starttime" value="<?php echo $workLog['starttime'] ?>">
+												</div>
+												<div class="col-md-6">
+													<input class="form-control" type="time" placeholder="End time" name="endtime" value="<?php echo $workLog['endtime'] ?>"><br>
+												</div>
 											</div>
-											<div class="col-md-6">
-												<input class="form-control" name="endtime" type="time" placeholder="End time"><br>
-											</div>
-										</div>
-									</td>
-								</tr>
-								<tr>
-									<th class="bg-info text-white text-center table-fixed" style="width: 15em;"><br><br>Work Activities</th>
-									<td>
-										<textarea class="col-md-12 form-group" name="activities" id="" rows="4"  placeholder="..."></textarea>
-									</td>
-								</tr>
-								<tr>
-									<th class="bg-info text-white text-center table-fixed" style="width: 15em;"><br><br>What did you learn?</th>
-									<td>
-										<textarea class="col-md-12 form-group" name="yourlearn" id="" rows="4"  placeholder="..."></textarea>
-									</td>
-								</tr>
-								<tr>
-									<th class="bg-info text-white text-center table-fixed" style="width: 15em;"><br><br>Difficulties/ Issues</th>
-									<td>
-										<textarea class="col-md-12 form-group" name="issues" id="" rows="4"  placeholder="..."></textarea>
-									</td>
-								</tr>
-								<tr>
-									<th class="bg-info text-white text-center table-fixed" style="width:15em;"><br><br>Solutions</th>
-									<td>
-										<textarea class="col-md-12 form-group" name="solution" id="" rows="4"  placeholder="..."></textarea>
-									</td>
-								</tr>
-								<tr>
-									<th class="bg-info text-white text-center table-fixed" style="width: 15em;"><br><br>To Do (Plan)</th>
-									<td>
-										<textarea class="col-md-12 form-group" name="todo" id="" rows="4"  placeholder="..."></textarea>
-									</td>
-								</tr>
-								<tr>					
-									<th rowspan="2" class="bg-info text-white text-center table-fixed" style="width: 15em;"><br><br>Comment</th>
-									<td>
-										<textarea class="col-md-12 form-group" name="comment" id="" rows="4" placeholder="..."></textarea>
-									</td>
-								</tr>
-								<tr>
-									<td class="text-right">
-										<button type="submit" class="btn btn-outline-success" name="btn-submit">Save report</button>
-									</td>
-								</tr>
-							</tbody>
-						</table>
+										</td>
+									</tr>
+									<tr>
+										<th class="bg-info text-white text-center table-fixed" style="width: 15em;"><br><br>Work Activities</th>
+										<td>
+											<textarea class="col-md-12 form-group" name="activities" id="" rows="4"  placeholder="..."><?php echo $workLog['workactivities'] ?></textarea>
+										</td>
+									</tr>
+									<tr>
+										<th class="bg-info text-white text-center table-fixed" style="width: 15em;"><br><br>What did you learn?</th>
+										<td>
+											<textarea class="col-md-12 form-group" name="yourlearn" id="" rows="4"  placeholder="..."><?php echo $workLog['youhavelearn'] ?></textarea>
+										</td>
+									</tr>
+									<tr>
+										<th class="bg-info text-white text-center table-fixed" style="width: 15em;"><br><br>Difficulties/ Issues</th>
+										<td>
+											<textarea class="col-md-12 form-group" name="issues" id="" rows="4"  placeholder="..."><?php echo $workLog['issues'] ?></textarea>
+										</td>
+									</tr>
+									<tr>
+										<th class="bg-info text-white text-center table-fixed" style="width:15em;"><br><br>Solutions</th>
+										<td>
+											<textarea class="col-md-12 form-group" name="solution" id="" rows="4"  placeholder="..."><?php echo $workLog['solutions'] ?></textarea>
+										</td>
+									</tr>
+									<tr>
+										<th class="bg-info text-white text-center table-fixed" style="width: 15em;"><br><br>To Do (Plan)</th>
+										<td>
+											<textarea class="col-md-12 form-group" name="todo" id="" rows="4"  placeholder="..."><?php echo $workLog['todo'] ?></textarea>
+										</td>
+									</tr>
+									<tr>					
+										<th rowspan="2" class="bg-info text-white text-center table-fixed" style="width: 15em;"><br><br>Comment</th>
+										<td>
+											<textarea class="col-md-12 form-group" name="comment" id="" rows="4" placeholder="..."><?php echo $workLog['comment'] ?></textarea>
+										</td>
+									</tr>
+									<tr>
+										<td class="text-right">
+											<button type="submit" class="btn btn-outline-success" name="btn-submit">Save report</button>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						<?php endforeach ?>
 					</div>
 				</div>
 			</form>

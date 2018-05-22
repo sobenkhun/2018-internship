@@ -9,9 +9,9 @@
         <thead>
             <tr>
                 <th class="text-center">ID</th>
-                <th>Company Name</th>
                 <th>Supervisor Name</th>
-                <th class="text-center">Questionniare</th>
+                <th>Company Name</th>
+                <th class="text-center">Questionnaire</th>
 
                 
                 <th class="text-center">Action</th>
@@ -21,11 +21,10 @@
             <?php foreach ($supervisor as $supervisor):?>
           <tr>
               <td class="text-center"><?php echo $supervisor['id']; ?></td>
-              <td><?php echo $supervisor['name']; ?></td>
               <td><?php echo $supervisor['supervisorName']; ?></td>
+              <td><?php echo $supervisor['name']; ?></td>
               <td class="text-center">
-                    <a href="<?php echo base_url() ?>Welcome_IF/questionniare?&id=<?php echo $supervisor['id']; ?>"><i class="mdi mdi-book-minus mdi-24px text-dark" data-toggle ="tooltip" title=" Questionniare"></i></a>
-                    
+                    <a href="<?php echo base_url() ?>Welcome_IF/questionnaire?&id=<?php echo $supervisor['id']; ?>"><i class="mdi mdi-book-minus mdi-24px" style="color: #CC6600;" data-toggle ="tooltip" title="Questionnaire"></i></a>
                 </td>
               <td class="text-center">
            <a href="<?php echo base_url();?>Welcome_IF/viewSupervisor?&id=<?php echo $supervisor['id']; ?>"><span class="mdi mdi-eye mdi-24px text-info" data-toggle ="tooltip" title="View "></span></a>

@@ -36,18 +36,8 @@
 					</td>
 				</tr>
 				<?php endforeach ?>
-				
 				<tr>
-				
 			</tbody>
 		</table>
 	</div>
 </div>
-
-
-
-<script>
-	$(document).ready(function() {
-		$('#example').DataTable();
-	} );
-</script>

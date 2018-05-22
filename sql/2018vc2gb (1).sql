@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.7.4
+-- version 4.8.0
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: May 18, 2018 at 09:05 AM
--- Server version: 10.1.26-MariaDB
--- PHP Version: 7.1.9
+-- Generation Time: May 21, 2018 at 04:13 AM
+-- Server version: 10.1.31-MariaDB
+-- PHP Version: 7.2.4
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -41,7 +41,7 @@ CREATE TABLE `admin` (
 --
 
 INSERT INTO `admin` (`id`, `username`, `password`, `email`, `userrole_id`) VALUES
-(1, 'admin', '123', 'admin@gmail.com', 1);
+(1, 'admin', '$2a$08$d8dL17ICMpH/HUyRVQLV4eDHA90zFIE/EWiyJnpYqFMwctMnn1C0i', 'admin@gmail.com', 1);
 
 -- --------------------------------------------------------
 
@@ -222,10 +222,11 @@ CREATE TABLE `student` (
 --
 
 INSERT INTO `student` (`id`, `firstname`, `lastname`, `batch`, `year`, `schoolemail`, `peremail`, `phone`, `hire`, `password`, `username`, `picture`, `supervisor_id`, `userrole_id`) VALUES
-(1, 'Prem', 'Mann', 'WEB', 2018, 's.prem@gmail.com', 'p.prem@gmail.com', 3456765, 1, '123', 'mPrem', 'premImage', 2, 4),
-(2, 'Devith', 'Chea', 'Web', 2018, 's.devit@gmail.com', 'p.devit@gmail.com', 98765444, 0, '123', 'g-dvith', 'dImage', 1, 4),
-(3, 'Touch', 'Ban', 'WEB', 2018, 's.touch@gmail.com', 'p.touch@gmail.com', 86784485, 1, '123', 'btouch', 'tImage', 3, 4),
-(4, 'Bunthean', 'Mov', 'Web', 2018, 's.bunthean@gmail.com', 'p.bunthean@gmail.com', 876546, 1, '123', 'mbunthean', 'bImage', 3, 4);
+(1, 'Prem', 'Mann', 'WEB', 2018, 's.prem@gmail.com', 'p.prem@gmail.com', 3456765, 1, '$2a$08$d8dL17ICMpH/HUyRVQLV4eDHA90zFIE/EWiyJnpYqFMwctMnn1C0i', 'mPrem', 'premImage', 2, 4),
+(2, 'Devith', 'Chea', 'Web', 2018, 's.devit@gmail.com', 'p.devit@gmail.com', 98765444, 0, '$2a$08$d8dL17ICMpH/HUyRVQLV4eDHA90zFIE/EWiyJnpYqFMwctMnn1C0i', 'g-dvith', 'dImage', 1, 4),
+(3, 'Touch', 'Ban', 'WEB', 2018, 's.touch@gmail.com', 'p.touch@gmail.com', 86784485, 1, '$2a$08$d8dL17ICMpH/HUyRVQLV4eDHA90zFIE/EWiyJnpYqFMwctMnn1C0i', 'btouch', 'tImage', 3, 4),
+(4, 'Bunthean', 'Mov', 'Web', 2018, 's.bunthean@gmail.com', 'p.bunthean@gmail.com', 876546, 1, '$2a$08$d8dL17ICMpH/HUyRVQLV4eDHA90zFIE/EWiyJnpYqFMwctMnn1C0i', 'mbunthean', 'bImage', 3, 4),
+(5, 'soben', 'khun', 'Web2018', 2, 'soben.khun@student.passerellesnumeriques.org', 'sobenkhun.sk@gmail.com', 81477282, NULL, '$2a$08$d8dL17ICMpH/HUyRVQLV4eDHA90zFIE/EWiyJnpYqFMwctMnn1C0i', 'soben.khun', NULL, 2, 4);
 
 -- --------------------------------------------------------
 
@@ -252,9 +253,9 @@ CREATE TABLE `supervisor` (
 --
 
 INSERT INTO `supervisor` (`id`, `firstname`, `lastname`, `position`, `email`, `phone`, `picture`, `password`, `username`, `company_id`, `userrole_id`) VALUES
-(1, 'Vi', 'Bol', 'Project Manager', 'vibol@gmail.com', 70424109, 'image', '123', 'mprem', 1, 3),
-(2, 'Thea', 'Ry', 'Tester', 'theary@gmail.com', 98768723, 'dImage', '123', 'theary', 1, 3),
-(3, 'Vi', 'Sal', 'Team Leader', 'visal@gmail.com', 7646468, NULL, '$2a$08$fiDT7x7nFdcuiB0PxVYqheInyP8CjIyKTivTRZ4njdBSxZll9u1Ju', 'vsal', 2, 3);
+(1, 'Vi', 'Bol', 'Project Manager', 'vibol@gmail.com', 70424109, 'image', '$2a$08$d8dL17ICMpH/HUyRVQLV4eDHA90zFIE/EWiyJnpYqFMwctMnn1C0i', 'vi.bol', 1, 3),
+(2, 'Thea', 'Ry', 'Tester', 'theary@gmail.com', 98768723, 'dImage', '$2a$08$d8dL17ICMpH/HUyRVQLV4eDHA90zFIE/EWiyJnpYqFMwctMnn1C0i', 'thea.ry', 1, 3),
+(3, 'Vi', 'Sal', 'Team Leader', 'visal@gmail.com', 7646468, NULL, '$2a$08$fiDT7x7nFdcuiB0PxVYqheInyP8CjIyKTivTRZ4njdBSxZll9u1Ju', 'vi.sal', 2, 3);
 
 -- --------------------------------------------------------
 
@@ -281,8 +282,9 @@ CREATE TABLE `tutor` (
 --
 
 INSERT INTO `tutor` (`id`, `firstname`, `lastname`, `position`, `email`, `phone`, `picture`, `password`, `username`, `company_id`, `userrole_id`) VALUES
-(1, 'Rith', 'Nhel', 'Web Trainer', 'rnhel@gmail.com', 1234567, 'image', '123', 'rnhel', 1, 2),
-(3, 'Rady', 'Y', 'Web Trainer', 's.rady.y@gmail.com', 23444433, NULL, '$2a$08$d8dL17ICMpH/HUyRVQLV4eDHA90zFIE/EWiyJnpYqFMwctMnn1C0i', 'yrady', 2, 2);
+(1, 'Rith', 'Nhel', 'Web Trainer', 'rnhel@gmail.com', 1234567, 'image', '$2a$08$d8dL17ICMpH/HUyRVQLV4eDHA90zFIE/EWiyJnpYqFMwctMnn1C0i', 'rith.nhel', 1, 2),
+(3, 'Rady', 'Y', 'Web Trainer', 's.rady.y@gmail.com', 23444433, NULL, '$2a$08$d8dL17ICMpH/HUyRVQLV4eDHA90zFIE/EWiyJnpYqFMwctMnn1C0i', 'yrady', 2, 2),
+(5, 'channak', 'Chhon', 'Web Trainer', 'channak.chhon@trainer.passerellesnumeriques.o', 70242353, NULL, '$2a$08$d8dL17ICMpH/HUyRVQLV4eDHA90zFIE/EWiyJnpYqFMwctMnn1C0i', 'channak.chhon', 1, 2);
 
 -- --------------------------------------------------------
 
@@ -313,14 +315,22 @@ INSERT INTO `userrole` (`id`, `role`) VALUES
 
 CREATE TABLE `worklog` (
   `id` int(11) NOT NULL,
-  `workactivities` varchar(200) DEFAULT NULL,
-  `youhavelearn` varchar(200) DEFAULT NULL,
-  `difficultiesandssues` varchar(200) DEFAULT NULL,
-  `solutions` varchar(200) DEFAULT NULL,
-  `todo` varchar(200) DEFAULT NULL,
-  `comment` varchar(200) DEFAULT NULL,
-  `student_id` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+  `date` date DEFAULT NULL,
+  `workactivities` text,
+  `youhavelearn` text,
+  `issues` text,
+  `solutions` text,
+  `todo` text,
+  `comment` text,
+  `stu_id` int(11) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `worklog`
+--
+
+INSERT INTO `worklog` (`id`, `date`, `workactivities`, `youhavelearn`, `issues`, `solutions`, `todo`, `comment`, `stu_id`) VALUES
+(1, '2018-05-18', '- Meeting with client and manager for got the requirement \r\n- Install skeleton in local Computer', '-We know more  with requirement\r\n- We understand more about what client need(Process of project)\r\n- We got some advice from manager the procees of project\r\n- we learnt about how to prepar overself for met client first time ', '- some member still not clear about what client need \r\nand rocess of skeleton\r\n- we not yet see the requement before go to meeting\r\n with client and manager so we have more not clear \r\nabout project\r\n\r\n', 'In group have some one understand clearly more than \r\neveryone explain more what is client need\r\n- ask client more detail which part that we not clear\r\n- We go to read detail with requirement\r\n- who don\'t understand about skeleton we provide \r\nmore time for play around it and give some guide to their', 'Play around with skeleton\r\n - Create few tests case for Play around with skeleton\r\n - fix some sever have problem with version PHP', 'I have problem with supervisor', 5);
 
 -- --------------------------------------------------------
 
@@ -451,7 +461,7 @@ ALTER TABLE `userrole`
 --
 ALTER TABLE `worklog`
   ADD PRIMARY KEY (`id`),
-  ADD KEY `fk_worklog_student1_idx` (`student_id`);
+  ADD KEY `stu_id` (`stu_id`);
 
 --
 -- AUTO_INCREMENT for dumped tables
@@ -473,7 +483,7 @@ ALTER TABLE `company`
 -- AUTO_INCREMENT for table `student`
 --
 ALTER TABLE `student`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT for table `supervisor`
@@ -485,13 +495,19 @@ ALTER TABLE `supervisor`
 -- AUTO_INCREMENT for table `tutor`
 --
 ALTER TABLE `tutor`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- AUTO_INCREMENT for table `userrole`
 --
 ALTER TABLE `userrole`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+
+--
+-- AUTO_INCREMENT for table `worklog`
+--
+ALTER TABLE `worklog`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- Constraints for dumped tables
@@ -540,7 +556,7 @@ ALTER TABLE `tutor`
 -- Constraints for table `worklog`
 --
 ALTER TABLE `worklog`
-  ADD CONSTRAINT `fk_worklog_student1` FOREIGN KEY (`student_id`) REFERENCES `student` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION;
+  ADD CONSTRAINT `worklog_ibfk_1` FOREIGN KEY (`stu_id`) REFERENCES `student` (`id`);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

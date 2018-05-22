@@ -10,8 +10,8 @@
         <thead>
             <tr>
                 <th class="text-center">ID</th>
-                <th>Company Name</th>
                 <th>Supervisor Name</th>
+                <th>Company Name</th>
                 <th class="text-center">Action</th>
             </tr>
         </thead>
@@ -20,12 +20,12 @@
             <?php foreach ($supervisor as $supervisor):?>
             <tr>
                 <td class="text-center"><?php echo $supervisor['id']; ?></td>
-                <td><?php echo $supervisor['name']; ?></td>
                 <td><?php echo $supervisor['supervisorName']; ?></td>
+                <td><?php echo $supervisor['name']; ?></td>
                 <td class="text-center">
 
                     <a href="<?php echo base_url() ?>tutorDas/getSupDataDetail?&id=<?php echo $supervisor['id'];?>"><i class="mdi mdi-eye mdi-24px text-info" data-toggle ="tooltip" title="View "></i></a>
-                    <a href="<?php echo base_url() ?>tutorDas/questionnair"><i class="mdi mdi-book-minus mdi-24px text-dark" data-toggle ="tooltip" title=" Questionniare"></i></a>
+                    <a href="<?php echo base_url() ?>tutorDas/questionnair"><i class="mdi mdi-book-minus mdi-24px" style="color: #CC6600;" data-toggle ="tooltip" title=" Questionniare"></i></a>
                     
                 </td>
             </tr>

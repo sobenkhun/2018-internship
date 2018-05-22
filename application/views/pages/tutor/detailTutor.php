@@ -15,10 +15,11 @@
 	</div>
 	<br>
 		<?php foreach ($tutor as $tutor):?>
+		<?php $imagepart =  "assets/images/users/".$tutor['picture'];?>
 	<div class="row bg-white">
 		<div class="col-md-1"></div>
 		<div class="col-md-4 text-center "><br>
-			<img class="user userSupervisor"  src="<?php echo base_url(); ?>assets/images/studentpiture.jpg" alt="" style="height: 260px; margin-top: 17px; padding: 10px;"><br>
+			<img class="user userSupervisor"  src="<?php echo base_url(); ?><?php  echo $imagepart?>" alt="" style="height: 260px; margin-top: 17px; padding: 10px;"><br>
 			<a class="link" href="#" ><?php echo $tutor['firstname']." ".$tutor['lastname']; ?></a>
 		</div>
 		<div class="col-md-6">

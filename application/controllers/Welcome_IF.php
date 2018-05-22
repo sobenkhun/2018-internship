@@ -6,9 +6,9 @@ class Welcome_IF extends CI_Controller {
 	//Default constructor
 	function __construct()
 	{
-			parent::__construct();
-			log_message('debug', 'URI=' . $this->uri->uri_string()); 
-			$this->load->helper(array('form','url'));
+		parent::__construct();
+		log_message('debug', 'URI=' . $this->uri->uri_string()); 
+		$this->load->helper(array('form','url'));
 	}
 	// view login
 	public function index()
@@ -27,11 +27,11 @@ class Welcome_IF extends CI_Controller {
 
 		$this->load->Model('users_model');
 		$data['supervisor'] = $this->users_model->suNumRow();
-        $data['company'] = $this->users_model->CNumRow();
-        $data['tutor'] = $this->users_model->TNumRow();
-        $data['student'] = $this->users_model->sNumRow();
-        $data['student_bar'] = $this->users_model->getCompanyName();
-        $data['numstu'] = $this->users_model->getNumStu();
+		$data['company'] = $this->users_model->CNumRow();
+		$data['tutor'] = $this->users_model->TNumRow();
+		$data['student'] = $this->users_model->sNumRow();
+		$data['student_bar'] = $this->users_model->getCompanyName();
+		$data['numstu'] = $this->users_model->getNumStu();
 		$data['activeLink'] = 'Home';
 		$this->load->view('templates/header.php',$data);
 		$this->load->view('menu/index.php',$data);
@@ -44,8 +44,8 @@ class Welcome_IF extends CI_Controller {
 	{
 		$this->load->helper('form');
 		$this->load->Model('users_model');
-        $data['company'] = $this->users_model->getCompanyData();
-        $data['activeLink'] = 'Company';
+		$data['company'] = $this->users_model->getCompanyData();
+		$data['activeLink'] = 'Company';
 		$this->load->view('templates/header.php',$data);
 		$this->load->view('menu/index.php',$data);
 		$this->load->view('pages/company/index.php',$data);
@@ -154,7 +154,7 @@ class Welcome_IF extends CI_Controller {
 	{
 		$this->load->helper('form');
 		$this->load->Model('users_model');
-        $data['tutor'] = $this->users_model->getTutorData();
+		$data['tutor'] = $this->users_model->getTutorData();
 		$data['activeLink'] = 'Tutor';
 		$this->load->view('templates/header.php',$data);
 		$this->load->view('menu/index.php',$data);
@@ -205,23 +205,23 @@ class Welcome_IF extends CI_Controller {
 			$company = $this->input->post("company");
 			$phone = $this->input->post("phone");
 			// Upload Images
-			 $config['upload_path']          = './assets/images/users/';
-			 $config['allowed_types']        = 'gif|jpg|png';
-			 $config['max_size']             = 1024;
-			 $config['max_width']            = 1024;
-			 $config['max_height']           = 768;
-			 $this->load->library('Upload',$config);
-                if (!$this->upload->do_upload('image')) {
-                	 $error = array('error'=>$this->upload->display_errors());
-                	echo "Error Upload Image!";die();
-                }
-                $iData = array('upload_data'=>$this->upload->data());
-           		 foreach ($iData as $iData):
-           		 		$file_name = $iData['file_name'];
-				endforeach;
+			$config['upload_path']          = './assets/images/users/';
+			$config['allowed_types']        = 'gif|jpg|png';
+			$config['max_size']             = 10024;
+			$config['max_width']            = 10024;
+			$config['max_height']           = 7680;
+			$this->load->library('Upload',$config);
+			if (!$this->upload->do_upload('image')) {
+				$error = array('error'=>$this->upload->display_errors());
+				echo "Error Upload Image!";die();
+			}
+			$iData = array('upload_data'=>$this->upload->data());
+			foreach ($iData as $iData):
+				$file_name = $iData['file_name'];
+			endforeach;
 			$this->load->Model('users_model');
-	       	$this->users_model->addTutor($company,$firstname,$lastname,$username,$password,$position,$sEmail,$phone,$file_name);
-	        $data['tutor'] = $this->users_model->getTutorData();
+			$this->users_model->addTutor($company,$firstname,$lastname,$username,$password,$position,$sEmail,$phone,$file_name);
+			$data['tutor'] = $this->users_model->getTutorData();
 			$data['activeLink'] = 'Tutor';
 			$this->load->view('templates/header.php',$data);
 			$this->load->view('menu/index.php',$data);
@@ -233,7 +233,7 @@ class Welcome_IF extends CI_Controller {
 	{
 		$tutorId = $_GET['id'];
 		$this->load->Model('users_model');
-        $data['tutor'] = $this->users_model->getTutorDataDetail($tutorId);
+		$data['tutor'] = $this->users_model->getTutorDataDetail($tutorId);
 		$data['activeLink'] = 'Tutor';
 		$this->load->view('templates/header.php',$data);
 		$this->load->view('menu/index.php',$data);
@@ -244,7 +244,7 @@ class Welcome_IF extends CI_Controller {
 	{
 		$tutorId = $_GET['id'];
 		$this->load->Model('users_model');
-        $data['tutor'] = $this->users_model->getTutorDataDetail($tutorId);
+		$data['tutor'] = $this->users_model->getTutorDataDetail($tutorId);
 		$data['company'] = $this->users_model->getCompanyData();
 		$data['activeLink'] = 'Tutor';
 		$this->load->view('templates/header.php',$data);
@@ -265,23 +265,23 @@ class Welcome_IF extends CI_Controller {
 		$company = $this->input->post("company");
 		$phone = $this->input->post("phone");
 		// Upload Images
-			 $config['upload_path']          = './assets/images/users/';
-			 $config['allowed_types']        = 'gif|jpg|png';
-			 $config['max_size']             = 1024;
-			 $config['max_width']            = 1024;
-			 $config['max_height']           = 768;
-			 $this->load->library('Upload',$config);
-                if (!$this->upload->do_upload('image')) {
-                	 $error = array('error'=>$this->upload->display_errors());
-                	echo "Error Upload Image!";die();
-                }
-                $iData = array('upload_data'=>$this->upload->data());
-           		 foreach ($iData as $iData):
-           		 		$file_name = $iData['file_name'];
-				endforeach;
+		$config['upload_path']          = './assets/images/users/';
+		$config['allowed_types']        = 'gif|jpg|png';
+		$config['max_size']             = 10024;
+		$config['max_width']            = 10024;
+		$config['max_height']           = 7680;
+		$this->load->library('Upload',$config);
+		if (!$this->upload->do_upload('image')) {
+			$error = array('error'=>$this->upload->display_errors());
+			echo "Error Upload Image!";die();
+		}
+		$iData = array('upload_data'=>$this->upload->data());
+		foreach ($iData as $iData):
+			$file_name = $iData['file_name'];
+		endforeach;
 		$this->load->Model('users_model');
-       	$this->users_model->editTutor($tutorId,$company,$firstname,$lastname,$userName,$password,$position,$sEmail,$phone,$file_name);
-       	$data['tutor'] = $this->users_model->getTutorData($tutorId);
+		$this->users_model->editTutor($tutorId,$company,$firstname,$lastname,$userName,$password,$position,$sEmail,$phone,$file_name);
+		$data['tutor'] = $this->users_model->getTutorData($tutorId);
 		$data['activeLink'] = 'Tutor';
 		$this->load->view('templates/header.php',$data);
 		$this->load->view('menu/index.php',$data);
@@ -295,7 +295,7 @@ class Welcome_IF extends CI_Controller {
 		$this->users_model->deleteTutor($tutorId);
 		$this->load->helper('form');
 		$this->load->Model('users_model');
-        $data['tutor'] = $this->users_model->getTutorData();
+		$data['tutor'] = $this->users_model->getTutorData();
 		$data['activeLink'] = 'Tutor';
 		$this->load->view('templates/header.php',$data);
 		$this->load->view('menu/index.php',$data);
@@ -307,7 +307,7 @@ class Welcome_IF extends CI_Controller {
 	{
 		$this->load->helper('form');
 		$this->load->Model('users_model');
-        $data['supervisor'] = $this->users_model->getSupervisorData();
+		$data['supervisor'] = $this->users_model->getSupervisorData();
 		$data['activeLink'] = 'supervisor';
 		$this->load->view('templates/header.php',$data);
 		$this->load->view('menu/index.php',$data);
@@ -330,52 +330,67 @@ class Welcome_IF extends CI_Controller {
 	}
 	public function addSupervisor()
 	{
-		$this->load->library('form_validation');
-		$this->form_validation->set_rules("firstname", "First Name",'trim|required|min_length[3]|max_length[15]');
-		$this->form_validation->set_rules("lastname" ,"Last Name",'trim|required|min_length[3]|max_length[20]');
-		$this->form_validation->set_rules("company" ,"Company Name",'trim|required|min_length[0]|max_length[50]');
-		$this->form_validation->set_rules("student" ,"Student Name",'trim|required|min_length[0]|max_length[50]');
-		$this->form_validation->set_rules("username" ,"User Name",'trim|required|min_length[3]|max_length[100]');
-		$this->form_validation->set_rules("password" ,"Password",'trim|required|min_length[0]|max_length[100]');
-		$this->form_validation->set_rules("position" ,"Position",'trim|required|min_length[3]|max_length[10]');
-		$this->form_validation->set_rules("email" ,"School Email",'trim|required|min_length[0]|max_length[100]');
-		$this->form_validation->set_rules("phone" ,"Mobile Number",'trim|required|min_length[0]|max_length[25]|required|regex_match[/^[0-9]{10}$/]');
-		$this->form_validation->set_rules("image" ,"Picture Profile",'trim|required|min_length[0]|max_length[100]');
+		// $this->load->library('form_validation');
+		// $this->form_validation->set_rules("firstname", "First Name",'trim|required|min_length[3]|max_length[15]');
+		// $this->form_validation->set_rules("lastname" ,"Last Name",'trim|required|min_length[3]|max_length[20]');
+		// $this->form_validation->set_rules("company" ,"Company Name",'trim|required|min_length[0]|max_length[50]');
+		// $this->form_validation->set_rules("student" ,"Student Name",'trim|required|min_length[0]|max_length[50]');
+		// $this->form_validation->set_rules("username" ,"User Name",'trim|required|min_length[3]|max_length[100]');
+		// $this->form_validation->set_rules("password" ,"Password",'trim|required|min_length[0]|max_length[100]');
+		// $this->form_validation->set_rules("position" ,"Position",'trim|required|min_length[3]|max_length[10]');
+		// $this->form_validation->set_rules("email" ,"School Email",'trim|required|min_length[0]|max_length[100]');
+		// $this->form_validation->set_rules("phone" ,"Mobile Number",'trim|required|min_length[0]|max_length[25]|required|regex_match[/^[0-9]{10}$/]');
+		// $this->form_validation->set_rules("image" ,"Picture Profile",'trim|required|min_length[0]|max_length[100]');
 
-		if ($this->form_validation->run() == FALSE) {
-			$this->load->helper('form');
-			$this->load->Model('users_model');
-			$data['company'] = $this->users_model->getCompanyData();
-			$data['student'] = $this->users_model->getSuStudent();
-			$data['activeLink'] = 'supervisor';
-			$this->load->view('templates/header.php',$data);
-			$this->load->view('menu/index.php',$data);
-			$this->load->view('pages/supervisor/createSupervisor.php',$data);
-			$this->load->view('templates/footer.php');
-		}else{
-			$this->load->helper('form');
-			$firstname = $this->input->post("firstname");
-			$lastname = $this->input->post("lastname");
-			$username = $this->input->post("username");
-			$password = $this->input->post("password");
-			$company = $this->input->post("company");
-			$student = $this->input->post("student");
-			$this->load->Model('users_model');
-			$studntId = $this->users_model->getStuId($student);
-			$position = $this->input->post("position");
-			$sEmail = $this->input->post("email");
-			$phone = $this->input->post("phone");
-			$this->load->Model('users_model');
-	       	$this->users_model->addSupervisor($company,$studntId,$firstname,$lastname,$username,$password,$position,$sEmail,$phone);
-	       	$this->load->helper('form');
-			$this->load->Model('users_model');
-	        $data['supervisor'] = $this->users_model->getSupervisorData();
-			$data['activeLink'] = 'supervisor';
-			$this->load->view('templates/header.php',$data);
-			$this->load->view('menu/index.php',$data);
-			$this->load->view('pages/supervisor/index.php');
-			$this->load->view('templates/footer.php');				
-		//}	
+		// if ($this->form_validation->run() == FALSE) {
+		// 	$this->load->helper('form');
+		// 	$this->load->Model('users_model');
+		// 	$data['company'] = $this->users_model->getCompanyData();
+		// 	$data['student'] = $this->users_model->getSuStudent();
+		// 	$data['activeLink'] = 'supervisor';
+		// 	$this->load->view('templates/header.php',$data);
+		// 	$this->load->view('menu/index.php',$data);
+		// 	$this->load->view('pages/supervisor/createSupervisor.php',$data);
+		// 	$this->load->view('templates/footer.php');
+		// }else{
+		$this->load->helper('form');
+		$firstname = $this->input->post("firstname");
+		$lastname = $this->input->post("lastname");
+		$username = $this->input->post("username");
+		$password = $this->input->post("password");
+		$company = $this->input->post("company");
+		$student = $this->input->post("student");
+			// Upload Images
+		$config['upload_path']          = './assets/images/users/';
+		$config['allowed_types']        = 'gif|jpg|png';
+		$config['max_size']             = 10024;
+		$config['max_width']            = 10024;
+		$config['max_height']           = 7680;
+		$this->load->library('Upload',$config);
+		if (!$this->upload->do_upload('image')) {
+			$error = array('error'=>$this->upload->display_errors());
+			echo "Error Upload Image!";die();
+		}
+		$iData = array('upload_data'=>$this->upload->data());
+		foreach ($iData as $iData):
+			$file_name = $iData['file_name'];
+		endforeach;
+		$this->load->Model('users_model');
+		$studntId = $this->users_model->getStuId($student);
+		$position = $this->input->post("position");
+		$sEmail = $this->input->post("email");
+		$phone = $this->input->post("phone");
+		$this->load->Model('users_model');
+		$this->users_model->addSupervisor($company,$studntId,$firstname,$lastname,$username,$password,$position,$sEmail,$phone,$file_name);
+		$this->load->helper('form');
+		$this->load->Model('users_model');
+		$data['supervisor'] = $this->users_model->getSupervisorData();
+		$data['activeLink'] = 'supervisor';
+		$this->load->view('templates/header.php',$data);
+		$this->load->view('menu/index.php',$data);
+		$this->load->view('pages/supervisor/index.php');
+		$this->load->view('templates/footer.php');				
+		// }	
 	}
 	
 	public function deleteSupervisor()
@@ -425,13 +440,28 @@ class Welcome_IF extends CI_Controller {
 		$password = $this->input->post("password");
 		$company = $this->input->post("company");
 		$student = $this->input->post("student");
+		// Upload Images
+		$config['upload_path']          = './assets/images/users/';
+		$config['allowed_types']        = 'gif|jpg|png';
+		$config['max_size']             = 10024;
+		$config['max_width']            = 10024;
+		$config['max_height']           = 7680;
+		$this->load->library('Upload',$config);
+		if (!$this->upload->do_upload('image')) {
+			$error = array('error'=>$this->upload->display_errors());
+			echo "Error Upload Image!";die();
+		}
+		$iData = array('upload_data'=>$this->upload->data());
+		foreach ($iData as $iData):
+			$file_name = $iData['file_name'];
+		endforeach;
 		$this->load->Model('users_model');
 		$studntId = $this->users_model->getStuId($student);
 		$position = $this->input->post("position");
 		$sEmail = $this->input->post("email");
 		$phone = $this->input->post("phone");
-		$this->users_model->editSupervisor($suId,$company,$studntId,$firstname,$lastname,$username,$password,$position,$sEmail,$phone);
-        $data['supervisor'] = $this->users_model->getSupervisorData();
+		$this->users_model->editSupervisor($suId,$company,$studntId,$firstname,$lastname,$username,$password,$position,$sEmail,$phone,$file_name);
+		$data['supervisor'] = $this->users_model->getSupervisorData();
 		$data['activeLink'] = 'supervisor';
 		$this->load->view('templates/header.php',$data);
 		$this->load->view('menu/index.php',$data);
@@ -452,7 +482,7 @@ class Welcome_IF extends CI_Controller {
 	{
 		$this->load->helper('form');
 		$this->load->Model('users_model');
-	    $data['student'] = $this->users_model->getStudentData();
+		$data['student'] = $this->users_model->getStudentData();
 		$data['activeLink'] = 'student';
 		$this->load->view('templates/header.php',$data);
 		$this->load->view('menu/index.php',$data);
@@ -499,8 +529,23 @@ class Welcome_IF extends CI_Controller {
 		$year = $this->input->post("year");
 		$peremail = $this->input->post("peremail");
 		$schoolemail = $this->input->post("schoolemail");
+		// Upload Images
+		$config['upload_path']          = './assets/images/users/';
+		$config['allowed_types']        = 'gif|jpg|png';
+		$config['max_size']             = 10024;
+		$config['max_width']            = 10024;
+		$config['max_height']           = 7680;
+		$this->load->library('Upload',$config);
+		if (!$this->upload->do_upload('image')) {
+			$error = array('error'=>$this->upload->display_errors());
+			echo "Error Upload Image!";die();
+		}
+		$iData = array('upload_data'=>$this->upload->data());
+		foreach ($iData as $iData):
+			$file_name = $iData['file_name'];
+		endforeach;
 		$this->load->Model('users_model');
-		$this->users_model->editStudent($stuId,$firstname,$lastname,$username,$password,$supervisor,$phone,$batch,$year,$peremail,$schoolemail);
+		$this->users_model->editStudent($stuId,$firstname,$lastname,$username,$password,$supervisor,$phone,$batch,$year,$peremail,$schoolemail,$file_name);
 		$data['student'] = $this->users_model->getStudentData();
 		$data['activeLink'] = 'student';
 		$this->load->view('templates/header.php',$data);
@@ -521,59 +566,74 @@ class Welcome_IF extends CI_Controller {
 	}
 	public function newStudent()
 	{
-		$this->load->library('form_validation');
-		$this->form_validation->set_rules("firstname", "First Name",'trim|required|min_length[3]|max_length[15]');
-		$this->form_validation->set_rules("lastname" ,"Last Name",'trim|required|min_length[3]|max_length[15]');
-		$this->form_validation->set_rules("username" ,"User Name",'trim|required|min_length[0]|max_length[50]');
-		$this->form_validation->set_rules("password" ,"Password",'trim|required|min_length[0]|max_length[50]');
-		$this->form_validation->set_rules("phone" ,"Phone Number",'trim|required|min_length[3]|max_length[25]');
-		$this->form_validation->set_rules("batch" ,"Batch",'trim|required|min_length[0]|max_length[100]');
-		$this->form_validation->set_rules("supervisor" ,"Supervisor",'trim|required|min_length[3]|max_length[10]');
-		$this->form_validation->set_rules("year" ,"Year",'trim|required|min_length[0]|max_length[100]');
-		$this->form_validation->set_rules("peremail" ,"Personal email",'trim|required|min_length[0]|max_length[100]|required');
-		//$this->form_validation->set_rules("hired" ,"Hired",'trim|required');
-		$this->form_validation->set_rules("schoolemail" ,"School email",'trim|required|min_length[0]|max_length[100]');
-		//$this->form_validation->set_rules("btn-submit" ,"Choose File",'trim|required');
+		// $this->load->library('form_validation');
+		// $this->form_validation->set_rules("firstname", "First Name",'trim|required|min_length[3]|max_length[15]');
+		// $this->form_validation->set_rules("lastname" ,"Last Name",'trim|required|min_length[3]|max_length[15]');
+		// $this->form_validation->set_rules("username" ,"User Name",'trim|required|min_length[0]|max_length[50]');
+		// $this->form_validation->set_rules("password" ,"Password",'trim|required|min_length[0]|max_length[50]');
+		// $this->form_validation->set_rules("phone" ,"Phone Number",'trim|required|min_length[3]|max_length[25]');
+		// $this->form_validation->set_rules("batch" ,"Batch",'trim|required|min_length[0]|max_length[100]');
+		// $this->form_validation->set_rules("supervisor" ,"Supervisor",'trim|required|min_length[3]|max_length[10]');
+		// $this->form_validation->set_rules("year" ,"Year",'trim|required|min_length[0]|max_length[100]');
+		// $this->form_validation->set_rules("peremail" ,"Personal email",'trim|required|min_length[0]|max_length[100]|required');
+		// //$this->form_validation->set_rules("hired" ,"Hired",'trim|required');
+		// $this->form_validation->set_rules("schoolemail" ,"School email",'trim|required|min_length[0]|max_length[100]');
+		// //$this->form_validation->set_rules("btn-submit" ,"Choose File",'trim|required');
 
-		if ($this->form_validation->run() == FALSE) {
-			$this->load->helper('form');
-			$this->load->Model('users_model');
-			$data['sSupervisor'] = $this->users_model->getSupervisor();
-			$data['activeLink'] = 'student';
-			$this->load->view('templates/header.php',$data);
-			$this->load->view('menu/index.php',$data);
-			$this->load->view('pages/student/addstudent' );
-			$this->load->view('templates/footer.php');
-		}else{
-			$this->load->helper('form');
-			$firstname = $this->input->post("firstname");
-			$lastname = $this->input->post("lastname");
-			$username = $this->input->post("username");
-			$password = $this->input->post("password");
-			$supervisor = $this->input->post("supervisor");
-			$phone = $this->input->post("phone");
-			$batch = $this->input->post("batch");
-			$year = $this->input->post("year");
-			$peremail = $this->input->post("peremail");
-			$schoolemail = $this->input->post("schoolemail");
-			$this->load->Model('users_model');
-			$this->users_model->newStudent($firstname,$lastname,$username,$password,$supervisor,$phone,$batch,$year,$peremail,$schoolemail);
-			$this->load->helper('form');
-			$this->load->Model('users_model');
-		    $data['student'] = $this->users_model->getStudentData();
-			$data['activeLink'] = 'student';
-			$this->load->view('templates/header.php',$data);
-			$this->load->view('menu/index.php',$data);
-			$this->load->view('pages/student/index.php',$data);
-			$this->load->view('templates/footer.php');			
-		}	
+		// if ($this->form_validation->run() == FALSE) {
+		// 	$this->load->helper('form');
+		// 	$this->load->Model('users_model');
+		// 	$data['sSupervisor'] = $this->users_model->getSupervisor();
+		// 	$data['activeLink'] = 'student';
+		// 	$this->load->view('templates/header.php',$data);
+		// 	$this->load->view('menu/index.php',$data);
+		// 	$this->load->view('pages/student/addstudent' );
+		// 	$this->load->view('templates/footer.php');
+		// }else{
+		$this->load->helper('form');
+		$firstname = $this->input->post("firstname");
+		$lastname = $this->input->post("lastname");
+		$username = $this->input->post("username");
+		$password = $this->input->post("password");
+		$supervisor = $this->input->post("supervisor");
+		$phone = $this->input->post("phone");
+		$batch = $this->input->post("batch");
+		$year = $this->input->post("year");
+		$peremail = $this->input->post("peremail");
+		$schoolemail = $this->input->post("schoolemail");
+		// Upload Images
+		$config['upload_path']          = './assets/images/users/';
+		$config['allowed_types']        = 'gif|jpg|png';
+		$config['max_size']             = 10024;
+		$config['max_width']            = 10024;
+		$config['max_height']           = 7680;
+		$this->load->library('Upload',$config);
+		if (!$this->upload->do_upload('image')) {
+			$error = array('error'=>$this->upload->display_errors());
+			echo "Error Upload Image!";die();
+		}
+		$iData = array('upload_data'=>$this->upload->data());
+		foreach ($iData as $iData):
+			$file_name = $iData['file_name'];
+		endforeach;
+		$this->load->Model('users_model');
+		$this->users_model->newStudent($firstname,$lastname,$username,$password,$supervisor,$phone,$batch,$year,$peremail,$schoolemail,$file_name);
+		$this->load->helper('form');
+		$this->load->Model('users_model');
+		$data['student'] = $this->users_model->getStudentData();
+		$data['activeLink'] = 'student';
+		$this->load->view('templates/header.php',$data);
+		$this->load->view('menu/index.php',$data);
+		$this->load->view('pages/student/index.php',$data);
+		$this->load->view('templates/footer.php');			
+		// }	
 	}
 	public function deleteStudent()
 	{
 		$stuId = $_GET['id'];
 		$this->load->Model('users_model');
 		$this->users_model->deleteStudent($stuId);
-	    $data['student'] = $this->users_model->getStudentData();
+		$data['student'] = $this->users_model->getStudentData();
 		$data['activeLink'] = 'student';
 		$this->load->view('templates/header.php',$data);
 		$this->load->view('menu/index.php',$data);
@@ -644,7 +704,7 @@ class Welcome_IF extends CI_Controller {
 		$stuId = $_GET['id'];
 		$this->load->helper('form');
 		$this->load->Model('users_model');
-	    $data['comment'] = $this->users_model->getComment($stuId);
+		$data['comment'] = $this->users_model->getComment($stuId);
 		$data['activeLink'] = 'student';
 		$this->load->view('templates/header.php',$data);
 		$this->load->view('menu/index.php',$data);

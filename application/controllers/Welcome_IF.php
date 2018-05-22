@@ -78,9 +78,11 @@ class Welcome_IF extends CI_Controller {
 		$description = $this->input->post("itemdescription");
 		$location = $this->input->post("location");
 		$phone = $this->input->post("phone");
+		$lat = $this->input->post("lat");
+		$lng = $this->input->post("long");
 		$address = $this->input->post("postaladdress");
 		$url = $this->input->post("url");
-		$this->users_model->editCompany($companyId,$name,$address,$phone,$description,$location,$url);
+		$this->users_model->editCompany($companyId,$name,$address,$phone,$description,$location,$lat,$lng,$url);
 		$data['company'] = $this->users_model->getCompanyData();
 		$data['activeLink'] = 'Company';
 		$this->load->view('templates/header.php',$data);
@@ -102,7 +104,7 @@ class Welcome_IF extends CI_Controller {
 		$this->form_validation->set_rules("name", "Company Name",'trim|required|min_length[0]|max_length[100]');
 		$this->form_validation->set_rules("itemdescription" ,"Company discription",'trim|required|min_length[0]|max_length[200]');
 		$this->form_validation->set_rules("postaladdress" ,"Company Address",'trim|required|min_length[0]|max_length[100]');
-		$this->form_validation->set_rules("location" ,"Company location",'trim|required|min_length[0]|max_length[100]');
+		$this->form_validation->set_rules("address" ,"Company location",'trim|required|min_length[0]|max_length[100]');
 		// $this->form_validation->set_rules("phone" ,"Mobile Number",'trim|required|min_length[0]|max_length[20]|required|regex_match[/^[0-9]{10}$/]');
 		$this->form_validation->set_rules("url" ,"Company Website",'trim|required|min_length[0]|max_length[50]');
 		if ($this->form_validation->run() == FALSE) {
@@ -116,19 +118,22 @@ class Welcome_IF extends CI_Controller {
 			$this->load->Model('users_model');
 			$name = $this->input->post("name");
 			$description = $this->input->post("itemdescription");
-			$location = $this->input->post("location");
 			$phone = $this->input->post("phone");
 			$address = $this->input->post("postaladdress");
+			$location = $this->input->post("address");
+			$lat =$this->input->post("lat");
+			$lng =$this->input->post("long");
 			$url = $this->input->post("url");
-			$this->users_model->addCompany($name,$address,$phone,$description,$location,$url);
+			$this->users_model->addCompany($name,$address,$phone,$description,$location,$lat,$lng,$url);
 			$data['company'] = $this->users_model->getCompanyData();
 			$data['activeLink'] = 'Company';
 			$this->load->view('templates/header.php',$data);
-			$this->load->view('menu/index.php',$data);
+			$this->load->view('IF/menu/index.php',$data);
 			$this->load->view('pages/company/index.php',$data);
 			$this->load->view('templates/footer.php');
 		}
 	}
+
 	public function deleteCompany()
 	{
 		$this->load->Model('users_model');

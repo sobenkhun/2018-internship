@@ -99,22 +99,27 @@ class Users_model extends CI_Model {
         return $query->result_array();
     }
 
-    public function addCompany($name,$address,$phone,$description,$location,$url)
+    public function addCompany($name,$address,$phone,$description,$location,$lat,$lng,$url)
     {
         $data = array('name'=>$name,
                      'itemdescription'=>$description,
                      'postaladdress'=>$address,
                      'location'=>$location,
                      'phone'=>$phone,
+                     'lat'=>$lat,
+                    'lng'=>$lng,
                      'url'=>$url);
                      $this->db->insert('company',$data);
+                      
     }
-    public function editCompany($id,$name,$address,$phone,$description,$location,$url)
+    public function editCompany($id,$name,$address,$phone,$description,$location,$lat,$lng,$url)
     {
         $data = array('name'=>$name,
                      'itemdescription'=>$description,
                      'postaladdress'=>$address,
                      'location'=>$location,
+                     'lat'=>$lat,
+                     'lng'=>$lng,
                      'phone'=>$phone,
                      'url'=>$url);
         $this->db->where('id', $id);

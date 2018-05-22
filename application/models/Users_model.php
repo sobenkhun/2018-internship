@@ -141,7 +141,7 @@ class Users_model extends CI_Model {
         $query = $this->db->get_where('tutor', array('id' => $tutorId));
         return $query->result_array();  
     }
-    public function addTutor($company,$firstname,$lastname,$username,$password,$position,$sEmail,$phone)
+    public function addTutor($company,$firstname,$lastname,$username,$password,$position,$sEmail,$phone,$file_name)
     {
         $this->db->select("id");
         $this->db->from("company");
@@ -166,7 +166,7 @@ class Users_model extends CI_Model {
                  );
         $this->db->insert('tutor', $data);
     }
-    public function editTutor($id,$company,$firstname,$lastname,$username,$password,$position,$sEmail,$phone)
+    public function editTutor($id,$company,$firstname,$lastname,$username,$password,$position,$sEmail,$phone,$file_name)
     {
         $this->db->select("id");
         $this->db->from("company");
@@ -182,6 +182,7 @@ class Users_model extends CI_Model {
                      'username' =>$username,
                      'company_id' =>$company_id,
                      'position'=>$position,
+                     'picture'=>$file_name,
                      'email'=>$sEmail,
                      'phone'=>$phone
                  );
@@ -587,6 +588,7 @@ class Users_model extends CI_Model {
             if ($hash == $row->password) {
             // var_dump($hash."".$row->password);die();
                 // Password does match stored password.
+                // var_dump($row);die();
                 $this->loadProfile($row);
                 // var_dump($row->userrole_id);die();
                 return $row->userrole_id;

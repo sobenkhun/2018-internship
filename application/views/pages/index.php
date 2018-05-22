@@ -83,7 +83,7 @@
         type: 'bar',
         data: {
           labels: [
-                    <?php foreach ($student_bar as $student_bar):?>
+                     <?php foreach ($student_bar as $student_bar):?>
                        <?php echo "' ".$student_bar['name']." ' ,"; ?>
                       <?php endforeach ?>
                    ],

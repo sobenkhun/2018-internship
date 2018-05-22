@@ -26,6 +26,7 @@ class Connection extends CI_Controller {
 				$data['title'] = 'Login';
 				$data['flashPartialView'] = $this->load->view('templates/flash', $data, TRUE);
 				// $this->load->view('templates/header', $data);
+				$this->session->set_flashdata('error_msg', 'Error occured,Try again.');
 				$this->load->view('login/login', $data);
 				// $this->load->view('templates/footer');
 			} else {

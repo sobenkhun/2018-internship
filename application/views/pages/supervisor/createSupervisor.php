@@ -76,7 +76,7 @@
 						<label class="col-sm-4 col-form-label" for="">Phone number</label>
 						<div class="col-sm-8">
 							<input type="text" name="image" id="" class="form-control" placeholder="...">
-							<span class="required text-danger"><?php echo form_error("phone"); ?></span>
+							<!-- <span class="required text-danger"><?php //echo form_error("phone"); ?></span> -->
 						</div>
 					</div>
 					<div class="form-group row col-md-6 group-col-stu">

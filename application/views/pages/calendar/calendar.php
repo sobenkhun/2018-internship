@@ -28,19 +28,19 @@
                     <input type="hidden" id="end">
                     <div class="form-group">
                         <label class="col-md-4 control-label" for="title">Title</label>
-                        <div class="col-md-4">
+                        <div class="col-md-12">
                             <input id="title" name="title" type="text" class="form-control input-md" />
                         </div>
                     </div>                            
                     <div class="form-group">
                         <label class="col-md-4 control-label" for="description">Description</label>
-                        <div class="col-md-4">
+                        <div class="col-md-12">
                             <textarea class="form-control" id="description" name="description"></textarea>
                         </div>
                     </div>
                     <div class="form-group">
                         <label class="col-md-4 control-label" for="color">Color</label>
-                        <div class="col-md-4">
+                        <div class="col-md-12">
                             <input id="color" name="color" type="text" class="form-control input-md" readonly="readonly" />
                             <span class="help-block">Click to pick a color</span>
                         </div>

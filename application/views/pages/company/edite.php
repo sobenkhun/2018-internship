@@ -34,8 +34,8 @@
 			<br>	
 			<?php foreach ($company as $company):?>
 				<?php 
-					echo $lat = $company['lat'];
-					echo $lng = $company['lng'];
+					 $lat = $company['lat'];
+					 $lng = $company['lng'];
 				 ?>
 				<form action="<?php echo base_url();?>Welcome_IF/seEediteCompany?&id=<?php echo $company['id'] ?>" method="post">
 					<div class="form-row">

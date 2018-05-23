@@ -15,7 +15,7 @@
 </style>
 
 <!-- jQuery library -->
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> 
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
 <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?key=AIzaSyBAjaIzPJQY_nrDt5zi2ayk1BfeQOHo7Kk&sensor=false&libraries=places"></script>
 <script type="text/javascript" src="<?php echo base_url(); ?>assets/map-plugin/dist/locationpicker.jquery.js"></script>
@@ -191,11 +191,12 @@
 								$('#us6-dialog').on('shown.bs.modal', function () {
 									$('#us3').locationpicker('autosize');
 								});
-
-								$('#getaddress').click(function(){ 
-				                   var address = $('#us3-address').val(); 
+								$(document).ready(function(){
+									$('#getaddress').click(function(){ 
+									    var address = $('#us3-address').val(); 
 									$('#address').attr('value',address); 
-				 				});
+									 });
+								 });
 
 							</script>
 							</div>

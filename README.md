@@ -1,6 +1,4 @@
-############################
 # Internship Followup System
-############################
 
 Internship Followup System is using interface.
 
@@ -32,10 +30,10 @@ Internship Followup system is designed for ERO team departermant and Tutor or Tr
 ### How to use this system?
 
 	It's really easy for user to use. It need browser to open it and after you can login to this system if you have the user and password for log.
-````````
+
 **Example on the Kratie server at PNC:** 
 		[http://kratie/2018vc2gb/](http://kratie/2018vc2gb)
-````````
+
 ### Referent of system’s building
 
 * This system using CodeInigter, MVC concept, JavaScript, jQuery to develop.

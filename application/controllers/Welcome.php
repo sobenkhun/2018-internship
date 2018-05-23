@@ -6,19 +6,19 @@ class Welcome extends CI_Controller {
 	//Default constructor
 	function __construct()
 	{
-			parent::__construct();
-			log_message('debug', 'URI=' . $this->uri->uri_string());
+		parent::__construct();
+		log_message('debug', 'URI=' . $this->uri->uri_string());
 	}
 
 	public function index()
 	{
 		$this->load->Model('users_model');
 		$data['supervisor'] = $this->users_model->suNumRow();
-        $data['company'] = $this->users_model->CNumRow();
-        $data['tutor'] = $this->users_model->TNumRow();
-        $data['student'] = $this->users_model->sNumRow();
-        $data['student_bar'] = $this->users_model->getCompanyName();
-        $data['numstu'] = $this->users_model->getNumStu();
+		$data['company'] = $this->users_model->CNumRow();
+		$data['tutor'] = $this->users_model->TNumRow();
+		$data['student'] = $this->users_model->sNumRow();
+		$data['student_bar'] = $this->users_model->getCompanyName();
+		$data['numstu'] = $this->users_model->getNumStu();
 		$data['activeLink'] = 'company';
 		$this->load->view('IF/template/header', $data);
 		$this->load->view('menu/index', $data);

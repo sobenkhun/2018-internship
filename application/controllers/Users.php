@@ -169,7 +169,7 @@ class Users extends CI_Controller {
           if ($this->config->item('from_mail') != FALSE && $this->config->item('from_name') != FALSE ) {
               $this->email->from($this->config->item('from_mail'), $this->config->item('from_name'));
           } else {
-              $this->email->from('do.not@reply.me', 'LMS');
+              $this->email->from('pnc.temporary.vc2018@passerellesnumeriques.org', 'LMS');
           }
           $this->email->to($user['email']);
           $subject = $this->config->item('subject_prefix');
@@ -237,7 +237,7 @@ class Users extends CI_Controller {
             if ($this->config->item('from_mail') != FALSE && $this->config->item('from_name') != FALSE ) {
                 $this->email->from($this->config->item('from_mail'), $this->config->item('from_name'));
             } else {
-               $this->email->from('do.not@reply.me', 'Skeleton app');
+               $this->email->from('pnc.temporary.vc2018@passerellesnumeriques.org', 'Skeleton app');
             }
             $this->email->to($this->input->post('email'));
             if ($this->config->item('subject_prefix') != FALSE) {

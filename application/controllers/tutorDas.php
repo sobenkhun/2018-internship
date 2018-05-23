@@ -16,6 +16,8 @@ class tutorDas extends CI_Controller {
 		$data['company'] = $this->users_model->CNumRow();
 		$data['tutor'] = $this->users_model->TNumRow();
 	    $data['student'] = $this->users_model->sNumRow();
+	    $data['student_bar'] = $this->users_model->getCompanyName();
+	    $data['numstu'] = $this->users_model->getNumStu();
 		$data['activeLink'] = 'Home Page';
 		$this->load->view('templates/header.php',$data);
 		$this->load->view('menu/tutor.php',$data);
@@ -227,9 +229,8 @@ class tutorDas extends CI_Controller {
 		$data['activeLink'] = 'calendar';
 		$this->load->view('templates/header.php',$data);
 		$this->load->view('menu/tutor.php',$data);
-
 		$this->load->view('tutorDashboard/calendar/index.php',$data);
-		//$this->load->view('templates/footer.php');
+		$this->load->view('templates/footer.php');
 		
 		}
 		

@@ -1,39 +1,3 @@
-<!-- Styles
-<style>
-	#contact label{
-		display: inline-block;
-		width: 100px;
-		text-align: right;
-	}
-	#contact_submit{
-		padding-left: 100px;
-	}
-	#contact div{
-		margin-top: 1em;
-	}
-	textarea{
-		vertical-align: top;
-		height: 5em;
-	}
-		
-	.error{
-		display: none;
-		margin-left: 10px;
-	}		
-	
-	.error_show{
-		color: red;
-		margin-left: 10px;
-	}
-	
-	input.invalid, textarea.invalid{
-		border: 1px solid red;
-	}
-	
-	input.valid, textarea.valid{
-		border: 1px solid green;
-	}
-</style> -->
 
 <?php
 /**
@@ -48,7 +12,9 @@
 <style>
 .pac-container {
 	z-index: 99999;
+
 }
+
 </style>
 
 <!-- jQuery library -->
@@ -163,7 +129,7 @@
 					</div>
 					<div class="col-md-4"></div>
 				</div>
-				<div id="us6-dialog" class="modal fade">
+				<div id="us6-dialog" class="modal fade " >
 					<div class="modal-dialog modal-lg">
 						<div class="modal-content">
 							<div class="modal-header">
@@ -175,7 +141,7 @@
 							</button>
 							<h4 class="modal-title">Company location</h4>
 						</div>
-						<div class="modal-body" >
+						<div class="modal-body" id="moalBody" >
 							<div class="form-group">
 								<label class="col-sm-2 control-label">Location:</label>
 								<div class="col-sm-10">
@@ -227,12 +193,12 @@
 								$('#us6-dialog').on('shown.bs.modal', function () {
 									$('#us3').locationpicker('autosize');
 								});
-
-								$('#getaddress').click(function(){ 
-				          var address = $('#us3-address').val(); 
-									$('#address').attr('value',address); 
-				 				});
-
+								$(document).ready(function(){
+									$('#getaddress').click(function(){ 
+					                   var address = $('#us3-address').val(); 
+										$('#address').attr('value',address); 
+					 				});
+								});
 							</script>
 						</div>
 						<div class="modal-footer">

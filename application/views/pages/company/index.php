@@ -1,10 +1,24 @@
-
 <div class="container  ">
   <div class="row">
     <div class="col-md-12">
       <h2 class="text-center text-primary"><strong>Companies List</strong></h2>
     </div>
   </div>
+  <!-- massage insert successfull -->
+  <?php if (isset($message)) { ?>
+    <div class="alert"></div>
+    <script>
+
+      $('.alert').addClass('alert-success').text('Data Inserted Successfully');
+      $(function () {
+        setTimeout(function(){
+          document.querySelector('.alert').style.display = 'none';
+        },3000);
+      });
+      
+    </script>
+  <?php } ?>
+
   <div class="row">
     <div class="col-md-12 ">
       <table id="example" class="table table-striped table-bordered bg-white">

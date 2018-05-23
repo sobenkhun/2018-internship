@@ -127,6 +127,7 @@ class Welcome_IF extends CI_Controller {
 			$url = $this->input->post("url");
 			$this->users_model->addCompany($name,$address,$phone,$description,$location,$url);
 			$data['company'] = $this->users_model->getCompanyData();
+			$data['message'] = 'Data Inserted Successfully';
 			$data['activeLink'] = 'Company';
 			$this->load->view('templates/header.php',$data);
 			$this->load->view('menu/index.php',$data);
@@ -314,8 +315,6 @@ class Welcome_IF extends CI_Controller {
 		$this->load->view('pages/supervisor/index.php');
 		$this->load->view('templates/footer.php');
 	}
-
-
 	public function createSupervisor()
 	{
 		$this->load->helper('form');
@@ -375,7 +374,7 @@ class Welcome_IF extends CI_Controller {
 			$this->load->view('menu/index.php',$data);
 			$this->load->view('pages/supervisor/index.php');
 			$this->load->view('templates/footer.php');				
-		//}	
+		}	
 	}
 	
 	public function deleteSupervisor()
@@ -659,4 +658,21 @@ class Welcome_IF extends CI_Controller {
 		$this->load->view('pages/student/addComment.php');
 		$this->load->view('templates/footer.php');
 	}
+
+
+	public function sendMail(){
+	  $this->load->library('email');
+	  $this->load->model('users_model');
+	  
+	  $this->email->from('pnc.temporary.vc2018@passerellesnumeriques.org', 'Booking Management');
+	  $this->email->to('chhunhak.chhoeung@student.passerellesnumeriques.org', "Chhunhak CHHOEUNG");
+	  $this->email->subject('Request booking Room at ');
+	  $this->email->message('Dear ');
+	  if ($this->email->send()) {
+	   return true;
+	  }else{
+	   return $this->email->print_debugger();;
+	  }
+	  
+	 }
 }

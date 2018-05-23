@@ -720,6 +720,7 @@ class Welcome_IF extends CI_Controller {
 		$this->load->view('pages/student/comment.php',$data);
 		$this->load->view('templates/footer.php');
 	}
+	//add comment
 	public function addComment()
 	{
 		$data['activeLink'] = 'student';

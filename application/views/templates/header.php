@@ -19,6 +19,7 @@ $langCode= (isset($langCode)) ? $langCode :  "en";
   <link rel="stylesheet" href="<?php echo base_url();?>assets/DataTable/DataTables-1.10.16/css/dataTables.bootstrap4.min.css">
   <!-- Custom style skeleton -->
   <link rel="stylesheet" href="<?php echo base_url();?>assets/css/customCss.css">
+  <link rel="stylesheet" href="<?php echo base_url();?>assets/assets/css/custom.css">
   <!-- materil icon -->
   <link href="<?php echo base_url();?>assets/MDI-2.1.19/css/materialdesignicons.min.css" media="all" rel="stylesheet" type="text/css">
   <link rel="stylesheet" href="<?php echo base_url();?>assets/css/skeleton-1.0.0.css">

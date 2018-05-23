@@ -12,7 +12,9 @@
 <style>
 .pac-container {
 	z-index: 99999;
+
 }
+
 </style>
 
 <!-- jQuery library -->
@@ -127,7 +129,7 @@
 					</div>
 					<div class="col-md-4"></div>
 				</div>
-				<div id="us6-dialog" class="modal fade">
+				<div id="us6-dialog" class="modal fade " >
 					<div class="modal-dialog modal-lg">
 						<div class="modal-content">
 							<div class="modal-header">
@@ -139,7 +141,7 @@
 							</button>
 							<h4 class="modal-title">Company location</h4>
 						</div>
-						<div class="modal-body" >
+						<div class="modal-body" id="moalBody" >
 							<div class="form-group">
 								<label class="col-sm-2 control-label">Location:</label>
 								<div class="col-sm-10">

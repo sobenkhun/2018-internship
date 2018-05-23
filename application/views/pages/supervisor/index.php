@@ -12,8 +12,6 @@
                 <th>Supervisor Name</th>
                 <th>Company Name</th>
                 <th class="text-center">Questionnaire</th>
-
-                
                 <th class="text-center">Action</th>
             </tr>
         </thead>

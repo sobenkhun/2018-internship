@@ -12,7 +12,7 @@
 		<div class="rounded bg-white">	
 			<br>
 			<br>	
-			<form action="<?php echo base_url();?>Welcome_IF/addSupervisor" method="post">
+			<?php echo form_open_multipart('Welcome_IF/addSupervisor','class="form-horizontal"'); ?>
 				<div class="form-row">
 					<div class="form-group row col-md-6 group-col-stu">
 						<label class="col-sm-4 col-form-label" for="">First Name</label>
@@ -75,8 +75,8 @@
 					<div class="form-group row col-md-6 group-col-stu">
 						<label class="col-sm-4 col-form-label" for="">Phone number</label>
 						<div class="col-sm-8">
-							<input type="text" name="phone" id="" class="form-control" placeholder="...">
-							<span class="required text-danger"><?php echo form_error("phone"); ?></span>
+							<input type="text" name="image" id="" class="form-control" placeholder="...">
+							<!-- <span class="required text-danger"><?php //echo form_error("phone"); ?></span> -->
 						</div>
 					</div>
 					<div class="form-group row col-md-6 group-col-stu">
@@ -103,6 +103,6 @@
 				<br>
 				<br>
 				<div class="col-md-4"></div>
-			</form>
+			<?php echo form_close(); ?>
 		</div> 
 	</div>

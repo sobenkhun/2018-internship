@@ -8,16 +8,17 @@
 	<h3 class="card-title text-center text-primary"><strong>Student Profile</strong></h3><br>
 	<div class="row bg-white st-edit">
 		<div class="col-md-4">
+		<?php foreach ($student as $student):?>
+			<?php $imagepart =  "assets/images/users/".$student['sPic'];?> 
 			<br>
-			<img src="<?php echo base_url();?>assets/images/studentpiture.jpg" alt="" class="img-thumbnail" id="viewStudent">
+			<img src="<?php echo base_url();?><?php echo $imagepart; ?>" alt="" class="img-thumbnail" id="viewStudent">
+		 <?php endforeach ?>						
 			<div class="form-check text-center">
 				<label class="form-check-label">
 					<input class="form-check-input" type="checkbox"> Hired after internship 
 				</label>
 			</div>
 		</div>
-		<?php foreach ($student as $student):?>
-		 <?php endforeach ?>						
 		<table id="example" class="table table-striped table-bordered bg-white">
 		<div class="col-md-8"><br>
 			<label for="">First Name : </label> 

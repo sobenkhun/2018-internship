@@ -99,22 +99,27 @@ class Users_model extends CI_Model {
         return $query->result_array();
     }
 
-    public function addCompany($name,$address,$phone,$description,$location,$url)
+    public function addCompany($name,$address,$phone,$description,$location,$lat,$lng,$url)
     {
         $data = array('name'=>$name,
                      'itemdescription'=>$description,
                      'postaladdress'=>$address,
                      'location'=>$location,
                      'phone'=>$phone,
+                     'lat'=>$lat,
+                    'lng'=>$lng,
                      'url'=>$url);
                      $this->db->insert('company',$data);
+                      
     }
-    public function editCompany($id,$name,$address,$phone,$description,$location,$url)
+    public function editCompany($id,$name,$address,$phone,$description,$location,$lat,$lng,$url)
     {
         $data = array('name'=>$name,
                      'itemdescription'=>$description,
                      'postaladdress'=>$address,
                      'location'=>$location,
+                     'lat'=>$lat,
+                     'lng'=>$lng,
                      'phone'=>$phone,
                      'url'=>$url);
         $this->db->where('id', $id);
@@ -152,6 +157,7 @@ class Users_model extends CI_Model {
         $data = array('firstname'=>$firstname,
                      'lastname'=>$lastname,
                      'position'=>$position,
+                     'picture'=>$file_name,
                      'username' =>$username,
                      'password' =>$hash,
                      'company_id' =>$company_id,
@@ -225,7 +231,7 @@ class Users_model extends CI_Model {
             }
         return $stuId;
     }
-    public function addSupervisor($company,$student,$firstname,$lastname,$username,$password,$position,$sEmail,$phone)
+    public function addSupervisor($company,$student,$firstname,$lastname,$username,$password,$position,$sEmail,$phone,$file_name)
     {
         $this->db->select("id");
         $this->db->from("company");
@@ -241,6 +247,7 @@ class Users_model extends CI_Model {
         $data = array('firstname'=>$firstname,
                      'lastname'=>$lastname,
                      'position'=>$position,
+                     'picture'=>$file_name,
                      'username' =>$username,
                      'company_id' =>$company_id,
                      'password' =>$hash,
@@ -259,7 +266,7 @@ class Users_model extends CI_Model {
         $query = $this->db->get();
         return $query->result_array();
     }
-    public function editSupervisor($id,$company,$student,$firstname,$lastname,$username,$password,$position,$sEmail,$phone)
+    public function editSupervisor($id,$company,$student,$firstname,$lastname,$username,$password,$position,$sEmail,$phone,$file_name)
     {
             $this->db->select("id");
         $this->db->from("company");
@@ -274,6 +281,7 @@ class Users_model extends CI_Model {
                      'lastname'=>$lastname,
                      'position'=>$position,
                      'username' =>$username,
+                     'picture' =>$file_name,
                      'company_id' =>$company_id,
                      'password' =>$password,
                      'email'=>$sEmail,
@@ -303,7 +311,7 @@ class Users_model extends CI_Model {
     }
     public function viewStudentData($stuId)
     { 
-     $this->db->select("s.id,s.firstname as stuFName,s.lastname as stuLName,
+     $this->db->select("s.id,s.picture as sPic,s.firstname as stuFName,s.lastname as stuLName,
                             s.phone,s.peremail,s.schoolemail,s.batch,s.year,s.username,s.password,
                             su.firstname as suFName,su.lastname as suLName,
                             c.name,
@@ -323,7 +331,7 @@ class Users_model extends CI_Model {
         $query = $this->db->get();
         return $query->result_array();
     }
-    public function newStudent($firstname,$lastname,$username,$password,$supervisor,$phone,$batch,$year,$peremail,$schoolemail)
+    public function newStudent($firstname,$lastname,$username,$password,$supervisor,$phone,$batch,$year,$peremail,$schoolemail,$file_name)
     {
          $this->db->select("id");
         $this->db->from("getsuid");
@@ -342,6 +350,7 @@ class Users_model extends CI_Model {
                      'batch' =>$batch,
                      'year' =>$year,
                      'schoolemail' =>$schoolemail,
+                     'picture' =>$file_name,
                      'peremail' =>$peremail,
                      'phone'=>$phone,
                      'password'=>$hash,
@@ -350,7 +359,7 @@ class Users_model extends CI_Model {
                  );
         $this->db->insert('student', $data);
     }
-    public function editStudent($stuId,$firstname,$lastname,$username,$password,$supervisor,$phone,$batch,$year,$peremail,$schoolemail)
+    public function editStudent($stuId,$firstname,$lastname,$username,$password,$supervisor,$phone,$batch,$year,$peremail,$schoolemail,$file_name)
     {
         $this->db->select("id");
         $this->db->from("getsuid");
@@ -366,6 +375,7 @@ class Users_model extends CI_Model {
                      'lastname'=>$lastname,
                      'batch' =>$batch,
                      'year' =>$year,
+                     'picture' =>$file_name,
                      'schoolemail' =>$schoolemail,
                      'peremail' =>$peremail,
                      'phone'=>$phone,

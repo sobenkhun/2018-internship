@@ -109,11 +109,10 @@ class Welcome_IF extends CI_Controller {
 		$this->form_validation->set_rules("name", "Company Name",'trim|required|min_length[0]|max_length[100]');
 		$this->form_validation->set_rules("itemdescription" ,"Company discription",'trim|required|min_length[0]|max_length[200]');
 		$this->form_validation->set_rules("postaladdress" ,"Company Address",'trim|required|min_length[0]|max_length[100]');
-
 		$this->form_validation->set_rules("address" ,"Company location",'trim|required|min_length[0]|max_length[100]');
-		 // $this->form_validation->set_rules("phone" ,"Mobile Number",'trim|required|min_length[0]|max_length[20]|required|regex_match[/^[0-9]{10}$/]');
-
+		$this->form_validation->set_rules("phone" ,"Mobile Number",'trim|required|min_length[0]|max_length[25]');
 		$this->form_validation->set_rules("url" ,"Company Website",'trim|required|min_length[0]|max_length[50]');
+
 		if ($this->form_validation->run() == FALSE) {
 			$data['activeLink'] = 'Company';
 			$this->load->view('templates/header.php',$data);
@@ -189,7 +188,7 @@ class Welcome_IF extends CI_Controller {
 		$this->form_validation->set_rules("phone" ,"Mobile Number",'trim|required|min_length[0]|max_length[25]');
 		$this->form_validation->set_rules("password" ,"Password",'trim|required|min_length[0]|max_length[100]');
 		$this->form_validation->set_rules("sEmail" ,"School Email",'trim|required|min_length[0]|max_length[100]');
-		// $this->form_validation->set_rules("image" ,"Picture Profile",'trim|required|min_length[0]|max_length[100]');
+		$this->form_validation->set_rules("image" ,"Picture Profile",'trim|required|min_length[0]|max_length[1000]');
 		$this->form_validation->set_rules("company" ,"Company Name",'trim|required|min_length[0]|max_length[100]');
 
 		if ($this->form_validation->run() == FALSE) {

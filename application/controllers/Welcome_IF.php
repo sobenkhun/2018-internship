@@ -336,34 +336,15 @@ class Welcome_IF extends CI_Controller {
 	}
 	public function addSupervisor()
 	{
-		$this->load->library('form_validation');
-		$this->form_validation->set_rules("firstname", "First Name",'trim|required|min_length[3]|max_length[20]');
-		$this->form_validation->set_rules("lastname" ,"Last Name",'trim|required|min_length[3]|max_length[20]');
-		$this->form_validation->set_rules("company" ,"Company Name",'trim|required|min_length[0]|max_length[109]');
-		$this->form_validation->set_rules("student" ,"Student Name",'trim|required|min_length[0]|max_length[50]');
-		$this->form_validation->set_rules("username" ,"User Name",'trim|required|min_length[3]|max_length[100]');
-		$this->form_validation->set_rules("password" ,"Password",'trim|required|min_length[0]|max_length[100]');
-		$this->form_validation->set_rules("position" ,"Position",'trim|required|min_length[3]|max_length[100]');
-		$this->form_validation->set_rules("email" ,"School Email",'trim|required|min_length[0]|max_length[100]');
-		$this->form_validation->set_rules("phone" ,"Mobile Number",'trim|required|min_length[0]|max_length[25]');
-		$this->form_validation->set_rules("image" ,"Picture Profile",'trim|required|min_length[0]|max_length[200]');
-
-		if ($this->form_validation->run() == FALSE) {
-			$this->load->helper('form');
-			$this->load->Model('users_model');
-			$data['company'] = $this->users_model->getCompanyData();
-			$data['student'] = $this->users_model->getSuStudent();
-			$data['activeLink'] = 'supervisor';
-			$this->load->view('templates/header.php',$data);
-			$this->load->view('menu/index.php',$data);
-			$this->load->view('pages/supervisor/createSupervisor.php',$data);
-			$this->load->view('templates/footer.php');
-		}else{
+		
 		$this->load->helper('form');
 		$firstname = $this->input->post("firstname");
 		$lastname = $this->input->post("lastname");
 		$username = $this->input->post("username");
 		$password = $this->input->post("password");
+		$position = $this->input->post("position");
+		$sEmail = $this->input->post("email");
+		$phone = $this->input->post("phone");
 		$company = $this->input->post("company");
 		$student = $this->input->post("student");
 			// Upload Images
@@ -383,9 +364,6 @@ class Welcome_IF extends CI_Controller {
 		endforeach;
 		$this->load->Model('users_model');
 		$studntId = $this->users_model->getStuId($student);
-		$position = $this->input->post("position");
-		$sEmail = $this->input->post("email");
-		$phone = $this->input->post("phone");
 		$this->load->Model('users_model');
 		$this->users_model->addSupervisor($company,$studntId,$firstname,$lastname,$username,$password,$position,$sEmail,$phone,$file_name);
 		$this->load->helper('form');
@@ -396,8 +374,6 @@ class Welcome_IF extends CI_Controller {
 		$this->load->view('menu/index.php',$data);
 		$this->load->view('pages/supervisor/index.php');
 		$this->load->view('templates/footer.php');				
-	}	
-
 	}
 	
 	public function deleteSupervisor()

@@ -39,6 +39,14 @@
                         </div>
                     </div>
                     <div class="form-group">
+                        <label class="col-md-4 control-label" for="description">Send Email</label>
+                        <div class="col-md-12">
+                            <select class="form-control" name="" id="">
+                                <option value="">devit.chea@student.passerellesnumeriques.org</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group">
                         <label class="col-md-4 control-label" for="color">Color</label>
                         <div class="col-md-12">
                             <input id="color" name="color" type="text" class="form-control input-md" readonly="readonly" />

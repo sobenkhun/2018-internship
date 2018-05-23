@@ -1,33 +1,36 @@
 <?php 
 class cStudent extends CI_controller {
+	// Student home
 	public function index() 
 	{
-		$data['activeLink'] = 'Home Page';
-		$this->load->view('templates/header.php',$data);
-		$this->load->view('menu/studentMenu.php',$data);
-			// $this->load->view('index.phsp');
-		$this->load->view('student/index.php',$data);
-		$this->load->view('templates/footer.php');
+		// $data['activeLink'] = 'Home Page';
+		// $this->load->view('templates/header.php',$data);
+		// $this->load->view('menu/studentMenu.php',$data);
+		// $this->load->view('student/index.php',$data);
+		// $this->load->view('templates/footer.php');
+		$this->load->Model('m_worklog');
+		$this->m_worklog->selectDateTime();
+
 	}
+	// home work-log
 	public function worklog() 
 	{
 		$data['activeLink'] = 'work-log';
 		$this->load->view('templates/header.php',$data);
 		$this->load->view('menu/studentMenu.php',$data);
-			// $this->load->view('index.phsp');
 		$this->load->view('student/worklog.php',$data);
 		$this->load->view('templates/footer.php');
 	}
-
+	// comment page
 	public function comment() 
 	{
 		$data['activeLink'] = 'Comment';
 		$this->load->view('templates/header.php',$data);
 		$this->load->view('menu/studentMenu.php',$data);
-			// $this->load->view('index.phsp');
 		$this->load->view('student/comment',$data);
 		$this->load->view('templates/footer.php');
 	}
+	// calendar page
 	public function calendar() 
 	{
 		$data['activeLink'] = 'Calendar';
@@ -36,33 +39,57 @@ class cStudent extends CI_controller {
 		$this->load->view('student/calendarStu.php',$data);
 			// $this->load->view('templates/footer.php');
 	}
+// project work-log report
 
-// select worklog report to show in interface
-	public function weekWorklog()
-	{
-		$data['activeLink'] = 'work-log';
-		$this->load->helper('form');
-		$this->load->Model('m_worklog');
-		$data['worklog'] = $this->m_worklog->weeklyWorklog();
-		$this->load->view('templates/header.php',$data);
-		$this->load->view('menu/studentMenu.php',$data);
-		$this->load->view('student/worklog.php',$data);
-		$this->load->view('student/editWorklog.php');
-		$this->load->view('templates/footer.php');
-	}
-// insert report to DB
+	// form worklog report
 	public function weekReport()
 	{
 		$data['activeLink'] = 'work-log';
 		$this->load->helper('form');
-		$this->load->Model('m_worklog');
-		// $data['worklog'] = $this->m_worklog->getReport();
 		$this->load->view('templates/header.php',$data);
 		$this->load->view('menu/studentMenu.php',$data);
 		$this->load->view('student/worklog.php',$data);
 		$this->load->view('student/insertReportWorklog.php');
 		$this->load->view('templates/footer.php');
 	}
+
+	// form edit and process of edit
+	public function weekWorklog()
+	{
+		$data['activeLink'] = 'work-log';
+		$this->load->helper('form');
+		$Id = $_GET['id'];
+		$Date = $this->input->post("date");
+		$startTime = $this->input->post("starttime");
+		$endTime = $this->input->post("endtime");
+		$workActivities = $this->input->post("activities");
+		$Learner = $this->input->post("yourlearn");
+		$Issoues = $this->input->post("issues");
+		$Solution = $this->input->post("solution");
+		$toDo = $this->input->post("todo");
+		$Comment = $this->input->post("comment");
+
+		$this->load->Model('m_worklog');
+		$this->m_worklog->updateWorklog($Id,$Date,$startTime,$endTime,$workActivities,$Learner,$Issoues,$Solution,$toDo,$Comment);
+
+		$data['worklog'] = $this->m_worklog->weeklyWorklog();
+		$data['activeLink'] = 'work-log';
+		if($this->input->post('btn-submit') != NULL ){
+			echo "error";
+		} else {
+			redirect("cStudent/getReport");
+		}
+		// $this->load->Model('m_worklog');
+		// $data['worklog'] = $this->m_worklog->weeklyWorklog();
+
+		$this->load->view('templates/header.php',$data);
+		$this->load->view('menu/studentMenu.php',$data);
+		$this->load->view('student/worklog.php',$data);
+		$this->load->view('student/editWorklog.php');
+		$this->load->view('templates/footer.php');
+	}
+
+	// insert data to DB
 	public function newReport()
 	{
 		$this->load->helper('form');
@@ -76,9 +103,60 @@ class cStudent extends CI_controller {
 		$Todo = $this->input->post("todo");
 		$Comment = $this->input->post("comment");
 		$this->load->Model('m_worklog');
-		
 		$this->m_worklog->getReport($Date,$startTime,$endTime,$activities,$Learner,$Issoues,$Solution,$Todo,$Comment);
-		redirect("cStudent/weekReport"); 
+		
+		if($this->input->post('btn-submit') != NULL){
+			echo "error";
+		} else {
+			redirect("cStudent/getReport");
+		}
+	}
+
+	// select data from work-log
+	public function getReport()
+	{
+		$data['activeLink'] = 'work-log';
+		$this->load->helper('form');
+		$this->load->Model('m_worklog');
+		$data['worklog'] = $this->m_worklog->weeklyWorklog();
+		$this->load->view('templates/header.php',$data);
+		$this->load->view('menu/studentMenu.php',$data);
+		$this->load->view('student/worklog.php',$data);
+		$this->load->view('student/editWorklog.php');
+		$this->load->view('templates/footer.php');
 	}	
+
+// ==========================================================
+	
+	// edit
+	// public function editReport()
+	// {
+	// 	$this->load->helper('form');
+	// 	$Id = $_GET['id'];
+	// 	$Date = $this->input->post("date");
+	// 	$startTime = $this->input->post("starttime");
+	// 	$endTime = $this->input->post("endtime");
+	// 	$workActivities = $this->input->post("activities");
+	// 	$Learner = $this->input->post("yourlearn");
+	// 	$Issoues = $this->input->post("issues");
+	// 	$Solution = $this->input->post("solution");
+	// 	$toDo = $this->input->post("todo");
+	// 	$Comment = $this->input->post("comment");
+
+	// 	$this->load->Model('m_worklog');
+	// 	$this->m_worklog->updateWorklog($Id,$Date,$startTime,$endTime,$workActivities,$Learner,$Issoues,$Solution,$toDo,$Comment);
+
+	// 	$data['worklog'] = $this->m_worklog->weeklyWorklog();
+	// 	$data['activeLink'] = 'work-log';
+	// 	if($this->input->post('btn-submit') != NULL ){
+	// 		echo "error";
+	// 	} else {
+	// 		redirect("cStudent/getReport");
+	// 	}
+	// 	// $this->load->view('templates/header.php',$data);
+	// 	// $this->load->view('menu/index.php',$data);
+	// 	// $this->load->view('pages/student/index.php',$data);
+	// 	// $this->load->view('templates/footer.php');
+	// }
 }
 ?>

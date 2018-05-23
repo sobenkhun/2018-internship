@@ -1,3 +1,17 @@
+<style>
+       /* Always set the map height explicitly to define the size of the div
+        * element that contains the map. */
+       #map {
+         height: 70%;
+         
+       }
+       /* Optional: Makes the sample page fill the window. */
+       html, body {
+         height: 100%;
+         margin: 0;
+         padding: 0;
+       }
+ </style>
 
 <div class="container">
 	<a href="<?php echo base_url();?>tutorDas/companyDas">
@@ -53,7 +67,30 @@
 			<br>
 			<h3 class="text-center">Maps</h3>
 			<br>
-			<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3909.01419335054!2d104.88086341424142!3d11.550839347581286!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x310951add5e2cd81%3A0x171e0b69c7c6f7ba!2sPasserelles+num%C3%A9riques+Cambodia+(PNC)!5e0!3m2!1sen!2skh!4v1525250678472" width="500" height="300" frameborder="0" style="border:0" allowfullscreen></iframe>
+			<div id="map"></div>
+
+			<?php 
+			$lat = $company['lat'];
+			$lng = $company['lng'];
+
+			?>
 		</div>
 	</div>
 </div>
+
+<script>
+	function initMap() {
+		var uluru = {lat: parseFloat('<?php echo $lat;?>'), lng: parseFloat('<?php echo $lng;?>')};
+		var map = new google.maps.Map(document.getElementById('map'), {
+			zoom: 4,
+			center: uluru
+		});
+		var marker = new google.maps.Marker({
+			position: uluru,
+			map: map
+		});
+	}
+</script>
+
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBnlS292TgK3GF5LIV7RIJxFx7-7-jvnyw&callback=initMap"
+async defer></script>

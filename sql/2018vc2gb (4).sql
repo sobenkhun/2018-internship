@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: May 18, 2018 at 09:05 AM
+-- Generation Time: May 24, 2018 at 02:47 AM
 -- Server version: 10.1.26-MariaDB
 -- PHP Version: 7.1.9
 
@@ -41,7 +41,7 @@ CREATE TABLE `admin` (
 --
 
 INSERT INTO `admin` (`id`, `username`, `password`, `email`, `userrole_id`) VALUES
-(1, 'admin', '123', 'admin@gmail.com', 1);
+(1, 'admin', '$2a$08$ZEyUWIE30Jb/ioesMhO0rOHB1sEI.GSk1AIF2my3QtC2e/py6i5Mu', 'admin@gmail.com', 1);
 
 -- --------------------------------------------------------
 
@@ -67,14 +67,6 @@ CREATE TABLE `comment` (
   `student_id` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
---
--- Dumping data for table `comment`
---
-
-INSERT INTO `comment` (`id`, `comment`, `status`, `student_id`) VALUES
-(1, 'He is very good at JavaScript', 0, 2),
-(2, 'He is very good at CI', 1, 1);
-
 -- --------------------------------------------------------
 
 --
@@ -88,16 +80,80 @@ CREATE TABLE `company` (
   `postaladdress` varchar(200) DEFAULT NULL,
   `location` varchar(200) DEFAULT NULL,
   `phone` varchar(45) NOT NULL,
-  `url` varchar(200) DEFAULT NULL
+  `url` varchar(200) DEFAULT NULL,
+  `lat` float(10,6) NOT NULL,
+  `lng` float(10,6) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `company`
 --
 
-INSERT INTO `company` (`id`, `name`, `itemdescription`, `postaladdress`, `location`, `phone`, `url`) VALUES
-(1, 'W.E Bridge', 'MY company', 'Street', 'Phnom Penh', '0987654', 'www.webridgetechnology.com'),
-(2, 'ABA', 'Big company', 'Street 2004', 'Phnom Penh', '085755544', 'www.aba.com.kh');
+INSERT INTO `company` (`id`, `name`, `itemdescription`, `postaladdress`, `location`, `phone`, `url`, `lat`, `lng`) VALUES
+(6, 'Codingate', 'My friend company', 'No. 59, Oknha Pich St. (242), Phnom Penh, Phnom Penh', 'Al Safa St - Dubai - United Arab Emirates', '07646468', 'www.codingate.com', 25.204849, 55.270782),
+(7, 'BMW', 'MY company for first InternShip', 'No. 59, Oknha Pich St. (242), Phnom Penh, Phnom Penh', 'USA', '07646468', 'www.bmw.com', 0.000000, 0.000000),
+(8, 'RCI', 'ADFADFAFF', 'ddddddd', '63700 Saint-Éloy-les-Mines, France', '0987654', 'https://www.youtube.com/watch?v=DOR-OHs0Uag', 46.152424, 2.747070);
+
+-- --------------------------------------------------------
+
+--
+-- Stand-in structure for view `councompany`
+-- (See below for the actual view)
+--
+CREATE TABLE `councompany` (
+`firstname` varchar(45)
+,`lastname` varchar(45)
+,`count(*)` bigint(21)
+,`id` int(11)
+);
+
+-- --------------------------------------------------------
+
+--
+-- Stand-in structure for view `countstu`
+-- (See below for the actual view)
+--
+CREATE TABLE `countstu` (
+`suName` varchar(91)
+,`numStu` bigint(21)
+,`company_id` int(11)
+);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `events`
+--
+
+CREATE TABLE `events` (
+  `id` int(11) NOT NULL,
+  `title` varchar(255) NOT NULL,
+  `description` text NOT NULL,
+  `color` varchar(7) NOT NULL DEFAULT '#3a87ad',
+  `start` datetime NOT NULL,
+  `end` datetime DEFAULT NULL,
+  `allDay` varchar(50) NOT NULL DEFAULT 'true'
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `events`
+--
+
+INSERT INTO `events` (`id`, `title`, `description`, `color`, `start`, `end`, `allDay`) VALUES
+(5, 'Meeting', 'Meeting for discuss about layout for each user', '#4cf012', '2018-05-13 00:00:00', '2018-05-14 00:00:00', 'true'),
+(6, 'gfds', 'gfdsa', '#3a87ad', '2018-05-02 00:00:00', '2018-05-03 00:00:00', 'true'),
+(14, 'Event', 'For testing', '#18e884', '2018-05-11 00:00:00', '2018-05-12 00:00:00', 'true'),
+(15, 'Event', 'For testing', '#18e884', '2018-05-08 00:00:00', '2018-05-09 00:00:00', 'true'),
+(16, 'asdfdsf', 'asdfadf', '#3a87ad', '2018-05-10 00:00:00', '2018-05-11 00:00:00', 'true'),
+(17, 'asfsdf', 'asdfadf', '#000000', '2018-05-03 00:00:00', '2018-05-04 00:00:00', 'true'),
+(18, 'asfsdf', 'asdfadf', '#000000', '2018-05-03 00:00:00', '2018-05-04 00:00:00', 'true'),
+(19, 'hgfdsh', 'bgfdsa', '#3a87ad', '2018-05-02 00:00:00', '2018-05-03 00:00:00', 'true'),
+(20, 'hgfdsh', 'bgfdsa', '#3a87ad', '2018-05-02 00:00:00', '2018-05-03 00:00:00', 'true'),
+(22, 'First Releas', 'Should be complete 60% of project ', '#16c4db', '2018-05-23 00:00:00', '2018-05-24 00:00:00', 'true'),
+(0, 'Meeting with clien', 'dear all connector please come to the meeting at 5:pm .\nthe location at pnc school and the purpose is follow up student during internship at the company', '#e6228c', '2018-05-13 00:00:00', '2018-05-14 00:00:00', 'true'),
+(0, 'asfas', 'asdfas', '#b03f3f', '2018-05-13 00:00:00', '2018-05-14 00:00:00', 'true'),
+(0, 'sdafa', 'asdfa', '#3a87ad', '2018-05-13 00:00:00', '2018-05-14 00:00:00', 'true'),
+(0, 'dsfa', 'asdf', '#3a87ad', '2018-05-13 00:00:00', '2018-05-14 00:00:00', 'true');
 
 -- --------------------------------------------------------
 
@@ -108,6 +164,17 @@ INSERT INTO `company` (`id`, `name`, `itemdescription`, `postaladdress`, `locati
 CREATE TABLE `getcid` (
 `name` varchar(45)
 ,`id` int(11)
+);
+
+-- --------------------------------------------------------
+
+--
+-- Stand-in structure for view `getnumstu`
+-- (See below for the actual view)
+--
+CREATE TABLE `getnumstu` (
+`name` varchar(45)
+,`numStu` bigint(21)
 );
 
 -- --------------------------------------------------------
@@ -222,10 +289,10 @@ CREATE TABLE `student` (
 --
 
 INSERT INTO `student` (`id`, `firstname`, `lastname`, `batch`, `year`, `schoolemail`, `peremail`, `phone`, `hire`, `password`, `username`, `picture`, `supervisor_id`, `userrole_id`) VALUES
-(1, 'Prem', 'Mann', 'WEB', 2018, 's.prem@gmail.com', 'p.prem@gmail.com', 3456765, 1, '123', 'mPrem', 'premImage', 2, 4),
-(2, 'Devith', 'Chea', 'Web', 2018, 's.devit@gmail.com', 'p.devit@gmail.com', 98765444, 0, '123', 'g-dvith', 'dImage', 1, 4),
-(3, 'Touch', 'Ban', 'WEB', 2018, 's.touch@gmail.com', 'p.touch@gmail.com', 86784485, 1, '123', 'btouch', 'tImage', 3, 4),
-(4, 'Bunthean', 'Mov', 'Web', 2018, 's.bunthean@gmail.com', 'p.bunthean@gmail.com', 876546, 1, '123', 'mbunthean', 'bImage', 3, 4);
+(9, 'Bunthean', 'gigi', 'SNA', 2018, 's.gigi@gmail.com', 'gigi@gmail.com', 987654, NULL, '$2a$08$bU7Hk4eCvpJBoVqG6VmBuuUbG63G3.E3sB.hdO4rRo.HtTM9EMPQe', 'gigi', NULL, 8, 4),
+(10, 'G-gevit', 'PNCs', 'SNA', 2018, 's.gigi@gmail.com', 'gigi@gmail.com', 987657, NULL, '$2a$08$r5EJ.0yNYzUyc0iWc6fHkOm1YhqPEBtnAg9ecUqfZLoPf6wjgARLW', 'premmann', 'github3.png', 12, 4),
+(11, 'devit', 'chea', 'Web', 22, 'devht@gmail.com', 'devit@gmail.com', 987654, NULL, '$2a$08$nMzgFnvOSYnv8ZpqE.3dsuPWvnoHhpd7aIg0aFvbRM3mFF9sf3/J2', 'admin', 'DSC_027210.JPG', 12, 4),
+(12, 'devit', 'chea', 'Web', 443, 'devht@gmail.com', 'devit@gmail.com', 987654, NULL, '$2a$08$1CymRY/EqyypXmDATu7HxOByx7ybbvcPwCxEwfMN9MTf5FVXhLEKO', 'admin', 'DSC_027211.JPG', 8, 4);
 
 -- --------------------------------------------------------
 
@@ -252,9 +319,10 @@ CREATE TABLE `supervisor` (
 --
 
 INSERT INTO `supervisor` (`id`, `firstname`, `lastname`, `position`, `email`, `phone`, `picture`, `password`, `username`, `company_id`, `userrole_id`) VALUES
-(1, 'Vi', 'Bol', 'Project Manager', 'vibol@gmail.com', 70424109, 'image', '123', 'mprem', 1, 3),
-(2, 'Thea', 'Ry', 'Tester', 'theary@gmail.com', 98768723, 'dImage', '123', 'theary', 1, 3),
-(3, 'Vi', 'Sal', 'Team Leader', 'visal@gmail.com', 7646468, NULL, '$2a$08$fiDT7x7nFdcuiB0PxVYqheInyP8CjIyKTivTRZ4njdBSxZll9u1Ju', 'vsal', 2, 3);
+(8, 'Ronaldo', 'Real Madrid', 'Web Trainer', 'ero@gmail.com', 987654, 'youtube3.jpg', '$2a$08$8P/ln7I27YHWbexB/5aFK.KISObgSyPjFh3yUfUT9hzr.AdyJ10Q.', 'premmann', 6, 3),
+(12, 'Messi', 'Barcelona', 'Web Trainer', 'ero@gmail.com', 7646468, 'DSC_027212.JPG', '$2a$08$2hgwSMtGMbn0BFzy.5Mw2edjp8.Qbi3xu5kTaFGl9gTlB091dSvXq', 'premmann', 6, 3),
+(13, 'dftyuio', 'dfghuiop', 'Web Trainer', 'Premmannpnc@gmail.com', NULL, '20180406_0626451.jpg', '$2a$08$5jeV4wSOgoU8WRgzYOysC.eKHI1gorV9tZmJ1d6YO9SUj2/97Uogu', 'dfghjk', 7, 3),
+(14, 'devit', 'chea', 'English Trainer', 'devit.chea@gmail.com', 987654, 'FreePBX.png', '$2a$08$eJ8oJeGz9KwNS.W21MaDGeh9CJZWmTwGoe7uhEd/dn3IUQW50JJxu', 'admin', 6, 3);
 
 -- --------------------------------------------------------
 
@@ -281,8 +349,8 @@ CREATE TABLE `tutor` (
 --
 
 INSERT INTO `tutor` (`id`, `firstname`, `lastname`, `position`, `email`, `phone`, `picture`, `password`, `username`, `company_id`, `userrole_id`) VALUES
-(1, 'Rith', 'Nhel', 'Web Trainer', 'rnhel@gmail.com', 1234567, 'image', '123', 'rnhel', 1, 2),
-(3, 'Rady', 'Y', 'Web Trainer', 's.rady.y@gmail.com', 23444433, NULL, '$2a$08$d8dL17ICMpH/HUyRVQLV4eDHA90zFIE/EWiyJnpYqFMwctMnn1C0i', 'yrady', 2, 2);
+(9, 'Asernal', 'English', 'Football Club', 'Asernal@gmail.com', 9876543, 'WIN_20180305_152719.JPG', '$2a$08$WSI6.wQugB2txiWg4u2s2OEolRbNZMXcVdmTVdh9ZQHuz59C29Ek2', 'asernal', 6, 2),
+(10, 'Prem', 'Mann', 'Web Trainer', 'pnc@gmail.com', 9876543, 'CMS_database.PNG', '$2a$08$ZEyUWIE30Jb/ioesMhO0rOHB1sEI.GSk1AIF2my3QtC2e/py6i5Mu', 'prem', 7, 2);
 
 -- --------------------------------------------------------
 
@@ -334,11 +402,38 @@ CREATE ALGORITHM=UNDEFINED DEFINER=`root`@`localhost` SQL SECURITY DEFINER VIEW 
 -- --------------------------------------------------------
 
 --
+-- Structure for view `councompany`
+--
+DROP TABLE IF EXISTS `councompany`;
+
+CREATE ALGORITHM=UNDEFINED DEFINER=`root`@`localhost` SQL SECURITY DEFINER VIEW `councompany`  AS  select `supervisor`.`firstname` AS `firstname`,`supervisor`.`lastname` AS `lastname`,count(0) AS `count(*)`,`supervisor`.`id` AS `id` from (`student` join `supervisor`) where (`supervisor`.`id` = `student`.`supervisor_id`) group by `supervisor`.`firstname` ;
+
+-- --------------------------------------------------------
+
+--
+-- Structure for view `countstu`
+--
+DROP TABLE IF EXISTS `countstu`;
+
+CREATE ALGORITHM=UNDEFINED DEFINER=`root`@`localhost` SQL SECURITY DEFINER VIEW `countstu`  AS  select concat(`supervisor`.`firstname`,' ',`supervisor`.`lastname`) AS `suName`,count(0) AS `numStu`,`supervisor`.`company_id` AS `company_id` from (`supervisor` join `student`) where (`student`.`supervisor_id` = `supervisor`.`id`) group by `supervisor`.`id` ;
+
+-- --------------------------------------------------------
+
+--
 -- Structure for view `getcid`
 --
 DROP TABLE IF EXISTS `getcid`;
 
 CREATE ALGORITHM=UNDEFINED DEFINER=`root`@`localhost` SQL SECURITY DEFINER VIEW `getcid`  AS  select `company`.`name` AS `name`,`company`.`id` AS `id` from `company` ;
+
+-- --------------------------------------------------------
+
+--
+-- Structure for view `getnumstu`
+--
+DROP TABLE IF EXISTS `getnumstu`;
+
+CREATE ALGORITHM=UNDEFINED DEFINER=`root`@`localhost` SQL SECURITY DEFINER VIEW `getnumstu`  AS  select `company`.`name` AS `name`,`countstu`.`numStu` AS `numStu` from (`countstu` join `company`) where (`countstu`.`company_id` = `company`.`id`) group by `company`.`id` ;
 
 -- --------------------------------------------------------
 
@@ -467,25 +562,25 @@ ALTER TABLE `admin`
 -- AUTO_INCREMENT for table `company`
 --
 ALTER TABLE `company`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
 -- AUTO_INCREMENT for table `student`
 --
 ALTER TABLE `student`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
 
 --
 -- AUTO_INCREMENT for table `supervisor`
 --
 ALTER TABLE `supervisor`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
 
 --
 -- AUTO_INCREMENT for table `tutor`
 --
 ALTER TABLE `tutor`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 
 --
 -- AUTO_INCREMENT for table `userrole`
@@ -507,7 +602,7 @@ ALTER TABLE `admin`
 -- Constraints for table `comment`
 --
 ALTER TABLE `comment`
-  ADD CONSTRAINT `fk_comment_student1` FOREIGN KEY (`student_id`) REFERENCES `student` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION;
+  ADD CONSTRAINT `fk_comment_student1` FOREIGN KEY (`student_id`) REFERENCES `student` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
 -- Constraints for table `questionnaire`
@@ -519,22 +614,22 @@ ALTER TABLE `questionnaire`
 -- Constraints for table `student`
 --
 ALTER TABLE `student`
-  ADD CONSTRAINT `fk_student_supervisor1` FOREIGN KEY (`supervisor_id`) REFERENCES `supervisor` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION,
-  ADD CONSTRAINT `fk_student_userrole1` FOREIGN KEY (`userrole_id`) REFERENCES `userrole` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION;
+  ADD CONSTRAINT `fk_student_supervisor1` FOREIGN KEY (`supervisor_id`) REFERENCES `supervisor` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
+  ADD CONSTRAINT `fk_student_userrole1` FOREIGN KEY (`userrole_id`) REFERENCES `userrole` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
 -- Constraints for table `supervisor`
 --
 ALTER TABLE `supervisor`
-  ADD CONSTRAINT `fk_supervisor_company1` FOREIGN KEY (`company_id`) REFERENCES `company` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION,
-  ADD CONSTRAINT `fk_supervisor_userrole1` FOREIGN KEY (`userrole_id`) REFERENCES `userrole` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION;
+  ADD CONSTRAINT `fk_supervisor_company1` FOREIGN KEY (`company_id`) REFERENCES `company` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
+  ADD CONSTRAINT `fk_supervisor_userrole1` FOREIGN KEY (`userrole_id`) REFERENCES `userrole` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
 -- Constraints for table `tutor`
 --
 ALTER TABLE `tutor`
-  ADD CONSTRAINT `fk_tutor_company` FOREIGN KEY (`company_id`) REFERENCES `company` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION,
-  ADD CONSTRAINT `fk_tutor_userrole1` FOREIGN KEY (`userrole_id`) REFERENCES `userrole` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION;
+  ADD CONSTRAINT `fk_tutor_company` FOREIGN KEY (`company_id`) REFERENCES `company` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
+  ADD CONSTRAINT `fk_tutor_userrole1` FOREIGN KEY (`userrole_id`) REFERENCES `userrole` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
 -- Constraints for table `worklog`

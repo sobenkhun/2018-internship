@@ -6,6 +6,12 @@
 			$query = $this->db->get('worklog');
 			return $query->result_array();
 		}
+		// get comment display
+		public function getComment(){
+			$this->db->select('*');
+			$query = $this->db->get('worklog');
+			return $query->result_array();
+		}
 		public function getReport($Date,$startTime,$endTime,$activities,$Learner,$Issoues,$Solution,$Todo,$Comment)
 		{
 
@@ -43,14 +49,16 @@
 			$this->db->update('worklog', $data);
 		}
 		
-		// select date in DB
+		// select Test date in DB
 		public function selectDateTime(){
-			$query=$this->db->query(
-				'SELECT date_format(date,"%W"), count(date) FROM worklog group by "Day of the week" order by date_format(date,"%W")'
-			);
-			$result = $query->result();
-			print_r($result);
-			
+			// $this->db->select('*');
+			// $Datequery = $this->db->query('SELECT date_format(date, "%W") FROM worklog group by "Day of the week" order by date_format(date,"%W")');		
+			// if($Datequery == date_format("Friday")){
+				$query=$this->db->query('SELECT date_format(date, "%D %W %M %Y %V"), count(*) FROM worklog group by week');
+				$result = $query->result();
+				print_r($result);
+			// }
+				
 			// $this->db->select('*')->from('worklog')->where(month("2018-06-15"));
 				// $this->db->select();
 				// $this->db->count(date);

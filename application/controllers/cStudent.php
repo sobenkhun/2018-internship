@@ -3,13 +3,13 @@ class cStudent extends CI_controller {
 	// Student home
 	public function index() 
 	{
-		// $data['activeLink'] = 'Home Page';
-		// $this->load->view('templates/header.php',$data);
-		// $this->load->view('menu/studentMenu.php',$data);
-		// $this->load->view('student/index.php',$data);
-		// $this->load->view('templates/footer.php');
-		$this->load->Model('m_worklog');
-		$this->m_worklog->selectDateTime();
+		$data['activeLink'] = 'Home Page';
+		$this->load->view('templates/header.php',$data);
+		$this->load->view('menu/studentMenu.php',$data);
+		$this->load->view('student/index.php',$data);
+		$this->load->view('templates/footer.php');
+		// $this->load->Model('m_worklog');
+		// $this->m_worklog->selectDateTime();
 
 	}
 	// home work-log

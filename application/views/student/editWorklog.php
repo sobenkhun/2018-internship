@@ -156,7 +156,7 @@
 					<h5 class="mb-0 text-white"><strong>Wednesday</strong></h5>
 				</div>
 
-				<div id="secounday" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
+				<div id="thirday" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
 					<div class="card-body">
 						<?php foreach ($worklog as $workLog):?>
 							<table class="table table-bordered table-hover" id="tableWorkLog">
@@ -231,7 +231,7 @@
 					<h5 class="mb-0 text-white"><strong>Thursday</strong></h5>
 				</div>
 
-				<div id="secounday" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
+				<div id="fourthday" class="collapse" aria-labelledby="headingFour" data-parent="#accordion">
 					<div class="card-body">
 						<?php foreach ($worklog as $workLog):?>
 							<table class="table table-bordered table-hover" id="tableWorkLog">
@@ -305,7 +305,7 @@
 					<h5 class="mb-0 text-white"><strong>Friday</strong></h5>
 				</div>
 
-				<div id="secounday" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
+				<div id="fifthday" class="collapse" aria-labelledby="headingFive" data-parent="#accordion">
 					<div class="card-body">
 						<?php foreach ($worklog as $workLog):?>
 							<table class="table table-bordered table-hover" id="tableWorkLog">

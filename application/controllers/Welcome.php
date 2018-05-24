@@ -25,28 +25,19 @@ class Welcome extends CI_Controller {
 		$this->load->view('pages/index', $data);
 		$this->load->view('IF/template/footer', $data);
 	}	
-
-	public function sendEmail()
-	{
-		
-
-		$this->load->library('email');
-		$this->load->library('parser');
-		$this->email->from('pnc.temporary.vc2018@passerellesnumeriques.org', 'Support');
-		$this->email->to('premmannpnc@gmail.com');
-		$this->email->cc('');
-		$this->email->bcc('');
-		
-		$this->email->subject('Test');
-		$this->email->message('This is a test email');
-		
-		if ( ! $this->email->send())
-		{
-    		// Generate error
-			echo "Email is not sent!!";
-		}
-		echo $this->email->print_debugger();
-		
-	}
-
+	public function sendMail(){
+	  $this->load->library('email');
+	  $this->load->model('users_model');
+	  
+	  $this->email->from('pnc.temporary.vc2018@passerellesnumeriques.org', 'Booking gig');
+	  $this->email->to('devit.chea@student.passerellesnumeriques.org', "devit chea");
+	  $this->email->subject(' R');
+	  $this->email->message('Dear ');
+	  if ($this->email->send()) {
+	   	echo "successfully";
+	  }else{
+	   echo $this->email->print_debugger();
+	  }
+	  
+	 }
 }

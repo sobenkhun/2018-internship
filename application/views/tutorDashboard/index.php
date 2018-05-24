@@ -3,7 +3,7 @@
   <!-- title welcom -->
   <div class="row">
     <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 alert alert-primary text-center title">
-      <h2 class="text-center text-dark"><strong>Welcome to PNC Internship Follow up</strong></h2>
+      <h2 class="text-center text-dark">Welcome to PNC Internship Follow up</h2>
     </div>
   </div>
   <br>
@@ -31,7 +31,7 @@
           <h5 class="card-title"><?php echo $supervisor; ?></h5>
         </div>
         <div class="card-body">
-          <a href="<?php echo base_url();?>tutorDas/supervisorDas" class="btn btn-primary">Go Supervisors</a>
+          <a href="<?php echo base_url();?>tutorDas/tSupervisorDas" class="btn btn-primary">Go Supervisors</a>
         </div>
 
       </div>
@@ -74,18 +74,28 @@
       <script src="<?php echo base_url();?>assets/js/Chart-2.7.1.min.js"></script>
       <h1 class="text-center">Companies bar chart</h1>
       <canvas id="bar-chart" width="800" height="400"></canvas>
+
       <script type="text/javascript">
       // Bar chart Example
+
       new Chart(document.getElementById("bar-chart"), {
 
         type: 'bar',
         data: {
-          labels: ["KhmerDev", "Web Essentails","Prudenital", "Codingate", "W.E bridge", "EZecom","Manulife" ],
+          labels: [
+                     <?php foreach ($student_bar as $student_bar):?>
+                       <?php echo "' ".$student_bar['name']." ' ,"; ?>
+                      <?php endforeach ?>
+                   ],
           datasets: [
           {
-            label: "Population (millions)",
-            backgroundColor: ["#3e95cd", "#8e5ea2","#3cba9f","#e8c3b9","#c45850","yellow","#00C853","#FFC107"],
-            data: [10,4,8,5,7,0,9,6]
+            label: "Number of students",
+            backgroundColor: ["#3e95cd", "#8e5ea2","#3cba9f","#e8c3b9","#c45850","yellow","#00C853","#FFC107","#3e95cd", "#8e5ea2","#3cba9f","#e8c3b9","#c45850","yellow","#00C853","#FFC107"],
+            data: [
+                    <?php foreach ($numstu as $numstu):?>
+                       <?php echo "' ".$numstu['numStu']." ' ,"; ?>
+                      <?php endforeach ?>
+                0]
           }
           ]
 
@@ -95,7 +105,7 @@
           title: {
             display: true,
 
-             text: 'Number of student from PNC in company over the past years',
+             text: 'Number of PNC student in company ',
 
           }
 
@@ -107,3 +117,4 @@
   <div class="col-xs-1 col-sm-1 col-md-1 col-lg-1"></div>
 </div>
 </div><br><br>
+

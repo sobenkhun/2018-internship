@@ -126,7 +126,7 @@ $(function(){
             });
         }
 
-    });
+    // });
 
     // Prepares the modal window according to data passed
     function modal(data) {

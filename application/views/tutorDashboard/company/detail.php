@@ -30,32 +30,37 @@
 			<div class="card-body">
 				<form class="form" role="form" autocomplete="off">
 					<div class="form-group row">
+						<label class="col-lg-2"></label>
 						<label class="col-lg-3 col-form-label form-control-label">Company name</label>
-						<div class="col-lg-9">
+						<div class="col-lg-7">
 							<p><?php echo $company['name']; ?></p>
 						</div>
 					</div>
 					<div class="form-group row">
+						<label class="col-lg-2"></label>
 						<label class="col-lg-3 col-form-label form-control-label">Description</label>
-						<div class="col-lg-9">
+						<div class="col-lg-7">
 							<p><?php echo $company['itemdescription']; ?></p>
 						</div>
 					</div>
 					<div class="form-group row">
+						<label class="col-lg-2"></label>
 						<label class="col-lg-3 col-form-label form-control-label">Postal Address</label>
-						<div class="col-lg-9">
+						<div class="col-lg-7">
 							<p><?php echo $company['postaladdress']; ?></p>
 						</div>
 					</div>
 					<div class="form-group row">
+						<label class="col-lg-2"></label>
 						<label class="col-lg-3 col-form-label form-control-label">Phone</label>
-						<div class="col-lg-9">
+						<div class="col-lg-7">
 							<p><?php echo $company['phone']; ?></p>
 						</div>
 					</div>
 					<div class="form-group row">
+						<label class="col-lg-2"></label>
 						<label class="col-lg-3 col-form-label form-control-label">Website</label>
-						<div class="col-lg-9">
+						<div class="col-lg-7">
 							<p><?php echo $company['url']; ?></p>
 						</div>
 					</div>
@@ -63,7 +68,9 @@
 			</div>
 			<?php endforeach ?>
 		</div>
+		<div class="col-md-1"></div>
 		<div class="col-md-4">
+
 			<br>
 			<h3 class="text-center">Maps</h3>
 			<br>

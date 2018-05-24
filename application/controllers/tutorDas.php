@@ -64,9 +64,9 @@ class tutorDas extends CI_Controller {
 		$companyId = $_GET['id'];
 		$this->load->Model('tutor_model');
 		$data['company'] = $this->tutor_model->getCompanyDataDetail2($companyId);
-		$data['activeLink'] = 'tutor';
+		$data['activeLink'] = 'company';
 		$this->load->view('templates/header.php',$data);
-		$this->load->view('menu/index.php',$data);
+		$this->load->view('menu/tutor.php',$data);
 		$this->load->view('tutorDashboard/company/detail.php',$data);
 		$this->load->view('templates/footer.php');
 	}

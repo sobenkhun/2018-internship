@@ -366,8 +366,8 @@
 			<div class="col-md-12 text-right">
 				<form action="">
 					<textarea class="col-md-12 form-group" name="" id="" rows="4" placeholder="Reflections for this week:"></textarea>
-					<button type="submit" class="btn btn-outline-success" name="btn-submit" value="Save report">Save Week Reflections</button>
-					<button type="btn-submit" class="btn btn-outline-warning" name="btn-submit" value="Save report">Commit weekly reprot</button>
+					<button type="submit" class="btn btn-outline-success" name="btn-submit" value="Save report" title="Do you want to save your week reflections?">Save Week Reflections</button>
+					<button type="btn-submit" class="btn btn-outline-warning" name="btn-submit" value="Save report" title="Do you want to comment your report for this week?">Commit weekly reprot</button>
 				</form>
 			</div>
 		</div>

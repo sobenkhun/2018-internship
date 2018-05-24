@@ -14,13 +14,13 @@ class Calendar_model extends CI_Model {
 	}
 
 	/*Create new events */
-
 	Public function addEvent()
 	{
 
-		$sql = "INSERT INTO events (title,events.start,events.end,description, color) VALUES (?,?,?,?,?)";
-		$this->db->query($sql, array($_POST['title'], $_POST['start'],$_POST['end'], $_POST['description'], $_POST['color']));
-		return ($this->db->affected_rows()!=1)?false:true;
+		$sql = "INSERT INTO events (title,events.start,events.end,description, color,email) VALUES (?,?,?,?,?,?)";
+		$this->db->query($sql, array($_POST['title'], $_POST['start'],$_POST['end'], $_POST['description'], $_POST['color'],$_POST['email']));
+		return ($this->db->affected_rows()!=1)?false:true; 
+
 	}
 
 	/*Update  event */
@@ -28,10 +28,22 @@ class Calendar_model extends CI_Model {
 	Public function updateEvent()
 	{
 
-		$sql = "UPDATE events SET title = ?, description = ?, color = ? WHERE id = ?";
-		$this->db->query($sql, array($_POST['title'],$_POST['description'], $_POST['color'], $_POST['id']));
+		$sql = "UPDATE events SET title = ?, description = ?, color = ?, email = ? WHERE id = ?";
+		$this->db->query($sql, array($_POST['title'],$_POST['description'], $_POST['color'],$_POST['email'], $_POST['id']));
 		return ($this->db->affected_rows()!=1)?false:true;
 	}
+
+	/*public function updateEvent($id,$title,$description,$color,$email)
+	{
+	    $data = array('name'=>$name,
+	                 'title'=>$title,
+	                 'description'=>$description,
+	                 'color'=>$color,
+	                 'email'=>$email
+	             );
+	    $this->db->where('id', $id);
+	    $this->db->update('events', $data);
+	}*/
 
 
 	/*Delete event */

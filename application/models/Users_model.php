@@ -400,6 +400,16 @@ class Users_model extends CI_Model {
         // var_dump($query->result_array());die();
         return $query->result_array();
     }
+
+    /*get email from database*/
+    public function mGetEmail()
+    {
+        $this->db->select("*");
+        $this->db->from("getemail");
+        $query = $this->db->get();
+        return $query->result_array();
+
+    }
   /**
    * Get the list of roles or one role
    * 00000001 1  Admin
@@ -702,4 +712,5 @@ class Users_model extends CI_Model {
         }
         return $rnd;
     }
+    
 }

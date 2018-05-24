@@ -16,7 +16,6 @@
 		<!-- <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2"></div> -->
 		<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
 			<table id="studentList" class="table table-striped table-bordered bg-white">
-				<?php foreach ($comment as $comment):?>
 				<thead class="text-center">
 					<tr >
 						<th>Date</th>
@@ -26,13 +25,19 @@
 					</tr>
 				</thead>
 				<tbody>
+				<?php foreach ($comment as $comment):?>
 					<tr class="text-left">
 						<td class="text-center">1 may 2018</td>
 						<td> You should ask your supervisor for have tasks to do</td>
-						<td><?php echo $comment['comment']; ?></td>
+						<td name="stuComment"><?php echo $comment['comment']; ?></td>
 						<td class="text-center">
-							<a href="#"><span class="mdi mdi-checkbox-marked-outline mdi-24px text-info" data-toggle ="tooltip" title="validated"></span></a>
-							<a href="#"><span class="mdi mdi-pencil mdi-24px text-success" data-toggle ="tooltip" title="edit"></span></a>
+							<?php if(0 == $comment['status']) { ?>
+								<a href="<?php echo base_url();?>Welcome_IF/editCommnetTutor?&id=<?php echo $comment['id'] ?>"><span class="mdi mdi-checkbox-marked-outline mdi-24px text-info" data-toggle ="tooltip" title="not validated"></span></a>
+							<?php } ?>
+							<?php if(1 == $comment['status']) { ?>
+							<a href="#" class="btn disabled" role="button" aria-disabled="true"><span class="mdi mdi-checkbox-marked-outline mdi-24px text-info" data-toggle ="tooltip" title="validate"></span></a>
+						
+							<?php	} ?>
 						</td>
 					</tr>
 				</tbody>

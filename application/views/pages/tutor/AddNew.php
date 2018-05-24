@@ -34,13 +34,6 @@
 						</div>
 					</div>
 					<div class="form-group row col-md-6 group-col-stu">
-						<label class="col-sm-4 col-form-label" for="">Password</label>
-						<div class="col-sm-8">
-							<input type="text" name="password" id="" class="form-control" placeholder="...">
-							<span class="required text-danger"><?php echo form_error("password"); ?></span class="required text-danger">
-						</div>
-					</div>
-					<div class="form-group row col-md-6 group-col-stu">
 						<label class="col-sm-4 col-form-label" for="">Position</label>
 						<div class="col-sm-8">
 							<input type="text" name="position" id="" class="form-control" placeholder="...">

@@ -42,17 +42,40 @@
 			$this->db->where('id', $Id);
 			$this->db->update('worklog', $data);
 		}
-
+		
 		// select date in DB
-		public function selectDateTime()
-		{
-			
-			$this->db->select('*');
-			$this->db->where("date BETWEEN '2018-06-1' AND '2018-06-7'", NULL, FALSE);
-			$query = $this->db->get('worklog');
+		public function selectDateTime(){
+			$query=$this->db->query(
+				'SELECT date_format(date,"%W"), count(date) FROM worklog group by "Day of the week" order by date_format(date,"%W")'
+			);
 			$result = $query->result();
 			print_r($result);
+			
+			// $this->db->select('*')->from('worklog')->where(month("2018-06-15"));
+				// $this->db->select();
+				// $this->db->count(date);
+				// $this->db->get('worklog');
+				// $this->orderby(date_format(date,"%W"));
+			// select date_format(date, "%W") AS `Day of the week`, count(date)
+			// from worklog
+			// group by `Day of the week` 
+			// order by date_format(date, "%w");
+		}
+
+		public function selectDateTime1()
+		{
+
+			$this->db->select('*')->from('worklog')->where("date BETWEEN '2018-06-1' AND '2018-06-7'", NULL, FALSE);
+			$query = $this->db->get();
+			$result = $query->result();
+			print_r($result);
+			// $this->db->select('*');
+			// $this->db->where("date BETWEEN '2018-06-1' AND '2018-06-7'", NULL, FALSE);
+			// $query = $this->db->get('worklog');
+			// $result = $query->result();
+			// print_r($result);
 			// if (){
+			// echo $this->db->limit(10,20)->get_compiled_select('worklog', FALSE);
 				$nextWeek = time() + (7 * 24 * 60 * 60);
 				                   // 7 days; 24 hours; 60 mins; 60 secs
 				echo '<br>Now:       '. date('Y-m-d') ."\n";

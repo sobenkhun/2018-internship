@@ -11,7 +11,7 @@
 		<?php foreach ($student as $student):?>
 			<?php $imagepart =  "assets/images/users/".$student['sPic'];?> 
 			<br>
-			<img src="<?php echo base_url();?><?php echo $imagepart; ?>" alt="" class="img-thumbnail" id="viewStudent">
+			<img src="<?php echo base_url();?><?php echo $imagepart; ?>" alt=""  id="viewStudent"  style="height: 200px; width: 230px; margin-top: 17px; padding: 10px;" class="img-thumbnail">
 		 <?php endforeach ?>						
 			<div class="form-check text-center">
 				<label class="form-check-label">

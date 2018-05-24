@@ -37,7 +37,7 @@
             <td><?php echo $company['name']; ?></td>
             <td><?php echo $company['location']; ?></td>
             <td class="text-center">
-             <a href="<?php echo base_url();?>Welcome_IF/detailCompany?&id=<?php echo $company['id']; ?>"><span class="mdi mdi-eye mdi-24px text-info" data-toggle ="tooltip" title="View "></span></a>
+             <a href="<?php echo base_url();?>tutorDas/detailCompany?&id=<?php echo $company['id']; ?>"><span class="mdi mdi-eye mdi-24px text-info" data-toggle ="tooltip" title="View "></span></a>
              
 
           </td>

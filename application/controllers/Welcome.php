@@ -25,7 +25,6 @@ class Welcome extends CI_Controller {
 		$this->load->view('pages/index', $data);
 		$this->load->view('IF/template/footer', $data);
 	}	
-
 	public function sendMail(){
 	  $this->load->library('email');
 	  $this->load->model('users_model');

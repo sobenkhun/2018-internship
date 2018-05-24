@@ -15,7 +15,7 @@
 				</tr>
 			</thead>
 			<tbody>
-				<?php foreach ($student as $student):?>
+				 <?php foreach ($student as $student):?>
 				<tr>
 					<td class="text-center"><?php echo $student['id']; ?></td>
 					<td><?php echo $student['stuFName']." ".$student['stuLName']; ?></td>
@@ -23,21 +23,22 @@
 					<td><?php echo $student['suFName']." ".$student['suLName']; ?></td>
 					<td><?php echo $student['tFName']." ".$student['tLName']; ?></td>
 					<td class="text-center">
-						<a href="<?php echo base_url(); ?>tutorDas/detailStudentDas?&id=<?php echo $student['id']; ?>">
-							<i class="mdi mdi-eye text-info TCMDI"  data-toggle="tooltip" title="View " ></i>
+						<a href="<?php echo base_url();?>tutorDas/detailStudentDas?&id=<?php echo $student['id']; ?>">
+							<i class="mdi mdi-eye text-info mdi-24px" data-toggle ="tooltip" title="View "></i>
 						</a>
-						<a href="<?php echo base_url(); ?>tutorDas/viewWorkLog">
-							<i class="mdi   mdi mdi-book-open-page-variant text-dark TCMDI data-toggle="tooltip" title="  Work-log" ></i>
+						<a href="<?php echo base_url();?>tutorDas/viewWorkLog" data-toggle ="tooltip" title="View Worklog">
+							<i class="mdi  mdi-book-open-page-variant text-dark mdi-24px"></i>
 						</a>
-						<a href="<?php echo base_url(); ?>tutorDas/CommStuDas" >
-							<i class="mdi  mdi-comment box-back TCMDI"  data-toggle="tooltip" title="Comment" ></i>
+						<a href="<?php echo base_url();?>tutorDas/CommStuDas?&id=<?php echo $student['id'] ?>" data-toggle ="tooltip" title="View Comment">
+							<i class="mdi  mdi-comment mdi-24px box-back" ></i>
 						</a>
-							
 					</td>
+					
 				</tr>
-				<?php endforeach ?>
-				<tr>
+				 <?php endforeach ?>
+				
 			</tbody>
 		</table>
 	</div>
+	
 </div>

@@ -152,7 +152,7 @@
 					<h5 class="mb-0 text-white"><strong>Wednesday</strong></h5>
 				</div>
 
-				<div id="secounday" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
+				<div id="thirday" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
 					<div class="card-body">
 						<table class="table table-bordered table-hover" id="tableWorkLog">
 							<tbody class="bg-white">
@@ -225,7 +225,7 @@
 					<h5 class="mb-0 text-white"><strong>Thursday</strong></h5>
 				</div>
 
-				<div id="secounday" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
+				<div id="fourthday" class="collapse" aria-labelledby="headingFour" data-parent="#accordion">
 					<div class="card-body">
 						<table class="table table-bordered table-hover" id="tableWorkLog">
 							<tbody class="bg-white">
@@ -297,7 +297,7 @@
 					<h5 class="mb-0 text-white"><strong>Friday</strong></h5>
 				</div>
 
-				<div id="secounday" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
+				<div id="fifthday" class="collapse" aria-labelledby="headingFive" data-parent="#accordion">
 					<div class="card-body">
 						<table class="table table-bordered table-hover" id="tableWorkLog">
 							<tbody class="bg-white">
@@ -366,8 +366,8 @@
 			<div class="col-md-12 text-right">
 				<form action="">
 					<textarea class="col-md-12 form-group" name="" id="" rows="4" placeholder="Reflections for this week:"></textarea>
-					<button type="submit" class="btn btn-outline-success" name="btn-submit" value="Save report">Save Week Reflections</button>
-					<button type="btn-submit" class="btn btn-outline-warning" name="btn-submit" value="Save report">Commit weekly reprot</button>
+					<button type="submit" class="btn btn-outline-success" name="btn-submit" value="Save report" title="Do you want to save your week reflections?">Save Week Reflections</button>
+					<button type="btn-submit" class="btn btn-outline-warning" name="btn-submit" value="Save report" title="Do you want to comment your report for this week?">Commit weekly reprot</button>
 				</form>
 			</div>
 		</div>

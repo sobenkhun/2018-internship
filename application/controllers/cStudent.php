@@ -3,16 +3,16 @@ class cStudent extends CI_controller {
 	// Student home
 	public function index() 
 	{
-		// $data['activeLink'] = 'Home Page';
-		// $this->load->view('templates/header.php',$data);
-		// $this->load->view('menu/studentMenu.php',$data);
-		// $this->load->view('student/index.php',$data);
-		// $this->load->view('templates/footer.php');
-		$this->load->Model('m_worklog');
-		$this->m_worklog->selectDateTime();
+		$data['activeLink'] = 'Home Page';
+		$this->load->view('templates/header.php',$data);
+		$this->load->view('menu/studentMenu.php',$data);
+		$this->load->view('student/index.php',$data);
+		$this->load->view('templates/footer.php');
+		// $this->load->Model('m_worklog');
+		// $this->m_worklog->selectDateTime();
 
 	}
-	// home work-log
+	// home work-log with button month
 	public function worklog() 
 	{
 		$data['activeLink'] = 'work-log';
@@ -21,15 +21,19 @@ class cStudent extends CI_controller {
 		$this->load->view('student/worklog.php',$data);
 		$this->load->view('templates/footer.php');
 	}
-	// comment page
+	// comment page 
 	public function comment() 
 	{
 		$data['activeLink'] = 'Comment';
+		$this->load->helper('form');
+		$this->load->Model('m_worklog');
+		$data['comment'] = $this->m_worklog->getComment();
 		$this->load->view('templates/header.php',$data);
 		$this->load->view('menu/studentMenu.php',$data);
 		$this->load->view('student/comment',$data);
 		$this->load->view('templates/footer.php');
 	}
+
 	// calendar page
 	public function calendar() 
 	{

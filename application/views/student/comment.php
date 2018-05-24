@@ -5,20 +5,24 @@
 			<table id="studentList" class="table table-striped table-bordered bg-white text-center" style="width:100%">
 				<thead class="text-center">
 					<tr>
-						<th>ID</th>
+						<th style="width: 5em;">ID</th>
 						<th style="width: 5em;">Date</th>
 						<th style="width: 25em;">Student Comments</th>
 						<th style="width: 25em;">Tutor Reply</th>
 					</tr>
 				</thead>
 				<tbody>
-					<tr>
-						<td>1</td>
-						<td>7 jun 2018</td>
-						<td>I did not get computer yet. How should I do?</td>
-						<td>Ok I got it. I will contact with your supervisor to give you a computer soon.</td>
-					</tr>
-					<tr>
+					<?php foreach ($comment as $com):?>
+						<tr>
+							<td><?php echo $com['id']; ?></td>
+							<td><?php echo $com['date']; ?></td>
+							<td><?php echo $com['comment']; ?></td>
+							<td><?php echo $com['comment']; ?></td> <!-- Comment from Tutor  -->
+
+						</tr>
+					<?php endforeach ?>
+
+					<!-- <tr>
 						<td>2</td>
 						<td>8 may 2018</td>
 						<td>Dear Teacher. My supervor is very busy with his work. He did not gave me a task yet and I already talk  with him but he say he will gave after a few day.</td>
@@ -29,7 +33,7 @@
 						<td>22 may 2018</td>
 						<td>Dear Teacher. I have some problem with my computer it run too slow and I already inform to my supervisor and he did not have another one to exchange it. So how should I do?</td>
 						<td>Ok I will discuss with him about this problem.</td>
-					</tr>
+					</tr> -->
 				</tbody>
 			</table>
 		</div>

@@ -709,6 +709,33 @@ class Welcome_IF extends CI_Controller {
 			}
 		}	
 	}
+
+	public function editCommnetTutor()
+	{
+		$stuId = $_GET['id'];
+		$data['activeLink'] = 'student';
+		$this->load->Model('users_model');
+		$data['comment'] = $this->users_model->validateComment($stuId);
+		$this->load->view('templates/header.php',$data);
+		$this->load->view('menu/index.php',$data);
+		$this->load->view('pages/student/addComment.php',$data);
+		$this->load->view('templates/footer.php');			
+	}
+	public function validateComment()
+	{
+		$cmtId = $_GET['id'];
+		$id = $_GET['stuId'];
+		$this->load->helper('form');
+		$stuComment = $this->input->post("stuComment");
+		$this->load->Model('users_model');
+		$this->users_model->setValidate($cmtId,$stuComment);
+		$data['comment'] = $this->users_model->getComment($id);
+		$data['activeLink'] = 'student';
+		$this->load->view('templates/header.php',$data);
+		$this->load->view('menu/index.php',$data);
+		$this->load->view('pages/student/comment.php',$data);
+		$this->load->view('templates/footer.php');
+	}
 	public function deleteStudent()
 	{
 		$stuId = $_GET['id'];

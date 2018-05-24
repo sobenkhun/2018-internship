@@ -392,14 +392,14 @@ class Users_model extends CI_Model {
     }
     public function getComment($stuId)
     {
-        $this->db->select("comment.comment");
+        $this->db->select("comment.comment,comment.id,comment.status");
         $this->db->from('comment');
         $this->db->join('student', 'student.id = comment.student_id');
         $this->db->where('student.id', $stuId);
         $query = $this->db->get();
-        // var_dump($query->result_array());die();
         return $query->result_array();
     }
+
 
     /*get email from database*/
     public function mGetEmail()
@@ -409,6 +409,21 @@ class Users_model extends CI_Model {
         $query = $this->db->get();
         return $query->result_array();
 
+    public function validateComment($stuId)
+    {
+        $this->db->select("comment,id,student_id");
+        $this->db->from("comment");
+        $this->db->where('comment.id', $stuId);
+        $query = $this->db->get();
+        return $query->result_array();
+    }
+    public function setValidate($id,$cmt)
+    {
+         $data = array('comment'=>$cmt,
+                        'status'=>1
+                      );
+        $this->db->where('id', $id);
+        $this->db->update('comment', $data);
     }
   /**
    * Get the list of roles or one role

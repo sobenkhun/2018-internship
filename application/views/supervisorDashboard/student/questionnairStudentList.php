@@ -15,8 +15,9 @@
                 <th class="text-center">Questionnaire</th>
             </tr>
         </thead>
-         <tbody>
+        <tbody>
         <?php foreach ($student as $student):?>
+        
           <tr>
               <td class="text-center"><?php echo $student['id']; ?></td>
               <td><?php echo $student['studentName']; ?></td>
@@ -24,6 +25,7 @@
                 <a href="<?php echo base_url();?>supervisor/questionnaire?&id=<?php echo $student['id']; ?>"><span class="mdi mdi-book-minus mdi-24px" data-toggle ="tooltip" title="questionnaire " style="color: #CC6600;"></span></a>    
             </td>
           </tr>
+          
           <?php endforeach ?>
     </tbody>
     </table>

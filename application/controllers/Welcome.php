@@ -28,19 +28,9 @@ class Welcome extends CI_Controller {
 
 	public function sendEmail()
 	{
-		$config = Array(
-			$config['mailtype'] = 'html',
-			$config['smtp_host'] = 'ssl://smtp.googlemail.com',
-			$config['smtp_port'] = 465,
-			$config['smtp_user'] = 'pnc.temporary.vc2018@passerellesnumeriques.org',
-			$config['smtp_pass'] = 'Pnc!Wep2018?',
-			$config['protocol'] = 'smtp',
-			$config['charset'] = 'utf-8',
-			$config['wordwrap'] = TRUE,
-			$config['newline'] = "\r\n"
-			);
+		
 
-		$this->load->library('email',$config);
+		$this->load->library('email');
 		$this->load->library('parser');
 		$this->email->from('pnc.temporary.vc2018@passerellesnumeriques.org', 'Support');
 		$this->email->to('premmannpnc@gmail.com');

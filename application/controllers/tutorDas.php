@@ -59,7 +59,7 @@ class tutorDas extends CI_Controller {
 	}
 
 	/* detail company */
-	public function detailCompany2()
+	public function detailCompany()
 	{
 		$companyId = $_GET['id'];
 		$this->load->Model('tutor_model');
@@ -67,7 +67,7 @@ class tutorDas extends CI_Controller {
 		$data['activeLink'] = 'tutor';
 		$this->load->view('templates/header.php',$data);
 		$this->load->view('menu/index.php',$data);
-		$this->load->view('tutorDashboard/company/detail_2.php',$data);
+		$this->load->view('tutorDashboard/company/detail.php',$data);
 		$this->load->view('templates/footer.php');
 	}
 

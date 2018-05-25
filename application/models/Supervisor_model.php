@@ -129,9 +129,11 @@ class Supervisor_model extends CI_Model {
         $this->db->from('questionnaire');
         $this->db->where('questionnaire.student_id', $studentId);
         $query = $this->db->get();
-        // var_dump($query->result_array());die();
         return $query->result_array(); 
+    
+        $this->db->insert('questionnaire', $data);
     }
+
 
 	public function getQuestionnaireInfo($stuId)
     { 

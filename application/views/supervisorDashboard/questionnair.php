@@ -72,7 +72,6 @@
                                  }
                                ?>
                            ><span>Male</span>
-                           <span class="required text-danger"><?php echo form_error("sex"); ?></span>
                            </label>
                         </div>
                         <div class="c-choice-option">
@@ -1660,7 +1659,6 @@
                <div class="c-ac tion">
                   <button type="submit" class="c-button" id="c-submit-button" style="float: right;">Submit</button>
                   <button type="submit" class="c-button" id="c-submit-button" style="float: left;">Save</button>
-                  <!-- <button type="submit" id="c-submit-button" class="c-button" style="background-color: green; float: left;">Save</button> -->
                </div>
             </div>
          </div>

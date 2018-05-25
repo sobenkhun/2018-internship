@@ -17,8 +17,12 @@
 		</div>
 		<div class="col-md-8">
 			<h2 class="text-center">Comment on Student: Studnet Name</h2>
-
-			<textarea id="tinyMCE"></textarea>
+				<?php foreach ($comment as $comment):?>			
+				<?php $vaildateComment = "Welcome_IF/validateComment?&id=".$comment['id']."?&stuId=".$comment['student_id']; ?>
+				<?php echo form_open_multipart($vaildateComment,'class="form-horizontal"'); ?>
+			   <textarea id="tinyMCE" name="stuComment">
+						<?php echo $comment['comment']; ?>
+			   </textarea>
 
 			<link rel="stylesheet" href="<?php echo base_url();?>assets/ckeditor-4.7.3/content.css">
 			<script src="<?php echo base_url();?>assets/ckeditor-4.7.3/ckeditor.js"></script>
@@ -41,12 +45,14 @@
 		<!-- <div class="col-md-2"></div> -->
 		<div class="col-md-8 text-right">
 			<a href="<?php echo base_url();?>Welcome_IF/student">
-				<button class="btn btn-outline-danger">Cancel</button>
+				<!-- <button class="btn btn-outline-primary">Validate</button> -->
+				<button class="btn btn-outline-primary" type="submit" name="btn-submit">Validate</button>
 			</a>
 			<a href="<?php echo base_url();?>Welcome_IF/student">
-				<button class="btn btn-outline-primary float-left">Sent Message</button>
+				<button class="btn btn-outline-danger float-left">Cacell</button>
 			</a>
 		</div>
 		<div class="col-md-2"></div>
 	</div>
 </div>
+<?php endforeach ?>

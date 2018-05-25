@@ -606,7 +606,14 @@ class Welcome_IF extends CI_Controller {
 			$file_name = $iData['file_name'];
 		endforeach;
 		$this->load->Model('users_model');
+		$maxId = $this->users_model->getMaxStuId();
+		foreach ($maxId as $maxId):
+				$maxId = $maxId['id'];
+             endforeach;
+             $maxId = (int)$maxId;
+             $maxId = $maxId+1;
 		$this->users_model->newStudent($firstname,$lastname,$username,$password,$supervisor,$phone,$batch,$year,$peremail,$schoolemail,$file_name);
+		$this->users_model->newQestionnaire($maxId);
 		$this->load->helper('form');
 		$this->load->Model('users_model');
 		$data['student'] = $this->users_model->getStudentData();

@@ -81,6 +81,18 @@ class tutor_model extends CI_Model {
         // var_dump($query->result_array());die();
         return $query->result_array();
     }
+
+    public function insertComment($comment,$status)
+    {
+       $this->db->select("id");
+        $this->db->from("comment");
+        $query = $this->db->get();
+        $data = array('comment'=>$comment,
+                     'status'=>$status
+                     );
+                     $this->db->insert('comment',$data);
+    
+    }
     /* join table compnay with subperviser*/
 
     // public function viewSupervisor()

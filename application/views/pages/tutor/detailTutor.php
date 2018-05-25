@@ -13,7 +13,7 @@
 	<h3 class="card-title text-center text-primary"><strong>Tutor Profile</strong></h3><br>
 	<?php foreach ($tutor as $tutor):?>
 			<?php $imagepart =  "assets/images/users/".$tutor['picture'];?>
-	<div class="row bg-white st-edit back" >
+	<div class="row bg-white st-edit" >
 		<div class="col-md-3"></div>
 		<div class="col-md-3"><br><br>
 		<img class="user userSupervisor"  src="<?php echo base_url(); ?><?php  echo $imagepart?>" alt="" style="height: 185px; width: 220px; margin-top: 17px; padding: 10px;" class="img-thumbnail"><br>

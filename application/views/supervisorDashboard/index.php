@@ -10,9 +10,7 @@
       <div class="row">
         <div class="col-md-6"  >
           <div class="">
-            <div class="row"> 
-                <!--  test commit-->
-
+            <div class="row">
               <div class="col-md-12 ">
                 <div class="card text-center text-white">
                   <div class="card-header" style="background-color: #FFD740 ;">
@@ -21,10 +19,8 @@
                     <h5 class="card-title"><?php echo $student; ?></h5>
                   </div>
                   <div class="card-body">
-
                     <a style="background-color: #31b5eb ; font-family: verdana" href="<?php echo base_url();?>supervisor/student" class="btn btn-primary">Go Student</a>
                   </div>
-                  
                 </div>
               </div>
             </div>

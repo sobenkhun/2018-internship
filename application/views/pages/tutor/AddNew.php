@@ -72,12 +72,7 @@
 							<span class="required text-danger"><?php echo form_error("company"); ?></span class="required text-danger">
 						</div>
 					</div>
-					<div class="form-group row col-md-6 group-col-stu">
-						<label class="col-sm-4 col-form-label" for=""></label>
-						<div class="col-sm-8">
-							<!-- <input type="file" name="image" id="" class="form-control" placeholder="..."> -->
-						</div>
-					</div>
+					
 					<br><br><br>
 					<div class="col-md-4"></div>
 					<div class="col-md-2 text-center">
@@ -88,7 +83,6 @@
 						<br>
 						<br>
 					</div>
-
 					<div class="col-md-4"></div>
 				</div>
 			<?php echo form_close(); ?>

@@ -160,12 +160,51 @@ class supervisor extends CI_Controller {
 	}
 	function calendar()
 	{
-
+		$this->load->Model('users_model');
+		$data['email'] = $this->users_model->mGetEmail();
 		$data['activeLink'] = 'calendar';
 		$this->load->view('templates/header.php',$data);
 		$this->load->view('menu/supervisorMenu.php',$data);
 		$this->load->view('supervisorDashboard/calendar/calendar.php',$data);
 		$this->load->view('templates/footer.php');
+	}
+
+	/* send email to someone*/
+	public function sendMail(){
+		$userEmail = $this->input->post('userEmail');
+		$userPass = $this->input->post('password');
+		 $config = array(
+		  'protocol' => 'smtp',
+		  'smtp_host' => 'ssl://smtp.googlemail.com',
+		  'smtp_port' => 465,
+		  'smtp_user' => $userEmail,
+		  'smtp_pass' => $userPass,
+		  'mailtype' => 'html',
+		  'charset' => 'utf-8',
+		  'wordwrap' => TRUE,
+		  'newline' => "\r\n"
+		 );
+		$this->load->library('email',$config);
+
+		$this->email->from($userEmail);
+		$this->input->post('title');
+		
+		$this->email->to($this->input->post('email'));
+		$this->email->subject($this->input->post('title'));
+		$this->email->message($this->input->post('description'));
+		if ($this->email->send()) {
+			echo "successfully";
+		}else{
+			echo $this->email->print_debugger();
+		}
+	}
+
+	Public function SupervisoraddEvent()
+	{
+
+		$result=$this->Calendar_model->sAddEvent();
+		echo $result;
+		$this->sendMail();
 	}
 
 }

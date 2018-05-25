@@ -268,7 +268,7 @@ class Users_model extends CI_Model {
     }
     public function editSupervisor($id,$company,$student,$firstname,$lastname,$username,$password,$position,$sEmail,$phone,$file_name)
     {
-            $this->db->select("id");
+        $this->db->select("id");
         $this->db->from("company");
         $this->db->where('name', $company);
         $query = $this->db->get();

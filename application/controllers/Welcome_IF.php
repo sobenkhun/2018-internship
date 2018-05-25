@@ -763,6 +763,14 @@ class Welcome_IF extends CI_Controller {
 		$stuId = $_GET['id'];
 		$data['activeLink'] = 'student';
 		$this->load->Model('users_model');
+		$maxId = $this->users_model->getMaxStuId();
+		foreach ($maxId as $maxId):
+				$maxId = $maxId['id'];
+             endforeach;
+             $maxId = (int)$maxId;
+             $maxId = $maxId+1;
+		$this->users_model->newStudent($firstname,$lastname,$username,$password,$supervisor,$phone,$batch,$year,$peremail,$schoolemail,$file_name);
+		$this->users_model->newQestionnaire($maxId);
 		$data['comment'] = $this->users_model->validateComment($stuId);
 		$this->load->view('templates/header.php',$data);
 		$this->load->view('menu/index.php',$data);

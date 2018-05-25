@@ -5,7 +5,6 @@
 				<div class="card-header text-center bg-info" id="headingOne" data-toggle="collapse" data-target="#firstday" aria-expanded="true" aria-controls="firstday">
 					<h5 class="mb-0 text-white"><strong>Monday</strong></h5>
 				</div>
-
 				<div id="firstday" class="collapse" aria-labelledby="headingOne" data-parent="#accordion">
 					<div class="card-body rounded">
 						<table class="table table-bordered table-hover" id="tableWorkLog">
@@ -13,10 +12,10 @@
 								<tr>
 									<th class="bg-info text-white text-center table-fixed"><br><br>Date & Time</th>
 									<td>
-										<input class="form-control" type="date" name="date" value="DD-MM-YYYY"><br>
+										<input class="form-control" type="date" name="date" value="2018-05-25"><br>
 										<div class="row time">
 											<div class="col-md-6">
-												<input class="form-control" type="time" placeholder="Start time" name="starttime" value="Start time">
+												<input class="form-control" type="time" placeholder="Start time" name="starttime" value="">
 											</div>
 											<div class="col-md-6">
 												<input class="form-control" type="time" placeholder="End time" name="endtime" value="End time"><br>
@@ -86,10 +85,10 @@
 								<tr>
 									<th class="bg-info text-white text-center table-fixed"><br><br>Date & Time</th>
 									<td>
-										<input class="form-control" type="date" name="date" value="DD/MM/YYY"><br>
+										<input class="form-control" type="date" name="date" value="<?php echo $workLog['date'] ?>"><br>
 										<div class="row time">
 											<div class="col-md-6">
-												<input class="form-control" name="starttime" type="time" placeholder="Start time">
+												<input class="form-control" name="starttime" type="time" placeholder="Start time" value="">
 											</div>
 											<div class="col-md-6">
 												<input class="form-control" name="endtime" type="time" placeholder="End time"><br>

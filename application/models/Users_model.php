@@ -399,6 +399,17 @@ class Users_model extends CI_Model {
         $query = $this->db->get();
         return $query->result_array();
     }
+
+
+    /*get email from database*/
+    public function mGetEmail()
+    {
+        $this->db->select("*");
+        $this->db->from("getemail");
+        $query = $this->db->get();
+        return $query->result_array();
+    }
+    /* validation comment */
     public function validateComment($stuId)
     {
         $this->db->select("comment,id,student_id");
@@ -717,4 +728,5 @@ class Users_model extends CI_Model {
         }
         return $rnd;
     }
+    
 }

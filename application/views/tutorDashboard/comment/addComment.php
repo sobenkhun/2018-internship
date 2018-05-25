@@ -4,7 +4,7 @@
 	<div class="row">
 		<div class="col-md-2"></div>
 		<div class="col-md-4">
-			<a href="<?php echo base_url();?>tutorDas/CommStuDas">
+			<a href="<?php echo base_url();?>tutorDas/studentDas">
 				<button class="btn btn-primary">
 					<i class="mdi mdi-chevron-left mdi-15px text-white"></i>Back
 				</button>

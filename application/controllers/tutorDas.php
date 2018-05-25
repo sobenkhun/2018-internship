@@ -194,36 +194,48 @@ class tutorDas extends CI_Controller {
 
 	function CommStuDas()
 	{
+		$stuId = $_GET['id'];
+		$this->load->Model('tutor_model');
+		$data['comment'] = $this->tutor_model->getStuCmt($stuId);
 		$data['activeLink'] = 'student';
-
 		$this->load->view('templates/header.php',$data);
 		$this->load->view('menu/tutor.php',$data);
 		$this->load->view('tutorDashboard/comment/commentStudent.php',$data);
 		$this->load->view('templates/footer.php');
 	}
-	function addCommStuDas()
+	 function addCommStuDas()
+	 {
+	 	$data['activeLink'] = 'comment';
+	 	$this->load->view('templates/header.php',$data);
+	 	$this->load->view('menu/tutor.php',$data);
+	 	$this->load->view('tutorDashboard/comment/addComment.php',$data);
+	 	$this->load->view('templates/footer.php');
+	 }
+	public function addComment()
 	{
+		
+		$this->load->helper('form');
+		$comment = $this->input->post("comment");
+		$this->load->Model('tutor_model');
+		$data['comment'] = $this->tutor_model->insertComment($comment);
 		$data['activeLink'] = 'comment';
 		$this->load->view('templates/header.php',$data);
 		$this->load->view('menu/tutor.php',$data);
-		$this->load->view('tutorDashboard/comment/addComment.php',$data);
+		// $this->load->view('tutorDashboard/comment/commentStudent.php',$data);
+		var_dump($data);
 		$this->load->view('templates/footer.php');
-	}
-	public function addComment()
-	{
-		$this->load->helper('form');
-		$name = $this->input->post("comment");
-		var_dump($name);die();
-	}
-	function viewWorkLog()
-	{
-		$data['activeLink'] = 'work-log';
-		$this->load->view('templates/header.php',$data);
-		$this->load->view('menu/tutor.php',$data);
 
-		$this->load->view('tutorDashboard/student/studentWorkLog.php',$data);
-		$this->load->view('templates/footer.php');
+
+		
 	}
+	// function viewWorkLog()
+	// {
+	// 	$data['activeLink'] = 'work-log';
+	// 	$this->load->view('templates/header.php',$data);
+	// 	$this->load->view('menu/tutor.php',$data);
+	// 	$this->load->view('tutorDashboard/student/studentWorkLog.php',$data);
+	// 	$this->load->view('templates/footer.php');
+	// }
 	function calendar()
 	{
 		$data['activeLink'] = 'calendar';
@@ -242,10 +254,20 @@ class tutorDas extends CI_Controller {
 
 		$this->load->view('tutorDashboard/supervisor/questionnair.php',$data);
 		$this->load->view('templates/footer.php');
+		
+	}
 
-		
-		
-		
+	function displayWorkLog()
+
+	{
+		$stuId = $_GET['id'];
+		$data['activeLink'] = 'student';
+		$this->load->Model('tutor_model');
+		$data['work'] = $this->tutor_model->selectWorkLog();
+		$this->load->view('templates/header.php',$data);
+		$this->load->view('menu/tutor.php',$data);
+		$this->load->view('tutorDashboard/studnet/viewWorkLog',$data);
+		$this->load->view('templates/footer.php');
 	}
 
 }

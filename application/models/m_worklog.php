@@ -2,6 +2,20 @@
 	class m_worklog extends CI_Model {
 		public function weeklyWorklog()
 		{
+			
+			$now = date("Y");
+			$startDate = $now.'-06-04';
+			$endDate = $now.'-06-06';
+			// var_dump($endDate);die();
+			 $this->db->select('id');
+        	 $this->db->from('worklog');
+         	 $this->db->where("date >=",$startDate);
+         	 $this->db->where('date <=', $endDate);
+         	 $query = $this->db->get();
+			// var_dump($query->result_array());die();
+		}
+		// get comment display
+		public function getComment(){
 			$this->db->select('*');
 			$query = $this->db->get('worklog');
 			return $query->result_array();
@@ -43,14 +57,16 @@
 			$this->db->update('worklog', $data);
 		}
 		
-		// select date in DB
+		// select Test date in DB
 		public function selectDateTime(){
-			$query=$this->db->query(
-				'SELECT date_format(date,"%W"), count(date) FROM worklog group by "Day of the week" order by date_format(date,"%W")'
-			);
-			$result = $query->result();
-			print_r($result);
-			
+			// $this->db->select('*');
+			// $Datequery = $this->db->query('SELECT date_format(date, "%W") FROM worklog group by "Day of the week" order by date_format(date,"%W")');		
+			// if($Datequery == date_format("Friday")){
+				$query=$this->db->query('SELECT date_format(date, "%D %W %M %Y %V"), count(*) FROM worklog group by week');
+				$result = $query->result();
+				print_r($result);
+			// }
+				
 			// $this->db->select('*')->from('worklog')->where(month("2018-06-15"));
 				// $this->db->select();
 				// $this->db->count(date);
@@ -85,6 +101,31 @@
 			// }
 				$period = array (" second", " minute", " hour", " day", " month", " year");
 
+		}
+
+		public function getCurrentWorklog()
+		{
+			$year = date("Y");
+			$startTime = $year.'-06-01';
+			$endTime = $year.'-06-07';
+			$stu_id = 9;
+			 $this->db->select('*');
+        	 $this->db->from('worklog');
+         	 $this->db->where("date >=",$startTime);
+         	 $this->db->where("date <=",$endTime);
+         	 $this->db->where("stu_id",$stu_id);
+         	 $query = $this->db->get();
+         	 return $query->result_array();
+		}
+
+		public function setCmt($Comment)
+		{
+			$data = array(  
+		    	'comment' 		=> $Comment
+		    ); 
+		    $this->db->where('stu_id', 1);
+			$this->db->update('worklog', $data);
+		    
 		}
 		// ==========
 	}

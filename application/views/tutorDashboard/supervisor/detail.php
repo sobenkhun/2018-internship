@@ -8,20 +8,24 @@
 	</a>
 	<h3 class="card-title text-center text-primary"><strong>Supervisor Profile</strong></h3><br>
 	<div class="row bg-white st-edit">
-		<div class="col-md-2"></div>
-		<div class="col-md-4">
+		<div class="col-md-3"></div>
+		<div class="col-md-3">
 			<?php foreach ($ss as $supervisor):?>
 				<?php $imagepart =  "assets/images/users/".$supervisor['picture'];?>
-			<br><br>
-			 <img class="user userSupervisor"  src="<?php echo base_url(); ?><?php  echo $imagepart?>" alt="" style="height: 180px; width: 210px; margin-top: 17px; padding: 10px;" class="img-thumbnail"><br>
+			<br><br><br>
+			 <img class="user userSupervisor"  src="<?php echo base_url(); ?><?php  echo $imagepart?>" alt="" style="height: 195px; width: 220px; margin-top: 17px; padding: 10px;" class="img-thumbnail"><br>
 			
 			<div style="margin-left: 60px;">
-			   <a class="link" href="#" ><?php echo $supervisor['firstname']." ".$supervisor['lastname']; ?></a>
-			</div>						
+			   <b>
+			   	<a class="link" href="#" >
+			   		<?php echo $supervisor['firstname']." ".$supervisor['lastname']; ?>		
+			   	</a>
+			   	</b>
+			</div><br>						
 		</div>
 		 <?php endforeach ?>
 		
-		<div class="col-md-6"><br><br><br>
+		<div class="col-md-6"><br><br><br><br>
 			<div class="row">
 				<div class="col-md-3"><label for="">First Name : </label></div>
 				<div class="col-md-3">

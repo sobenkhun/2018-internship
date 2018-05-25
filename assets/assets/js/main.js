@@ -17,7 +17,7 @@ $(function(){
         },
         // Get all events stored in database
         eventLimit: true, // allow "more" link when too many events
-        events: base_url+'calendar/getEvents',
+        events: base_url+'supervisor/getEvents',
         selectable: true,
         selectHelper: true,
         editable: true, // Make the event resizable true           
@@ -35,7 +35,7 @@ $(function(){
                         label: 'Add' // Buttons label
                     }
                 },
-                title: 'Add Events' // Modal title
+                title: 'Add Event' // Modal title
             });
             }, 
            
@@ -48,14 +48,13 @@ $(function(){
                 end = start;
             }         
                        
-               $.post(base_url+'calendar/dragUpdateEvent',{                            
+               $.post(base_url+'supervisor/dragUpdateEvent',{                            
                 id:event.id,
                 start : start,
                 end :end
             }, function(result){
                 $('.alert').addClass('alert-success').text('Event updated successfuly');
                 hide_notify();
-
 
             });
 
@@ -71,7 +70,7 @@ $(function(){
                 end = start;
             }         
                        
-               $.post(base_url+'calendar/dragUpdateEvent',{                            
+               $.post(base_url+'supervisor/dragUpdateEvent',{                            
                 id:event.id,
                 start : start,
                 end :end
@@ -149,12 +148,14 @@ $(function(){
     // Handle Click on Add Button
     $('.modal').on('click', '#add-event',  function(e){
         if(validator(['title', 'description'])) {
-            $.post(base_url+'calendar/addEvent', {
+            $.post(base_url+'supervisor/addEvent', {
                 title: $('#title').val(),
                 description: $('#description').val(),
                 color: $('#color').val(),
                 start: $('#start').val(),
-                end: $('#end').val()
+                end: $('#end').val(),
+                email: $('#email').val(),
+                userEmail: $('#userEmail').val()
             }, function(result){
                 $('.alert').addClass('alert-success').text('Event added successfuly');
                 $('.modal').modal('hide');
@@ -168,11 +169,12 @@ $(function(){
     // Handle click on Update Button
     $('.modal').on('click', '#update-event',  function(e){
         if(validator(['title', 'description'])) {
-            $.post(base_url+'calendar/updateEvent', {
+            $.post(base_url+'supervisor/updateEvent', {
                 id: currentEvent._id,
                 title: $('#title').val(),
                 description: $('#description').val(),
-                color: $('#color').val()
+                color: $('#color').val(),
+                email: $('#email').val()
             }, function(result){
                 $('.alert').addClass('alert-success').text('Event updated successfuly');
                 $('.modal').modal('hide');
@@ -187,7 +189,7 @@ $(function(){
 
     // Handle Click on Delete Button
     $('.modal').on('click', '#delete-event',  function(e){
-        $.get(base_url+'calendar/deleteEvent?id=' + currentEvent._id, function(result){
+        $.get(base_url+'supervisor/deleteEvent?id=' + currentEvent._id, function(result){
             $('.alert').addClass('alert-success').text('Event deleted successfully !');
             $('.modal').modal('hide');
             $('#calendar').fullCalendar("refetchEvents");

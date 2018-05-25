@@ -154,7 +154,30 @@ $(function(){
                 color: $('#color').val(),
                 start: $('#start').val(),
                 end: $('#end').val(),
-                email: $('#email').val()
+                email: $('#email').val(),
+                userEmail: $('#userEmail').val(),
+                password: $('#password').val()
+            }, function(result){
+                $('.alert').addClass('alert-success').text('Event added successfuly');
+                $('.modal').modal('hide');
+                $('#calendar').fullCalendar("refetchEvents");
+                hide_notify();
+            });
+        }
+    });
+
+    // Handle Click on Add Button
+    $('.modal').on('click', '#add-event',  function(e){
+        if(validator(['title', 'description'])) {
+            $.post(base_url+'supervisor/SupervisoraddEvent', {
+                title: $('#title').val(),
+                description: $('#description').val(),
+                color: $('#color').val(),
+                start: $('#start').val(),
+                end: $('#end').val(),
+                email: $('#email').val(),
+                userEmail: $('#userEmail').val(),
+                password: $('#password').val()
             }, function(result){
                 $('.alert').addClass('alert-success').text('Event added successfuly');
                 $('.modal').modal('hide');

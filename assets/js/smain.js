@@ -17,7 +17,7 @@ $(function(){
         },
         // Get all events stored in database
         eventLimit: true, // allow "more" link when too many events
-        events: base_url+'supervisor/getEvents',
+        events: base_url+'Welcome_IF/getEvents',
         selectable: true,
         selectHelper: true,
         editable: true, // Make the event resizable true           
@@ -48,7 +48,7 @@ $(function(){
                 end = start;
             }         
                        
-               $.post(base_url+'supervisor/dragUpdateEvent',{                            
+               $.post(base_url+'Welcome_IF/dragUpdateEvent',{                            
                 id:event.id,
                 start : start,
                 end :end
@@ -70,7 +70,7 @@ $(function(){
                 end = start;
             }         
                        
-               $.post(base_url+'supervisor/dragUpdateEvent',{                            
+               $.post(base_url+'Welcome_IF/dragUpdateEvent',{                            
                 id:event.id,
                 start : start,
                 end :end
@@ -169,7 +169,7 @@ $(function(){
     // Handle click on Update Button
     $('.modal').on('click', '#update-event',  function(e){
         if(validator(['title', 'description'])) {
-            $.post(base_url+'supervisor/updateEvent', {
+            $.post(base_url+'Welcome_IF/updateEvent', {
                 id: currentEvent._id,
                 title: $('#title').val(),
                 description: $('#description').val(),
@@ -189,7 +189,7 @@ $(function(){
 
     // Handle Click on Delete Button
     $('.modal').on('click', '#delete-event',  function(e){
-        $.get(base_url+'supervisor/deleteEvent?id=' + currentEvent._id, function(result){
+        $.get(base_url+'Welcome_IF/deleteEvent?id=' + currentEvent._id, function(result){
             $('.alert').addClass('alert-success').text('Event deleted successfully !');
             $('.modal').modal('hide');
             $('#calendar').fullCalendar("refetchEvents");

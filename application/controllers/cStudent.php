@@ -15,10 +15,14 @@ class cStudent extends CI_controller {
 	// home work-log with button month
 	public function worklog() 
 	{
+
 		$data['activeLink'] = 'work-log';
+		$this->load->Model('m_worklog');
+		$data['worklog'] = $this->m_worklog->getCurrentWorklog();
 		$this->load->view('templates/header.php',$data);
 		$this->load->view('menu/studentMenu.php',$data);
 		$this->load->view('student/worklog.php',$data);
+		$this->load->view('student/insertReportWorklog.php',$data);
 		$this->load->view('templates/footer.php');
 	}
 	// comment page 
@@ -56,13 +60,19 @@ class cStudent extends CI_controller {
 		$this->load->view('student/insertReportWorklog.php');
 		$this->load->view('templates/footer.php');
 	}
+	public function getStuWork()
+	{
+		$month = $_GET['month'];
+		$week = $_GET['week'];
+	}
 
 	// form edit and process of edit
 	public function weekWorklog()
 	{
+		$month = $_GET['month'];
+		$week = $_GET['week'];
 		$data['activeLink'] = 'work-log';
 		$this->load->helper('form');
-		$Id = $_GET['id'];
 		$Date = $this->input->post("date");
 		$startTime = $this->input->post("starttime");
 		$endTime = $this->input->post("endtime");
@@ -72,9 +82,8 @@ class cStudent extends CI_controller {
 		$Solution = $this->input->post("solution");
 		$toDo = $this->input->post("todo");
 		$Comment = $this->input->post("comment");
-
 		$this->load->Model('m_worklog');
-		$this->m_worklog->updateWorklog($Id,$Date,$startTime,$endTime,$workActivities,$Learner,$Issoues,$Solution,$toDo,$Comment);
+		$this->m_worklog->updateWorklog($month,$week,$Id,$Date,$startTime,$endTime,$workActivities,$Learner,$Issoues,$Solution,$toDo,$Comment);
 
 		$data['worklog'] = $this->m_worklog->weeklyWorklog();
 		$data['activeLink'] = 'work-log';
@@ -129,6 +138,21 @@ class cStudent extends CI_controller {
 		$this->load->view('student/editWorklog.php');
 		$this->load->view('templates/footer.php');
 	}	
+
+	public function setCmt()
+	{
+		$this->load->helper('form');
+		$comment = $this->input->post("comment");
+		$this->load->Model('m_worklog');
+		$this->m_worklog->setCmt($comment);
+		$data['activeLink'] = 'work-log';
+		$data['worklog'] = $this->m_worklog->weeklyWorklog();
+		$this->load->view('templates/header.php',$data);
+		$this->load->view('menu/studentMenu.php',$data);
+		$this->load->view('student/worklog.php',$data);
+		$this->load->view('student/editWorklog.php');
+		$this->load->view('templates/footer.php');
+	}
 
 // ==========================================================
 	

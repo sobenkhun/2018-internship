@@ -2,9 +2,17 @@
 	class m_worklog extends CI_Model {
 		public function weeklyWorklog()
 		{
-			$this->db->select('*');
-			$query = $this->db->get('worklog');
-			return $query->result_array();
+			
+			$now = date("Y");
+			$startDate = $now.'-06-04';
+			$endDate = $now.'-06-06';
+			// var_dump($endDate);die();
+			 $this->db->select('id');
+        	 $this->db->from('worklog');
+         	 $this->db->where("date >=",$startDate);
+         	 $this->db->where('date <=', $endDate);
+         	 $query = $this->db->get();
+			// var_dump($query->result_array());die();
 		}
 		// get comment display
 		public function getComment(){
@@ -93,6 +101,31 @@
 			// }
 				$period = array (" second", " minute", " hour", " day", " month", " year");
 
+		}
+
+		public function getCurrentWorklog()
+		{
+			$year = date("Y");
+			$startTime = $year.'-06-01';
+			$endTime = $year.'-06-07';
+			$stu_id = 9;
+			 $this->db->select('*');
+        	 $this->db->from('worklog');
+         	 $this->db->where("date >=",$startTime);
+         	 $this->db->where("date <=",$endTime);
+         	 $this->db->where("stu_id",$stu_id);
+         	 $query = $this->db->get();
+         	 return $query->result_array();
+		}
+
+		public function setCmt($Comment)
+		{
+			$data = array(  
+		    	'comment' 		=> $Comment
+		    ); 
+		    $this->db->where('stu_id', 1);
+			$this->db->update('worklog', $data);
+		    
 		}
 		// ==========
 	}

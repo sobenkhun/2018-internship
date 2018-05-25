@@ -7,7 +7,7 @@
 		</button>
 	</a>
 	<h3 class="card-title text-center text-primary"><strong>Supervisor Profile</strong></h3><br>
-	<div class="row bg-white st-edit back">
+	<div class="row bg-white st-edit">
 		<div class="col-md-3"></div>
 		<div class="col-md-3">
 			<?php foreach ($ss as $supervisor):?>

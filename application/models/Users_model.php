@@ -386,6 +386,19 @@ class Users_model extends CI_Model {
         $this->db->where('id', $stuId);
         $this->db->update('student', $data);
     }
+    public function getMaxStuId()
+    {
+        $this->db->select_max('id');
+        $this->db->from('student');
+        $query = $this->db->get(); 
+        return $query->result_array();
+    }
+    public function newQestionnaire($maxId)
+    {
+        $data = array('student_id' =>$maxId  
+                    );
+        $this->db->insert('questionnaire', $data);
+    }
     public function deleteStudent($Id)
     {
         $this->db->delete('student', array('id' => $Id));

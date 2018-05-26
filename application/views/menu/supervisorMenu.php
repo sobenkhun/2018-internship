@@ -17,7 +17,7 @@ $activeLink = (isset($activeLink)) ? $activeLink :  "";?>
         <a class="nav_link nav-link" href="<?php echo base_url();?>supervisor/student">Student</a>
       </li>
       <li class="nav-item <?php echo ($activeLink=='questionnair'?'active':'');?>">
-        <a class="nav_link nav-link" href="<?php echo base_url();?>supervisor/viewProfile">Questionniare</a>
+        <a class="nav_link nav-link" href="<?php echo base_url();?>supervisor/viewProfile">Questionnair</a>
       </li>
       <li class="nav-item <?php echo ($activeLink=='calendar'?'active':'');?>">
         <a class="nav_link nav-link" href="<?php echo base_url();?>supervisor/calendar"></i>Calendar</a>

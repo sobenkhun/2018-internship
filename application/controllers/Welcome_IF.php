@@ -909,5 +909,16 @@ class Welcome_IF extends CI_Controller {
 		$this->load->view('pages/student/addComment.php');
 		$this->load->view('templates/footer.php');
 	}
-
+	public function viewQuestionnaire()
+	{
+		$this->load->helper('form');
+		$stuId = $_GET['id'];
+		$this->load->Model('users_model');
+		$data['student'] = $this->users_model->viewQuestionnaire($stuId);
+		$data['activeLink'] = 'supervisor';
+		$this->load->view('templates/header.php');
+		$this->load->view('menu/index.php',$data);
+		$this->load->view('pages/supervisor/viewQuestionnair.php', $data);
+		$this->load->view('templates/footer.php');
+	}
 }

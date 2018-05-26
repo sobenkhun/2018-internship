@@ -5,6 +5,13 @@ class supervisor extends CI_Controller {
 	public function __construct() {
 			parent::__construct();
 			log_message('debug', 'URI=' . $this->uri->uri_string());
+			if ($this->session->loggIn == TRUE) {
+			
+		}else
+		{
+			redirect('connection/login');
+
+		}
 	}
 	function index()
 	{

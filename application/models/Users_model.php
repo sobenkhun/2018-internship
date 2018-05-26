@@ -628,6 +628,7 @@ class Users_model extends CI_Model {
 
         $newdata = array(
             'login' => $row->username,
+            'loggIn' => TRUE,
             'id' => $row->id,
             'role' => $row->userrole_id,
             'isAdmin' => $isAdmin,

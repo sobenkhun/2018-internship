@@ -12,7 +12,7 @@
 		</div>
 		<div class="col-md-6"></div>
 	</div>
-	<form action="<?php echo base_url();?>tutorDas/addComment" method="post">
+	<form action="<?php echo base_url();?>tutorDas/addComment?&id=<?php echo $stuId; ?>" method="post">
 	<div class="row">
 		<div class="col-md-2">
 

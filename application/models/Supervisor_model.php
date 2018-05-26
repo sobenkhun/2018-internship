@@ -117,13 +117,15 @@ class Supervisor_model extends CI_Model {
 	///////
 	public function getDataStudentDetail($studentId)
     {
-    	$this->db->select("*");
-    	$this->db->from("student");
-    	$this->db->where('student.id', $studentId);
-    	$query = $this->db->get();
-    	return $query-> result_array();
+        $this->db->select("s.*, c.url, CONCAT(t.firstname, ' ', t.lastname) as tutorName ");
+        $this->db->from("student s");
+        $this->db->join('supervisor su', 'su.id = s.supervisor_id');
+        $this->db->join('company c', 'c.id = su.company_id');
+        $this->db->join('tutor t', 't.company_id = c.id');
+        $this->db->where('s.id', $studentId);
+        $query = $this->db->get();
+        return $query-> result_array();
     }
-   
     public function countStudent()
     {
         $this->db->select('*');

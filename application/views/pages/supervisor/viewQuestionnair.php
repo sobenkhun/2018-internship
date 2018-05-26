@@ -3,24 +3,21 @@
  <div class="container">
    <div class="row">
       <div class="col-md-4">
-         <a href="<?php echo base_url(); ?>supervisor/viewProfile">
+         <a href="<?php echo base_url(); ?>Welcome_IF/supervisor">
             <button class="btn btn-primary"><i class="mdi mdi-chevron-left"></i>Back</button>
          </a>
       </div>
       <div class="col-md-4"></div>
    </div>
  </div>  
-   <?php foreach ($studentInfo as $studentInfo):?>
-      <?php endforeach ?>
-  <?php foreach ($student as $student):?>
-      <?php endforeach ?>
+  
 
 <div id="c-forms-container" class="cognito c-safari c-lrg container">
    <script src="<?php echo base_url();?>/assets/CognitorFormFiles/88be12b9-8c99-4872-a5dd-446f35bfd50f"></script>
    <link rel="stylesheet" href="<?php echo base_url(); ?>/assets/CognitorFormFiles/style2.css">
    <link rel="stylesheet" href="<?php echo base_url(); ?>/assets/CognitorFormFiles/style3.css">
-            <?php $saveQuestionnaire = "supervisor/saveQuestionnaire?&id=".$student['id']."?&stuId=".$student['student_id']; ?>
-   <?php echo form_open_multipart($saveQuestionnaire,'class="form-horizontal"'); ?>
+    <?php foreach ($student as $student):?>
+      <!-- <form action=""> -->
       <div class="c-forms-form" tabindex="0">
          <div class="c-forms-form-body">
             <div class="c-forms-heading">
@@ -35,7 +32,7 @@
                      <div class="c-label  ">
                         <label for="c-0-205">Name of your company </label></div>
                      <div class="c-editor">
-                        <input type="text"  id="c-0-205" value="<?php echo $studentInfo['name']; ?>" name="companyName" placeholder="Your Company Name" >
+                        <input type="text"  id="c-0-205" value="<?php echo $student['name']; ?>" name="companyName" placeholder="Your Company Name" >
                      </div>
                      <div class="c-validation">Name of your company  is required.</div>
                   </div>
@@ -49,13 +46,13 @@
                            <label for="c-1-204">First</label>
                         </div>
                         <div class="c-editor c-span-1" style="width: 50%; float: left;">
-                           <input type="text" id="c-1-204" name="firstname" value="<?php echo $studentInfo['sFirstname']; ?>" placeholder="First Name" >
+                           <input type="text" id="c-1-204" name="firstname" value="<?php echo $student['sFirstname']; ?>" placeholder="First Name" >
                         </div>
                         <div class="c-offscreen">
                            <label for="c-2-204">Last</label>
                         </div>
                         <div class="c-editor c-span-1" style="width: 50%; float: left;">
-                           <input type="text" id="c-2-204" name="lastname" value="<?php echo $studentInfo['sLastname']; ?>" placeholder="Last Name" >
+                           <input type="text" id="c-2-204" name="lastname" value="<?php echo $student['sLastname']; ?>" placeholder="Last Name" >
                         </div>
                      </div>
                      <div class="c-validation">First and Last are required.</div>
@@ -63,7 +60,6 @@
                   <div class="c-choice-radiobuttons c-field c-col-1 c-sml-col-1 c-span-24 c-sml-span-12  c-required">
                      <legend class="c-label  ">Sex</legend>
                      <div class="c-editor c-columns-0">
-                     <span class="required text-danger"><?php echo form_error("sex"); ?></span>
                         <div class="c-choice-option">
                            <label for="c-4-202">
                            <input type="radio" name="sex" id="c-4-202" value="Male"
@@ -225,12 +221,6 @@
                                  </td>
                                        
                               </tr>
-                              <tr>
-                                 <td class="c-validation-row"> 
-                                    <span class="required text-danger"><?php echo form_error("q1"); ?></span>
-                                 </td>
-                              </tr>
-
                            </tbody>
                         </table>
                      </div>
@@ -239,7 +229,6 @@
                   <div class="c-choice-radiobuttons c-field c-col-1 c-sml-col-1 c-span-24 c-sml-span-12  c-required">
                      <legend class="c-label  ">What was the major of your intern at PNC ?</legend>
                      <div class="c-editor c-columns-0">
-                     <span class="required text-danger"><?php echo form_error("major"); ?></span>
                         <div class="c-choice-option">
                            <label for="c-7-187">
                               <input type="radio" name="major" value="WEB" id="c-7-187"
@@ -859,7 +848,6 @@
                   <div class="c-choice-radiobuttons c-field c-col-1 c-sml-col-1 c-span-24 c-sml-span-12  c-required">
                      <legend class="c-label  ">Did your company use Linux operating system ?</legend>
                      <div class="c-editor c-columns-0">
-                     <span class="required text-danger"><?php echo form_error("q2"); ?></span>
                         <div class="c-choice-option"><label for="c-28-84">
                            <input type="radio" name="q2" value="1" id="c-28-84"
                               <?php 
@@ -909,7 +897,6 @@
                   <div class="c-choice-radiobuttons c-field c-col-1 c-sml-col-1 c-span-24 c-sml-span-12  c-required">
                      <legend class="c-label  ">Did your company use the CISCO device ?</legend>
                      <div class="c-editor c-columns-0">
-                     <span class="required text-danger"><?php echo form_error("q3"); ?></span>
                         <div class="c-choice-option">
                            <label for="c-30-75"><input type="radio" name="q3" value="1" id="c-30-75" 
                               <?php 
@@ -1014,11 +1001,6 @@
                                     </label>
                                  </td>
                               </tr>
-                              <tr>
-                                 <td class="c-validation-row">
-                                    <span class="required text-danger"><?php echo form_error("q4"); ?></span>
-                                 </td>
-                              </tr>
                            </tbody>
                            <tbody class="">
                               <tr class="">
@@ -1072,11 +1054,6 @@
                                        ?> 
                                     ><span><span class="c-offscreen">One of the best (++)</span></span>
                                     </label>
-                                 </td>
-                              </tr>
-                              <tr>
-                                 <td class="c-validation-row">
-                                    <span class="required text-danger"><?php echo form_error("q5"); ?></span>
                                  </td>
                               </tr>
                               <tr>
@@ -1140,11 +1117,6 @@
                                  </td>
                               </tr>
                               <tr>
-                                 <td class="c-validation-row">
-                                    <span class="required text-danger"><?php echo form_error("q6"); ?></span>
-                                 </td>
-                              </tr>
-                              <tr>
                                  <td class="c-validation-row" colspan="6">
                                     <div class="c-validation">Communication is required.</div>
                                  </td>
@@ -1202,11 +1174,6 @@
                                        ?> 
                                     ><span><span class="c-offscreen">One of the best (++)</span></span>
                                     </label>
-                                 </td>
-                              </tr>
-                              <tr>
-                                 <td class="c-validation-row">
-                                    <span class="required text-danger"><?php echo form_error("q7"); ?></span>
                                  </td>
                               </tr>
                               <tr>
@@ -1269,11 +1236,6 @@
                                     </label>
                                  </td>
                               </tr>
-                              <tr>
-                                 <td class="c-validation-row">
-                                    <span class="required text-danger"><?php echo form_error("q8"); ?></span>
-                                 </td>
-                              </tr>
                            </tbody>
                            <tbody class="">
                               <tr class="">
@@ -1327,11 +1289,6 @@
                                        ?> 
                                     ><span><span class="c-offscreen">One of the best (++)</span></span>
                                     </label>
-                                 </td>
-                              </tr>
-                              <tr>
-                                 <td class="c-validation-row">
-                                    <span class="required text-danger"><?php echo form_error("q9"); ?></span>
                                  </td>
                               </tr>
                               <tr>
@@ -1394,11 +1351,6 @@
                                     </label>
                                  </td>
                               </tr>
-                               <tr>
-                                 <td class="c-validation-row">
-                                    <span class="required text-danger"><?php echo form_error("q10"); ?></span>
-                                 </td>
-                              </tr>
                               <tr>
                                  <td class="c-validation-row" colspan="6">
                                     <div class="c-validation">Good relationship with coworkers is required.</div>
@@ -1459,11 +1411,6 @@
                                     </label>
                                  </td>
                               </tr>
-                               <tr>
-                                 <td class="c-validation-row">
-                                    <span class="required text-danger"><?php echo form_error("q11"); ?></span>
-                                 </td>
-                              </tr>
                               <tr>
                                  <td class="c-validation-row" colspan="6">
                                     <div class="c-validation">Self-management (time, stress, priority, autonomy etc.) is required.</div>
@@ -1481,7 +1428,6 @@
                           echo $student['question12']
                         ?> 
                      </textarea>
-                     <span class="required text-danger"><?php echo form_error("q12"); ?></span>
                                
                   </div>
                      <div class="c-validation"></div>
@@ -1554,11 +1500,6 @@
                                     </label>
                                  </td>
                               </tr>
-                               <tr>
-                                 <td class="c-validation-row">
-                                    <span class="required text-danger"><?php echo form_error("q13"); ?></span>
-                                 </td>
-                              </tr>
                            </tbody>
                            <tbody class="">
                               <tr class="">
@@ -1616,7 +1557,6 @@
                               </tr>
                                <tr>
                                  <td class="c-validation-row">
-                                    <span class="required text-danger"><?php echo form_error("q14"); ?></span>
                                  </td>
                               </tr>
                               <tr>
@@ -1681,7 +1621,6 @@
                               </tr>
                                <tr>
                                  <td class="c-validation-row">
-                                    <span class="required text-danger"><?php echo form_error("q15"); ?></span>
                                  </td>
                               </tr>
                               <tr>
@@ -1700,7 +1639,6 @@
                         <textarea id="c-46-3" name="q16" type="text">
                            <?php echo $student['question16']; ?>
                         </textarea>
-                        <span class="required text-danger"><?php echo form_error("q16"); ?></span>
                                  
                      </div>
                      <div class="c-validation"></div>
@@ -1711,7 +1649,6 @@
                         <textarea id="c-47-2" name="q17" type="text">
                            <?php echo $student['question17']; ?>
                         </textarea>
-                        <span class="required text-danger"><?php echo form_error("q17"); ?></span>
                      </div>
                      <div class="c-validation"></div>
                   </div>
@@ -1719,13 +1656,15 @@
             </div>
             <div class="c-button-section">
                <div class="c-ac tion">
-                  <button type="submit" class="c-button" id="c-submit-button" style="float: right;">Submit</button>
-                  <button type="submit" class="c-button" id="c-submit-button" style="float: left; background-color: green;">Save</button>
+                <a href="<?php echo base_url(); ?>Welcome_IF/supervisor">
+                  <button type="submit" class="c-button" id="c-submit-button" style="float: left; background-color: red;">Close</button>
+                </a>
                </div>
             </div>
          </div>
       </div>
-   </form>
+      <?php endforeach ?>
+   <!-- </form> -->
 </div>
 <script>
     $(function(){

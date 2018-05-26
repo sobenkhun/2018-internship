@@ -11,7 +11,7 @@
             <tr>
                 <th class="text-center">ID</th>
                 <th>Student Name</th>              
-                <th class="text-center">Questionnaire</th>
+                <th class="text-center">Questionnair</th>
             </tr>
         </thead>
         <tbody>

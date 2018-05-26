@@ -32,16 +32,15 @@ class supervisor extends CI_Controller {
 	function studentProfile()
 	{
 		$studentId = $_GET['id'];
-		$this->load->helper('form');
+		$this->load->helper(array('form', 'url'));
 		$this->load->Model('Supervisor_model');
 	    $data['student'] = $this->Supervisor_model->getDataStudentDetail($studentId);
-	    $data['activeLink'] = 'Student';
+	    $data['activeLink'] = 'student';
 		$this->load->view('templates/header.php');
-		$this->load->view('menu/supervisorMenu.php');
+		$this->load->view('menu/supervisorMenu.php', $data);
 		$this->load->view('supervisorDashboard/student/studentProfile.php',$data);
 		$this->load->view('templates/footer.php');
 	}
-	
 	public function detailCompany()
 	{
 		$data['activeLink'] = 'Company';
@@ -112,7 +111,8 @@ class supervisor extends CI_Controller {
 	    $this->form_validation->set_rules('q15', 'Researching information in English, reading documents', 'required'); 
 	    $this->form_validation->set_rules('q16', 'Feel free to add any comments regarding the interns performance', 'required'); 
 	    $this->form_validation->set_rules('q17', 'What skills would you have wished your PN intern had', 'required'); 
-	    if ($this->form_validation->run() == FALSE) {
+	    if ($this->form_validation->run() == FALSE) 
+	    {
 		    $this->load->Model('Supervisor_model');
 		    $data['studentInfo'] = $this->Supervisor_model->getQuestionnaireInfo($stuid);
 		    $data['student'] = $this->Supervisor_model->getQuestionnaire($stuid);
@@ -149,12 +149,12 @@ class supervisor extends CI_Controller {
 	     	$this->load->view('menu/supervisorMenu.php' ,$data);
 	     	$this->load->view('supervisorDashboard/index.php',$data);
 	     	$this->load->view('templates/footer.php');
-		    $this->sendMail();	
+		    $this->sendMailToSupervisor();	
 	    }
 		
 	}
 	/* send email to someone*/
-	public function sendMail()
+	public function sendMailToSupervisor()
 	{
 		$this->load->library('email');
 		$messages = "<h2>Hello, this is message for complete a questionnaire </h2>";
@@ -162,6 +162,11 @@ class supervisor extends CI_Controller {
 		$this->email->to('pnc.temporary.vc2018@passerellesnumeriques.org', 'ERO Team');
 		$this->email->subject("Complete student's questionnaire.");
 		$this->email->message($messages);
+		if ($this->email->send()) {
+			return true;
+		}else{
+			return $this->email->print_debugger();;
+		}
 	}
 	function comment()
 	{

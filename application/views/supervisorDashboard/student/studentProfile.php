@@ -60,8 +60,7 @@
 						<td> </td>
 						<td>
 							<div class="form-group">
-								<!-- <a href="#"><?php echo $student['url']; ?></a> -->
-								<a href="#">www.codingget.com</a>
+								<a href="<?php echo $student['url']; ?>"><?php echo $student['url']; ?></a> 
 							</div>
 						</td>
 					</tr>
@@ -74,8 +73,7 @@
 						<td> </td>
 						<td>
 							<div class="form-group">
-								<!-- <label><?php echo $student['tutorName']; ?></label> -->
-								<label>Rady Y</label>
+								<label><?php echo $student['tutorName']; ?></label> 
 							</div>
 						</td>
 					</tr>

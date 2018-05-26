@@ -843,7 +843,7 @@ class Welcome_IF extends CI_Controller {
 		echo json_encode($result);
 	}
 	/* send email to someone*/
-	public function sendMail(){
+	public function eroSendMail(){
 		$this->load->library('email');
 		$this->load->model('users_model');
 
@@ -858,28 +858,28 @@ class Welcome_IF extends CI_Controller {
 		}
 
 	}
-	
+
 	/*Add new event */
 	Public function addEvent()
 	{
-
 		$result=$this->Calendar_model->addEvent();
 		echo $result;
-		$this->sendMail();
-
+		$this->eroSendMail();
 	}
 	/*Update Event */
 	Public function updateEvent()
 	{
 		$result=$this->Calendar_model->updateEvent();
 		echo $result;
-		$this->sendMail();
+		$this->eroSendMail();
 	}
 	/*Delete Event*/
 	Public function deleteEvent()
 	{
 		$result=$this->Calendar_model->deleteEvent();
 		echo $result;
+		$this->eroSendMail();
+
 	}
 	Public function dragUpdateEvent()
 	{	

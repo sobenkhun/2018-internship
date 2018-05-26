@@ -73,7 +73,7 @@ class Users_model extends CI_Model {
     }
     public function tNumRow()
     {
-          $this->db->select('*');
+         $this->db->select('*');
         $query = $this->db->get('tutor');
         return $query->num_rows();
     }

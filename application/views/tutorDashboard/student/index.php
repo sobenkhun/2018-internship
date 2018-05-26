@@ -26,7 +26,7 @@
 						<a href="<?php echo base_url();?>tutorDas/detailStudentDas?&id=<?php echo $student['id']; ?>">
 							<i class="mdi mdi-eye text-info mdi-24px" data-toggle ="tooltip" title="View "></i>
 						</a>
-						<a href="<?php echo base_url();?>tutorDas/viewWorkLog" data-toggle ="tooltip" title="View Worklog">
+						<a href="<?php echo base_url();?>tutorDas/displayWorkLog?&id=<?php echo $student['id']?>" data-toggle ="tooltip" title="View Worklog">
 							<i class="mdi  mdi-book-open-page-variant text-dark mdi-24px"></i>
 						</a>
 						<a href="<?php echo base_url();?>tutorDas/CommStuDas?&id=<?php echo $student['id'] ?>" data-toggle ="tooltip" title="View Comment">

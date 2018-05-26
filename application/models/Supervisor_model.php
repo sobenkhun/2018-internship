@@ -45,44 +45,6 @@ class Supervisor_model extends CI_Model {
 		 $query =  $this->db->get_where('student',$userRole);
 	     return $query->result_array(); 
 	}
-    public function addQuestionnaire($studentId,$gender,$q1,$major,$q2,$q3,$q4,$q5,$q6,$q7,$q8,$q9,$q10,$q11,$q12,$q13,$q14,$q15,$q16,$q17)
-    {
-    	$this->db->select("q.*");
-        $this->db->from('questionnaire q');
-        $this->db->join('student stu', 'q.student_id = stu.id');
-        $this->db->join('supervisor s', 'stu.supervisor_id = s.id');
-        $this->db->join('company c', 's.company_id = c.id');
-        $this->db->where('q.student_id', $studentId);
-        $query = $this->db->get();
-        foreach ($query->result_array() as $row)
-        {
-            $student_id = $row['id'];
-        }
-        // 'student_id'   =>$student_id,
-       	$data = array('gender'     =>$gender,
-		       			'question1'  =>$q1,
-		       			'major'      =>$major,
-		       			'question2'  =>$q2,
-		       			'question3'  =>$q3,
-		       			'question4'  =>$q4,
-		       			'question5'  =>$q5,
-		       			'question6'  =>$q6,
-		       			'question7'  =>$q7,
-		       			'question8'  =>$q8,
-		       			'question9'  =>$q9,
-		       			'question10' =>$q10,
-		       			'question11' =>$q11,
-		       			'question12' =>$q12,
-		       			'question13' =>$q13,
-		       			'question14' =>$q14,
-		       			'question15' =>$q15,
-		       			'question16' =>$q16,
-		       			'question17' =>$q17);
-        $this->db->insert('questionnaire', $data);
-    }
-
-   
-
     public function saveQuestionnaire($student_id,$sex,$major,$q1,$q2,$q3,$q4,$q5,$q6,$q7,$q8,$q9,$q10,$q11,$q12,$q13,$q14,$q15,$q16,$q17)
     {
         $data = array('student_id' =>$student_id,
@@ -134,10 +96,17 @@ class Supervisor_model extends CI_Model {
         $this->db->insert('questionnaire', $data);
     }
 
+   function countStudentQuestionnaire($studentId)
+   {
+        $this->db->select('*');
+        $this->db->from('questionnaire');
+        $this->db->where('questionnaire.student_id', $studentId);
+        return $this->db->affected_rows();
+   }
 
 	public function getQuestionnaireInfo($stuId)
     { 
-     $this->db->select("s.firstname as sFirstname,s.lastname as sLastname,c.name,su.firstname as suFirstname,su.lastname as suLastname");
+     $this->db->select("s.firstname as sFirstname,s.lastname as sLastname,c.name ");
      $this->db->from('supervisor su');
      $this->db->join('student s', 's.supervisor_id = su.id');
      $this->db->join('company c', 'c.id = su.company_id');
@@ -161,4 +130,66 @@ class Supervisor_model extends CI_Model {
         $query = $this->db->get('student');
         return $query->num_rows();
     }
+
+    /*get email from database*/
+    public function mGetEmail()
+    {
+        $this->db->select("*");
+        $this->db->from("getemail");
+        $query = $this->db->get();
+        return $query->result_array();
+    }
+
+
+    /*Read the data from DB */
+    Public function getEvents()
+    {
+        
+        $sql = "SELECT * FROM events WHERE events.start BETWEEN ? AND ? ORDER BY events.start ASC";
+        return $test = $this->db->query($sql, array($_GET['start'], $_GET['end']))->result();
+
+    }
+
+    /*Create new events */
+    Public function addEvent()
+    {
+
+        $sql = "INSERT INTO events (title,events.start,events.end,description, color,email,userEmail) VALUES (?,?,?,?,?,?,?)";
+        $this->db->query($sql, array($_POST['title'], $_POST['start'],$_POST['end'], $_POST['description'], $_POST['color'],$_POST['email'],$_POST['userEmail']));
+        return ($this->db->affected_rows()!=1)?false:true; 
+
+    }
+
+    /*Update  event */
+
+    Public function updateEvent()
+    {
+
+        $sql = "UPDATE events SET title = ?, description = ?, color = ?, email = ?  WHERE id = ?";
+        $this->db->query($sql, array($_POST['title'],$_POST['description'], $_POST['color'],$_POST['email'], $_POST['id']));
+        return ($this->db->affected_rows()!=1)?false:true;
+    }
+
+    /*Delete event */
+
+    Public function deleteEvent()
+    {
+
+        $sql = "DELETE FROM events WHERE id = ?";
+        $this->db->query($sql, array($_GET['id']));
+        return ($this->db->affected_rows()!=1)?false:true;
+    }
+
+    /*Update  event */
+
+    Public function dragUpdateEvent()
+    {
+            //$date=date('Y-m-d h:i:s',strtotime($_POST['date']));
+
+        $sql = "UPDATE events SET  events.start = ? ,events.end = ?  WHERE id = ?";
+        $this->db->query($sql, array($_POST['start'],$_POST['end'], $_POST['id']));
+        return ($this->db->affected_rows()!=1)?false:true;
+
+    }
+
 }

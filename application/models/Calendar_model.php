@@ -17,8 +17,18 @@ class Calendar_model extends CI_Model {
 	Public function addEvent()
 	{
 
-		$sql = "INSERT INTO events (title,events.start,events.end,description, color,email) VALUES (?,?,?,?,?,?)";
+		$sql = "INSERT INTO events (title,events.start,events.end,description, color,email) VALUES (?,?,?,?,?,?,?)";
 		$this->db->query($sql, array($_POST['title'], $_POST['start'],$_POST['end'], $_POST['description'], $_POST['color'],$_POST['email']));
+		return ($this->db->affected_rows()!=1)?false:true; 
+
+	}
+
+	/*Create new events for supervisor */
+	Public function sAddEvent()
+	{
+
+		$sql = "INSERT INTO events (title,events.start,events.end,description, color,email,userEmail,password) VALUES (?,?,?,?,?,?,?,?)";
+		$this->db->query($sql, array($_POST['title'], $_POST['start'],$_POST['end'], $_POST['description'], $_POST['color'],$_POST['email'],$_POST['userEmail'],$_POST['password']));
 		return ($this->db->affected_rows()!=1)?false:true; 
 
 	}
@@ -32,19 +42,6 @@ class Calendar_model extends CI_Model {
 		$this->db->query($sql, array($_POST['title'],$_POST['description'], $_POST['color'],$_POST['email'], $_POST['id']));
 		return ($this->db->affected_rows()!=1)?false:true;
 	}
-
-	/*public function updateEvent($id,$title,$description,$color,$email)
-	{
-	    $data = array('name'=>$name,
-	                 'title'=>$title,
-	                 'description'=>$description,
-	                 'color'=>$color,
-	                 'email'=>$email
-	             );
-	    $this->db->where('id', $id);
-	    $this->db->update('events', $data);
-	}*/
-
 
 	/*Delete event */
 

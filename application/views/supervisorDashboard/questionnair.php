@@ -63,6 +63,7 @@
                   <div class="c-choice-radiobuttons c-field c-col-1 c-sml-col-1 c-span-24 c-sml-span-12  c-required">
                      <legend class="c-label  ">Sex</legend>
                      <div class="c-editor c-columns-0">
+                     <span class="required text-danger"><?php echo form_error("sex"); ?></span>
                         <div class="c-choice-option">
                            <label for="c-4-202">
                            <input type="radio" name="sex" id="c-4-202" value="Male"
@@ -70,8 +71,8 @@
                                  if ($student['gender'] == 'Male') {
                                     echo "checked='checked'";
                                  }
-                               ?>
-                           ><span>Male</span>
+                               ?>>
+                               <span>Male</span>
                            </label>
                         </div>
                         <div class="c-choice-option">
@@ -85,8 +86,9 @@
                            ><span>Female</span>
                            </label>
                         </div>
-                     </div>
-                     <div class="c-validation">Sex is required.</div>
+                     </div> 
+
+                                 
                   </div>
                   <div class="c-rating-scale c-field c-col-1 c-sml-col-1 c-span-24 c-sml-span-12  c-required">
                      <legend class="c-label ">How likely is that you would recommend a PN intern ?</legend>
@@ -109,7 +111,7 @@
                            </thead>
                            <tbody class="">
                               <tr class="">
-                                 <th class="c-choice-question" scope="row">1/ How likely is that you would recommend a PN intern ?</th>
+                                 <th class="c-choice-question" scope="row">How likely is that you would recommend a PN intern ?</th>
                                  <td class="c-choice-option">
                                  
                                     <label for="c-5-191">
@@ -131,7 +133,8 @@
                                         ?>
                                        >
                                        <span><span class="c-offscreen">2</span></span>
-                                    </label></td>
+                                    </label>
+                                 </td>
                                  <td class="c-choice-option">
                                     <label for="c-5-193">
                                        <input type="radio" name="q1" value="3" id="c-5-193">
@@ -213,22 +216,30 @@
                                           }
                                         ?>
                                     >
-                                       <span><span class="c-offscreen">10 (Extremely likely)</span></span></label>
+
                                     </td>
                               </tr>
                               <tr>
                                  <td class="c-validation-row" colspan="11">
                                     <div class="c-validation">How likely is that you would recommend a PN intern ? is required.</div>
                                  </td>
+                                       
                               </tr>
+                              <tr>
+                                 <td class="c-validation-row"> 
+                                    <span class="required text-danger"><?php echo form_error("q1"); ?></span>
+                                 </td>
+                              </tr>
+
                            </tbody>
                         </table>
                      </div>
                      <div class="c-validation"></div>
                   </div>
                   <div class="c-choice-radiobuttons c-field c-col-1 c-sml-col-1 c-span-24 c-sml-span-12  c-required">
-                     <legend class="c-label  ">major/ What was the major of your intern at PNC ?</legend>
+                     <legend class="c-label  ">What was the major of your intern at PNC ?</legend>
                      <div class="c-editor c-columns-0">
+                     <span class="required text-danger"><?php echo form_error("major"); ?></span>
                         <div class="c-choice-option">
                            <label for="c-7-187">
                               <input type="radio" name="major" value="WEB" id="c-7-187"
@@ -252,9 +263,9 @@
                               >
                               <span>SNA</span>
                            </label>
+                              
                         </div>
                      </div>
-                     <div class="c-validation">major/ What was the major of your intern at PNC ? is required.</div>
                   </div>
                   <span class="c-visible-container toggle-off" style="display: none;">
                      <div class="c-rating-scale c-field c-col-1 c-sml-col-1 c-span-24 c-sml-span-12  c-required">
@@ -846,24 +857,24 @@
                      </div>
                   </span>
                   <div class="c-choice-radiobuttons c-field c-col-1 c-sml-col-1 c-span-24 c-sml-span-12  c-required">
-                     <legend class="c-label  ">2/ Did your company use Linux operating system ?</legend>
+                     <legend class="c-label  ">Did your company use Linux operating system ?</legend>
                      <div class="c-editor c-columns-0">
+                     <span class="required text-danger"><?php echo form_error("q2"); ?></span>
                         <div class="c-choice-option"><label for="c-28-84">
                            <input type="radio" name="q2" value="1" id="c-28-84"
                               <?php 
-                                    if ($student['question2'] == 1) {
-                                      echo "checked='checked'";
-                                    }
-                                 ?>
-                           ><span>Yes</span></label></div>
+                                 if ($student['question2'] == 1) {
+                                   echo "checked='checked'";
+                                 }
+                              ?> ><span>Yes</span></label></div>
                         <div class="c-choice-option"><label for="c-28-85">
-                           <input type="radio" name="q2" value="0" id="c-28-85"
+                           <input type="radio" name="q2" value="2" id="c-28-85"
                               <?php 
-                                    if ($student['question2'] == 0) {
-                                      echo "checked='checked'";
-                                    }
-                                 ?>
-                           ><span>No</span></label></div>
+                                 if ($student['question2'] == 2) {
+                                   echo "checked='checked'";
+                                 }
+                              ?>> 
+                           <span>No</span></label></div>
                      </div>
                      <div class="c-validation">Did your company use Linux operating system ? is required.</div>
                   </div>
@@ -896,8 +907,9 @@
                      </div>
                   </span>
                   <div class="c-choice-radiobuttons c-field c-col-1 c-sml-col-1 c-span-24 c-sml-span-12  c-required">
-                     <legend class="c-label  ">3/ Did your company use the CISCO device ?</legend>
+                     <legend class="c-label  ">Did your company use the CISCO device ?</legend>
                      <div class="c-editor c-columns-0">
+                     <span class="required text-danger"><?php echo form_error("q3"); ?></span>
                         <div class="c-choice-option">
                            <label for="c-30-75"><input type="radio" name="q3" value="1" id="c-30-75" 
                               <?php 
@@ -909,12 +921,12 @@
                            </label>
                         </div>
                         <div class="c-choice-option">
-                           <label for="c-30-76"><input type="radio" name="q3" value="0" id="c-30-76" 
-                              <?php 
-                                    if ($student['question3'] == 0) {
+                           <label for="c-30-76"><input type="radio" name="q3" value="2" id="c-30-76" 
+                                <?php 
+                                    if ($student['question3'] == 2) {
                                       echo "checked='checked'";
                                     }
-                                 ?>      
+                                 ?>   
                            >   <span>No</span>
                            </label>
                         </div>
@@ -934,6 +946,7 @@
                   </span>
                   <div class="c-rating-scale c-field c-col-1 c-sml-col-1 c-span-24 c-sml-span-12  c-required">
                      <legend class="c-label ">4/ Where would you rank your PN intern amongst your other interns/junior staff ?</legend>
+
                      <div class="c-rating-scale-questions">
                         <table>
                            <thead>
@@ -948,7 +961,8 @@
                            </thead>
                            <tbody class="">
                               <tr class="">
-                                 <th class="c-choice-question" scope="row">4/ Respect of working hours</th>
+                                 <th class="c-choice-question" scope="row">Respect of working hours</th>
+
                                  <td class="c-choice-option">
                                     <label for="c-32-68"><input type="radio" name="q4" value="1" id="c-32-68" 
                                        <?php 
@@ -1001,14 +1015,14 @@
                                  </td>
                               </tr>
                               <tr>
-                                 <td class="c-validation-row" colspan="6">
-                                    <div class="c-validation">Respect of working hours is required.</div>
+                                 <td class="c-validation-row">
+                                    <span class="required text-danger"><?php echo form_error("q4"); ?></span>
                                  </td>
                               </tr>
                            </tbody>
                            <tbody class="">
                               <tr class="">
-                                 <th class="c-choice-question" scope="row">5/ Information management skills (synthesis, attention to details, broad picture)</th>
+                                 <th class="c-choice-question" scope="row">Information management skills (synthesis, attention to details, broad picture)</th>
                                  <td class="c-choice-option">
                                     <label for="c-33-62"><input type="radio" name="q5" value="1" id="c-33-62" 
                                        <?php 
@@ -1032,7 +1046,7 @@
                                  <td class="c-choice-option">
                                     <label for="c-33-64"><input type="radio" name="q5" value="3" id="c-33-64"
                                        <?php 
-                                          if ($student['question5'] == 0) {
+                                          if ($student['question5'] == 3) {
                                             echo "checked='checked'";
                                           }
                                        ?>    
@@ -1061,6 +1075,11 @@
                                  </td>
                               </tr>
                               <tr>
+                                 <td class="c-validation-row">
+                                    <span class="required text-danger"><?php echo form_error("q5"); ?></span>
+                                 </td>
+                              </tr>
+                              <tr>
                                  <td class="c-validation-row" colspan="6">
                                     <div class="c-validation">Information management skills (synthesis, attention to details, broad picture) is required.</div>
                                  </td>
@@ -1068,7 +1087,7 @@
                            </tbody>
                            <tbody class="">
                               <tr class="">
-                                 <th class="c-choice-question" scope="row">6/ Communication</th>
+                                 <th class="c-choice-question" scope="row">Communication</th>
                                  <td class="c-choice-option">
                                     <label for="c-34-56"><input type="radio" name="q6" value="1" id="c-34-56"  
                                        <?php 
@@ -1121,6 +1140,11 @@
                                  </td>
                               </tr>
                               <tr>
+                                 <td class="c-validation-row">
+                                    <span class="required text-danger"><?php echo form_error("q6"); ?></span>
+                                 </td>
+                              </tr>
+                              <tr>
                                  <td class="c-validation-row" colspan="6">
                                     <div class="c-validation">Communication is required.</div>
                                  </td>
@@ -1128,7 +1152,7 @@
                            </tbody>
                            <tbody class="">
                               <tr class="">
-                                 <th class="c-choice-question" scope="row">7/ Interest in learning, curiosity</th>
+                                 <th class="c-choice-question" scope="row">Interest in learning, curiosity</th>
                                  <td class="c-choice-option">
                                     <label for="c-35-50"><input type="radio" name="q7" value="1" id="c-35-50" 
                                        <?php 
@@ -1181,6 +1205,11 @@
                                  </td>
                               </tr>
                               <tr>
+                                 <td class="c-validation-row">
+                                    <span class="required text-danger"><?php echo form_error("q7"); ?></span>
+                                 </td>
+                              </tr>
+                              <tr>
                                  <td class="c-validation-row" colspan="6">
                                     <div class="c-validation">Interest in learning, curiosity is required.</div>
                                  </td>
@@ -1188,7 +1217,7 @@
                            </tbody>
                            <tbody class="">
                               <tr class="">
-                                 <th class="c-choice-question" scope="row">8/ Leadership, team-work</th>
+                                 <th class="c-choice-question" scope="row">Leadership, team-work</th>
                                  <td class="c-choice-option">
                                     <label for="c-36-44"><input type="radio" name="q8" value="1" id="c-36-44"
                                        <?php 
@@ -1241,14 +1270,14 @@
                                  </td>
                               </tr>
                               <tr>
-                                 <td class="c-validation-row" colspan="6">
-                                    <div class="c-validation">Leadership, team-work is required.</div>
+                                 <td class="c-validation-row">
+                                    <span class="required text-danger"><?php echo form_error("q8"); ?></span>
                                  </td>
                               </tr>
                            </tbody>
                            <tbody class="">
                               <tr class="">
-                                 <th class="c-choice-question" scope="row">9/ Critical thinking, problem solving, decision-making, logic, creativity</th>
+                                 <th class="c-choice-question" scope="row">Critical thinking, problem solving, decision-making, logic, creativity</th>
                                  <td class="c-choice-option">
                                     <label for="c-37-38"><input type="radio" name="q9" value="1" id="c-37-38" 
                                        <?php 
@@ -1301,6 +1330,11 @@
                                  </td>
                               </tr>
                               <tr>
+                                 <td class="c-validation-row">
+                                    <span class="required text-danger"><?php echo form_error("q9"); ?></span>
+                                 </td>
+                              </tr>
+                              <tr>
                                  <td class="c-validation-row" colspan="6">
                                     <div class="c-validation">Critical thinking, problem solving, decision-making, logic, creativity is required.</div>
                                  </td>
@@ -1308,7 +1342,7 @@
                            </tbody>
                            <tbody class="">
                               <tr class="">
-                                 <th class="c-choice-question" scope="row">10/ Good relationship with coworkers</th>
+                                 <th class="c-choice-question" scope="row">Good relationship with coworkers</th>
                                  <td class="c-choice-option">
                                     <label for="c-38-32"><input type="radio" name="q10" value="1" id="c-38-32"
                                       <?php 
@@ -1360,6 +1394,11 @@
                                     </label>
                                  </td>
                               </tr>
+                               <tr>
+                                 <td class="c-validation-row">
+                                    <span class="required text-danger"><?php echo form_error("q10"); ?></span>
+                                 </td>
+                              </tr>
                               <tr>
                                  <td class="c-validation-row" colspan="6">
                                     <div class="c-validation">Good relationship with coworkers is required.</div>
@@ -1368,7 +1407,7 @@
                            </tbody>
                            <tbody class="">
                               <tr class="">
-                                 <th class="c-choice-question" scope="row">11/ Self-management (time, stress, priority, autonomy etc.)</th>
+                                 <th class="c-choice-question" scope="row">Self-management (time, stress, priority, autonomy etc.)</th>
                                  <td class="c-choice-option">
                                     <label for="c-39-26"><input type="radio" name="q11" value="1" id="c-39-26"
                                      <?php 
@@ -1420,6 +1459,11 @@
                                     </label>
                                  </td>
                               </tr>
+                               <tr>
+                                 <td class="c-validation-row">
+                                    <span class="required text-danger"><?php echo form_error("q11"); ?></span>
+                                 </td>
+                              </tr>
                               <tr>
                                  <td class="c-validation-row" colspan="6">
                                     <div class="c-validation">Self-management (time, stress, priority, autonomy etc.) is required.</div>
@@ -1431,12 +1475,15 @@
                      <div class="c-validation"></div>
                   </div>
                   <div class="c-text-multiplelines c-field c-col-1 c-sml-col-1 c-span-24 c-sml-span-12">
-                     <div class="c-label  "><label for="c-41-23">12/ Feel free to add any comments regarding the intern's performance</label></div>
+                     <div class="c-label  "><label for="c-41-23">Feel free to add any comments regarding the intern's performance</label></div>
                      <div class="c-editor"><textarea id="c-41-23" type="text" name="q12" height="">
                         <?php 
                           echo $student['question12']
                         ?> 
-                     </textarea></div>
+                     </textarea>
+                     <span class="required text-danger"><?php echo form_error("q12"); ?></span>
+                               
+                  </div>
                      <div class="c-validation"></div>
                   </div>
                   <div class="c-rating-scale c-field c-col-1 c-sml-col-1 c-span-24 c-sml-span-12  c-required">
@@ -1455,7 +1502,7 @@
                            </thead>
                            <tbody class="">
                               <tr class="">
-                                 <th class="c-choice-question" scope="row">13/ Writing documents and mails</th>
+                                 <th class="c-choice-question" scope="row">Writing documents and mails</th>
                                  <td class="c-choice-option">
                                     <label for="c-42-18"><input type="radio" name="q13" value="1" id="c-42-18"
                                        <?php 
@@ -1507,15 +1554,15 @@
                                     </label>
                                  </td>
                               </tr>
-                              <tr>
-                                 <td class="c-validation-row" colspan="6">
-                                    <div class="c-validation">Writing documents and mails is required.</div>
+                               <tr>
+                                 <td class="c-validation-row">
+                                    <span class="required text-danger"><?php echo form_error("q13"); ?></span>
                                  </td>
                               </tr>
                            </tbody>
                            <tbody class="">
                               <tr class="">
-                                 <th class="c-choice-question" scope="row">14/ Speaking in meetings</th>
+                                 <th class="c-choice-question" scope="row">Speaking in meetings</th>
                                  <td class="c-choice-option">
                                     <label for="c-43-12"><input type="radio" name="q14" value="1" id="c-43-12"
                                        <?php 
@@ -1567,6 +1614,11 @@
                                     </label>
                                  </td>
                               </tr>
+                               <tr>
+                                 <td class="c-validation-row">
+                                    <span class="required text-danger"><?php echo form_error("q14"); ?></span>
+                                 </td>
+                              </tr>
                               <tr>
                                  <td class="c-validation-row" colspan="6">
                                     <div class="c-validation">Speaking in meetings is required.</div>
@@ -1575,7 +1627,7 @@
                            </tbody>
                            <tbody class="">
                               <tr class="">
-                                 <th class="c-choice-question" scope="row">15/ Researching information in English, reading documents</th>
+                                 <th class="c-choice-question" scope="row">Researching information in English, reading documents</th>
                                  <td class="c-choice-option">
                                     <label for="c-44-6"><input type="radio" name="q15" value="1" id="c-44-6"
                                     <?php 
@@ -1627,6 +1679,11 @@
                                     </label>
                                  </td>
                               </tr>
+                               <tr>
+                                 <td class="c-validation-row">
+                                    <span class="required text-danger"><?php echo form_error("q15"); ?></span>
+                                 </td>
+                              </tr>
                               <tr>
                                  <td class="c-validation-row" colspan="6">
                                     <div class="c-validation">Researching information in English, reading documents is required.</div>
@@ -1638,19 +1695,24 @@
                      <div class="c-validation"></div>
                   </div>
                   <div class="c-text-multiplelines c-field c-col-1 c-sml-col-1 c-span-24 c-sml-span-12">
-                     <div class="c-label  "><label for="c-46-3">16/ Feel free to add any comments regarding the intern's performance</label></div>
+                     <div class="c-label  "><label for="c-46-3">Feel free to add any comments regarding the intern's performance</label></div>
                      <div class="c-editor">
-                        <textarea id="c-46-3" placeholder="" name="q16" type="text" height="" >
+                        <textarea id="c-46-3" name="q16" type="text">
                            <?php echo $student['question16']; ?>
-                        </textarea></div>
+                        </textarea>
+                        <span class="required text-danger"><?php echo form_error("q16"); ?></span>
+                                 
+                     </div>
                      <div class="c-validation"></div>
                   </div>
                   <div class="c-text-multiplelines c-field c-col-1 c-sml-col-1 c-span-24 c-sml-span-12">
-                     <div class="c-label  "><label for="c-47-2">17/ What skills would you have wished your PN intern had ?</label></div>
+                     <div class="c-label  "><label for="c-47-2">What skills would you have wished your PN intern had ?</label></div>
                      <div class="c-editor">
-                        <textarea id="c-47-2" placeholder="" name="q17" type="text" height="" >
+                        <textarea id="c-47-2" name="q17" type="text">
                            <?php echo $student['question17']; ?>
-                        </textarea></div>
+                        </textarea>
+                        <span class="required text-danger"><?php echo form_error("q17"); ?></span>
+                     </div>
                      <div class="c-validation"></div>
                   </div>
                </div>

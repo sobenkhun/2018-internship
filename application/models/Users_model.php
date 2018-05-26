@@ -73,7 +73,7 @@ class Users_model extends CI_Model {
     }
     public function tNumRow()
     {
-          $this->db->select('*');
+         $this->db->select('*');
         $query = $this->db->get('tutor');
         return $query->num_rows();
     }
@@ -324,6 +324,20 @@ class Users_model extends CI_Model {
     $query = $this->db->get();
      return $query->result_array(); 
     }
+    public function viewQuestionnaire($stuId)
+    { 
+        $this->db->select("s.id, s.firstname as sFirstname, s.lastname as sLastname, c.name, q.*");
+        $this->db->from('supervisor su');
+        $this->db->join('student s', 's.supervisor_id = su.id');
+        $this->db->join('questionnaire q', 's.id = q.student_id');
+        $this->db->join('company c', 'c.id = su.company_id');
+        $this->db->join('tutor t', 't.company_id = c.id');
+        $this->db->where('su.id', $stuId);
+    $query = $this->db->get();
+     return $query->result_array(); 
+
+    }
+
      public function getSupervisor()
     {
         $this->db->select("*");
@@ -413,6 +427,16 @@ class Users_model extends CI_Model {
         return $query->result_array();
     }
 
+    public function getStuComment($stuId)
+    {
+        $this->db->select("worklog.comment,worklog.student_id");
+        $this->db->from('worklog');
+        $this->db->join('student', 'student.id = worklog.student_id');
+        $this->db->where('student.id', $stuId);
+        $query = $this->db->get();
+        // var_dump($query->result_array());die();
+        return $query->result_array();
+    }
 
     /*get email from database*/
     public function mGetEmail()

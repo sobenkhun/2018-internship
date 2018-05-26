@@ -22,7 +22,7 @@
               <td><?php echo $supervisor['supervisorName']; ?></td>
               <td><?php echo $supervisor['name']; ?></td>
               <td class="text-center">
-                    <a href="<?php echo base_url() ?>Welcome_IF/questionnaire?&id=<?php echo $supervisor['id']; ?>"><i class="mdi mdi-book-minus mdi-24px" style="color: #CC6600;" data-toggle ="tooltip" title="Questionnaire"></i></a>
+                    <a href="<?php echo base_url() ?>Welcome_IF/viewQuestionnaire?&id=<?php echo $supervisor['id']; ?>"><i class="mdi mdi-book-minus mdi-24px" style="color: #CC6600;" data-toggle ="tooltip" title="Questionnaire"></i></a>
                 </td>
               <td class="text-center">
            <a href="<?php echo base_url();?>Welcome_IF/viewSupervisor?&id=<?php echo $supervisor['id']; ?>"><span class="mdi mdi-eye mdi-24px text-info" data-toggle ="tooltip" title="View "></span></a>

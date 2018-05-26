@@ -18,9 +18,12 @@
 			</thead>
 
 			<tbody>
+				<?php foreach ($work as $workLog ): ?>
+					
+				
 				<tr>
 					<td>
-						<input class="form-control" type="date" value="DD/MM/YYY"><br>
+						<p><?php echo $workLog['date']; ?></p>
 						<input class="form-control" type="text" placeholder="Time to Time">
 					</td>
 					<td>
@@ -42,6 +45,7 @@
 						<textarea class="form-group" name="" id="" cols="25" rows="4" placeholder="..."></textarea>
 					</td>					
 				</tr>
+				<?php endforeach ?>
 				<tr>
 					<td>
 						<input class="form-control" type="date" value="DD/MM/YYY"><br>

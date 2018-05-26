@@ -9,6 +9,9 @@
  			</a>
  		</div>
  </div>
+ 	
+ 
+
 <div class="container con-body">
 	<h3 class="text-primary text-center"><strong>Comment of student</strong></h3>
 	<div class="row">
@@ -20,61 +23,30 @@
 						<th>Date</th>	
 						<th>Student comment</th>
 						<th>Tutor comment</th>
-						<th>Validate</th>
+						<th>Add comment</th>
 					</tr>
 				</thead>
 				<tbody>
+						<?php foreach ($tutorComment as $tutorComment):?>			
+						<?php endforeach ?>
+						<?php foreach ($stuComment as $getComment):?>			
 					<tr>
 						<td class="text-center">1 may 2018</td>
-						<td class="text-center"> Devit is always let in meeting...</td>
-						<td class="text-center"> Devit is always let in meeting...</td>
+						<td class="text-center"><?php echo $getComment['comment'];?></td>
+						<td class="text-center"><?php echo $tutorComment['comment'];?></td>
 						<td class="text-center">
-							<i class="mdi  mdi-close-box mdi-24px text-danger"></i>
-							
+							<a href="<?php echo base_url();?>tutorDas/addCommStuDas?&id=<?php echo $getComment['student_id']; ?>">
+								<i class="mdi  mdi-pencil mdi-24px text-success"></i>
+							</a>
 						</td>
-					</tr>
-					<tr>
-						
-						<td class="text-center">14 may 2018</td>
-						<td class="text-center"> Devit should buy a clock for...</td>
-						<td class="text-center"> Devit should buy a clock for...</td>
-						<td class="text-center">
-							<i class="mdi  mdi-close-box mdi-24px text-danger"></i>
-							
-						</td>
-					</tr>
-					<tr>
-						<td class="text-center">22 may 2018</td>
-						<td class="text-center"> Devit is has always good at...</td>
-						<td class="text-center"> Devit is has always good at...</td>
-						<td class="text-center">
-							<i class="mdi  mdi-close-box mdi-24px text-danger"></i>
-							
-						</td>
-					</tr>
-					<tr>
-						<td class="text-center">1 may 2018</td>
-						<td class="text-center"> Devit is geting better and...</td>
-						<td class="text-center"> Devit is geting better and...</td>
-						<td class="text-center">
-							<i class="mdi  mdi-close-box mdi-24px text-danger"></i>
-							
-						</td>
-					</tr>
+					</tr>	
 					
 				</tbody>
 			</table>
 		</div>
 		<!-- <div class="col-md-3"></div> -->
+		<?php endforeach ?>
 	</div>
-	<div class="row">
-		<div class="col-md-12">
-			<a href="<?php echo base_url();?>tutorDas/addCommStuDas">
-				<button class="btn btn-primary tBtn"><i class="mdi mdi-plus-box "></i>Add comment</button>
-			</a>
-		</div>
-	</div>
-
 </div>
 
 

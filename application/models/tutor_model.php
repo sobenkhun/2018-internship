@@ -81,30 +81,39 @@ class tutor_model extends CI_Model {
         // var_dump($query->result_array());die();
         return $query->result_array();
     }
-
-    public function insertComment($comment,$status)
+    public function getStuCmt($stuId)
     {
-       $this->db->select("id");
-        $this->db->from("comment");
+        $this->db->select('*');
+        $this->db->from('worklog');
+        $this->db->where('student_id', $stuId);
         $query = $this->db->get();
-        $data = array('comment'=>$comment,
-                     'status'=>$status
-                     );
-                     $this->db->insert('comment',$data);
+        return $query->result_array();
+    }
+    public function getTuCmt($stuId)
+    {
+        $this->db->select("comment,id,student_id");
+        $this->db->from("comment");
+        $this->db->where('comment.id', $stuId);
+        $query = $this->db->get();
+        return $query->result_array();
+    }
+    public function insertComment($comment,$stuId)
+    {
+         $data = array('comment'=>$comment,
+                        'student_id' =>$stuId
+                 );
+        $this->db->insert('comment', $data);
     
     }
-    /* join table compnay with subperviser*/
 
-    // public function viewSupervisor()
-    // {
-    //     $this->db->select('supervisor.id as sId, name, supervisor.firstname AS sFname, Supervisor.lastname AS sLname');
-    //     $this->db->from('supervisor');
-    //     $this->db->join('company', 'company.id = supervisor.company_id');
-    //     //$this->db->where('supervisor.id');
-    //     $query = $this->db->get();
-    //     return $query->result_array();
-    // }
-
+    public function selectWorkLog($stuId)
+    {
+        
+        $this->db->select('*');
+        $this->db->from('worklog');
+        $query = $this->db->get();
+        return $query->result_array();
+    }
     
 
 }

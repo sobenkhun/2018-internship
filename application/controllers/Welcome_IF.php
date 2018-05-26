@@ -763,14 +763,7 @@ class Welcome_IF extends CI_Controller {
 		$stuId = $_GET['id'];
 		$data['activeLink'] = 'student';
 		$this->load->Model('users_model');
-		$maxId = $this->users_model->getMaxStuId();
-		foreach ($maxId as $maxId):
-				$maxId = $maxId['id'];
-             endforeach;
-             $maxId = (int)$maxId;
-             $maxId = $maxId+1;
-		$this->users_model->newStudent($firstname,$lastname,$username,$password,$supervisor,$phone,$batch,$year,$peremail,$schoolemail,$file_name);
-		$this->users_model->newQestionnaire($maxId);
+		$data['stuComment'] = $this->users_model->getStuComment($stuId);
 		$data['comment'] = $this->users_model->validateComment($stuId);
 		$this->load->view('templates/header.php',$data);
 		$this->load->view('menu/index.php',$data);
@@ -782,10 +775,11 @@ class Welcome_IF extends CI_Controller {
 		$cmtId = $_GET['id'];
 		$id = $_GET['stuId'];
 		$this->load->helper('form');
-		$stuComment = $this->input->post("stuComment");
 		$this->load->Model('users_model');
+		$stuComment = $this->input->post("stuComment");
 		$this->users_model->setValidate($cmtId,$stuComment);
 		$data['comment'] = $this->users_model->getComment($id);
+		$data['stuComment'] = $this->users_model->getStuComment($id);
 		$data['activeLink'] = 'student';
 		$this->load->view('templates/header.php',$data);
 		$this->load->view('menu/index.php',$data);
@@ -894,6 +888,7 @@ class Welcome_IF extends CI_Controller {
 		$this->load->helper('form');
 		$this->load->Model('users_model');
 		$data['comment'] = $this->users_model->getComment($stuId);
+		$data['stuComment'] = $this->users_model->getStuComment($stuId);
 		$data['activeLink'] = 'student';
 		$this->load->view('templates/header.php',$data);
 		$this->load->view('menu/index.php',$data);

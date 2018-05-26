@@ -186,9 +186,7 @@ class tutorDas extends CI_Controller {
 		$data['activeLink'] = 'comment';
 		$this->load->view('templates/header.php',$data);
 		$this->load->view('menu/tutor.php',$data);
-
 		$this->load->view('tutorDashboard/comment/index.php',$data);
-		
 		$this->load->view('templates/footer.php');
 	}
 
@@ -215,18 +213,18 @@ class tutorDas extends CI_Controller {
 	 }
 	public function addComment()
 	{
-		
+		$stuId = $_GET['id'];	
 		$this->load->helper('form');
 		$comment = $this->input->post("comment");
 		$this->load->Model('tutor_model');
-		$data['comments'] = $this->tutor_model->insertComment($comment);
-		$data['activeLink'] = 'comment';
+		$data['comments'] = $this->tutor_model->insertComment($comment,$stuId);
+		$data['activeLink'] = 'student';
 		$this->load->view('templates/header.php',$data);
 		$this->load->view('menu/tutor.php',$data);
 		$this->load->view('templates/footer.php');
-		$this->load->Model('tutor_model');
-		$stuId = 1;
-		$data['comment'] = $this->tutor_model->getStuCmt($stuId);
+		$this->load->Model('tutor_model');	
+		$data['stuComment'] = $this->tutor_model->getStuCmt($stuId);
+		$data['tutorComment'] = $this->tutor_model->getTuCmt($stuId);
 		$data['activeLink'] = 'student';
 		$this->load->view('templates/header.php',$data);
 		$this->load->view('menu/tutor.php',$data);

@@ -324,6 +324,20 @@ class Users_model extends CI_Model {
     $query = $this->db->get();
      return $query->result_array(); 
     }
+    public function viewQuestionnaire($stuId)
+    { 
+        $this->db->select("s.id, s.firstname as sFirstname, s.lastname as sLastname, c.name, q.*");
+        $this->db->from('supervisor su');
+        $this->db->join('student s', 's.supervisor_id = su.id');
+        $this->db->join('questionnaire q', 's.id = q.student_id');
+        $this->db->join('company c', 'c.id = su.company_id');
+        $this->db->join('tutor t', 't.company_id = c.id');
+        $this->db->where('su.id', $stuId);
+    $query = $this->db->get();
+     return $query->result_array(); 
+
+    }
+
      public function getSupervisor()
     {
         $this->db->select("*");

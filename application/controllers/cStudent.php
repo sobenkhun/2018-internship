@@ -1,5 +1,16 @@
 <?php 
 class cStudent extends CI_controller {
+	public function __construct() {
+			parent::__construct();
+			log_message('debug', 'URI=' . $this->uri->uri_string());
+			if ($this->session->loggIn == TRUE) {
+			
+		}else
+		{
+			redirect('connection/login');
+
+		}
+	}
 	// Student home
 	public function index() 
 	{

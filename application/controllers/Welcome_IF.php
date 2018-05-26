@@ -9,6 +9,13 @@ class Welcome_IF extends CI_Controller {
 		parent::__construct();
 		log_message('debug', 'URI=' . $this->uri->uri_string()); 
 		$this->load->helper(array('form','url'));
+		if ($this->session->loggIn == TRUE) {
+			
+		}else
+		{
+			redirect('connection/login');
+
+		}
 	}
 	// view login
 	public function index()
@@ -895,6 +902,7 @@ class Welcome_IF extends CI_Controller {
 		$this->load->Model('users_model');
 		$data['comment'] = $this->users_model->getComment($stuId);
 		$data['stuComment'] = $this->users_model->getStuComment($stuId);
+		var_dump($data['stuComment']);die();
 		$data['activeLink'] = 'student';
 		$this->load->view('templates/header.php',$data);
 		$this->load->view('menu/index.php',$data);
